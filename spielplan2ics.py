@@ -473,15 +473,19 @@ def main() -> None:
 
     ziel = Path(cfg.out)
     ziel.parent.mkdir(parents=True, exist_ok=True)
-    ziel.write_text(baue_kalender(spiele, team_id, cfg, neuer_stand),
-                    encoding="utf-8", newline="")
+    # write_bytes statt write_text: keine Newline-Uebersetzung, unabhaengig
+    # von Plattform und Python-Version - die CRLF stehen schon im Text.
+    ziel.write_bytes(baue_kalender(spiele, team_id, cfg, neuer_stand).encode("utf-8"))
 
     if standpfad:
         standpfad.parent.mkdir(parents=True, exist_ok=True)
+        saison_id = str(((spiele[0].get("phase") or {}).get("season_id")) or "")
         standpfad.write_text(json.dumps({
             "aktualisiert": datetime.now(timezone.utc).isoformat(timespec="seconds"),
             "team_id": team_id,
             "kalender": cfg.name,
+            "liga": normalisiere(liga(spiele[0])),
+            "saison": f"20{saison_id[:2]}/{saison_id[2:]}" if len(saison_id) == 4 else "",
             "letzte_aenderungen": aenderungen,
             "spiele": neuer_stand,
         }, ensure_ascii=False, indent=2), encoding="utf-8")

@@ -31,9 +31,10 @@ def entfalte(roh: str) -> list[str]:
 
 
 def main(pfad: str) -> int:
-    # newline="" ist entscheidend: sonst uebersetzt Python CRLF still zu LF
-    # und die Pruefung auf RFC-konforme Zeilenenden laeuft ins Leere.
-    roh = Path(pfad).read_text(encoding="utf-8", newline="")
+    # Bewusst read_bytes: read_text() wuerde CRLF still zu LF uebersetzen und
+    # die Pruefung auf RFC-konforme Zeilenenden ins Leere laufen lassen. Der
+    # newline-Parameter von read_text existiert zudem erst ab Python 3.13.
+    roh = Path(pfad).read_bytes().decode("utf-8")
     fehler: list[str] = []
     warnung: list[str] = []
 
