@@ -96,6 +96,30 @@ Beim nächsten Lauf wird verglichen:
 Die Meldungen landen an drei Stellen: im gelben Kasten auf der Seite, in der
 Commit-Nachricht und in der Zusammenfassung des Action-Laufs.
 
+## Statistik
+
+`statistik.py` leitet aus den Spieldaten Kennzahlen ab, die handball.net so
+nicht ausweist – Fahrten, Bilanz nach Heim und Auswärts, Serien, Krimi-Quote,
+Bilanz nach Anwurfzeit, Gegnerbilanzen.
+
+Entfernungen sind **geschätzt**: Luftlinie zwischen den Hallenkoordinaten,
+mal 1,3 für Umwege, Fahrzeit bei 70 km/h. Ausgangspunkt ist `heimat` in
+`teams.json`.
+
+**Koordinaten werden geprüft.** Der Verband trägt bei einzelnen Hallen `0/0`
+ein – der Nullpunkt im Atlantik. Ungeprüft übernommen ergäbe das
+Fahrtstrecken von 7.000 km und schickte die Navigation vor Afrika. Nur
+Koordinaten innerhalb Deutschlands werden verwendet, betroffene Hallen
+weist die Seite offen aus.
+
+Der Verbrauchs-Gag für Herren I rechnet aus `alltag` in `teams.json`
+(Trainings pro Woche, Bier je Training und Spiel, Zeiten vor und nach dem
+Spiel). Alle Werte dort anpassbar – die Seite zeigt die Rechnung offen an,
+damit niemand raten muss, wo die Zahl herkommt.
+
+Gegnerbilanzen erscheinen erst, wenn gegen jemanden **zweimal** gespielt
+wurde; nach einem einzelnen Spiel wäre „liebster Gegner" nur ein Ergebnis.
+
 ## Zähler (Hype und Zusagen)
 
 Optional. Ein Cloudflare Worker mit KV-Speicher hält zwei Zahlen je Spiel:

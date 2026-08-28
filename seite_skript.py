@@ -12,7 +12,7 @@ SKRIPT = """
   var mannschaften = [].slice.call(document.querySelectorAll('[data-team]'));
   if (!wahl || !mannschaften.length) return;
 
-  var ANSICHTEN = ['kalender', 'spiele', 'tabelle'];
+  var ANSICHTEN = ['kalender', 'spiele', 'tabelle', 'statistik'];
   var SPEICHER = 'muru-mannschaft';
 
   function zeigeMannschaft(schluessel) {
@@ -261,5 +261,47 @@ SKRIPT = """
       });
     }
   });
+})();
+
+// ---------------------------------------------------------------------
+// Countdown bis zum Anwurf
+// ---------------------------------------------------------------------
+(function () {
+  var felder = [].slice.call(document.querySelectorAll('[data-countdown]'));
+  if (!felder.length) return;
+
+  function zweistellig(n) { return (n < 10 ? '0' : '') + n; }
+
+  function schreibe() {
+    var jetzt = Date.now();
+    felder.forEach(function (el) {
+      var ziel = new Date(el.getAttribute('data-countdown')).getTime();
+      if (isNaN(ziel)) return;
+      var rest = Math.floor((ziel - jetzt) / 1000);
+
+      if (rest <= 0) {
+        // Ein Handballspiel dauert rund zwei Stunden - so lange gilt es als laufend.
+        el.textContent = rest > -7200 ? 'Läuft gerade' : 'Angepfiffen';
+        return;
+      }
+      var tage = Math.floor(rest / 86400);
+      var std = Math.floor((rest % 86400) / 3600);
+      var min = Math.floor((rest % 3600) / 60);
+      var sek = rest % 60;
+
+      if (tage > 0) {
+        el.innerHTML = 'noch <span>' + tage + '</span> <span class="einheit">' +
+          (tage === 1 ? 'Tag' : 'Tage') + '</span> <span>' + std +
+          '</span> <span class="einheit">Std</span> <span>' + min +
+          '</span> <span class="einheit">Min</span>';
+      } else {
+        el.innerHTML = 'noch <span>' + zweistellig(std) + ':' + zweistellig(min) +
+          ':' + zweistellig(sek) + '</span> <span class="einheit">Std</span>';
+      }
+    });
+  }
+
+  schreibe();
+  setInterval(schreibe, 1000);
 })();
 """

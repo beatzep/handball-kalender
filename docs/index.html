@@ -199,6 +199,59 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 .verlauf .jetzt { fill: var(--tinte); font-weight: 700; }
 
 
+
+
+/* ---------- Statistik ---------- */
+.kennzahlen { display: grid; grid-template-columns: 1fr 1fr; gap: 22px 18px;
+              margin: 0 0 8px; }
+.kennzahlen > div { min-width: 0; }
+.kennzahlen dt { font-size: .72rem; font-weight: 600; letter-spacing: .05em;
+                 text-transform: uppercase; color: var(--leise); }
+.kennzahlen dd { margin: 4px 0 0; font-size: 1.7rem; font-weight: 300;
+                 line-height: 1.05; letter-spacing: -.02em; }
+.kennzahlen dd .klein { font-size: .95rem; color: var(--leise); font-weight: 400; }
+.kennzahlen .zusatz { display: block; margin-top: 4px; font-size: .82rem;
+                      color: var(--leise); line-height: 1.35; }
+.kennzahlen .breit { grid-column: 1 / -1; }
+
+.verbrauch { margin: 26px 0 0; padding: 22px 0; border-top: 1px solid var(--linie);
+             border-bottom: 1px solid var(--linie); }
+.verbrauch .wert { font-size: 2.6rem; font-weight: 300; line-height: 1;
+                   letter-spacing: -.03em; color: var(--gold-tief); }
+.verbrauch .einheit { font-size: 1rem; color: var(--leise); margin-left: 6px; }
+.verbrauch .rechnung { margin: 14px 0 0; font-size: .86rem; color: var(--tinte-weich);
+                       line-height: 1.5; }
+.verbrauch .pointe { margin: 8px 0 0; font-size: .86rem; color: var(--leise);
+                     font-style: italic; }
+
+.statfuss { margin: 18px 0 0; font-size: .8rem; color: var(--leise); line-height: 1.45; }
+
+/* ---------- Countdown, Hinspiel, Gegner ---------- */
+.countdown {
+  font-size: 1.05rem; font-weight: 600; color: var(--tinte);
+  margin: 0 0 20px; font-variant-numeric: tabular-nums;
+}
+.countdown .einheit { color: var(--leise); font-weight: 400; font-size: .92rem; }
+
+.vorschau { margin: 26px 0 0; padding-top: 22px; border-top: 1px solid var(--linie-zart); }
+.vorschau h3 {
+  margin: 0 0 12px; font-size: .74rem; font-weight: 600; letter-spacing: .06em;
+  text-transform: uppercase; color: var(--leise);
+}
+.hinspiel { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;
+            margin-bottom: 18px; }
+.hinspiel .stand { font-size: 1.15rem; font-weight: 700; }
+.hinspiel .wo { font-size: .9rem; color: var(--leise); }
+.hinspiel a { font-size: .88rem; color: var(--gold-tief); text-decoration: none;
+              box-shadow: inset 0 -1px 0 var(--gold); }
+.hinspiel a:hover { color: var(--tinte); }
+
+.gegnerdaten { display: flex; gap: 24px; flex-wrap: wrap; margin: 0; }
+.gegnerdaten div { margin: 0; }
+.gegnerdaten dt { font-size: .74rem; color: var(--leise); letter-spacing: .04em;
+                  text-transform: uppercase; }
+.gegnerdaten dd { margin: 2px 0 0; font-size: 1.05rem; font-weight: 600; }
+
 /* ---------- Hype und Zusagen ---------- */
 .mitmachen { margin: 30px 0 0; padding: 22px 0 0; border-top: 1px solid var(--linie); }
 .hype .titel, .dabei .titel {
@@ -312,12 +365,14 @@ table.tabelle tr.wir td.platz { box-shadow: inset 2px 0 0 var(--gold); }
   <div class="marker"><span data-anwurf="2026-08-29T20:00:00+02:00">Morgen</span>
  &middot; Auswärtsspiel</div>
 <h2 class="paarung">TSG MZ-Bretzenheim II &ndash; HSG MuRu</h2>
+<p class="countdown" data-countdown="2026-08-29T20:00:00+02:00"></p>
 <dl class="fakten">
 <div><dt>Anwurf</dt><dd>Samstag, 29.08.2026, 20:00 Uhr</dd></div>
 <div><dt>Halle</dt><dd>IGS 1 Mainz-Bretzenheim</dd></div>
 <div><dt>Adresse</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=IGS%201%20Mainz-Bretzenheim%20Hans-B%C3%B6ckler-Stra%C3%9Fe%202%2C%2055128%20Mainz" target="_blank"
 rel="noopener">Hans-Böckler-Straße 2, 55128 Mainz</a></dd></div>
 </dl>
+  
   <div class="mitmachen" data-spiel="2627RPBKROERMA0101"
      data-vorher="" data-worker="https://muru-zaehler.edis-herrmann.workers.dev">
   <div class="hype">
@@ -338,9 +393,10 @@ rel="noopener">Hans-Böckler-Straße 2, 55128 Mainz</a></dd></div>
   
 
   <nav class="reiter" role="tablist" aria-label="Bereiche">
-    <button type="button" role="tab" data-ziel="kalender" aria-selected="true">In den Kalender</button>
-    <button type="button" role="tab" data-ziel="spiele" aria-selected="false">Alle Spiele</button>
+    <button type="button" role="tab" data-ziel="kalender" aria-selected="true">Kalender</button>
+    <button type="button" role="tab" data-ziel="spiele" aria-selected="false">Spiele</button>
     <button type="button" role="tab" data-ziel="tabelle" aria-selected="false">Tabelle</button>
+    <button type="button" role="tab" data-ziel="statistik" aria-selected="false">Statistik</button>
   </nav>
 
   <div class="teil" data-ansicht="kalender"><div class="rubrik">In den Kalender</div>
@@ -503,17 +559,28 @@ rel="noopener">Hans-Böckler-Straße 2, 55128 Mainz</a></dd></div>
 </div>
 <p class="tabellenfuss">Die Saison hat noch nicht begonnen.</p>
   </div>
+  <div class="teil" data-ansicht="statistik" hidden>
+    <div class="rubrik">Unterwegs</div><dl class="kennzahlen"><div><dt>Kilometer</dt><dd>1.539<span class="zusatz">18 Fahrten, hin und zurück</span></dd></div><div><dt>Im Auto</dt><dd>22,0<span class="klein"> Std</span><span class="zusatz">geschätzt bei 70 km/h</span></dd></div><div><dt>Weiteste Fahrt</dt><dd>169<span class="klein"> km</span><span class="zusatz">Bingen, Rundsporthalle</span></dd></div><div><dt>Kürzeste Fahrt</dt><dd>12<span class="klein"> km</span><span class="zusatz">TVR-Sporthalle Ludwigshafen</span></dd></div></dl><div class="verbrauch">
+<div class="wert">28,6<span class="einheit">Liter Bier / 100 km</span></div>
+<p class="rechnung">880 Bier über die Saison (440 Liter) –
+aus 66 Trainings in 33 Wochen und 22 Spielen –
+geteilt durch 1.539 gefahrene Kilometer.</p>
+<p class="pointe">Ein Sattelschlepper kommt mit 30 aus.</p>
+</div><dl class="kennzahlen"><div class="breit"><dt>Zeit für Handball</dt><dd>248<span class="klein"> Std</span><span class="zusatz">10,3 Tage am Stück – Training, Spiele, Warmup, Dritte Halbzeit und Fahrten</span></dd></div></dl><p class="statfuss">Sobald gespielt wird, kommen hier Bilanz, Serien und Auffälligkeiten dazu.</p>
+  </div>
 </section><section data-team="herren2" hidden>
   <p class="liga">Männer Bezirksklasse &middot; 20 Spiele</p>
   <div class="marker"><span data-anwurf="2026-08-29T19:00:00+02:00">Morgen</span>
  &middot; Auswärtsspiel</div>
 <h2 class="paarung">TV THALEISCHWEILER Herren &ndash; HSG MuRu II</h2>
+<p class="countdown" data-countdown="2026-08-29T19:00:00+02:00"></p>
 <dl class="fakten">
 <div><dt>Anwurf</dt><dd>Samstag, 29.08.2026, 19:00 Uhr</dd></div>
 <div><dt>Halle</dt><dd>IGS-Sporthalle Thaleischweiler</dd></div>
 <div><dt>Adresse</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=IGS-Sporthalle%20Thaleischweiler%20Schulstr.%202%2C%2066987%20Thaleischweiler" target="_blank"
 rel="noopener">Schulstr. 2, 66987 Thaleischweiler</a></dd></div>
 </dl>
+  
   <div class="mitmachen" data-spiel="2627RPBKRKERMB0101"
      data-vorher="" data-worker="https://muru-zaehler.edis-herrmann.workers.dev">
   <div class="hype">
@@ -534,9 +601,10 @@ rel="noopener">Schulstr. 2, 66987 Thaleischweiler</a></dd></div>
   
 
   <nav class="reiter" role="tablist" aria-label="Bereiche">
-    <button type="button" role="tab" data-ziel="kalender" aria-selected="true">In den Kalender</button>
-    <button type="button" role="tab" data-ziel="spiele" aria-selected="false">Alle Spiele</button>
+    <button type="button" role="tab" data-ziel="kalender" aria-selected="true">Kalender</button>
+    <button type="button" role="tab" data-ziel="spiele" aria-selected="false">Spiele</button>
     <button type="button" role="tab" data-ziel="tabelle" aria-selected="false">Tabelle</button>
+    <button type="button" role="tab" data-ziel="statistik" aria-selected="false">Statistik</button>
   </nav>
 
   <div class="teil" data-ansicht="kalender"><div class="rubrik">In den Kalender</div>
@@ -689,17 +757,22 @@ rel="noopener">Schulstr. 2, 66987 Thaleischweiler</a></dd></div>
 </div>
 <p class="tabellenfuss">Die Saison hat noch nicht begonnen.</p>
   </div>
+  <div class="teil" data-ansicht="statistik" hidden>
+    <div class="rubrik">Unterwegs</div><dl class="kennzahlen"><div><dt>Kilometer</dt><dd>658<span class="zusatz">15 Fahrten, hin und zurück</span></dd></div><div><dt>Im Auto</dt><dd>9,4<span class="klein"> Std</span><span class="zusatz">geschätzt bei 70 km/h</span></dd></div><div><dt>Weiteste Fahrt</dt><dd>157<span class="klein"> km</span><span class="zusatz">IGS-Sporthalle Thaleischweiler</span></dd></div><div><dt>Kürzeste Fahrt</dt><dd>12<span class="klein"> km</span><span class="zusatz">TVR-Sporthalle Ludwigshafen</span></dd></div></dl><p class="statfuss">Nicht eingerechnet, weil im Verband keine Koordinaten hinterlegt sind: Sporthalle Schwegenheim.</p><p class="statfuss">Sobald gespielt wird, kommen hier Bilanz, Serien und Auffälligkeiten dazu.</p>
+  </div>
 </section><section data-team="damen" hidden>
   <p class="liga">Frauen Verbandsliga &middot; 18 Spiele</p>
   <div class="marker"><span data-anwurf="2026-09-06T18:00:00+02:00">Nächstes Spiel</span>
  &middot; Heimspiel</div>
 <h2 class="paarung">HSG MuRu &ndash; FSG Selz-Wiesbach</h2>
+<p class="countdown" data-countdown="2026-09-06T18:00:00+02:00"></p>
 <dl class="fakten">
 <div><dt>Anwurf</dt><dd>Sonntag, 06.09.2026, 18:00 Uhr</dd></div>
 <div><dt>Halle</dt><dd>TSG-Sporthalle Mutterstadt</dd></div>
 <div><dt>Adresse</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank"
 rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
 </dl>
+  
   <div class="mitmachen" data-spiel="2627RPVLERWA0204"
      data-vorher="" data-worker="https://muru-zaehler.edis-herrmann.workers.dev">
   <div class="hype">
@@ -720,9 +793,10 @@ rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
   
 
   <nav class="reiter" role="tablist" aria-label="Bereiche">
-    <button type="button" role="tab" data-ziel="kalender" aria-selected="true">In den Kalender</button>
-    <button type="button" role="tab" data-ziel="spiele" aria-selected="false">Alle Spiele</button>
+    <button type="button" role="tab" data-ziel="kalender" aria-selected="true">Kalender</button>
+    <button type="button" role="tab" data-ziel="spiele" aria-selected="false">Spiele</button>
     <button type="button" role="tab" data-ziel="tabelle" aria-selected="false">Tabelle</button>
+    <button type="button" role="tab" data-ziel="statistik" aria-selected="false">Statistik</button>
   </nav>
 
   <div class="teil" data-ansicht="kalender"><div class="rubrik">In den Kalender</div>
@@ -865,9 +939,12 @@ rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
 </div>
 <p class="tabellenfuss">Die Saison hat noch nicht begonnen.</p>
   </div>
+  <div class="teil" data-ansicht="statistik" hidden>
+    <div class="rubrik">Unterwegs</div><dl class="kennzahlen"><div><dt>Kilometer</dt><dd>989<span class="zusatz">13 Fahrten, hin und zurück</span></dd></div><div><dt>Im Auto</dt><dd>14,1<span class="klein"> Std</span><span class="zusatz">geschätzt bei 70 km/h</span></dd></div><div><dt>Weiteste Fahrt</dt><dd>167<span class="klein"> km</span><span class="zusatz">Am Großen Sand Mainz</span></dd></div><div><dt>Kürzeste Fahrt</dt><dd>12<span class="klein"> km</span><span class="zusatz">TVR-Sporthalle Ludwigshafen</span></dd></div></dl><p class="statfuss">Nicht eingerechnet, weil im Verband keine Koordinaten hinterlegt sind: Sporthalle Freinsheim.</p><p class="statfuss">Sobald gespielt wird, kommen hier Bilanz, Serien und Auffälligkeiten dazu.</p>
+  </div>
 </section>
   <p class="fuss">
-    Zuletzt abgeglichen am 28.08.2026 um 17:18 Uhr. Die Spielpläne werden täglich automatisch
+    Zuletzt abgeglichen am 28.08.2026 um 20:03 Uhr. Die Spielpläne werden täglich automatisch
     mit <a href="https://www.handball.net" target="_blank" rel="noopener">handball.net</a>
     abgeglichen; Änderungen erscheinen hier und in abonnierten Kalendern.
   </p>
@@ -880,7 +957,7 @@ rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
   var mannschaften = [].slice.call(document.querySelectorAll('[data-team]'));
   if (!wahl || !mannschaften.length) return;
 
-  var ANSICHTEN = ['kalender', 'spiele', 'tabelle'];
+  var ANSICHTEN = ['kalender', 'spiele', 'tabelle', 'statistik'];
   var SPEICHER = 'muru-mannschaft';
 
   function zeigeMannschaft(schluessel) {
@@ -1129,6 +1206,48 @@ rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
       });
     }
   });
+})();
+
+// ---------------------------------------------------------------------
+// Countdown bis zum Anwurf
+// ---------------------------------------------------------------------
+(function () {
+  var felder = [].slice.call(document.querySelectorAll('[data-countdown]'));
+  if (!felder.length) return;
+
+  function zweistellig(n) { return (n < 10 ? '0' : '') + n; }
+
+  function schreibe() {
+    var jetzt = Date.now();
+    felder.forEach(function (el) {
+      var ziel = new Date(el.getAttribute('data-countdown')).getTime();
+      if (isNaN(ziel)) return;
+      var rest = Math.floor((ziel - jetzt) / 1000);
+
+      if (rest <= 0) {
+        // Ein Handballspiel dauert rund zwei Stunden - so lange gilt es als laufend.
+        el.textContent = rest > -7200 ? 'Läuft gerade' : 'Angepfiffen';
+        return;
+      }
+      var tage = Math.floor(rest / 86400);
+      var std = Math.floor((rest % 86400) / 3600);
+      var min = Math.floor((rest % 3600) / 60);
+      var sek = rest % 60;
+
+      if (tage > 0) {
+        el.innerHTML = 'noch <span>' + tage + '</span> <span class="einheit">' +
+          (tage === 1 ? 'Tag' : 'Tage') + '</span> <span>' + std +
+          '</span> <span class="einheit">Std</span> <span>' + min +
+          '</span> <span class="einheit">Min</span>';
+      } else {
+        el.innerHTML = 'noch <span>' + zweistellig(std) + ':' + zweistellig(min) +
+          ':' + zweistellig(sek) + '</span> <span class="einheit">Std</span>';
+      }
+    });
+  }
+
+  schreibe();
+  setInterval(schreibe, 1000);
 })();
 </script>
 </body>

@@ -23,6 +23,8 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
+import statistik
+
 API = "https://www.handball.net/api/new"
 SPIEL_URL = "https://www.handball.net/match/{id}"
 TZ = ZoneInfo("Europe/Berlin")
@@ -259,8 +261,29 @@ def gegner(spiel: dict, team_id: int) -> str:
     return normalisiere((spiel.get(seite) or {}).get("name")) or "Unbekannt"
 
 
+def gegner_id(spiel: dict, team_id: int) -> int | None:
+    seite = "visitor" if ist_heimspiel(spiel, team_id) else "local"
+    return (spiel.get(seite) or {}).get("id")
+
+
 def halle(spiel: dict) -> dict:
     return ((spiel.get("field") or {}).get("installation")) or {}
+
+
+def koordinaten(spiel: dict) -> tuple[float, float] | None:
+    """Koordinaten der Halle, sofern sie in Deutschland liegen koennen.
+
+    Der Verband traegt bei manchen Hallen 0/0 ein - das ist der Nullpunkt
+    im Atlantik. Ungeprueft uebernommen schickt das die Navigation vor
+    Afrika und macht jede Kilometerrechnung unbrauchbar."""
+    ort = halle(spiel)
+    try:
+        lat, lon = float(ort.get("latitude")), float(ort.get("longitude"))
+    except (TypeError, ValueError):
+        return None
+    if 47.0 <= lat <= 55.5 and 5.0 <= lon <= 16.0:
+        return lat, lon
+    return None
 
 
 def adresse(spiel: dict) -> str:
@@ -337,6 +360,10 @@ def vergleiche(spiele: list[dict], team_id: int, alt: dict) -> tuple[dict, list[
             "ort": ort,
             "halle": normalisiere(halle(spiel).get("name")),
             "gegner": gegner(spiel, team_id),
+            "gegner_id": gegner_id(spiel, team_id),
+            "match_id": spiel.get("id"),
+            "lat": (koordinaten(spiel) or (None, None))[0],
+            "lon": (koordinaten(spiel) or (None, None))[1],
             "spieltag": spiel.get("round"),
             "heim": ist_heimspiel(spiel, team_id),
             "sequence": (vorher or {}).get("sequence", 0),
@@ -517,12 +544,9 @@ def baue_kalender(spiele: list[dict], team_id: int, cfg: argparse.Namespace,
 
         if adresse(spiel):
             zeilen.append(f"LOCATION:{escape(adresse(spiel))}")
-        ort = halle(spiel)
-        if ort.get("latitude") and ort.get("longitude"):
-            try:
-                zeilen.append(f"GEO:{float(ort['latitude']):.6f};{float(ort['longitude']):.6f}")
-            except (TypeError, ValueError):
-                pass
+        punkt = koordinaten(spiel)
+        if punkt:
+            zeilen.append(f"GEO:{punkt[0]:.6f};{punkt[1]:.6f}")
 
         if not cfg.keine_alarme:
             for ausloeser, text in (("-P1D", "Morgen Spiel"), ("-PT3H", "Gleich Spiel")):
@@ -583,6 +607,8 @@ def verarbeite_team(team: dict, cfg: argparse.Namespace, alt: dict) -> tuple[dic
         "saison": f"20{saison_id[:2]}/{saison_id[2:]}" if len(saison_id) == 4 else "",
         "tabelle": hole_tabelle((spiele[0].get("phase") or {}).get("id"), team_id),
         "form": form_aus_spielen(neuer_stand),
+        "statistik": statistik.alles(list(neuer_stand.values()),
+                                     cfg.heimat, team.get("alltag")),
         "letzte_aenderungen": aenderungen,
         "spiele": neuer_stand,
     }, aenderungen
@@ -606,6 +632,7 @@ def main() -> None:
 
     konfig = json.loads(Path(cfg.teams).read_text(encoding="utf-8"))
     cfg.verein = konfig.get("verein", "")
+    cfg.heimat = konfig.get("heimat") or {}
 
     datenpfad = Path(cfg.daten)
     bisher = {}

@@ -65,12 +65,56 @@ def hero(spiel: dict, kurzname: str, heute: datetime) -> str:
     return f"""<div class="marker"><span data-anwurf="{wann.isoformat()}">{relativ}</span>
  &middot; {'Heimspiel' if heim else 'Auswärtsspiel'}</div>
 <h2 class="paarung">{paarung}</h2>
+<p class="countdown" data-countdown="{wann.isoformat()}"></p>
 <dl class="fakten">
 <div><dt>Anwurf</dt><dd>{WOCHENTAGE[wann.weekday()]}, {wann:%d.%m.%Y}, {wann:%H:%M} Uhr</dd></div>
 <div><dt>Halle</dt><dd>{sicher(spiel.get('halle'))}</dd></div>
 <div><dt>Adresse</dt><dd><a href="{kartenlink(spiel)}" target="_blank"
 rel="noopener">{sicher(strasse(spiel))}</a></dd></div>
 </dl>"""
+
+
+def hinspiel_und_gegner(naechstes: dict, alle: list[dict], tabelle: dict) -> str:
+    """Was es ueber den naechsten Gegner an Fakten gibt: das frühere
+    Aufeinandertreffen dieser Saison und seine Tabellenwerte.
+
+    Bewusst nur Zahlen - eine Einschaetzung waere geraten."""
+    gegner_id = naechstes.get("gegner_id")
+    teile = []
+
+    frueher = [s for s in alle
+               if s.get("gegner_id") == gegner_id and s.get("ergebnis")
+               and s["datum"] < naechstes["datum"]]
+    if frueher:
+        s = frueher[-1]
+        e = s["ergebnis"]
+        wort = {"S": "gewonnen", "N": "verloren", "U": "unentschieden"}[e["ausgang"]]
+        wo = "zu Hause" if s.get("heim") else "auswärts"
+        verweis = (f'<a href="https://www.handball.net/match/{s["match_id"]}"'
+                   f' target="_blank" rel="noopener">Spielbericht</a>'
+                   if s.get("match_id") else "")
+        teile.append(
+            # Aus eigener Sicht, weil direkt daneben "gewonnen" steht -
+            # die Heim:Gast-Schreibweise laese sich hier falschherum.
+            f'<div class="hinspiel"><span class="stand">{e["eigene"]}:{e["fremde"]}</span>'
+            f'<span class="wo">{wort}, {wo} am '
+            f'{datetime.fromisoformat(s["datum"]):%d.%m.%Y}</span>{verweis}</div>')
+
+    zeile = next((e for e in (tabelle or {}).get("eintraege") or []
+                  if e.get("team_id") == gegner_id), None)
+    if zeile and (tabelle or {}).get("gespielt"):
+        teile.append(
+            f'<dl class="gegnerdaten">'
+            f'<div><dt>Tabelle</dt><dd>Platz {zeile["platz"]}</dd></div>'
+            f'<div><dt>Punkte</dt><dd>{zeile["punkte"]}</dd></div>'
+            f'<div><dt>Spiele</dt><dd>{zeile["spiele"]}</dd></div>'
+            f'<div><dt>Tordifferenz</dt><dd>{zeile["differenz"]:+d}</dd></div>'
+            f'</dl>')
+
+    if not teile:
+        return ""
+    return (f'<div class="vorschau"><h3>Gegen {sicher(naechstes.get("gegner"))}</h3>'
+            + "".join(teile) + "</div>")
 
 
 def spielzeile(spiel: dict, heute: datetime, naechster: bool) -> str:
@@ -213,6 +257,131 @@ def verlaufsblock(tabelle: dict) -> str:
 </div>"""
 
 
+def zahl(n) -> str:
+    """Tausenderpunkte, wie man Zahlen hierzulande schreibt."""
+    return f"{n:,}".replace(",", ".")
+
+
+def kennzahl(titel: str, wert: str, zusatz: str = "", breit: bool = False) -> str:
+    z = f'<span class="zusatz">{zusatz}</span>' if zusatz else ""
+    return (f'<div{" class=\"breit\"" if breit else ""}><dt>{titel}</dt>'
+            f'<dd>{wert}{z}</dd></div>')
+
+
+def statistikblock(st: dict) -> str:
+    """Kennzahlen, die handball.net so nicht ausweist.
+
+    Der Fahrtenteil steht ab dem ersten Tag, alles Ergebnisabhaengige
+    erscheint erst, wenn gespielt wurde - leere Nullen sind keine Statistik."""
+    if not st:
+        return '<p class="statfuss">Noch keine Daten.</p>'
+
+    teile = []
+    f = st.get("fahrten") or {}
+    if f.get("gesamt_km"):
+        felder = [
+            kennzahl("Kilometer", zahl(f["gesamt_km"]),
+                     f'{f["fahrten"]} Fahrten, hin und zurück'),
+            kennzahl("Im Auto", f'{str(f["stunden"]).replace(".", ",")}'
+                     f'<span class="klein"> Std</span>', "geschätzt bei 70 km/h"),
+        ]
+        if f.get("weiteste"):
+            felder.append(kennzahl(
+                "Weiteste Fahrt", f'{zahl(round(f["weiteste"]["km"]))}'
+                f'<span class="klein"> km</span>', sicher(f["weiteste"]["halle"])))
+        if f.get("naechste"):
+            felder.append(kennzahl(
+                "Kürzeste Fahrt", f'{zahl(round(f["naechste"]["km"]))}'
+                f'<span class="klein"> km</span>', sicher(f["naechste"]["halle"])))
+        teile.append('<div class="rubrik">Unterwegs</div>'
+                     f'<dl class="kennzahlen">{"".join(felder)}</dl>')
+        if f.get("ohne_koordinaten"):
+            teile.append(
+                '<p class="statfuss">Nicht eingerechnet, weil im Verband keine '
+                'Koordinaten hinterlegt sind: '
+                + ", ".join(sicher(h) for h in f["ohne_koordinaten"]) + ".</p>")
+
+    a = st.get("alltag") or {}
+    if a.get("verbrauch"):
+        teile.append(f"""<div class="verbrauch">
+<div class="wert">{str(a["verbrauch"]).replace(".", ",")}<span class="einheit">Liter Bier / 100 km</span></div>
+<p class="rechnung">{zahl(a["biere"])} Bier über die Saison ({zahl(a["liter"])} Liter) –
+aus {a["trainings"]} Trainings in {a["wochen"]} Wochen und {a["spiele"]} Spielen –
+geteilt durch {zahl(f.get("gesamt_km", 0))} gefahrene Kilometer.</p>
+<p class="pointe">Ein Sattelschlepper kommt mit 30 aus.</p>
+</div>""")
+        teile.append('<dl class="kennzahlen">'
+                     + kennzahl("Zeit für Handball", f'{zahl(a["stunden"])}'
+                                f'<span class="klein"> Std</span>',
+                                f'{str(a["tage"]).replace(".", ",")} Tage am Stück – '
+                                'Training, Spiele, Warmup, Dritte Halbzeit und Fahrten',
+                                breit=True)
+                     + "</dl>")
+
+    b = st.get("bilanz") or {}
+    if (b.get("gesamt") or {}).get("spiele"):
+        g, h, aw = b["gesamt"], b["heim"], b["auswaerts"]
+        se = st.get("serien") or {}
+        kr = st.get("krimis") or {}
+        to = st.get("tore") or {}
+        felder = [
+            kennzahl("Gesamt", f'{g["s"]}<span class="klein">S</span> '
+                     f'{g["u"]}<span class="klein">U</span> '
+                     f'{g["n"]}<span class="klein">N</span>',
+                     f'aus {g["spiele"]} Spielen'),
+            kennzahl("Zu Hause", f'{h["s"]}<span class="klein">S</span> '
+                     f'{h["u"]}<span class="klein">U</span> '
+                     f'{h["n"]}<span class="klein">N</span>'),
+            kennzahl("Auswärts", f'{aw["s"]}<span class="klein">S</span> '
+                     f'{aw["u"]}<span class="klein">U</span> '
+                     f'{aw["n"]}<span class="klein">N</span>'),
+        ]
+        if to.get("schnitt"):
+            felder.append(kennzahl("Tore pro Spiel",
+                                   str(to["schnitt"]).replace(".", ","),
+                                   f'{to["erzielt"]}:{to["kassiert"]} insgesamt'))
+        if kr.get("gesamt"):
+            felder.append(kennzahl("Krimis", f'{kr["anteil"]}<span class="klein">%</span>',
+                                   f'{kr["anzahl"]} von {kr["gesamt"]} Spielen '
+                                   'auf zwei Tore oder weniger'))
+        if se.get("ohne_niederlage"):
+            felder.append(kennzahl("Längste Serie", f'{se["ohne_niederlage"]}'
+                                   f'<span class="klein"> Spiele</span>',
+                                   "ohne Niederlage"))
+        teile.append('<div class="rubrik">Bilanz</div>'
+                     f'<dl class="kennzahlen">{"".join(felder)}</dl>')
+
+        anw = st.get("anwurf") or {}
+        geg = st.get("gegner") or {}
+        weitere = []
+        if (anw.get("spaet") or {}).get("spiele") and (anw.get("frueh") or {}).get("spiele"):
+            weitere.append(kennzahl(
+                "Spätanwurf", str(anw["spaet"]["schnitt"]).replace(".", ","),
+                f'Punkte je Spiel ab 19 Uhr – früher: '
+                f'{str(anw["frueh"]["schnitt"]).replace(".", ",")}'))
+        if geg.get("liebster"):
+            weitere.append(kennzahl("Liebster Gegner", sicher(geg["liebster"]["gegner"]),
+                                    f'{geg["liebster"]["punkte"]} Punkte, '
+                                    f'{geg["liebster"]["differenz"]:+d} Tore', breit=True))
+        if geg.get("schwerster"):
+            weitere.append(kennzahl("Schwerster Gegner", sicher(geg["schwerster"]["gegner"]),
+                                    f'{geg["schwerster"]["punkte"]} Punkte, '
+                                    f'{geg["schwerster"]["differenz"]:+d} Tore', breit=True))
+        if to.get("torreichstes"):
+            t = to["torreichstes"]
+            weitere.append(kennzahl("Torreichstes Spiel", sicher(t["stand"]),
+                                    f'gegen {sicher(t["gegner"])}, {t["summe"]} Tore',
+                                    breit=True))
+        if weitere:
+            teile.append('<div class="rubrik">Auffälligkeiten</div>'
+                         f'<dl class="kennzahlen">{"".join(weitere)}</dl>')
+    else:
+        teile.append('<p class="statfuss">Sobald gespielt wird, kommen hier '
+                     'Bilanz, Serien und Auffälligkeiten dazu.</p>')
+
+    return "".join(teile)
+
+
 def tabellenblock(tabelle: dict, eigenes_team: int | None) -> str:
     """Vor dem ersten Spieltag steht ueberall 0 - die Reihenfolge ist dann
     ohne Aussage, darum der Hinweis darunter."""
@@ -319,13 +488,15 @@ def mannschaftsblock(schluessel: str, team: dict, basis: str, heute: datetime,
   <p class="liga">{kopf}</p>
   {hero(kommend[0], team['kurzname'], heute) if kommend else
    '<p class="marker">Saison beendet</p>'}
+  {hinspiel_und_gegner(kommend[0], spiele, team.get('tabelle') or {}) if kommend else ''}
   {mitmachblock(naechster_code, vorheriger_code, worker) if kommend else ''}
   {aenderungsblock(team)}
 
   <nav class="reiter" role="tablist" aria-label="Bereiche">
-    <button type="button" role="tab" data-ziel="kalender" aria-selected="true">In den Kalender</button>
-    <button type="button" role="tab" data-ziel="spiele" aria-selected="false">Alle Spiele</button>
+    <button type="button" role="tab" data-ziel="kalender" aria-selected="true">Kalender</button>
+    <button type="button" role="tab" data-ziel="spiele" aria-selected="false">Spiele</button>
     <button type="button" role="tab" data-ziel="tabelle" aria-selected="false">Tabelle</button>
+    <button type="button" role="tab" data-ziel="statistik" aria-selected="false">Statistik</button>
   </nav>
 
   <div class="teil" data-ansicht="kalender">{abo_block(team, basis)}</div>
@@ -334,6 +505,9 @@ def mannschaftsblock(schluessel: str, team: dict, basis: str, heute: datetime,
     {formblock(team.get('form') or [])}
     {verlaufsblock(team.get('tabelle') or {})}
     {tabellenblock(team.get('tabelle') or {}, team.get('team_id'))}
+  </div>
+  <div class="teil" data-ansicht="statistik" hidden>
+    {statistikblock(team.get('statistik') or {})}
   </div>
 </section>"""
 

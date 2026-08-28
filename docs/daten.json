@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-08-28T15:18:00+00:00",
+  "aktualisiert": "2026-08-28T18:03:55+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -175,6 +175,80 @@
         ]
       },
       "form": [],
+      "statistik": {
+        "fahrten": {
+          "gesamt_km": 1539,
+          "fahrten": 18,
+          "stunden": 22.0,
+          "weiteste": {
+            "km": 168.8937026988312,
+            "gegner": "GW Bingen-Büdesheim",
+            "halle": "Bingen, Rundsporthalle",
+            "heim": false
+          },
+          "naechste": {
+            "km": 12.337724856185785,
+            "gegner": "HSV Sobernheim H1",
+            "halle": "TVR-Sporthalle Ludwigshafen",
+            "heim": true
+          },
+          "ohne_koordinaten": []
+        },
+        "bilanz": {
+          "gesamt": {
+            "s": 0,
+            "u": 0,
+            "n": 0,
+            "spiele": 0
+          },
+          "heim": {
+            "s": 0,
+            "u": 0,
+            "n": 0,
+            "spiele": 0
+          },
+          "auswaerts": {
+            "s": 0,
+            "u": 0,
+            "n": 0,
+            "spiele": 0
+          }
+        },
+        "serien": {
+          "ohne_niederlage": 0,
+          "aktuell": 0,
+          "aktuell_art": null
+        },
+        "krimis": {
+          "anzahl": 0,
+          "anteil": 0,
+          "gesamt": 0
+        },
+        "tore": {},
+        "anwurf": {
+          "spaet": {
+            "spiele": 0,
+            "punkte": 0,
+            "schnitt": 0
+          },
+          "frueh": {
+            "spiele": 0,
+            "punkte": 0,
+            "schnitt": 0
+          }
+        },
+        "gegner": {},
+        "alltag": {
+          "wochen": 33,
+          "trainings": 66,
+          "spiele": 22,
+          "biere": 880,
+          "liter": 440,
+          "verbrauch": 28.6,
+          "stunden": 248,
+          "tage": 10.3
+        }
+      },
       "letzte_aenderungen": [],
       "spiele": {
         "2627RPBKROERMA0101": {
@@ -182,6 +256,10 @@
           "ort": "IGS 1 Mainz-Bretzenheim, Hans-Böckler-Straße 2, 55128 Mainz",
           "halle": "IGS 1 Mainz-Bretzenheim",
           "gegner": "TSG MZ-Bretzenheim II",
+          "gegner_id": 80919,
+          "match_id": 351626,
+          "lat": 49.97727,
+          "lon": 8.24746,
           "spieltag": 1,
           "heim": false,
           "sequence": 0
@@ -191,6 +269,10 @@
           "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
           "halle": "TSG-Sporthalle Mutterstadt",
           "gegner": "HSG Worms",
+          "gegner_id": 80913,
+          "match_id": 351637,
+          "lat": 49.4445307,
+          "lon": 8.3595174,
           "spieltag": 2,
           "heim": true,
           "sequence": 0
@@ -200,6 +282,10 @@
           "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
           "halle": "TVR-Sporthalle Ludwigshafen",
           "gegner": "HSV Sobernheim H1",
+          "gegner_id": 80912,
+          "match_id": 351638,
+          "lat": 49.487078920701,
+          "lon": 8.3645870295515,
           "spieltag": 3,
           "heim": true,
           "sequence": 0
@@ -209,6 +295,10 @@
           "ort": "Bingen, Rundsporthalle, Nuits-St.Georges-Straße, 55411 Bingen",
           "halle": "Bingen, Rundsporthalle",
           "gegner": "GW Bingen-Büdesheim",
+          "gegner_id": 80916,
+          "match_id": 351648,
+          "lat": 49.9518305,
+          "lon": 7.9116193,
           "spieltag": 4,
           "heim": false,
           "sequence": 0
@@ -218,6 +308,10 @@
           "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
           "halle": "TVR-Sporthalle Ludwigshafen",
           "gegner": "TG Osthofen II",
+          "gegner_id": 80920,
+          "match_id": 351651,
+          "lat": 49.487078920701,
+          "lon": 8.3645870295515,
           "spieltag": 5,
           "heim": true,
           "sequence": 0
@@ -227,6 +321,10 @@
           "ort": "Sporthalle der IGS Nieder-Olm, Karl-Sieben-Straße, 55268 Nieder-Olm",
           "halle": "Sporthalle der IGS Nieder-Olm",
           "gegner": "TV Nieder-Olm II",
+          "gegner_id": 80917,
+          "match_id": 351659,
+          "lat": 49.9031611,
+          "lon": 8.1976354,
           "spieltag": 6,
           "heim": false,
           "sequence": 0
@@ -236,6 +334,10 @@
           "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
           "halle": "TSG-Sporthalle Mutterstadt",
           "gegner": "HSG Zotzenheim/St.Johann/Sprendlingen",
+          "gegner_id": 80922,
+          "match_id": 351664,
+          "lat": 49.4445307,
+          "lon": 8.3595174,
           "spieltag": 7,
           "heim": true,
           "sequence": 0
@@ -245,6 +347,10 @@
           "ort": "NH Alzey, Frankenstraße 17, 55232 Alzey",
           "halle": "NH Alzey",
           "gegner": "HSV Alzey",
+          "gegner_id": 80914,
+          "match_id": 351670,
+          "lat": 49.74229,
+          "lon": 8.11803,
           "spieltag": 8,
           "heim": false,
           "sequence": 0
@@ -254,6 +360,10 @@
           "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
           "halle": "TVR-Sporthalle Ludwigshafen",
           "gegner": "SG Saulheim II",
+          "gegner_id": 80921,
+          "match_id": 351677,
+          "lat": 49.487078920701,
+          "lon": 8.3645870295515,
           "spieltag": 9,
           "heim": true,
           "sequence": 0
@@ -263,6 +373,10 @@
           "ort": "Bingen, Rundsporthalle, Nuits-St.Georges-Straße, 55411 Bingen",
           "halle": "Bingen, Rundsporthalle",
           "gegner": "HSG Rhein-Nahe Bingen II",
+          "gegner_id": 80915,
+          "match_id": 351681,
+          "lat": 49.9518305,
+          "lon": 7.9116193,
           "spieltag": 10,
           "heim": false,
           "sequence": 0
@@ -272,6 +386,10 @@
           "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
           "halle": "TVR-Sporthalle Ludwigshafen",
           "gegner": "HSC Ingelheim",
+          "gegner_id": 80918,
+          "match_id": 351690,
+          "lat": 49.487078920701,
+          "lon": 8.3645870295515,
           "spieltag": 11,
           "heim": true,
           "sequence": 0
@@ -281,6 +399,10 @@
           "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
           "halle": "TSG-Sporthalle Mutterstadt",
           "gegner": "TSG MZ-Bretzenheim II",
+          "gegner_id": 80919,
+          "match_id": 351692,
+          "lat": 49.4445307,
+          "lon": 8.3595174,
           "spieltag": 12,
           "heim": true,
           "sequence": 0
@@ -290,6 +412,10 @@
           "ort": "Nikolaus-Dörr-Halle Worms, Mainzer Straße 51, 67547 Worms",
           "halle": "Nikolaus-Dörr-Halle Worms",
           "gegner": "HSG Worms",
+          "gegner_id": 80913,
+          "match_id": 351703,
+          "lat": 49.6422044,
+          "lon": 8.3630492,
           "spieltag": 13,
           "heim": false,
           "sequence": 0
@@ -299,6 +425,10 @@
           "ort": "Bad Sobernheim, Dr. W.Dümmler Halle, Staudernheimer Straße, 55566 Bad Sobernheim",
           "halle": "Bad Sobernheim, Dr. W.Dümmler Halle",
           "gegner": "HSV Sobernheim H1",
+          "gegner_id": 80912,
+          "match_id": 351704,
+          "lat": 49.7836159,
+          "lon": 7.6650867,
           "spieltag": 14,
           "heim": false,
           "sequence": 0
@@ -308,6 +438,10 @@
           "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
           "halle": "TVR-Sporthalle Ludwigshafen",
           "gegner": "GW Bingen-Büdesheim",
+          "gegner_id": 80916,
+          "match_id": 351714,
+          "lat": 49.487078920701,
+          "lon": 8.3645870295515,
           "spieltag": 15,
           "heim": true,
           "sequence": 0
@@ -317,6 +451,10 @@
           "ort": "Wonnegauhalle Osthofen, Herrnsheimer Straße 24, 67574 Osthofen",
           "halle": "Wonnegauhalle Osthofen",
           "gegner": "TG Osthofen II",
+          "gegner_id": 80920,
+          "match_id": 351717,
+          "lat": 49.70016,
+          "lon": 8.32541,
           "spieltag": 16,
           "heim": false,
           "sequence": 0
@@ -326,6 +464,10 @@
           "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
           "halle": "TVR-Sporthalle Ludwigshafen",
           "gegner": "TV Nieder-Olm II",
+          "gegner_id": 80917,
+          "match_id": 351725,
+          "lat": 49.487078920701,
+          "lon": 8.3645870295515,
           "spieltag": 17,
           "heim": true,
           "sequence": 0
@@ -335,6 +477,10 @@
           "ort": "IGS Sprendlingen, Ober-Hilbersheimer Straße, 55576 Sprendlingen",
           "halle": "IGS Sprendlingen",
           "gegner": "HSG Zotzenheim/St.Johann/Sprendlingen",
+          "gegner_id": 80922,
+          "match_id": 351730,
+          "lat": 49.8622308,
+          "lon": 7.9918304,
           "spieltag": 18,
           "heim": false,
           "sequence": 0
@@ -344,6 +490,10 @@
           "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
           "halle": "TSG-Sporthalle Mutterstadt",
           "gegner": "HSV Alzey",
+          "gegner_id": 80914,
+          "match_id": 351736,
+          "lat": 49.4445307,
+          "lon": 8.3595174,
           "spieltag": 19,
           "heim": true,
           "sequence": 0
@@ -353,6 +503,10 @@
           "ort": "Ritter-Hundt-Zentrum Saulheim, Am Westring 6A, 55291 Saulheim",
           "halle": "Ritter-Hundt-Zentrum Saulheim",
           "gegner": "SG Saulheim II",
+          "gegner_id": 80921,
+          "match_id": 351743,
+          "lat": 49.8712983,
+          "lon": 8.1467399,
           "spieltag": 20,
           "heim": false,
           "sequence": 0
@@ -362,6 +516,10 @@
           "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
           "halle": "TVR-Sporthalle Ludwigshafen",
           "gegner": "HSG Rhein-Nahe Bingen II",
+          "gegner_id": 80915,
+          "match_id": 351747,
+          "lat": 49.487078920701,
+          "lon": 8.3645870295515,
           "spieltag": 21,
           "heim": true,
           "sequence": 0
@@ -371,6 +529,10 @@
           "ort": "Sebastian-Münster-Gymnasium Ingelheim, Hans-Fluck-Straße, 55218 Ingelheim",
           "halle": "Sebastian-Münster-Gymnasium Ingelheim",
           "gegner": "HSC Ingelheim",
+          "gegner_id": 80918,
+          "match_id": 351756,
+          "lat": 49.9721176,
+          "lon": 8.0531121,
           "spieltag": 22,
           "heim": false,
           "sequence": 0
@@ -550,6 +712,73 @@
         ]
       },
       "form": [],
+      "statistik": {
+        "fahrten": {
+          "gesamt_km": 658,
+          "fahrten": 15,
+          "stunden": 9.4,
+          "weiteste": {
+            "km": 156.59873968407337,
+            "gegner": "TV THALEISCHWEILER Herren",
+            "halle": "IGS-Sporthalle Thaleischweiler",
+            "heim": false
+          },
+          "naechste": {
+            "km": 12.337724856185785,
+            "gegner": "TV Kirrweiler II",
+            "halle": "TVR-Sporthalle Ludwigshafen",
+            "heim": true
+          },
+          "ohne_koordinaten": [
+            "Sporthalle Schwegenheim"
+          ]
+        },
+        "bilanz": {
+          "gesamt": {
+            "s": 0,
+            "u": 0,
+            "n": 0,
+            "spiele": 0
+          },
+          "heim": {
+            "s": 0,
+            "u": 0,
+            "n": 0,
+            "spiele": 0
+          },
+          "auswaerts": {
+            "s": 0,
+            "u": 0,
+            "n": 0,
+            "spiele": 0
+          }
+        },
+        "serien": {
+          "ohne_niederlage": 0,
+          "aktuell": 0,
+          "aktuell_art": null
+        },
+        "krimis": {
+          "anzahl": 0,
+          "anteil": 0,
+          "gesamt": 0
+        },
+        "tore": {},
+        "anwurf": {
+          "spaet": {
+            "spiele": 0,
+            "punkte": 0,
+            "schnitt": 0
+          },
+          "frueh": {
+            "spiele": 0,
+            "punkte": 0,
+            "schnitt": 0
+          }
+        },
+        "gegner": {},
+        "alltag": {}
+      },
       "letzte_aenderungen": [],
       "spiele": {
         "2627RPBKRKERMB0101": {
@@ -557,6 +786,10 @@
           "ort": "IGS-Sporthalle Thaleischweiler, Schulstr. 2, 66987 Thaleischweiler",
           "halle": "IGS-Sporthalle Thaleischweiler",
           "gegner": "TV THALEISCHWEILER Herren",
+          "gegner_id": 80973,
+          "match_id": 352286,
+          "lat": 49.2573806,
+          "lon": 7.5792125043203,
           "spieltag": 1,
           "heim": false,
           "sequence": 0
@@ -566,6 +799,10 @@
           "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
           "halle": "TSG-Sporthalle Mutterstadt",
           "gegner": "HSG Grethen/Maxdorf",
+          "gegner_id": 80984,
+          "match_id": 352297,
+          "lat": 49.4445307,
+          "lon": 8.3595174,
           "spieltag": 2,
           "heim": true,
           "sequence": 0
@@ -575,6 +812,10 @@
           "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
           "halle": "TVR-Sporthalle Ludwigshafen",
           "gegner": "TV Kirrweiler II",
+          "gegner_id": 80979,
+          "match_id": 352298,
+          "lat": 49.487078920701,
+          "lon": 8.3645870295515,
           "spieltag": 3,
           "heim": true,
           "sequence": 0
@@ -584,6 +825,10 @@
           "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
           "halle": "TVR-Sporthalle Ludwigshafen",
           "gegner": "TSV Kandel II",
+          "gegner_id": 80975,
+          "match_id": 352311,
+          "lat": 49.487078920701,
+          "lon": 8.3645870295515,
           "spieltag": 5,
           "heim": true,
           "sequence": 0
@@ -593,6 +838,10 @@
           "ort": "Rhein-Pfalz-Halle Römerberg-Heiligenstein, Viehtriftstraße 106, 67354 Römerberg-Heiligenstein",
           "halle": "Rhein-Pfalz-Halle Römerberg-Heiligenstein",
           "gegner": "TUS Heiligenstein II",
+          "gegner_id": 80983,
+          "match_id": 352319,
+          "lat": 49.2793152,
+          "lon": 8.4049777624909,
           "spieltag": 6,
           "heim": false,
           "sequence": 0
@@ -602,6 +851,10 @@
           "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
           "halle": "TSG-Sporthalle Mutterstadt",
           "gegner": "MSG Iggelheim/Meckenheim III",
+          "gegner_id": 80978,
+          "match_id": 352324,
+          "lat": 49.4445307,
+          "lon": 8.3595174,
           "spieltag": 7,
           "heim": true,
           "sequence": 0
@@ -611,6 +864,10 @@
           "ort": "Andreas-Albert-Schule, Petergartenweg 9, 67227 Frankenthal",
           "halle": "Andreas-Albert-Schule",
           "gegner": "SG LaFt - Herren",
+          "gegner_id": 80970,
+          "match_id": 352330,
+          "lat": 49.5316795,
+          "lon": 8.3460540351322,
           "spieltag": 8,
           "heim": false,
           "sequence": 0
@@ -620,6 +877,10 @@
           "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
           "halle": "TVR-Sporthalle Ludwigshafen",
           "gegner": "HSV Lingenfeld/Schwegenheim II",
+          "gegner_id": 80982,
+          "match_id": 352337,
+          "lat": 49.487078920701,
+          "lon": 8.3645870295515,
           "spieltag": 9,
           "heim": true,
           "sequence": 0
@@ -629,6 +890,10 @@
           "ort": "Sporthalle Dansenberg, Am Handballplatz 1, 67661 Kaiserslautern-Dansenberg",
           "halle": "Sporthalle Dansenberg",
           "gegner": "MSG Kaiserslautern/Dansenberg II",
+          "gegner_id": 80974,
+          "match_id": 352341,
+          "lat": 49.406914,
+          "lon": 7.736269,
           "spieltag": 10,
           "heim": false,
           "sequence": 0
@@ -638,6 +903,10 @@
           "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
           "halle": "TVR-Sporthalle Ludwigshafen",
           "gegner": "TUS Neuhofen II",
+          "gegner_id": 80976,
+          "match_id": 352350,
+          "lat": 49.487078920701,
+          "lon": 8.3645870295515,
           "spieltag": 11,
           "heim": true,
           "sequence": 0
@@ -647,6 +916,10 @@
           "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
           "halle": "TSG-Sporthalle Mutterstadt",
           "gegner": "TV THALEISCHWEILER Herren",
+          "gegner_id": 80973,
+          "match_id": 352352,
+          "lat": 49.4445307,
+          "lon": 8.3595174,
           "spieltag": 12,
           "heim": true,
           "sequence": 0
@@ -656,6 +929,10 @@
           "ort": "Carl-Orff-Realschule Bad Dürkheim, Kanalstr. 23, 67098 Bad Dürkheim",
           "halle": "Carl-Orff-Realschule Bad Dürkheim",
           "gegner": "HSG Grethen/Maxdorf",
+          "gegner_id": 80984,
+          "match_id": 352363,
+          "lat": 49.466768,
+          "lon": 8.187112,
           "spieltag": 13,
           "heim": false,
           "sequence": 0
@@ -665,6 +942,10 @@
           "ort": "Reblandhalle Kirrweiler, Unterried 6, 67489 Kirrweiler",
           "halle": "Reblandhalle Kirrweiler",
           "gegner": "TV Kirrweiler II",
+          "gegner_id": 80979,
+          "match_id": 352364,
+          "lat": 49.2957629,
+          "lon": 8.1726313657868,
           "spieltag": 14,
           "heim": false,
           "sequence": 0
@@ -674,6 +955,10 @@
           "ort": "Kandel, IGS Sporthalle, Schubertstr. 7, 76870 Kandel",
           "halle": "Kandel, IGS Sporthalle",
           "gegner": "TSV Kandel II",
+          "gegner_id": 80975,
+          "match_id": 352377,
+          "lat": 49.0776545,
+          "lon": 8.193107699999999,
           "spieltag": 16,
           "heim": false,
           "sequence": 0
@@ -683,6 +968,10 @@
           "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
           "halle": "TVR-Sporthalle Ludwigshafen",
           "gegner": "TUS Heiligenstein II",
+          "gegner_id": 80983,
+          "match_id": 352385,
+          "lat": 49.487078920701,
+          "lon": 8.3645870295515,
           "spieltag": 17,
           "heim": true,
           "sequence": 0
@@ -692,6 +981,10 @@
           "ort": "Wahagnieshalle Böhl-Iggelheim, Am Schwarzweiher 1, 67459 Böhl-Iggelheim",
           "halle": "Wahagnieshalle Böhl-Iggelheim",
           "gegner": "MSG Iggelheim/Meckenheim III",
+          "gegner_id": 80978,
+          "match_id": 352390,
+          "lat": 49.3730454,
+          "lon": 8.303607598627,
           "spieltag": 18,
           "heim": false,
           "sequence": 0
@@ -701,6 +994,10 @@
           "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
           "halle": "TSG-Sporthalle Mutterstadt",
           "gegner": "SG LaFt - Herren",
+          "gegner_id": 80970,
+          "match_id": 352396,
+          "lat": 49.4445307,
+          "lon": 8.3595174,
           "spieltag": 19,
           "heim": true,
           "sequence": 0
@@ -710,6 +1007,10 @@
           "ort": "Sporthalle Schwegenheim, Schulstr. 20, 67365 Schwegenheim",
           "halle": "Sporthalle Schwegenheim",
           "gegner": "HSV Lingenfeld/Schwegenheim II",
+          "gegner_id": 80982,
+          "match_id": 352403,
+          "lat": null,
+          "lon": null,
           "spieltag": 20,
           "heim": false,
           "sequence": 0
@@ -719,6 +1020,10 @@
           "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
           "halle": "TVR-Sporthalle Ludwigshafen",
           "gegner": "MSG Kaiserslautern/Dansenberg II",
+          "gegner_id": 80974,
+          "match_id": 352407,
+          "lat": 49.487078920701,
+          "lon": 8.3645870295515,
           "spieltag": 21,
           "heim": true,
           "sequence": 0
@@ -728,6 +1033,10 @@
           "ort": "Rehbachhalle Neuhofen, Jahnstr. 25, 67141 Neuhofen",
           "halle": "Rehbachhalle Neuhofen",
           "gegner": "TUS Neuhofen II",
+          "gegner_id": 80976,
+          "match_id": 352416,
+          "lat": 49.420979,
+          "lon": 8.4234100661005,
           "spieltag": 22,
           "heim": false,
           "sequence": 0
@@ -881,6 +1190,73 @@
         ]
       },
       "form": [],
+      "statistik": {
+        "fahrten": {
+          "gesamt_km": 989,
+          "fahrten": 13,
+          "stunden": 14.1,
+          "weiteste": {
+            "km": 166.61511267692677,
+            "gegner": "FSG Gonsenheim/Schott",
+            "halle": "Am Großen Sand Mainz",
+            "heim": false
+          },
+          "naechste": {
+            "km": 12.337724856185785,
+            "gegner": "TV Kirrweiler",
+            "halle": "TVR-Sporthalle Ludwigshafen",
+            "heim": true
+          },
+          "ohne_koordinaten": [
+            "Sporthalle Freinsheim"
+          ]
+        },
+        "bilanz": {
+          "gesamt": {
+            "s": 0,
+            "u": 0,
+            "n": 0,
+            "spiele": 0
+          },
+          "heim": {
+            "s": 0,
+            "u": 0,
+            "n": 0,
+            "spiele": 0
+          },
+          "auswaerts": {
+            "s": 0,
+            "u": 0,
+            "n": 0,
+            "spiele": 0
+          }
+        },
+        "serien": {
+          "ohne_niederlage": 0,
+          "aktuell": 0,
+          "aktuell_art": null
+        },
+        "krimis": {
+          "anzahl": 0,
+          "anteil": 0,
+          "gesamt": 0
+        },
+        "tore": {},
+        "anwurf": {
+          "spaet": {
+            "spiele": 0,
+            "punkte": 0,
+            "schnitt": 0
+          },
+          "frueh": {
+            "spiele": 0,
+            "punkte": 0,
+            "schnitt": 0
+          }
+        },
+        "gegner": {},
+        "alltag": {}
+      },
       "letzte_aenderungen": [],
       "spiele": {
         "2627RPVLERWA0204": {
@@ -888,6 +1264,10 @@
           "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
           "halle": "TSG-Sporthalle Mutterstadt",
           "gegner": "FSG Selz-Wiesbach",
+          "gegner_id": 81002,
+          "match_id": 365815,
+          "lat": 49.4445307,
+          "lon": 8.3595174,
           "spieltag": 2,
           "heim": true,
           "sequence": 0
@@ -897,6 +1277,10 @@
           "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
           "halle": "TVR-Sporthalle Ludwigshafen",
           "gegner": "TV Kirrweiler",
+          "gegner_id": 81003,
+          "match_id": 365816,
+          "lat": 49.487078920701,
+          "lon": 8.3645870295515,
           "spieltag": 3,
           "heim": true,
           "sequence": 0
@@ -906,6 +1290,10 @@
           "ort": "Sporthalle Bornheim, Dammgasse 1, 76879 Bornheim",
           "halle": "Sporthalle Bornheim",
           "gegner": "SV Bornheim",
+          "gegner_id": 81001,
+          "match_id": 365822,
+          "lat": 49.2157159,
+          "lon": 8.1706403,
           "spieltag": 4,
           "heim": false,
           "sequence": 0
@@ -915,6 +1303,10 @@
           "ort": "IGS-Sporthalle Thaleischweiler, Schulstr. 2, 66987 Thaleischweiler",
           "halle": "IGS-Sporthalle Thaleischweiler",
           "gegner": "TV Thaleischweiler",
+          "gegner_id": 81004,
+          "match_id": 365808,
+          "lat": 49.2573806,
+          "lon": 7.5792125043203,
           "spieltag": 1,
           "heim": false,
           "sequence": 0
@@ -924,6 +1316,10 @@
           "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
           "halle": "TSG-Sporthalle Mutterstadt",
           "gegner": "FSG Gonsenheim/Schott",
+          "gegner_id": 80998,
+          "match_id": 365832,
+          "lat": 49.4445307,
+          "lon": 8.3595174,
           "spieltag": 7,
           "heim": true,
           "sequence": 0
@@ -933,6 +1329,10 @@
           "ort": "NH Alzey, Frankenstraße 17, 55232 Alzey",
           "halle": "NH Alzey",
           "gegner": "HSV Alzey",
+          "gegner_id": 80996,
+          "match_id": 365838,
+          "lat": 49.74229,
+          "lon": 8.11803,
           "spieltag": 8,
           "heim": false,
           "sequence": 0
@@ -942,6 +1342,10 @@
           "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
           "halle": "TVR-Sporthalle Ludwigshafen",
           "gegner": "FSG Kaiserslautern/Dansenberg",
+          "gegner_id": 80997,
+          "match_id": 365842,
+          "lat": 49.487078920701,
+          "lon": 8.3645870295515,
           "spieltag": 9,
           "heim": true,
           "sequence": 0
@@ -951,6 +1355,10 @@
           "ort": "Wasgauhalle Hauenstein, Speyerstr. 24, 76846 Hauenstein",
           "halle": "Wasgauhalle Hauenstein",
           "gegner": "TV Hauenstein",
+          "gegner_id": 80995,
+          "match_id": 365846,
+          "lat": 49.1965232,
+          "lon": 7.8504113,
           "spieltag": 10,
           "heim": false,
           "sequence": 0
@@ -960,6 +1368,10 @@
           "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
           "halle": "TVR-Sporthalle Ludwigshafen",
           "gegner": "HSG Eckbachtal",
+          "gegner_id": 81000,
+          "match_id": 365851,
+          "lat": 49.487078920701,
+          "lon": 8.3645870295515,
           "spieltag": 11,
           "heim": true,
           "sequence": 0
@@ -969,6 +1381,10 @@
           "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
           "halle": "TSG-Sporthalle Mutterstadt",
           "gegner": "TV Thaleischweiler",
+          "gegner_id": 81004,
+          "match_id": 365853,
+          "lat": 49.4445307,
+          "lon": 8.3595174,
           "spieltag": 12,
           "heim": true,
           "sequence": 0
@@ -978,6 +1394,10 @@
           "ort": "IGS Sprendlingen, Ober-Hilbersheimer Straße, 55576 Sprendlingen",
           "halle": "IGS Sprendlingen",
           "gegner": "FSG Selz-Wiesbach",
+          "gegner_id": 81002,
+          "match_id": 365860,
+          "lat": 49.8622308,
+          "lon": 7.9918304,
           "spieltag": 13,
           "heim": false,
           "sequence": 0
@@ -987,6 +1407,10 @@
           "ort": "Reblandhalle Kirrweiler, Unterried 6, 67489 Kirrweiler",
           "halle": "Reblandhalle Kirrweiler",
           "gegner": "TV Kirrweiler",
+          "gegner_id": 81003,
+          "match_id": 365861,
+          "lat": 49.2957629,
+          "lon": 8.1726313657868,
           "spieltag": 14,
           "heim": false,
           "sequence": 0
@@ -996,6 +1420,10 @@
           "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
           "halle": "TVR-Sporthalle Ludwigshafen",
           "gegner": "SV Bornheim",
+          "gegner_id": 81001,
+          "match_id": 365867,
+          "lat": 49.487078920701,
+          "lon": 8.3645870295515,
           "spieltag": 15,
           "heim": true,
           "sequence": 0
@@ -1005,6 +1433,10 @@
           "ort": "Am Großen Sand Mainz, Obere Kreuzstraße 9-13, 55120 Mainz",
           "halle": "Am Großen Sand Mainz",
           "gegner": "FSG Gonsenheim/Schott",
+          "gegner_id": 80998,
+          "match_id": 365877,
+          "lat": 50.013549,
+          "lon": 8.2181361,
           "spieltag": 18,
           "heim": false,
           "sequence": 0
@@ -1014,6 +1446,10 @@
           "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
           "halle": "TSG-Sporthalle Mutterstadt",
           "gegner": "HSV Alzey",
+          "gegner_id": 80996,
+          "match_id": 365883,
+          "lat": 49.4445307,
+          "lon": 8.3595174,
           "spieltag": 19,
           "heim": true,
           "sequence": 0
@@ -1023,6 +1459,10 @@
           "ort": "Sporthalle Dansenberg, Am Handballplatz 1, 67661 Kaiserslautern-Dansenberg",
           "halle": "Sporthalle Dansenberg",
           "gegner": "FSG Kaiserslautern/Dansenberg",
+          "gegner_id": 80997,
+          "match_id": 365887,
+          "lat": 49.406914,
+          "lon": 7.736269,
           "spieltag": 20,
           "heim": false,
           "sequence": 0
@@ -1032,6 +1472,10 @@
           "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
           "halle": "TVR-Sporthalle Ludwigshafen",
           "gegner": "TV Hauenstein",
+          "gegner_id": 80995,
+          "match_id": 365891,
+          "lat": 49.487078920701,
+          "lon": 8.3645870295515,
           "spieltag": 21,
           "heim": true,
           "sequence": 0
@@ -1041,6 +1485,10 @@
           "ort": "Sporthalle Freinsheim, Reiboldstr. 12E, 67251 Freinsheim",
           "halle": "Sporthalle Freinsheim",
           "gegner": "HSG Eckbachtal",
+          "gegner_id": 81000,
+          "match_id": 365896,
+          "lat": null,
+          "lon": null,
           "spieltag": 22,
           "heim": false,
           "sequence": 0

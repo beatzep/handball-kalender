@@ -10,7 +10,16 @@
       "datei": "herren1.ics",
       "alias": [
         "hsg-muru-herren1.ics"
-      ]
+      ],
+      "alltag": {
+        "trainings_pro_woche": 2,
+        "bier_pro_training": 10,
+        "bier_pro_spiel": 10,
+        "minuten_vor_spiel": 60,
+        "minuten_nach_spiel": 30,
+        "minuten_nach_training": 45,
+        "_hinweis": "Grundlage fuer Verbrauch und Zeitrechnung - hier anpassen"
+      }
     },
     {
       "schluessel": "herren2",
@@ -26,5 +35,11 @@
       "kurzname": "HSG MuRu",
       "datei": "damen.ics"
     }
-  ]
+  ],
+  "heimat": {
+    "name": "Mutterstadt",
+    "lat": 49.444531,
+    "lon": 8.359517,
+    "_hinweis": "Ausgangspunkt fuer die Kilometerrechnung (TSG-Sporthalle)"
+  }
 }

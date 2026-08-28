@@ -193,6 +193,59 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 .verlauf .jetzt { fill: var(--tinte); font-weight: 700; }
 
 
+
+
+/* ---------- Statistik ---------- */
+.kennzahlen { display: grid; grid-template-columns: 1fr 1fr; gap: 22px 18px;
+              margin: 0 0 8px; }
+.kennzahlen > div { min-width: 0; }
+.kennzahlen dt { font-size: .72rem; font-weight: 600; letter-spacing: .05em;
+                 text-transform: uppercase; color: var(--leise); }
+.kennzahlen dd { margin: 4px 0 0; font-size: 1.7rem; font-weight: 300;
+                 line-height: 1.05; letter-spacing: -.02em; }
+.kennzahlen dd .klein { font-size: .95rem; color: var(--leise); font-weight: 400; }
+.kennzahlen .zusatz { display: block; margin-top: 4px; font-size: .82rem;
+                      color: var(--leise); line-height: 1.35; }
+.kennzahlen .breit { grid-column: 1 / -1; }
+
+.verbrauch { margin: 26px 0 0; padding: 22px 0; border-top: 1px solid var(--linie);
+             border-bottom: 1px solid var(--linie); }
+.verbrauch .wert { font-size: 2.6rem; font-weight: 300; line-height: 1;
+                   letter-spacing: -.03em; color: var(--gold-tief); }
+.verbrauch .einheit { font-size: 1rem; color: var(--leise); margin-left: 6px; }
+.verbrauch .rechnung { margin: 14px 0 0; font-size: .86rem; color: var(--tinte-weich);
+                       line-height: 1.5; }
+.verbrauch .pointe { margin: 8px 0 0; font-size: .86rem; color: var(--leise);
+                     font-style: italic; }
+
+.statfuss { margin: 18px 0 0; font-size: .8rem; color: var(--leise); line-height: 1.45; }
+
+/* ---------- Countdown, Hinspiel, Gegner ---------- */
+.countdown {
+  font-size: 1.05rem; font-weight: 600; color: var(--tinte);
+  margin: 0 0 20px; font-variant-numeric: tabular-nums;
+}
+.countdown .einheit { color: var(--leise); font-weight: 400; font-size: .92rem; }
+
+.vorschau { margin: 26px 0 0; padding-top: 22px; border-top: 1px solid var(--linie-zart); }
+.vorschau h3 {
+  margin: 0 0 12px; font-size: .74rem; font-weight: 600; letter-spacing: .06em;
+  text-transform: uppercase; color: var(--leise);
+}
+.hinspiel { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;
+            margin-bottom: 18px; }
+.hinspiel .stand { font-size: 1.15rem; font-weight: 700; }
+.hinspiel .wo { font-size: .9rem; color: var(--leise); }
+.hinspiel a { font-size: .88rem; color: var(--gold-tief); text-decoration: none;
+              box-shadow: inset 0 -1px 0 var(--gold); }
+.hinspiel a:hover { color: var(--tinte); }
+
+.gegnerdaten { display: flex; gap: 24px; flex-wrap: wrap; margin: 0; }
+.gegnerdaten div { margin: 0; }
+.gegnerdaten dt { font-size: .74rem; color: var(--leise); letter-spacing: .04em;
+                  text-transform: uppercase; }
+.gegnerdaten dd { margin: 2px 0 0; font-size: 1.05rem; font-weight: 600; }
+
 /* ---------- Hype und Zusagen ---------- */
 .mitmachen { margin: 30px 0 0; padding: 22px 0 0; border-top: 1px solid var(--linie); }
 .hype .titel, .dabei .titel {
