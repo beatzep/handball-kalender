@@ -96,6 +96,43 @@ Beim nächsten Lauf wird verglichen:
 Die Meldungen landen an drei Stellen: im gelben Kasten auf der Seite, in der
 Commit-Nachricht und in der Zusammenfassung des Action-Laufs.
 
+## Zähler (Hype und Zusagen)
+
+Optional. Ein Cloudflare Worker mit KV-Speicher hält zwei Zahlen je Spiel:
+
+| Schlüssel | Inhalt |
+|---|---|
+| `hype:<spielnummer>` | Klickzähler als Zahl |
+| `dabei:<spielnummer>` | Liste anonymer Gerätekennungen, Länge = Zusagen |
+
+Der Worker liegt in `worker/index.js`, die Konfiguration in `wrangler.toml`.
+
+```bash
+npx wrangler login     # einmalig
+npx wrangler deploy    # bei jeder Änderung am Worker
+node worker/test.mjs   # Logik gegen simuliertes KV prüfen
+```
+
+Die Seite bekommt die Adresse über `--worker-url`. **Ohne diese Angabe
+entfällt der Block ersatzlos** — und ist der Worker nicht erreichbar,
+blendet die Seite ihn aus, statt einen toten Knopf zu zeigen.
+
+Weil die Zähler an die Spielnummer hängen, fangen sie vor jedem Spiel bei
+null an; der Stand des letzten Spiels bleibt als Vergleich stehen.
+
+**Bekannte Grenzen, bewusst in Kauf genommen:**
+
+- Klicks werden im Browser gesammelt und alle zwei Sekunden gebündelt
+  gesendet. Ohne das wäre das Tageskontingent an einem Spieltag aufgebraucht.
+- KV verträgt rund einen Schreibvorgang pro Sekunde und Schlüssel. Klicken
+  zwanzig Leute gleichzeitig, können einzelne Zählungen verlorengehen. Für
+  einen Stimmungszähler ist das verschmerzbar.
+- Gegen ein Skript, das gezielt hochzählt, schützt nur die Obergrenze von 25
+  pro Anfrage. Vollständig verhindern lässt es sich ohne Anmeldung nicht.
+- Die Zusagen zählen **Geräte**, nicht Personen: zwei Geräte sind zwei
+  Stimmen, gelöschte Browserdaten kosten eine. Als Anhaltspunkt gedacht,
+  nicht als Anwesenheitsliste.
+
 ## Betrieb
 
 Der Workflow läuft täglich um 03:17 UTC und committet das Ergebnis. Er committet

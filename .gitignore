@@ -4,3 +4,4 @@ __pycache__/
 docs/_vorschau.html
 /*.ics
 .claude/
+docs/_test.html

@@ -2,6 +2,7 @@
 
 Bewusst ohne f-String gehalten, damit die geschweiften Klammern des
 JavaScripts nicht verdoppelt werden muessen.
+
 """
 
 SKRIPT = """
@@ -133,5 +134,115 @@ SKRIPT = """
   if (istIOS && !alsApp) {
     document.querySelectorAll('[data-ios-tipp]').forEach(function (el) { el.hidden = false; });
   }
+})();
+
+// ---------------------------------------------------------------------
+// Hype-Zaehler und Zusagen
+// ---------------------------------------------------------------------
+(function () {
+  var bloecke = [].slice.call(document.querySelectorAll('.mitmachen'));
+  if (!bloecke.length) return;
+
+  // Anonyme Geraetekennung, bleibt im Browser. Dient nur dazu, eine Zusage
+  // wieder zuruecknehmen zu koennen und Doppelzaehlung zu vermeiden.
+  var GERAET = 'muru-geraet';
+  var geraet = '';
+  try {
+    geraet = localStorage.getItem(GERAET) || '';
+    if (!geraet) {
+      geraet = (crypto.randomUUID ? crypto.randomUUID() : String(Math.random()).slice(2))
+                 .replace(/[^A-Za-z0-9_-]/g, '');
+      localStorage.setItem(GERAET, geraet);
+    }
+  } catch (e) {
+    geraet = 'ohne-speicher';
+  }
+
+  bloecke.forEach(function (block) {
+    var worker = block.getAttribute('data-worker');
+    var spiel = block.getAttribute('data-spiel');
+    var vorher = block.getAttribute('data-vorher');
+    var zahlEl = block.querySelector('[data-hype]');
+    var vergleichEl = block.querySelector('[data-vergleich]');
+    var bahn = block.querySelector('[data-bahn]');
+    var anzahlEl = block.querySelector('[data-anzahl]');
+    var dabeiKnopf = block.querySelector('[data-dabei]');
+
+    var hype = 0;          // angezeigter Stand
+    var offen = 0;         // noch nicht gesendete Klicks
+    var sendet = false;
+
+    function zeige() { zahlEl.textContent = hype.toLocaleString('de-DE'); }
+
+    function melde(text) { if (vergleichEl) vergleichEl.textContent = text; }
+
+    // Stand holen
+    var adresse = worker + '/stand?spiel=' + encodeURIComponent(spiel) +
+                  (vorher ? '&vergleich=' + encodeURIComponent(vorher) : '');
+    fetch(adresse)
+      .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+      .then(function (d) {
+        hype = d.hype || 0;
+        zeige();
+        if (d.vorher && d.vorher.hype) melde('letztes Spiel: ' + d.vorher.hype);
+        if (anzahlEl) {
+          anzahlEl.textContent = d.dabei === 1 ? '1 Zusage' : d.dabei + ' Zusagen';
+        }
+      })
+      .catch(function () {
+        // Ist der Zaehler nicht erreichbar, verschwindet der Block ganz.
+        // Ein sichtbarer, aber toter Knopf ist schlechter als keiner.
+        block.hidden = true;
+      });
+
+    // Klicks buendeln: ein Aufruf je zwei Sekunden statt einer pro Klick
+    function sende() {
+      if (sendet || !offen) return;
+      var menge = Math.min(offen, 25);
+      offen -= menge;
+      sendet = true;
+      fetch(worker + '/hype', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ spiel: spiel, anzahl: menge })
+      })
+        .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+        .then(function (d) { if (typeof d.hype === 'number') { hype = d.hype; zeige(); } })
+        .catch(function () {})
+        .then(function () { sendet = false; });
+    }
+    setInterval(sende, 2000);
+    window.addEventListener('pagehide', sende);
+
+    block.querySelectorAll('.knoepfe button').forEach(function (k) {
+      k.addEventListener('click', function () {
+        hype += 1; offen += 1; zeige();
+        var flug = document.createElement('span');
+        flug.className = 'flug';
+        flug.textContent = k.getAttribute('data-emoji');
+        flug.style.left = (k.offsetLeft + 14) + 'px';
+        bahn.appendChild(flug);
+        setTimeout(function () { flug.remove(); }, 1000);
+      });
+    });
+
+    if (dabeiKnopf) {
+      dabeiKnopf.addEventListener('click', function () {
+        var an = dabeiKnopf.getAttribute('aria-pressed') !== 'true';
+        dabeiKnopf.setAttribute('aria-pressed', an ? 'true' : 'false');
+        dabeiKnopf.textContent = an ? 'Ich bin dabei ✓' : 'Ich bin dabei';
+        fetch(worker + '/dabei', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ spiel: spiel, geraet: geraet, an: an })
+        })
+          .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+          .then(function (d) {
+            anzahlEl.textContent = d.dabei === 1 ? '1 Zusage' : d.dabei + ' Zusagen';
+          })
+          .catch(function () { anzahlEl.textContent = 'gerade nicht erreichbar'; });
+      });
+    }
+  });
 })();
 """

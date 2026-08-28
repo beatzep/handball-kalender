@@ -115,6 +115,39 @@ def spielliste(spiele: list[dict], heute: datetime) -> str:
     return "".join(zeilen)
 
 
+EMOJIS = ["\U0001F98A", "\U0001F525", "\U0001F389", "\U0001F37B"]
+
+
+def mitmachblock(spiel_code: str, vorher_code: str | None, worker: str) -> str:
+    """Hype-Zaehler und Zusagen fuer das naechste Spiel.
+
+    Ohne Worker-Adresse entfaellt der Block ersatzlos - die Seite
+    funktioniert dann wie zuvor."""
+    if not worker or not spiel_code:
+        return ""
+    knoepfe = "".join(
+        f'<button type="button" data-emoji="{e}" '
+        f'aria-label="Anfeuern mit {e}">{e}</button>' for e in EMOJIS)
+    return f"""<div class="mitmachen" data-spiel="{sicher(spiel_code)}"
+     data-vorher="{sicher(vorher_code or '')}" data-worker="{sicher(worker)}">
+  <div class="hype">
+    <div class="titel">Hype vor dem Spiel</div>
+    <div><span class="zahl" data-hype>&ndash;</span><span class="vergleich" data-vergleich></span></div>
+    <div class="bahn" data-bahn></div>
+    <div class="knoepfe">{knoepfe}</div>
+  </div>
+  <div class="dabei">
+    <div class="titel">Bist du dabei?</div>
+    <div class="reihe">
+      <button type="button" data-dabei aria-pressed="false">Ich bin dabei</button>
+      <span class="anzahl" data-anzahl></span>
+    </div>
+    <p class="fussnote">Ohne Namen, nur als Anhaltspunkt – gezählt wird pro Gerät,
+       und du kannst dich jederzeit wieder abmelden.</p>
+  </div>
+</div>"""
+
+
 def formblock(form: list[str]) -> str:
     if not form:
         return ""
@@ -268,9 +301,18 @@ def abo_block(team: dict, basis: str) -> str:
 </div>"""
 
 
-def mannschaftsblock(schluessel: str, team: dict, basis: str, heute: datetime) -> str:
-    spiele = sorted((team.get("spiele") or {}).values(), key=lambda s: s["datum"])
-    kommend = [s for s in spiele if zeit(s) >= heute and not s.get("ergebnis")]
+def mannschaftsblock(schluessel: str, team: dict, basis: str, heute: datetime,
+                     worker: str = "") -> str:
+    spiele_mit_code = sorted((team.get("spiele") or {}).items(),
+                             key=lambda kv: kv[1]["datum"])
+    spiele = [s for _, s in spiele_mit_code]
+    kommend = [(c, s) for c, s in spiele_mit_code
+               if zeit(s) >= heute and not s.get("ergebnis")]
+    vergangen = [c for c, s in spiele_mit_code
+                 if s.get("ergebnis") or zeit(s) < heute]
+    naechster_code = kommend[0][0] if kommend else ""
+    vorheriger_code = vergangen[-1] if vergangen else ""
+    kommend = [s for _, s in kommend]
 
     kopf = " &middot; ".join(t for t in [
         sicher(team.get("liga")), f"{len(spiele)} Spiele"] if t)
@@ -279,6 +321,7 @@ def mannschaftsblock(schluessel: str, team: dict, basis: str, heute: datetime) -
   <p class="liga">{kopf}</p>
   {hero(kommend[0], team['kurzname'], heute) if kommend else
    '<p class="marker">Saison beendet</p>'}
+  {mitmachblock(naechster_code, vorheriger_code, worker) if kommend else ''}
   {aenderungsblock(team)}
 
   <nav class="reiter" role="tablist" aria-label="Bereiche">
@@ -304,6 +347,8 @@ def main() -> None:
     p.add_argument("--daten", default="docs/daten.json")
     p.add_argument("--basis-url", default="https://example.github.io/handball-kalender")
     p.add_argument("--out", default="docs/index.html")
+    p.add_argument("--worker-url", default="",
+                   help="Adresse des Zaehler-Workers; leer = Funktion aus")
     cfg = p.parse_args()
 
     daten = json.loads(Path(cfg.daten).read_text(encoding="utf-8"))
@@ -314,7 +359,8 @@ def main() -> None:
         f'<option value="{sicher(k)}">{sicher(t["name"])}</option>'
         for k, t in teams.items())
     bloecke = "".join(
-        mannschaftsblock(k, t, cfg.basis_url, heute) for k, t in teams.items())
+        mannschaftsblock(k, t, cfg.basis_url, heute, cfg.worker_url)
+        for k, t in teams.items())
 
     saison = next((t.get("saison") for t in teams.values() if t.get("saison")), "")
     stand_text = "unbekannt"

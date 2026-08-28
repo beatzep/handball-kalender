@@ -188,6 +188,56 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
                 font-family: inherit; font-variant-numeric: tabular-nums; }
 .verlauf .jetzt { fill: var(--tinte); font-weight: 700; }
 
+
+/* ---------- Hype und Zusagen ---------- */
+.mitmachen { margin: 30px 0 0; padding: 22px 0 0; border-top: 1px solid var(--linie); }
+.hype .titel, .dabei .titel {
+  font-size: .74rem; font-weight: 600; letter-spacing: .06em;
+  text-transform: uppercase; color: var(--leise); margin-bottom: 10px;
+}
+.hype .zahl {
+  font-size: 2.4rem; font-weight: 300; line-height: 1; letter-spacing: -.02em;
+  color: var(--gold-tief);
+}
+.hype .vergleich { font-size: .86rem; color: var(--leise); margin-left: 10px; }
+.hype .knoepfe { display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap; }
+.hype .knoepfe button {
+  font-size: 1.5rem; line-height: 1; background: none; cursor: pointer;
+  border: 1px solid var(--linie); padding: 10px 0; width: 58px; height: 52px;
+  transition: border-color .12s ease, transform .08s ease;
+}
+.hype .knoepfe button:hover { border-color: var(--gold); }
+.hype .knoepfe button:active { transform: scale(.92); border-color: var(--gold); }
+.hype .knoepfe button:focus-visible { outline: 2px solid var(--gold-tief); outline-offset: 2px; }
+.hype .bahn { position: relative; height: 0; }
+.hype .flug {
+  position: absolute; font-size: 1.5rem; pointer-events: none;
+  animation: aufsteigen 1s ease-out forwards;
+}
+@keyframes aufsteigen {
+  from { transform: translateY(0) scale(1); opacity: .9; }
+  to   { transform: translateY(-70px) scale(1.5); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hype .flug { animation-duration: .01ms; }
+  .hype .knoepfe button:active { transform: none; }
+}
+
+.dabei { margin-top: 28px; }
+.dabei .reihe { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.dabei button {
+  font: inherit; font-size: .95rem; font-weight: 600; cursor: pointer;
+  background: transparent; color: var(--tinte);
+  border: 1px solid var(--tinte); padding: 12px 20px;
+}
+.dabei button:hover { border-color: var(--gold); background: var(--gold-schwach); }
+.dabei button[aria-pressed="true"] {
+  background: var(--gold); border-color: var(--gold); color: #14140f;
+}
+.dabei button:focus-visible { outline: 2px solid var(--gold-tief); outline-offset: 2px; }
+.dabei .anzahl { font-size: .95rem; color: var(--tinte-weich); }
+.dabei .fussnote { margin: 10px 0 0; font-size: .82rem; color: var(--leise); }
+
 /* ---------- Tabelle ---------- */
 .tabellenhuelle { overflow-x: auto; }
 table.tabelle { width: 100%; border-collapse: collapse; font-size: .92rem; }
@@ -258,6 +308,24 @@ table.tabelle tr.wir td.platz { box-shadow: inset 2px 0 0 var(--gold); }
 <div><dt>Adresse</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=IGS%201%20Mainz-Bretzenheim%20Hans-B%C3%B6ckler-Stra%C3%9Fe%202%2C%2055128%20Mainz" target="_blank"
 rel="noopener">Hans-Böckler-Straße 2, 55128 Mainz</a></dd></div>
 </dl>
+  <div class="mitmachen" data-spiel="2627RPBKROERMA0101"
+     data-vorher="" data-worker="https://muru-zaehler.edis-herrmann.workers.dev">
+  <div class="hype">
+    <div class="titel">Hype vor dem Spiel</div>
+    <div><span class="zahl" data-hype>&ndash;</span><span class="vergleich" data-vergleich></span></div>
+    <div class="bahn" data-bahn></div>
+    <div class="knoepfe"><button type="button" data-emoji="🦊" aria-label="Anfeuern mit 🦊">🦊</button><button type="button" data-emoji="🔥" aria-label="Anfeuern mit 🔥">🔥</button><button type="button" data-emoji="🎉" aria-label="Anfeuern mit 🎉">🎉</button><button type="button" data-emoji="🍻" aria-label="Anfeuern mit 🍻">🍻</button></div>
+  </div>
+  <div class="dabei">
+    <div class="titel">Bist du dabei?</div>
+    <div class="reihe">
+      <button type="button" data-dabei aria-pressed="false">Ich bin dabei</button>
+      <span class="anzahl" data-anzahl></span>
+    </div>
+    <p class="fussnote">Ohne Namen, nur als Anhaltspunkt – gezählt wird pro Gerät,
+       und du kannst dich jederzeit wieder abmelden.</p>
+  </div>
+</div>
   
 
   <nav class="reiter" role="tablist" aria-label="Bereiche">
@@ -437,6 +505,24 @@ rel="noopener">Hans-Böckler-Straße 2, 55128 Mainz</a></dd></div>
 <div><dt>Adresse</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=IGS-Sporthalle%20Thaleischweiler%20Schulstr.%202%2C%2066987%20Thaleischweiler" target="_blank"
 rel="noopener">Schulstr. 2, 66987 Thaleischweiler</a></dd></div>
 </dl>
+  <div class="mitmachen" data-spiel="2627RPBKRKERMB0101"
+     data-vorher="" data-worker="https://muru-zaehler.edis-herrmann.workers.dev">
+  <div class="hype">
+    <div class="titel">Hype vor dem Spiel</div>
+    <div><span class="zahl" data-hype>&ndash;</span><span class="vergleich" data-vergleich></span></div>
+    <div class="bahn" data-bahn></div>
+    <div class="knoepfe"><button type="button" data-emoji="🦊" aria-label="Anfeuern mit 🦊">🦊</button><button type="button" data-emoji="🔥" aria-label="Anfeuern mit 🔥">🔥</button><button type="button" data-emoji="🎉" aria-label="Anfeuern mit 🎉">🎉</button><button type="button" data-emoji="🍻" aria-label="Anfeuern mit 🍻">🍻</button></div>
+  </div>
+  <div class="dabei">
+    <div class="titel">Bist du dabei?</div>
+    <div class="reihe">
+      <button type="button" data-dabei aria-pressed="false">Ich bin dabei</button>
+      <span class="anzahl" data-anzahl></span>
+    </div>
+    <p class="fussnote">Ohne Namen, nur als Anhaltspunkt – gezählt wird pro Gerät,
+       und du kannst dich jederzeit wieder abmelden.</p>
+  </div>
+</div>
   
 
   <nav class="reiter" role="tablist" aria-label="Bereiche">
@@ -606,6 +692,24 @@ rel="noopener">Schulstr. 2, 66987 Thaleischweiler</a></dd></div>
 <div><dt>Adresse</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank"
 rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
 </dl>
+  <div class="mitmachen" data-spiel="2627RPVLERWA0204"
+     data-vorher="" data-worker="https://muru-zaehler.edis-herrmann.workers.dev">
+  <div class="hype">
+    <div class="titel">Hype vor dem Spiel</div>
+    <div><span class="zahl" data-hype>&ndash;</span><span class="vergleich" data-vergleich></span></div>
+    <div class="bahn" data-bahn></div>
+    <div class="knoepfe"><button type="button" data-emoji="🦊" aria-label="Anfeuern mit 🦊">🦊</button><button type="button" data-emoji="🔥" aria-label="Anfeuern mit 🔥">🔥</button><button type="button" data-emoji="🎉" aria-label="Anfeuern mit 🎉">🎉</button><button type="button" data-emoji="🍻" aria-label="Anfeuern mit 🍻">🍻</button></div>
+  </div>
+  <div class="dabei">
+    <div class="titel">Bist du dabei?</div>
+    <div class="reihe">
+      <button type="button" data-dabei aria-pressed="false">Ich bin dabei</button>
+      <span class="anzahl" data-anzahl></span>
+    </div>
+    <p class="fussnote">Ohne Namen, nur als Anhaltspunkt – gezählt wird pro Gerät,
+       und du kannst dich jederzeit wieder abmelden.</p>
+  </div>
+</div>
   
 
   <nav class="reiter" role="tablist" aria-label="Bereiche">
@@ -891,6 +995,116 @@ rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
   if (istIOS && !alsApp) {
     document.querySelectorAll('[data-ios-tipp]').forEach(function (el) { el.hidden = false; });
   }
+})();
+
+// ---------------------------------------------------------------------
+// Hype-Zaehler und Zusagen
+// ---------------------------------------------------------------------
+(function () {
+  var bloecke = [].slice.call(document.querySelectorAll('.mitmachen'));
+  if (!bloecke.length) return;
+
+  // Anonyme Geraetekennung, bleibt im Browser. Dient nur dazu, eine Zusage
+  // wieder zuruecknehmen zu koennen und Doppelzaehlung zu vermeiden.
+  var GERAET = 'muru-geraet';
+  var geraet = '';
+  try {
+    geraet = localStorage.getItem(GERAET) || '';
+    if (!geraet) {
+      geraet = (crypto.randomUUID ? crypto.randomUUID() : String(Math.random()).slice(2))
+                 .replace(/[^A-Za-z0-9_-]/g, '');
+      localStorage.setItem(GERAET, geraet);
+    }
+  } catch (e) {
+    geraet = 'ohne-speicher';
+  }
+
+  bloecke.forEach(function (block) {
+    var worker = block.getAttribute('data-worker');
+    var spiel = block.getAttribute('data-spiel');
+    var vorher = block.getAttribute('data-vorher');
+    var zahlEl = block.querySelector('[data-hype]');
+    var vergleichEl = block.querySelector('[data-vergleich]');
+    var bahn = block.querySelector('[data-bahn]');
+    var anzahlEl = block.querySelector('[data-anzahl]');
+    var dabeiKnopf = block.querySelector('[data-dabei]');
+
+    var hype = 0;          // angezeigter Stand
+    var offen = 0;         // noch nicht gesendete Klicks
+    var sendet = false;
+
+    function zeige() { zahlEl.textContent = hype.toLocaleString('de-DE'); }
+
+    function melde(text) { if (vergleichEl) vergleichEl.textContent = text; }
+
+    // Stand holen
+    var adresse = worker + '/stand?spiel=' + encodeURIComponent(spiel) +
+                  (vorher ? '&vergleich=' + encodeURIComponent(vorher) : '');
+    fetch(adresse)
+      .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+      .then(function (d) {
+        hype = d.hype || 0;
+        zeige();
+        if (d.vorher && d.vorher.hype) melde('letztes Spiel: ' + d.vorher.hype);
+        if (anzahlEl) {
+          anzahlEl.textContent = d.dabei === 1 ? '1 Zusage' : d.dabei + ' Zusagen';
+        }
+      })
+      .catch(function () {
+        // Ist der Zaehler nicht erreichbar, verschwindet der Block ganz.
+        // Ein sichtbarer, aber toter Knopf ist schlechter als keiner.
+        block.hidden = true;
+      });
+
+    // Klicks buendeln: ein Aufruf je zwei Sekunden statt einer pro Klick
+    function sende() {
+      if (sendet || !offen) return;
+      var menge = Math.min(offen, 25);
+      offen -= menge;
+      sendet = true;
+      fetch(worker + '/hype', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ spiel: spiel, anzahl: menge })
+      })
+        .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+        .then(function (d) { if (typeof d.hype === 'number') { hype = d.hype; zeige(); } })
+        .catch(function () {})
+        .then(function () { sendet = false; });
+    }
+    setInterval(sende, 2000);
+    window.addEventListener('pagehide', sende);
+
+    block.querySelectorAll('.knoepfe button').forEach(function (k) {
+      k.addEventListener('click', function () {
+        hype += 1; offen += 1; zeige();
+        var flug = document.createElement('span');
+        flug.className = 'flug';
+        flug.textContent = k.getAttribute('data-emoji');
+        flug.style.left = (k.offsetLeft + 14) + 'px';
+        bahn.appendChild(flug);
+        setTimeout(function () { flug.remove(); }, 1000);
+      });
+    });
+
+    if (dabeiKnopf) {
+      dabeiKnopf.addEventListener('click', function () {
+        var an = dabeiKnopf.getAttribute('aria-pressed') !== 'true';
+        dabeiKnopf.setAttribute('aria-pressed', an ? 'true' : 'false');
+        dabeiKnopf.textContent = an ? 'Ich bin dabei ✓' : 'Ich bin dabei';
+        fetch(worker + '/dabei', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ spiel: spiel, geraet: geraet, an: an })
+        })
+          .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+          .then(function (d) {
+            anzahlEl.textContent = d.dabei === 1 ? '1 Zusage' : d.dabei + ' Zusagen';
+          })
+          .catch(function () { anzahlEl.textContent = 'gerade nicht erreichbar'; });
+      });
+    }
+  });
 })();
 </script>
 </body>

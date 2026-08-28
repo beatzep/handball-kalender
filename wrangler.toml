@@ -1,0 +1,9 @@
+name = "muru-zaehler"
+main = "worker/index.js"
+compatibility_date = "2026-08-01"
+workers_dev = true
+
+# KV-Speicher fuer Hype- und Anwesenheitszaehler
+[[kv_namespaces]]
+binding = "ZAEHLER"
+id = "9cdf5b8b1e044059909e7af519b2802a"

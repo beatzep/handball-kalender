@@ -182,6 +182,56 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
                 font-family: inherit; font-variant-numeric: tabular-nums; }
 .verlauf .jetzt { fill: var(--tinte); font-weight: 700; }
 
+
+/* ---------- Hype und Zusagen ---------- */
+.mitmachen { margin: 30px 0 0; padding: 22px 0 0; border-top: 1px solid var(--linie); }
+.hype .titel, .dabei .titel {
+  font-size: .74rem; font-weight: 600; letter-spacing: .06em;
+  text-transform: uppercase; color: var(--leise); margin-bottom: 10px;
+}
+.hype .zahl {
+  font-size: 2.4rem; font-weight: 300; line-height: 1; letter-spacing: -.02em;
+  color: var(--gold-tief);
+}
+.hype .vergleich { font-size: .86rem; color: var(--leise); margin-left: 10px; }
+.hype .knoepfe { display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap; }
+.hype .knoepfe button {
+  font-size: 1.5rem; line-height: 1; background: none; cursor: pointer;
+  border: 1px solid var(--linie); padding: 10px 0; width: 58px; height: 52px;
+  transition: border-color .12s ease, transform .08s ease;
+}
+.hype .knoepfe button:hover { border-color: var(--gold); }
+.hype .knoepfe button:active { transform: scale(.92); border-color: var(--gold); }
+.hype .knoepfe button:focus-visible { outline: 2px solid var(--gold-tief); outline-offset: 2px; }
+.hype .bahn { position: relative; height: 0; }
+.hype .flug {
+  position: absolute; font-size: 1.5rem; pointer-events: none;
+  animation: aufsteigen 1s ease-out forwards;
+}
+@keyframes aufsteigen {
+  from { transform: translateY(0) scale(1); opacity: .9; }
+  to   { transform: translateY(-70px) scale(1.5); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hype .flug { animation-duration: .01ms; }
+  .hype .knoepfe button:active { transform: none; }
+}
+
+.dabei { margin-top: 28px; }
+.dabei .reihe { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.dabei button {
+  font: inherit; font-size: .95rem; font-weight: 600; cursor: pointer;
+  background: transparent; color: var(--tinte);
+  border: 1px solid var(--tinte); padding: 12px 20px;
+}
+.dabei button:hover { border-color: var(--gold); background: var(--gold-schwach); }
+.dabei button[aria-pressed="true"] {
+  background: var(--gold); border-color: var(--gold); color: #14140f;
+}
+.dabei button:focus-visible { outline: 2px solid var(--gold-tief); outline-offset: 2px; }
+.dabei .anzahl { font-size: .95rem; color: var(--tinte-weich); }
+.dabei .fussnote { margin: 10px 0 0; font-size: .82rem; color: var(--leise); }
+
 /* ---------- Tabelle ---------- */
 .tabellenhuelle { overflow-x: auto; }
 table.tabelle { width: 100%; border-collapse: collapse; font-size: .92rem; }
