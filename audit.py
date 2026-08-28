@@ -31,6 +31,7 @@ def main() -> int:
     teams = daten.get("teams") or {}
     konfig = json.loads(Path("teams.json").read_text(encoding="utf-8"))
 
+    heute = datetime.now(TZ)
     print(f"Mannschaften: {len(teams)}")
     pruefe(len(teams) == len(konfig["teams"]),
            f"{len(konfig['teams'])} Mannschaften konfiguriert, {len(teams)} in den Daten")
@@ -57,6 +58,37 @@ def main() -> int:
         pruefe(abs(heim - (len(spiele) - heim)) <= 1,
                f"{schluessel}: {heim} Heim / {len(spiele)-heim} Auswärts - unausgewogen",
                hart=False)
+
+        # --- Datenqualitaet der Verbandsangaben ---
+        # Diese Pruefungen gibt es, weil zwei Hallen mit Koordinaten 0/0
+        # gefuehrt waren: Das stand als Navigationsziel in den Kalendern und
+        # ergab Fahrtstrecken von 7.000 km, ohne dass es jemand bemerkt haette.
+        for s in spiele:
+            kennung = f"{schluessel} {s.get('datum','?')[:10]}"
+            pruefe(bool(s.get("halle")), f"{kennung}: Halle ohne Namen", hart=False)
+            pruefe(s.get("gegner") not in (None, "", "Unbekannt"),
+                   f"{kennung}: Gegner nicht benannt")
+            pruefe(bool(s.get("match_id")),
+                   f"{kennung}: keine Spielkennung - Verweis auf handball.net fehlt",
+                   hart=False)
+            if s.get("lat") is not None:
+                pruefe(47.0 <= float(s["lat"]) <= 55.5 and 5.0 <= float(s["lon"]) <= 16.0,
+                       f"{kennung}: Koordinaten ausserhalb Deutschlands "
+                       f"({s['lat']}/{s['lon']})")
+
+        # Laengst gespielte Partien ohne Ergebnis deuten auf eine Luecke beim
+        # Verband hin - oder darauf, dass unser Abgleich nicht mehr laeuft.
+        ueberfaellig = [s for s in spiele
+                        if not s.get("ergebnis")
+                        and (heute - datetime.fromisoformat(s["datum"]).replace(tzinfo=TZ)).days > 3]
+        pruefe(not ueberfaellig,
+               f"{schluessel}: {len(ueberfaellig)} Spiele länger als 3 Tage vorbei, "
+               f"aber ohne Ergebnis", hart=False)
+
+        # Doppelte Anwurfzeiten in derselben Halle waeren ein Datenfehler
+        doppelt_termin = [t for t, n in Counter(s["datum"] for s in spiele).items() if n > 1]
+        pruefe(not doppelt_termin,
+               f"{schluessel}: zwei Spiele zur selben Zeit ({doppelt_termin[:2]})")
 
         # Tabelle
         tab = team.get("tabelle") or {}

@@ -2,10 +2,12 @@ name: Spielplan aktualisieren
 
 on:
   schedule:
-    # Werktags nachts einmal. Am Wochenende stuendlich zwischen 14 und 22 Uhr,
-    # damit Ergebnisse kurz nach Abpfiff auf der Seite stehen.
+    # Werktags nachts einmal.
     - cron: "17 3 * * *"
-    - cron: "5 12-20 * * 6,0"
+    # Am Wochenende stuendlich von 14 bis 0 Uhr deutscher Zeit: Anwuerfe um
+    # 20 Uhr sind in der Liga ueblich, das Spiel endet gegen 21:45 und der
+    # Verband traegt das Ergebnis erst danach ein.
+    - cron: "5 12-22 * * 6,0"
   workflow_dispatch:        # erlaubt den Handstart ueber den Actions-Tab
 
 permissions:
@@ -38,6 +40,9 @@ jobs:
           for datei in docs/*.ics; do
             python3 pruefe_ics.py "$datei"
           done
+
+      - name: Daten pruefen
+        run: python3 audit.py
 
       - name: Seite bauen
         run: |
