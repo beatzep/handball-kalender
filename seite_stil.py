@@ -195,6 +195,21 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 
 
 
+
+/* ---------- Teilen ---------- */
+.teilen { margin-top: 34px; }
+.formatwahl { display: flex; gap: 0; margin-bottom: 16px; }
+.formatwahl button {
+  font: inherit; font-size: .88rem; font-weight: 600; cursor: pointer;
+  background: transparent; color: var(--leise);
+  border: 1px solid var(--linie); padding: 10px 16px; margin-right: -1px;
+}
+.formatwahl button[aria-pressed="true"] {
+  color: var(--tinte); border-color: var(--tinte); position: relative; z-index: 1;
+}
+.formatwahl button:focus-visible { outline: 2px solid var(--gold-tief); outline-offset: 2px; }
+.teilen .knopf { margin-bottom: 10px; }
+
 /* ---------- Statistik ---------- */
 .kennzahlen { display: grid; grid-template-columns: 1fr 1fr; gap: 22px 18px;
               margin: 0 0 8px; }

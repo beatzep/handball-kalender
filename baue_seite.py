@@ -16,6 +16,7 @@ from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
+from seite_grafik import GRAFIK
 from seite_skript import SKRIPT
 from seite_stil import STIL
 
@@ -72,6 +73,86 @@ def hero(spiel: dict, kurzname: str, heute: datetime) -> str:
 <div><dt>Adresse</dt><dd><a href="{kartenlink(spiel)}" target="_blank"
 rel="noopener">{sicher(strasse(spiel))}</a></dd></div>
 </dl>"""
+
+
+def letztes_ergebnis(spiele: list[dict]) -> dict | None:
+    fertig = [s for s in spiele if s.get("ergebnis")]
+    return fertig[-1] if fertig else None
+
+
+def ergebnis_satz(team: dict, spiel: dict) -> str:
+    """Fertiger Satz fuers Weitergeben in die Mannschaftsgruppe."""
+    e = spiel["ergebnis"]
+    wort = {"S": "gewonnen", "N": "verloren", "U": "unentschieden gespielt"}[e["ausgang"]]
+    wo = "zu Hause" if spiel.get("heim") else "auswärts"
+    satz = (f'{team.get("name", "")}: {e["eigene"]}:{e["fremde"]} {wo} gegen '
+            f'{spiel.get("gegner", "")} {wort}.')
+
+    tab = team.get("tabelle") or {}
+    zeile = next((x for x in tab.get("eintraege") or []
+                  if x.get("team_id") == team.get("team_id")), None)
+    if zeile and tab.get("gespielt"):
+        satz += (f' Damit Platz {zeile["platz"]} mit {zeile["punkte"]} Punkten'
+                 f' in der {team.get("liga", "Liga")}.')
+    return satz
+
+
+def teilenblock(team: dict, naechstes: dict | None, letztes: dict | None) -> str:
+    """Knoepfe fuer die Grafiken. Die Daten haengen als JSON am Element -
+    gezeichnet wird erst im Browser, wenn jemand tatsaechlich draufdrueckt."""
+    if not naechstes and not letztes:
+        return ""
+
+    def paket(spiel, art):
+        wann = zeit(spiel)
+        d = {
+            "art": art,
+            "verein": "HSG Mutterstadt/Ruchheim",
+            "mannschaft": team.get("name", ""),
+            "gegner": spiel.get("gegner", ""),
+            "heim": bool(spiel.get("heim")),
+            "datum": wann.isoformat(),
+            "datum_text": f"{WOCHENTAGE[wann.weekday()]}, {wann:%d.%m.%Y}",
+            "uhrzeit": f"{wann:%H:%M}",
+            "halle": spiel.get("halle", ""),
+            "ort": strasse(spiel).split(",")[-1].strip(),
+            "liga": team.get("liga", ""),
+            "spieltag": spiel.get("spieltag"),
+        }
+        if art == "ergebnis" and spiel.get("ergebnis"):
+            e = spiel["ergebnis"]
+            d["stand"] = f'{e["eigene"]}:{e["fremde"]}'
+            d["ausgang"] = {"S": "Sieg", "N": "Niederlage",
+                            "U": "Unentschieden"}[e["ausgang"]]
+        return d
+
+    knoepfe = []
+    if naechstes:
+        knoepfe.append(
+            f'<button type="button" class="knopf stumm" data-grafik=\'{json.dumps(paket(naechstes, "spiel"), ensure_ascii=False)}\'>'
+            f'Bild fürs nächste Spiel</button>')
+    if letztes and letztes.get("ergebnis"):
+        knoepfe.append(
+            f'<button type="button" class="knopf stumm" data-grafik=\'{json.dumps(paket(letztes, "ergebnis"), ensure_ascii=False)}\'>'
+            f'Bild vom letzten Ergebnis</button>')
+
+    satzknopf = ""
+    if letztes and letztes.get("ergebnis"):
+        satzknopf = (f'<button type="button" class="knopf stumm" '
+                     f'data-teile="{sicher(ergebnis_satz(team, letztes))}">'
+                     f'Ergebnis als Text</button>')
+
+    return f"""<div class="teilen">
+  <div class="rubrik">Zum Teilen</div>
+  <div class="formatwahl" role="group" aria-label="Bildformat">
+    <button type="button" data-format="story" aria-pressed="true">Story 9:16</button>
+    <button type="button" data-format="post" aria-pressed="false">Beitrag 1:1</button>
+  </div>
+  {"".join(knoepfe)}
+  {satzknopf}
+  <p class="statfuss">Das Bild entsteht auf deinem Gerät aus den Spieldaten –
+     nichts wird hochgeladen.</p>
+</div>"""
 
 
 def hinspiel_und_gegner(naechstes: dict, alle: list[dict], tabelle: dict) -> str:
@@ -499,7 +580,9 @@ def mannschaftsblock(schluessel: str, team: dict, basis: str, heute: datetime,
     <button type="button" role="tab" data-ziel="statistik" aria-selected="false">Statistik</button>
   </nav>
 
-  <div class="teil" data-ansicht="kalender">{abo_block(team, basis)}</div>
+  <div class="teil" data-ansicht="kalender">{abo_block(team, basis)}
+    {teilenblock(team, kommend[0] if kommend else None,
+                 letztes_ergebnis(spiele))}</div>
   <div class="teil" data-ansicht="spiele" hidden>{spielliste(spiele, heute)}</div>
   <div class="teil" data-ansicht="tabelle" hidden>
     {formblock(team.get('form') or [])}
@@ -584,7 +667,8 @@ automatisch im Handykalender, Verlegungen inklusive.">
   </p>
 </main>
 
-<script>{SKRIPT}</script>
+<script>{SKRIPT}
+{GRAFIK}</script>
 </body>
 </html>
 """

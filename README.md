@@ -96,6 +96,28 @@ Beim nächsten Lauf wird verglichen:
 Die Meldungen landen an drei Stellen: im gelben Kasten auf der Seite, in der
 Commit-Nachricht und in der Zusammenfassung des Action-Laufs.
 
+## Bilder zum Teilen
+
+`seite_grafik.py` enthält den Zeichner, der im Browser auf ein Canvas malt:
+Wappen, Gegner, Anwurf, Halle, Countdown – beziehungsweise Endstand und
+Ausgang. Zwei Formate (1080×1920 für Stories, 1080×1080 für Beiträge).
+
+Alles entsteht **auf dem Gerät des Nutzers** aus den Spieldaten. Kein
+Bildmaterial von außen, kein Upload, keine erzeugten Bilder – nur Text,
+Wappen und Farbflächen.
+
+Zwei Dinge, die beim Bauen schiefgingen und jetzt gelöst sind:
+
+- **Textbaseline.** Mit der Voreinstellung `alphabetic` ragen große
+  Schriften nach oben in die Zeile darüber; „Auswärts bei" überlappte den
+  Gegnernamen. Alles hängt jetzt an `textBaseline: top`.
+- **Senkrechte Lage.** Der Block wird erst unsichtbar ausgemessen und dann
+  mittig gesetzt, sonst klebt der Inhalt oben und unten bleibt eine große
+  Leerfläche.
+
+Geteilt wird über die Web-Share-Schnittstelle, wenn das Gerät sie für
+Dateien anbietet – sonst lädt die Datei herunter.
+
 ## Statistik
 
 `statistik.py` leitet aus den Spieldaten Kennzahlen ab, die handball.net so
