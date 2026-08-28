@@ -18,6 +18,7 @@ from zoneinfo import ZoneInfo
 
 from seite_grafik import GRAFIK
 from seite_skript import SKRIPT
+from seite_tipp import TIPP
 from seite_stil import STIL
 
 TZ = ZoneInfo("Europe/Berlin")
@@ -243,7 +244,15 @@ def spielliste(spiele: list[dict], heute: datetime) -> str:
 EMOJIS = ["\U0001F98A", "\U0001F525", "\U0001F389", "\U0001F37B"]
 
 
-def mitmachblock(spiel_code: str, vorher_code: str | None, worker: str) -> str:
+def paarung_namen(spiel: dict, team: dict) -> tuple[str, str]:
+    """Wer steht links, wer rechts - der Tipp wird als Heim:Gast gespeichert."""
+    eigen = team.get("kurzname") or team.get("name") or "Wir"
+    gegner = spiel.get("gegner") or "Gegner"
+    return (eigen, gegner) if spiel.get("heim") else (gegner, eigen)
+
+
+def mitmachblock(spiel_code: str, vorher_code: str | None, worker: str,
+                 heimname: str = "", gastname: str = "") -> str:
     """Hype-Zaehler und Zusagen fuer das naechste Spiel.
 
     Ohne Worker-Adresse entfaellt der Block ersatzlos - die Seite
@@ -261,6 +270,28 @@ def mitmachblock(spiel_code: str, vorher_code: str | None, worker: str) -> str:
     <div class="bahn" data-bahn></div>
     <div class="knoepfe">{knoepfe}</div>
   </div>
+  <div class="tippspiel" data-tipp="{sicher(spiel_code)}"
+       data-heimname="{sicher(heimname)}" data-gastname="{sicher(gastname)}">
+    <div class="titel">Tipprunde</div>
+    <div class="tippzeile">
+      <div><label for="tipp-heim-{sicher(spiel_code)}">{sicher(heimname)}</label>
+        <input id="tipp-heim-{sicher(spiel_code)}" data-tippfeld="heim" type="number"
+               inputmode="numeric" min="0" max="99" placeholder="–"></div>
+      <div class="doppel">:</div>
+      <div><label for="tipp-gast-{sicher(spiel_code)}">{sicher(gastname)}</label>
+        <input id="tipp-gast-{sicher(spiel_code)}" data-tippfeld="gast" type="number"
+               inputmode="numeric" min="0" max="99" placeholder="–"></div>
+    </div>
+    <input class="name" data-tippname type="text" maxlength="24"
+           placeholder="Dein Name für die Tabelle" autocomplete="nickname">
+    <button type="button" class="knopf" data-tippsenden>Tipp abgeben</button>
+    <p class="meldung" data-tippmeldung></p>
+    <div class="tipptabelle" data-tipptabelle></div>
+    <p class="nebensache">
+      <button type="button" data-tippumzug>Auf anderem Gerät weitertippen</button>
+    </p>
+  </div>
+
   <div class="dabei">
     <div class="titel">Bist du dabei?</div>
     <div class="reihe">
@@ -570,7 +601,8 @@ def mannschaftsblock(schluessel: str, team: dict, basis: str, heute: datetime,
   {hero(kommend[0], team['kurzname'], heute) if kommend else
    '<p class="marker">Saison beendet</p>'}
   {hinspiel_und_gegner(kommend[0], spiele, team.get('tabelle') or {}) if kommend else ''}
-  {mitmachblock(naechster_code, vorheriger_code, worker) if kommend else ''}
+  {mitmachblock(naechster_code, vorheriger_code, worker,
+                *paarung_namen(kommend[0], team)) if kommend else ''}
   {aenderungsblock(team)}
 
   <nav class="reiter" role="tablist" aria-label="Bereiche">
@@ -668,6 +700,7 @@ automatisch im Handykalender, Verlegungen inklusive.">
 </main>
 
 <script>{SKRIPT}
+{TIPP}
 {GRAFIK}</script>
 </body>
 </html>

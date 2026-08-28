@@ -6,6 +6,37 @@ JavaScripts nicht verdoppelt werden muessen.
 """
 
 SKRIPT = """
+// ---------------------------------------------------------------------
+// Geraetekennung - anonym, bleibt im Browser
+// ---------------------------------------------------------------------
+// Dient dazu, eine Zusage zurueckziehen und die eigenen Tipps wiederfinden
+// zu koennen. Wer das Geraet wechselt, nimmt sie ueber den Umzugslink mit.
+window.muruGeraet = (function () {
+  var SCHLUESSEL = 'muru-geraet';
+  var kennung = null;
+  return function () {
+    if (kennung) return kennung;
+    try {
+      // Eine Kennung aus dem Umzugslink hat Vorrang und wird uebernommen.
+      var ausAdresse = new URLSearchParams(location.search).get('tipper');
+      if (ausAdresse && /^[A-Za-z0-9_-]{4,40}$/.test(ausAdresse)) {
+        localStorage.setItem(SCHLUESSEL, ausAdresse);
+        history.replaceState(null, '', location.pathname + location.hash);
+      }
+      kennung = localStorage.getItem(SCHLUESSEL) || '';
+      if (!kennung) {
+        kennung = (crypto.randomUUID ? crypto.randomUUID()
+                                     : String(Math.random()).slice(2))
+                    .replace(/[^A-Za-z0-9_-]/g, '');
+        localStorage.setItem(SCHLUESSEL, kennung);
+      }
+    } catch (e) {
+      kennung = 'ohne-speicher';
+    }
+    return kennung;
+  };
+})();
+
 (function () {
   var seite = document.documentElement;
   var wahl = document.getElementById('teamwahl');
@@ -143,20 +174,7 @@ SKRIPT = """
   var bloecke = [].slice.call(document.querySelectorAll('.mitmachen'));
   if (!bloecke.length) return;
 
-  // Anonyme Geraetekennung, bleibt im Browser. Dient nur dazu, eine Zusage
-  // wieder zuruecknehmen zu koennen und Doppelzaehlung zu vermeiden.
-  var GERAET = 'muru-geraet';
-  var geraet = '';
-  try {
-    geraet = localStorage.getItem(GERAET) || '';
-    if (!geraet) {
-      geraet = (crypto.randomUUID ? crypto.randomUUID() : String(Math.random()).slice(2))
-                 .replace(/[^A-Za-z0-9_-]/g, '');
-      localStorage.setItem(GERAET, geraet);
-    }
-  } catch (e) {
-    geraet = 'ohne-speicher';
-  }
+  var geraet = window.muruGeraet();
 
   bloecke.forEach(function (block) {
     var worker = block.getAttribute('data-worker');

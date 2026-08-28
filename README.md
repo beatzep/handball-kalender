@@ -96,6 +96,43 @@ Beim nächsten Lauf wird verglichen:
 Die Meldungen landen an drei Stellen: im gelben Kasten auf der Seite, in der
 Commit-Nachricht und in der Zusammenfassung des Action-Laufs.
 
+## Tipprunde
+
+Vor jedem Spiel kann getippt werden, nach dem Abpfiff rechnet der Worker die
+Punkte aus. Endpunkte: `/tipp`, `/tipper`, `/tipptabelle`.
+
+| Treffer | Punkte |
+|---|---|
+| Exaktes Ergebnis | 10 |
+| Richtige Tordifferenz | 5 |
+| Richtige Tendenz | 3 |
+
+**Identität ohne Anmeldung.** Jedes Gerät bekommt eine zufällige Kennung im
+Browser (dieselbe wie für die Zusagen). Punkte stapeln sich serverseitig
+unter dieser Kennung. Wer das Gerät wechselt oder seine Browserdaten löscht,
+nimmt sie über den Umzugslink `?tipper=<kennung>` mit – faktisch ein Login
+ohne Konto und ohne Passwort. Ohne Namen taucht niemand in der Tabelle auf.
+
+Das verhindert **nicht**, dass sich jemand mit einem zweiten Browser eine
+zweite Identität anlegt. Bei einer Mannschaft ist das dasselbe
+Vertrauensverhältnis wie bei den Zusagen.
+
+**Der Worker kennt Termine und Ergebnisse**, indem er `daten.json` von der
+eigenen Seite liest (eine Stunde zwischengespeichert). Dadurch braucht es
+kein Zugriffstoken und keine zweite Datenhaltung: Die Tippsperre ab Anwurf
+und die Punkteberechnung stützen sich auf dieselbe Datei wie die Seite.
+
+Zwei Fallstricke, die dabei gelöst sind:
+
+- **Zeitzonen im Worker.** Anwurfzeiten stehen ohne Zeitzone in den Daten und
+  sind als Ortszeit gemeint; Worker laufen in UTC. Der Versatz wird bei der
+  Zeitzonendatenbank erfragt statt über Monatsgrenzen geraten – sonst wäre
+  die Nacht der Zeitumstellung eine Stunde falsch.
+- **Verzögerte Auflistung im Speicher.** Neu angelegte Einträge erscheinen in
+  `list()` erst nach einiger Zeit. Wer gerade getippt hat, sähe sich sonst
+  minutenlang nicht in der Tabelle – deshalb trägt die Seite die eigene Zeile
+  vorläufig selbst ein, mit „–" als Platz.
+
 ## Bilder zum Teilen
 
 `seite_grafik.py` enthält den Zeichner, der im Browser auf ein Canvas malt:

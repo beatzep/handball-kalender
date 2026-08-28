@@ -202,6 +202,42 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 
 
 
+
+/* ---------- Tipprunde ---------- */
+.tippspiel { margin-top: 30px; padding-top: 24px; border-top: 1px solid var(--linie); }
+.tippspiel .titel { font-size: .74rem; font-weight: 600; letter-spacing: .06em;
+                    text-transform: uppercase; color: var(--leise); margin-bottom: 14px; }
+.tippzeile { display: grid; grid-template-columns: 1fr auto 1fr; gap: 10px;
+             align-items: end; margin-bottom: 14px; }
+.tippzeile label { display: block; font-size: .82rem; color: var(--tinte-weich);
+                   margin-bottom: 6px; line-height: 1.3; overflow-wrap: anywhere; }
+.tippzeile .doppel { align-self: center; padding-bottom: 12px; color: var(--leise);
+                     font-size: 1.2rem; }
+.tippspiel input {
+  font: inherit; font-size: 1.4rem; font-weight: 600; text-align: center;
+  width: 100%; padding: 12px 6px; background: transparent; color: var(--tinte);
+  border: 1px solid var(--linie); font-variant-numeric: tabular-nums;
+}
+.tippspiel input:focus-visible { outline: 2px solid var(--gold-tief); outline-offset: 1px; }
+.tippspiel input.name { font-size: 1rem; font-weight: 400; text-align: left;
+                        padding: 12px 14px; margin-bottom: 12px; }
+.tippspiel .meldung { margin: 10px 0 0; font-size: .88rem; color: var(--tinte-weich); }
+.tippspiel .meldung.gut { color: var(--sieg); }
+.tippspiel .meldung.schlecht { color: var(--niederlage); }
+.tipptabelle { margin-top: 22px; }
+.tipptabelle table { width: 100%; border-collapse: collapse; font-size: .92rem; }
+.tipptabelle td { padding: 9px 0; border-bottom: 1px solid var(--linie-zart); }
+.tipptabelle td.pl { color: var(--leise); width: 26px; font-size: .86rem; }
+.tipptabelle td.pkt { text-align: right; font-weight: 600; }
+.tipptabelle tr.ich td { background: var(--gold-schwach); font-weight: 600; }
+.tipptabelle tr.ich td.pl { box-shadow: inset 2px 0 0 var(--gold); }
+.tippspiel .nebensache { margin-top: 14px; }
+.tippspiel .nebensache button {
+  font: inherit; font-size: .84rem; background: none; border: 0; padding: 0;
+  color: var(--leise); text-decoration: underline; cursor: pointer;
+}
+.tippspiel .nebensache button:hover { color: var(--gold-tief); }
+
 /* ---------- Teilen ---------- */
 .teilen { margin-top: 34px; }
 .formatwahl { display: flex; gap: 0; margin-bottom: 16px; }
@@ -396,6 +432,28 @@ rel="noopener">Hans-Böckler-Straße 2, 55128 Mainz</a></dd></div>
     <div class="bahn" data-bahn></div>
     <div class="knoepfe"><button type="button" data-emoji="🦊" aria-label="Anfeuern mit 🦊">🦊</button><button type="button" data-emoji="🔥" aria-label="Anfeuern mit 🔥">🔥</button><button type="button" data-emoji="🎉" aria-label="Anfeuern mit 🎉">🎉</button><button type="button" data-emoji="🍻" aria-label="Anfeuern mit 🍻">🍻</button></div>
   </div>
+  <div class="tippspiel" data-tipp="2627RPBKROERMA0101"
+       data-heimname="TSG MZ-Bretzenheim II" data-gastname="HSG MuRu">
+    <div class="titel">Tipprunde</div>
+    <div class="tippzeile">
+      <div><label for="tipp-heim-2627RPBKROERMA0101">TSG MZ-Bretzenheim II</label>
+        <input id="tipp-heim-2627RPBKROERMA0101" data-tippfeld="heim" type="number"
+               inputmode="numeric" min="0" max="99" placeholder="–"></div>
+      <div class="doppel">:</div>
+      <div><label for="tipp-gast-2627RPBKROERMA0101">HSG MuRu</label>
+        <input id="tipp-gast-2627RPBKROERMA0101" data-tippfeld="gast" type="number"
+               inputmode="numeric" min="0" max="99" placeholder="–"></div>
+    </div>
+    <input class="name" data-tippname type="text" maxlength="24"
+           placeholder="Dein Name für die Tabelle" autocomplete="nickname">
+    <button type="button" class="knopf" data-tippsenden>Tipp abgeben</button>
+    <p class="meldung" data-tippmeldung></p>
+    <div class="tipptabelle" data-tipptabelle></div>
+    <p class="nebensache">
+      <button type="button" data-tippumzug>Auf anderem Gerät weitertippen</button>
+    </p>
+  </div>
+
   <div class="dabei">
     <div class="titel">Bist du dabei?</div>
     <div class="reihe">
@@ -615,6 +673,28 @@ rel="noopener">Schulstr. 2, 66987 Thaleischweiler</a></dd></div>
     <div class="bahn" data-bahn></div>
     <div class="knoepfe"><button type="button" data-emoji="🦊" aria-label="Anfeuern mit 🦊">🦊</button><button type="button" data-emoji="🔥" aria-label="Anfeuern mit 🔥">🔥</button><button type="button" data-emoji="🎉" aria-label="Anfeuern mit 🎉">🎉</button><button type="button" data-emoji="🍻" aria-label="Anfeuern mit 🍻">🍻</button></div>
   </div>
+  <div class="tippspiel" data-tipp="2627RPBKRKERMB0101"
+       data-heimname="TV THALEISCHWEILER Herren" data-gastname="HSG MuRu II">
+    <div class="titel">Tipprunde</div>
+    <div class="tippzeile">
+      <div><label for="tipp-heim-2627RPBKRKERMB0101">TV THALEISCHWEILER Herren</label>
+        <input id="tipp-heim-2627RPBKRKERMB0101" data-tippfeld="heim" type="number"
+               inputmode="numeric" min="0" max="99" placeholder="–"></div>
+      <div class="doppel">:</div>
+      <div><label for="tipp-gast-2627RPBKRKERMB0101">HSG MuRu II</label>
+        <input id="tipp-gast-2627RPBKRKERMB0101" data-tippfeld="gast" type="number"
+               inputmode="numeric" min="0" max="99" placeholder="–"></div>
+    </div>
+    <input class="name" data-tippname type="text" maxlength="24"
+           placeholder="Dein Name für die Tabelle" autocomplete="nickname">
+    <button type="button" class="knopf" data-tippsenden>Tipp abgeben</button>
+    <p class="meldung" data-tippmeldung></p>
+    <div class="tipptabelle" data-tipptabelle></div>
+    <p class="nebensache">
+      <button type="button" data-tippumzug>Auf anderem Gerät weitertippen</button>
+    </p>
+  </div>
+
   <div class="dabei">
     <div class="titel">Bist du dabei?</div>
     <div class="reihe">
@@ -818,6 +898,28 @@ rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
     <div class="bahn" data-bahn></div>
     <div class="knoepfe"><button type="button" data-emoji="🦊" aria-label="Anfeuern mit 🦊">🦊</button><button type="button" data-emoji="🔥" aria-label="Anfeuern mit 🔥">🔥</button><button type="button" data-emoji="🎉" aria-label="Anfeuern mit 🎉">🎉</button><button type="button" data-emoji="🍻" aria-label="Anfeuern mit 🍻">🍻</button></div>
   </div>
+  <div class="tippspiel" data-tipp="2627RPVLERWA0204"
+       data-heimname="HSG MuRu" data-gastname="FSG Selz-Wiesbach">
+    <div class="titel">Tipprunde</div>
+    <div class="tippzeile">
+      <div><label for="tipp-heim-2627RPVLERWA0204">HSG MuRu</label>
+        <input id="tipp-heim-2627RPVLERWA0204" data-tippfeld="heim" type="number"
+               inputmode="numeric" min="0" max="99" placeholder="–"></div>
+      <div class="doppel">:</div>
+      <div><label for="tipp-gast-2627RPVLERWA0204">FSG Selz-Wiesbach</label>
+        <input id="tipp-gast-2627RPVLERWA0204" data-tippfeld="gast" type="number"
+               inputmode="numeric" min="0" max="99" placeholder="–"></div>
+    </div>
+    <input class="name" data-tippname type="text" maxlength="24"
+           placeholder="Dein Name für die Tabelle" autocomplete="nickname">
+    <button type="button" class="knopf" data-tippsenden>Tipp abgeben</button>
+    <p class="meldung" data-tippmeldung></p>
+    <div class="tipptabelle" data-tipptabelle></div>
+    <p class="nebensache">
+      <button type="button" data-tippumzug>Auf anderem Gerät weitertippen</button>
+    </p>
+  </div>
+
   <div class="dabei">
     <div class="titel">Bist du dabei?</div>
     <div class="reihe">
@@ -999,6 +1101,37 @@ rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
 </main>
 
 <script>
+// ---------------------------------------------------------------------
+// Geraetekennung - anonym, bleibt im Browser
+// ---------------------------------------------------------------------
+// Dient dazu, eine Zusage zurueckziehen und die eigenen Tipps wiederfinden
+// zu koennen. Wer das Geraet wechselt, nimmt sie ueber den Umzugslink mit.
+window.muruGeraet = (function () {
+  var SCHLUESSEL = 'muru-geraet';
+  var kennung = null;
+  return function () {
+    if (kennung) return kennung;
+    try {
+      // Eine Kennung aus dem Umzugslink hat Vorrang und wird uebernommen.
+      var ausAdresse = new URLSearchParams(location.search).get('tipper');
+      if (ausAdresse && /^[A-Za-z0-9_-]{4,40}$/.test(ausAdresse)) {
+        localStorage.setItem(SCHLUESSEL, ausAdresse);
+        history.replaceState(null, '', location.pathname + location.hash);
+      }
+      kennung = localStorage.getItem(SCHLUESSEL) || '';
+      if (!kennung) {
+        kennung = (crypto.randomUUID ? crypto.randomUUID()
+                                     : String(Math.random()).slice(2))
+                    .replace(/[^A-Za-z0-9_-]/g, '');
+        localStorage.setItem(SCHLUESSEL, kennung);
+      }
+    } catch (e) {
+      kennung = 'ohne-speicher';
+    }
+    return kennung;
+  };
+})();
+
 (function () {
   var seite = document.documentElement;
   var wahl = document.getElementById('teamwahl');
@@ -1136,20 +1269,7 @@ rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
   var bloecke = [].slice.call(document.querySelectorAll('.mitmachen'));
   if (!bloecke.length) return;
 
-  // Anonyme Geraetekennung, bleibt im Browser. Dient nur dazu, eine Zusage
-  // wieder zuruecknehmen zu koennen und Doppelzaehlung zu vermeiden.
-  var GERAET = 'muru-geraet';
-  var geraet = '';
-  try {
-    geraet = localStorage.getItem(GERAET) || '';
-    if (!geraet) {
-      geraet = (crypto.randomUUID ? crypto.randomUUID() : String(Math.random()).slice(2))
-                 .replace(/[^A-Za-z0-9_-]/g, '');
-      localStorage.setItem(GERAET, geraet);
-    }
-  } catch (e) {
-    geraet = 'ohne-speicher';
-  }
+  var geraet = window.muruGeraet();
 
   bloecke.forEach(function (block) {
     var worker = block.getAttribute('data-worker');
@@ -1296,6 +1416,131 @@ rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
 
   schreibe();
   setInterval(schreibe, 1000);
+})();
+
+
+(function () {
+  var bloecke = [].slice.call(document.querySelectorAll('[data-tipp]'));
+  if (!bloecke.length || !window.muruGeraet) return;
+  var geraet = window.muruGeraet();
+
+  bloecke.forEach(function (block) {
+    var huelle = block.closest('.mitmachen');
+    var worker = huelle && huelle.getAttribute('data-worker');
+    if (!worker) { block.hidden = true; return; }
+
+    var spiel = block.getAttribute('data-tipp');
+    var heimFeld = block.querySelector('[data-tippfeld="heim"]');
+    var gastFeld = block.querySelector('[data-tippfeld="gast"]');
+    var nameFeld = block.querySelector('[data-tippname]');
+    var senden = block.querySelector('[data-tippsenden]');
+    var meldung = block.querySelector('[data-tippmeldung]');
+    var tabelle = block.querySelector('[data-tipptabelle]');
+    var umzug = block.querySelector('[data-tippumzug]');
+    var getippt = false;   // hat dieses Geraet fuer irgendein Spiel getippt?
+
+    function sage(text, art) {
+      meldung.textContent = text || '';
+      meldung.className = 'meldung' + (art ? ' ' + art : '');
+    }
+
+    function zeile(platz, name, punkte, ich) {
+      return '<tr' + (ich ? ' class="ich"' : '') + '><td class="pl">' + platz +
+        '</td><td>' + String(name).replace(/[<>&]/g, '') +
+        '</td><td class="pkt">' + punkte + '</td></tr>';
+    }
+
+    function zeigeTabelle(zeilen) {
+      zeilen = zeilen || [];
+      var reihen = zeilen.slice(0, 10).map(function (e) {
+        return zeile(e.platz, e.name, e.punkte, e.id === geraet);
+      });
+
+      // Neu angelegte Eintraege erscheinen in der Auflistung des Speichers
+      // erst mit Verzoegerung. Wer gerade getippt hat, saehe sich sonst
+      // minutenlang nicht - darum vorlaeufig selbst eintragen.
+      var drin = zeilen.some(function (e) { return e.id === geraet; });
+      if (!drin && nameFeld.value.trim() && getippt) {
+        reihen.push(zeile('–', nameFeld.value.trim(), 0, true));
+      }
+
+      tabelle.innerHTML = reihen.length
+        ? '<table><tbody>' + reihen.join('') + '</tbody></table>'
+        : '';
+    }
+
+    function ladeTabelle() {
+      fetch(worker + '/tipptabelle')
+        .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+        .then(function (d) { zeigeTabelle(d.tabelle); })
+        .catch(function () { tabelle.innerHTML = ''; });
+    }
+
+    // Eigener Stand: Name und ein bereits abgegebener Tipp
+    fetch(worker + '/tipper?geraet=' + encodeURIComponent(geraet))
+      .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+      .then(function (d) {
+        if (d.name) nameFeld.value = d.name;
+        if (d.tipps && Object.keys(d.tipps).length) getippt = true;
+        var vorhanden = d.tipps && d.tipps[spiel];
+        if (vorhanden) {
+          heimFeld.value = vorhanden[0];
+          gastFeld.value = vorhanden[1];
+          sage('Dein Tipp steht. Ändern geht bis zum Anwurf.');
+        }
+      })
+      .catch(function () { block.hidden = true; });
+
+    ladeTabelle();
+
+    senden.addEventListener('click', function () {
+      var h = parseInt(heimFeld.value, 10), g = parseInt(gastFeld.value, 10);
+      if (!Number.isFinite(h) || !Number.isFinite(g) || h < 0 || g < 0) {
+        sage('Bitte beide Felder ausfüllen.', 'schlecht');
+        return;
+      }
+      if (!nameFeld.value.trim()) {
+        sage('Ohne Namen taucht dein Tipp nicht in der Tabelle auf.', 'schlecht');
+        nameFeld.focus();
+        return;
+      }
+      senden.disabled = true;
+      sage('Wird gesendet …');
+      fetch(worker + '/tipp', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ geraet: geraet, spiel: spiel, heim: h, gast: g,
+                               name: nameFeld.value.trim() })
+      })
+        .then(function (r) {
+          return r.json().then(function (d) {
+            return r.ok ? d : Promise.reject(d.fehler || 'Fehler');
+          });
+        })
+        .then(function () {
+          getippt = true;
+          sage('Tipp gespeichert. Ändern geht bis zum Anwurf.', 'gut');
+          ladeTabelle();
+        })
+        .catch(function (f) { sage(String(f), 'schlecht'); })
+        .then(function () { senden.disabled = false; });
+    });
+
+    if (umzug) {
+      umzug.addEventListener('click', function () {
+        var link = location.origin + location.pathname + '?tipper=' +
+                   encodeURIComponent(geraet);
+        var text = 'Damit tippe ich auf jedem Gerät weiter: ' + link;
+        if (navigator.share) {
+          navigator.share({ text: text }).catch(function () {});
+          return;
+        }
+        navigator.clipboard.writeText(link).then(function () {
+          sage('Link kopiert – damit tippst du auf jedem Gerät weiter.', 'gut');
+        });
+      });
+    }
+  });
 })();
 
 

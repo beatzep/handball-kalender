@@ -196,6 +196,42 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 
 
 
+
+/* ---------- Tipprunde ---------- */
+.tippspiel { margin-top: 30px; padding-top: 24px; border-top: 1px solid var(--linie); }
+.tippspiel .titel { font-size: .74rem; font-weight: 600; letter-spacing: .06em;
+                    text-transform: uppercase; color: var(--leise); margin-bottom: 14px; }
+.tippzeile { display: grid; grid-template-columns: 1fr auto 1fr; gap: 10px;
+             align-items: end; margin-bottom: 14px; }
+.tippzeile label { display: block; font-size: .82rem; color: var(--tinte-weich);
+                   margin-bottom: 6px; line-height: 1.3; overflow-wrap: anywhere; }
+.tippzeile .doppel { align-self: center; padding-bottom: 12px; color: var(--leise);
+                     font-size: 1.2rem; }
+.tippspiel input {
+  font: inherit; font-size: 1.4rem; font-weight: 600; text-align: center;
+  width: 100%; padding: 12px 6px; background: transparent; color: var(--tinte);
+  border: 1px solid var(--linie); font-variant-numeric: tabular-nums;
+}
+.tippspiel input:focus-visible { outline: 2px solid var(--gold-tief); outline-offset: 1px; }
+.tippspiel input.name { font-size: 1rem; font-weight: 400; text-align: left;
+                        padding: 12px 14px; margin-bottom: 12px; }
+.tippspiel .meldung { margin: 10px 0 0; font-size: .88rem; color: var(--tinte-weich); }
+.tippspiel .meldung.gut { color: var(--sieg); }
+.tippspiel .meldung.schlecht { color: var(--niederlage); }
+.tipptabelle { margin-top: 22px; }
+.tipptabelle table { width: 100%; border-collapse: collapse; font-size: .92rem; }
+.tipptabelle td { padding: 9px 0; border-bottom: 1px solid var(--linie-zart); }
+.tipptabelle td.pl { color: var(--leise); width: 26px; font-size: .86rem; }
+.tipptabelle td.pkt { text-align: right; font-weight: 600; }
+.tipptabelle tr.ich td { background: var(--gold-schwach); font-weight: 600; }
+.tipptabelle tr.ich td.pl { box-shadow: inset 2px 0 0 var(--gold); }
+.tippspiel .nebensache { margin-top: 14px; }
+.tippspiel .nebensache button {
+  font: inherit; font-size: .84rem; background: none; border: 0; padding: 0;
+  color: var(--leise); text-decoration: underline; cursor: pointer;
+}
+.tippspiel .nebensache button:hover { color: var(--gold-tief); }
+
 /* ---------- Teilen ---------- */
 .teilen { margin-top: 34px; }
 .formatwahl { display: flex; gap: 0; margin-bottom: 16px; }
