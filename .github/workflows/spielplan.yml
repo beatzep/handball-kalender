@@ -1,0 +1,71 @@
+name: Spielplan aktualisieren
+
+on:
+  schedule:
+    # 03:17 UTC = 05:17 Sommerzeit / 04:17 Winterzeit.
+    # GitHub startet geplante Jobs oft mit Verzoegerung - bei taeglich egal.
+    - cron: "17 3 * * *"
+  workflow_dispatch:        # erlaubt den Handstart ueber den Actions-Tab
+
+permissions:
+  contents: write           # ohne das scheitert der Commit unten mit 403
+
+concurrency:
+  group: spielplan
+  cancel-in-progress: false
+
+jobs:
+  aktualisieren:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Spielplan holen und Kalender erzeugen
+        run: |
+          python3 spielplan2ics.py \
+            --team-id 80924 \
+            --name "HSG MuRu - Herren I" \
+            --kurzname "HSG MuRu" \
+            --keine-schiris \
+            --out docs/hsg-muru-herren1.ics \
+            --stand docs/stand.json | tee "$RUNNER_TEMP/lauf.log"
+
+      - name: Kalenderdatei pruefen
+        run: python3 pruefe_ics.py docs/hsg-muru-herren1.ics
+
+      - name: Abo-Seite bauen
+        run: |
+          python3 baue_seite.py \
+            --stand docs/stand.json \
+            --ics hsg-muru-herren1.ics \
+            --basis-url "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}" \
+            --out docs/index.html
+
+      - name: Zusammenfassung schreiben
+        run: |
+          {
+            echo "## Lauf vom $(date -u '+%d.%m.%Y %H:%M') UTC"
+            echo '```'
+            cat "$RUNNER_TEMP/lauf.log"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Ergebnis committen
+        run: |
+          git config user.name "spielplan-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/
+          if git diff --cached --quiet; then
+            echo "Keine Aenderungen - nichts zu committen."
+            exit 0
+          fi
+          # Die Aenderung steht in der Commit-Nachricht: wer das Repo auf
+          # "Watch" hat, bekommt Verlegungen so per Benachrichtigung mit.
+          python3 commit_text.py --stand docs/stand.json > "$RUNNER_TEMP/commit.txt"
+          cat "$RUNNER_TEMP/commit.txt"
+          git commit -F "$RUNNER_TEMP/commit.txt"
+          git push

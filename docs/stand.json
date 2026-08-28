@@ -1,0 +1,206 @@
+{
+  "aktualisiert": "2026-08-28T08:35:54+00:00",
+  "team_id": 80924,
+  "kalender": "HSG MuRu - Herren I",
+  "letzte_aenderungen": [],
+  "spiele": {
+    "2627RPBKROERMA0101": {
+      "datum": "2026-08-29T20:00:00",
+      "ort": "IGS 1 Mainz-Bretzenheim, Hans-Böckler-Straße 2, 55128 Mainz",
+      "halle": "IGS 1 Mainz-Bretzenheim",
+      "gegner": "TSG MZ-Bretzenheim II",
+      "spieltag": 1,
+      "heim": false,
+      "sequence": 0
+    },
+    "2627RPBKROERMA0206": {
+      "datum": "2026-09-05T19:45:00",
+      "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
+      "halle": "TSG-Sporthalle Mutterstadt",
+      "gegner": "HSG Worms",
+      "spieltag": 2,
+      "heim": true,
+      "sequence": 0
+    },
+    "2627RPBKROERMA0301": {
+      "datum": "2026-09-13T18:00:00",
+      "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
+      "halle": "TVR-Sporthalle Ludwigshafen",
+      "gegner": "HSV Sobernheim H1",
+      "spieltag": 3,
+      "heim": true,
+      "sequence": 0
+    },
+    "2627RPBKROERMA0405": {
+      "datum": "2026-09-19T18:00:00",
+      "ort": "Bingen, Rundsporthalle, Nuits-St.Georges-Straße, 55411 Bingen",
+      "halle": "Bingen, Rundsporthalle",
+      "gegner": "GW Bingen-Büdesheim",
+      "spieltag": 4,
+      "heim": false,
+      "sequence": 0
+    },
+    "2627RPBKROERMA0502": {
+      "datum": "2026-09-26T20:00:00",
+      "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
+      "halle": "TVR-Sporthalle Ludwigshafen",
+      "gegner": "TG Osthofen II",
+      "spieltag": 5,
+      "heim": true,
+      "sequence": 0
+    },
+    "2627RPBKROERMA0604": {
+      "datum": "2026-10-03T20:00:00",
+      "ort": "Sporthalle der IGS Nieder-Olm, Karl-Sieben-Straße, 55268 Nieder-Olm",
+      "halle": "Sporthalle der IGS Nieder-Olm",
+      "gegner": "TV Nieder-Olm II",
+      "spieltag": 6,
+      "heim": false,
+      "sequence": 0
+    },
+    "2627RPBKROERMA0703": {
+      "datum": "2026-10-24T19:30:00",
+      "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
+      "halle": "TSG-Sporthalle Mutterstadt",
+      "gegner": "HSG Zotzenheim/St.Johann/Sprendlingen",
+      "spieltag": 7,
+      "heim": true,
+      "sequence": 0
+    },
+    "2627RPBKROERMA0803": {
+      "datum": "2026-11-08T17:15:00",
+      "ort": "NH Alzey, Frankenstraße 17, 55232 Alzey",
+      "halle": "NH Alzey",
+      "gegner": "HSV Alzey",
+      "spieltag": 8,
+      "heim": false,
+      "sequence": 0
+    },
+    "2627RPBKROERMA0904": {
+      "datum": "2026-11-15T18:45:00",
+      "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
+      "halle": "TVR-Sporthalle Ludwigshafen",
+      "gegner": "SG Saulheim II",
+      "spieltag": 9,
+      "heim": true,
+      "sequence": 0
+    },
+    "2627RPBKROERMA1002": {
+      "datum": "2026-11-21T16:00:00",
+      "ort": "Bingen, Rundsporthalle, Nuits-St.Georges-Straße, 55411 Bingen",
+      "halle": "Bingen, Rundsporthalle",
+      "gegner": "HSG Rhein-Nahe Bingen II",
+      "spieltag": 10,
+      "heim": false,
+      "sequence": 0
+    },
+    "2627RPBKROERMA1105": {
+      "datum": "2026-11-29T17:00:00",
+      "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
+      "halle": "TVR-Sporthalle Ludwigshafen",
+      "gegner": "HSC Ingelheim",
+      "spieltag": 11,
+      "heim": true,
+      "sequence": 0
+    },
+    "2627RPBKROERMA1201": {
+      "datum": "2026-12-06T18:00:00",
+      "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
+      "halle": "TSG-Sporthalle Mutterstadt",
+      "gegner": "TSG MZ-Bretzenheim II",
+      "spieltag": 12,
+      "heim": true,
+      "sequence": 0
+    },
+    "2627RPBKROERMA1306": {
+      "datum": "2026-12-13T18:00:00",
+      "ort": "Nikolaus-Dörr-Halle Worms, Mainzer Straße 51, 67547 Worms",
+      "halle": "Nikolaus-Dörr-Halle Worms",
+      "gegner": "HSG Worms",
+      "spieltag": 13,
+      "heim": false,
+      "sequence": 0
+    },
+    "2627RPBKROERMA1401": {
+      "datum": "2027-01-24T16:00:00",
+      "ort": "Bad Sobernheim, Dr. W.Dümmler Halle, Staudernheimer Straße, 55566 Bad Sobernheim",
+      "halle": "Bad Sobernheim, Dr. W.Dümmler Halle",
+      "gegner": "HSV Sobernheim H1",
+      "spieltag": 14,
+      "heim": false,
+      "sequence": 0
+    },
+    "2627RPBKROERMA1505": {
+      "datum": "2027-01-30T16:00:00",
+      "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
+      "halle": "TVR-Sporthalle Ludwigshafen",
+      "gegner": "GW Bingen-Büdesheim",
+      "spieltag": 15,
+      "heim": true,
+      "sequence": 0
+    },
+    "2627RPBKROERMA1602": {
+      "datum": "2027-02-14T14:00:00",
+      "ort": "Wonnegauhalle Osthofen, Herrnsheimer Straße 24, 67574 Osthofen",
+      "halle": "Wonnegauhalle Osthofen",
+      "gegner": "TG Osthofen II",
+      "spieltag": 16,
+      "heim": false,
+      "sequence": 0
+    },
+    "2627RPBKROERMA1704": {
+      "datum": "2027-02-20T20:00:00",
+      "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
+      "halle": "TVR-Sporthalle Ludwigshafen",
+      "gegner": "TV Nieder-Olm II",
+      "spieltag": 17,
+      "heim": true,
+      "sequence": 0
+    },
+    "2627RPBKROERMA1803": {
+      "datum": "2027-02-28T17:00:00",
+      "ort": "IGS Sprendlingen, Ober-Hilbersheimer Straße, 55576 Sprendlingen",
+      "halle": "IGS Sprendlingen",
+      "gegner": "HSG Zotzenheim/St.Johann/Sprendlingen",
+      "spieltag": 18,
+      "heim": false,
+      "sequence": 0
+    },
+    "2627RPBKROERMA1903": {
+      "datum": "2027-03-13T20:00:00",
+      "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
+      "halle": "TSG-Sporthalle Mutterstadt",
+      "gegner": "HSV Alzey",
+      "spieltag": 19,
+      "heim": true,
+      "sequence": 0
+    },
+    "2627RPBKROERMA2004": {
+      "datum": "2027-03-20T17:00:00",
+      "ort": "Ritter-Hundt-Zentrum Saulheim, Am Westring 6A, 55291 Saulheim",
+      "halle": "Ritter-Hundt-Zentrum Saulheim",
+      "gegner": "SG Saulheim II",
+      "spieltag": 20,
+      "heim": false,
+      "sequence": 0
+    },
+    "2627RPBKROERMA2102": {
+      "datum": "2027-04-10T18:00:00",
+      "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
+      "halle": "TVR-Sporthalle Ludwigshafen",
+      "gegner": "HSG Rhein-Nahe Bingen II",
+      "spieltag": 21,
+      "heim": true,
+      "sequence": 0
+    },
+    "2627RPBKROERMA2205": {
+      "datum": "2027-04-18T15:00:00",
+      "ort": "Sebastian-Münster-Gymnasium Ingelheim, Hans-Fluck-Straße, 55218 Ingelheim",
+      "halle": "Sebastian-Münster-Gymnasium Ingelheim",
+      "gegner": "HSC Ingelheim",
+      "spieltag": 22,
+      "heim": false,
+      "sequence": 0
+    }
+  }
+}

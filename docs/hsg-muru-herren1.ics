@@ -1,0 +1,636 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//handball-kalender//spielplan2ics//DE
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:HSG MuRu - Herren I
+X-WR-TIMEZONE:Europe/Berlin
+X-WR-CALDESC:Spielplan HSG MuRu - Herren I - Quelle: handball.net
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VTIMEZONE
+TZID:Europe/Berlin
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:2627RPBKROERMA0101@handball.net
+DTSTAMP:20260828T083554Z
+DTSTART;TZID=Europe/Berlin:20260829T200000
+DTEND;TZID=Europe/Berlin:20260829T220000
+SUMMARY:🚗 TSG MZ-Bretzenheim II - HSG MuRu
+DESCRIPTION:Auswärtsspiel gegen TSG MZ-Bretzenheim II\nAnwurf: 20:00 Uhr\n
+ Liga: Männer Bezirksoberliga\nSpieltag: 1\nSpielnummer: 2627RPBKROERMA010
+ 1\nhttps://www.handball.net/match/351626
+URL:https://www.handball.net/match/351626
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:IGS 1 Mainz-Bretzenheim\, Hans-Böckler-Straße 2\, 55128 Mainz
+GEO:49.977270;8.247460
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 TSG MZ-Bretzenheim II - HSG MuRu
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 TSG MZ-Bretzenheim II - HSG MuRu
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROERMA0206@handball.net
+DTSTAMP:20260828T083554Z
+DTSTART;TZID=Europe/Berlin:20260905T194500
+DTEND;TZID=Europe/Berlin:20260905T214500
+SUMMARY:🏠 HSG MuRu - HSG Worms
+DESCRIPTION:Heimspiel gegen HSG Worms\nAnwurf: 19:45 Uhr\nLiga: Männer Bez
+ irksoberliga\nSpieltag: 2\nSpielnummer: 2627RPBKROERMA0206\nhttps://www.ha
+ ndball.net/match/351637
+URL:https://www.handball.net/match/351637
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 HSG MuRu - HSG Worms
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 HSG MuRu - HSG Worms
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROERMA0301@handball.net
+DTSTAMP:20260828T083554Z
+DTSTART;TZID=Europe/Berlin:20260913T180000
+DTEND;TZID=Europe/Berlin:20260913T200000
+SUMMARY:🏠 HSG MuRu - HSV Sobernheim H1
+DESCRIPTION:Heimspiel gegen HSV Sobernheim H1\nAnwurf: 18:00 Uhr\nLiga: Mä
+ nner Bezirksoberliga\nSpieltag: 3\nSpielnummer: 2627RPBKROERMA0301\nhttps:
+ //www.handball.net/match/351638
+URL:https://www.handball.net/match/351638
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 HSG MuRu - HSV Sobernheim H1
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 HSG MuRu - HSV Sobernheim H1
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROERMA0405@handball.net
+DTSTAMP:20260828T083554Z
+DTSTART;TZID=Europe/Berlin:20260919T180000
+DTEND;TZID=Europe/Berlin:20260919T200000
+SUMMARY:🚗 GW Bingen-Büdesheim - HSG MuRu
+DESCRIPTION:Auswärtsspiel gegen GW Bingen-Büdesheim\nAnwurf: 18:00 Uhr\nL
+ iga: Männer Bezirksoberliga\nSpieltag: 4\nSpielnummer: 2627RPBKROERMA0405
+ \nhttps://www.handball.net/match/351648
+URL:https://www.handball.net/match/351648
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Bingen\, Rundsporthalle\, Nuits-St.Georges-Straße\, 55411 Bingen
+GEO:49.951830;7.911619
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 GW Bingen-Büdesheim - HSG MuRu
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 GW Bingen-Büdesheim - HSG MuRu
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROERMA0502@handball.net
+DTSTAMP:20260828T083554Z
+DTSTART;TZID=Europe/Berlin:20260926T200000
+DTEND;TZID=Europe/Berlin:20260926T220000
+SUMMARY:🏠 HSG MuRu - TG Osthofen II
+DESCRIPTION:Heimspiel gegen TG Osthofen II\nAnwurf: 20:00 Uhr\nLiga: Männe
+ r Bezirksoberliga\nSpieltag: 5\nSpielnummer: 2627RPBKROERMA0502\nhttps://w
+ ww.handball.net/match/351651
+URL:https://www.handball.net/match/351651
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 HSG MuRu - TG Osthofen II
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 HSG MuRu - TG Osthofen II
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROERMA0604@handball.net
+DTSTAMP:20260828T083554Z
+DTSTART;TZID=Europe/Berlin:20261003T200000
+DTEND;TZID=Europe/Berlin:20261003T220000
+SUMMARY:🚗 TV Nieder-Olm II - HSG MuRu
+DESCRIPTION:Auswärtsspiel gegen TV Nieder-Olm II\nAnwurf: 20:00 Uhr\nLiga:
+  Männer Bezirksoberliga\nSpieltag: 6\nSpielnummer: 2627RPBKROERMA0604\nht
+ tps://www.handball.net/match/351659
+URL:https://www.handball.net/match/351659
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Sporthalle der IGS Nieder-Olm\, Karl-Sieben-Straße\, 55268 Nieder
+ -Olm
+GEO:49.903161;8.197635
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 TV Nieder-Olm II - HSG MuRu
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 TV Nieder-Olm II - HSG MuRu
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROERMA0703@handball.net
+DTSTAMP:20260828T083554Z
+DTSTART;TZID=Europe/Berlin:20261024T193000
+DTEND;TZID=Europe/Berlin:20261024T213000
+SUMMARY:🏠 HSG MuRu - HSG Zotzenheim/St.Johann/Sprendlingen
+DESCRIPTION:Heimspiel gegen HSG Zotzenheim/St.Johann/Sprendlingen\nAnwurf: 
+ 19:30 Uhr\nLiga: Männer Bezirksoberliga\nSpieltag: 7\nSpielnummer: 2627RP
+ BKROERMA0703\nhttps://www.handball.net/match/351664
+URL:https://www.handball.net/match/351664
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 HSG MuRu - HSG Zotzenheim/St.Johann/Sprendli
+ ngen
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 HSG MuRu - HSG Zotzenheim/St.Johann/Sprendli
+ ngen
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROERMA0803@handball.net
+DTSTAMP:20260828T083554Z
+DTSTART;TZID=Europe/Berlin:20261108T171500
+DTEND;TZID=Europe/Berlin:20261108T191500
+SUMMARY:🚗 HSV Alzey - HSG MuRu
+DESCRIPTION:Auswärtsspiel gegen HSV Alzey\nAnwurf: 17:15 Uhr\nLiga: Männe
+ r Bezirksoberliga\nSpieltag: 8\nSpielnummer: 2627RPBKROERMA0803\nhttps://w
+ ww.handball.net/match/351670
+URL:https://www.handball.net/match/351670
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:NH Alzey\, Frankenstraße 17\, 55232 Alzey
+GEO:49.742290;8.118030
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 HSV Alzey - HSG MuRu
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 HSV Alzey - HSG MuRu
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROERMA0904@handball.net
+DTSTAMP:20260828T083554Z
+DTSTART;TZID=Europe/Berlin:20261115T184500
+DTEND;TZID=Europe/Berlin:20261115T204500
+SUMMARY:🏠 HSG MuRu - SG Saulheim II
+DESCRIPTION:Heimspiel gegen SG Saulheim II\nAnwurf: 18:45 Uhr\nLiga: Männe
+ r Bezirksoberliga\nSpieltag: 9\nSpielnummer: 2627RPBKROERMA0904\nhttps://w
+ ww.handball.net/match/351677
+URL:https://www.handball.net/match/351677
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 HSG MuRu - SG Saulheim II
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 HSG MuRu - SG Saulheim II
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROERMA1002@handball.net
+DTSTAMP:20260828T083554Z
+DTSTART;TZID=Europe/Berlin:20261121T160000
+DTEND;TZID=Europe/Berlin:20261121T180000
+SUMMARY:🚗 HSG Rhein-Nahe Bingen II - HSG MuRu
+DESCRIPTION:Auswärtsspiel gegen HSG Rhein-Nahe Bingen II\nAnwurf: 16:00 Uh
+ r\nLiga: Männer Bezirksoberliga\nSpieltag: 10\nSpielnummer: 2627RPBKROERM
+ A1002\nhttps://www.handball.net/match/351681
+URL:https://www.handball.net/match/351681
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Bingen\, Rundsporthalle\, Nuits-St.Georges-Straße\, 55411 Bingen
+GEO:49.951830;7.911619
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 HSG Rhein-Nahe Bingen II - HSG MuRu
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 HSG Rhein-Nahe Bingen II - HSG MuRu
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROERMA1105@handball.net
+DTSTAMP:20260828T083554Z
+DTSTART;TZID=Europe/Berlin:20261129T170000
+DTEND;TZID=Europe/Berlin:20261129T190000
+SUMMARY:🏠 HSG MuRu - HSC Ingelheim
+DESCRIPTION:Heimspiel gegen HSC Ingelheim\nAnwurf: 17:00 Uhr\nLiga: Männer
+  Bezirksoberliga\nSpieltag: 11\nSpielnummer: 2627RPBKROERMA1105\nhttps://w
+ ww.handball.net/match/351690
+URL:https://www.handball.net/match/351690
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 HSG MuRu - HSC Ingelheim
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 HSG MuRu - HSC Ingelheim
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROERMA1201@handball.net
+DTSTAMP:20260828T083554Z
+DTSTART;TZID=Europe/Berlin:20261206T180000
+DTEND;TZID=Europe/Berlin:20261206T200000
+SUMMARY:🏠 HSG MuRu - TSG MZ-Bretzenheim II
+DESCRIPTION:Heimspiel gegen TSG MZ-Bretzenheim II\nAnwurf: 18:00 Uhr\nLiga:
+  Männer Bezirksoberliga\nSpieltag: 12\nSpielnummer: 2627RPBKROERMA1201\nh
+ ttps://www.handball.net/match/351692
+URL:https://www.handball.net/match/351692
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 HSG MuRu - TSG MZ-Bretzenheim II
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 HSG MuRu - TSG MZ-Bretzenheim II
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROERMA1306@handball.net
+DTSTAMP:20260828T083554Z
+DTSTART;TZID=Europe/Berlin:20261213T180000
+DTEND;TZID=Europe/Berlin:20261213T200000
+SUMMARY:🚗 HSG Worms - HSG MuRu
+DESCRIPTION:Auswärtsspiel gegen HSG Worms\nAnwurf: 18:00 Uhr\nLiga: Männe
+ r Bezirksoberliga\nSpieltag: 13\nSpielnummer: 2627RPBKROERMA1306\nhttps://
+ www.handball.net/match/351703
+URL:https://www.handball.net/match/351703
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Nikolaus-Dörr-Halle Worms\, Mainzer Straße 51\, 67547 Worms
+GEO:49.642204;8.363049
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 HSG Worms - HSG MuRu
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 HSG Worms - HSG MuRu
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROERMA1401@handball.net
+DTSTAMP:20260828T083554Z
+DTSTART;TZID=Europe/Berlin:20270124T160000
+DTEND;TZID=Europe/Berlin:20270124T180000
+SUMMARY:🚗 HSV Sobernheim H1 - HSG MuRu
+DESCRIPTION:Auswärtsspiel gegen HSV Sobernheim H1\nAnwurf: 16:00 Uhr\nLiga
+ : Männer Bezirksoberliga\nSpieltag: 14\nSpielnummer: 2627RPBKROERMA1401\n
+ https://www.handball.net/match/351704
+URL:https://www.handball.net/match/351704
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Bad Sobernheim\, Dr. W.Dümmler Halle\, Staudernheimer Straße\, 5
+ 5566 Bad Sobernheim
+GEO:49.783616;7.665087
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 HSV Sobernheim H1 - HSG MuRu
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 HSV Sobernheim H1 - HSG MuRu
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROERMA1505@handball.net
+DTSTAMP:20260828T083554Z
+DTSTART;TZID=Europe/Berlin:20270130T160000
+DTEND;TZID=Europe/Berlin:20270130T180000
+SUMMARY:🏠 HSG MuRu - GW Bingen-Büdesheim
+DESCRIPTION:Heimspiel gegen GW Bingen-Büdesheim\nAnwurf: 16:00 Uhr\nLiga: 
+ Männer Bezirksoberliga\nSpieltag: 15\nSpielnummer: 2627RPBKROERMA1505\nht
+ tps://www.handball.net/match/351714
+URL:https://www.handball.net/match/351714
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 HSG MuRu - GW Bingen-Büdesheim
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 HSG MuRu - GW Bingen-Büdesheim
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROERMA1602@handball.net
+DTSTAMP:20260828T083554Z
+DTSTART;TZID=Europe/Berlin:20270214T140000
+DTEND;TZID=Europe/Berlin:20270214T160000
+SUMMARY:🚗 TG Osthofen II - HSG MuRu
+DESCRIPTION:Auswärtsspiel gegen TG Osthofen II\nAnwurf: 14:00 Uhr\nLiga: M
+ änner Bezirksoberliga\nSpieltag: 16\nSpielnummer: 2627RPBKROERMA1602\nhtt
+ ps://www.handball.net/match/351717
+URL:https://www.handball.net/match/351717
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Wonnegauhalle Osthofen\, Herrnsheimer Straße 24\, 67574 Osthofen
+GEO:49.700160;8.325410
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 TG Osthofen II - HSG MuRu
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 TG Osthofen II - HSG MuRu
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROERMA1704@handball.net
+DTSTAMP:20260828T083554Z
+DTSTART;TZID=Europe/Berlin:20270220T200000
+DTEND;TZID=Europe/Berlin:20270220T220000
+SUMMARY:🏠 HSG MuRu - TV Nieder-Olm II
+DESCRIPTION:Heimspiel gegen TV Nieder-Olm II\nAnwurf: 20:00 Uhr\nLiga: Män
+ ner Bezirksoberliga\nSpieltag: 17\nSpielnummer: 2627RPBKROERMA1704\nhttps:
+ //www.handball.net/match/351725
+URL:https://www.handball.net/match/351725
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 HSG MuRu - TV Nieder-Olm II
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 HSG MuRu - TV Nieder-Olm II
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROERMA1803@handball.net
+DTSTAMP:20260828T083554Z
+DTSTART;TZID=Europe/Berlin:20270228T170000
+DTEND;TZID=Europe/Berlin:20270228T190000
+SUMMARY:🚗 HSG Zotzenheim/St.Johann/Sprendlingen - HSG MuRu
+DESCRIPTION:Auswärtsspiel gegen HSG Zotzenheim/St.Johann/Sprendlingen\nAnw
+ urf: 17:00 Uhr\nLiga: Männer Bezirksoberliga\nSpieltag: 18\nSpielnummer: 
+ 2627RPBKROERMA1803\nhttps://www.handball.net/match/351730
+URL:https://www.handball.net/match/351730
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:IGS Sprendlingen\, Ober-Hilbersheimer Straße\, 55576 Sprendlingen
+GEO:49.862231;7.991830
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 HSG Zotzenheim/St.Johann/Sprendlingen - HSG 
+ MuRu
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 HSG Zotzenheim/St.Johann/Sprendlingen - HSG 
+ MuRu
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROERMA1903@handball.net
+DTSTAMP:20260828T083554Z
+DTSTART;TZID=Europe/Berlin:20270313T200000
+DTEND;TZID=Europe/Berlin:20270313T220000
+SUMMARY:🏠 HSG MuRu - HSV Alzey
+DESCRIPTION:Heimspiel gegen HSV Alzey\nAnwurf: 20:00 Uhr\nLiga: Männer Bez
+ irksoberliga\nSpieltag: 19\nSpielnummer: 2627RPBKROERMA1903\nhttps://www.h
+ andball.net/match/351736
+URL:https://www.handball.net/match/351736
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 HSG MuRu - HSV Alzey
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 HSG MuRu - HSV Alzey
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROERMA2004@handball.net
+DTSTAMP:20260828T083554Z
+DTSTART;TZID=Europe/Berlin:20270320T170000
+DTEND;TZID=Europe/Berlin:20270320T190000
+SUMMARY:🚗 SG Saulheim II - HSG MuRu
+DESCRIPTION:Auswärtsspiel gegen SG Saulheim II\nAnwurf: 17:00 Uhr\nLiga: M
+ änner Bezirksoberliga\nSpieltag: 20\nSpielnummer: 2627RPBKROERMA2004\nhtt
+ ps://www.handball.net/match/351743
+URL:https://www.handball.net/match/351743
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Ritter-Hundt-Zentrum Saulheim\, Am Westring 6A\, 55291 Saulheim
+GEO:49.871298;8.146740
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 SG Saulheim II - HSG MuRu
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 SG Saulheim II - HSG MuRu
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROERMA2102@handball.net
+DTSTAMP:20260828T083554Z
+DTSTART;TZID=Europe/Berlin:20270410T180000
+DTEND;TZID=Europe/Berlin:20270410T200000
+SUMMARY:🏠 HSG MuRu - HSG Rhein-Nahe Bingen II
+DESCRIPTION:Heimspiel gegen HSG Rhein-Nahe Bingen II\nAnwurf: 18:00 Uhr\nLi
+ ga: Männer Bezirksoberliga\nSpieltag: 21\nSpielnummer: 2627RPBKROERMA2102
+ \nhttps://www.handball.net/match/351747
+URL:https://www.handball.net/match/351747
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 HSG MuRu - HSG Rhein-Nahe Bingen II
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 HSG MuRu - HSG Rhein-Nahe Bingen II
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROERMA2205@handball.net
+DTSTAMP:20260828T083554Z
+DTSTART;TZID=Europe/Berlin:20270418T150000
+DTEND;TZID=Europe/Berlin:20270418T170000
+SUMMARY:🚗 HSC Ingelheim - HSG MuRu
+DESCRIPTION:Auswärtsspiel gegen HSC Ingelheim\nAnwurf: 15:00 Uhr\nLiga: M
+ änner Bezirksoberliga\nSpieltag: 22\nSpielnummer: 2627RPBKROERMA2205\nhtt
+ ps://www.handball.net/match/351756
+URL:https://www.handball.net/match/351756
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Sebastian-Münster-Gymnasium Ingelheim\, Hans-Fluck-Straße\, 5521
+ 8 Ingelheim
+GEO:49.972118;8.053112
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 HSC Ingelheim - HSG MuRu
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 HSC Ingelheim - HSG MuRu
+END:VALARM
+END:VEVENT
+END:VCALENDAR
