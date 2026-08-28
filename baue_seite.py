@@ -23,16 +23,19 @@ MONATE = ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli",
           "August", "September", "Oktober", "November", "Dezember"]
 
 STIL = """
+/* Formensprache nach mckinsey.de: durchgaengig border-radius 0, keine
+   umrandeten Karten, Gliederung ueber Weissraum und 1px-Linien, grosse
+   Ueberschriften in leichtem Schnitt. Farben vom Verein. Mobil zuerst. */
 :root {
   --gold: #dd9933;
   --gold-tief: #b87a22;
-  --gold-schwach: rgba(221,153,51,.12);
+  --gold-schwach: rgba(221,153,51,.10);
   --tinte: #14140f;
-  --tinte-weich: #3d3d36;
-  --leise: #6e6e64;
-  --linie: #e3e0d8;
-  --flaeche: #ffffff;
-  --grund: #f7f5f0;
+  --tinte-weich: #4a4a42;
+  --leise: #7a776d;
+  --linie: #dedbd3;
+  --linie-zart: #ebe9e3;
+  --grund: #ffffff;
   --schwarz: #14140f;
   --auf-schwarz: #f7f5f0;
 }
@@ -40,162 +43,156 @@ STIL = """
   :root {
     --gold: #e8ac52;
     --gold-tief: #dd9933;
-    --gold-schwach: rgba(232,172,82,.14);
+    --gold-schwach: rgba(232,172,82,.12);
     --tinte: #f2efe8;
-    --tinte-weich: #c3bfb4;
+    --tinte-weich: #b8b4a9;
     --leise: #8c877c;
-    --linie: #2e2c27;
-    --flaeche: #1a1916;
-    --grund: #100f0d;
+    --linie: #33312b;
+    --linie-zart: #24221e;
+    --grund: #0d0d0b;
     --schwarz: #000000;
     --auf-schwarz: #f2efe8;
   }
 }
-* { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: border-box; border-radius: 0; }
 html { -webkit-text-size-adjust: 100%; }
 body {
   margin: 0;
   background: var(--grund);
   color: var(--tinte);
-  font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  font: 400 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
         "Helvetica Neue", Arial, sans-serif;
   font-variant-numeric: tabular-nums;
   -webkit-font-smoothing: antialiased;
 }
-.huelle { max-width: 660px; margin: 0 auto; padding: 0 20px; }
+.huelle { max-width: 720px; margin: 0 auto; padding: 0 22px; }
+a { color: inherit; }
 
 /* ---------- Kopf ---------- */
 .kopf { background: var(--schwarz); color: var(--auf-schwarz);
-        border-bottom: 3px solid var(--gold); }
-.kopf .huelle { padding-top: 30px; padding-bottom: 30px; }
-.verein {
-  font-size: .68rem; font-weight: 700; letter-spacing: .18em;
-  text-transform: uppercase; color: var(--gold); margin: 0 0 10px;
+        border-bottom: 2px solid var(--gold); }
+.kopf .huelle { padding: 26px 22px 34px; }
+.marke { display: flex; align-items: center; gap: 14px; margin-bottom: 30px; }
+.marke img { width: 54px; height: auto; display: block; }
+.marke .zeile1 {
+  font-size: .82rem; font-weight: 600; letter-spacing: .04em;
+  color: var(--gold); line-height: 1.3;
+}
+.marke .zeile2 {
+  font-size: .78rem; color: rgba(247,245,240,.55); line-height: 1.3;
 }
 .kopf h1 {
-  margin: 0; font-size: 2.1rem; line-height: 1.1; font-weight: 800;
-  letter-spacing: -.02em;
+  margin: 0; font-size: clamp(2.1rem, 11vw, 3.2rem); font-weight: 300;
+  line-height: 1.04; letter-spacing: -.015em;
 }
-.unterzeile {
-  margin: 10px 0 0; font-size: .88rem; color: rgba(247,245,240,.62);
+.kopf .saison {
+  margin: 14px 0 0; font-size: .92rem; color: rgba(247,245,240,.62);
 }
-.unterzeile b { color: rgba(247,245,240,.9); font-weight: 600; }
 
-/* ---------- Rubriken ---------- */
+/* ---------- Abschnitte ---------- */
+.teil { padding: 40px 0 0; }
 .rubrik {
-  font-size: .7rem; font-weight: 700; letter-spacing: .16em;
-  text-transform: uppercase; color: var(--leise);
-  margin: 44px 0 14px; display: flex; align-items: center; gap: 12px;
-}
-.rubrik::after {
-  content: ""; flex: 1; height: 1px; background: var(--linie);
+  border-top: 1px solid var(--linie); padding-top: 14px; margin-bottom: 26px;
+  font-size: .95rem; font-weight: 600; letter-spacing: .02em; color: var(--leise);
 }
 
 /* ---------- Nächstes Spiel ---------- */
-.naechstes {
-  background: var(--flaeche); border: 1px solid var(--linie);
-  border-left: 3px solid var(--gold); border-radius: 3px;
-  padding: 22px; margin-top: 26px;
-  box-shadow: 0 1px 2px rgba(20,20,15,.05);
+.marker { font-size: .82rem; font-weight: 600; color: var(--gold-tief);
+          letter-spacing: .04em; margin-bottom: 10px; }
+.paarung {
+  font-size: clamp(1.5rem, 7vw, 2rem); font-weight: 400; line-height: 1.16;
+  overflow-wrap: anywhere;
+  letter-spacing: -.01em; margin: 0 0 22px;
 }
-.naechstes .wann {
-  font-size: .72rem; font-weight: 700; letter-spacing: .14em;
-  text-transform: uppercase; color: var(--gold-tief); margin-bottom: 8px;
+.fakten { margin: 0; }
+.fakten > div {
+  display: flex; gap: 18px; padding: 11px 0;
+  border-top: 1px solid var(--linie-zart); font-size: .95rem;
 }
-.naechstes .paarung {
-  font-size: 1.32rem; font-weight: 700; line-height: 1.25; margin-bottom: 12px;
-}
-.naechstes dl { margin: 0; display: grid; grid-template-columns: auto 1fr;
-                gap: 5px 16px; font-size: .9rem; }
-.naechstes dt { color: var(--leise); }
-.naechstes dd { margin: 0; }
-.naechstes dd a { color: inherit; text-decoration: none;
-                  border-bottom: 1px solid var(--gold); }
-.naechstes dd a:hover { color: var(--gold-tief); }
+.fakten dt { flex: 0 0 78px; color: var(--leise); }
+.fakten dd { margin: 0; flex: 1; }
+.fakten a { color: inherit; text-decoration: none;
+            box-shadow: inset 0 -1px 0 var(--gold); }
 
 /* ---------- Abo-Wege ---------- */
-.weg {
-  background: var(--flaeche); border: 1px solid var(--linie);
-  border-radius: 3px; padding: 20px; margin-bottom: 12px;
-}
-.weg h3 { margin: 0 0 4px; font-size: 1rem; font-weight: 700; }
-.weg p { margin: 0 0 14px; font-size: .88rem; color: var(--tinte-weich); }
+.weg { padding: 26px 0; border-top: 1px solid var(--linie-zart); }
+/* :first-of-type zaehlt Elementtypen, nicht Klassen - das erste div
+   im Abschnitt ist die Rubrik. Darum ueber den Geschwisterselektor. */
+.rubrik + .weg { border-top: 0; padding-top: 0; }
+.weg h3 { margin: 0 0 6px; font-size: 1.12rem; font-weight: 600;
+          letter-spacing: -.005em; }
+.weg p { margin: 0 0 18px; font-size: .95rem; color: var(--tinte-weich); }
 .knopf {
   display: block; width: 100%; text-align: center; text-decoration: none;
-  font: inherit; font-size: .95rem; font-weight: 700; letter-spacing: .01em;
-  padding: 13px 18px; border-radius: 2px; cursor: pointer;
+  font: inherit; font-size: 1rem; font-weight: 600; padding: 16px 20px;
   border: 1px solid var(--gold); background: var(--gold); color: #14140f;
-  transition: background .15s ease, border-color .15s ease;
+  cursor: pointer; transition: background .15s ease;
 }
 .knopf:hover { background: var(--gold-tief); border-color: var(--gold-tief); }
-.knopf.stumm {
-  background: transparent; color: var(--tinte); border-color: var(--linie);
+.knopf.stumm { background: transparent; color: var(--tinte);
+               border-color: var(--tinte); }
+.knopf.stumm:hover { background: var(--gold-schwach); border-color: var(--gold); }
+.knopf:focus-visible { outline: 2px solid var(--gold-tief); outline-offset: 3px; }
+.schritte { margin: 18px 0 0; padding: 0; list-style: none;
+            font-size: .92rem; color: var(--tinte-weich);
+            counter-reset: schritt; }
+.schritte li {
+  counter-increment: schritt; position: relative; padding: 8px 0 8px 34px;
+  border-top: 1px solid var(--linie-zart);
 }
-.knopf.stumm:hover { border-color: var(--gold); background: var(--gold-schwach); }
-.knopf:focus-visible { outline: 2px solid var(--gold-tief); outline-offset: 2px; }
-.schritte {
-  margin: 14px 0 0; padding-left: 18px; font-size: .84rem;
-  color: var(--tinte-weich);
+.schritte li::before {
+  content: counter(schritt); position: absolute; left: 0; top: 8px;
+  font-size: .82rem; font-weight: 600; color: var(--gold-tief);
 }
-.schritte li { margin: 5px 0; }
-code {
-  background: var(--gold-schwach); border-radius: 2px; padding: 1px 5px;
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .82em;
-}
+code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+       font-size: .88em; color: var(--tinte); }
 
-/* ---------- Hinweis auf Änderungen ---------- */
-.hinweis {
-  background: var(--gold-schwach); border: 1px solid var(--gold);
-  border-radius: 3px; padding: 18px 20px; margin: 28px 0 0;
-}
-.hinweis h3 {
-  margin: 0 0 8px; font-size: .72rem; font-weight: 700; letter-spacing: .14em;
-  text-transform: uppercase; color: var(--gold-tief);
-}
-.hinweis ul { margin: 0; padding-left: 18px; font-size: .9rem; }
-.hinweis li { margin: 4px 0; }
+/* ---------- Änderungen ---------- */
+.hinweis { border-left: 2px solid var(--gold); padding: 4px 0 4px 18px;
+           margin: 30px 0 0; }
+.hinweis h3 { margin: 0 0 8px; font-size: .82rem; font-weight: 600;
+              letter-spacing: .04em; color: var(--gold-tief); }
+.hinweis ul { margin: 0; padding-left: 18px; font-size: .95rem; }
+.hinweis li { margin: 5px 0; }
 
 /* ---------- Spielplan ---------- */
 .monat {
-  font-size: .7rem; font-weight: 700; letter-spacing: .14em;
+  font-size: .82rem; font-weight: 600; letter-spacing: .06em;
   text-transform: uppercase; color: var(--leise);
-  padding: 22px 0 8px; border-bottom: 1px solid var(--linie);
+  padding: 30px 0 10px;
 }
+.teil > .monat:first-of-type { padding-top: 6px; }
 .spiel {
-  display: grid; grid-template-columns: 62px 1fr auto;
-  gap: 0 14px; align-items: baseline;
-  padding: 13px 0; border-bottom: 1px solid var(--linie);
+  display: grid; grid-template-columns: 58px 1fr 24px; gap: 0 16px;
+  align-items: start; padding: 15px 0; border-top: 1px solid var(--linie);
 }
-.spiel .datum {
-  font-size: .82rem; font-weight: 700; color: var(--tinte); line-height: 1.35;
-}
+.spiel .datum { font-size: .88rem; font-weight: 600; line-height: 1.3; }
 .spiel .datum span { display: block; font-weight: 400; color: var(--leise); }
-.spiel .gegner { font-size: .97rem; font-weight: 600; line-height: 1.35; }
-.spiel .halle { font-size: .82rem; color: var(--leise); margin-top: 2px; }
-.spiel .halle a { color: inherit; text-decoration: none;
-                  border-bottom: 1px solid var(--linie); }
-.spiel .halle a:hover { color: var(--gold-tief); border-color: var(--gold); }
-.marke {
-  font-size: .66rem; font-weight: 700; letter-spacing: .1em;
-  width: 22px; height: 22px; line-height: 20px; text-align: center;
-  border: 1px solid var(--gold); border-radius: 2px;
-}
-.marke.heim { background: var(--gold); color: #14140f; }
-.marke.aus { color: var(--gold-tief); }
-.spiel.vorbei { opacity: .38; }
-.spiel.jetzt { background: var(--gold-schwach);
-               box-shadow: inset 3px 0 0 var(--gold); padding-left: 12px;
-               margin-left: -12px; }
+.spiel .gegner { font-size: 1.02rem; font-weight: 500; line-height: 1.3;
+                 /* Vereinsnamen wie 'Zotzenheim/St.Johann/Sprendlingen' haben
+                    keine Leerzeichen und wuerden sonst aus der Spalte laufen */
+                 overflow-wrap: anywhere; }
+.spiel .halle { font-size: .88rem; color: var(--leise); margin-top: 3px; }
+.spiel .halle a { text-decoration: none;
+                  box-shadow: inset 0 -1px 0 var(--linie); }
+.spiel .halle a:hover { box-shadow: inset 0 -1px 0 var(--gold); }
+.hz { font-size: .78rem; font-weight: 600; letter-spacing: .02em;
+      text-align: right; color: var(--leise); padding-top: 2px; }
+.hz.heim { color: var(--gold-tief); }
+.spiel.vorbei { opacity: .34; }
+.spiel.jetzt { border-top-color: var(--gold); box-shadow: inset 0 2px 0 var(--gold); }
 
 /* ---------- Fuß ---------- */
-.fuss {
-  margin: 48px 0 0; padding: 22px 0 40px; border-top: 1px solid var(--linie);
-  font-size: .8rem; color: var(--leise);
-}
+.fuss { margin: 52px 0 0; padding: 20px 0 46px;
+        border-top: 1px solid var(--linie); font-size: .88rem;
+        color: var(--leise); }
 .fuss a { color: var(--leise); }
-@media (max-width: 420px) {
-  .kopf h1 { font-size: 1.7rem; }
-  .spiel { grid-template-columns: 54px 1fr auto; }
+
+@media (min-width: 640px) {
+  .kopf .huelle { padding: 34px 22px 44px; }
+  .marke img { width: 56px; }
+  .fakten dt { flex: 0 0 110px; }
+  .knopf { display: inline-block; width: auto; min-width: 280px; }
 }
 """
 
@@ -233,16 +230,13 @@ def hero(spiel: dict, heute: datetime) -> str:
     heim = spiel.get("heim")
     paarung = (f"HSG MuRu &ndash; {sicher(spiel.get('gegner'))}" if heim
                else f"{sicher(spiel.get('gegner'))} &ndash; HSG MuRu")
-    return f"""<div class="naechstes">
-<div class="wann">{relativ} &middot; {'Heimspiel' if heim else 'Auswärtsspiel'}</div>
-<div class="paarung">{paarung}</div>
-<dl>
-<dt>Anwurf</dt><dd>{WOCHENTAGE[wann.weekday()]}, {wann:%d.%m.%Y}, {wann:%H:%M} Uhr</dd>
-<dt>Halle</dt><dd>{sicher(spiel.get('halle'))}</dd>
-<dt>Adresse</dt><dd><a href="{kartenlink(spiel)}" target="_blank"
-rel="noopener">{sicher(strasse(spiel))}</a></dd>
-</dl>
-</div>"""
+    return f"""<div class="marker">{relativ} &middot; {'Heimspiel' if heim else 'Auswärtsspiel'}</div>
+<h2 class="paarung">{paarung}</h2>
+<dl class="fakten">
+<div><dt>Anwurf</dt><dd>{WOCHENTAGE[wann.weekday()]}, {wann:%d.%m.%Y}, {wann:%H:%M} Uhr</dd></div>
+<div><dt>Halle</dt><dd>{sicher(spiel.get('halle'))}</dd></div>
+<div><dt>Adresse</dt><dd><a href="{kartenlink(spiel)}" target="_blank" rel="noopener">{sicher(strasse(spiel))}</a></dd></div>
+</dl>"""
 
 
 def spielzeile(spiel: dict, heute: datetime, naechstes: str | None, code: str) -> str:
@@ -260,7 +254,7 @@ def spielzeile(spiel: dict, heute: datetime, naechstes: str | None, code: str) -
 <div class="datum">{KURZTAGE[wann.weekday()]} {wann:%d.%m.}<span>{wann:%H:%M}</span></div>
 <div><div class="gegner">{sicher(spiel.get('gegner'))}</div>
 <div class="halle">{ort}</div></div>
-<div class="marke {'heim' if heim else 'aus'}">{'H' if heim else 'A'}</div>
+<div class="hz {'heim' if heim else ''}">{'H' if heim else 'A'}</div>
 </div>"""
 
 
@@ -317,52 +311,67 @@ def main() -> None:
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{sicher(daten.get('kalender', 'Spielplan'))}</title>
 <meta name="description" content="Spielplan zum Abonnieren – alle Spiele
-automatisch im Handykalender, inklusive Verlegungen.">
+automatisch im Handykalender, Verlegungen inklusive.">
 <meta name="theme-color" content="#14140f">
+<link rel="icon" href="icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="icon-180.png">
 <style>{STIL}</style>
 </head>
 <body>
 
 <header class="kopf">
   <div class="huelle">
-    <p class="verein">HSG Mutterstadt/Ruchheim</p>
-    <h1>Herren I &ndash; Spielplan</h1>
-    <p class="unterzeile">{kopfzeile}</p>
+    <div class="marke">
+      <img src="logo.png" alt="Wappen der HSG Mutterstadt/Ruchheim" width="149" height="200">
+      <div>
+        <div class="zeile1">HSG Mutterstadt/Ruchheim</div>
+        <div class="zeile2">Die Füchse</div>
+      </div>
+    </div>
+    <h1>Herren&nbsp;I<br>Spielplan</h1>
+    <p class="saison">{kopfzeile}</p>
   </div>
 </header>
 
 <div class="huelle">
-  {hero(kommend[0][1], heute) if kommend else ''}
-  {hinweis}
 
-  <div class="rubrik">In den Kalender</div>
+  <section class="teil">
+    {hero(kommend[0][1], heute) if kommend else '<p>Keine kommenden Spiele.</p>'}
+    {hinweis}
+  </section>
 
-  <div class="weg">
-    <h3>iPhone, iPad und Mac</h3>
-    <p>Antippen, „Abonnieren“ bestätigen. Verlegungen kommen danach von selbst an.</p>
-    <a class="knopf" href="{webcal}">Kalender abonnieren</a>
-  </div>
+  <section class="teil">
+    <div class="rubrik">In den Kalender</div>
 
-  <div class="weg">
-    <h3>Android und Google Kalender</h3>
-    <p>Google erlaubt das Abonnieren nur am Computer, nicht in der Handy-App.
-       Einmal am Rechner einrichten – danach ist es auf dem Handy.</p>
-    <button class="knopf stumm" onclick="kopiere('{ics_url}', this)">Adresse kopieren</button>
-    <ol class="schritte">
-      <li>Am Computer <code>calendar.google.com</code> öffnen</li>
-      <li>Links bei „Weitere Kalender“ auf <strong>+</strong> klicken</li>
-      <li><strong>Per URL</strong> wählen, Adresse einfügen, hinzufügen</li>
-    </ol>
-  </div>
+    <div class="weg">
+      <h3>iPhone, iPad und Mac</h3>
+      <p>Antippen, „Abonnieren“ bestätigen. Verlegungen kommen danach von selbst an.</p>
+      <a class="knopf" href="{webcal}">Kalender abonnieren</a>
+    </div>
 
-  <div class="weg">
-    <h3>Einmalig importieren</h3>
-    <p>Ohne Abo. Spätere Verlegungen kommen dann nicht mehr an.</p>
-    <a class="knopf stumm" href="{sicher(cfg.ics)}" download>Datei herunterladen</a>
-  </div>
+    <div class="weg">
+      <h3>Android und Google Kalender</h3>
+      <p>Google erlaubt das Abonnieren nur am Computer, nicht in der Handy-App.
+         Einmal am Rechner einrichten – danach ist es auf dem Handy.</p>
+      <button class="knopf stumm" onclick="kopiere('{ics_url}', this)">Adresse kopieren</button>
+      <ol class="schritte">
+        <li>Am Computer <code>calendar.google.com</code> öffnen</li>
+        <li>Links bei „Weitere Kalender“ auf <strong>+</strong> klicken</li>
+        <li>„Per URL“ wählen, Adresse einfügen, hinzufügen</li>
+      </ol>
+    </div>
 
-  <div class="rubrik">Alle Spiele</div>
-  {''.join(tabelle)}
+    <div class="weg">
+      <h3>Einmalig importieren</h3>
+      <p>Ohne Abo. Spätere Verlegungen kommen dann nicht mehr an.</p>
+      <a class="knopf stumm" href="{sicher(cfg.ics)}" download>Datei herunterladen</a>
+    </div>
+  </section>
+
+  <section class="teil">
+    <div class="rubrik">Alle Spiele der Saison</div>
+    {''.join(tabelle)}
+  </section>
 
   <p class="fuss">
     Zuletzt abgeglichen am {stand_text}. Der Spielplan wird täglich automatisch

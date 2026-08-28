@@ -19,6 +19,25 @@ handball.net API  →  GitHub Action (täglich)  →  docs/*.ics auf GitHub Page
 | `baue_seite.py` | baut `docs/index.html` — die Seite, die die Mannschaft zu sehen bekommt |
 | `commit_text.py` | formuliert die Commit-Nachricht, damit Verlegungen in Benachrichtigungen auftauchen |
 
+## Gestaltung
+
+Farben vom Verein (`#DD9933` Gold, Schwarz, Warmweiß), Formensprache nach
+mckinsey.de: durchgängig `border-radius: 0`, keine umrandeten Karten,
+Gliederung über Weißraum und 1px-Linien, große Überschriften im leichten
+Schnitt. Mobil zuerst — dort wird die Seite hauptsächlich genutzt.
+Heller und dunkler Modus über `prefers-color-scheme`.
+
+Bilder in `docs/` stammen von der Vereinsseite
+(`hsg-muru-handball.de/wp-content/uploads/2023/05/`):
+
+| Datei | Herkunft |
+|---|---|
+| `logo.png` | `logo_hsg_1.png` (149×200, vollständiges Wappen) – Seitenkopf |
+| `icon-180.png` | aus `LOGO_2018.png` skaliert – Apple-Touch-Icon |
+| `icon-32.png` | aus `LOGO_2018.png` skaliert – Favicon |
+
+Alle mit Alphakanal, funktionieren also auf hellem wie dunklem Grund.
+
 ## Lokal ausführen
 
 ```bash
