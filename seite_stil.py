@@ -157,6 +157,31 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 .spiel.vorbei .gegner { font-weight: 400; }
 .spiel.jetzt { border-top-color: var(--gold); box-shadow: inset 0 2px 0 var(--gold); }
 
+/* ---------- Form und Verlauf ---------- */
+.form { display: flex; align-items: baseline; gap: 10px; margin-bottom: 26px;
+        flex-wrap: wrap; }
+.form .titel { font-size: .74rem; font-weight: 600; letter-spacing: .06em;
+               text-transform: uppercase; color: var(--leise); }
+.form .kette { display: flex; gap: 5px; }
+.form b { width: 25px; height: 25px; line-height: 25px; text-align: center;
+          font-size: .76rem; font-weight: 700; border: 1px solid; }
+.form b.S { color: var(--sieg); border-color: var(--sieg); }
+.form b.N { color: var(--niederlage); border-color: var(--niederlage); }
+.form b.U { color: var(--leise); border-color: var(--linie); }
+
+.verlauf { margin: 0 0 30px; }
+.verlauf .titel { font-size: .74rem; font-weight: 600; letter-spacing: .06em;
+                  text-transform: uppercase; color: var(--leise);
+                  margin-bottom: 12px; }
+.verlauf svg { width: 100%; height: auto; display: block; overflow: visible; }
+.verlauf .gitter { stroke: var(--linie-zart); stroke-width: 1; }
+.verlauf .linie { fill: none; stroke: var(--gold); stroke-width: 2;
+                  stroke-linejoin: round; stroke-linecap: round; }
+.verlauf .punkt { fill: var(--gold); }
+.verlauf text { fill: var(--leise); font-size: 11px;
+                font-family: inherit; font-variant-numeric: tabular-nums; }
+.verlauf .jetzt { fill: var(--tinte); font-weight: 700; }
+
 /* ---------- Tabelle ---------- */
 .tabellenhuelle { overflow-x: auto; }
 table.tabelle { width: 100%; border-collapse: collapse; font-size: .92rem; }

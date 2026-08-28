@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-08-28T10:04:02+00:00",
+  "aktualisiert": "2026-08-28T15:18:00+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -13,6 +13,8 @@
       "tabelle": {
         "runde": 1,
         "gespielt": false,
+        "mannschaften": 12,
+        "verlauf": [],
         "eintraege": [
           {
             "platz": 1,
@@ -172,6 +174,7 @@
           }
         ]
       },
+      "form": [],
       "letzte_aenderungen": [],
       "spiele": {
         "2627RPBKROERMA0101": {
@@ -385,6 +388,8 @@
       "tabelle": {
         "runde": 1,
         "gespielt": false,
+        "mannschaften": 12,
+        "verlauf": [],
         "eintraege": [
           {
             "platz": 1,
@@ -544,6 +549,7 @@
           }
         ]
       },
+      "form": [],
       "letzte_aenderungen": [],
       "spiele": {
         "2627RPBKRKERMB0101": {
@@ -739,6 +745,8 @@
       "tabelle": {
         "runde": 1,
         "gespielt": false,
+        "mannschaften": 10,
+        "verlauf": [],
         "eintraege": [
           {
             "platz": 1,
@@ -872,6 +880,7 @@
           }
         ]
       },
+      "form": [],
       "letzte_aenderungen": [],
       "spiele": {
         "2627RPVLERWA0204": {

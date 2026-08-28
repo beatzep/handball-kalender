@@ -80,7 +80,7 @@ def hole_spiele(team_id: int) -> list[dict]:
     return sorted(spiele, key=lambda s: s["date"])
 
 
-def hole_tabelle(phase_id: int | None) -> dict:
+def hole_tabelle(phase_id: int | None, team_id: int | None = None) -> dict:
     """Holt den Tabellenstand der Liga.
 
     Die API liefert fuer jeden der 22 Spieltage einen eigenen Stand
@@ -106,9 +106,21 @@ def hole_tabelle(phase_id: int | None) -> dict:
     if any(e.get("position") for e in eintraege):
         eintraege.sort(key=lambda e: e.get("position") or 99)
 
+    # Platzverlauf: die API liefert fuer jeden Spieltag einen eigenen Stand,
+    # daraus laesst sich die eigene Platzierung ueber die Saison ablesen.
+    verlauf = []
+    for r in sorted(runden):
+        eigener = next((e for e in runden[r]
+                        if (e.get("team") or {}).get("id") == team_id), None)
+        if eigener and eigener.get("played") and eigener.get("position"):
+            verlauf.append({"runde": r, "platz": eigener["position"],
+                            "punkte": eigener.get("points", 0)})
+
     return {
         "runde": runde,
         "gespielt": bool(mit_spielen),
+        "mannschaften": len(eintraege),
+        "verlauf": verlauf,
         "eintraege": [{
             "platz": e.get("position") or i + 1,
             "team": normalisiere((e.get("team") or {}).get("name")),
@@ -123,6 +135,14 @@ def hole_tabelle(phase_id: int | None) -> dict:
             "differenz": e.get("goals_diff", 0),
         } for i, e in enumerate(eintraege)],
     }
+
+
+def form_aus_spielen(stand: dict, anzahl: int = 5) -> list[str]:
+    """Die letzten Ausgaenge (S/U/N) aus den eigenen Ergebnissen, aeltestes zuerst."""
+    gespielt = sorted(
+        (s for s in stand.values() if s.get("ergebnis")),
+        key=lambda s: s["datum"])
+    return [s["ergebnis"]["ausgang"] for s in gespielt[-anzahl:]]
 
 
 def hole_tabelle_roh(phase_id: int) -> dict:
@@ -561,7 +581,8 @@ def verarbeite_team(team: dict, cfg: argparse.Namespace, alt: dict) -> tuple[dic
         "kalender": einstellung.name,
         "liga": normalisiere(liga(spiele[0])),
         "saison": f"20{saison_id[:2]}/{saison_id[2:]}" if len(saison_id) == 4 else "",
-        "tabelle": hole_tabelle((spiele[0].get("phase") or {}).get("id")),
+        "tabelle": hole_tabelle((spiele[0].get("phase") or {}).get("id"), team_id),
+        "form": form_aus_spielen(neuer_stand),
         "letzte_aenderungen": aenderungen,
         "spiele": neuer_stand,
     }, aenderungen

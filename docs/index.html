@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Spielplan HSG Mutterstadt/Ruchheim</title>
-<meta name="description" content="Spielpläne zum Abonnieren: alle Spiele
+<meta name="description" content="Spielpläne zum Abonnieren – alle Spiele
 automatisch im Handykalender, Verlegungen inklusive.">
 <meta name="theme-color" content="#14140f">
 <link rel="manifest" href="manifest.json">
@@ -163,6 +163,31 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 .spiel.vorbei .gegner { font-weight: 400; }
 .spiel.jetzt { border-top-color: var(--gold); box-shadow: inset 0 2px 0 var(--gold); }
 
+/* ---------- Form und Verlauf ---------- */
+.form { display: flex; align-items: baseline; gap: 10px; margin-bottom: 26px;
+        flex-wrap: wrap; }
+.form .titel { font-size: .74rem; font-weight: 600; letter-spacing: .06em;
+               text-transform: uppercase; color: var(--leise); }
+.form .kette { display: flex; gap: 5px; }
+.form b { width: 25px; height: 25px; line-height: 25px; text-align: center;
+          font-size: .76rem; font-weight: 700; border: 1px solid; }
+.form b.S { color: var(--sieg); border-color: var(--sieg); }
+.form b.N { color: var(--niederlage); border-color: var(--niederlage); }
+.form b.U { color: var(--leise); border-color: var(--linie); }
+
+.verlauf { margin: 0 0 30px; }
+.verlauf .titel { font-size: .74rem; font-weight: 600; letter-spacing: .06em;
+                  text-transform: uppercase; color: var(--leise);
+                  margin-bottom: 12px; }
+.verlauf svg { width: 100%; height: auto; display: block; overflow: visible; }
+.verlauf .gitter { stroke: var(--linie-zart); stroke-width: 1; }
+.verlauf .linie { fill: none; stroke: var(--gold); stroke-width: 2;
+                  stroke-linejoin: round; stroke-linecap: round; }
+.verlauf .punkt { fill: var(--gold); }
+.verlauf text { fill: var(--leise); font-size: 11px;
+                font-family: inherit; font-variant-numeric: tabular-nums; }
+.verlauf .jetzt { fill: var(--tinte); font-weight: 700; }
+
 /* ---------- Tabelle ---------- */
 .tabellenhuelle { overflow-x: auto; }
 table.tabelle { width: 100%; border-collapse: collapse; font-size: .92rem; }
@@ -247,6 +272,12 @@ rel="noopener">Hans-Böckler-Straße 2, 55128 Mainz</a></dd></div>
   <h3>iPhone, iPad und Mac</h3>
   <p>Antippen, „Abonnieren“ bestätigen. Verlegungen kommen danach von selbst an.</p>
   <a class="knopf" href="webcal://beatzep.github.io/handball-kalender/herren1.ics">Herren I abonnieren</a>
+  <p class="tipp">
+    <b>Am Mac</b> fragt der Kalender vorher nach Einstellungen: Haken bei
+    „Entfernen: Hinweise“ <b>abwählen</b> (sonst fehlen die Erinnerungen) und
+    „Automatisch aktualisieren“ auf <b>Jede Stunde</b> stellen – der Standard
+    „Wöchentlich“ ist für Verlegungen zu träge.
+  </p>
   <p class="tipp" data-ios-tipp hidden>
     <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen –
     dann liegt der Spielplan als App auf dem Handy.
@@ -256,7 +287,7 @@ rel="noopener">Hans-Böckler-Straße 2, 55128 Mainz</a></dd></div>
 <div class="weg">
   <h3>Android und Google Kalender</h3>
   <p>Google erlaubt das Abonnieren nur am Computer, nicht in der Handy-App.
-     Einmal am Rechner einrichten, danach ist es auf dem Handy.</p>
+     Einmal am Rechner einrichten – danach ist es auf dem Handy.</p>
   <button class="knopf stumm" type="button" data-kopiere="https://beatzep.github.io/handball-kalender/herren1.ics">Adresse kopieren</button>
   <ol class="schritte">
     <li>Am Computer <code>calendar.google.com</code> öffnen</li>
@@ -382,6 +413,8 @@ rel="noopener">Hans-Böckler-Straße 2, 55128 Mainz</a></dd></div>
 <div class="rechts"><div class="hz ">A</div></div>
 </div></div>
   <div class="teil" data-ansicht="tabelle" hidden>
+    
+    
     <div class="tabellenhuelle">
 <table class="tabelle">
 <thead><tr>
@@ -391,7 +424,7 @@ rel="noopener">Hans-Böckler-Straße 2, 55128 Mainz</a></dd></div>
 <tbody><tr><td class="platz">1</td><td class="mann">HSV Sobernheim H1</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">2</td><td class="mann">HSG Worms</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">3</td><td class="mann">HSV Alzey</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">4</td><td class="mann">HSG Rhein-Nahe Bingen II</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">5</td><td class="mann">GW Bingen-Büdesheim</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">6</td><td class="mann">TV Nieder-Olm II</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">7</td><td class="mann">HSC Ingelheim</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">8</td><td class="mann">TSG MZ-Bretzenheim II</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">9</td><td class="mann">TG Osthofen II</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">10</td><td class="mann">SG Saulheim II</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">11</td><td class="mann">HSG Zotzenheim/St.Johann/Sprendlingen</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr class="wir"><td class="platz">12</td><td class="mann">HSG Mutterstadt/Ruchheim</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr></tbody>
 </table>
 </div>
-<p class="tabellenfuss">Die Saison hat noch nicht begonnen.</p>
+<p class="tabellenfuss">Die Saison hat noch nicht begonnen – alle Mannschaften stehen bei null, die Reihenfolge hat noch keine Aussagekraft.</p>
   </div>
 </section><section data-team="herren2" hidden>
   <p class="liga">Männer Bezirksklasse &middot; 20 Spiele</p>
@@ -418,6 +451,12 @@ rel="noopener">Schulstr. 2, 66987 Thaleischweiler</a></dd></div>
   <h3>iPhone, iPad und Mac</h3>
   <p>Antippen, „Abonnieren“ bestätigen. Verlegungen kommen danach von selbst an.</p>
   <a class="knopf" href="webcal://beatzep.github.io/handball-kalender/herren2.ics">Herren II abonnieren</a>
+  <p class="tipp">
+    <b>Am Mac</b> fragt der Kalender vorher nach Einstellungen: Haken bei
+    „Entfernen: Hinweise“ <b>abwählen</b> (sonst fehlen die Erinnerungen) und
+    „Automatisch aktualisieren“ auf <b>Jede Stunde</b> stellen – der Standard
+    „Wöchentlich“ ist für Verlegungen zu träge.
+  </p>
   <p class="tipp" data-ios-tipp hidden>
     <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen –
     dann liegt der Spielplan als App auf dem Handy.
@@ -427,7 +466,7 @@ rel="noopener">Schulstr. 2, 66987 Thaleischweiler</a></dd></div>
 <div class="weg">
   <h3>Android und Google Kalender</h3>
   <p>Google erlaubt das Abonnieren nur am Computer, nicht in der Handy-App.
-     Einmal am Rechner einrichten, danach ist es auf dem Handy.</p>
+     Einmal am Rechner einrichten – danach ist es auf dem Handy.</p>
   <button class="knopf stumm" type="button" data-kopiere="https://beatzep.github.io/handball-kalender/herren2.ics">Adresse kopieren</button>
   <ol class="schritte">
     <li>Am Computer <code>calendar.google.com</code> öffnen</li>
@@ -543,6 +582,8 @@ rel="noopener">Schulstr. 2, 66987 Thaleischweiler</a></dd></div>
 <div class="rechts"><div class="hz ">A</div></div>
 </div></div>
   <div class="teil" data-ansicht="tabelle" hidden>
+    
+    
     <div class="tabellenhuelle">
 <table class="tabelle">
 <thead><tr>
@@ -552,7 +593,7 @@ rel="noopener">Schulstr. 2, 66987 Thaleischweiler</a></dd></div>
 <tbody><tr><td class="platz">1</td><td class="mann">SG LaFt - Herren</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">2</td><td class="mann">TV THALEISCHWEILER Herren</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">3</td><td class="mann">MSG Kaiserslautern/Dansenberg II</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">4</td><td class="mann">TSV Kandel II</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">5</td><td class="mann">TUS Neuhofen II</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">6</td><td class="mann">TV Offenbach IV</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">7</td><td class="mann">MSG Iggelheim/Meckenheim III</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">8</td><td class="mann">TV Kirrweiler II</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr class="wir"><td class="platz">9</td><td class="mann">HSG Mutterstadt/Ruchheim II</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">10</td><td class="mann">HSV Lingenfeld/Schwegenheim II</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">11</td><td class="mann">TUS Heiligenstein II</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">12</td><td class="mann">HSG Grethen/Maxdorf</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr></tbody>
 </table>
 </div>
-<p class="tabellenfuss">Die Saison hat noch nicht begonnen.</p>
+<p class="tabellenfuss">Die Saison hat noch nicht begonnen – alle Mannschaften stehen bei null, die Reihenfolge hat noch keine Aussagekraft.</p>
   </div>
 </section><section data-team="damen" hidden>
   <p class="liga">Frauen Verbandsliga &middot; 18 Spiele</p>
@@ -579,16 +620,22 @@ rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
   <h3>iPhone, iPad und Mac</h3>
   <p>Antippen, „Abonnieren“ bestätigen. Verlegungen kommen danach von selbst an.</p>
   <a class="knopf" href="webcal://beatzep.github.io/handball-kalender/damen.ics">Damen abonnieren</a>
+  <p class="tipp">
+    <b>Am Mac</b> fragt der Kalender vorher nach Einstellungen: Haken bei
+    „Entfernen: Hinweise“ <b>abwählen</b> (sonst fehlen die Erinnerungen) und
+    „Automatisch aktualisieren“ auf <b>Jede Stunde</b> stellen – der Standard
+    „Wöchentlich“ ist für Verlegungen zu träge.
+  </p>
   <p class="tipp" data-ios-tipp hidden>
     <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen –
-    dann liegt der Spielplan als App auf dem Handy. HINWEIS: Einmalig in Safari ausführen, mit anderen Browsern geht das nicht!
+    dann liegt der Spielplan als App auf dem Handy.
   </p>
 </div>
 
 <div class="weg">
   <h3>Android und Google Kalender</h3>
   <p>Google erlaubt das Abonnieren nur am Computer, nicht in der Handy-App.
-     Einmal am Rechner einrichten, danach ist es auf dem Handy.</p>
+     Einmal am Rechner einrichten – danach ist es auf dem Handy.</p>
   <button class="knopf stumm" type="button" data-kopiere="https://beatzep.github.io/handball-kalender/damen.ics">Adresse kopieren</button>
   <ol class="schritte">
     <li>Am Computer <code>calendar.google.com</code> öffnen</li>
@@ -694,6 +741,8 @@ rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
 <div class="rechts"><div class="hz ">A</div></div>
 </div></div>
   <div class="teil" data-ansicht="tabelle" hidden>
+    
+    
     <div class="tabellenhuelle">
 <table class="tabelle">
 <thead><tr>
@@ -703,11 +752,11 @@ rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
 <tbody><tr><td class="platz">1</td><td class="mann">TV Hauenstein</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">2</td><td class="mann">HSV Alzey</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">3</td><td class="mann">FSG Kaiserslautern/Dansenberg</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">4</td><td class="mann">FSG Gonsenheim/Schott</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr class="wir"><td class="platz">5</td><td class="mann">HSG Mutterstadt/Ruchheim Damen</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">6</td><td class="mann">HSG Eckbachtal</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">7</td><td class="mann">SV Bornheim</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">8</td><td class="mann">FSG Selz-Wiesbach</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">9</td><td class="mann">TV Kirrweiler</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">10</td><td class="mann">TV Thaleischweiler</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr></tbody>
 </table>
 </div>
-<p class="tabellenfuss">Die Saison hat noch nicht begonnen </p>
+<p class="tabellenfuss">Die Saison hat noch nicht begonnen – alle Mannschaften stehen bei null, die Reihenfolge hat noch keine Aussagekraft.</p>
   </div>
 </section>
   <p class="fuss">
-    Zuletzt abgeglichen am 28.08.2026 um 12:04 Uhr. Die Spielpläne werden täglich automatisch
+    Zuletzt abgeglichen am 28.08.2026 um 17:18 Uhr. Die Spielpläne werden täglich automatisch
     mit <a href="https://www.handball.net" target="_blank" rel="noopener">handball.net</a>
     abgeglichen; Änderungen erscheinen hier und in abonnierten Kalendern.
   </p>

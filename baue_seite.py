@@ -115,6 +115,72 @@ def spielliste(spiele: list[dict], heute: datetime) -> str:
     return "".join(zeilen)
 
 
+def formblock(form: list[str]) -> str:
+    if not form:
+        return ""
+    wort = {"S": "Sieg", "N": "Niederlage", "U": "Unentschieden"}
+    kette = "".join(
+        f'<b class="{a}" title="{wort.get(a, a)}">{a}</b>' for a in form)
+    return (f'<div class="form"><span class="titel">Form</span>'
+            f'<span class="kette">{kette}</span></div>')
+
+
+def verlaufsblock(tabelle: dict) -> str:
+    """Platzierung ueber die Spieltage als kleine Linie.
+
+    Erst ab drei Spieltagen sinnvoll - zwei Punkte sind keine Kurve.
+    Die y-Achse ist umgedreht: Platz 1 gehoert nach oben."""
+    verlauf = (tabelle or {}).get("verlauf") or []
+    if len(verlauf) < 3:
+        return ""
+
+    anzahl = max(tabelle.get("mannschaften") or 12, max(p["platz"] for p in verlauf))
+    breite, hoehe = 320, 110
+    links, rechts, oben, unten = 26, 8, 10, 20
+    flaeche_b = breite - links - rechts
+    flaeche_h = hoehe - oben - unten
+
+    def x(i: int) -> float:
+        teiler = max(len(verlauf) - 1, 1)
+        return links + flaeche_b * i / teiler
+
+    def y(platz: int) -> float:
+        # Platz 1 oben, letzter Platz unten
+        anteil = (platz - 1) / max(anzahl - 1, 1)
+        return oben + flaeche_h * anteil
+
+    punkte = " ".join(f"{x(i):.1f},{y(p['platz']):.1f}" for i, p in enumerate(verlauf))
+    kreise = "".join(f'<circle class="punkt" cx="{x(i):.1f}" cy="{y(p["platz"]):.1f}" r="3"/>'
+                     for i, p in enumerate(verlauf))
+
+    gitter = "".join(
+        f'<line class="gitter" x1="{links}" y1="{y(pl):.1f}" '
+        f'x2="{breite - rechts}" y2="{y(pl):.1f}"/>'
+        f'<text x="0" y="{y(pl) + 4:.1f}">{pl}.</text>'
+        for pl in (1, anzahl))
+
+    letzter = verlauf[-1]
+    beschriftung = (
+        f'<text class="jetzt" x="{x(len(verlauf) - 1):.1f}" '
+        f'y="{y(letzter["platz"]) - 10:.1f}" text-anchor="end">'
+        f'Platz {letzter["platz"]}</text>'
+        f'<text x="{links}" y="{hoehe - 4}">Spieltag {verlauf[0]["runde"]}</text>'
+        f'<text x="{breite - rechts}" y="{hoehe - 4}" text-anchor="end">'
+        f'Spieltag {letzter["runde"]}</text>')
+
+    return f"""<div class="verlauf">
+<div class="titel">Platzierung im Saisonverlauf</div>
+<svg viewBox="0 0 {breite} {hoehe}" role="img"
+     aria-label="Platzierung von Spieltag {verlauf[0]['runde']} bis {letzter['runde']}:
+     zuletzt Platz {letzter['platz']} von {anzahl}">
+{gitter}
+<polyline class="linie" points="{punkte}"/>
+{kreise}
+{beschriftung}
+</svg>
+</div>"""
+
+
 def tabellenblock(tabelle: dict, eigenes_team: int | None) -> str:
     """Vor dem ersten Spieltag steht ueberall 0 - die Reihenfolge ist dann
     ohne Aussage, darum der Hinweis darunter."""
@@ -171,6 +237,12 @@ def abo_block(team: dict, basis: str) -> str:
   <h3>iPhone, iPad und Mac</h3>
   <p>Antippen, „Abonnieren“ bestätigen. Verlegungen kommen danach von selbst an.</p>
   <a class="knopf" href="{webcal}">{sicher(team['name'])} abonnieren</a>
+  <p class="tipp">
+    <b>Am Mac</b> fragt der Kalender vorher nach Einstellungen: Haken bei
+    „Entfernen: Hinweise“ <b>abwählen</b> (sonst fehlen die Erinnerungen) und
+    „Automatisch aktualisieren“ auf <b>Jede Stunde</b> stellen – der Standard
+    „Wöchentlich“ ist für Verlegungen zu träge.
+  </p>
   <p class="tipp" data-ios-tipp hidden>
     <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen –
     dann liegt der Spielplan als App auf dem Handy.
@@ -218,6 +290,8 @@ def mannschaftsblock(schluessel: str, team: dict, basis: str, heute: datetime) -
   <div class="teil" data-ansicht="kalender">{abo_block(team, basis)}</div>
   <div class="teil" data-ansicht="spiele" hidden>{spielliste(spiele, heute)}</div>
   <div class="teil" data-ansicht="tabelle" hidden>
+    {formblock(team.get('form') or [])}
+    {verlaufsblock(team.get('tabelle') or {})}
     {tabellenblock(team.get('tabelle') or {}, team.get('team_id'))}
   </div>
 </section>"""
