@@ -29,6 +29,16 @@ automatisch im Handykalender, Verlegungen inklusive.">
   }
 }
 *, *::before, *::after { box-sizing: border-box; border-radius: 0; }
+
+/* Ohne touch-action deutet das Handy zwei schnelle Tipps auf denselben
+   Knopf als Doppeltipp und zoomt - beim Hype-Zaehler klickt man aber
+   absichtlich schnell hintereinander. */
+button, .knopf, select, a.knopf {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  user-select: none;
+}
 html { -webkit-text-size-adjust: 100%; }
 body {
   margin: 0; background: var(--grund); color: var(--tinte);
@@ -322,8 +332,7 @@ rel="noopener">Hans-Böckler-Straße 2, 55128 Mainz</a></dd></div>
       <button type="button" data-dabei aria-pressed="false">Ich bin dabei</button>
       <span class="anzahl" data-anzahl></span>
     </div>
-    <p class="fussnote">Ohne Namen, nur als Anhaltspunkt – gezählt wird pro Gerät,
-       und du kannst dich jederzeit wieder abmelden.</p>
+    <p class="fussnote">Ohne Namen, gezählt wird pro Gerät.</p>
   </div>
 </div>
   
@@ -492,7 +501,7 @@ rel="noopener">Hans-Böckler-Straße 2, 55128 Mainz</a></dd></div>
 <tbody><tr><td class="platz">1</td><td class="mann">HSV Sobernheim H1</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">2</td><td class="mann">HSG Worms</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">3</td><td class="mann">HSV Alzey</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">4</td><td class="mann">HSG Rhein-Nahe Bingen II</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">5</td><td class="mann">GW Bingen-Büdesheim</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">6</td><td class="mann">TV Nieder-Olm II</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">7</td><td class="mann">HSC Ingelheim</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">8</td><td class="mann">TSG MZ-Bretzenheim II</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">9</td><td class="mann">TG Osthofen II</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">10</td><td class="mann">SG Saulheim II</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">11</td><td class="mann">HSG Zotzenheim/St.Johann/Sprendlingen</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr class="wir"><td class="platz">12</td><td class="mann">HSG Mutterstadt/Ruchheim</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr></tbody>
 </table>
 </div>
-<p class="tabellenfuss">Die Saison hat noch nicht begonnen – alle Mannschaften stehen bei null, die Reihenfolge hat noch keine Aussagekraft.</p>
+<p class="tabellenfuss">Die Saison hat noch nicht begonnen.</p>
   </div>
 </section><section data-team="herren2" hidden>
   <p class="liga">Männer Bezirksklasse &middot; 20 Spiele</p>
@@ -519,8 +528,7 @@ rel="noopener">Schulstr. 2, 66987 Thaleischweiler</a></dd></div>
       <button type="button" data-dabei aria-pressed="false">Ich bin dabei</button>
       <span class="anzahl" data-anzahl></span>
     </div>
-    <p class="fussnote">Ohne Namen, nur als Anhaltspunkt – gezählt wird pro Gerät,
-       und du kannst dich jederzeit wieder abmelden.</p>
+    <p class="fussnote">Ohne Namen, gezählt wird pro Gerät.</p>
   </div>
 </div>
   
@@ -679,7 +687,7 @@ rel="noopener">Schulstr. 2, 66987 Thaleischweiler</a></dd></div>
 <tbody><tr><td class="platz">1</td><td class="mann">SG LaFt - Herren</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">2</td><td class="mann">TV THALEISCHWEILER Herren</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">3</td><td class="mann">MSG Kaiserslautern/Dansenberg II</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">4</td><td class="mann">TSV Kandel II</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">5</td><td class="mann">TUS Neuhofen II</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">6</td><td class="mann">TV Offenbach IV</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">7</td><td class="mann">MSG Iggelheim/Meckenheim III</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">8</td><td class="mann">TV Kirrweiler II</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr class="wir"><td class="platz">9</td><td class="mann">HSG Mutterstadt/Ruchheim II</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">10</td><td class="mann">HSV Lingenfeld/Schwegenheim II</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">11</td><td class="mann">TUS Heiligenstein II</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">12</td><td class="mann">HSG Grethen/Maxdorf</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr></tbody>
 </table>
 </div>
-<p class="tabellenfuss">Die Saison hat noch nicht begonnen – alle Mannschaften stehen bei null, die Reihenfolge hat noch keine Aussagekraft.</p>
+<p class="tabellenfuss">Die Saison hat noch nicht begonnen.</p>
   </div>
 </section><section data-team="damen" hidden>
   <p class="liga">Frauen Verbandsliga &middot; 18 Spiele</p>
@@ -706,8 +714,7 @@ rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
       <button type="button" data-dabei aria-pressed="false">Ich bin dabei</button>
       <span class="anzahl" data-anzahl></span>
     </div>
-    <p class="fussnote">Ohne Namen, nur als Anhaltspunkt – gezählt wird pro Gerät,
-       und du kannst dich jederzeit wieder abmelden.</p>
+    <p class="fussnote">Ohne Namen, gezählt wird pro Gerät.</p>
   </div>
 </div>
   
@@ -856,7 +863,7 @@ rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
 <tbody><tr><td class="platz">1</td><td class="mann">TV Hauenstein</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">2</td><td class="mann">HSV Alzey</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">3</td><td class="mann">FSG Kaiserslautern/Dansenberg</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">4</td><td class="mann">FSG Gonsenheim/Schott</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr class="wir"><td class="platz">5</td><td class="mann">HSG Mutterstadt/Ruchheim Damen</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">6</td><td class="mann">HSG Eckbachtal</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">7</td><td class="mann">SV Bornheim</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">8</td><td class="mann">FSG Selz-Wiesbach</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">9</td><td class="mann">TV Kirrweiler</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">10</td><td class="mann">TV Thaleischweiler</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr></tbody>
 </table>
 </div>
-<p class="tabellenfuss">Die Saison hat noch nicht begonnen – alle Mannschaften stehen bei null, die Reihenfolge hat noch keine Aussagekraft.</p>
+<p class="tabellenfuss">Die Saison hat noch nicht begonnen.</p>
   </div>
 </section>
   <p class="fuss">

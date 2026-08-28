@@ -23,6 +23,16 @@ STIL = """
   }
 }
 *, *::before, *::after { box-sizing: border-box; border-radius: 0; }
+
+/* Ohne touch-action deutet das Handy zwei schnelle Tipps auf denselben
+   Knopf als Doppeltipp und zoomt - beim Hype-Zaehler klickt man aber
+   absichtlich schnell hintereinander. */
+button, .knopf, select, a.knopf {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  user-select: none;
+}
 html { -webkit-text-size-adjust: 100%; }
 body {
   margin: 0; background: var(--grund); color: var(--tinte);
