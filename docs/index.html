@@ -1069,11 +1069,28 @@ rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
       })
         .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
         .then(function (d) { if (typeof d.hype === 'number') { hype = d.hype; zeige(); } })
-        .catch(function () {})
+        .catch(function () {
+          // Nicht angekommen: die Klicks zurueck in die Warteschlange, sonst
+          // zaehlt ein kurzer Funkloch-Moment sie stillschweigend nicht mit.
+          offen += menge;
+        })
         .then(function () { sendet = false; });
     }
     setInterval(sende, 2000);
-    window.addEventListener('pagehide', sende);
+
+    // Beim Verlassen der Seite wird ein laufendes fetch abgebrochen -
+    // sendBeacon wird vom Browser noch zu Ende gebracht.
+    window.addEventListener('pagehide', function () {
+      if (!offen) return;
+      var nutzlast = JSON.stringify({ spiel: spiel, anzahl: Math.min(offen, 25) });
+      if (navigator.sendBeacon) {
+        navigator.sendBeacon(worker + '/hype',
+          new Blob([nutzlast], { type: 'application/json' }));
+        offen = 0;
+      } else {
+        sende();
+      }
+    });
 
     block.querySelectorAll('.knoepfe button').forEach(function (k) {
       k.addEventListener('click', function () {

@@ -615,11 +615,25 @@ def main() -> None:
         except (json.JSONDecodeError, OSError) as fehler:
             print(f"Warnung: {datenpfad} unlesbar ({fehler}) - starte neu", file=sys.stderr)
 
-    teams, alle_aenderungen = {}, []
+    teams, alle_aenderungen, ausgefallen = {}, [], []
     for team in konfig["teams"]:
-        stand, aenderungen = verarbeite_team(team, cfg, bisher.get(team["schluessel"]) or {})
-        teams[team["schluessel"]] = stand
+        schluessel = team["schluessel"]
+        try:
+            stand, aenderungen = verarbeite_team(team, cfg, bisher.get(schluessel) or {})
+        except SystemExit as fehler:
+            # Eine Mannschaft ohne Spielplan (Saisonende, Rueckzug, API-Aussetzer)
+            # darf die uebrigen nicht blockieren. Ihr letzter Stand bleibt stehen.
+            print(f"  {team['name']:<12} FEHLGESCHLAGEN: {fehler}", file=sys.stderr)
+            ausgefallen.append(team["name"])
+            if bisher.get(schluessel):
+                teams[schluessel] = bisher[schluessel]
+                print(f"  {'':<12} letzter bekannter Stand bleibt erhalten", file=sys.stderr)
+            continue
+        teams[schluessel] = stand
         alle_aenderungen += [dict(a, mannschaft=team["name"]) for a in aenderungen]
+
+    if ausgefallen and len(ausgefallen) == len(konfig["teams"]):
+        raise SystemExit("Keine einzige Mannschaft konnte geladen werden - Abbruch.")
 
     datenpfad.parent.mkdir(parents=True, exist_ok=True)
     datenpfad.write_text(json.dumps({
@@ -628,6 +642,8 @@ def main() -> None:
         "teams": teams,
     }, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"geschrieben: {datenpfad}")
+    if ausgefallen:
+        print(f"\nWARNUNG: nicht aktualisiert: {', '.join(ausgefallen)}")
 
     if alle_aenderungen:
         print(f"\n{len(alle_aenderungen)} Änderung(en) seit dem letzten Lauf:")
