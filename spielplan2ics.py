@@ -44,7 +44,7 @@ ABKUERZUNGEN = {
 # API-Zugriff
 # --------------------------------------------------------------------------
 
-def hole_json(pfad: str) -> dict:
+def hole_json(pfad: str, tolerant: bool = False) -> dict:
     req = urllib.request.Request(f"{API}/{pfad}", headers={
         "accept": "application/json",
         "accept-language": "de-DE,de;q=0.9",
@@ -55,10 +55,21 @@ def hole_json(pfad: str) -> dict:
         with urllib.request.urlopen(req, timeout=30) as antwort:
             daten = json.load(antwort)
     except urllib.error.HTTPError as fehler:
+        if tolerant:
+            print(f"Warnung: {pfad} nicht abrufbar (HTTP {fehler.code})", file=sys.stderr)
+            return {}
         raise SystemExit(f"API-Fehler {fehler.code} bei {pfad}: {fehler.read()[:200]!r}")
     except urllib.error.URLError as fehler:
+        if tolerant:
+            print(f"Warnung: {pfad} nicht abrufbar ({fehler.reason})", file=sys.stderr)
+            return {}
         raise SystemExit(f"Keine Verbindung zu handball.net: {fehler.reason}")
-    if not daten.get("success"):
+    # Nicht jeder Endpunkt sendet ein success-Feld (standings etwa nicht),
+    # darum nur ein ausdrueckliches success:false als Fehler werten.
+    if daten.get("success") is False:
+        if tolerant:
+            print(f"Warnung: {pfad} meldet {daten.get('error')}", file=sys.stderr)
+            return {}
         raise SystemExit(f"API meldet Fehler bei {pfad}: {daten.get('error')}")
     return daten
 
@@ -66,6 +77,55 @@ def hole_json(pfad: str) -> dict:
 def hole_spiele(team_id: int) -> list[dict]:
     spiele = hole_json(f"matches?team_id={team_id}")["data"]
     return sorted(spiele, key=lambda s: s["date"])
+
+
+def hole_tabelle(phase_id: int | None) -> dict:
+    """Holt den Tabellenstand der Liga.
+
+    Die API liefert fuer jeden der 22 Spieltage einen eigenen Stand
+    (12 Teams x 22 Runden). Gesucht ist der letzte, in dem ueberhaupt
+    gespielt wurde - vor dem ersten Anwurf also Runde 1 mit lauter Nullen.
+    Faellt der Abruf aus, laeuft der Rest trotzdem durch."""
+    if not phase_id:
+        return {}
+    daten = (hole_tabelle_roh(phase_id) or {}).get("data") or []
+    if not daten:
+        return {}
+
+    runden: dict[int, list] = {}
+    for eintrag in daten:
+        runden.setdefault(eintrag.get("round") or 1, []).append(eintrag)
+
+    mit_spielen = [r for r, e in runden.items() if any(x.get("played") for x in e)]
+    runde = max(mit_spielen) if mit_spielen else min(runden)
+    eintraege = runden[runde]
+
+    # position ist 0, solange nichts gespielt wurde - dann bleibt die
+    # Reihenfolge der API erhalten (sie entspricht der Anzeige auf handball.net)
+    if any(e.get("position") for e in eintraege):
+        eintraege.sort(key=lambda e: e.get("position") or 99)
+
+    return {
+        "runde": runde,
+        "gespielt": bool(mit_spielen),
+        "eintraege": [{
+            "platz": e.get("position") or i + 1,
+            "team": normalisiere((e.get("team") or {}).get("name")),
+            "team_id": (e.get("team") or {}).get("id"),
+            "spiele": e.get("played", 0),
+            "punkte": e.get("points", 0),
+            "siege": e.get("won", 0),
+            "remis": e.get("drawn", 0),
+            "niederlagen": e.get("lost", 0),
+            "tore": e.get("goals_for", 0),
+            "gegentore": e.get("goals_against", 0),
+            "differenz": e.get("goals_diff", 0),
+        } for i, e in enumerate(eintraege)],
+    }
+
+
+def hole_tabelle_roh(phase_id: int) -> dict:
+    return hole_json(f"standings?phase_id={phase_id}", tolerant=True)
 
 
 def finde_team(cfg: argparse.Namespace) -> int:
@@ -485,6 +545,7 @@ def main() -> None:
             "team_id": team_id,
             "kalender": cfg.name,
             "liga": normalisiere(liga(spiele[0])),
+            "tabelle": hole_tabelle((spiele[0].get("phase") or {}).get("id")),
             "saison": f"20{saison_id[:2]}/{saison_id[2:]}" if len(saison_id) == 4 else "",
             "letzte_aenderungen": aenderungen,
             "spiele": neuer_stand,

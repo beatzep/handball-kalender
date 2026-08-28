@@ -112,11 +112,20 @@ Offene JSON-API, ohne Login und ohne Key:
 | Zweck | Aufruf |
 |---|---|
 | Spielplan eines Teams | `GET https://www.handball.net/api/new/matches?team_id=80924` |
+| Tabellenstand | `GET .../api/new/standings?phase_id=12482` |
 | Team suchen | `GET .../api/new/teams?name=Mutterstadt&per_page=50` |
 | Spielseite im Web | `https://www.handball.net/match/<id>` |
 
 `matches` akzeptiert außerdem `club_id`, `installation_id`, `date_from`,
 `date_to`, `competition_id` und weitere Filter.
+
+**Zur Tabelle:** `standings` liefert nicht einen Stand, sondern **einen pro
+Spieltag** – 12 Mannschaften × 22 Runden = 264 Einträge. Gesucht ist die
+höchste Runde, in der überhaupt gespielt wurde; vor dem ersten Anwurf also
+Runde 1 mit lauter Nullen. Das Feld `position` bleibt 0, solange nichts
+gespielt ist – dann bleibt die Reihenfolge der API erhalten, die der Anzeige
+auf handball.net entspricht. Anders als `matches` sendet `standings` **kein
+`success`-Feld**, eine Erfolgsprüfung darauf schlägt also fehl.
 
 **Achtung bei Koordinaten:** `field.installation` (Halle) ist korrekt,
 `club.latitude/longitude` (Verein) zeigt mitten in die USA.

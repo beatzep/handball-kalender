@@ -182,6 +182,51 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
 .spiel.vorbei { opacity: .34; }
 .spiel.jetzt { border-top-color: var(--gold); box-shadow: inset 0 2px 0 var(--gold); }
 
+/* ---------- Reiter ---------- */
+.reiter {
+  position: sticky; top: 0; z-index: 5;
+  background: var(--grund); border-bottom: 1px solid var(--linie);
+  display: flex; gap: 0; overflow-x: auto; -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.reiter::-webkit-scrollbar { display: none; }
+.reiter a {
+  flex: 0 0 auto; padding: 15px 18px 13px; font-size: .92rem; font-weight: 500;
+  color: var(--leise); text-decoration: none; white-space: nowrap;
+  border-bottom: 2px solid transparent; margin-bottom: -1px;
+}
+.reiter a:first-child { padding-left: 0; }
+/* sonst verschwindet die Ueberschrift beim Ankersprung unter der Leiste */
+section[id] { scroll-margin-top: 54px; }
+.reiter a[aria-current="true"] { color: var(--tinte); border-bottom-color: var(--gold); }
+
+/* ---------- Tabelle ---------- */
+.tabellenhuelle { overflow-x: auto; }
+table.tabelle { width: 100%; border-collapse: collapse; font-size: .92rem; }
+table.tabelle th {
+  text-align: right; font-size: .74rem; font-weight: 600; letter-spacing: .06em;
+  text-transform: uppercase; color: var(--leise); padding: 0 0 10px;
+  border-bottom: 1px solid var(--linie); white-space: nowrap;
+}
+table.tabelle th.platz { text-align: left; width: 26px; }
+table.tabelle th.mann { text-align: left; width: auto; }
+table.tabelle td {
+  padding: 11px 0; border-bottom: 1px solid var(--linie-zart);
+  text-align: right; white-space: nowrap;
+}
+table.tabelle td.platz { text-align: left; color: var(--leise); font-size: .86rem; }
+table.tabelle td.mann {
+  text-align: left; white-space: normal; overflow-wrap: anywhere;
+  padding-right: 12px; line-height: 1.3;
+}
+table.tabelle td + td, table.tabelle th + th { padding-left: 12px; }
+table.tabelle td.pkt { font-weight: 600; }
+table.tabelle tr.wir td { background: var(--gold-schwach); font-weight: 600; }
+table.tabelle tr.wir td.platz { box-shadow: inset 2px 0 0 var(--gold); }
+.tabellenfuss { margin: 14px 0 0; font-size: .84rem; color: var(--leise); }
+.nur-breit { display: none; }
+@media (min-width: 560px) { .nur-breit { display: table-cell; } }
+
 /* ---------- Fuß ---------- */
 .fuss { margin: 52px 0 0; padding: 20px 0 46px;
         border-top: 1px solid var(--linie); font-size: .88rem;
@@ -230,7 +275,7 @@ def hero(spiel: dict, heute: datetime) -> str:
     heim = spiel.get("heim")
     paarung = (f"HSG MuRu &ndash; {sicher(spiel.get('gegner'))}" if heim
                else f"{sicher(spiel.get('gegner'))} &ndash; HSG MuRu")
-    return f"""<div class="marker">{relativ} &middot; {'Heimspiel' if heim else 'Auswärtsspiel'}</div>
+    return f"""<div class="marker"><span data-anwurf="{wann.isoformat()}">{relativ}</span> &middot; {'Heimspiel' if heim else 'Auswärtsspiel'}</div>
 <h2 class="paarung">{paarung}</h2>
 <dl class="fakten">
 <div><dt>Anwurf</dt><dd>{WOCHENTAGE[wann.weekday()]}, {wann:%d.%m.%Y}, {wann:%H:%M} Uhr</dd></div>
@@ -256,6 +301,41 @@ def spielzeile(spiel: dict, heute: datetime, naechstes: str | None, code: str) -
 <div class="halle">{ort}</div></div>
 <div class="hz {'heim' if heim else ''}">{'H' if heim else 'A'}</div>
 </div>"""
+
+
+def tabellenblock(tabelle: dict, eigenes_team: int | None) -> str:
+    """Rendert den Tabellenstand. Vor dem ersten Spieltag steht ueberall 0 -
+    die Reihenfolge ist dann ohne Aussage, darum der Hinweis darunter."""
+    if not tabelle or not tabelle.get("eintraege"):
+        return ""
+
+    zeilen = []
+    for e in tabelle["eintraege"]:
+        wir = ' class="wir"' if e.get("team_id") == eigenes_team else ""
+        zeilen.append(
+            f'<tr{wir}><td class="platz">{e["platz"]}</td>'
+            f'<td class="mann">{sicher(e["team"])}</td>'
+            f'<td>{e["spiele"]}</td>'
+            f'<td class="nur-breit">{e["tore"]}:{e["gegentore"]}</td>'
+            f'<td>{e["differenz"]:+d}</td>'
+            f'<td class="pkt">{e["punkte"]}</td></tr>')
+
+    if tabelle.get("gespielt"):
+        fuss = f'Stand nach Spieltag {tabelle["runde"]}.'
+    else:
+        fuss = ("Die Saison hat noch nicht begonnen – alle Mannschaften stehen "
+                "bei null, die Reihenfolge hat noch keine Aussagekraft.")
+
+    return f'''<div class="tabellenhuelle">
+<table class="tabelle">
+<thead><tr>
+<th class="platz">Pl</th><th class="mann">Mannschaft</th><th>Sp</th>
+<th class="nur-breit">Tore</th><th>Diff</th><th>Pkt</th>
+</tr></thead>
+<tbody>{"".join(zeilen)}</tbody>
+</table>
+</div>
+<p class="tabellenfuss">{fuss}</p>'''
 
 
 def main() -> None:
@@ -284,6 +364,7 @@ def main() -> None:
             letzter_monat = monat
         tabelle.append(spielzeile(spiel, heute, naechster_code, code))
 
+    tabelle_html = tabellenblock(daten.get("tabelle") or {}, daten.get("team_id"))
     aenderungen = daten.get("letzte_aenderungen") or []
     hinweis = ""
     if aenderungen:
@@ -333,6 +414,12 @@ automatisch im Handykalender, Verlegungen inklusive.">
   </div>
 </header>
 
+<nav class="reiter huelle" aria-label="Abschnitte">
+  <a href="#kalender">In den Kalender</a>
+  <a href="#spiele">Alle Spiele</a>
+  {'<a href="#tabelle">Tabelle</a>' if tabelle_html else ''}
+</nav>
+
 <div class="huelle">
 
   <section class="teil">
@@ -340,7 +427,7 @@ automatisch im Handykalender, Verlegungen inklusive.">
     {hinweis}
   </section>
 
-  <section class="teil">
+  <section class="teil" id="kalender">
     <div class="rubrik">In den Kalender</div>
 
     <div class="weg">
@@ -368,10 +455,12 @@ automatisch im Handykalender, Verlegungen inklusive.">
     </div>
   </section>
 
-  <section class="teil">
+  <section class="teil" id="spiele">
     <div class="rubrik">Alle Spiele der Saison</div>
     {''.join(tabelle)}
   </section>
+
+  {f'<section class="teil" id="tabelle"><div class="rubrik">Tabelle</div>{tabelle_html}</section>' if tabelle_html else ''}
 
   <p class="fuss">
     Zuletzt abgeglichen am {stand_text}. Der Spielplan wird täglich automatisch
@@ -381,6 +470,45 @@ automatisch im Handykalender, Verlegungen inklusive.">
 </div>
 
 <script>
+// Die Angabe "Morgen" wird beim naechtlichen Bauen gesetzt und waere sonst
+// veraltet, sobald ein Lauf ausfaellt - darum hier nochmal aus dem echten
+// Anwurfzeitpunkt berechnet.
+(function () {{
+  var el = document.querySelector('[data-anwurf]');
+  if (!el) return;
+  var anwurf = new Date(el.getAttribute('data-anwurf'));
+  if (isNaN(anwurf)) return;
+  var heute = new Date(); heute.setHours(0, 0, 0, 0);
+  var tag = new Date(anwurf); tag.setHours(0, 0, 0, 0);
+  var tage = Math.round((tag - heute) / 86400000);
+  el.textContent = tage < 0 ? 'Läuft gerade'
+    : tage === 0 ? 'Heute'
+    : tage === 1 ? 'Morgen'
+    : tage < 7 ? 'In ' + tage + ' Tagen'
+    : 'Nächstes Spiel';
+}})();
+
+// Reiter markieren, sobald der zugehoerige Abschnitt sichtbar wird
+(function () {{
+  var reiter = [].slice.call(document.querySelectorAll('.reiter a'));
+  if (!reiter.length || !window.IntersectionObserver) return;
+  var zuOrdnung = {{}};
+  reiter.forEach(function (a) {{
+    var ziel = document.querySelector(a.getAttribute('href'));
+    if (ziel) zuOrdnung[ziel.id] = a;
+  }});
+  var beobachter = new IntersectionObserver(function (eintraege) {{
+    eintraege.forEach(function (e) {{
+      if (!e.isIntersecting) return;
+      reiter.forEach(function (a) {{ a.removeAttribute('aria-current'); }});
+      if (zuOrdnung[e.target.id]) zuOrdnung[e.target.id].setAttribute('aria-current', 'true');
+    }});
+  }}, {{ rootMargin: '-20% 0px -70% 0px' }});
+  Object.keys(zuOrdnung).forEach(function (id) {{
+    beobachter.observe(document.getElementById(id));
+  }});
+}})();
+
 function kopiere(text, knopf) {{
   navigator.clipboard.writeText(text).then(function () {{
     var alt = knopf.textContent;
