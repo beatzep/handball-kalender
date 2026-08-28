@@ -41,9 +41,6 @@ jobs:
             python3 pruefe_ics.py "$datei"
           done
 
-      - name: Daten pruefen
-        run: python3 audit.py
-
       - name: Seite bauen
         run: |
           python3 baue_seite.py \
@@ -51,6 +48,11 @@ jobs:
             --basis-url "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}" \
             --worker-url "https://muru-zaehler.edis-herrmann.workers.dev" \
             --out docs/index.html
+
+      # Nach dem Seitenbau, damit die eben erzeugte Seite geprueft wird -
+      # nicht die vom Vortag.
+      - name: Daten und Seite pruefen
+        run: python3 audit.py
 
       - name: Zusammenfassung schreiben
         run: |
