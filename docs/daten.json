@@ -1,0 +1,1042 @@
+{
+  "aktualisiert": "2026-08-28T10:04:02+00:00",
+  "verein": "HSG Mutterstadt/Ruchheim",
+  "teams": {
+    "herren1": {
+      "team_id": 80924,
+      "name": "Herren I",
+      "kurzname": "HSG MuRu",
+      "datei": "herren1.ics",
+      "kalender": "HSG Mutterstadt/Ruchheim – Herren I",
+      "liga": "Männer Bezirksoberliga",
+      "saison": "2026/27",
+      "tabelle": {
+        "runde": 1,
+        "gespielt": false,
+        "eintraege": [
+          {
+            "platz": 1,
+            "team": "HSV Sobernheim H1",
+            "team_id": 80912,
+            "spiele": 0,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 0,
+            "gegentore": 0,
+            "differenz": 0
+          },
+          {
+            "platz": 2,
+            "team": "HSG Worms",
+            "team_id": 80913,
+            "spiele": 0,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 0,
+            "gegentore": 0,
+            "differenz": 0
+          },
+          {
+            "platz": 3,
+            "team": "HSV Alzey",
+            "team_id": 80914,
+            "spiele": 0,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 0,
+            "gegentore": 0,
+            "differenz": 0
+          },
+          {
+            "platz": 4,
+            "team": "HSG Rhein-Nahe Bingen II",
+            "team_id": 80915,
+            "spiele": 0,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 0,
+            "gegentore": 0,
+            "differenz": 0
+          },
+          {
+            "platz": 5,
+            "team": "GW Bingen-Büdesheim",
+            "team_id": 80916,
+            "spiele": 0,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 0,
+            "gegentore": 0,
+            "differenz": 0
+          },
+          {
+            "platz": 6,
+            "team": "TV Nieder-Olm II",
+            "team_id": 80917,
+            "spiele": 0,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 0,
+            "gegentore": 0,
+            "differenz": 0
+          },
+          {
+            "platz": 7,
+            "team": "HSC Ingelheim",
+            "team_id": 80918,
+            "spiele": 0,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 0,
+            "gegentore": 0,
+            "differenz": 0
+          },
+          {
+            "platz": 8,
+            "team": "TSG MZ-Bretzenheim II",
+            "team_id": 80919,
+            "spiele": 0,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 0,
+            "gegentore": 0,
+            "differenz": 0
+          },
+          {
+            "platz": 9,
+            "team": "TG Osthofen II",
+            "team_id": 80920,
+            "spiele": 0,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 0,
+            "gegentore": 0,
+            "differenz": 0
+          },
+          {
+            "platz": 10,
+            "team": "SG Saulheim II",
+            "team_id": 80921,
+            "spiele": 0,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 0,
+            "gegentore": 0,
+            "differenz": 0
+          },
+          {
+            "platz": 11,
+            "team": "HSG Zotzenheim/St.Johann/Sprendlingen",
+            "team_id": 80922,
+            "spiele": 0,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 0,
+            "gegentore": 0,
+            "differenz": 0
+          },
+          {
+            "platz": 12,
+            "team": "HSG Mutterstadt/Ruchheim",
+            "team_id": 80924,
+            "spiele": 0,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 0,
+            "gegentore": 0,
+            "differenz": 0
+          }
+        ]
+      },
+      "letzte_aenderungen": [],
+      "spiele": {
+        "2627RPBKROERMA0101": {
+          "datum": "2026-08-29T20:00:00",
+          "ort": "IGS 1 Mainz-Bretzenheim, Hans-Böckler-Straße 2, 55128 Mainz",
+          "halle": "IGS 1 Mainz-Bretzenheim",
+          "gegner": "TSG MZ-Bretzenheim II",
+          "spieltag": 1,
+          "heim": false,
+          "sequence": 0
+        },
+        "2627RPBKROERMA0206": {
+          "datum": "2026-09-05T19:45:00",
+          "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
+          "halle": "TSG-Sporthalle Mutterstadt",
+          "gegner": "HSG Worms",
+          "spieltag": 2,
+          "heim": true,
+          "sequence": 0
+        },
+        "2627RPBKROERMA0301": {
+          "datum": "2026-09-13T18:00:00",
+          "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
+          "halle": "TVR-Sporthalle Ludwigshafen",
+          "gegner": "HSV Sobernheim H1",
+          "spieltag": 3,
+          "heim": true,
+          "sequence": 0
+        },
+        "2627RPBKROERMA0405": {
+          "datum": "2026-09-19T18:00:00",
+          "ort": "Bingen, Rundsporthalle, Nuits-St.Georges-Straße, 55411 Bingen",
+          "halle": "Bingen, Rundsporthalle",
+          "gegner": "GW Bingen-Büdesheim",
+          "spieltag": 4,
+          "heim": false,
+          "sequence": 0
+        },
+        "2627RPBKROERMA0502": {
+          "datum": "2026-09-26T20:00:00",
+          "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
+          "halle": "TVR-Sporthalle Ludwigshafen",
+          "gegner": "TG Osthofen II",
+          "spieltag": 5,
+          "heim": true,
+          "sequence": 0
+        },
+        "2627RPBKROERMA0604": {
+          "datum": "2026-10-03T20:00:00",
+          "ort": "Sporthalle der IGS Nieder-Olm, Karl-Sieben-Straße, 55268 Nieder-Olm",
+          "halle": "Sporthalle der IGS Nieder-Olm",
+          "gegner": "TV Nieder-Olm II",
+          "spieltag": 6,
+          "heim": false,
+          "sequence": 0
+        },
+        "2627RPBKROERMA0703": {
+          "datum": "2026-10-24T19:30:00",
+          "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
+          "halle": "TSG-Sporthalle Mutterstadt",
+          "gegner": "HSG Zotzenheim/St.Johann/Sprendlingen",
+          "spieltag": 7,
+          "heim": true,
+          "sequence": 0
+        },
+        "2627RPBKROERMA0803": {
+          "datum": "2026-11-08T17:15:00",
+          "ort": "NH Alzey, Frankenstraße 17, 55232 Alzey",
+          "halle": "NH Alzey",
+          "gegner": "HSV Alzey",
+          "spieltag": 8,
+          "heim": false,
+          "sequence": 0
+        },
+        "2627RPBKROERMA0904": {
+          "datum": "2026-11-15T18:45:00",
+          "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
+          "halle": "TVR-Sporthalle Ludwigshafen",
+          "gegner": "SG Saulheim II",
+          "spieltag": 9,
+          "heim": true,
+          "sequence": 0
+        },
+        "2627RPBKROERMA1002": {
+          "datum": "2026-11-21T16:00:00",
+          "ort": "Bingen, Rundsporthalle, Nuits-St.Georges-Straße, 55411 Bingen",
+          "halle": "Bingen, Rundsporthalle",
+          "gegner": "HSG Rhein-Nahe Bingen II",
+          "spieltag": 10,
+          "heim": false,
+          "sequence": 0
+        },
+        "2627RPBKROERMA1105": {
+          "datum": "2026-11-29T17:00:00",
+          "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
+          "halle": "TVR-Sporthalle Ludwigshafen",
+          "gegner": "HSC Ingelheim",
+          "spieltag": 11,
+          "heim": true,
+          "sequence": 0
+        },
+        "2627RPBKROERMA1201": {
+          "datum": "2026-12-06T18:00:00",
+          "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
+          "halle": "TSG-Sporthalle Mutterstadt",
+          "gegner": "TSG MZ-Bretzenheim II",
+          "spieltag": 12,
+          "heim": true,
+          "sequence": 0
+        },
+        "2627RPBKROERMA1306": {
+          "datum": "2026-12-13T18:00:00",
+          "ort": "Nikolaus-Dörr-Halle Worms, Mainzer Straße 51, 67547 Worms",
+          "halle": "Nikolaus-Dörr-Halle Worms",
+          "gegner": "HSG Worms",
+          "spieltag": 13,
+          "heim": false,
+          "sequence": 0
+        },
+        "2627RPBKROERMA1401": {
+          "datum": "2027-01-24T16:00:00",
+          "ort": "Bad Sobernheim, Dr. W.Dümmler Halle, Staudernheimer Straße, 55566 Bad Sobernheim",
+          "halle": "Bad Sobernheim, Dr. W.Dümmler Halle",
+          "gegner": "HSV Sobernheim H1",
+          "spieltag": 14,
+          "heim": false,
+          "sequence": 0
+        },
+        "2627RPBKROERMA1505": {
+          "datum": "2027-01-30T16:00:00",
+          "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
+          "halle": "TVR-Sporthalle Ludwigshafen",
+          "gegner": "GW Bingen-Büdesheim",
+          "spieltag": 15,
+          "heim": true,
+          "sequence": 0
+        },
+        "2627RPBKROERMA1602": {
+          "datum": "2027-02-14T14:00:00",
+          "ort": "Wonnegauhalle Osthofen, Herrnsheimer Straße 24, 67574 Osthofen",
+          "halle": "Wonnegauhalle Osthofen",
+          "gegner": "TG Osthofen II",
+          "spieltag": 16,
+          "heim": false,
+          "sequence": 0
+        },
+        "2627RPBKROERMA1704": {
+          "datum": "2027-02-20T20:00:00",
+          "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
+          "halle": "TVR-Sporthalle Ludwigshafen",
+          "gegner": "TV Nieder-Olm II",
+          "spieltag": 17,
+          "heim": true,
+          "sequence": 0
+        },
+        "2627RPBKROERMA1803": {
+          "datum": "2027-02-28T17:00:00",
+          "ort": "IGS Sprendlingen, Ober-Hilbersheimer Straße, 55576 Sprendlingen",
+          "halle": "IGS Sprendlingen",
+          "gegner": "HSG Zotzenheim/St.Johann/Sprendlingen",
+          "spieltag": 18,
+          "heim": false,
+          "sequence": 0
+        },
+        "2627RPBKROERMA1903": {
+          "datum": "2027-03-13T20:00:00",
+          "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
+          "halle": "TSG-Sporthalle Mutterstadt",
+          "gegner": "HSV Alzey",
+          "spieltag": 19,
+          "heim": true,
+          "sequence": 0
+        },
+        "2627RPBKROERMA2004": {
+          "datum": "2027-03-20T17:00:00",
+          "ort": "Ritter-Hundt-Zentrum Saulheim, Am Westring 6A, 55291 Saulheim",
+          "halle": "Ritter-Hundt-Zentrum Saulheim",
+          "gegner": "SG Saulheim II",
+          "spieltag": 20,
+          "heim": false,
+          "sequence": 0
+        },
+        "2627RPBKROERMA2102": {
+          "datum": "2027-04-10T18:00:00",
+          "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
+          "halle": "TVR-Sporthalle Ludwigshafen",
+          "gegner": "HSG Rhein-Nahe Bingen II",
+          "spieltag": 21,
+          "heim": true,
+          "sequence": 0
+        },
+        "2627RPBKROERMA2205": {
+          "datum": "2027-04-18T15:00:00",
+          "ort": "Sebastian-Münster-Gymnasium Ingelheim, Hans-Fluck-Straße, 55218 Ingelheim",
+          "halle": "Sebastian-Münster-Gymnasium Ingelheim",
+          "gegner": "HSC Ingelheim",
+          "spieltag": 22,
+          "heim": false,
+          "sequence": 0
+        }
+      }
+    },
+    "herren2": {
+      "team_id": 80980,
+      "name": "Herren II",
+      "kurzname": "HSG MuRu II",
+      "datei": "herren2.ics",
+      "kalender": "HSG Mutterstadt/Ruchheim – Herren II",
+      "liga": "Männer Bezirksklasse",
+      "saison": "2026/27",
+      "tabelle": {
+        "runde": 1,
+        "gespielt": false,
+        "eintraege": [
+          {
+            "platz": 1,
+            "team": "SG LaFt - Herren",
+            "team_id": 80970,
+            "spiele": 0,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 0,
+            "gegentore": 0,
+            "differenz": 0
+          },
+          {
+            "platz": 2,
+            "team": "TV THALEISCHWEILER Herren",
+            "team_id": 80973,
+            "spiele": 0,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 0,
+            "gegentore": 0,
+            "differenz": 0
+          },
+          {
+            "platz": 3,
+            "team": "MSG Kaiserslautern/Dansenberg II",
+            "team_id": 80974,
+            "spiele": 0,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 0,
+            "gegentore": 0,
+            "differenz": 0
+          },
+          {
+            "platz": 4,
+            "team": "TSV Kandel II",
+            "team_id": 80975,
+            "spiele": 0,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 0,
+            "gegentore": 0,
+            "differenz": 0
+          },
+          {
+            "platz": 5,
+            "team": "TUS Neuhofen II",
+            "team_id": 80976,
+            "spiele": 0,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 0,
+            "gegentore": 0,
+            "differenz": 0
+          },
+          {
+            "platz": 6,
+            "team": "TV Offenbach IV",
+            "team_id": 80977,
+            "spiele": 0,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 0,
+            "gegentore": 0,
+            "differenz": 0
+          },
+          {
+            "platz": 7,
+            "team": "MSG Iggelheim/Meckenheim III",
+            "team_id": 80978,
+            "spiele": 0,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 0,
+            "gegentore": 0,
+            "differenz": 0
+          },
+          {
+            "platz": 8,
+            "team": "TV Kirrweiler II",
+            "team_id": 80979,
+            "spiele": 0,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 0,
+            "gegentore": 0,
+            "differenz": 0
+          },
+          {
+            "platz": 9,
+            "team": "HSG Mutterstadt/Ruchheim II",
+            "team_id": 80980,
+            "spiele": 0,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 0,
+            "gegentore": 0,
+            "differenz": 0
+          },
+          {
+            "platz": 10,
+            "team": "HSV Lingenfeld/Schwegenheim II",
+            "team_id": 80982,
+            "spiele": 0,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 0,
+            "gegentore": 0,
+            "differenz": 0
+          },
+          {
+            "platz": 11,
+            "team": "TUS Heiligenstein II",
+            "team_id": 80983,
+            "spiele": 0,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 0,
+            "gegentore": 0,
+            "differenz": 0
+          },
+          {
+            "platz": 12,
+            "team": "HSG Grethen/Maxdorf",
+            "team_id": 80984,
+            "spiele": 0,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 0,
+            "gegentore": 0,
+            "differenz": 0
+          }
+        ]
+      },
+      "letzte_aenderungen": [],
+      "spiele": {
+        "2627RPBKRKERMB0101": {
+          "datum": "2026-08-29T19:00:00",
+          "ort": "IGS-Sporthalle Thaleischweiler, Schulstr. 2, 66987 Thaleischweiler",
+          "halle": "IGS-Sporthalle Thaleischweiler",
+          "gegner": "TV THALEISCHWEILER Herren",
+          "spieltag": 1,
+          "heim": false,
+          "sequence": 0
+        },
+        "2627RPBKRKERMB0206": {
+          "datum": "2026-09-06T20:00:00",
+          "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
+          "halle": "TSG-Sporthalle Mutterstadt",
+          "gegner": "HSG Grethen/Maxdorf",
+          "spieltag": 2,
+          "heim": true,
+          "sequence": 0
+        },
+        "2627RPBKRKERMB0301": {
+          "datum": "2026-09-13T16:00:00",
+          "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
+          "halle": "TVR-Sporthalle Ludwigshafen",
+          "gegner": "TV Kirrweiler II",
+          "spieltag": 3,
+          "heim": true,
+          "sequence": 0
+        },
+        "2627RPBKRKERMB0502": {
+          "datum": "2026-09-26T18:00:00",
+          "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
+          "halle": "TVR-Sporthalle Ludwigshafen",
+          "gegner": "TSV Kandel II",
+          "spieltag": 5,
+          "heim": true,
+          "sequence": 0
+        },
+        "2627RPBKRKERMB0604": {
+          "datum": "2026-10-03T20:00:00",
+          "ort": "Rhein-Pfalz-Halle Römerberg-Heiligenstein, Viehtriftstraße 106, 67354 Römerberg-Heiligenstein",
+          "halle": "Rhein-Pfalz-Halle Römerberg-Heiligenstein",
+          "gegner": "TUS Heiligenstein II",
+          "spieltag": 6,
+          "heim": false,
+          "sequence": 0
+        },
+        "2627RPBKRKERMB0703": {
+          "datum": "2026-10-24T17:30:00",
+          "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
+          "halle": "TSG-Sporthalle Mutterstadt",
+          "gegner": "MSG Iggelheim/Meckenheim III",
+          "spieltag": 7,
+          "heim": true,
+          "sequence": 0
+        },
+        "2627RPBKRKERMB0803": {
+          "datum": "2026-11-08T15:00:00",
+          "ort": "Andreas-Albert-Schule, Petergartenweg 9, 67227 Frankenthal",
+          "halle": "Andreas-Albert-Schule",
+          "gegner": "SG LaFt - Herren",
+          "spieltag": 8,
+          "heim": false,
+          "sequence": 0
+        },
+        "2627RPBKRKERMB0904": {
+          "datum": "2026-11-15T16:45:00",
+          "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
+          "halle": "TVR-Sporthalle Ludwigshafen",
+          "gegner": "HSV Lingenfeld/Schwegenheim II",
+          "spieltag": 9,
+          "heim": true,
+          "sequence": 0
+        },
+        "2627RPBKRKERMB1002": {
+          "datum": "2026-11-22T18:00:00",
+          "ort": "Sporthalle Dansenberg, Am Handballplatz 1, 67661 Kaiserslautern-Dansenberg",
+          "halle": "Sporthalle Dansenberg",
+          "gegner": "MSG Kaiserslautern/Dansenberg II",
+          "spieltag": 10,
+          "heim": false,
+          "sequence": 0
+        },
+        "2627RPBKRKERMB1105": {
+          "datum": "2026-11-29T19:00:00",
+          "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
+          "halle": "TVR-Sporthalle Ludwigshafen",
+          "gegner": "TUS Neuhofen II",
+          "spieltag": 11,
+          "heim": true,
+          "sequence": 0
+        },
+        "2627RPBKRKERMB1201": {
+          "datum": "2026-12-06T16:00:00",
+          "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
+          "halle": "TSG-Sporthalle Mutterstadt",
+          "gegner": "TV THALEISCHWEILER Herren",
+          "spieltag": 12,
+          "heim": true,
+          "sequence": 0
+        },
+        "2627RPBKRKERMB1306": {
+          "datum": "2026-12-12T18:00:00",
+          "ort": "Carl-Orff-Realschule Bad Dürkheim, Kanalstr. 23, 67098 Bad Dürkheim",
+          "halle": "Carl-Orff-Realschule Bad Dürkheim",
+          "gegner": "HSG Grethen/Maxdorf",
+          "spieltag": 13,
+          "heim": false,
+          "sequence": 0
+        },
+        "2627RPBKRKERMB1401": {
+          "datum": "2027-01-24T19:30:00",
+          "ort": "Reblandhalle Kirrweiler, Unterried 6, 67489 Kirrweiler",
+          "halle": "Reblandhalle Kirrweiler",
+          "gegner": "TV Kirrweiler II",
+          "spieltag": 14,
+          "heim": false,
+          "sequence": 0
+        },
+        "2627RPBKRKERMB1602": {
+          "datum": "2027-02-13T19:30:00",
+          "ort": "Kandel, IGS Sporthalle, Schubertstr. 7, 76870 Kandel",
+          "halle": "Kandel, IGS Sporthalle",
+          "gegner": "TSV Kandel II",
+          "spieltag": 16,
+          "heim": false,
+          "sequence": 0
+        },
+        "2627RPBKRKERMB1704": {
+          "datum": "2027-02-21T18:45:00",
+          "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
+          "halle": "TVR-Sporthalle Ludwigshafen",
+          "gegner": "TUS Heiligenstein II",
+          "spieltag": 17,
+          "heim": true,
+          "sequence": 0
+        },
+        "2627RPBKRKERMB1803": {
+          "datum": "2027-02-28T14:00:00",
+          "ort": "Wahagnieshalle Böhl-Iggelheim, Am Schwarzweiher 1, 67459 Böhl-Iggelheim",
+          "halle": "Wahagnieshalle Böhl-Iggelheim",
+          "gegner": "MSG Iggelheim/Meckenheim III",
+          "spieltag": 18,
+          "heim": false,
+          "sequence": 0
+        },
+        "2627RPBKRKERMB1903": {
+          "datum": "2027-03-13T18:00:00",
+          "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
+          "halle": "TSG-Sporthalle Mutterstadt",
+          "gegner": "SG LaFt - Herren",
+          "spieltag": 19,
+          "heim": true,
+          "sequence": 0
+        },
+        "2627RPBKRKERMB2004": {
+          "datum": "2027-03-20T16:00:00",
+          "ort": "Sporthalle Schwegenheim, Schulstr. 20, 67365 Schwegenheim",
+          "halle": "Sporthalle Schwegenheim",
+          "gegner": "HSV Lingenfeld/Schwegenheim II",
+          "spieltag": 20,
+          "heim": false,
+          "sequence": 0
+        },
+        "2627RPBKRKERMB2102": {
+          "datum": "2027-04-10T16:00:00",
+          "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
+          "halle": "TVR-Sporthalle Ludwigshafen",
+          "gegner": "MSG Kaiserslautern/Dansenberg II",
+          "spieltag": 21,
+          "heim": true,
+          "sequence": 0
+        },
+        "2627RPBKRKERMB2205": {
+          "datum": "2027-04-18T20:00:00",
+          "ort": "Rehbachhalle Neuhofen, Jahnstr. 25, 67141 Neuhofen",
+          "halle": "Rehbachhalle Neuhofen",
+          "gegner": "TUS Neuhofen II",
+          "spieltag": 22,
+          "heim": false,
+          "sequence": 0
+        }
+      }
+    },
+    "damen": {
+      "team_id": 80999,
+      "name": "Damen",
+      "kurzname": "HSG MuRu",
+      "datei": "damen.ics",
+      "kalender": "HSG Mutterstadt/Ruchheim – Damen",
+      "liga": "Frauen Verbandsliga",
+      "saison": "2026/27",
+      "tabelle": {
+        "runde": 1,
+        "gespielt": false,
+        "eintraege": [
+          {
+            "platz": 1,
+            "team": "TV Hauenstein",
+            "team_id": 80995,
+            "spiele": 0,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 0,
+            "gegentore": 0,
+            "differenz": 0
+          },
+          {
+            "platz": 2,
+            "team": "HSV Alzey",
+            "team_id": 80996,
+            "spiele": 0,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 0,
+            "gegentore": 0,
+            "differenz": 0
+          },
+          {
+            "platz": 3,
+            "team": "FSG Kaiserslautern/Dansenberg",
+            "team_id": 80997,
+            "spiele": 0,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 0,
+            "gegentore": 0,
+            "differenz": 0
+          },
+          {
+            "platz": 4,
+            "team": "FSG Gonsenheim/Schott",
+            "team_id": 80998,
+            "spiele": 0,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 0,
+            "gegentore": 0,
+            "differenz": 0
+          },
+          {
+            "platz": 5,
+            "team": "HSG Mutterstadt/Ruchheim Damen",
+            "team_id": 80999,
+            "spiele": 0,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 0,
+            "gegentore": 0,
+            "differenz": 0
+          },
+          {
+            "platz": 6,
+            "team": "HSG Eckbachtal",
+            "team_id": 81000,
+            "spiele": 0,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 0,
+            "gegentore": 0,
+            "differenz": 0
+          },
+          {
+            "platz": 7,
+            "team": "SV Bornheim",
+            "team_id": 81001,
+            "spiele": 0,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 0,
+            "gegentore": 0,
+            "differenz": 0
+          },
+          {
+            "platz": 8,
+            "team": "FSG Selz-Wiesbach",
+            "team_id": 81002,
+            "spiele": 0,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 0,
+            "gegentore": 0,
+            "differenz": 0
+          },
+          {
+            "platz": 9,
+            "team": "TV Kirrweiler",
+            "team_id": 81003,
+            "spiele": 0,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 0,
+            "gegentore": 0,
+            "differenz": 0
+          },
+          {
+            "platz": 10,
+            "team": "TV Thaleischweiler",
+            "team_id": 81004,
+            "spiele": 0,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 0,
+            "gegentore": 0,
+            "differenz": 0
+          }
+        ]
+      },
+      "letzte_aenderungen": [],
+      "spiele": {
+        "2627RPVLERWA0204": {
+          "datum": "2026-09-06T18:00:00",
+          "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
+          "halle": "TSG-Sporthalle Mutterstadt",
+          "gegner": "FSG Selz-Wiesbach",
+          "spieltag": 2,
+          "heim": true,
+          "sequence": 0
+        },
+        "2627RPVLERWA0301": {
+          "datum": "2026-09-12T20:00:00",
+          "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
+          "halle": "TVR-Sporthalle Ludwigshafen",
+          "gegner": "TV Kirrweiler",
+          "spieltag": 3,
+          "heim": true,
+          "sequence": 0
+        },
+        "2627RPVLERWA0403": {
+          "datum": "2026-09-19T17:00:00",
+          "ort": "Sporthalle Bornheim, Dammgasse 1, 76879 Bornheim",
+          "halle": "Sporthalle Bornheim",
+          "gegner": "SV Bornheim",
+          "spieltag": 4,
+          "heim": false,
+          "sequence": 0
+        },
+        "2627RPVLERWA0101": {
+          "datum": "2026-10-17T19:00:00",
+          "ort": "IGS-Sporthalle Thaleischweiler, Schulstr. 2, 66987 Thaleischweiler",
+          "halle": "IGS-Sporthalle Thaleischweiler",
+          "gegner": "TV Thaleischweiler",
+          "spieltag": 1,
+          "heim": false,
+          "sequence": 0
+        },
+        "2627RPVLERWA0701": {
+          "datum": "2026-10-25T16:45:00",
+          "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
+          "halle": "TSG-Sporthalle Mutterstadt",
+          "gegner": "FSG Gonsenheim/Schott",
+          "spieltag": 7,
+          "heim": true,
+          "sequence": 0
+        },
+        "2627RPVLERWA0803": {
+          "datum": "2026-11-08T12:00:00",
+          "ort": "NH Alzey, Frankenstraße 17, 55232 Alzey",
+          "halle": "NH Alzey",
+          "gegner": "HSV Alzey",
+          "spieltag": 8,
+          "heim": false,
+          "sequence": 0
+        },
+        "2627RPVLERWA0903": {
+          "datum": "2026-11-14T20:00:00",
+          "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
+          "halle": "TVR-Sporthalle Ludwigshafen",
+          "gegner": "FSG Kaiserslautern/Dansenberg",
+          "spieltag": 9,
+          "heim": true,
+          "sequence": 0
+        },
+        "2627RPVLERWA1002": {
+          "datum": "2026-11-21T18:00:00",
+          "ort": "Wasgauhalle Hauenstein, Speyerstr. 24, 76846 Hauenstein",
+          "halle": "Wasgauhalle Hauenstein",
+          "gegner": "TV Hauenstein",
+          "spieltag": 10,
+          "heim": false,
+          "sequence": 0
+        },
+        "2627RPVLERWA1103": {
+          "datum": "2026-11-28T20:00:00",
+          "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
+          "halle": "TVR-Sporthalle Ludwigshafen",
+          "gegner": "HSG Eckbachtal",
+          "spieltag": 11,
+          "heim": true,
+          "sequence": 0
+        },
+        "2627RPVLERWA1201": {
+          "datum": "2026-12-05T19:00:00",
+          "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
+          "halle": "TSG-Sporthalle Mutterstadt",
+          "gegner": "TV Thaleischweiler",
+          "spieltag": 12,
+          "heim": true,
+          "sequence": 0
+        },
+        "2627RPVLERWA1304": {
+          "datum": "2026-12-13T17:00:00",
+          "ort": "IGS Sprendlingen, Ober-Hilbersheimer Straße, 55576 Sprendlingen",
+          "halle": "IGS Sprendlingen",
+          "gegner": "FSG Selz-Wiesbach",
+          "spieltag": 13,
+          "heim": false,
+          "sequence": 0
+        },
+        "2627RPVLERWA1401": {
+          "datum": "2027-01-23T17:30:00",
+          "ort": "Reblandhalle Kirrweiler, Unterried 6, 67489 Kirrweiler",
+          "halle": "Reblandhalle Kirrweiler",
+          "gegner": "TV Kirrweiler",
+          "spieltag": 14,
+          "heim": false,
+          "sequence": 0
+        },
+        "2627RPVLERWA1503": {
+          "datum": "2027-01-30T18:00:00",
+          "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
+          "halle": "TVR-Sporthalle Ludwigshafen",
+          "gegner": "SV Bornheim",
+          "spieltag": 15,
+          "heim": true,
+          "sequence": 0
+        },
+        "2627RPVLERWA1801": {
+          "datum": "2027-02-28T15:00:00",
+          "ort": "Am Großen Sand Mainz, Obere Kreuzstraße 9-13, 55120 Mainz",
+          "halle": "Am Großen Sand Mainz",
+          "gegner": "FSG Gonsenheim/Schott",
+          "spieltag": 18,
+          "heim": false,
+          "sequence": 0
+        },
+        "2627RPVLERWA1903": {
+          "datum": "2027-03-14T18:00:00",
+          "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
+          "halle": "TSG-Sporthalle Mutterstadt",
+          "gegner": "HSV Alzey",
+          "spieltag": 19,
+          "heim": true,
+          "sequence": 0
+        },
+        "2627RPVLERWA2003": {
+          "datum": "2027-03-21T14:45:00",
+          "ort": "Sporthalle Dansenberg, Am Handballplatz 1, 67661 Kaiserslautern-Dansenberg",
+          "halle": "Sporthalle Dansenberg",
+          "gegner": "FSG Kaiserslautern/Dansenberg",
+          "spieltag": 20,
+          "heim": false,
+          "sequence": 0
+        },
+        "2627RPVLERWA2102": {
+          "datum": "2027-04-10T20:00:00",
+          "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
+          "halle": "TVR-Sporthalle Ludwigshafen",
+          "gegner": "TV Hauenstein",
+          "spieltag": 21,
+          "heim": true,
+          "sequence": 0
+        },
+        "2627RPVLERWA2203": {
+          "datum": "2027-04-17T18:00:00",
+          "ort": "Sporthalle Freinsheim, Reiboldstr. 12E, 67251 Freinsheim",
+          "halle": "Sporthalle Freinsheim",
+          "gegner": "HSG Eckbachtal",
+          "spieltag": 22,
+          "heim": false,
+          "sequence": 0
+        }
+      }
+    }
+  }
+}

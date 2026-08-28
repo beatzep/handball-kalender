@@ -2,9 +2,10 @@ name: Spielplan aktualisieren
 
 on:
   schedule:
-    # 03:17 UTC = 05:17 Sommerzeit / 04:17 Winterzeit.
-    # GitHub startet geplante Jobs oft mit Verzoegerung - bei taeglich egal.
+    # Werktags nachts einmal. Am Wochenende stuendlich zwischen 14 und 22 Uhr,
+    # damit Ergebnisse kurz nach Abpfiff auf der Seite stehen.
     - cron: "17 3 * * *"
+    - cron: "5 12-20 * * 6,0"
   workflow_dispatch:        # erlaubt den Handstart ueber den Actions-Tab
 
 permissions:
@@ -24,24 +25,24 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Spielplan holen und Kalender erzeugen
+      - name: Spielplaene holen und Kalender erzeugen
         run: |
           python3 spielplan2ics.py \
-            --team-id 80924 \
-            --name "HSG MuRu - Herren I" \
-            --kurzname "HSG MuRu" \
-            --keine-schiris \
-            --out docs/hsg-muru-herren1.ics \
-            --stand docs/stand.json | tee "$RUNNER_TEMP/lauf.log"
+            --teams teams.json \
+            --out-dir docs \
+            --daten docs/daten.json \
+            --keine-schiris | tee "$RUNNER_TEMP/lauf.log"
 
-      - name: Kalenderdatei pruefen
-        run: python3 pruefe_ics.py docs/hsg-muru-herren1.ics
+      - name: Kalenderdateien pruefen
+        run: |
+          for datei in docs/*.ics; do
+            python3 pruefe_ics.py "$datei"
+          done
 
-      - name: Abo-Seite bauen
+      - name: Seite bauen
         run: |
           python3 baue_seite.py \
-            --stand docs/stand.json \
-            --ics hsg-muru-herren1.ics \
+            --daten docs/daten.json \
             --basis-url "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}" \
             --out docs/index.html
 
@@ -65,7 +66,7 @@ jobs:
           fi
           # Die Aenderung steht in der Commit-Nachricht: wer das Repo auf
           # "Watch" hat, bekommt Verlegungen so per Benachrichtigung mit.
-          python3 commit_text.py --stand docs/stand.json > "$RUNNER_TEMP/commit.txt"
+          python3 commit_text.py --daten docs/daten.json > "$RUNNER_TEMP/commit.txt"
           cat "$RUNNER_TEMP/commit.txt"
           git commit -F "$RUNNER_TEMP/commit.txt"
           git push

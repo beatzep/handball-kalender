@@ -1,0 +1,30 @@
+{
+  "verein": "HSG Mutterstadt/Ruchheim",
+  "saison": "2627",
+  "teams": [
+    {
+      "schluessel": "herren1",
+      "team_id": 80924,
+      "name": "Herren I",
+      "kurzname": "HSG MuRu",
+      "datei": "herren1.ics",
+      "alias": [
+        "hsg-muru-herren1.ics"
+      ]
+    },
+    {
+      "schluessel": "herren2",
+      "team_id": 80980,
+      "name": "Herren II",
+      "kurzname": "HSG MuRu II",
+      "datei": "herren2.ics"
+    },
+    {
+      "schluessel": "damen",
+      "team_id": 80999,
+      "name": "Damen",
+      "kurzname": "HSG MuRu",
+      "datei": "damen.ics"
+    }
+  ]
+}

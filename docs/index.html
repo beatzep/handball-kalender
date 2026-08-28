@@ -3,111 +3,113 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HSG MuRu - Herren I</title>
-<meta name="description" content="Spielplan zum Abonnieren – alle Spiele
+<title>Spielplan HSG Mutterstadt/Ruchheim</title>
+<meta name="description" content="Spielpläne zum Abonnieren – alle Spiele
 automatisch im Handykalender, Verlegungen inklusive.">
 <meta name="theme-color" content="#14140f">
+<link rel="manifest" href="manifest.json">
 <link rel="icon" href="icon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="icon-180.png">
+<meta name="apple-mobile-web-app-title" content="MuRu Spielplan">
 <style>
-/* Formensprache nach mckinsey.de: durchgaengig border-radius 0, keine
-   umrandeten Karten, Gliederung ueber Weissraum und 1px-Linien, grosse
-   Ueberschriften in leichtem Schnitt. Farben vom Verein. Mobil zuerst. */
 :root {
-  --gold: #dd9933;
-  --gold-tief: #b87a22;
-  --gold-schwach: rgba(221,153,51,.10);
-  --tinte: #14140f;
-  --tinte-weich: #4a4a42;
-  --leise: #7a776d;
-  --linie: #dedbd3;
-  --linie-zart: #ebe9e3;
-  --grund: #ffffff;
-  --schwarz: #14140f;
-  --auf-schwarz: #f7f5f0;
+  --gold: #dd9933; --gold-tief: #b87a22; --gold-schwach: rgba(221,153,51,.10);
+  --tinte: #14140f; --tinte-weich: #4a4a42; --leise: #7a776d;
+  --linie: #dedbd3; --linie-zart: #ebe9e3;
+  --grund: #ffffff; --schwarz: #14140f; --auf-schwarz: #f7f5f0;
+  --sieg: #2f7d4f; --niederlage: #a4443a;
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --gold: #e8ac52;
-    --gold-tief: #dd9933;
-    --gold-schwach: rgba(232,172,82,.12);
-    --tinte: #f2efe8;
-    --tinte-weich: #b8b4a9;
-    --leise: #8c877c;
-    --linie: #33312b;
-    --linie-zart: #24221e;
-    --grund: #0d0d0b;
-    --schwarz: #000000;
-    --auf-schwarz: #f2efe8;
+    --gold: #e8ac52; --gold-tief: #dd9933; --gold-schwach: rgba(232,172,82,.12);
+    --tinte: #f2efe8; --tinte-weich: #b8b4a9; --leise: #8c877c;
+    --linie: #33312b; --linie-zart: #24221e;
+    --grund: #0d0d0b; --schwarz: #000000; --auf-schwarz: #f2efe8;
+    --sieg: #5cbf85; --niederlage: #e08076;
   }
 }
 *, *::before, *::after { box-sizing: border-box; border-radius: 0; }
 html { -webkit-text-size-adjust: 100%; }
 body {
-  margin: 0;
-  background: var(--grund);
-  color: var(--tinte);
+  margin: 0; background: var(--grund); color: var(--tinte);
   font: 400 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
         "Helvetica Neue", Arial, sans-serif;
-  font-variant-numeric: tabular-nums;
-  -webkit-font-smoothing: antialiased;
+  font-variant-numeric: tabular-nums; -webkit-font-smoothing: antialiased;
 }
 .huelle { max-width: 720px; margin: 0 auto; padding: 0 22px; }
 a { color: inherit; }
+[hidden] { display: none !important; }
 
 /* ---------- Kopf ---------- */
 .kopf { background: var(--schwarz); color: var(--auf-schwarz);
         border-bottom: 2px solid var(--gold); }
-.kopf .huelle { padding: 26px 22px 34px; }
-.marke { display: flex; align-items: center; gap: 14px; margin-bottom: 30px; }
+.kopf .huelle { padding: 26px 22px 30px; }
+.marke { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; }
 .marke img { width: 54px; height: auto; display: block; }
-.marke .zeile1 {
-  font-size: .82rem; font-weight: 600; letter-spacing: .04em;
-  color: var(--gold); line-height: 1.3;
+.marke .zeile1 { font-size: .82rem; font-weight: 600; letter-spacing: .04em;
+                 color: var(--gold); line-height: 1.3; }
+.marke .zeile2 { font-size: .78rem; color: rgba(247,245,240,.55); line-height: 1.3; }
+.kopf h1 { margin: 0; font-size: clamp(2.1rem, 11vw, 3.2rem); font-weight: 300;
+           line-height: 1.04; letter-spacing: -.015em; }
+.kopf .saison { margin: 12px 0 0; font-size: .92rem; color: rgba(247,245,240,.62); }
+
+/* ---------- Mannschaftswahl ---------- */
+.wahl { margin: 24px 0 0; }
+.wahl label { display: block; font-size: .74rem; font-weight: 600;
+              letter-spacing: .08em; text-transform: uppercase;
+              color: rgba(247,245,240,.5); margin-bottom: 8px; }
+.wahl select {
+  appearance: none; -webkit-appearance: none; width: 100%;
+  font: inherit; font-size: 1.05rem; font-weight: 600;
+  color: var(--auf-schwarz); background: transparent;
+  border: 1px solid rgba(247,245,240,.28); padding: 13px 44px 13px 14px;
+  background-image: linear-gradient(45deg, transparent 50%, var(--gold) 50%),
+                    linear-gradient(135deg, var(--gold) 50%, transparent 50%);
+  background-position: calc(100% - 21px) 22px, calc(100% - 15px) 22px;
+  background-size: 6px 6px, 6px 6px; background-repeat: no-repeat;
 }
-.marke .zeile2 {
-  font-size: .78rem; color: rgba(247,245,240,.55); line-height: 1.3;
-}
-.kopf h1 {
-  margin: 0; font-size: clamp(2.1rem, 11vw, 3.2rem); font-weight: 300;
-  line-height: 1.04; letter-spacing: -.015em;
-}
-.kopf .saison {
-  margin: 14px 0 0; font-size: .92rem; color: rgba(247,245,240,.62);
-}
+.wahl select:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.wahl select option { color: #14140f; background: #fff; }
 
 /* ---------- Abschnitte ---------- */
-.teil { padding: 40px 0 0; }
-.rubrik {
-  border-top: 1px solid var(--linie); padding-top: 14px; margin-bottom: 26px;
-  font-size: .95rem; font-weight: 600; letter-spacing: .02em; color: var(--leise);
-}
+.liga { margin: 28px 0 0; font-size: .88rem; font-weight: 600;
+        letter-spacing: .04em; color: var(--gold-tief); }
+.teil { padding: 34px 0 0; }
+.rubrik { border-top: 1px solid var(--linie); padding-top: 14px; margin-bottom: 24px;
+          font-size: .95rem; font-weight: 600; color: var(--leise); }
 
 /* ---------- Nächstes Spiel ---------- */
 .marker { font-size: .82rem; font-weight: 600; color: var(--gold-tief);
-          letter-spacing: .04em; margin-bottom: 10px; }
-.paarung {
-  font-size: clamp(1.5rem, 7vw, 2rem); font-weight: 400; line-height: 1.16;
-  overflow-wrap: anywhere;
-  letter-spacing: -.01em; margin: 0 0 22px;
-}
+          letter-spacing: .04em; margin: 22px 0 10px; }
+.paarung { font-size: clamp(1.5rem, 7vw, 2rem); font-weight: 400; line-height: 1.16;
+           letter-spacing: -.01em; margin: 0 0 22px; overflow-wrap: anywhere; }
 .fakten { margin: 0; }
-.fakten > div {
-  display: flex; gap: 18px; padding: 11px 0;
-  border-top: 1px solid var(--linie-zart); font-size: .95rem;
-}
+.fakten > div { display: flex; gap: 18px; padding: 11px 0;
+                border-top: 1px solid var(--linie-zart); font-size: .95rem; }
 .fakten dt { flex: 0 0 78px; color: var(--leise); }
 .fakten dd { margin: 0; flex: 1; }
 .fakten a { color: inherit; text-decoration: none;
             box-shadow: inset 0 -1px 0 var(--gold); }
 
+/* ---------- Reiter ---------- */
+.reiter { position: sticky; top: 0; z-index: 5; background: var(--grund);
+          border-bottom: 1px solid var(--linie); display: flex;
+          overflow-x: auto; scrollbar-width: none; margin-top: 32px; }
+.reiter::-webkit-scrollbar { display: none; }
+.reiter button {
+  flex: 0 0 auto; font: inherit; font-size: .92rem; font-weight: 500;
+  background: none; border: 0; border-bottom: 2px solid transparent;
+  color: var(--leise); padding: 15px 18px 13px; margin-bottom: -1px;
+  white-space: nowrap; cursor: pointer;
+}
+.reiter button:first-child { padding-left: 0; }
+.reiter button[aria-selected="true"] { color: var(--tinte); border-bottom-color: var(--gold); }
+.reiter button:focus-visible { outline: 2px solid var(--gold-tief); outline-offset: -4px; }
+
 /* ---------- Abo-Wege ---------- */
 .weg { padding: 26px 0; border-top: 1px solid var(--linie-zart); }
-/* :first-of-type zaehlt Elementtypen, nicht Klassen - das erste div
-   im Abschnitt ist die Rubrik. Darum ueber den Geschwisterselektor. */
 .rubrik + .weg { border-top: 0; padding-top: 0; }
-.weg h3 { margin: 0 0 6px; font-size: 1.12rem; font-weight: 600;
-          letter-spacing: -.005em; }
+.weg h3 { margin: 0 0 6px; font-size: 1.12rem; font-weight: 600; }
 .weg p { margin: 0 0 18px; font-size: .95rem; color: var(--tinte-weich); }
 .knopf {
   display: block; width: 100%; text-align: center; text-decoration: none;
@@ -116,96 +118,65 @@ a { color: inherit; }
   cursor: pointer; transition: background .15s ease;
 }
 .knopf:hover { background: var(--gold-tief); border-color: var(--gold-tief); }
-.knopf.stumm { background: transparent; color: var(--tinte);
-               border-color: var(--tinte); }
+.knopf.stumm { background: transparent; color: var(--tinte); border-color: var(--tinte); }
 .knopf.stumm:hover { background: var(--gold-schwach); border-color: var(--gold); }
 .knopf:focus-visible { outline: 2px solid var(--gold-tief); outline-offset: 3px; }
-.schritte { margin: 18px 0 0; padding: 0; list-style: none;
-            font-size: .92rem; color: var(--tinte-weich);
-            counter-reset: schritt; }
-.schritte li {
-  counter-increment: schritt; position: relative; padding: 8px 0 8px 34px;
-  border-top: 1px solid var(--linie-zart);
-}
-.schritte li::before {
-  content: counter(schritt); position: absolute; left: 0; top: 8px;
-  font-size: .82rem; font-weight: 600; color: var(--gold-tief);
-}
-code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-       font-size: .88em; color: var(--tinte); }
+.schritte { margin: 18px 0 0; padding: 0; list-style: none; font-size: .92rem;
+            color: var(--tinte-weich); counter-reset: schritt; }
+.schritte li { counter-increment: schritt; position: relative;
+               padding: 8px 0 8px 34px; border-top: 1px solid var(--linie-zart); }
+.schritte li::before { content: counter(schritt); position: absolute; left: 0; top: 8px;
+                       font-size: .82rem; font-weight: 600; color: var(--gold-tief); }
+code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .88em; }
 
 /* ---------- Änderungen ---------- */
-.hinweis { border-left: 2px solid var(--gold); padding: 4px 0 4px 18px;
-           margin: 30px 0 0; }
+.hinweis { border-left: 2px solid var(--gold); padding: 4px 0 4px 18px; margin: 26px 0 0; }
 .hinweis h3 { margin: 0 0 8px; font-size: .82rem; font-weight: 600;
               letter-spacing: .04em; color: var(--gold-tief); }
-.hinweis ul { margin: 0; padding-left: 18px; font-size: .95rem; }
+.hinweis ul { margin: 0 0 14px; padding-left: 18px; font-size: .95rem; }
 .hinweis li { margin: 5px 0; }
+.hinweis button { font: inherit; font-size: .88rem; font-weight: 600;
+                  background: none; border: 1px solid var(--linie);
+                  color: var(--tinte); padding: 9px 16px; cursor: pointer; }
+.hinweis button:hover { border-color: var(--gold); background: var(--gold-schwach); }
 
 /* ---------- Spielplan ---------- */
-.monat {
-  font-size: .82rem; font-weight: 600; letter-spacing: .06em;
-  text-transform: uppercase; color: var(--leise);
-  padding: 30px 0 10px;
-}
-.teil > .monat:first-of-type { padding-top: 6px; }
-.spiel {
-  display: grid; grid-template-columns: 58px 1fr 24px; gap: 0 16px;
-  align-items: start; padding: 15px 0; border-top: 1px solid var(--linie);
-}
+.monat { font-size: .82rem; font-weight: 600; letter-spacing: .06em;
+         text-transform: uppercase; color: var(--leise); padding: 28px 0 10px; }
+.monat:first-child { padding-top: 4px; }
+.spiel { display: grid; grid-template-columns: 58px 1fr auto; gap: 0 14px;
+         align-items: start; padding: 15px 0; border-top: 1px solid var(--linie); }
 .spiel .datum { font-size: .88rem; font-weight: 600; line-height: 1.3; }
 .spiel .datum span { display: block; font-weight: 400; color: var(--leise); }
 .spiel .gegner { font-size: 1.02rem; font-weight: 500; line-height: 1.3;
-                 /* Vereinsnamen wie 'Zotzenheim/St.Johann/Sprendlingen' haben
-                    keine Leerzeichen und wuerden sonst aus der Spalte laufen */
                  overflow-wrap: anywhere; }
 .spiel .halle { font-size: .88rem; color: var(--leise); margin-top: 3px; }
-.spiel .halle a { text-decoration: none;
-                  box-shadow: inset 0 -1px 0 var(--linie); }
+.spiel .halle a { text-decoration: none; box-shadow: inset 0 -1px 0 var(--linie); }
 .spiel .halle a:hover { box-shadow: inset 0 -1px 0 var(--gold); }
-.hz { font-size: .78rem; font-weight: 600; letter-spacing: .02em;
-      text-align: right; color: var(--leise); padding-top: 2px; }
+.rechts { text-align: right; min-width: 46px; }
+.hz { font-size: .78rem; font-weight: 600; color: var(--leise); }
 .hz.heim { color: var(--gold-tief); }
-.spiel.vorbei { opacity: .34; }
+.stand { font-size: .95rem; font-weight: 700; margin-top: 2px; white-space: nowrap; }
+.stand.S { color: var(--sieg); }
+.stand.N { color: var(--niederlage); }
+.spiel.vorbei { opacity: .55; }
+.spiel.vorbei .gegner { font-weight: 400; }
 .spiel.jetzt { border-top-color: var(--gold); box-shadow: inset 0 2px 0 var(--gold); }
-
-/* ---------- Reiter ---------- */
-.reiter {
-  position: sticky; top: 0; z-index: 5;
-  background: var(--grund); border-bottom: 1px solid var(--linie);
-  display: flex; gap: 0; overflow-x: auto; -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-}
-.reiter::-webkit-scrollbar { display: none; }
-.reiter a {
-  flex: 0 0 auto; padding: 15px 18px 13px; font-size: .92rem; font-weight: 500;
-  color: var(--leise); text-decoration: none; white-space: nowrap;
-  border-bottom: 2px solid transparent; margin-bottom: -1px;
-}
-.reiter a:first-child { padding-left: 0; }
-/* sonst verschwindet die Ueberschrift beim Ankersprung unter der Leiste */
-section[id] { scroll-margin-top: 54px; }
-.reiter a[aria-current="true"] { color: var(--tinte); border-bottom-color: var(--gold); }
 
 /* ---------- Tabelle ---------- */
 .tabellenhuelle { overflow-x: auto; }
 table.tabelle { width: 100%; border-collapse: collapse; font-size: .92rem; }
-table.tabelle th {
-  text-align: right; font-size: .74rem; font-weight: 600; letter-spacing: .06em;
-  text-transform: uppercase; color: var(--leise); padding: 0 0 10px;
-  border-bottom: 1px solid var(--linie); white-space: nowrap;
-}
+table.tabelle th { text-align: right; font-size: .74rem; font-weight: 600;
+                   letter-spacing: .06em; text-transform: uppercase; color: var(--leise);
+                   padding: 0 0 10px; border-bottom: 1px solid var(--linie);
+                   white-space: nowrap; }
 table.tabelle th.platz { text-align: left; width: 26px; }
-table.tabelle th.mann { text-align: left; width: auto; }
-table.tabelle td {
-  padding: 11px 0; border-bottom: 1px solid var(--linie-zart);
-  text-align: right; white-space: nowrap;
-}
+table.tabelle th.mann { text-align: left; }
+table.tabelle td { padding: 11px 0; border-bottom: 1px solid var(--linie-zart);
+                   text-align: right; white-space: nowrap; }
 table.tabelle td.platz { text-align: left; color: var(--leise); font-size: .86rem; }
-table.tabelle td.mann {
-  text-align: left; white-space: normal; overflow-wrap: anywhere;
-  padding-right: 12px; line-height: 1.3;
-}
+table.tabelle td.mann { text-align: left; white-space: normal;
+                        overflow-wrap: anywhere; padding-right: 12px; line-height: 1.3; }
 table.tabelle td + td, table.tabelle th + th { padding-left: 12px; }
 table.tabelle td.pkt { font-weight: 600; }
 table.tabelle tr.wir td { background: var(--gold-schwach); font-weight: 600; }
@@ -214,17 +185,19 @@ table.tabelle tr.wir td.platz { box-shadow: inset 2px 0 0 var(--gold); }
 .nur-breit { display: none; }
 @media (min-width: 560px) { .nur-breit { display: table-cell; } }
 
-/* ---------- Fuß ---------- */
-.fuss { margin: 52px 0 0; padding: 20px 0 46px;
-        border-top: 1px solid var(--linie); font-size: .88rem;
-        color: var(--leise); }
+/* ---------- Tipp / Fuß ---------- */
+.tipp { margin: 26px 0 0; padding: 16px 0 0; border-top: 1px solid var(--linie-zart);
+        font-size: .9rem; color: var(--tinte-weich); }
+.tipp b { font-weight: 600; color: var(--tinte); }
+.fuss { margin: 46px 0 0; padding: 20px 0 46px; border-top: 1px solid var(--linie);
+        font-size: .88rem; color: var(--leise); }
 .fuss a { color: var(--leise); }
 
 @media (min-width: 640px) {
-  .kopf .huelle { padding: 34px 22px 44px; }
-  .marke img { width: 56px; }
+  .kopf .huelle { padding: 34px 22px 40px; }
   .fakten dt { flex: 0 0 110px; }
   .knopf { display: inline-block; width: auto; min-width: 280px; }
+  .wahl select { max-width: 320px; }
 }
 </style>
 </head>
@@ -239,174 +212,177 @@ table.tabelle tr.wir td.platz { box-shadow: inset 2px 0 0 var(--gold); }
         <div class="zeile2">Die Füchse</div>
       </div>
     </div>
-    <h1>Herren&nbsp;I<br>Spielplan</h1>
-    <p class="saison">Männer Bezirksoberliga &middot; Saison 2026/27 &middot; 22 Spiele</p>
+    <h1>Spielplan</h1>
+    <p class="saison">Saison 2026/27</p>
+    <div class="wahl">
+      <label for="teamwahl">Mannschaft</label>
+      <select id="teamwahl"><option value="herren1">Herren I</option><option value="herren2">Herren II</option><option value="damen">Damen</option></select>
+    </div>
   </div>
 </header>
 
-<nav class="reiter huelle" aria-label="Abschnitte">
-  <a href="#kalender">In den Kalender</a>
-  <a href="#spiele">Alle Spiele</a>
-  <a href="#tabelle">Tabelle</a>
-</nav>
-
-<div class="huelle">
-
-  <section class="teil">
-    <div class="marker"><span data-anwurf="2026-08-29T20:00:00+02:00">Morgen</span> &middot; Auswärtsspiel</div>
+<main class="huelle">
+<section data-team="herren1" hidden>
+  <p class="liga">Männer Bezirksoberliga &middot; 22 Spiele</p>
+  <div class="marker"><span data-anwurf="2026-08-29T20:00:00+02:00">Morgen</span>
+ &middot; Auswärtsspiel</div>
 <h2 class="paarung">TSG MZ-Bretzenheim II &ndash; HSG MuRu</h2>
 <dl class="fakten">
 <div><dt>Anwurf</dt><dd>Samstag, 29.08.2026, 20:00 Uhr</dd></div>
 <div><dt>Halle</dt><dd>IGS 1 Mainz-Bretzenheim</dd></div>
-<div><dt>Adresse</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=IGS%201%20Mainz-Bretzenheim%20Hans-B%C3%B6ckler-Stra%C3%9Fe%202%2C%2055128%20Mainz" target="_blank" rel="noopener">Hans-Böckler-Straße 2, 55128 Mainz</a></dd></div>
+<div><dt>Adresse</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=IGS%201%20Mainz-Bretzenheim%20Hans-B%C3%B6ckler-Stra%C3%9Fe%202%2C%2055128%20Mainz" target="_blank"
+rel="noopener">Hans-Böckler-Straße 2, 55128 Mainz</a></dd></div>
 </dl>
-    
-  </section>
+  
 
-  <section class="teil" id="kalender">
-    <div class="rubrik">In den Kalender</div>
+  <nav class="reiter" role="tablist" aria-label="Bereiche">
+    <button type="button" role="tab" data-ziel="kalender" aria-selected="true">In den Kalender</button>
+    <button type="button" role="tab" data-ziel="spiele" aria-selected="false">Alle Spiele</button>
+    <button type="button" role="tab" data-ziel="tabelle" aria-selected="false">Tabelle</button>
+  </nav>
 
-    <div class="weg">
-      <h3>iPhone, iPad und Mac</h3>
-      <p>Antippen, „Abonnieren“ bestätigen. Verlegungen kommen danach von selbst an.</p>
-      <a class="knopf" href="webcal://beatzep.github.io/handball-kalender/hsg-muru-herren1.ics">Kalender abonnieren</a>
-    </div>
+  <div class="teil" data-ansicht="kalender"><div class="rubrik">In den Kalender</div>
 
-    <div class="weg">
-      <h3>Android und Google Kalender</h3>
-      <p>Google erlaubt das Abonnieren nur am Computer, nicht in der Handy-App.
-         Einmal am Rechner einrichten – danach ist es auf dem Handy.</p>
-      <button class="knopf stumm" onclick="kopiere('https://beatzep.github.io/handball-kalender/hsg-muru-herren1.ics', this)">Adresse kopieren</button>
-      <ol class="schritte">
-        <li>Am Computer <code>calendar.google.com</code> öffnen</li>
-        <li>Links bei „Weitere Kalender“ auf <strong>+</strong> klicken</li>
-        <li>„Per URL“ wählen, Adresse einfügen, hinzufügen</li>
-      </ol>
-    </div>
+<div class="weg">
+  <h3>iPhone, iPad und Mac</h3>
+  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen kommen danach von selbst an.</p>
+  <a class="knopf" href="webcal://beatzep.github.io/handball-kalender/herren1.ics">Herren I abonnieren</a>
+  <p class="tipp" data-ios-tipp hidden>
+    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen –
+    dann liegt der Spielplan als App auf dem Handy.
+  </p>
+</div>
 
-    <div class="weg">
-      <h3>Einmalig importieren</h3>
-      <p>Ohne Abo. Spätere Verlegungen kommen dann nicht mehr an.</p>
-      <a class="knopf stumm" href="hsg-muru-herren1.ics" download>Datei herunterladen</a>
-    </div>
-  </section>
+<div class="weg">
+  <h3>Android und Google Kalender</h3>
+  <p>Google erlaubt das Abonnieren nur am Computer, nicht in der Handy-App.
+     Einmal am Rechner einrichten – danach ist es auf dem Handy.</p>
+  <button class="knopf stumm" type="button" data-kopiere="https://beatzep.github.io/handball-kalender/herren1.ics">Adresse kopieren</button>
+  <ol class="schritte">
+    <li>Am Computer <code>calendar.google.com</code> öffnen</li>
+    <li>Links bei „Weitere Kalender“ auf <strong>+</strong> klicken</li>
+    <li>„Per URL“ wählen, Adresse einfügen, hinzufügen</li>
+  </ol>
+</div>
 
-  <section class="teil" id="spiele">
-    <div class="rubrik">Alle Spiele der Saison</div>
-    <div class="monat">August 2026</div><div class="spiel jetzt">
+<div class="weg">
+  <h3>Einmalig importieren</h3>
+  <p>Ohne Abo. Spätere Verlegungen kommen dann nicht mehr an.</p>
+  <a class="knopf stumm" href="herren1.ics" download>Datei herunterladen</a>
+</div></div>
+  <div class="teil" data-ansicht="spiele" hidden><div class="monat">August 2026</div><div class="spiel jetzt">
 <div class="datum">Sa 29.08.<span>20:00</span></div>
 <div><div class="gegner">TSG MZ-Bretzenheim II</div>
 <div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=IGS%201%20Mainz-Bretzenheim%20Hans-B%C3%B6ckler-Stra%C3%9Fe%202%2C%2055128%20Mainz" target="_blank" rel="noopener">IGS 1 Mainz-Bretzenheim</a></div></div>
-<div class="hz ">A</div>
+<div class="rechts"><div class="hz ">A</div></div>
 </div><div class="monat">September 2026</div><div class="spiel">
 <div class="datum">Sa 05.09.<span>19:45</span></div>
 <div><div class="gegner">HSG Worms</div>
 <div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
-<div class="hz heim">H</div>
+<div class="rechts"><div class="hz heim">H</div></div>
 </div><div class="spiel">
 <div class="datum">So 13.09.<span>18:00</span></div>
 <div><div class="gegner">HSV Sobernheim H1</div>
 <div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=TVR-Sporthalle%20Ludwigshafen%20Fu%C3%9Fg%C3%B6nheimer%20Str.%20127%20%28Ortsende%29%2C%2067071%20Ludwigshafen" target="_blank" rel="noopener">TVR-Sporthalle Ludwigshafen</a></div></div>
-<div class="hz heim">H</div>
+<div class="rechts"><div class="hz heim">H</div></div>
 </div><div class="spiel">
 <div class="datum">Sa 19.09.<span>18:00</span></div>
 <div><div class="gegner">GW Bingen-Büdesheim</div>
 <div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=Bingen%2C%20Rundsporthalle%20Nuits-St.Georges-Stra%C3%9Fe%2C%2055411%20Bingen" target="_blank" rel="noopener">Bingen, Rundsporthalle</a></div></div>
-<div class="hz ">A</div>
+<div class="rechts"><div class="hz ">A</div></div>
 </div><div class="spiel">
 <div class="datum">Sa 26.09.<span>20:00</span></div>
 <div><div class="gegner">TG Osthofen II</div>
 <div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=TVR-Sporthalle%20Ludwigshafen%20Fu%C3%9Fg%C3%B6nheimer%20Str.%20127%20%28Ortsende%29%2C%2067071%20Ludwigshafen" target="_blank" rel="noopener">TVR-Sporthalle Ludwigshafen</a></div></div>
-<div class="hz heim">H</div>
+<div class="rechts"><div class="hz heim">H</div></div>
 </div><div class="monat">Oktober 2026</div><div class="spiel">
 <div class="datum">Sa 03.10.<span>20:00</span></div>
 <div><div class="gegner">TV Nieder-Olm II</div>
 <div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=Sporthalle%20der%20IGS%20Nieder-Olm%20Karl-Sieben-Stra%C3%9Fe%2C%2055268%20Nieder-Olm" target="_blank" rel="noopener">Sporthalle der IGS Nieder-Olm</a></div></div>
-<div class="hz ">A</div>
+<div class="rechts"><div class="hz ">A</div></div>
 </div><div class="spiel">
 <div class="datum">Sa 24.10.<span>19:30</span></div>
 <div><div class="gegner">HSG Zotzenheim/St.Johann/Sprendlingen</div>
 <div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
-<div class="hz heim">H</div>
+<div class="rechts"><div class="hz heim">H</div></div>
 </div><div class="monat">November 2026</div><div class="spiel">
 <div class="datum">So 08.11.<span>17:15</span></div>
 <div><div class="gegner">HSV Alzey</div>
 <div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=NH%20Alzey%20Frankenstra%C3%9Fe%2017%2C%2055232%20Alzey" target="_blank" rel="noopener">NH Alzey</a></div></div>
-<div class="hz ">A</div>
+<div class="rechts"><div class="hz ">A</div></div>
 </div><div class="spiel">
 <div class="datum">So 15.11.<span>18:45</span></div>
 <div><div class="gegner">SG Saulheim II</div>
 <div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=TVR-Sporthalle%20Ludwigshafen%20Fu%C3%9Fg%C3%B6nheimer%20Str.%20127%20%28Ortsende%29%2C%2067071%20Ludwigshafen" target="_blank" rel="noopener">TVR-Sporthalle Ludwigshafen</a></div></div>
-<div class="hz heim">H</div>
+<div class="rechts"><div class="hz heim">H</div></div>
 </div><div class="spiel">
 <div class="datum">Sa 21.11.<span>16:00</span></div>
 <div><div class="gegner">HSG Rhein-Nahe Bingen II</div>
 <div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=Bingen%2C%20Rundsporthalle%20Nuits-St.Georges-Stra%C3%9Fe%2C%2055411%20Bingen" target="_blank" rel="noopener">Bingen, Rundsporthalle</a></div></div>
-<div class="hz ">A</div>
+<div class="rechts"><div class="hz ">A</div></div>
 </div><div class="spiel">
 <div class="datum">So 29.11.<span>17:00</span></div>
 <div><div class="gegner">HSC Ingelheim</div>
 <div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=TVR-Sporthalle%20Ludwigshafen%20Fu%C3%9Fg%C3%B6nheimer%20Str.%20127%20%28Ortsende%29%2C%2067071%20Ludwigshafen" target="_blank" rel="noopener">TVR-Sporthalle Ludwigshafen</a></div></div>
-<div class="hz heim">H</div>
+<div class="rechts"><div class="hz heim">H</div></div>
 </div><div class="monat">Dezember 2026</div><div class="spiel">
 <div class="datum">So 06.12.<span>18:00</span></div>
 <div><div class="gegner">TSG MZ-Bretzenheim II</div>
 <div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
-<div class="hz heim">H</div>
+<div class="rechts"><div class="hz heim">H</div></div>
 </div><div class="spiel">
 <div class="datum">So 13.12.<span>18:00</span></div>
 <div><div class="gegner">HSG Worms</div>
 <div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=Nikolaus-D%C3%B6rr-Halle%20Worms%20Mainzer%20Stra%C3%9Fe%2051%2C%2067547%20Worms" target="_blank" rel="noopener">Nikolaus-Dörr-Halle Worms</a></div></div>
-<div class="hz ">A</div>
+<div class="rechts"><div class="hz ">A</div></div>
 </div><div class="monat">Januar 2027</div><div class="spiel">
 <div class="datum">So 24.01.<span>16:00</span></div>
 <div><div class="gegner">HSV Sobernheim H1</div>
 <div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=Bad%20Sobernheim%2C%20Dr.%20W.D%C3%BCmmler%20Halle%20Staudernheimer%20Stra%C3%9Fe%2C%2055566%20Bad%20Sobernheim" target="_blank" rel="noopener">Bad Sobernheim, Dr. W.Dümmler Halle</a></div></div>
-<div class="hz ">A</div>
+<div class="rechts"><div class="hz ">A</div></div>
 </div><div class="spiel">
 <div class="datum">Sa 30.01.<span>16:00</span></div>
 <div><div class="gegner">GW Bingen-Büdesheim</div>
 <div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=TVR-Sporthalle%20Ludwigshafen%20Fu%C3%9Fg%C3%B6nheimer%20Str.%20127%20%28Ortsende%29%2C%2067071%20Ludwigshafen" target="_blank" rel="noopener">TVR-Sporthalle Ludwigshafen</a></div></div>
-<div class="hz heim">H</div>
+<div class="rechts"><div class="hz heim">H</div></div>
 </div><div class="monat">Februar 2027</div><div class="spiel">
 <div class="datum">So 14.02.<span>14:00</span></div>
 <div><div class="gegner">TG Osthofen II</div>
 <div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=Wonnegauhalle%20Osthofen%20Herrnsheimer%20Stra%C3%9Fe%2024%2C%2067574%20Osthofen" target="_blank" rel="noopener">Wonnegauhalle Osthofen</a></div></div>
-<div class="hz ">A</div>
+<div class="rechts"><div class="hz ">A</div></div>
 </div><div class="spiel">
 <div class="datum">Sa 20.02.<span>20:00</span></div>
 <div><div class="gegner">TV Nieder-Olm II</div>
 <div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=TVR-Sporthalle%20Ludwigshafen%20Fu%C3%9Fg%C3%B6nheimer%20Str.%20127%20%28Ortsende%29%2C%2067071%20Ludwigshafen" target="_blank" rel="noopener">TVR-Sporthalle Ludwigshafen</a></div></div>
-<div class="hz heim">H</div>
+<div class="rechts"><div class="hz heim">H</div></div>
 </div><div class="spiel">
 <div class="datum">So 28.02.<span>17:00</span></div>
 <div><div class="gegner">HSG Zotzenheim/St.Johann/Sprendlingen</div>
 <div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=IGS%20Sprendlingen%20Ober-Hilbersheimer%20Stra%C3%9Fe%2C%2055576%20Sprendlingen" target="_blank" rel="noopener">IGS Sprendlingen</a></div></div>
-<div class="hz ">A</div>
+<div class="rechts"><div class="hz ">A</div></div>
 </div><div class="monat">März 2027</div><div class="spiel">
 <div class="datum">Sa 13.03.<span>20:00</span></div>
 <div><div class="gegner">HSV Alzey</div>
 <div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
-<div class="hz heim">H</div>
+<div class="rechts"><div class="hz heim">H</div></div>
 </div><div class="spiel">
 <div class="datum">Sa 20.03.<span>17:00</span></div>
 <div><div class="gegner">SG Saulheim II</div>
 <div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=Ritter-Hundt-Zentrum%20Saulheim%20Am%20Westring%206A%2C%2055291%20Saulheim" target="_blank" rel="noopener">Ritter-Hundt-Zentrum Saulheim</a></div></div>
-<div class="hz ">A</div>
+<div class="rechts"><div class="hz ">A</div></div>
 </div><div class="monat">April 2027</div><div class="spiel">
 <div class="datum">Sa 10.04.<span>18:00</span></div>
 <div><div class="gegner">HSG Rhein-Nahe Bingen II</div>
 <div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=TVR-Sporthalle%20Ludwigshafen%20Fu%C3%9Fg%C3%B6nheimer%20Str.%20127%20%28Ortsende%29%2C%2067071%20Ludwigshafen" target="_blank" rel="noopener">TVR-Sporthalle Ludwigshafen</a></div></div>
-<div class="hz heim">H</div>
+<div class="rechts"><div class="hz heim">H</div></div>
 </div><div class="spiel">
 <div class="datum">So 18.04.<span>15:00</span></div>
 <div><div class="gegner">HSC Ingelheim</div>
 <div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=Sebastian-M%C3%BCnster-Gymnasium%20Ingelheim%20Hans-Fluck-Stra%C3%9Fe%2C%2055218%20Ingelheim" target="_blank" rel="noopener">Sebastian-Münster-Gymnasium Ingelheim</a></div></div>
-<div class="hz ">A</div>
-</div>
-  </section>
-
-  <section class="teil" id="tabelle"><div class="rubrik">Tabelle</div><div class="tabellenhuelle">
+<div class="rechts"><div class="hz ">A</div></div>
+</div></div>
+  <div class="teil" data-ansicht="tabelle" hidden>
+    <div class="tabellenhuelle">
 <table class="tabelle">
 <thead><tr>
 <th class="platz">Pl</th><th class="mann">Mannschaft</th><th>Sp</th>
@@ -415,62 +391,458 @@ table.tabelle tr.wir td.platz { box-shadow: inset 2px 0 0 var(--gold); }
 <tbody><tr><td class="platz">1</td><td class="mann">HSV Sobernheim H1</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">2</td><td class="mann">HSG Worms</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">3</td><td class="mann">HSV Alzey</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">4</td><td class="mann">HSG Rhein-Nahe Bingen II</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">5</td><td class="mann">GW Bingen-Büdesheim</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">6</td><td class="mann">TV Nieder-Olm II</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">7</td><td class="mann">HSC Ingelheim</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">8</td><td class="mann">TSG MZ-Bretzenheim II</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">9</td><td class="mann">TG Osthofen II</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">10</td><td class="mann">SG Saulheim II</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">11</td><td class="mann">HSG Zotzenheim/St.Johann/Sprendlingen</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr class="wir"><td class="platz">12</td><td class="mann">HSG Mutterstadt/Ruchheim</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr></tbody>
 </table>
 </div>
-<p class="tabellenfuss">Die Saison hat noch nicht begonnen – alle Mannschaften stehen bei null, die Reihenfolge hat noch keine Aussagekraft.</p></section>
+<p class="tabellenfuss">Die Saison hat noch nicht begonnen – alle Mannschaften stehen bei null, die Reihenfolge hat noch keine Aussagekraft.</p>
+  </div>
+</section><section data-team="herren2" hidden>
+  <p class="liga">Männer Bezirksklasse &middot; 20 Spiele</p>
+  <div class="marker"><span data-anwurf="2026-08-29T19:00:00+02:00">Morgen</span>
+ &middot; Auswärtsspiel</div>
+<h2 class="paarung">TV THALEISCHWEILER Herren &ndash; HSG MuRu II</h2>
+<dl class="fakten">
+<div><dt>Anwurf</dt><dd>Samstag, 29.08.2026, 19:00 Uhr</dd></div>
+<div><dt>Halle</dt><dd>IGS-Sporthalle Thaleischweiler</dd></div>
+<div><dt>Adresse</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=IGS-Sporthalle%20Thaleischweiler%20Schulstr.%202%2C%2066987%20Thaleischweiler" target="_blank"
+rel="noopener">Schulstr. 2, 66987 Thaleischweiler</a></dd></div>
+</dl>
+  
 
-  <p class="fuss">
-    Zuletzt abgeglichen am 28.08.2026 um 11:15 Uhr. Der Spielplan wird täglich automatisch
-    mit <a href="https://www.handball.net" target="_blank" rel="noopener">handball.net</a>
-    abgeglichen; Änderungen erscheinen hier und in abonnierten Kalendern.
+  <nav class="reiter" role="tablist" aria-label="Bereiche">
+    <button type="button" role="tab" data-ziel="kalender" aria-selected="true">In den Kalender</button>
+    <button type="button" role="tab" data-ziel="spiele" aria-selected="false">Alle Spiele</button>
+    <button type="button" role="tab" data-ziel="tabelle" aria-selected="false">Tabelle</button>
+  </nav>
+
+  <div class="teil" data-ansicht="kalender"><div class="rubrik">In den Kalender</div>
+
+<div class="weg">
+  <h3>iPhone, iPad und Mac</h3>
+  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen kommen danach von selbst an.</p>
+  <a class="knopf" href="webcal://beatzep.github.io/handball-kalender/herren2.ics">Herren II abonnieren</a>
+  <p class="tipp" data-ios-tipp hidden>
+    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen –
+    dann liegt der Spielplan als App auf dem Handy.
   </p>
 </div>
 
+<div class="weg">
+  <h3>Android und Google Kalender</h3>
+  <p>Google erlaubt das Abonnieren nur am Computer, nicht in der Handy-App.
+     Einmal am Rechner einrichten – danach ist es auf dem Handy.</p>
+  <button class="knopf stumm" type="button" data-kopiere="https://beatzep.github.io/handball-kalender/herren2.ics">Adresse kopieren</button>
+  <ol class="schritte">
+    <li>Am Computer <code>calendar.google.com</code> öffnen</li>
+    <li>Links bei „Weitere Kalender“ auf <strong>+</strong> klicken</li>
+    <li>„Per URL“ wählen, Adresse einfügen, hinzufügen</li>
+  </ol>
+</div>
+
+<div class="weg">
+  <h3>Einmalig importieren</h3>
+  <p>Ohne Abo. Spätere Verlegungen kommen dann nicht mehr an.</p>
+  <a class="knopf stumm" href="herren2.ics" download>Datei herunterladen</a>
+</div></div>
+  <div class="teil" data-ansicht="spiele" hidden><div class="monat">August 2026</div><div class="spiel jetzt">
+<div class="datum">Sa 29.08.<span>19:00</span></div>
+<div><div class="gegner">TV THALEISCHWEILER Herren</div>
+<div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=IGS-Sporthalle%20Thaleischweiler%20Schulstr.%202%2C%2066987%20Thaleischweiler" target="_blank" rel="noopener">IGS-Sporthalle Thaleischweiler</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="monat">September 2026</div><div class="spiel">
+<div class="datum">So 06.09.<span>20:00</span></div>
+<div><div class="gegner">HSG Grethen/Maxdorf</div>
+<div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="spiel">
+<div class="datum">So 13.09.<span>16:00</span></div>
+<div><div class="gegner">TV Kirrweiler II</div>
+<div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=TVR-Sporthalle%20Ludwigshafen%20Fu%C3%9Fg%C3%B6nheimer%20Str.%20127%20%28Ortsende%29%2C%2067071%20Ludwigshafen" target="_blank" rel="noopener">TVR-Sporthalle Ludwigshafen</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="spiel">
+<div class="datum">Sa 26.09.<span>18:00</span></div>
+<div><div class="gegner">TSV Kandel II</div>
+<div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=TVR-Sporthalle%20Ludwigshafen%20Fu%C3%9Fg%C3%B6nheimer%20Str.%20127%20%28Ortsende%29%2C%2067071%20Ludwigshafen" target="_blank" rel="noopener">TVR-Sporthalle Ludwigshafen</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="monat">Oktober 2026</div><div class="spiel">
+<div class="datum">Sa 03.10.<span>20:00</span></div>
+<div><div class="gegner">TUS Heiligenstein II</div>
+<div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=Rhein-Pfalz-Halle%20R%C3%B6merberg-Heiligenstein%20Viehtriftstra%C3%9Fe%20106%2C%2067354%20R%C3%B6merberg-Heiligenstein" target="_blank" rel="noopener">Rhein-Pfalz-Halle Römerberg-Heiligenstein</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="spiel">
+<div class="datum">Sa 24.10.<span>17:30</span></div>
+<div><div class="gegner">MSG Iggelheim/Meckenheim III</div>
+<div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="monat">November 2026</div><div class="spiel">
+<div class="datum">So 08.11.<span>15:00</span></div>
+<div><div class="gegner">SG LaFt - Herren</div>
+<div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=Andreas-Albert-Schule%20Petergartenweg%209%2C%2067227%20Frankenthal" target="_blank" rel="noopener">Andreas-Albert-Schule</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="spiel">
+<div class="datum">So 15.11.<span>16:45</span></div>
+<div><div class="gegner">HSV Lingenfeld/Schwegenheim II</div>
+<div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=TVR-Sporthalle%20Ludwigshafen%20Fu%C3%9Fg%C3%B6nheimer%20Str.%20127%20%28Ortsende%29%2C%2067071%20Ludwigshafen" target="_blank" rel="noopener">TVR-Sporthalle Ludwigshafen</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="spiel">
+<div class="datum">So 22.11.<span>18:00</span></div>
+<div><div class="gegner">MSG Kaiserslautern/Dansenberg II</div>
+<div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=Sporthalle%20Dansenberg%20Am%20Handballplatz%201%2C%2067661%20Kaiserslautern-Dansenberg" target="_blank" rel="noopener">Sporthalle Dansenberg</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="spiel">
+<div class="datum">So 29.11.<span>19:00</span></div>
+<div><div class="gegner">TUS Neuhofen II</div>
+<div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=TVR-Sporthalle%20Ludwigshafen%20Fu%C3%9Fg%C3%B6nheimer%20Str.%20127%20%28Ortsende%29%2C%2067071%20Ludwigshafen" target="_blank" rel="noopener">TVR-Sporthalle Ludwigshafen</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="monat">Dezember 2026</div><div class="spiel">
+<div class="datum">So 06.12.<span>16:00</span></div>
+<div><div class="gegner">TV THALEISCHWEILER Herren</div>
+<div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="spiel">
+<div class="datum">Sa 12.12.<span>18:00</span></div>
+<div><div class="gegner">HSG Grethen/Maxdorf</div>
+<div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=Carl-Orff-Realschule%20Bad%20D%C3%BCrkheim%20Kanalstr.%2023%2C%2067098%20Bad%20D%C3%BCrkheim" target="_blank" rel="noopener">Carl-Orff-Realschule Bad Dürkheim</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="monat">Januar 2027</div><div class="spiel">
+<div class="datum">So 24.01.<span>19:30</span></div>
+<div><div class="gegner">TV Kirrweiler II</div>
+<div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=Reblandhalle%20Kirrweiler%20Unterried%206%2C%2067489%20Kirrweiler" target="_blank" rel="noopener">Reblandhalle Kirrweiler</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="monat">Februar 2027</div><div class="spiel">
+<div class="datum">Sa 13.02.<span>19:30</span></div>
+<div><div class="gegner">TSV Kandel II</div>
+<div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=Kandel%2C%20IGS%20Sporthalle%20Schubertstr.%207%2C%2076870%20Kandel" target="_blank" rel="noopener">Kandel, IGS Sporthalle</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="spiel">
+<div class="datum">So 21.02.<span>18:45</span></div>
+<div><div class="gegner">TUS Heiligenstein II</div>
+<div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=TVR-Sporthalle%20Ludwigshafen%20Fu%C3%9Fg%C3%B6nheimer%20Str.%20127%20%28Ortsende%29%2C%2067071%20Ludwigshafen" target="_blank" rel="noopener">TVR-Sporthalle Ludwigshafen</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="spiel">
+<div class="datum">So 28.02.<span>14:00</span></div>
+<div><div class="gegner">MSG Iggelheim/Meckenheim III</div>
+<div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=Wahagnieshalle%20B%C3%B6hl-Iggelheim%20Am%20Schwarzweiher%201%2C%2067459%20B%C3%B6hl-Iggelheim" target="_blank" rel="noopener">Wahagnieshalle Böhl-Iggelheim</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="monat">März 2027</div><div class="spiel">
+<div class="datum">Sa 13.03.<span>18:00</span></div>
+<div><div class="gegner">SG LaFt - Herren</div>
+<div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="spiel">
+<div class="datum">Sa 20.03.<span>16:00</span></div>
+<div><div class="gegner">HSV Lingenfeld/Schwegenheim II</div>
+<div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=Sporthalle%20Schwegenheim%20Schulstr.%2020%2C%2067365%20Schwegenheim" target="_blank" rel="noopener">Sporthalle Schwegenheim</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="monat">April 2027</div><div class="spiel">
+<div class="datum">Sa 10.04.<span>16:00</span></div>
+<div><div class="gegner">MSG Kaiserslautern/Dansenberg II</div>
+<div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=TVR-Sporthalle%20Ludwigshafen%20Fu%C3%9Fg%C3%B6nheimer%20Str.%20127%20%28Ortsende%29%2C%2067071%20Ludwigshafen" target="_blank" rel="noopener">TVR-Sporthalle Ludwigshafen</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="spiel">
+<div class="datum">So 18.04.<span>20:00</span></div>
+<div><div class="gegner">TUS Neuhofen II</div>
+<div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=Rehbachhalle%20Neuhofen%20Jahnstr.%2025%2C%2067141%20Neuhofen" target="_blank" rel="noopener">Rehbachhalle Neuhofen</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div></div>
+  <div class="teil" data-ansicht="tabelle" hidden>
+    <div class="tabellenhuelle">
+<table class="tabelle">
+<thead><tr>
+<th class="platz">Pl</th><th class="mann">Mannschaft</th><th>Sp</th>
+<th class="nur-breit">Tore</th><th>Diff</th><th>Pkt</th>
+</tr></thead>
+<tbody><tr><td class="platz">1</td><td class="mann">SG LaFt - Herren</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">2</td><td class="mann">TV THALEISCHWEILER Herren</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">3</td><td class="mann">MSG Kaiserslautern/Dansenberg II</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">4</td><td class="mann">TSV Kandel II</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">5</td><td class="mann">TUS Neuhofen II</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">6</td><td class="mann">TV Offenbach IV</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">7</td><td class="mann">MSG Iggelheim/Meckenheim III</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">8</td><td class="mann">TV Kirrweiler II</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr class="wir"><td class="platz">9</td><td class="mann">HSG Mutterstadt/Ruchheim II</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">10</td><td class="mann">HSV Lingenfeld/Schwegenheim II</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">11</td><td class="mann">TUS Heiligenstein II</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">12</td><td class="mann">HSG Grethen/Maxdorf</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr></tbody>
+</table>
+</div>
+<p class="tabellenfuss">Die Saison hat noch nicht begonnen – alle Mannschaften stehen bei null, die Reihenfolge hat noch keine Aussagekraft.</p>
+  </div>
+</section><section data-team="damen" hidden>
+  <p class="liga">Frauen Verbandsliga &middot; 18 Spiele</p>
+  <div class="marker"><span data-anwurf="2026-09-06T18:00:00+02:00">Nächstes Spiel</span>
+ &middot; Heimspiel</div>
+<h2 class="paarung">HSG MuRu &ndash; FSG Selz-Wiesbach</h2>
+<dl class="fakten">
+<div><dt>Anwurf</dt><dd>Sonntag, 06.09.2026, 18:00 Uhr</dd></div>
+<div><dt>Halle</dt><dd>TSG-Sporthalle Mutterstadt</dd></div>
+<div><dt>Adresse</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank"
+rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
+</dl>
+  
+
+  <nav class="reiter" role="tablist" aria-label="Bereiche">
+    <button type="button" role="tab" data-ziel="kalender" aria-selected="true">In den Kalender</button>
+    <button type="button" role="tab" data-ziel="spiele" aria-selected="false">Alle Spiele</button>
+    <button type="button" role="tab" data-ziel="tabelle" aria-selected="false">Tabelle</button>
+  </nav>
+
+  <div class="teil" data-ansicht="kalender"><div class="rubrik">In den Kalender</div>
+
+<div class="weg">
+  <h3>iPhone, iPad und Mac</h3>
+  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen kommen danach von selbst an.</p>
+  <a class="knopf" href="webcal://beatzep.github.io/handball-kalender/damen.ics">Damen abonnieren</a>
+  <p class="tipp" data-ios-tipp hidden>
+    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen –
+    dann liegt der Spielplan als App auf dem Handy.
+  </p>
+</div>
+
+<div class="weg">
+  <h3>Android und Google Kalender</h3>
+  <p>Google erlaubt das Abonnieren nur am Computer, nicht in der Handy-App.
+     Einmal am Rechner einrichten – danach ist es auf dem Handy.</p>
+  <button class="knopf stumm" type="button" data-kopiere="https://beatzep.github.io/handball-kalender/damen.ics">Adresse kopieren</button>
+  <ol class="schritte">
+    <li>Am Computer <code>calendar.google.com</code> öffnen</li>
+    <li>Links bei „Weitere Kalender“ auf <strong>+</strong> klicken</li>
+    <li>„Per URL“ wählen, Adresse einfügen, hinzufügen</li>
+  </ol>
+</div>
+
+<div class="weg">
+  <h3>Einmalig importieren</h3>
+  <p>Ohne Abo. Spätere Verlegungen kommen dann nicht mehr an.</p>
+  <a class="knopf stumm" href="damen.ics" download>Datei herunterladen</a>
+</div></div>
+  <div class="teil" data-ansicht="spiele" hidden><div class="monat">September 2026</div><div class="spiel jetzt">
+<div class="datum">So 06.09.<span>18:00</span></div>
+<div><div class="gegner">FSG Selz-Wiesbach</div>
+<div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="spiel">
+<div class="datum">Sa 12.09.<span>20:00</span></div>
+<div><div class="gegner">TV Kirrweiler</div>
+<div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=TVR-Sporthalle%20Ludwigshafen%20Fu%C3%9Fg%C3%B6nheimer%20Str.%20127%20%28Ortsende%29%2C%2067071%20Ludwigshafen" target="_blank" rel="noopener">TVR-Sporthalle Ludwigshafen</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="spiel">
+<div class="datum">Sa 19.09.<span>17:00</span></div>
+<div><div class="gegner">SV Bornheim</div>
+<div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=Sporthalle%20Bornheim%20Dammgasse%201%2C%2076879%20Bornheim" target="_blank" rel="noopener">Sporthalle Bornheim</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="monat">Oktober 2026</div><div class="spiel">
+<div class="datum">Sa 17.10.<span>19:00</span></div>
+<div><div class="gegner">TV Thaleischweiler</div>
+<div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=IGS-Sporthalle%20Thaleischweiler%20Schulstr.%202%2C%2066987%20Thaleischweiler" target="_blank" rel="noopener">IGS-Sporthalle Thaleischweiler</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="spiel">
+<div class="datum">So 25.10.<span>16:45</span></div>
+<div><div class="gegner">FSG Gonsenheim/Schott</div>
+<div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="monat">November 2026</div><div class="spiel">
+<div class="datum">So 08.11.<span>12:00</span></div>
+<div><div class="gegner">HSV Alzey</div>
+<div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=NH%20Alzey%20Frankenstra%C3%9Fe%2017%2C%2055232%20Alzey" target="_blank" rel="noopener">NH Alzey</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="spiel">
+<div class="datum">Sa 14.11.<span>20:00</span></div>
+<div><div class="gegner">FSG Kaiserslautern/Dansenberg</div>
+<div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=TVR-Sporthalle%20Ludwigshafen%20Fu%C3%9Fg%C3%B6nheimer%20Str.%20127%20%28Ortsende%29%2C%2067071%20Ludwigshafen" target="_blank" rel="noopener">TVR-Sporthalle Ludwigshafen</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="spiel">
+<div class="datum">Sa 21.11.<span>18:00</span></div>
+<div><div class="gegner">TV Hauenstein</div>
+<div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=Wasgauhalle%20Hauenstein%20Speyerstr.%2024%2C%2076846%20Hauenstein" target="_blank" rel="noopener">Wasgauhalle Hauenstein</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="spiel">
+<div class="datum">Sa 28.11.<span>20:00</span></div>
+<div><div class="gegner">HSG Eckbachtal</div>
+<div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=TVR-Sporthalle%20Ludwigshafen%20Fu%C3%9Fg%C3%B6nheimer%20Str.%20127%20%28Ortsende%29%2C%2067071%20Ludwigshafen" target="_blank" rel="noopener">TVR-Sporthalle Ludwigshafen</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="monat">Dezember 2026</div><div class="spiel">
+<div class="datum">Sa 05.12.<span>19:00</span></div>
+<div><div class="gegner">TV Thaleischweiler</div>
+<div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="spiel">
+<div class="datum">So 13.12.<span>17:00</span></div>
+<div><div class="gegner">FSG Selz-Wiesbach</div>
+<div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=IGS%20Sprendlingen%20Ober-Hilbersheimer%20Stra%C3%9Fe%2C%2055576%20Sprendlingen" target="_blank" rel="noopener">IGS Sprendlingen</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="monat">Januar 2027</div><div class="spiel">
+<div class="datum">Sa 23.01.<span>17:30</span></div>
+<div><div class="gegner">TV Kirrweiler</div>
+<div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=Reblandhalle%20Kirrweiler%20Unterried%206%2C%2067489%20Kirrweiler" target="_blank" rel="noopener">Reblandhalle Kirrweiler</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="spiel">
+<div class="datum">Sa 30.01.<span>18:00</span></div>
+<div><div class="gegner">SV Bornheim</div>
+<div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=TVR-Sporthalle%20Ludwigshafen%20Fu%C3%9Fg%C3%B6nheimer%20Str.%20127%20%28Ortsende%29%2C%2067071%20Ludwigshafen" target="_blank" rel="noopener">TVR-Sporthalle Ludwigshafen</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="monat">Februar 2027</div><div class="spiel">
+<div class="datum">So 28.02.<span>15:00</span></div>
+<div><div class="gegner">FSG Gonsenheim/Schott</div>
+<div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=Am%20Gro%C3%9Fen%20Sand%20Mainz%20Obere%20Kreuzstra%C3%9Fe%209-13%2C%2055120%20Mainz" target="_blank" rel="noopener">Am Großen Sand Mainz</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="monat">März 2027</div><div class="spiel">
+<div class="datum">So 14.03.<span>18:00</span></div>
+<div><div class="gegner">HSV Alzey</div>
+<div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="spiel">
+<div class="datum">So 21.03.<span>14:45</span></div>
+<div><div class="gegner">FSG Kaiserslautern/Dansenberg</div>
+<div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=Sporthalle%20Dansenberg%20Am%20Handballplatz%201%2C%2067661%20Kaiserslautern-Dansenberg" target="_blank" rel="noopener">Sporthalle Dansenberg</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="monat">April 2027</div><div class="spiel">
+<div class="datum">Sa 10.04.<span>20:00</span></div>
+<div><div class="gegner">TV Hauenstein</div>
+<div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=TVR-Sporthalle%20Ludwigshafen%20Fu%C3%9Fg%C3%B6nheimer%20Str.%20127%20%28Ortsende%29%2C%2067071%20Ludwigshafen" target="_blank" rel="noopener">TVR-Sporthalle Ludwigshafen</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="spiel">
+<div class="datum">Sa 17.04.<span>18:00</span></div>
+<div><div class="gegner">HSG Eckbachtal</div>
+<div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=Sporthalle%20Freinsheim%20Reiboldstr.%2012E%2C%2067251%20Freinsheim" target="_blank" rel="noopener">Sporthalle Freinsheim</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div></div>
+  <div class="teil" data-ansicht="tabelle" hidden>
+    <div class="tabellenhuelle">
+<table class="tabelle">
+<thead><tr>
+<th class="platz">Pl</th><th class="mann">Mannschaft</th><th>Sp</th>
+<th class="nur-breit">Tore</th><th>Diff</th><th>Pkt</th>
+</tr></thead>
+<tbody><tr><td class="platz">1</td><td class="mann">TV Hauenstein</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">2</td><td class="mann">HSV Alzey</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">3</td><td class="mann">FSG Kaiserslautern/Dansenberg</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">4</td><td class="mann">FSG Gonsenheim/Schott</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr class="wir"><td class="platz">5</td><td class="mann">HSG Mutterstadt/Ruchheim Damen</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">6</td><td class="mann">HSG Eckbachtal</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">7</td><td class="mann">SV Bornheim</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">8</td><td class="mann">FSG Selz-Wiesbach</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">9</td><td class="mann">TV Kirrweiler</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr><tr><td class="platz">10</td><td class="mann">TV Thaleischweiler</td><td>0</td><td class="nur-breit">0:0</td><td>+0</td><td class="pkt">0</td></tr></tbody>
+</table>
+</div>
+<p class="tabellenfuss">Die Saison hat noch nicht begonnen – alle Mannschaften stehen bei null, die Reihenfolge hat noch keine Aussagekraft.</p>
+  </div>
+</section>
+  <p class="fuss">
+    Zuletzt abgeglichen am 28.08.2026 um 12:04 Uhr. Die Spielpläne werden täglich automatisch
+    mit <a href="https://www.handball.net" target="_blank" rel="noopener">handball.net</a>
+    abgeglichen; Änderungen erscheinen hier und in abonnierten Kalendern.
+  </p>
+</main>
+
 <script>
-// Die Angabe "Morgen" wird beim naechtlichen Bauen gesetzt und waere sonst
-// veraltet, sobald ein Lauf ausfaellt - darum hier nochmal aus dem echten
-// Anwurfzeitpunkt berechnet.
 (function () {
-  var el = document.querySelector('[data-anwurf]');
-  if (!el) return;
-  var anwurf = new Date(el.getAttribute('data-anwurf'));
-  if (isNaN(anwurf)) return;
-  var heute = new Date(); heute.setHours(0, 0, 0, 0);
-  var tag = new Date(anwurf); tag.setHours(0, 0, 0, 0);
-  var tage = Math.round((tag - heute) / 86400000);
-  el.textContent = tage < 0 ? 'Läuft gerade'
-    : tage === 0 ? 'Heute'
-    : tage === 1 ? 'Morgen'
-    : tage < 7 ? 'In ' + tage + ' Tagen'
-    : 'Nächstes Spiel';
-})();
+  var seite = document.documentElement;
+  var wahl = document.getElementById('teamwahl');
+  var mannschaften = [].slice.call(document.querySelectorAll('[data-team]'));
+  if (!wahl || !mannschaften.length) return;
 
-// Reiter markieren, sobald der zugehoerige Abschnitt sichtbar wird
-(function () {
-  var reiter = [].slice.call(document.querySelectorAll('.reiter a'));
-  if (!reiter.length || !window.IntersectionObserver) return;
-  var zuOrdnung = {};
-  reiter.forEach(function (a) {
-    var ziel = document.querySelector(a.getAttribute('href'));
-    if (ziel) zuOrdnung[ziel.id] = a;
-  });
-  var beobachter = new IntersectionObserver(function (eintraege) {
-    eintraege.forEach(function (e) {
-      if (!e.isIntersecting) return;
-      reiter.forEach(function (a) { a.removeAttribute('aria-current'); });
-      if (zuOrdnung[e.target.id]) zuOrdnung[e.target.id].setAttribute('aria-current', 'true');
+  var ANSICHTEN = ['kalender', 'spiele', 'tabelle'];
+  var SPEICHER = 'muru-mannschaft';
+
+  function zeigeMannschaft(schluessel) {
+    var treffer = false;
+    mannschaften.forEach(function (m) {
+      var passt = m.getAttribute('data-team') === schluessel;
+      m.hidden = !passt;
+      if (passt) treffer = true;
     });
-  }, { rootMargin: '-20% 0px -70% 0px' });
-  Object.keys(zuOrdnung).forEach(function (id) {
-    beobachter.observe(document.getElementById(id));
-  });
-})();
+    if (!treffer) return false;
+    wahl.value = schluessel;
+    try { localStorage.setItem(SPEICHER, schluessel); } catch (e) {}
+    return true;
+  }
 
-function kopiere(text, knopf) {
-  navigator.clipboard.writeText(text).then(function () {
-    var alt = knopf.textContent;
-    knopf.textContent = "Adresse kopiert";
-    setTimeout(function () { knopf.textContent = alt; }, 1800);
+  function zeigeAnsicht(schluessel, ansicht) {
+    var m = document.querySelector('[data-team="' + schluessel + '"]');
+    if (!m) return;
+    m.querySelectorAll('[data-ansicht]').forEach(function (b) {
+      b.hidden = b.getAttribute('data-ansicht') !== ansicht;
+    });
+    m.querySelectorAll('.reiter button').forEach(function (k) {
+      k.setAttribute('aria-selected', k.getAttribute('data-ziel') === ansicht ? 'true' : 'false');
+    });
+  }
+
+  function ausAdresse() {
+    var teile = (location.hash || '').replace(/^#/, '').split('/');
+    return { team: teile[0] || '', ansicht: ANSICHTEN.indexOf(teile[1]) >= 0 ? teile[1] : 'kalender' };
+  }
+
+  function setzeAdresse(schluessel, ansicht) {
+    var neu = '#' + schluessel + (ansicht !== 'kalender' ? '/' + ansicht : '');
+    if (location.hash !== neu) history.replaceState(null, '', neu);
+  }
+
+  // Zeitangabe ("Morgen") im Browser berechnen - beim naechtlichen Bauen
+  // gesetzt waere sie veraltet, sobald ein Lauf ausfaellt.
+  function frischeZeitangaben() {
+    document.querySelectorAll('[data-anwurf]').forEach(function (el) {
+      var anwurf = new Date(el.getAttribute('data-anwurf'));
+      if (isNaN(anwurf)) return;
+      var heute = new Date(); heute.setHours(0, 0, 0, 0);
+      var tag = new Date(anwurf); tag.setHours(0, 0, 0, 0);
+      var tage = Math.round((tag - heute) / 86400000);
+      el.textContent = tage < 0 ? 'Läuft gerade'
+        : tage === 0 ? 'Heute' : tage === 1 ? 'Morgen'
+        : tage < 7 ? 'In ' + tage + ' Tagen' : 'Nächstes Spiel';
+    });
+  }
+
+  var start = ausAdresse();
+  var gespeichert = '';
+  try { gespeichert = localStorage.getItem(SPEICHER) || ''; } catch (e) {}
+  var aktiv = start.team || gespeichert || mannschaften[0].getAttribute('data-team');
+  if (!zeigeMannschaft(aktiv)) {
+    aktiv = mannschaften[0].getAttribute('data-team');
+    zeigeMannschaft(aktiv);
+  }
+  ANSICHTEN.forEach(function () {});
+  mannschaften.forEach(function (m) {
+    zeigeAnsicht(m.getAttribute('data-team'), 'kalender');
   });
-}
+  zeigeAnsicht(aktiv, start.ansicht);
+  setzeAdresse(aktiv, start.ansicht);
+  frischeZeitangaben();
+  seite.setAttribute('data-bereit', 'ja');
+
+  wahl.addEventListener('change', function () {
+    aktiv = wahl.value;
+    zeigeMannschaft(aktiv);
+    zeigeAnsicht(aktiv, 'kalender');
+    setzeAdresse(aktiv, 'kalender');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  document.querySelectorAll('.reiter button').forEach(function (k) {
+    k.addEventListener('click', function () {
+      var ansicht = k.getAttribute('data-ziel');
+      zeigeAnsicht(aktiv, ansicht);
+      setzeAdresse(aktiv, ansicht);
+    });
+  });
+
+  // Adresse in die Zwischenablage (Google Kalender)
+  document.querySelectorAll('[data-kopiere]').forEach(function (k) {
+    k.addEventListener('click', function () {
+      var text = k.getAttribute('data-kopiere');
+      navigator.clipboard.writeText(text).then(function () {
+        var alt = k.textContent;
+        k.textContent = 'Adresse kopiert';
+        setTimeout(function () { k.textContent = alt; }, 1800);
+      });
+    });
+  });
+
+  // Änderungen weitergeben: auf dem Handy direkt ins Teilen-Menue,
+  // sonst in die Zwischenablage.
+  document.querySelectorAll('[data-teile]').forEach(function (k) {
+    k.addEventListener('click', function () {
+      var text = k.getAttribute('data-teile');
+      if (navigator.share) {
+        navigator.share({ text: text }).catch(function () {});
+        return;
+      }
+      navigator.clipboard.writeText(text).then(function () {
+        var alt = k.textContent;
+        k.textContent = 'Text kopiert';
+        setTimeout(function () { k.textContent = alt; }, 1800);
+      });
+    });
+  });
+
+  // Hinweis zum Home-Bildschirm nur auf iOS, und nur solange die Seite
+  // nicht ohnehin schon als App laeuft. Android bietet es von selbst an.
+  var istIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+  var alsApp = window.navigator.standalone === true ||
+               window.matchMedia('(display-mode: standalone)').matches;
+  if (istIOS && !alsApp) {
+    document.querySelectorAll('[data-ios-tipp]').forEach(function (el) { el.hidden = false; });
+  }
+})();
 </script>
 </body>
 </html>

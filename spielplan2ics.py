@@ -35,7 +35,8 @@ UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
 ABKUERZUNGEN = {
     "HSG", "TSG", "TSV", "TV", "TVR", "TG", "TUS", "SG", "SV", "SC", "FC",
     "VFL", "VFR", "IGS", "NH", "GW", "HSC", "HSV", "HC", "DJK", "ASV", "MTV",
-    "JSG", "MZ", "SF", "VT", "TB", "TSF", "I", "II", "III", "IV", "V",
+    "JSG", "FSG", "MSG", "WSG", "SGH", "SSV", "PSV", "RSV", "VTV",
+    "MZ", "SF", "VT", "TB", "TSF", "I", "II", "III", "IV", "V",
     "1", "2", "3", "A", "B", "C", "D", "E", "F",
 }
 
@@ -248,6 +249,16 @@ def adresse(spiel: dict) -> str:
     return ", ".join(t for t in teile if t)
 
 
+def ergebnis(spiel: dict) -> tuple[int, int] | None:
+    """Endstand als (Heimtore, Gasttore), sofern das Spiel beendet ist."""
+    if not (spiel.get("status") or {}).get("is_finished"):
+        return None
+    r = spiel.get("result") or {}
+    if r.get("local") is None or r.get("visitor") is None:
+        return None
+    return int(r["local"]), int(r["visitor"])
+
+
 def liga(spiel: dict) -> str:
     return ((spiel.get("phase") or {}).get("competition") or {}).get("name", "")
 
@@ -310,6 +321,13 @@ def vergleiche(spiele: list[dict], team_id: int, alt: dict) -> tuple[dict, list[
             "heim": ist_heimspiel(spiel, team_id),
             "sequence": (vorher or {}).get("sequence", 0),
         }
+        tore = ergebnis(spiel)
+        if tore:
+            eigene, fremde = (tore if eintrag["heim"] else tore[::-1])
+            eintrag["ergebnis"] = {"heim": tore[0], "gast": tore[1],
+                                   "eigene": eigene, "fremde": fremde,
+                                   "ausgang": "S" if eigene > fremde
+                                              else "N" if eigene < fremde else "U"}
 
         if vorher is None:
             if not erstlauf:
@@ -432,12 +450,22 @@ def baue_kalender(spiele: list[dict], team_id: int, cfg: argparse.Namespace,
 
         marke = "" if cfg.keine_emojis else ("\U0001F3E0 " if heim else "\U0001F697 ")
         gast = gegner(spiel, team_id)
-        titel = f"{marke}{cfg.kurzname} - {gast}" if heim else f"{marke}{gast} - {cfg.kurzname}"
+        tore = ergebnis(spiel)
+        # Gespielte Partien tragen den Endstand im Titel - so steht das
+        # Ergebnis spaeter auch im Kalender und nicht nur auf der Seite.
+        trenner = f" {tore[0]}:{tore[1]} " if tore else " - "
+        titel = (f"{marke}{cfg.kurzname}{trenner}{gast}" if heim
+                 else f"{marke}{gast}{trenner}{cfg.kurzname}")
 
         beschreibung = [
             f"{'Heimspiel' if heim else 'Auswärtsspiel'} gegen {gast}",
             f"Anwurf: {beginn.strftime('%H:%M')} Uhr",
         ]
+        if tore:
+            eigene, fremde = (tore if heim else tore[::-1])
+            ausgang = ("Sieg" if eigene > fremde else
+                       "Niederlage" if eigene < fremde else "Unentschieden")
+            beschreibung.insert(0, f"Endstand: {tore[0]}:{tore[1]} ({ausgang})")
         if cfg.vorlauf:
             beschreibung.append(f"Treffpunkt: {start.strftime('%H:%M')} Uhr")
         if normalisiere(liga(spiel)):
@@ -494,74 +522,97 @@ def baue_kalender(spiele: list[dict], team_id: int, cfg: argparse.Namespace,
 
 # --------------------------------------------------------------------------
 
+def verarbeite_team(team: dict, cfg: argparse.Namespace, alt: dict) -> tuple[dict, list]:
+    """Holt einen Spielplan, schreibt die .ics und liefert Zustand + Aenderungen."""
+    team_id = team["team_id"]
+    spiele = hole_spiele(team_id)
+    if not spiele:
+        raise SystemExit(f"Keine Spiele fuer Team {team_id} ({team['name']}).")
+
+    neuer_stand, aenderungen = vergleiche(spiele, team_id, alt.get("spiele") or {})
+
+    # Der Kalendername landet in der Kalender-App - dort muss der Verein
+    # dranstehen, sonst heisst der Kalender bei allen nur "Herren I".
+    einstellung = argparse.Namespace(**vars(cfg))
+    einstellung.kurzname = team["kurzname"]
+    einstellung.name = f"{cfg.verein} – {team['name']}"
+
+    inhalt = baue_kalender(spiele, team_id, einstellung, neuer_stand).encode("utf-8")
+    ziel = Path(cfg.out_dir) / team["datei"]
+    ziel.parent.mkdir(parents=True, exist_ok=True)
+    ziel.write_bytes(inhalt)
+
+    # Frueher vergebene Dateinamen weiter bedienen - GitHub Pages kann nicht
+    # umleiten, ein umbenannter Feed wuerde bestehende Abos stillschweigend
+    # ins Leere laufen lassen.
+    for alt_name in team.get("alias") or []:
+        (Path(cfg.out_dir) / alt_name).write_bytes(inhalt)
+
+    saison_id = str(((spiele[0].get("phase") or {}).get("season_id")) or "")
+    heim = sum(1 for x in spiele if ist_heimspiel(x, team_id))
+    print(f"  {team['name']:<12} {len(spiele):2} Spiele "
+          f"({heim} Heim / {len(spiele) - heim} Auswärts)  -> {ziel.name}")
+
+    return {
+        "team_id": team_id,
+        "name": team["name"],
+        "kurzname": team["kurzname"],
+        "datei": team["datei"],
+        "kalender": einstellung.name,
+        "liga": normalisiere(liga(spiele[0])),
+        "saison": f"20{saison_id[:2]}/{saison_id[2:]}" if len(saison_id) == 4 else "",
+        "tabelle": hole_tabelle((spiele[0].get("phase") or {}).get("id")),
+        "letzte_aenderungen": aenderungen,
+        "spiele": neuer_stand,
+    }, aenderungen
+
+
 def main() -> None:
-    p = argparse.ArgumentParser(description="handball.net-Spielplan als .ics exportieren")
-    quelle = p.add_mutually_exclusive_group(required=True)
-    quelle.add_argument("--team-id", type=int, help="Team-ID von handball.net")
-    quelle.add_argument("--suche", help="Teamname suchen statt fester ID (saisonfest)")
-    p.add_argument("--saison", default="2627", help="Saison-ID zur Pruefung bei --suche")
-    p.add_argument("--geschlecht", choices=["M", "F", "X"],
-                   help="bei --suche: M=Maenner, F=Frauen, X=Mixed")
-    p.add_argument("--altersklasse", default="ERWACHSENE",
-                   help="bei --suche: ERWACHSENE, A-JUGEND, B-JUGEND, ... MINIS")
-    p.add_argument("--team-name", help="bei --suche: exakter Teamname zur Unterscheidung "
-                                       "von I. und II. Mannschaft")
-    p.add_argument("--name", default="Handball Spielplan", help="Name des Kalenders")
-    p.add_argument("--kurzname", default="Wir", help="Kurzname des eigenen Teams im Titel")
+    p = argparse.ArgumentParser(description="handball.net-Spielplaene als .ics exportieren")
+    p.add_argument("--teams", default="teams.json",
+                   help="Konfigurationsdatei mit den Mannschaften")
+    p.add_argument("--out-dir", default="docs", help="Zielverzeichnis")
+    p.add_argument("--daten", default="docs/daten.json",
+                   help="gemeinsame Datendatei fuer Seite und Aenderungserkennung")
     p.add_argument("--vorlauf", type=int, default=0,
                    help="Minuten vor Anwurf, zu denen der Termin beginnt (Treffpunkt)")
     p.add_argument("--dauer", type=int, default=120, help="Dauer des Termins in Minuten")
-    p.add_argument("--out", default="docs/spielplan.ics", help="Zieldatei")
-    p.add_argument("--stand", help="Zustandsdatei fuer die Aenderungserkennung "
-                                   "(z.B. docs/stand.json)")
     p.add_argument("--keine-alarme", action="store_true", help="Keine Erinnerungen einbetten")
     p.add_argument("--keine-emojis", action="store_true", help="Titel ohne Heim/Auswaerts-Symbol")
     p.add_argument("--keine-schiris", action="store_true",
                    help="Schiedsrichternamen nicht in den Kalender schreiben")
     cfg = p.parse_args()
 
-    team_id = cfg.team_id or finde_team(cfg)
-    spiele = hole_spiele(team_id)
-    if not spiele:
-        raise SystemExit(f"Keine Spiele fuer Team {team_id} gefunden.")
+    konfig = json.loads(Path(cfg.teams).read_text(encoding="utf-8"))
+    cfg.verein = konfig.get("verein", "")
 
-    # Zustand vergleichen, bevor die neue Datei geschrieben wird - daraus
-    # ergeben sich die SEQUENCE-Nummern und die Meldung an die Mannschaft.
-    standpfad = Path(cfg.stand) if cfg.stand else None
-    alt = lade_stand(standpfad) if standpfad else {}
-    neuer_stand, aenderungen = vergleiche(spiele, team_id, alt)
+    datenpfad = Path(cfg.daten)
+    bisher = {}
+    if datenpfad.exists():
+        try:
+            bisher = json.loads(datenpfad.read_text(encoding="utf-8")).get("teams") or {}
+        except (json.JSONDecodeError, OSError) as fehler:
+            print(f"Warnung: {datenpfad} unlesbar ({fehler}) - starte neu", file=sys.stderr)
 
-    ziel = Path(cfg.out)
-    ziel.parent.mkdir(parents=True, exist_ok=True)
-    # write_bytes statt write_text: keine Newline-Uebersetzung, unabhaengig
-    # von Plattform und Python-Version - die CRLF stehen schon im Text.
-    ziel.write_bytes(baue_kalender(spiele, team_id, cfg, neuer_stand).encode("utf-8"))
+    teams, alle_aenderungen = {}, []
+    for team in konfig["teams"]:
+        stand, aenderungen = verarbeite_team(team, cfg, bisher.get(team["schluessel"]) or {})
+        teams[team["schluessel"]] = stand
+        alle_aenderungen += [dict(a, mannschaft=team["name"]) for a in aenderungen]
 
-    if standpfad:
-        standpfad.parent.mkdir(parents=True, exist_ok=True)
-        saison_id = str(((spiele[0].get("phase") or {}).get("season_id")) or "")
-        standpfad.write_text(json.dumps({
-            "aktualisiert": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-            "team_id": team_id,
-            "kalender": cfg.name,
-            "liga": normalisiere(liga(spiele[0])),
-            "tabelle": hole_tabelle((spiele[0].get("phase") or {}).get("id")),
-            "saison": f"20{saison_id[:2]}/{saison_id[2:]}" if len(saison_id) == 4 else "",
-            "letzte_aenderungen": aenderungen,
-            "spiele": neuer_stand,
-        }, ensure_ascii=False, indent=2), encoding="utf-8")
+    datenpfad.parent.mkdir(parents=True, exist_ok=True)
+    datenpfad.write_text(json.dumps({
+        "aktualisiert": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "verein": cfg.verein,
+        "teams": teams,
+    }, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"geschrieben: {datenpfad}")
 
-    heim = sum(1 for s in spiele if ist_heimspiel(s, team_id))
-    erstes, letztes = anwurf(spiele[0]["date"]), anwurf(spiele[-1]["date"])
-    print(f"{len(spiele)} Spiele ({heim} Heim / {len(spiele)-heim} Auswärts) "
-          f"von {erstes:%d.%m.%Y} bis {letztes:%d.%m.%Y}")
-    print(f"geschrieben: {ziel}")
-
-    if aenderungen:
-        print(f"\n{len(aenderungen)} Änderung(en) seit dem letzten Lauf:")
-        for a in aenderungen:
-            print(f"  [{a['art']}] {a['text']}")
-    elif alt:
+    if alle_aenderungen:
+        print(f"\n{len(alle_aenderungen)} Änderung(en) seit dem letzten Lauf:")
+        for a in alle_aenderungen:
+            print(f"  [{a['art']}] {a['mannschaft']}: {a['text']}")
+    elif bisher:
         print("keine Änderungen seit dem letzten Lauf")
 
 

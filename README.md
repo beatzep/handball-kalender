@@ -1,8 +1,8 @@
 # Handball-Kalender
 
-Holt den Spielplan der **HSG MuRu Herren I** von handball.net und veröffentlicht
-ihn als abonnierbaren Kalender. Wer ihn abonniert hat, bekommt Verlegungen
-automatisch — ohne etwas zu tun.
+Holt die Spielpläne der **HSG Mutterstadt/Ruchheim** (Herren I, Herren II,
+Damen) von handball.net und veröffentlicht sie als abonnierbare Kalender.
+Wer abonniert hat, bekommt Verlegungen automatisch — ohne etwas zu tun.
 
 Nur Python-Standardbibliothek, keine Abhängigkeiten.
 
@@ -14,10 +14,20 @@ handball.net API  →  GitHub Action (täglich)  →  docs/*.ics auf GitHub Page
 
 | Datei | Aufgabe |
 |---|---|
-| `spielplan2ics.py` | holt die Spiele, erzeugt die `.ics`, erkennt Änderungen gegenüber dem Vortag |
-| `pruefe_ics.py` | validiert die erzeugte Datei (läuft im Workflow als Schutznetz) |
-| `baue_seite.py` | baut `docs/index.html` — die Seite, die die Mannschaft zu sehen bekommt |
+| `teams.json` | welche Mannschaften abgerufen werden (Team-ID, Name, Dateiname) |
+| `spielplan2ics.py` | holt Spiele und Tabellen, erzeugt je Mannschaft eine `.ics`, erkennt Änderungen |
+| `pruefe_ics.py` | validiert die erzeugten Dateien (läuft im Workflow als Schutznetz) |
+| `baue_seite.py` | baut `docs/index.html` — eine Seite für alle Mannschaften |
+| `seite_stil.py`, `seite_skript.py` | Stylesheet und Browser-Logik der Seite |
 | `commit_text.py` | formuliert die Commit-Nachricht, damit Verlegungen in Benachrichtigungen auftauchen |
+
+**Eine neue Mannschaft aufnehmen:** Eintrag in `teams.json` ergänzen, fertig —
+Kalender, Seite, Tabelle und Änderungserkennung laufen dann automatisch mit.
+
+**Dateinamen niemals stillschweigend ändern.** GitHub Pages kann nicht
+umleiten; eine umbenannte `.ics` lässt bestehende Abos ins Leere laufen, ohne
+dass es jemand merkt. Alte Namen gehören in das Feld `alias`, dann werden sie
+weiter mitgeschrieben.
 
 ## Gestaltung
 
@@ -41,13 +51,12 @@ Alle mit Alphakanal, funktionieren also auf hellem wie dunklem Grund.
 ## Lokal ausführen
 
 ```bash
-python3 spielplan2ics.py --team-id 80924 \
-  --name "HSG MuRu - Herren I" --kurzname "HSG MuRu" --keine-schiris \
-  --out docs/hsg-muru-herren1.ics --stand docs/stand.json
+python3 spielplan2ics.py --teams teams.json --out-dir docs \
+  --daten docs/daten.json --keine-schiris
 
-python3 pruefe_ics.py docs/hsg-muru-herren1.ics
+for f in docs/*.ics; do python3 pruefe_ics.py "$f"; done
 
-python3 baue_seite.py --stand docs/stand.json --ics hsg-muru-herren1.ics \
+python3 baue_seite.py --daten docs/daten.json \
   --basis-url "https://DEINNAME.github.io/handball-kalender" --out docs/index.html
 ```
 
@@ -60,10 +69,18 @@ python3 baue_seite.py --stand docs/stand.json --ics hsg-muru-herren1.ics \
 | `--keine-alarme` | ohne Erinnerungen (Standard: 1 Tag und 3 Std vorher) |
 | `--keine-emojis` | Titel ohne 🏠/🚗 |
 | `--keine-schiris` | Schiedsrichternamen weglassen (im öffentlichen Feed sinnvoll) |
-| `--suche "Mutterstadt"` | Team über den Namen suchen statt feste ID — überlebt den Saisonwechsel |
 
-Bei `--suche` grenzen `--geschlecht M` und `--team-name "HSG Mutterstadt/Ruchheim"`
-ein; ohne das bricht die Suche bei mehreren Treffern ab und listet die Kandidaten.
+### Die Seite
+
+Alle Mannschaften stehen in einer Datei; umgeschaltet wird im Browser.
+Die Adresse merkt sich den Zustand: `#damen` oder `#damen/tabelle` lässt sich
+teilen und öffnet direkt die richtige Ansicht. Die zuletzt gewählte Mannschaft
+wird lokal gemerkt.
+
+Gespielte Partien zeigen den Endstand — grün bei Sieg, rot bei Niederlage —
+und tragen ihn auch im Kalendertitel. Die Seite ist als App installierbar
+(`manifest.json`); auf iOS gibt es dafür keinen automatischen Hinweis, darum
+blendet die Seite dort selbst einen Tipp ein.
 
 ## Wie die Änderungserkennung funktioniert
 

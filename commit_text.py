@@ -24,11 +24,14 @@ BETREFF = {
 
 def main() -> None:
     p = argparse.ArgumentParser()
-    p.add_argument("--stand", default="docs/stand.json")
+    p.add_argument("--daten", default="docs/daten.json")
     cfg = p.parse_args()
 
-    daten = json.loads(Path(cfg.stand).read_text(encoding="utf-8"))
-    aenderungen = daten.get("letzte_aenderungen") or []
+    daten = json.loads(Path(cfg.daten).read_text(encoding="utf-8"))
+    aenderungen = []
+    for team in (daten.get("teams") or {}).values():
+        for a in team.get("letzte_aenderungen") or []:
+            aenderungen.append(dict(a, mannschaft=team.get("name", "")))
     heute = datetime.now(ZoneInfo("Europe/Berlin")).strftime("%d.%m.%Y")
 
     if not aenderungen:
@@ -37,15 +40,15 @@ def main() -> None:
 
     if len(aenderungen) == 1:
         a = aenderungen[0]
-        betreff = BETREFF.get(a["art"], "Spielplan geaendert").format(
-            spieltag=a.get("spieltag") or "?")
+        betreff = f"{a['mannschaft']}: " + BETREFF.get(
+            a["art"], "Spielplan geaendert").format(spieltag=a.get("spieltag") or "?")
     else:
         betreff = f"{len(aenderungen)} Aenderungen im Spielplan"
 
     print(betreff)
     print()
     for a in aenderungen:
-        print(f"- {a['text']}")
+        print(f"- {a['mannschaft']}: {a['text']}")
 
 
 if __name__ == "__main__":

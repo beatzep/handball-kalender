@@ -1,0 +1,522 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//handball-kalender//spielplan2ics//DE
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:HSG Mutterstadt/Ruchheim – Damen
+X-WR-TIMEZONE:Europe/Berlin
+X-WR-CALDESC:Spielplan HSG Mutterstadt/Ruchheim – Damen - Quelle: handbal
+ l.net
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VTIMEZONE
+TZID:Europe/Berlin
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:2627RPVLERWA0204@handball.net
+DTSTAMP:20260828T100402Z
+DTSTART;TZID=Europe/Berlin:20260906T180000
+DTEND;TZID=Europe/Berlin:20260906T200000
+SUMMARY:🏠 HSG MuRu - FSG Selz-Wiesbach
+DESCRIPTION:Heimspiel gegen FSG Selz-Wiesbach\nAnwurf: 18:00 Uhr\nLiga: Fra
+ uen Verbandsliga\nSpieltag: 2\nSpielnummer: 2627RPVLERWA0204\nhttps://www.
+ handball.net/match/365815
+URL:https://www.handball.net/match/365815
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 HSG MuRu - FSG Selz-Wiesbach
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 HSG MuRu - FSG Selz-Wiesbach
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLERWA0301@handball.net
+DTSTAMP:20260828T100402Z
+DTSTART;TZID=Europe/Berlin:20260912T200000
+DTEND;TZID=Europe/Berlin:20260912T220000
+SUMMARY:🏠 HSG MuRu - TV Kirrweiler
+DESCRIPTION:Heimspiel gegen TV Kirrweiler\nAnwurf: 20:00 Uhr\nLiga: Frauen 
+ Verbandsliga\nSpieltag: 3\nSpielnummer: 2627RPVLERWA0301\nhttps://www.hand
+ ball.net/match/365816
+URL:https://www.handball.net/match/365816
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 HSG MuRu - TV Kirrweiler
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 HSG MuRu - TV Kirrweiler
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLERWA0403@handball.net
+DTSTAMP:20260828T100402Z
+DTSTART;TZID=Europe/Berlin:20260919T170000
+DTEND;TZID=Europe/Berlin:20260919T190000
+SUMMARY:🚗 SV Bornheim - HSG MuRu
+DESCRIPTION:Auswärtsspiel gegen SV Bornheim\nAnwurf: 17:00 Uhr\nLiga: Frau
+ en Verbandsliga\nSpieltag: 4\nSpielnummer: 2627RPVLERWA0403\nhttps://www.h
+ andball.net/match/365822
+URL:https://www.handball.net/match/365822
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Sporthalle Bornheim\, Dammgasse 1\, 76879 Bornheim
+GEO:49.215716;8.170640
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 SV Bornheim - HSG MuRu
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 SV Bornheim - HSG MuRu
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLERWA0101@handball.net
+DTSTAMP:20260828T100402Z
+DTSTART;TZID=Europe/Berlin:20261017T190000
+DTEND;TZID=Europe/Berlin:20261017T210000
+SUMMARY:🚗 TV Thaleischweiler - HSG MuRu
+DESCRIPTION:Auswärtsspiel gegen TV Thaleischweiler\nAnwurf: 19:00 Uhr\nLig
+ a: Frauen Verbandsliga\nSpieltag: 1\nSpielnummer: 2627RPVLERWA0101\nhttps:
+ //www.handball.net/match/365808
+URL:https://www.handball.net/match/365808
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:IGS-Sporthalle Thaleischweiler\, Schulstr. 2\, 66987 Thaleischweil
+ er
+GEO:49.257381;7.579213
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 TV Thaleischweiler - HSG MuRu
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 TV Thaleischweiler - HSG MuRu
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLERWA0701@handball.net
+DTSTAMP:20260828T100402Z
+DTSTART;TZID=Europe/Berlin:20261025T164500
+DTEND;TZID=Europe/Berlin:20261025T184500
+SUMMARY:🏠 HSG MuRu - FSG Gonsenheim/Schott
+DESCRIPTION:Heimspiel gegen FSG Gonsenheim/Schott\nAnwurf: 16:45 Uhr\nLiga:
+  Frauen Verbandsliga\nSpieltag: 7\nSpielnummer: 2627RPVLERWA0701\nhttps://
+ www.handball.net/match/365832
+URL:https://www.handball.net/match/365832
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 HSG MuRu - FSG Gonsenheim/Schott
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 HSG MuRu - FSG Gonsenheim/Schott
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLERWA0803@handball.net
+DTSTAMP:20260828T100402Z
+DTSTART;TZID=Europe/Berlin:20261108T120000
+DTEND;TZID=Europe/Berlin:20261108T140000
+SUMMARY:🚗 HSV Alzey - HSG MuRu
+DESCRIPTION:Auswärtsspiel gegen HSV Alzey\nAnwurf: 12:00 Uhr\nLiga: Frauen
+  Verbandsliga\nSpieltag: 8\nSpielnummer: 2627RPVLERWA0803\nhttps://www.han
+ dball.net/match/365838
+URL:https://www.handball.net/match/365838
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:NH Alzey\, Frankenstraße 17\, 55232 Alzey
+GEO:49.742290;8.118030
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 HSV Alzey - HSG MuRu
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 HSV Alzey - HSG MuRu
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLERWA0903@handball.net
+DTSTAMP:20260828T100402Z
+DTSTART;TZID=Europe/Berlin:20261114T200000
+DTEND;TZID=Europe/Berlin:20261114T220000
+SUMMARY:🏠 HSG MuRu - FSG Kaiserslautern/Dansenberg
+DESCRIPTION:Heimspiel gegen FSG Kaiserslautern/Dansenberg\nAnwurf: 20:00 Uh
+ r\nLiga: Frauen Verbandsliga\nSpieltag: 9\nSpielnummer: 2627RPVLERWA0903\n
+ https://www.handball.net/match/365842
+URL:https://www.handball.net/match/365842
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 HSG MuRu - FSG Kaiserslautern/Dansenberg
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 HSG MuRu - FSG Kaiserslautern/Dansenberg
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLERWA1002@handball.net
+DTSTAMP:20260828T100402Z
+DTSTART;TZID=Europe/Berlin:20261121T180000
+DTEND;TZID=Europe/Berlin:20261121T200000
+SUMMARY:🚗 TV Hauenstein - HSG MuRu
+DESCRIPTION:Auswärtsspiel gegen TV Hauenstein\nAnwurf: 18:00 Uhr\nLiga: Fr
+ auen Verbandsliga\nSpieltag: 10\nSpielnummer: 2627RPVLERWA1002\nhttps://ww
+ w.handball.net/match/365846
+URL:https://www.handball.net/match/365846
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Wasgauhalle Hauenstein\, Speyerstr. 24\, 76846 Hauenstein
+GEO:49.196523;7.850411
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 TV Hauenstein - HSG MuRu
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 TV Hauenstein - HSG MuRu
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLERWA1103@handball.net
+DTSTAMP:20260828T100402Z
+DTSTART;TZID=Europe/Berlin:20261128T200000
+DTEND;TZID=Europe/Berlin:20261128T220000
+SUMMARY:🏠 HSG MuRu - HSG Eckbachtal
+DESCRIPTION:Heimspiel gegen HSG Eckbachtal\nAnwurf: 20:00 Uhr\nLiga: Frauen
+  Verbandsliga\nSpieltag: 11\nSpielnummer: 2627RPVLERWA1103\nhttps://www.ha
+ ndball.net/match/365851
+URL:https://www.handball.net/match/365851
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 HSG MuRu - HSG Eckbachtal
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 HSG MuRu - HSG Eckbachtal
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLERWA1201@handball.net
+DTSTAMP:20260828T100402Z
+DTSTART;TZID=Europe/Berlin:20261205T190000
+DTEND;TZID=Europe/Berlin:20261205T210000
+SUMMARY:🏠 HSG MuRu - TV Thaleischweiler
+DESCRIPTION:Heimspiel gegen TV Thaleischweiler\nAnwurf: 19:00 Uhr\nLiga: Fr
+ auen Verbandsliga\nSpieltag: 12\nSpielnummer: 2627RPVLERWA1201\nhttps://ww
+ w.handball.net/match/365853
+URL:https://www.handball.net/match/365853
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 HSG MuRu - TV Thaleischweiler
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 HSG MuRu - TV Thaleischweiler
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLERWA1304@handball.net
+DTSTAMP:20260828T100402Z
+DTSTART;TZID=Europe/Berlin:20261213T170000
+DTEND;TZID=Europe/Berlin:20261213T190000
+SUMMARY:🚗 FSG Selz-Wiesbach - HSG MuRu
+DESCRIPTION:Auswärtsspiel gegen FSG Selz-Wiesbach\nAnwurf: 17:00 Uhr\nLiga
+ : Frauen Verbandsliga\nSpieltag: 13\nSpielnummer: 2627RPVLERWA1304\nhttps:
+ //www.handball.net/match/365860
+URL:https://www.handball.net/match/365860
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:IGS Sprendlingen\, Ober-Hilbersheimer Straße\, 55576 Sprendlingen
+GEO:49.862231;7.991830
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 FSG Selz-Wiesbach - HSG MuRu
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 FSG Selz-Wiesbach - HSG MuRu
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLERWA1401@handball.net
+DTSTAMP:20260828T100402Z
+DTSTART;TZID=Europe/Berlin:20270123T173000
+DTEND;TZID=Europe/Berlin:20270123T193000
+SUMMARY:🚗 TV Kirrweiler - HSG MuRu
+DESCRIPTION:Auswärtsspiel gegen TV Kirrweiler\nAnwurf: 17:30 Uhr\nLiga: Fr
+ auen Verbandsliga\nSpieltag: 14\nSpielnummer: 2627RPVLERWA1401\nhttps://ww
+ w.handball.net/match/365861
+URL:https://www.handball.net/match/365861
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Reblandhalle Kirrweiler\, Unterried 6\, 67489 Kirrweiler
+GEO:49.295763;8.172631
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 TV Kirrweiler - HSG MuRu
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 TV Kirrweiler - HSG MuRu
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLERWA1503@handball.net
+DTSTAMP:20260828T100402Z
+DTSTART;TZID=Europe/Berlin:20270130T180000
+DTEND;TZID=Europe/Berlin:20270130T200000
+SUMMARY:🏠 HSG MuRu - SV Bornheim
+DESCRIPTION:Heimspiel gegen SV Bornheim\nAnwurf: 18:00 Uhr\nLiga: Frauen Ve
+ rbandsliga\nSpieltag: 15\nSpielnummer: 2627RPVLERWA1503\nhttps://www.handb
+ all.net/match/365867
+URL:https://www.handball.net/match/365867
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 HSG MuRu - SV Bornheim
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 HSG MuRu - SV Bornheim
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLERWA1801@handball.net
+DTSTAMP:20260828T100402Z
+DTSTART;TZID=Europe/Berlin:20270228T150000
+DTEND;TZID=Europe/Berlin:20270228T170000
+SUMMARY:🚗 FSG Gonsenheim/Schott - HSG MuRu
+DESCRIPTION:Auswärtsspiel gegen FSG Gonsenheim/Schott\nAnwurf: 15:00 Uhr\n
+ Liga: Frauen Verbandsliga\nSpieltag: 18\nSpielnummer: 2627RPVLERWA1801\nht
+ tps://www.handball.net/match/365877
+URL:https://www.handball.net/match/365877
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Am Großen Sand Mainz\, Obere Kreuzstraße 9-13\, 55120 Mainz
+GEO:50.013549;8.218136
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 FSG Gonsenheim/Schott - HSG MuRu
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 FSG Gonsenheim/Schott - HSG MuRu
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLERWA1903@handball.net
+DTSTAMP:20260828T100402Z
+DTSTART;TZID=Europe/Berlin:20270314T180000
+DTEND;TZID=Europe/Berlin:20270314T200000
+SUMMARY:🏠 HSG MuRu - HSV Alzey
+DESCRIPTION:Heimspiel gegen HSV Alzey\nAnwurf: 18:00 Uhr\nLiga: Frauen Verb
+ andsliga\nSpieltag: 19\nSpielnummer: 2627RPVLERWA1903\nhttps://www.handbal
+ l.net/match/365883
+URL:https://www.handball.net/match/365883
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 HSG MuRu - HSV Alzey
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 HSG MuRu - HSV Alzey
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLERWA2003@handball.net
+DTSTAMP:20260828T100402Z
+DTSTART;TZID=Europe/Berlin:20270321T144500
+DTEND;TZID=Europe/Berlin:20270321T164500
+SUMMARY:🚗 FSG Kaiserslautern/Dansenberg - HSG MuRu
+DESCRIPTION:Auswärtsspiel gegen FSG Kaiserslautern/Dansenberg\nAnwurf: 14:
+ 45 Uhr\nLiga: Frauen Verbandsliga\nSpieltag: 20\nSpielnummer: 2627RPVLERWA
+ 2003\nhttps://www.handball.net/match/365887
+URL:https://www.handball.net/match/365887
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Sporthalle Dansenberg\, Am Handballplatz 1\, 67661 Kaiserslautern-
+ Dansenberg
+GEO:49.406914;7.736269
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 FSG Kaiserslautern/Dansenberg - HSG MuRu
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 FSG Kaiserslautern/Dansenberg - HSG MuRu
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLERWA2102@handball.net
+DTSTAMP:20260828T100402Z
+DTSTART;TZID=Europe/Berlin:20270410T200000
+DTEND;TZID=Europe/Berlin:20270410T220000
+SUMMARY:🏠 HSG MuRu - TV Hauenstein
+DESCRIPTION:Heimspiel gegen TV Hauenstein\nAnwurf: 20:00 Uhr\nLiga: Frauen 
+ Verbandsliga\nSpieltag: 21\nSpielnummer: 2627RPVLERWA2102\nhttps://www.han
+ dball.net/match/365891
+URL:https://www.handball.net/match/365891
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 HSG MuRu - TV Hauenstein
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 HSG MuRu - TV Hauenstein
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLERWA2203@handball.net
+DTSTAMP:20260828T100402Z
+DTSTART;TZID=Europe/Berlin:20270417T180000
+DTEND;TZID=Europe/Berlin:20270417T200000
+SUMMARY:🚗 HSG Eckbachtal - HSG MuRu
+DESCRIPTION:Auswärtsspiel gegen HSG Eckbachtal\nAnwurf: 18:00 Uhr\nLiga: F
+ rauen Verbandsliga\nSpieltag: 22\nSpielnummer: 2627RPVLERWA2203\nhttps://w
+ ww.handball.net/match/365896
+URL:https://www.handball.net/match/365896
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Sporthalle Freinsheim\, Reiboldstr. 12E\, 67251 Freinsheim
+GEO:0.000000;0.000000
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 HSG Eckbachtal - HSG MuRu
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 HSG Eckbachtal - HSG MuRu
+END:VALARM
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,196 @@
+"""Stylesheet der Abo-Seite. Ausgelagert, damit baue_seite.py lesbar bleibt.
+
+Farben vom Verein (#DD9933 Gold, Schwarz, Warmweiss), Formensprache nach
+mckinsey.de: durchgaengig border-radius 0, keine umrandeten Karten,
+Gliederung ueber Weissraum und 1px-Linien. Mobil zuerst.
+"""
+
+STIL = """
+:root {
+  --gold: #dd9933; --gold-tief: #b87a22; --gold-schwach: rgba(221,153,51,.10);
+  --tinte: #14140f; --tinte-weich: #4a4a42; --leise: #7a776d;
+  --linie: #dedbd3; --linie-zart: #ebe9e3;
+  --grund: #ffffff; --schwarz: #14140f; --auf-schwarz: #f7f5f0;
+  --sieg: #2f7d4f; --niederlage: #a4443a;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --gold: #e8ac52; --gold-tief: #dd9933; --gold-schwach: rgba(232,172,82,.12);
+    --tinte: #f2efe8; --tinte-weich: #b8b4a9; --leise: #8c877c;
+    --linie: #33312b; --linie-zart: #24221e;
+    --grund: #0d0d0b; --schwarz: #000000; --auf-schwarz: #f2efe8;
+    --sieg: #5cbf85; --niederlage: #e08076;
+  }
+}
+*, *::before, *::after { box-sizing: border-box; border-radius: 0; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--grund); color: var(--tinte);
+  font: 400 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, sans-serif;
+  font-variant-numeric: tabular-nums; -webkit-font-smoothing: antialiased;
+}
+.huelle { max-width: 720px; margin: 0 auto; padding: 0 22px; }
+a { color: inherit; }
+[hidden] { display: none !important; }
+
+/* ---------- Kopf ---------- */
+.kopf { background: var(--schwarz); color: var(--auf-schwarz);
+        border-bottom: 2px solid var(--gold); }
+.kopf .huelle { padding: 26px 22px 30px; }
+.marke { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; }
+.marke img { width: 54px; height: auto; display: block; }
+.marke .zeile1 { font-size: .82rem; font-weight: 600; letter-spacing: .04em;
+                 color: var(--gold); line-height: 1.3; }
+.marke .zeile2 { font-size: .78rem; color: rgba(247,245,240,.55); line-height: 1.3; }
+.kopf h1 { margin: 0; font-size: clamp(2.1rem, 11vw, 3.2rem); font-weight: 300;
+           line-height: 1.04; letter-spacing: -.015em; }
+.kopf .saison { margin: 12px 0 0; font-size: .92rem; color: rgba(247,245,240,.62); }
+
+/* ---------- Mannschaftswahl ---------- */
+.wahl { margin: 24px 0 0; }
+.wahl label { display: block; font-size: .74rem; font-weight: 600;
+              letter-spacing: .08em; text-transform: uppercase;
+              color: rgba(247,245,240,.5); margin-bottom: 8px; }
+.wahl select {
+  appearance: none; -webkit-appearance: none; width: 100%;
+  font: inherit; font-size: 1.05rem; font-weight: 600;
+  color: var(--auf-schwarz); background: transparent;
+  border: 1px solid rgba(247,245,240,.28); padding: 13px 44px 13px 14px;
+  background-image: linear-gradient(45deg, transparent 50%, var(--gold) 50%),
+                    linear-gradient(135deg, var(--gold) 50%, transparent 50%);
+  background-position: calc(100% - 21px) 22px, calc(100% - 15px) 22px;
+  background-size: 6px 6px, 6px 6px; background-repeat: no-repeat;
+}
+.wahl select:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.wahl select option { color: #14140f; background: #fff; }
+
+/* ---------- Abschnitte ---------- */
+.liga { margin: 28px 0 0; font-size: .88rem; font-weight: 600;
+        letter-spacing: .04em; color: var(--gold-tief); }
+.teil { padding: 34px 0 0; }
+.rubrik { border-top: 1px solid var(--linie); padding-top: 14px; margin-bottom: 24px;
+          font-size: .95rem; font-weight: 600; color: var(--leise); }
+
+/* ---------- Nächstes Spiel ---------- */
+.marker { font-size: .82rem; font-weight: 600; color: var(--gold-tief);
+          letter-spacing: .04em; margin: 22px 0 10px; }
+.paarung { font-size: clamp(1.5rem, 7vw, 2rem); font-weight: 400; line-height: 1.16;
+           letter-spacing: -.01em; margin: 0 0 22px; overflow-wrap: anywhere; }
+.fakten { margin: 0; }
+.fakten > div { display: flex; gap: 18px; padding: 11px 0;
+                border-top: 1px solid var(--linie-zart); font-size: .95rem; }
+.fakten dt { flex: 0 0 78px; color: var(--leise); }
+.fakten dd { margin: 0; flex: 1; }
+.fakten a { color: inherit; text-decoration: none;
+            box-shadow: inset 0 -1px 0 var(--gold); }
+
+/* ---------- Reiter ---------- */
+.reiter { position: sticky; top: 0; z-index: 5; background: var(--grund);
+          border-bottom: 1px solid var(--linie); display: flex;
+          overflow-x: auto; scrollbar-width: none; margin-top: 32px; }
+.reiter::-webkit-scrollbar { display: none; }
+.reiter button {
+  flex: 0 0 auto; font: inherit; font-size: .92rem; font-weight: 500;
+  background: none; border: 0; border-bottom: 2px solid transparent;
+  color: var(--leise); padding: 15px 18px 13px; margin-bottom: -1px;
+  white-space: nowrap; cursor: pointer;
+}
+.reiter button:first-child { padding-left: 0; }
+.reiter button[aria-selected="true"] { color: var(--tinte); border-bottom-color: var(--gold); }
+.reiter button:focus-visible { outline: 2px solid var(--gold-tief); outline-offset: -4px; }
+
+/* ---------- Abo-Wege ---------- */
+.weg { padding: 26px 0; border-top: 1px solid var(--linie-zart); }
+.rubrik + .weg { border-top: 0; padding-top: 0; }
+.weg h3 { margin: 0 0 6px; font-size: 1.12rem; font-weight: 600; }
+.weg p { margin: 0 0 18px; font-size: .95rem; color: var(--tinte-weich); }
+.knopf {
+  display: block; width: 100%; text-align: center; text-decoration: none;
+  font: inherit; font-size: 1rem; font-weight: 600; padding: 16px 20px;
+  border: 1px solid var(--gold); background: var(--gold); color: #14140f;
+  cursor: pointer; transition: background .15s ease;
+}
+.knopf:hover { background: var(--gold-tief); border-color: var(--gold-tief); }
+.knopf.stumm { background: transparent; color: var(--tinte); border-color: var(--tinte); }
+.knopf.stumm:hover { background: var(--gold-schwach); border-color: var(--gold); }
+.knopf:focus-visible { outline: 2px solid var(--gold-tief); outline-offset: 3px; }
+.schritte { margin: 18px 0 0; padding: 0; list-style: none; font-size: .92rem;
+            color: var(--tinte-weich); counter-reset: schritt; }
+.schritte li { counter-increment: schritt; position: relative;
+               padding: 8px 0 8px 34px; border-top: 1px solid var(--linie-zart); }
+.schritte li::before { content: counter(schritt); position: absolute; left: 0; top: 8px;
+                       font-size: .82rem; font-weight: 600; color: var(--gold-tief); }
+code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .88em; }
+
+/* ---------- Änderungen ---------- */
+.hinweis { border-left: 2px solid var(--gold); padding: 4px 0 4px 18px; margin: 26px 0 0; }
+.hinweis h3 { margin: 0 0 8px; font-size: .82rem; font-weight: 600;
+              letter-spacing: .04em; color: var(--gold-tief); }
+.hinweis ul { margin: 0 0 14px; padding-left: 18px; font-size: .95rem; }
+.hinweis li { margin: 5px 0; }
+.hinweis button { font: inherit; font-size: .88rem; font-weight: 600;
+                  background: none; border: 1px solid var(--linie);
+                  color: var(--tinte); padding: 9px 16px; cursor: pointer; }
+.hinweis button:hover { border-color: var(--gold); background: var(--gold-schwach); }
+
+/* ---------- Spielplan ---------- */
+.monat { font-size: .82rem; font-weight: 600; letter-spacing: .06em;
+         text-transform: uppercase; color: var(--leise); padding: 28px 0 10px; }
+.monat:first-child { padding-top: 4px; }
+.spiel { display: grid; grid-template-columns: 58px 1fr auto; gap: 0 14px;
+         align-items: start; padding: 15px 0; border-top: 1px solid var(--linie); }
+.spiel .datum { font-size: .88rem; font-weight: 600; line-height: 1.3; }
+.spiel .datum span { display: block; font-weight: 400; color: var(--leise); }
+.spiel .gegner { font-size: 1.02rem; font-weight: 500; line-height: 1.3;
+                 overflow-wrap: anywhere; }
+.spiel .halle { font-size: .88rem; color: var(--leise); margin-top: 3px; }
+.spiel .halle a { text-decoration: none; box-shadow: inset 0 -1px 0 var(--linie); }
+.spiel .halle a:hover { box-shadow: inset 0 -1px 0 var(--gold); }
+.rechts { text-align: right; min-width: 46px; }
+.hz { font-size: .78rem; font-weight: 600; color: var(--leise); }
+.hz.heim { color: var(--gold-tief); }
+.stand { font-size: .95rem; font-weight: 700; margin-top: 2px; white-space: nowrap; }
+.stand.S { color: var(--sieg); }
+.stand.N { color: var(--niederlage); }
+.spiel.vorbei { opacity: .55; }
+.spiel.vorbei .gegner { font-weight: 400; }
+.spiel.jetzt { border-top-color: var(--gold); box-shadow: inset 0 2px 0 var(--gold); }
+
+/* ---------- Tabelle ---------- */
+.tabellenhuelle { overflow-x: auto; }
+table.tabelle { width: 100%; border-collapse: collapse; font-size: .92rem; }
+table.tabelle th { text-align: right; font-size: .74rem; font-weight: 600;
+                   letter-spacing: .06em; text-transform: uppercase; color: var(--leise);
+                   padding: 0 0 10px; border-bottom: 1px solid var(--linie);
+                   white-space: nowrap; }
+table.tabelle th.platz { text-align: left; width: 26px; }
+table.tabelle th.mann { text-align: left; }
+table.tabelle td { padding: 11px 0; border-bottom: 1px solid var(--linie-zart);
+                   text-align: right; white-space: nowrap; }
+table.tabelle td.platz { text-align: left; color: var(--leise); font-size: .86rem; }
+table.tabelle td.mann { text-align: left; white-space: normal;
+                        overflow-wrap: anywhere; padding-right: 12px; line-height: 1.3; }
+table.tabelle td + td, table.tabelle th + th { padding-left: 12px; }
+table.tabelle td.pkt { font-weight: 600; }
+table.tabelle tr.wir td { background: var(--gold-schwach); font-weight: 600; }
+table.tabelle tr.wir td.platz { box-shadow: inset 2px 0 0 var(--gold); }
+.tabellenfuss { margin: 14px 0 0; font-size: .84rem; color: var(--leise); }
+.nur-breit { display: none; }
+@media (min-width: 560px) { .nur-breit { display: table-cell; } }
+
+/* ---------- Tipp / Fuß ---------- */
+.tipp { margin: 26px 0 0; padding: 16px 0 0; border-top: 1px solid var(--linie-zart);
+        font-size: .9rem; color: var(--tinte-weich); }
+.tipp b { font-weight: 600; color: var(--tinte); }
+.fuss { margin: 46px 0 0; padding: 20px 0 46px; border-top: 1px solid var(--linie);
+        font-size: .88rem; color: var(--leise); }
+.fuss a { color: var(--leise); }
+
+@media (min-width: 640px) {
+  .kopf .huelle { padding: 34px 22px 40px; }
+  .fakten dt { flex: 0 0 110px; }
+  .knopf { display: inline-block; width: auto; min-width: 280px; }
+  .wahl select { max-width: 320px; }
+}
+"""
