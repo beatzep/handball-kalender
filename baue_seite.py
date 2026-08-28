@@ -142,8 +142,7 @@ def mitmachblock(spiel_code: str, vorher_code: str | None, worker: str) -> str:
       <button type="button" data-dabei aria-pressed="false">Ich bin dabei</button>
       <span class="anzahl" data-anzahl></span>
     </div>
-    <p class="fussnote">Ohne Namen, nur als Anhaltspunkt – gezählt wird pro Gerät,
-       und du kannst dich jederzeit wieder abmelden.</p>
+    <p class="fussnote">Ohne Namen, gezählt wird pro Gerät.</p>
   </div>
 </div>"""
 
@@ -232,8 +231,7 @@ def tabellenblock(tabelle: dict, eigenes_team: int | None) -> str:
             f'<td class="pkt">{e["punkte"]}</td></tr>')
 
     fuss = (f'Stand nach Spieltag {tabelle["runde"]}.' if tabelle.get("gespielt")
-            else "Die Saison hat noch nicht begonnen – alle Mannschaften stehen "
-                 "bei null, die Reihenfolge hat noch keine Aussagekraft.")
+            else "Die Saison hat noch nicht begonnen.")
 
     return f"""<div class="tabellenhuelle">
 <table class="tabelle">
