@@ -456,6 +456,15 @@ table.tabelle tr.wir td.platz { box-shadow: inset 2px 0 0 var(--gold); }
 #meine-inhalt .konflikt strong { color: var(--tinte); font-weight: 600; }
 #meine-inhalt .wessen { font-size: .74rem; font-weight: 600; letter-spacing: .06em;
   text-transform: uppercase; color: var(--gold-tief); margin-bottom: 2px; }
+/* Wie auf der Wochenend-Uebersicht: der Name deckt die ganze Zeile ab.
+   Der Hallenlink liegt darueber und bleibt einzeln antippbar. */
+#meine-inhalt .spiel { position: relative; }
+#meine-inhalt .zurmannschaft { color: inherit; text-decoration: none; }
+#meine-inhalt .zurmannschaft::after { content: ''; position: absolute; inset: 0; }
+#meine-inhalt .spiel:hover .wessen { color: var(--gold); }
+#meine-inhalt .spiel .halle a { position: relative; z-index: 1; }
+#meine-inhalt .zurmannschaft:focus-visible { outline: 2px solid var(--gold);
+                                            outline-offset: 3px; }
 #meine-inhalt .spiel.stoerung { box-shadow: inset 2px 0 0 var(--niederlage);
   padding-left: 10px; margin-left: -10px; }
 #meine-inhalt .leer { color: var(--leise); font-size: .95rem; margin: 18px 0 0; }
@@ -3885,35 +3894,35 @@ rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
   </div>
 </section><section data-team="ge-2" hidden>
   <p class="liga">Bezirksklasse GEMISCHT &middot; 8 Spiele</p>
-  <div class="marker"><span data-anwurf="2026-08-29T15:30:00+02:00">Heute</span>
- &middot; Heimspiel</div>
-<h2 class="paarung">MuRu gE II &ndash; HSG Grethen/Maxdorf</h2>
-<p class="countdown" data-countdown="2026-08-29T15:30:00+02:00"></p>
+  <div class="marker"><span data-anwurf="2026-09-06T13:15:00+02:00">Nächstes Spiel</span>
+ &middot; Auswärtsspiel</div>
+<h2 class="paarung">Hlz Friesenheim/Hochdorf 2 &ndash; MuRu gE II</h2>
+<p class="countdown" data-countdown="2026-09-06T13:15:00+02:00"></p>
 <dl class="fakten">
-<div><dt>Anwurf</dt><dd>Samstag, 29.08.2026, 15:30 Uhr</dd></div>
-<div><dt>Halle</dt><dd>TSG-Sporthalle Mutterstadt</dd></div>
-<div><dt>Adresse</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank"
-rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
+<div><dt>Anwurf</dt><dd>Sonntag, 06.09.2026, 13:15 Uhr</dd></div>
+<div><dt>Halle</dt><dd>Sportzentrum TV Hochdorf</dd></div>
+<div><dt>Adresse</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=Sportzentrum%20TV%20Hochdorf%20Im%20Einolf%202%2C%2067126%20Hochdorf" target="_blank"
+rel="noopener">Im Einolf 2, 67126 Hochdorf</a></dd></div>
 </dl>
-  <div class="vorschau"><h3>Gegen HSG Grethen/Maxdorf</h3><dl class="gegnerdaten"><div><dt>Tabelle</dt><dd>Platz 6</dd></div><div><dt>Punkte</dt><dd>0</dd></div><div><dt>Spiele</dt><dd>0</dd></div><div><dt>Tordifferenz</dt><dd>+0</dd></div></dl></div>
-  <div class="mitmachen" data-spiel="2627RPBKRKEJGE0102"
-     data-vorher="" data-worker="https://muru-zaehler.edis-herrmann.workers.dev">
+  <div class="vorschau"><h3>Gegen Hlz Friesenheim/Hochdorf 2</h3><dl class="gegnerdaten"><div><dt>Tabelle</dt><dd>Platz 1</dd></div><div><dt>Punkte</dt><dd>2</dd></div><div><dt>Spiele</dt><dd>1</dd></div><div><dt>Tordifferenz</dt><dd>+7</dd></div></dl></div>
+  <div class="mitmachen" data-spiel="2627RPBKRKEJGE0204"
+     data-vorher="2627RPBKRKEJGE0102" data-worker="https://muru-zaehler.edis-herrmann.workers.dev">
   <div class="hype">
     <div class="titel">Hype vor dem Spiel</div>
     <div><span class="zahl" data-hype>&ndash;</span><span class="vergleich" data-vergleich></span></div>
     <div class="bahn" data-bahn></div>
     <div class="knoepfe"><button type="button" data-emoji="🦊" aria-label="Anfeuern mit 🦊">🦊</button><button type="button" data-emoji="🔥" aria-label="Anfeuern mit 🔥">🔥</button><button type="button" data-emoji="🎉" aria-label="Anfeuern mit 🎉">🎉</button><button type="button" data-emoji="🍻" aria-label="Anfeuern mit 🍻">🍻</button></div>
   </div>
-  <div class="tippspiel" data-tipp="2627RPBKRKEJGE0102" data-mannschaft="ge-2"
-       data-heimname="MuRu gE II" data-gastname="HSG Grethen/Maxdorf">
+  <div class="tippspiel" data-tipp="2627RPBKRKEJGE0204" data-mannschaft="ge-2"
+       data-heimname="Hlz Friesenheim/Hochdorf 2" data-gastname="MuRu gE II">
     <div class="titel">Tipprunde</div>
     <div class="tippzeile">
-      <div><label for="tipp-heim-2627RPBKRKEJGE0102">MuRu gE II</label>
-        <input id="tipp-heim-2627RPBKRKEJGE0102" data-tippfeld="heim" type="number"
+      <div><label for="tipp-heim-2627RPBKRKEJGE0204">Hlz Friesenheim/Hochdorf 2</label>
+        <input id="tipp-heim-2627RPBKRKEJGE0204" data-tippfeld="heim" type="number"
                inputmode="numeric" min="0" max="99" placeholder="–"></div>
       <div class="doppel">:</div>
-      <div><label for="tipp-gast-2627RPBKRKEJGE0102">HSG Grethen/Maxdorf</label>
-        <input id="tipp-gast-2627RPBKRKEJGE0102" data-tippfeld="gast" type="number"
+      <div><label for="tipp-gast-2627RPBKRKEJGE0204">MuRu gE II</label>
+        <input id="tipp-gast-2627RPBKRKEJGE0204" data-tippfeld="gast" type="number"
                inputmode="numeric" min="0" max="99" placeholder="–"></div>
     </div>
     <input class="name" data-tippname type="text" maxlength="24"
@@ -3985,17 +3994,17 @@ rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
     <button type="button" data-format="story" aria-pressed="true">Story 9:16</button>
     <button type="button" data-format="post" aria-pressed="false">Beitrag 1:1</button>
   </div>
-  <button type="button" class="knopf stumm" data-grafik='{"art": "spiel", "verein": "HSG Mutterstadt/Ruchheim", "mannschaft": "gE-Jugend II", "gegner": "HSG Grethen/Maxdorf", "heim": true, "datum": "2026-08-29T15:30:00+02:00", "datum_text": "Samstag, 29.08.2026", "uhrzeit": "15:30", "halle": "TSG-Sporthalle Mutterstadt", "ort": "67112 Mutterstadt", "liga": "Bezirksklasse GEMISCHT", "spieltag": 1}'>Bild fürs nächste Spiel</button>
+  <button type="button" class="knopf stumm" data-grafik='{"art": "spiel", "verein": "HSG Mutterstadt/Ruchheim", "mannschaft": "gE-Jugend II", "gegner": "Hlz Friesenheim/Hochdorf 2", "heim": false, "datum": "2026-09-06T13:15:00+02:00", "datum_text": "Sonntag, 06.09.2026", "uhrzeit": "13:15", "halle": "Sportzentrum TV Hochdorf", "ort": "67126 Hochdorf", "liga": "Bezirksklasse GEMISCHT", "spieltag": 2}'>Bild fürs nächste Spiel</button>
   
   <p class="statfuss">Das Bild wird auf deinem Handy erzeugt. Es geht nichts
      an uns oder sonstwohin.</p>
 </div></div>
-  <div class="teil" data-ansicht="spiele" hidden><div class="monat">August 2026</div><div class="spiel jetzt">
+  <div class="teil" data-ansicht="spiele" hidden><div class="monat">August 2026</div><div class="spiel vorbei">
 <div class="datum">Sa 29.08.<span>15:30</span></div>
 <div><div class="gegner">HSG Grethen/Maxdorf</div>
 <div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
 <div class="rechts"><div class="hz heim">H</div></div>
-</div><div class="monat">September 2026</div><div class="spiel">
+</div><div class="monat">September 2026</div><div class="spiel jetzt">
 <div class="datum">So 06.09.<span>13:15</span></div>
 <div><div class="gegner">Hlz Friesenheim/Hochdorf 2</div>
 <div class="halle"><a href="https://www.google.com/maps/search/?api=1&amp;query=Sportzentrum%20TV%20Hochdorf%20Im%20Einolf%202%2C%2067126%20Hochdorf" target="_blank" rel="noopener">Sportzentrum TV Hochdorf</a></div></div>
@@ -5264,6 +5273,19 @@ window.muruGeraet = (function () {
   frischeZeitangaben();
   seite.setAttribute('data-bereit', 'ja');
 
+  // Auf eine geaenderte Adresse reagieren. Bisher wurde sie nur beim Laden
+  // gelesen: ein Link auf #mb blieb wirkungslos, wenn die Seite schon offen
+  // war - beim Sprung aus "Meine Mannschaften" ebenso wie bei einem
+  // geteilten Link, den der Empfaenger in einem offenen Tab anklickt.
+  window.addEventListener('hashchange', function () {
+    var ziel = ausAdresse();
+    if (!ziel.team || ziel.team === aktiv) return;
+    if (!zeigeMannschaft(ziel.team)) return;
+    aktiv = ziel.team;
+    zeigeAnsicht(aktiv, ziel.ansicht);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
   wahl.addEventListener('change', function () {
     aktiv = wahl.value;
     zeigeMannschaft(aktiv);
@@ -5727,7 +5749,8 @@ window.muruGeraet = (function () {
       + '<div class="datum">' + TAGE[s.anwurf.getDay()] + ' '
       + zweistellig(s.anwurf.getDate()) + '.' + zweistellig(s.anwurf.getMonth() + 1) + '.'
       + '<span>' + (s.ohneZeit ? 'offen' : uhr(s.anwurf)) + '</span></div>'
-      + '<div><div class="wessen">' + esc(s.mannschaft) + '</div>'
+      + '<div><div class="wessen"><a class="zurmannschaft" href="#'
+      + esc(s.roh.m) + '">' + esc(s.mannschaft) + '</a></div>'
       + '<div class="gegner">' + esc(s.gegner) + '</div>' + halle + '</div>'
       + '<div class="rechts"><div class="hz' + (s.heim ? ' heim' : '') + '">'
       + (s.heim ? 'H' : 'A') + '</div></div></div>';

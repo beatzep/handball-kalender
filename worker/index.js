@@ -636,6 +636,13 @@ async function nachschauen(env) {
       },
       body: JSON.stringify({ event_type: "spielplan-nachziehen" }),
     });
+  const text = r.status === 204 ? "" : await r.text();
   console.log(`Daten waren ${Math.round(alter)} Minuten alt, Workflow angestossen:`,
-              r.status, r.status === 204 ? "" : await r.text());
+              r.status, text);
+  if (r.status === 403) {
+    // Haeufigste Ursache: der Token hat "Actions" statt "Contents".
+    // repository_dispatch haengt bei GitHub an den Repository-Inhalten.
+    console.error("403 - der Token braucht die Berechtigung "
+                  + "'Contents: Read and write' auf dieses Repository");
+  }
 }

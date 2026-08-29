@@ -44,15 +44,31 @@ def kartenlink(spiel: dict) -> str:
 def sammle(daten: dict, von: datetime, bis: datetime) -> list[dict]:
     """Alle Spiele im Zeitraum, quer über alle Mannschaften."""
     treffer = []
-    for team in (daten.get("teams") or {}).values():
+    for schluessel, team in (daten.get("teams") or {}).items():
         for spiel in (team.get("spiele") or {}).values():
             wann = datetime.fromisoformat(spiel["datum"]).replace(tzinfo=TZ)
             if von <= wann <= bis:
                 treffer.append({**spiel, "mannschaft": team.get("name", ""),
                                 "kurzname": team.get("kurzname", ""),
+                                "schluessel": schluessel,
                                 "wann": wann})
     # Nach Zeit, bei gleicher Zeit nach Mannschaft
     return sorted(treffer, key=lambda s: (s["wann"], s["mannschaft"]))
+
+
+def mannschaftslink(spiel: dict) -> str:
+    """Der Mannschaftsname als Weg auf ihre Seite.
+
+    Die Flaeche des Links wird per CSS ueber die ganze Zeile gezogen, damit
+    man auf dem Handy nicht den Namen treffen muss. Verschachteln laesst er
+    sich nicht: die Halle ist bereits ein Link zur Karte, und Links
+    ineinander sind in HTML nicht erlaubt."""
+    name = sicher(spiel.get("mannschaft"))
+    schluessel = spiel.get("schluessel")
+    if not schluessel:
+        return name
+    return (f'<a class="zurmannschaft" href="index.html#{sicher(schluessel)}">'
+            f'{name}</a>')
 
 
 def zeile(spiel: dict) -> str:
@@ -69,7 +85,7 @@ def zeile(spiel: dict) -> str:
     return f"""<div class="partie{' heimspiel' if heim else ''}" data-heim="{'ja' if heim else 'nein'}"
  data-tag="{spiel['wann']:%Y-%m-%d}">
 <div class="uhr">{uhr}</div>
-<div><div class="wer">{sicher(spiel.get('mannschaft'))}</div>
+<div><div class="wer">{mannschaftslink(spiel)}</div>
 <div class="gegen">{'gegen' if heim else 'bei'} {sicher(spiel.get('gegner'))}</div>
 <div class="wo">{ort}</div></div>
 <div class="rechts"><div class="hz {'heim' if heim else ''}">{'H' if heim else 'A'}</div>{ergebnis}</div>
@@ -250,12 +266,24 @@ ZUSATZSTIL = """
 .tag { font-size: .82rem; font-weight: 600; letter-spacing: .06em;
        text-transform: uppercase; color: var(--leise); padding: 30px 0 10px; }
 .partie { display: grid; grid-template-columns: 58px 1fr auto; gap: 0 14px;
-          align-items: start; padding: 14px 0; border-top: 1px solid var(--linie); }
+          align-items: start; padding: 14px 0; border-top: 1px solid var(--linie);
+          position: relative; }
+/* Der Link im Mannschaftsnamen deckt die ganze Zeile ab - auf dem Handy
+   will niemand einen kleinen Namen treffen. Die Halle ist bereits ein Link
+   zur Karte und liegt darueber (siehe .partie .wo a), Links ineinander
+   waeren nicht erlaubt. */
+.partie .zurmannschaft { color: inherit; text-decoration: none;
+                         box-shadow: inset 0 -1px 0 var(--linie); }
+.partie .zurmannschaft::after { content: ''; position: absolute; inset: 0; }
+.partie:hover .zurmannschaft { box-shadow: inset 0 -1px 0 var(--gold); }
+.partie .zurmannschaft:focus-visible { outline: 2px solid var(--gold);
+                                       outline-offset: 3px; }
 .partie .uhr { font-size: .88rem; font-weight: 600; }
 .partie .wer { font-size: 1.02rem; font-weight: 600; line-height: 1.3; }
 .partie .gegen { font-size: .95rem; line-height: 1.35; overflow-wrap: anywhere; }
 .partie .wo { font-size: .86rem; color: var(--leise); margin-top: 2px; }
-.partie .wo a { text-decoration: none; box-shadow: inset 0 -1px 0 var(--linie); }
+.partie .wo a { text-decoration: none; box-shadow: inset 0 -1px 0 var(--linie);
+                position: relative; z-index: 1; }
 .partie .wo a:hover { box-shadow: inset 0 -1px 0 var(--gold); }
 .partie.heimspiel { box-shadow: inset 3px 0 0 var(--gold); padding-left: 12px;
                     margin-left: -12px; }

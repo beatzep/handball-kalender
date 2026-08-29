@@ -157,6 +157,29 @@ Drei Eigenheiten der Verbandsdaten, die dabei zutage traten:
 Mehrere Spiele zur selben Zeit sind bei Spielfesten normal; der Audit meldet
 sie nur, wenn sie in **verschiedenen Hallen** stattfinden sollen.
 
+## Von einem Spiel zur Mannschaft
+
+Auf der Wochenend-Übersicht steht ein Ergebnis, und man will mehr über die
+Mannschaft wissen – bisher hieß das: zurück und aus 23 Einträgen neu wählen.
+Jetzt führt jede Zeile direkt auf `index.html#<mannschaft>`.
+
+Zwei Dinge waren dabei zu lösen:
+
+- **Die Halle ist bereits ein Link** zur Karte, und Links lassen sich in HTML
+  nicht ineinander schachteln. Deshalb liegt der Link im Mannschaftsnamen und
+  wird per `::after { inset: 0 }` über die ganze Zeile gezogen; der Hallenlink
+  bekommt `z-index: 1` und bleibt einzeln antippbar. Auf dem Handy will
+  niemand einen kleinen Namen treffen müssen.
+- **Die Seite las die Adresse nur beim Laden.** Ein Verweis auf `#mb` aus
+  „Meine Mannschaften" heraus änderte nur den Anker und bewirkte nichts – der
+  gleiche Fall wie bei einem geteilten Link, den der Empfänger in einem schon
+  offenen Tab anklickt. Ein `hashchange`-Empfänger behebt beides.
+
+`pruefe_verweise.py` stellt sicher, dass jeder Verweis bei einer Mannschaft
+ankommt, dass keine Zeile ohne Weg dasteht und dass der Rückweg existiert.
+Ein Tippfehler im Schlüssel fiele sonst niemandem auf: die Seite zeigt dann
+stumm die erste Mannschaft, statt einen Fehler zu melden.
+
 ## Meine Mannschaften
 
 Wer zwei Kinder im Verein hat oder selbst in zwei Altersklassen spielt, hält
@@ -379,8 +402,13 @@ npx wrangler secret put GITHUB_TOKEN
 ```
 
 Ein **Fine-grained Token** genügt, beschränkt auf dieses eine Repository, mit
-der einen Berechtigung **Actions: Read and write**. Mehr braucht er nicht, und
-mehr sollte er nicht haben. Ohne Token protokolliert der Worker das und tut
+der einen Berechtigung **Contents: Read and write**. Mehr braucht er nicht, und
+mehr sollte er nicht haben.
+
+Nicht „Actions", auch wenn der Anstoß einen Workflow startet: `repository_dispatch`
+hängt bei GitHub an den Repository-Inhalten. Mit einem Actions-Token antwortet
+die API mit `403 Resource not accessible by personal access token` – der Worker
+protokolliert das im Klartext, sichtbar über `npx wrangler tail`. Ohne Token protokolliert der Worker das und tut
 nichts – die geplanten Läufe von GitHub greifen dann wie bisher.
 
 `node worker/test_cron.mjs` prüft die Entscheidung: frische Daten lösen nichts

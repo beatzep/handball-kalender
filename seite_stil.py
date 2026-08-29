@@ -450,6 +450,15 @@ table.tabelle tr.wir td.platz { box-shadow: inset 2px 0 0 var(--gold); }
 #meine-inhalt .konflikt strong { color: var(--tinte); font-weight: 600; }
 #meine-inhalt .wessen { font-size: .74rem; font-weight: 600; letter-spacing: .06em;
   text-transform: uppercase; color: var(--gold-tief); margin-bottom: 2px; }
+/* Wie auf der Wochenend-Uebersicht: der Name deckt die ganze Zeile ab.
+   Der Hallenlink liegt darueber und bleibt einzeln antippbar. */
+#meine-inhalt .spiel { position: relative; }
+#meine-inhalt .zurmannschaft { color: inherit; text-decoration: none; }
+#meine-inhalt .zurmannschaft::after { content: ''; position: absolute; inset: 0; }
+#meine-inhalt .spiel:hover .wessen { color: var(--gold); }
+#meine-inhalt .spiel .halle a { position: relative; z-index: 1; }
+#meine-inhalt .zurmannschaft:focus-visible { outline: 2px solid var(--gold);
+                                            outline-offset: 3px; }
 #meine-inhalt .spiel.stoerung { box-shadow: inset 2px 0 0 var(--niederlage);
   padding-left: 10px; margin-left: -10px; }
 #meine-inhalt .leer { color: var(--leise); font-size: .95rem; margin: 18px 0 0; }

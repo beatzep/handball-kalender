@@ -162,6 +162,19 @@ window.muruGeraet = (function () {
   frischeZeitangaben();
   seite.setAttribute('data-bereit', 'ja');
 
+  // Auf eine geaenderte Adresse reagieren. Bisher wurde sie nur beim Laden
+  // gelesen: ein Link auf #mb blieb wirkungslos, wenn die Seite schon offen
+  // war - beim Sprung aus "Meine Mannschaften" ebenso wie bei einem
+  // geteilten Link, den der Empfaenger in einem offenen Tab anklickt.
+  window.addEventListener('hashchange', function () {
+    var ziel = ausAdresse();
+    if (!ziel.team || ziel.team === aktiv) return;
+    if (!zeigeMannschaft(ziel.team)) return;
+    aktiv = ziel.team;
+    zeigeAnsicht(aktiv, ziel.ansicht);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
   wahl.addEventListener('change', function () {
     aktiv = wahl.value;
     zeigeMannschaft(aktiv);

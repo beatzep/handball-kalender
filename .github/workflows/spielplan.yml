@@ -73,6 +73,11 @@ jobs:
       - name: Datenblock der verschraenkten Ansicht pruefen
         run: python3 pruefe_konflikte.py
 
+      # Ein Tippfehler im Mannschaftsschluessel faellt sonst niemandem auf:
+      # die Seite zeigt dann stumm die erste Mannschaft.
+      - name: Verweise zwischen den Seiten pruefen
+        run: python3 pruefe_verweise.py
+
       # Gleicht die fertigen Kalender noch einmal gegen handball.net ab -
       # unabhaengig vom Generator, also ein echter Abgleich statt einer
       # Selbstbestaetigung. Schlaegt er an, wird nichts committet und die

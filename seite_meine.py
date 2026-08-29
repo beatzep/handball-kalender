@@ -166,7 +166,8 @@ MEINE = """
       + '<div class="datum">' + TAGE[s.anwurf.getDay()] + ' '
       + zweistellig(s.anwurf.getDate()) + '.' + zweistellig(s.anwurf.getMonth() + 1) + '.'
       + '<span>' + (s.ohneZeit ? 'offen' : uhr(s.anwurf)) + '</span></div>'
-      + '<div><div class="wessen">' + esc(s.mannschaft) + '</div>'
+      + '<div><div class="wessen"><a class="zurmannschaft" href="#'
+      + esc(s.roh.m) + '">' + esc(s.mannschaft) + '</a></div>'
       + '<div class="gegner">' + esc(s.gegner) + '</div>' + halle + '</div>'
       + '<div class="rechts"><div class="hz' + (s.heim ? ' heim' : '') + '">'
       + (s.heim ? 'H' : 'A') + '</div></div></div>';

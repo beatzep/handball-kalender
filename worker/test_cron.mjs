@@ -75,6 +75,19 @@ pruefe("Daten nicht erreichbar: erst recht anstossen", g.length === 1,
 g = await lauf({ alterMinuten: 200, token: "" });   // "" statt undefined: sonst greift der Vorgabewert
 pruefe("Ohne Token passiert nichts (kein Absturz)", g.length === 0);
 
+// Der haeufigste Stolperstein: Token mit "Actions" statt "Contents".
+// GitHub antwortet dann mit 403 - der Worker muss das ueberstehen und die
+// Ursache nennen, sonst sucht man wieder stundenlang.
+{
+  const meldungen = [];
+  const echtesLog = console.error;
+  console.error = (...a) => meldungen.push(a.join(" "));
+  await lauf({ alterMinuten: 200, dispatchStatus: 403 });
+  console.error = echtesLog;
+  pruefe("Bei 403 nennt der Worker die fehlende Berechtigung",
+         meldungen.some((m) => /Contents/.test(m)), JSON.stringify(meldungen));
+}
+
 // Ein abgelehnter Anstoss darf den Worker nicht umbringen
 let geworfen = false;
 try {
