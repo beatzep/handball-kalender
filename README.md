@@ -146,6 +146,42 @@ Drei Eigenheiten der Verbandsdaten, die dabei zutage traten:
 Mehrere Spiele zur selben Zeit sind bei Spielfesten normal; der Audit meldet
 sie nur, wenn sie in **verschiedenen Hallen** stattfinden sollen.
 
+## Meine Mannschaften
+
+Wer zwei Kinder im Verein hat oder selbst in zwei Altersklassen spielt, hält
+sonst zwei Spielpläne nebeneinander. Ab **zwei angehefteten** Mannschaften
+erscheint im Dropdown der Eintrag *Meine Mannschaften*: beide Spielpläne in
+einer chronologischen Liste, jede Zeile mit dem Mannschaftskürzel.
+
+Der interessante Teil sind die Terminkollisionen. Geprüft wird jedes Paar von
+Spielen am selben Tag:
+
+- **Überschneidung** – das zweite wirft an, bevor das erste abgepfiffen ist
+  (gerechnet mit 105 Minuten Spieldauer inklusive Pause).
+- **Fahrzeit reicht nicht** – zwischen Abpfiff und Anwurf liegen weniger
+  Minuten, als die Strecke zwischen den Hallen braucht. Die Entfernung kommt
+  aus denselben Koordinaten wie der Kilometerzähler (Luftlinie mal 1,3, 70
+  km/h, plus 10 Minuten fürs Parken).
+- **Knapp** – es geht aus, aber ohne Umweg (weniger als 30 Minuten Luft).
+
+Zwei Fälle sind bewusst *keine* Kollision: zwei Spiele derselben Mannschaft an
+einem Tag (Turniertag) und zwei Spiele **in derselben Halle** nacheinander –
+das ist der normale Doppelspieltag, man bleibt einfach sitzen. Ohne diese
+zweite Regel meldete die Ansicht für Herren I und II vierzehn Konflikte statt
+sechs, und die Warnung wäre wertlos geworden.
+
+Die Ansicht rechnet im Browser, aus einem eigenen kompakten Datenblock im
+Dokument (`<script id="spieldaten">`, rund 70 kB für 338 Spiele). Weil dieser
+Block von den Spielplänen abweichen könnte, ohne dass es jemandem auffällt,
+prüft `pruefe_konflikte.py` ihn Feld für Feld gegen `docs/daten.json` und
+rechnet die Konfliktlogik ein zweites Mal in Python nach. Beide
+Implementierungen kamen über alle 253 Mannschaftspaare auf dasselbe Ergebnis
+(193 Paare mit Konflikt, 571 Kollisionen).
+
+Bei weniger als zwei angehefteten Mannschaften steht unter der Auswahl ein
+Hinweis – ohne ihn findet niemand die Funktion, denn *Anheften* klingt nach
+Lesezeichen.
+
 ## Auswertung der Nutzung
 
 `docs/admin.html` zeigt Aufrufe, Aktionen und Verteilung nach Mannschaft und

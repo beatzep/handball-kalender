@@ -427,4 +427,33 @@ table.tabelle tr.wir td.platz { box-shadow: inset 2px 0 0 var(--gold); }
   .knopf { display: inline-block; width: auto; min-width: 280px; }
   .wahl select { max-width: 320px; }
 }
+
+/* Meine Mannschaften: verschraenkter Blick */
+#meine-inhalt .naechstes { border-top: 2px solid var(--gold); padding: 16px 0 18px;
+  margin-top: 14px; }
+#meine-inhalt .wann { margin: 0; font-size: .74rem; font-weight: 600;
+  letter-spacing: .1em; text-transform: uppercase; color: var(--gold-tief); }
+#meine-inhalt .wer { margin: 8px 0 0; font-size: 1.32rem; font-weight: 600;
+  line-height: 1.2; letter-spacing: -.01em; }
+#meine-inhalt .gegen { margin: 2px 0 0; font-size: 1.05rem; color: var(--tinte-weich); }
+#meine-inhalt .dann { margin: 8px 0 0; font-size: .9rem; color: var(--leise); }
+#meine-inhalt .konflikte { border: 1px solid var(--linie); border-left: 3px solid var(--niederlage);
+  padding: 14px 16px; margin: 20px 0 4px; }
+#meine-inhalt .konfliktkopf { margin: 0 0 8px; font-size: .74rem; font-weight: 600;
+  letter-spacing: .1em; text-transform: uppercase; color: var(--niederlage); }
+#meine-inhalt .konflikt { margin: 0; font-size: .92rem; line-height: 1.5;
+  color: var(--tinte-weich); }
+#meine-inhalt .konflikt + .konflikt { margin-top: 10px; padding-top: 10px;
+  border-top: 1px solid var(--linie-zart); }
+#meine-inhalt .weitere { margin: 10px 0 0; padding-top: 10px;
+  border-top: 1px solid var(--linie-zart); font-size: .85rem; color: var(--leise); }
+#meine-inhalt .konflikt strong { color: var(--tinte); font-weight: 600; }
+#meine-inhalt .wessen { font-size: .74rem; font-weight: 600; letter-spacing: .06em;
+  text-transform: uppercase; color: var(--gold-tief); margin-bottom: 2px; }
+#meine-inhalt .spiel.stoerung { box-shadow: inset 2px 0 0 var(--niederlage);
+  padding-left: 10px; margin-left: -10px; }
+#meine-inhalt .leer { color: var(--leise); font-size: .95rem; margin: 18px 0 0; }
+.anheftwink { margin: 12px 0 0; font-size: .82rem; line-height: 1.5;
+  color: rgba(247,245,240,.62); max-width: 34em; }
+.anheftwink strong { color: var(--gold); font-weight: 600; }
 """

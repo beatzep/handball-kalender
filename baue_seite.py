@@ -17,6 +17,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 from seite_ansicht import ANSICHT
+from seite_meine import MEINE
 from seite_grafik import GRAFIK
 from seite_skript import SKRIPT
 from seite_tipp import TIPP
@@ -595,6 +596,35 @@ def abo_block(team: dict, basis: str) -> str:
 </div>"""
 
 
+def spieldaten_kompakt(teams: dict) -> str:
+    """Alle Spiele in einer knappen Liste fuer die verschraenkte Ansicht.
+
+    Kurze Schluesselnamen, weil das im Dokument landet: bei 338 Spielen
+    macht das den Unterschied zwischen 40 und 90 kB."""
+    eintraege = []
+    for schluessel, team in teams.items():
+        for spiel in (team.get("spiele") or {}).values():
+            e = {
+                "m": schluessel,
+                "n": team.get("name", ""),
+                "d": spiel["datum"],
+                "g": spiel.get("gegner", ""),
+                "h": spiel.get("halle", ""),
+                "o": spiel.get("ort", ""),
+                "z": 1 if spiel.get("heim") else 0,
+            }
+            if spiel.get("ohne_zeit"):
+                e["k"] = 1                      # keine Anwurfzeit
+            if spiel.get("lat") and spiel.get("lon"):
+                e["p"] = [round(float(spiel["lat"]), 4), round(float(spiel["lon"]), 4)]
+            if spiel.get("ergebnis"):
+                erg = spiel["ergebnis"]
+                e["e"] = [erg["eigene"], erg["fremde"], erg["ausgang"]]
+            eintraege.append(e)
+    eintraege.sort(key=lambda x: x["d"])
+    return json.dumps(eintraege, ensure_ascii=False, separators=(",", ":"))
+
+
 def mannschaftsblock(schluessel: str, team: dict, basis: str, heute: datetime,
                      worker: str = "") -> str:
     spiele_mit_code = sorted((team.get("spiele") or {}).items(),
@@ -662,9 +692,10 @@ def main() -> None:
     for k, t in teams.items():
         gruppen.setdefault(t.get("gruppe") or "Mannschaften", []).append(
             f'<option value="{sicher(k)}">{sicher(t["name"])}</option>')
-    optionen = "".join(
+    optionen = ('<option value="meine" hidden>Meine Mannschaften</option>'
+                + "".join(
         f'<optgroup label="{sicher(name)}" data-gruppe="{sicher(name)}">{"".join(eintraege)}</optgroup>'
-        for name, eintraege in gruppen.items())
+        for name, eintraege in gruppen.items()))
     bloecke = "".join(
         mannschaftsblock(k, t, cfg.basis_url, heute, cfg.worker_url)
         for k, t in teams.items())
@@ -721,12 +752,17 @@ automatisch im Handykalender, Verlegungen inklusive.">
       <select id="teamwahl">{optionen}</select>
       <button id="anheften" type="button" aria-pressed="false"
               title="Mannschaft oben in der Liste festhalten">Anheften</button>
+      <p class="anheftwink" id="anheftwink" hidden></p>
       <p class="uebersichtlink"><a href="wochenende.html">Alle Spiele am Wochenende &rsaquo;</a></p>
     </div>
   </div>
 </header>
 
 <main class="huelle">
+  <section data-team="meine" hidden>
+    <p class="liga" id="meine-kopf">Angeheftete Mannschaften</p>
+    <div id="meine-inhalt"></div>
+  </section>
 {bloecke}
   <p class="fuss">
     Zuletzt abgeglichen am {stand_text}. Die Spielpläne werden täglich automatisch
@@ -735,8 +771,9 @@ automatisch im Handykalender, Verlegungen inklusive.">
   </p>
 </main>
 
+<script id="spieldaten" type="application/json">{spieldaten_kompakt(teams)}</script>
 <script>{ANSICHT}
-{SKRIPT}
+{SKRIPT}{MEINE}
 {TIPP}
 {GRAFIK}
 {ZAEHLUNG}</script>

@@ -37,6 +37,19 @@ window.muruGeraet = (function () {
   };
 })();
 
+// Der Eintrag "Meine Mannschaften" muss auswaehlbar sein, bevor weiter unten
+// die gespeicherte Mannschaft wiederhergestellt wird - sonst faellt die Seite
+// beim Laden auf eine beliebige Mannschaft zurueck.
+(function () {
+  var option = document.querySelector('#teamwahl option[value="meine"]');
+  if (!option) return;
+  var wieviele = 0;
+  try {
+    wieviele = (JSON.parse(localStorage.getItem('muru-angeheftet') || '[]') || []).length;
+  } catch (e) {}
+  option.hidden = wieviele < 2;
+})();
+
 (function () {
   var seite = document.documentElement;
   var wahl = document.getElementById('teamwahl');
@@ -95,12 +108,26 @@ window.muruGeraet = (function () {
     });
   }
 
+  // "Meine Mannschaften" ist ein Sonderfall: kein Spielplan, sondern der
+  // verschraenkte Blick. Als Rueckfall taugt er nicht - er kann leer sein.
+  var echte = mannschaften.filter(function (m) {
+    return m.getAttribute('data-team') !== 'meine';
+  });
+  function genugAngeheftet() {
+    try {
+      return (JSON.parse(localStorage.getItem('muru-angeheftet') || '[]') || []).length >= 2;
+    } catch (e) { return false; }
+  }
+
   var start = ausAdresse();
   var gespeichert = '';
   try { gespeichert = localStorage.getItem(SPEICHER) || ''; } catch (e) {}
-  var aktiv = start.team || gespeichert || mannschaften[0].getAttribute('data-team');
+  var aktiv = start.team || gespeichert || echte[0].getAttribute('data-team');
+  if (aktiv === 'meine' && !genugAngeheftet()) {
+    aktiv = gespeichert && gespeichert !== 'meine' ? gespeichert : echte[0].getAttribute('data-team');
+  }
   if (!zeigeMannschaft(aktiv)) {
-    aktiv = mannschaften[0].getAttribute('data-team');
+    aktiv = echte[0].getAttribute('data-team');
     zeigeMannschaft(aktiv);
   }
   ANSICHTEN.forEach(function () {});
@@ -347,6 +374,9 @@ window.muruGeraet = (function () {
   }
 
   function ordne() {
+    // Zuerst merken: sobald unten Optionen aus dem Feld geloest werden,
+    // springt die Auswahl von selbst auf den ersten Eintrag.
+    var gemerkt = wahl.value;
     var liste = lies();
     var vorhanden = document.getElementById('angeheftet');
     if (vorhanden) {
@@ -358,7 +388,10 @@ window.muruGeraet = (function () {
       });
       vorhanden.remove();
     }
-    if (!liste.length) return;
+    if (!liste.length) {
+      if (gemerkt && wahl.value !== gemerkt) wahl.value = gemerkt;
+      return;
+    }
 
     var gruppe = document.createElement('optgroup');
     gruppe.id = 'angeheftet';
@@ -373,9 +406,12 @@ window.muruGeraet = (function () {
       gruppe.appendChild(option);
     });
     if (gruppe.children.length) wahl.insertBefore(gruppe, wahl.firstChild);
+    if (gemerkt && wahl.value !== gemerkt) wahl.value = gemerkt;
   }
 
   function zeigeKnopf() {
+    if (wahl.value === 'meine') { knopf.hidden = true; return; }
+    knopf.hidden = false;
     var an = lies().indexOf(wahl.value) >= 0;
     knopf.setAttribute('aria-pressed', an ? 'true' : 'false');
     knopf.textContent = an ? 'Angeheftet' : 'Anheften';
@@ -390,6 +426,7 @@ window.muruGeraet = (function () {
     ordne();
     wahl.value = gemerkt;
     zeigeKnopf();
+    if (window.muruMeineAktualisieren) window.muruMeineAktualisieren();
   });
 
   wahl.addEventListener('change', zeigeKnopf);

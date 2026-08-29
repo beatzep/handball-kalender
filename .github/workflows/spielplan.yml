@@ -63,6 +63,12 @@ jobs:
       - name: Daten und Seite pruefen
         run: python3 audit.py
 
+      # "Meine Mannschaften" liest einen eigenen Datenblock im Dokument.
+      # Weicht der von den Spielplaenen ab, zeigt die Seite an zwei Stellen
+      # Verschiedenes - und das faellt niemandem auf.
+      - name: Datenblock der verschraenkten Ansicht pruefen
+        run: python3 pruefe_konflikte.py
+
       # Gleicht die fertigen Kalender noch einmal gegen handball.net ab -
       # unabhaengig vom Generator, also ein echter Abgleich statt einer
       # Selbstbestaetigung. Schlaegt er an, wird nichts committet und die
