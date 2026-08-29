@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-08-29T10:01:23+00:00",
+  "aktualisiert": "2026-08-29T13:24:23+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -3485,37 +3485,12 @@
       "liga": "Regionalliga SW B-Jugend weiblich",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 6,
+        "runde": 2,
         "gespielt": true,
         "mannschaften": 4,
         "verlauf": [
           {
             "runde": 1,
-            "platz": 2,
-            "punkte": 2
-          },
-          {
-            "runde": 2,
-            "platz": 2,
-            "punkte": 2
-          },
-          {
-            "runde": 3,
-            "platz": 2,
-            "punkte": 2
-          },
-          {
-            "runde": 4,
-            "platz": 2,
-            "punkte": 2
-          },
-          {
-            "runde": 5,
-            "platz": 2,
-            "punkte": 2
-          },
-          {
-            "runde": 6,
             "platz": 2,
             "punkte": 2
           }
@@ -3549,29 +3524,29 @@
           },
           {
             "platz": 3,
-            "team": "JSG Osthofen/Worms",
-            "team_id": 86920,
-            "spiele": 1,
-            "punkte": 0,
-            "siege": 0,
+            "team": "Hf Untere Saar",
+            "team_id": 86921,
+            "spiele": 2,
+            "punkte": 2,
+            "siege": 1,
             "remis": 0,
             "niederlagen": 1,
-            "tore": 25,
-            "gegentore": 29,
-            "differenz": -4
+            "tore": 53,
+            "gegentore": 48,
+            "differenz": 5
           },
           {
             "platz": 4,
-            "team": "Hf Untere Saar",
-            "team_id": 86921,
-            "spiele": 1,
+            "team": "JSG Osthofen/Worms",
+            "team_id": 86920,
+            "spiele": 2,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 1,
-            "tore": 22,
-            "gegentore": 31,
-            "differenz": -9
+            "niederlagen": 2,
+            "tore": 42,
+            "gegentore": 60,
+            "differenz": -18
           }
         ]
       },
@@ -4077,7 +4052,7 @@
           "datum": "2026-10-24T15:45:00",
           "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
           "halle": "TSG-Sporthalle Mutterstadt",
-          "gegner": "Hlz Friesenheim/Hochdorf III",
+          "gegner": "Hlz Friesenheim/Hochdorf 3",
           "gegner_id": 81092,
           "match_id": 359715,
           "lat": 49.4445307,
@@ -4189,7 +4164,7 @@
           "datum": "2027-02-20T15:30:00",
           "ort": "TSG Sportzentrum Ludwigshafen-Friesenheim, Eschenbachstraße 85, 67063 Ludwigshafen",
           "halle": "TSG Sportzentrum Ludwigshafen-Friesenheim",
-          "gegner": "Hlz Friesenheim/Hochdorf III",
+          "gegner": "Hlz Friesenheim/Hochdorf 3",
           "gegner_id": 81092,
           "match_id": 359751,
           "lat": 49.5025,
@@ -4667,7 +4642,7 @@
       "liga": "Regionalliga  SW C-Jugend weiblich",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 6,
+        "runde": 2,
         "gespielt": true,
         "mannschaften": 4,
         "verlauf": [
@@ -4678,33 +4653,26 @@
           },
           {
             "runde": 2,
-            "platz": 2,
-            "punkte": 2
-          },
-          {
-            "runde": 3,
-            "platz": 2,
-            "punkte": 2
-          },
-          {
-            "runde": 4,
-            "platz": 2,
-            "punkte": 2
-          },
-          {
-            "runde": 5,
-            "platz": 2,
-            "punkte": 2
-          },
-          {
-            "runde": 6,
-            "platz": 2,
-            "punkte": 2
+            "platz": 1,
+            "punkte": 4
           }
         ],
         "eintraege": [
           {
             "platz": 1,
+            "team": "HSG Mutterstadt/Ruchheim",
+            "team_id": 86951,
+            "spiele": 2,
+            "punkte": 4,
+            "siege": 2,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 68,
+            "gegentore": 52,
+            "differenz": 16
+          },
+          {
+            "platz": 2,
             "team": "TV Engers",
             "team_id": 86941,
             "spiele": 1,
@@ -4715,19 +4683,6 @@
             "tore": 34,
             "gegentore": 20,
             "differenz": 14
-          },
-          {
-            "platz": 2,
-            "team": "HSG Mutterstadt/Ruchheim",
-            "team_id": 86951,
-            "spiele": 1,
-            "punkte": 2,
-            "siege": 1,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 27,
-            "gegentore": 25,
-            "differenz": 2
           },
           {
             "platz": 3,
@@ -4746,18 +4701,19 @@
             "platz": 4,
             "team": "SG Zweibrücken",
             "team_id": 86947,
-            "spiele": 1,
+            "spiele": 2,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 1,
-            "tore": 20,
-            "gegentore": 34,
-            "differenz": -14
+            "niederlagen": 2,
+            "tore": 47,
+            "gegentore": 75,
+            "differenz": -28
           }
         ]
       },
       "form": [
+        "S",
         "S"
       ],
       "statistik": {
@@ -4781,10 +4737,10 @@
         },
         "bilanz": {
           "gesamt": {
-            "s": 1,
+            "s": 2,
             "u": 0,
             "n": 0,
-            "spiele": 1
+            "spiele": 2
           },
           "heim": {
             "s": 1,
@@ -4793,30 +4749,30 @@
             "spiele": 1
           },
           "auswaerts": {
-            "s": 0,
+            "s": 1,
             "u": 0,
             "n": 0,
-            "spiele": 0
+            "spiele": 1
           }
         },
         "serien": {
-          "ohne_niederlage": 1,
-          "aktuell": 1,
+          "ohne_niederlage": 2,
+          "aktuell": 2,
           "aktuell_art": "S"
         },
         "krimis": {
           "anzahl": 1,
-          "gesamt": 1,
-          "anteil": 100
+          "gesamt": 2,
+          "anteil": 50
         },
         "tore": {
-          "erzielt": 27,
-          "kassiert": 25,
-          "schnitt": 27.0,
+          "erzielt": 68,
+          "kassiert": 52,
+          "schnitt": 34.0,
           "torreichstes": {
-            "gegner": "JSG  Mundenheim/Rheingönheim",
-            "stand": "27:25",
-            "summe": 52
+            "gegner": "SG Zweibrücken",
+            "stand": "41:27",
+            "summe": 68
           }
         },
         "anwurf": {
@@ -4826,8 +4782,8 @@
             "schnitt": 0
           },
           "frueh": {
-            "spiele": 1,
-            "punkte": 2,
+            "spiele": 2,
+            "punkte": 4,
             "schnitt": 2.0
           }
         },
@@ -4869,7 +4825,14 @@
           "spieltag": 2,
           "heim": false,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 0,
+          "ergebnis": {
+            "heim": 27,
+            "gast": 41,
+            "eigene": 41,
+            "fremde": 27,
+            "ausgang": "S"
+          }
         },
         "2627RSWRLCJWA0302": {
           "datum": "2026-09-05T15:30:00",
@@ -4940,12 +4903,38 @@
       "saison": "2026/27",
       "tabelle": {
         "runde": 1,
-        "gespielt": false,
+        "gespielt": true,
         "mannschaften": 10,
         "verlauf": [],
         "eintraege": [
           {
             "platz": 1,
+            "team": "HSG Eckbachtal",
+            "team_id": 81149,
+            "spiele": 1,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 26,
+            "gegentore": 19,
+            "differenz": 7
+          },
+          {
+            "platz": 2,
+            "team": "WSG Rheinauen",
+            "team_id": 81151,
+            "spiele": 1,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 19,
+            "gegentore": 26,
+            "differenz": -7
+          },
+          {
+            "platz": 3,
             "team": "Hr Göllheim/Eisenberg/Asselheim/Kindenheim",
             "team_id": 81145,
             "spiele": 0,
@@ -4958,7 +4947,7 @@
             "differenz": 0
           },
           {
-            "platz": 2,
+            "platz": 4,
             "team": "HSG Mutterstadt/Ruchheim II",
             "team_id": 81146,
             "spiele": 0,
@@ -4971,7 +4960,7 @@
             "differenz": 0
           },
           {
-            "platz": 3,
+            "platz": 5,
             "team": "Vsk Niederfeld",
             "team_id": 81147,
             "spiele": 0,
@@ -4984,7 +4973,7 @@
             "differenz": 0
           },
           {
-            "platz": 4,
+            "platz": 6,
             "team": "SC Bobenheim-Roxheim",
             "team_id": 81148,
             "spiele": 0,
@@ -4997,35 +4986,9 @@
             "differenz": 0
           },
           {
-            "platz": 5,
-            "team": "HSG Eckbachtal",
-            "team_id": 81149,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 6,
+            "platz": 7,
             "team": "JSG Mundenheim/Rheingönheim II",
             "team_id": 81150,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 7,
-            "team": "WSG Rheinauen",
-            "team_id": 81151,
             "spiele": 0,
             "punkte": 0,
             "siege": 0,
@@ -5724,7 +5687,7 @@
           "datum": "2026-09-20T12:30:00",
           "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
           "halle": "TSG-Sporthalle Mutterstadt",
-          "gegner": "Hlz Friesenheim/Hochdorf II",
+          "gegner": "Hlz Friesenheim/Hochdorf 2",
           "gegner_id": 81187,
           "match_id": 383408,
           "lat": 49.4445307,
@@ -5836,7 +5799,7 @@
           "datum": "2027-01-31T11:45:00",
           "ort": "Sportzentrum TV Hochdorf, Im Einolf 2, 67126 Hochdorf",
           "halle": "Sportzentrum TV Hochdorf",
-          "gegner": "Hlz Friesenheim/Hochdorf II",
+          "gegner": "Hlz Friesenheim/Hochdorf 2",
           "gegner_id": 81187,
           "match_id": 383453,
           "lat": 49.41948965,
@@ -5915,12 +5878,38 @@
       "saison": "2026/27",
       "tabelle": {
         "runde": 1,
-        "gespielt": false,
+        "gespielt": true,
         "mannschaften": 9,
         "verlauf": [],
         "eintraege": [
           {
             "platz": 1,
+            "team": "Vorderpfälzer Luchse",
+            "team_id": 81239,
+            "spiele": 1,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 19,
+            "gegentore": 14,
+            "differenz": 5
+          },
+          {
+            "platz": 2,
+            "team": "JSG Kaiserslautern/Dansenberg",
+            "team_id": 87386,
+            "spiele": 1,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 14,
+            "gegentore": 19,
+            "differenz": -5
+          },
+          {
+            "platz": 3,
             "team": "SV Bornheim",
             "team_id": 81237,
             "spiele": 0,
@@ -5933,7 +5922,7 @@
             "differenz": 0
           },
           {
-            "platz": 2,
+            "platz": 4,
             "team": "TV Edigheim",
             "team_id": 81238,
             "spiele": 0,
@@ -5946,20 +5935,7 @@
             "differenz": 0
           },
           {
-            "platz": 3,
-            "team": "Vorderpfälzer Luchse",
-            "team_id": 81239,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 4,
+            "platz": 5,
             "team": "TV Kirrweiler",
             "team_id": 81240,
             "spiele": 0,
@@ -5972,7 +5948,7 @@
             "differenz": 0
           },
           {
-            "platz": 5,
+            "platz": 6,
             "team": "HSG Mutterstadt/Ruchheim Wd Ol",
             "team_id": 81241,
             "spiele": 0,
@@ -5985,7 +5961,7 @@
             "differenz": 0
           },
           {
-            "platz": 6,
+            "platz": 7,
             "team": "TV 03 Wörth",
             "team_id": 81242,
             "spiele": 0,
@@ -5998,22 +5974,9 @@
             "differenz": 0
           },
           {
-            "platz": 7,
+            "platz": 8,
             "team": "TSG MZ-Bretzenheim",
             "team_id": 81243,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 8,
-            "team": "JSG Kaiserslautern/Dansenberg",
-            "team_id": 87386,
             "spiele": 0,
             "punkte": 0,
             "siege": 0,
@@ -6880,12 +6843,44 @@
       "saison": "2026/27",
       "tabelle": {
         "runde": 1,
-        "gespielt": false,
+        "gespielt": true,
         "mannschaften": 8,
-        "verlauf": [],
+        "verlauf": [
+          {
+            "runde": 1,
+            "platz": 7,
+            "punkte": 0
+          }
+        ],
         "eintraege": [
           {
             "platz": 1,
+            "team": "JSG Mundenheim/Rheingönheim",
+            "team_id": 81292,
+            "spiele": 1,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 34,
+            "gegentore": 24,
+            "differenz": 10
+          },
+          {
+            "platz": 2,
+            "team": "Hlz Friesenheim/Hochdorf",
+            "team_id": 81291,
+            "spiele": 1,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 31,
+            "gegentore": 27,
+            "differenz": 4
+          },
+          {
+            "platz": 3,
             "team": "HSG Eckbachtal",
             "team_id": 81289,
             "spiele": 0,
@@ -6898,7 +6893,7 @@
             "differenz": 0
           },
           {
-            "platz": 2,
+            "platz": 4,
             "team": "TV Edigheim",
             "team_id": 81290,
             "spiele": 0,
@@ -6911,46 +6906,7 @@
             "differenz": 0
           },
           {
-            "platz": 3,
-            "team": "Hlz Friesenheim/Hochdorf",
-            "team_id": 81291,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 4,
-            "team": "JSG Mundenheim/Rheingönheim",
-            "team_id": 81292,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
             "platz": 5,
-            "team": "HSG Mutterstadt/Ruchheim E1",
-            "team_id": 81293,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 6,
             "team": "TUS Neuhofen",
             "team_id": 81294,
             "spiele": 0,
@@ -6963,7 +6919,7 @@
             "differenz": 0
           },
           {
-            "platz": 7,
+            "platz": 6,
             "team": "TG Waldsee",
             "team_id": 81295,
             "spiele": 0,
@@ -6976,21 +6932,36 @@
             "differenz": 0
           },
           {
-            "platz": 8,
-            "team": "JSG Kaiserslautern/Dansenberg",
-            "team_id": 87381,
-            "spiele": 0,
+            "platz": 7,
+            "team": "HSG Mutterstadt/Ruchheim E1",
+            "team_id": 81293,
+            "spiele": 1,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
+            "niederlagen": 1,
+            "tore": 24,
+            "gegentore": 34,
+            "differenz": -10
+          },
+          {
+            "platz": 8,
+            "team": "JSG Kaiserslautern/Dansenberg",
+            "team_id": 87381,
+            "spiele": 1,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 27,
+            "gegentore": 31,
+            "differenz": -4
           }
         ]
       },
-      "form": [],
+      "form": [
+        "N"
+      ],
       "statistik": {
         "fahrten": {
           "gesamt_km": 366,
@@ -7016,8 +6987,8 @@
           "gesamt": {
             "s": 0,
             "u": 0,
-            "n": 0,
-            "spiele": 0
+            "n": 1,
+            "spiele": 1
           },
           "heim": {
             "s": 0,
@@ -7028,21 +6999,30 @@
           "auswaerts": {
             "s": 0,
             "u": 0,
-            "n": 0,
-            "spiele": 0
+            "n": 1,
+            "spiele": 1
           }
         },
         "serien": {
           "ohne_niederlage": 0,
-          "aktuell": 0,
-          "aktuell_art": null
+          "aktuell": 1,
+          "aktuell_art": "N"
         },
         "krimis": {
           "anzahl": 0,
-          "anteil": 0,
-          "gesamt": 0
+          "gesamt": 1,
+          "anteil": 0
         },
-        "tore": {},
+        "tore": {
+          "erzielt": 24,
+          "kassiert": 34,
+          "schnitt": 24.0,
+          "torreichstes": {
+            "gegner": "JSG Mundenheim/Rheingönheim",
+            "stand": "24:34",
+            "summe": 58
+          }
+        },
         "anwurf": {
           "spaet": {
             "spiele": 0,
@@ -7050,9 +7030,9 @@
             "schnitt": 0
           },
           "frueh": {
-            "spiele": 0,
+            "spiele": 1,
             "punkte": 0,
-            "schnitt": 0
+            "schnitt": 0.0
           }
         },
         "gegner": {},
@@ -7072,7 +7052,14 @@
           "spieltag": 1,
           "heim": false,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 0,
+          "ergebnis": {
+            "heim": 34,
+            "gast": 24,
+            "eigene": 24,
+            "fremde": 34,
+            "ausgang": "N"
+          }
         },
         "2627RPBKROEJGC0203": {
           "datum": "2026-09-06T11:30:00",
@@ -7366,7 +7353,7 @@
       "liga": "Bezirksklasse GEMISCHT",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 9,
+        "runde": 1,
         "gespielt": true,
         "mannschaften": 9,
         "verlauf": [],
@@ -7576,7 +7563,7 @@
           "datum": "2026-09-06T13:15:00",
           "ort": "Sportzentrum TV Hochdorf, Im Einolf 2, 67126 Hochdorf",
           "halle": "Sportzentrum TV Hochdorf",
-          "gegner": "Hlz Friesenheim/Hochdorf II",
+          "gegner": "Hlz Friesenheim/Hochdorf 2",
           "gegner_id": 81336,
           "match_id": 385414,
           "lat": 49.41948965,
@@ -7919,7 +7906,7 @@
           "datum": "2026-09-12T11:00:00",
           "ort": "Heinrich-Ries-Halle Ludwigshafen, Pettenkoferstraße, 67063 Ludwigshafen-Friesenheim",
           "halle": "Heinrich-Ries-Halle Ludwigshafen",
-          "gegner": "JSG Mundenheim/Rheingönheim III",
+          "gegner": "JSG Mundenheim/Rheingönheim 3",
           "gegner_id": 81342,
           "match_id": 385464,
           "lat": 49.4860956,
@@ -7989,7 +7976,7 @@
           "datum": "2026-11-14T12:30:00",
           "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
           "halle": "TVR-Sporthalle Ludwigshafen",
-          "gegner": "Hlz Friesenheim/Hochdorf III",
+          "gegner": "Hlz Friesenheim/Hochdorf 3",
           "gegner_id": 81350,
           "match_id": 385488,
           "lat": 49.487078920701,
@@ -8026,12 +8013,70 @@
       "saison": "2026/27",
       "tabelle": {
         "runde": 1,
-        "gespielt": false,
+        "gespielt": true,
         "mannschaften": 8,
-        "verlauf": [],
+        "verlauf": [
+          {
+            "runde": 1,
+            "platz": 3,
+            "punkte": 1
+          }
+        ],
         "eintraege": [
           {
             "platz": 1,
+            "team": "JSG Mundenheim/Rheingönheim II",
+            "team_id": 81501,
+            "spiele": 1,
+            "punkte": 1,
+            "siege": 0,
+            "remis": 1,
+            "niederlagen": 0,
+            "tore": 0,
+            "gegentore": 0,
+            "differenz": 0
+          },
+          {
+            "platz": 2,
+            "team": "HSG Grethen/Maxdorf II",
+            "team_id": 81503,
+            "spiele": 1,
+            "punkte": 1,
+            "siege": 0,
+            "remis": 1,
+            "niederlagen": 0,
+            "tore": 0,
+            "gegentore": 0,
+            "differenz": 0
+          },
+          {
+            "platz": 3,
+            "team": "HSG Mutterstadt/Ruchheim",
+            "team_id": 81504,
+            "spiele": 1,
+            "punkte": 1,
+            "siege": 0,
+            "remis": 1,
+            "niederlagen": 0,
+            "tore": 0,
+            "gegentore": 0,
+            "differenz": 0
+          },
+          {
+            "platz": 4,
+            "team": "JSG Osthofen/Worms II",
+            "team_id": 87390,
+            "spiele": 1,
+            "punkte": 1,
+            "siege": 0,
+            "remis": 1,
+            "niederlagen": 0,
+            "tore": 0,
+            "gegentore": 0,
+            "differenz": 0
+          },
+          {
+            "platz": 5,
             "team": "TUS Neuhofen",
             "team_id": 81499,
             "spiele": 0,
@@ -8044,7 +8089,7 @@
             "differenz": 0
           },
           {
-            "platz": 2,
+            "platz": 6,
             "team": "Vsk Niederfeld",
             "team_id": 81500,
             "spiele": 0,
@@ -8057,20 +8102,7 @@
             "differenz": 0
           },
           {
-            "platz": 3,
-            "team": "JSG Mundenheim/Rheingönheim II",
-            "team_id": 81501,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 4,
+            "platz": 7,
             "team": "TSG Friesenheim II",
             "team_id": 81502,
             "spiele": 0,
@@ -8083,48 +8115,9 @@
             "differenz": 0
           },
           {
-            "platz": 5,
-            "team": "HSG Grethen/Maxdorf II",
-            "team_id": 81503,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 6,
-            "team": "HSG Mutterstadt/Ruchheim",
-            "team_id": 81504,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 7,
+            "platz": 8,
             "team": "JSG Kaiserslauern/Dansenberg II",
             "team_id": 87389,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 8,
-            "team": "JSG Osthofen/Worms II",
-            "team_id": 87390,
             "spiele": 0,
             "punkte": 0,
             "siege": 0,
@@ -8917,7 +8910,7 @@
           "datum": "2027-03-06T11:00:00",
           "ort": "Heinrich-Ries-Halle Ludwigshafen, Pettenkoferstraße, 67063 Ludwigshafen-Friesenheim",
           "halle": "Heinrich-Ries-Halle Ludwigshafen",
-          "gegner": "JSG Mundenheim/Rheingönheim II",
+          "gegner": "JSG Mundenheim/Rheingönheim 2",
           "gegner_id": 81421,
           "match_id": 481971,
           "lat": 49.4860956,
@@ -8953,7 +8946,7 @@
           },
           "naechste": {
             "km": 12.337724856185785,
-            "gegner": "JSG Mundenheim/Rheingönheim II",
+            "gegner": "JSG Mundenheim/Rheingönheim 2",
             "halle": "TVR-Sporthalle Ludwigshafen",
             "heim": true
           },
@@ -9011,7 +9004,7 @@
           "datum": "2026-09-06T10:00:00",
           "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
           "halle": "TVR-Sporthalle Ludwigshafen",
-          "gegner": "JSG Mundenheim/Rheingönheim II",
+          "gegner": "JSG Mundenheim/Rheingönheim 2",
           "gegner_id": 81421,
           "match_id": 366595,
           "lat": 49.487078920701,
