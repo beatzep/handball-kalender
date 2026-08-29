@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-08-29T19:38:31+00:00",
+  "aktualisiert": "2026-08-29T20:16:08+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -15,10 +15,29 @@
         "runde": 1,
         "gespielt": true,
         "mannschaften": 12,
-        "verlauf": [],
+        "verlauf": [
+          {
+            "runde": 1,
+            "platz": 1,
+            "punkte": 2
+          }
+        ],
         "eintraege": [
           {
             "platz": 1,
+            "team": "HSG Mutterstadt/Ruchheim",
+            "team_id": 80924,
+            "spiele": 1,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 31,
+            "gegentore": 23,
+            "differenz": 8
+          },
+          {
+            "platz": 2,
             "team": "HSG Worms",
             "team_id": 80913,
             "spiele": 1,
@@ -31,7 +50,7 @@
             "differenz": 3
           },
           {
-            "platz": 2,
+            "platz": 3,
             "team": "HSG Zotzenheim/St.Johann/Sprendlingen",
             "team_id": 80922,
             "spiele": 1,
@@ -44,7 +63,20 @@
             "differenz": -3
           },
           {
-            "platz": 3,
+            "platz": 4,
+            "team": "TSG MZ-Bretzenheim 2",
+            "team_id": 80919,
+            "spiele": 1,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 23,
+            "gegentore": 31,
+            "differenz": -8
+          },
+          {
+            "platz": 5,
             "team": "HSV Sobernheim H1",
             "team_id": 80912,
             "spiele": 0,
@@ -57,7 +89,7 @@
             "differenz": 0
           },
           {
-            "platz": 4,
+            "platz": 6,
             "team": "HSV Alzey",
             "team_id": 80914,
             "spiele": 0,
@@ -70,7 +102,7 @@
             "differenz": 0
           },
           {
-            "platz": 5,
+            "platz": 7,
             "team": "HSG Rhein-Nahe Bingen 2",
             "team_id": 80915,
             "spiele": 0,
@@ -83,7 +115,7 @@
             "differenz": 0
           },
           {
-            "platz": 6,
+            "platz": 8,
             "team": "GW Bingen-Büdesheim",
             "team_id": 80916,
             "spiele": 0,
@@ -96,7 +128,7 @@
             "differenz": 0
           },
           {
-            "platz": 7,
+            "platz": 9,
             "team": "TV Nieder-Olm 2",
             "team_id": 80917,
             "spiele": 0,
@@ -109,7 +141,7 @@
             "differenz": 0
           },
           {
-            "platz": 8,
+            "platz": 10,
             "team": "HSC Ingelheim",
             "team_id": 80918,
             "spiele": 0,
@@ -122,20 +154,7 @@
             "differenz": 0
           },
           {
-            "platz": 9,
-            "team": "TSG MZ-Bretzenheim 2",
-            "team_id": 80919,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 10,
+            "platz": 11,
             "team": "TG Osthofen 2",
             "team_id": 80920,
             "spiele": 0,
@@ -148,22 +167,9 @@
             "differenz": 0
           },
           {
-            "platz": 11,
+            "platz": 12,
             "team": "SG Saulheim 2",
             "team_id": 80921,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 12,
-            "team": "HSG Mutterstadt/Ruchheim",
-            "team_id": 80924,
             "spiele": 0,
             "punkte": 0,
             "siege": 0,
