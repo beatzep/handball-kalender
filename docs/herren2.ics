@@ -28,7 +28,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:2627RPBKRKERMB0101@handball.net
-DTSTAMP:20260829T021217Z
+DTSTAMP:20260829T100116Z
 DTSTART;TZID=Europe/Berlin:20260829T190000
 DTEND;TZID=Europe/Berlin:20260829T210000
 SUMMARY:🚗 TV THALEISCHWEILER Herren - HSG MuRu II
@@ -56,7 +56,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RPBKRKERMB0206@handball.net
-DTSTAMP:20260829T021217Z
+DTSTAMP:20260829T100116Z
 DTSTART;TZID=Europe/Berlin:20260906T200000
 DTEND;TZID=Europe/Berlin:20260906T220000
 SUMMARY:🏠 HSG MuRu II - HSG Grethen/Maxdorf
@@ -83,13 +83,13 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RPBKRKERMB0301@handball.net
-DTSTAMP:20260829T021217Z
+DTSTAMP:20260829T100116Z
 DTSTART;TZID=Europe/Berlin:20260913T160000
 DTEND;TZID=Europe/Berlin:20260913T180000
-SUMMARY:🏠 HSG MuRu II - TV Kirrweiler II
-DESCRIPTION:Heimspiel gegen TV Kirrweiler II\nAnwurf: 16:00 Uhr\nLiga: Män
- ner Bezirksklasse\nSpieltag: 3\nSpielnummer: 2627RPBKRKERMB0301\nhttps://w
- ww.handball.net/match/352298
+SUMMARY:🏠 HSG MuRu II - TV Kirrweiler 2
+DESCRIPTION:Heimspiel gegen TV Kirrweiler 2\nAnwurf: 16:00 Uhr\nLiga: Männ
+ er Bezirksklasse\nSpieltag: 3\nSpielnummer: 2627RPBKRKERMB0301\nhttps://ww
+ w.handball.net/match/352298
 URL:https://www.handball.net/match/352298
 SEQUENCE:0
 STATUS:CONFIRMED
@@ -101,23 +101,23 @@ GEO:49.487079;8.364587
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-P1D
-DESCRIPTION:Morgen Spiel: 🏠 HSG MuRu II - TV Kirrweiler II
+DESCRIPTION:Morgen Spiel: 🏠 HSG MuRu II - TV Kirrweiler 2
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-PT3H
-DESCRIPTION:Gleich Spiel: 🏠 HSG MuRu II - TV Kirrweiler II
+DESCRIPTION:Gleich Spiel: 🏠 HSG MuRu II - TV Kirrweiler 2
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RPBKRKERMB0502@handball.net
-DTSTAMP:20260829T021217Z
+DTSTAMP:20260829T100116Z
 DTSTART;TZID=Europe/Berlin:20260926T180000
 DTEND;TZID=Europe/Berlin:20260926T200000
-SUMMARY:🏠 HSG MuRu II - TSV Kandel II
-DESCRIPTION:Heimspiel gegen TSV Kandel II\nAnwurf: 18:00 Uhr\nLiga: Männer
-  Bezirksklasse\nSpieltag: 5\nSpielnummer: 2627RPBKRKERMB0502\nhttps://www.
- handball.net/match/352311
+SUMMARY:🏠 HSG MuRu II - TSV Kandel 2
+DESCRIPTION:Heimspiel gegen TSV Kandel 2\nAnwurf: 18:00 Uhr\nLiga: Männer 
+ Bezirksklasse\nSpieltag: 5\nSpielnummer: 2627RPBKRKERMB0502\nhttps://www.h
+ andball.net/match/352311
 URL:https://www.handball.net/match/352311
 SEQUENCE:0
 STATUS:CONFIRMED
@@ -129,23 +129,23 @@ GEO:49.487079;8.364587
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-P1D
-DESCRIPTION:Morgen Spiel: 🏠 HSG MuRu II - TSV Kandel II
+DESCRIPTION:Morgen Spiel: 🏠 HSG MuRu II - TSV Kandel 2
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-PT3H
-DESCRIPTION:Gleich Spiel: 🏠 HSG MuRu II - TSV Kandel II
+DESCRIPTION:Gleich Spiel: 🏠 HSG MuRu II - TSV Kandel 2
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RPBKRKERMB0604@handball.net
-DTSTAMP:20260829T021217Z
+DTSTAMP:20260829T100116Z
 DTSTART;TZID=Europe/Berlin:20261003T200000
 DTEND;TZID=Europe/Berlin:20261003T220000
-SUMMARY:🚗 TUS Heiligenstein II - HSG MuRu II
-DESCRIPTION:Auswärtsspiel gegen TUS Heiligenstein II\nAnwurf: 20:00 Uhr\nL
- iga: Männer Bezirksklasse\nSpieltag: 6\nSpielnummer: 2627RPBKRKERMB0604\n
- https://www.handball.net/match/352319
+SUMMARY:🚗 TUS Heiligenstein 2 - HSG MuRu II
+DESCRIPTION:Auswärtsspiel gegen TUS Heiligenstein 2\nAnwurf: 20:00 Uhr\nLi
+ ga: Männer Bezirksklasse\nSpieltag: 6\nSpielnummer: 2627RPBKRKERMB0604\nh
+ ttps://www.handball.net/match/352319
 URL:https://www.handball.net/match/352319
 SEQUENCE:0
 STATUS:CONFIRMED
@@ -157,23 +157,23 @@ GEO:49.279315;8.404978
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-P1D
-DESCRIPTION:Morgen Spiel: 🚗 TUS Heiligenstein II - HSG MuRu II
+DESCRIPTION:Morgen Spiel: 🚗 TUS Heiligenstein 2 - HSG MuRu II
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-PT3H
-DESCRIPTION:Gleich Spiel: 🚗 TUS Heiligenstein II - HSG MuRu II
+DESCRIPTION:Gleich Spiel: 🚗 TUS Heiligenstein 2 - HSG MuRu II
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RPBKRKERMB0703@handball.net
-DTSTAMP:20260829T021217Z
+DTSTAMP:20260829T100116Z
 DTSTART;TZID=Europe/Berlin:20261024T173000
 DTEND;TZID=Europe/Berlin:20261024T193000
-SUMMARY:🏠 HSG MuRu II - MSG Iggelheim/Meckenheim III
-DESCRIPTION:Heimspiel gegen MSG Iggelheim/Meckenheim III\nAnwurf: 17:30 Uhr
- \nLiga: Männer Bezirksklasse\nSpieltag: 7\nSpielnummer: 2627RPBKRKERMB070
- 3\nhttps://www.handball.net/match/352324
+SUMMARY:🏠 HSG MuRu II - MSG Iggelheim/Meckenheim 3
+DESCRIPTION:Heimspiel gegen MSG Iggelheim/Meckenheim 3\nAnwurf: 17:30 Uhr\n
+ Liga: Männer Bezirksklasse\nSpieltag: 7\nSpielnummer: 2627RPBKRKERMB0703\
+ nhttps://www.handball.net/match/352324
 URL:https://www.handball.net/match/352324
 SEQUENCE:0
 STATUS:CONFIRMED
@@ -184,17 +184,17 @@ GEO:49.444531;8.359517
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-P1D
-DESCRIPTION:Morgen Spiel: 🏠 HSG MuRu II - MSG Iggelheim/Meckenheim III
+DESCRIPTION:Morgen Spiel: 🏠 HSG MuRu II - MSG Iggelheim/Meckenheim 3
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-PT3H
-DESCRIPTION:Gleich Spiel: 🏠 HSG MuRu II - MSG Iggelheim/Meckenheim III
+DESCRIPTION:Gleich Spiel: 🏠 HSG MuRu II - MSG Iggelheim/Meckenheim 3
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RPBKRKERMB0803@handball.net
-DTSTAMP:20260829T021217Z
+DTSTAMP:20260829T100116Z
 DTSTART;TZID=Europe/Berlin:20261108T150000
 DTEND;TZID=Europe/Berlin:20261108T170000
 SUMMARY:🚗 SG LaFt - Herren - HSG MuRu II
@@ -221,13 +221,13 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RPBKRKERMB0904@handball.net
-DTSTAMP:20260829T021217Z
+DTSTAMP:20260829T100116Z
 DTSTART;TZID=Europe/Berlin:20261115T164500
 DTEND;TZID=Europe/Berlin:20261115T184500
-SUMMARY:🏠 HSG MuRu II - HSV Lingenfeld/Schwegenheim II
-DESCRIPTION:Heimspiel gegen HSV Lingenfeld/Schwegenheim II\nAnwurf: 16:45 U
- hr\nLiga: Männer Bezirksklasse\nSpieltag: 9\nSpielnummer: 2627RPBKRKERMB0
- 904\nhttps://www.handball.net/match/352337
+SUMMARY:🏠 HSG MuRu II - HSV Lingenfeld/Schwegenheim 2
+DESCRIPTION:Heimspiel gegen HSV Lingenfeld/Schwegenheim 2\nAnwurf: 16:45 Uh
+ r\nLiga: Männer Bezirksklasse\nSpieltag: 9\nSpielnummer: 2627RPBKRKERMB09
+ 04\nhttps://www.handball.net/match/352337
 URL:https://www.handball.net/match/352337
 SEQUENCE:0
 STATUS:CONFIRMED
@@ -239,23 +239,23 @@ GEO:49.487079;8.364587
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-P1D
-DESCRIPTION:Morgen Spiel: 🏠 HSG MuRu II - HSV Lingenfeld/Schwegenheim II
+DESCRIPTION:Morgen Spiel: 🏠 HSG MuRu II - HSV Lingenfeld/Schwegenheim 2
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-PT3H
-DESCRIPTION:Gleich Spiel: 🏠 HSG MuRu II - HSV Lingenfeld/Schwegenheim II
+DESCRIPTION:Gleich Spiel: 🏠 HSG MuRu II - HSV Lingenfeld/Schwegenheim 2
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RPBKRKERMB1002@handball.net
-DTSTAMP:20260829T021217Z
+DTSTAMP:20260829T100116Z
 DTSTART;TZID=Europe/Berlin:20261122T180000
 DTEND;TZID=Europe/Berlin:20261122T200000
-SUMMARY:🚗 MSG Kaiserslautern/Dansenberg II - HSG MuRu II
-DESCRIPTION:Auswärtsspiel gegen MSG Kaiserslautern/Dansenberg II\nAnwurf: 
- 18:00 Uhr\nLiga: Männer Bezirksklasse\nSpieltag: 10\nSpielnummer: 2627RPB
- KRKERMB1002\nhttps://www.handball.net/match/352341
+SUMMARY:🚗 MSG Kaiserslautern/Dansenberg 2 - HSG MuRu II
+DESCRIPTION:Auswärtsspiel gegen MSG Kaiserslautern/Dansenberg 2\nAnwurf: 1
+ 8:00 Uhr\nLiga: Männer Bezirksklasse\nSpieltag: 10\nSpielnummer: 2627RPBK
+ RKERMB1002\nhttps://www.handball.net/match/352341
 URL:https://www.handball.net/match/352341
 SEQUENCE:0
 STATUS:CONFIRMED
@@ -267,25 +267,25 @@ GEO:49.406914;7.736269
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-P1D
-DESCRIPTION:Morgen Spiel: 🚗 MSG Kaiserslautern/Dansenberg II - HSG MuRu 
- II
+DESCRIPTION:Morgen Spiel: 🚗 MSG Kaiserslautern/Dansenberg 2 - HSG MuRu I
+ I
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-PT3H
-DESCRIPTION:Gleich Spiel: 🚗 MSG Kaiserslautern/Dansenberg II - HSG MuRu 
- II
+DESCRIPTION:Gleich Spiel: 🚗 MSG Kaiserslautern/Dansenberg 2 - HSG MuRu I
+ I
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RPBKRKERMB1105@handball.net
-DTSTAMP:20260829T021217Z
+DTSTAMP:20260829T100116Z
 DTSTART;TZID=Europe/Berlin:20261129T190000
 DTEND;TZID=Europe/Berlin:20261129T210000
-SUMMARY:🏠 HSG MuRu II - TUS Neuhofen II
-DESCRIPTION:Heimspiel gegen TUS Neuhofen II\nAnwurf: 19:00 Uhr\nLiga: Männ
- er Bezirksklasse\nSpieltag: 11\nSpielnummer: 2627RPBKRKERMB1105\nhttps://w
- ww.handball.net/match/352350
+SUMMARY:🏠 HSG MuRu II - TUS Neuhofen 2
+DESCRIPTION:Heimspiel gegen TUS Neuhofen 2\nAnwurf: 19:00 Uhr\nLiga: Männe
+ r Bezirksklasse\nSpieltag: 11\nSpielnummer: 2627RPBKRKERMB1105\nhttps://ww
+ w.handball.net/match/352350
 URL:https://www.handball.net/match/352350
 SEQUENCE:0
 STATUS:CONFIRMED
@@ -297,17 +297,17 @@ GEO:49.487079;8.364587
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-P1D
-DESCRIPTION:Morgen Spiel: 🏠 HSG MuRu II - TUS Neuhofen II
+DESCRIPTION:Morgen Spiel: 🏠 HSG MuRu II - TUS Neuhofen 2
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-PT3H
-DESCRIPTION:Gleich Spiel: 🏠 HSG MuRu II - TUS Neuhofen II
+DESCRIPTION:Gleich Spiel: 🏠 HSG MuRu II - TUS Neuhofen 2
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RPBKRKERMB1201@handball.net
-DTSTAMP:20260829T021217Z
+DTSTAMP:20260829T100116Z
 DTSTART;TZID=Europe/Berlin:20261206T160000
 DTEND;TZID=Europe/Berlin:20261206T180000
 SUMMARY:🏠 HSG MuRu II - TV THALEISCHWEILER Herren
@@ -334,7 +334,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RPBKRKERMB1306@handball.net
-DTSTAMP:20260829T021217Z
+DTSTAMP:20260829T100116Z
 DTSTART;TZID=Europe/Berlin:20261212T180000
 DTEND;TZID=Europe/Berlin:20261212T200000
 SUMMARY:🚗 HSG Grethen/Maxdorf - HSG MuRu II
@@ -362,13 +362,13 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RPBKRKERMB1401@handball.net
-DTSTAMP:20260829T021217Z
+DTSTAMP:20260829T100116Z
 DTSTART;TZID=Europe/Berlin:20270124T193000
 DTEND;TZID=Europe/Berlin:20270124T213000
-SUMMARY:🚗 TV Kirrweiler II - HSG MuRu II
-DESCRIPTION:Auswärtsspiel gegen TV Kirrweiler II\nAnwurf: 19:30 Uhr\nLiga:
-  Männer Bezirksklasse\nSpieltag: 14\nSpielnummer: 2627RPBKRKERMB1401\nhtt
- ps://www.handball.net/match/352364
+SUMMARY:🚗 TV Kirrweiler 2 - HSG MuRu II
+DESCRIPTION:Auswärtsspiel gegen TV Kirrweiler 2\nAnwurf: 19:30 Uhr\nLiga: 
+ Männer Bezirksklasse\nSpieltag: 14\nSpielnummer: 2627RPBKRKERMB1401\nhttp
+ s://www.handball.net/match/352364
 URL:https://www.handball.net/match/352364
 SEQUENCE:0
 STATUS:CONFIRMED
@@ -379,23 +379,23 @@ GEO:49.295763;8.172631
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-P1D
-DESCRIPTION:Morgen Spiel: 🚗 TV Kirrweiler II - HSG MuRu II
+DESCRIPTION:Morgen Spiel: 🚗 TV Kirrweiler 2 - HSG MuRu II
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-PT3H
-DESCRIPTION:Gleich Spiel: 🚗 TV Kirrweiler II - HSG MuRu II
+DESCRIPTION:Gleich Spiel: 🚗 TV Kirrweiler 2 - HSG MuRu II
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RPBKRKERMB1602@handball.net
-DTSTAMP:20260829T021217Z
+DTSTAMP:20260829T100116Z
 DTSTART;TZID=Europe/Berlin:20270213T193000
 DTEND;TZID=Europe/Berlin:20270213T213000
-SUMMARY:🚗 TSV Kandel II - HSG MuRu II
-DESCRIPTION:Auswärtsspiel gegen TSV Kandel II\nAnwurf: 19:30 Uhr\nLiga: M
- änner Bezirksklasse\nSpieltag: 16\nSpielnummer: 2627RPBKRKERMB1602\nhttps
- ://www.handball.net/match/352377
+SUMMARY:🚗 TSV Kandel 2 - HSG MuRu II
+DESCRIPTION:Auswärtsspiel gegen TSV Kandel 2\nAnwurf: 19:30 Uhr\nLiga: Mä
+ nner Bezirksklasse\nSpieltag: 16\nSpielnummer: 2627RPBKRKERMB1602\nhttps:/
+ /www.handball.net/match/352377
 URL:https://www.handball.net/match/352377
 SEQUENCE:0
 STATUS:CONFIRMED
@@ -406,23 +406,23 @@ GEO:49.077655;8.193108
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-P1D
-DESCRIPTION:Morgen Spiel: 🚗 TSV Kandel II - HSG MuRu II
+DESCRIPTION:Morgen Spiel: 🚗 TSV Kandel 2 - HSG MuRu II
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-PT3H
-DESCRIPTION:Gleich Spiel: 🚗 TSV Kandel II - HSG MuRu II
+DESCRIPTION:Gleich Spiel: 🚗 TSV Kandel 2 - HSG MuRu II
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RPBKRKERMB1704@handball.net
-DTSTAMP:20260829T021217Z
+DTSTAMP:20260829T100116Z
 DTSTART;TZID=Europe/Berlin:20270221T184500
 DTEND;TZID=Europe/Berlin:20270221T204500
-SUMMARY:🏠 HSG MuRu II - TUS Heiligenstein II
-DESCRIPTION:Heimspiel gegen TUS Heiligenstein II\nAnwurf: 18:45 Uhr\nLiga: 
- Männer Bezirksklasse\nSpieltag: 17\nSpielnummer: 2627RPBKRKERMB1704\nhttp
- s://www.handball.net/match/352385
+SUMMARY:🏠 HSG MuRu II - TUS Heiligenstein 2
+DESCRIPTION:Heimspiel gegen TUS Heiligenstein 2\nAnwurf: 18:45 Uhr\nLiga: M
+ änner Bezirksklasse\nSpieltag: 17\nSpielnummer: 2627RPBKRKERMB1704\nhttps
+ ://www.handball.net/match/352385
 URL:https://www.handball.net/match/352385
 SEQUENCE:0
 STATUS:CONFIRMED
@@ -434,23 +434,23 @@ GEO:49.487079;8.364587
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-P1D
-DESCRIPTION:Morgen Spiel: 🏠 HSG MuRu II - TUS Heiligenstein II
+DESCRIPTION:Morgen Spiel: 🏠 HSG MuRu II - TUS Heiligenstein 2
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-PT3H
-DESCRIPTION:Gleich Spiel: 🏠 HSG MuRu II - TUS Heiligenstein II
+DESCRIPTION:Gleich Spiel: 🏠 HSG MuRu II - TUS Heiligenstein 2
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RPBKRKERMB1803@handball.net
-DTSTAMP:20260829T021217Z
+DTSTAMP:20260829T100116Z
 DTSTART;TZID=Europe/Berlin:20270228T140000
 DTEND;TZID=Europe/Berlin:20270228T160000
-SUMMARY:🚗 MSG Iggelheim/Meckenheim III - HSG MuRu II
-DESCRIPTION:Auswärtsspiel gegen MSG Iggelheim/Meckenheim III\nAnwurf: 14:0
- 0 Uhr\nLiga: Männer Bezirksklasse\nSpieltag: 18\nSpielnummer: 2627RPBKRKE
- RMB1803\nhttps://www.handball.net/match/352390
+SUMMARY:🚗 MSG Iggelheim/Meckenheim 3 - HSG MuRu II
+DESCRIPTION:Auswärtsspiel gegen MSG Iggelheim/Meckenheim 3\nAnwurf: 14:00 
+ Uhr\nLiga: Männer Bezirksklasse\nSpieltag: 18\nSpielnummer: 2627RPBKRKERM
+ B1803\nhttps://www.handball.net/match/352390
 URL:https://www.handball.net/match/352390
 SEQUENCE:0
 STATUS:CONFIRMED
@@ -462,17 +462,17 @@ GEO:49.373045;8.303608
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-P1D
-DESCRIPTION:Morgen Spiel: 🚗 MSG Iggelheim/Meckenheim III - HSG MuRu II
+DESCRIPTION:Morgen Spiel: 🚗 MSG Iggelheim/Meckenheim 3 - HSG MuRu II
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-PT3H
-DESCRIPTION:Gleich Spiel: 🚗 MSG Iggelheim/Meckenheim III - HSG MuRu II
+DESCRIPTION:Gleich Spiel: 🚗 MSG Iggelheim/Meckenheim 3 - HSG MuRu II
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RPBKRKERMB1903@handball.net
-DTSTAMP:20260829T021217Z
+DTSTAMP:20260829T100116Z
 DTSTART;TZID=Europe/Berlin:20270313T180000
 DTEND;TZID=Europe/Berlin:20270313T200000
 SUMMARY:🏠 HSG MuRu II - SG LaFt - Herren
@@ -499,13 +499,13 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RPBKRKERMB2004@handball.net
-DTSTAMP:20260829T021217Z
+DTSTAMP:20260829T100116Z
 DTSTART;TZID=Europe/Berlin:20270320T160000
 DTEND;TZID=Europe/Berlin:20270320T180000
-SUMMARY:🚗 HSV Lingenfeld/Schwegenheim II - HSG MuRu II
-DESCRIPTION:Auswärtsspiel gegen HSV Lingenfeld/Schwegenheim II\nAnwurf: 16
- :00 Uhr\nLiga: Männer Bezirksklasse\nSpieltag: 20\nSpielnummer: 2627RPBKR
- KERMB2004\nhttps://www.handball.net/match/352403
+SUMMARY:🚗 HSV Lingenfeld/Schwegenheim 2 - HSG MuRu II
+DESCRIPTION:Auswärtsspiel gegen HSV Lingenfeld/Schwegenheim 2\nAnwurf: 16:
+ 00 Uhr\nLiga: Männer Bezirksklasse\nSpieltag: 20\nSpielnummer: 2627RPBKRK
+ ERMB2004\nhttps://www.handball.net/match/352403
 URL:https://www.handball.net/match/352403
 SEQUENCE:0
 STATUS:CONFIRMED
@@ -515,23 +515,23 @@ LOCATION:Sporthalle Schwegenheim\, Schulstr. 20\, 67365 Schwegenheim
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-P1D
-DESCRIPTION:Morgen Spiel: 🚗 HSV Lingenfeld/Schwegenheim II - HSG MuRu II
+DESCRIPTION:Morgen Spiel: 🚗 HSV Lingenfeld/Schwegenheim 2 - HSG MuRu II
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-PT3H
-DESCRIPTION:Gleich Spiel: 🚗 HSV Lingenfeld/Schwegenheim II - HSG MuRu II
+DESCRIPTION:Gleich Spiel: 🚗 HSV Lingenfeld/Schwegenheim 2 - HSG MuRu II
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RPBKRKERMB2102@handball.net
-DTSTAMP:20260829T021217Z
+DTSTAMP:20260829T100116Z
 DTSTART;TZID=Europe/Berlin:20270410T160000
 DTEND;TZID=Europe/Berlin:20270410T180000
-SUMMARY:🏠 HSG MuRu II - MSG Kaiserslautern/Dansenberg II
-DESCRIPTION:Heimspiel gegen MSG Kaiserslautern/Dansenberg II\nAnwurf: 16:00
-  Uhr\nLiga: Männer Bezirksklasse\nSpieltag: 21\nSpielnummer: 2627RPBKRKER
- MB2102\nhttps://www.handball.net/match/352407
+SUMMARY:🏠 HSG MuRu II - MSG Kaiserslautern/Dansenberg 2
+DESCRIPTION:Heimspiel gegen MSG Kaiserslautern/Dansenberg 2\nAnwurf: 16:00 
+ Uhr\nLiga: Männer Bezirksklasse\nSpieltag: 21\nSpielnummer: 2627RPBKRKERM
+ B2102\nhttps://www.handball.net/match/352407
 URL:https://www.handball.net/match/352407
 SEQUENCE:0
 STATUS:CONFIRMED
@@ -544,24 +544,24 @@ BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-P1D
 DESCRIPTION:Morgen Spiel: 🏠 HSG MuRu II - MSG Kaiserslautern/Dansenberg 
- II
+ 2
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-PT3H
 DESCRIPTION:Gleich Spiel: 🏠 HSG MuRu II - MSG Kaiserslautern/Dansenberg 
- II
+ 2
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RPBKRKERMB2205@handball.net
-DTSTAMP:20260829T021217Z
+DTSTAMP:20260829T100116Z
 DTSTART;TZID=Europe/Berlin:20270418T200000
 DTEND;TZID=Europe/Berlin:20270418T220000
-SUMMARY:🚗 TUS Neuhofen II - HSG MuRu II
-DESCRIPTION:Auswärtsspiel gegen TUS Neuhofen II\nAnwurf: 20:00 Uhr\nLiga: 
- Männer Bezirksklasse\nSpieltag: 22\nSpielnummer: 2627RPBKRKERMB2205\nhttp
- s://www.handball.net/match/352416
+SUMMARY:🚗 TUS Neuhofen 2 - HSG MuRu II
+DESCRIPTION:Auswärtsspiel gegen TUS Neuhofen 2\nAnwurf: 20:00 Uhr\nLiga: M
+ änner Bezirksklasse\nSpieltag: 22\nSpielnummer: 2627RPBKRKERMB2205\nhttps
+ ://www.handball.net/match/352416
 URL:https://www.handball.net/match/352416
 SEQUENCE:0
 STATUS:CONFIRMED
@@ -572,12 +572,12 @@ GEO:49.420979;8.423410
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-P1D
-DESCRIPTION:Morgen Spiel: 🚗 TUS Neuhofen II - HSG MuRu II
+DESCRIPTION:Morgen Spiel: 🚗 TUS Neuhofen 2 - HSG MuRu II
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-PT3H
-DESCRIPTION:Gleich Spiel: 🚗 TUS Neuhofen II - HSG MuRu II
+DESCRIPTION:Gleich Spiel: 🚗 TUS Neuhofen 2 - HSG MuRu II
 END:VALARM
 END:VEVENT
 END:VCALENDAR
