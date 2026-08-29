@@ -62,7 +62,8 @@ def zeile(spiel: dict) -> str:
     ergebnis = ""
     if spiel.get("ergebnis"):
         e = spiel["ergebnis"]
-        ergebnis = (f'<span class="stand {e["ausgang"]}">{e["heim"]}:{e["gast"]}</span>')
+        # aus Sicht der jeweiligen Mannschaft, siehe baue_seite.py
+        ergebnis = (f'<span class="stand {e["ausgang"]}">{e["eigene"]}:{e["fremde"]}</span>')
     return f"""<div class="partie{' heimspiel' if heim else ''}" data-heim="{'ja' if heim else 'nein'}">
 <div class="uhr">{uhr}</div>
 <div><div class="wer">{sicher(spiel.get('mannschaft'))}</div>

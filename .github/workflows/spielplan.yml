@@ -60,6 +60,16 @@ jobs:
       - name: Daten und Seite pruefen
         run: python3 audit.py
 
+      # Gleicht die fertigen Kalender noch einmal gegen handball.net ab -
+      # unabhaengig vom Generator, also ein echter Abgleich statt einer
+      # Selbstbestaetigung. Schlaegt er an, wird nichts committet und die
+      # bisherigen (korrekten) Dateien bleiben stehen.
+      # Nur beim naechtlichen Lauf: die stuendlichen Laeufe am Wochenende
+      # wuerden die Abfragen sonst verdoppeln.
+      - name: Gegen handball.net abgleichen
+        if: github.event.schedule != '5 12-22 * * 6,0'
+        run: python3 pruefe_gegen_quelle.py
+
       - name: Zusammenfassung schreiben
         run: |
           {

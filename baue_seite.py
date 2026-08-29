@@ -217,8 +217,11 @@ def spielzeile(spiel: dict, heute: datetime, naechster: bool) -> str:
 
     rechts = f'<div class="hz {"heim" if heim else ""}">{"H" if heim else "A"}</div>'
     if erg:
+        # Aus eigener Sicht: In der Zeile steht nur der Gegner, nichts klaert
+        # sonst die Reihenfolge. "30:20" rot neben einem Auswaertsspiel liest
+        # sich sonst, als haetten wir 30 geworfen.
         rechts += (f'<div class="stand {erg["ausgang"]}">'
-                   f'{erg["heim"]}:{erg["gast"]}</div>')
+                   f'{erg["eigene"]}:{erg["fremde"]}</div>')
 
     return f"""<div class="{klassen}">
 <div class="datum">{KURZTAGE[wann.weekday()]} {wann:%d.%m.}<span>{wann:%H:%M}</span></div>

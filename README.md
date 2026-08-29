@@ -96,6 +96,28 @@ Beim nächsten Lauf wird verglichen:
 Die Meldungen landen an drei Stellen: im gelben Kasten auf der Seite, in der
 Commit-Nachricht und in der Zusammenfassung des Action-Laufs.
 
+## Abgleich gegen die Quelle
+
+`pruefe_gegen_quelle.py` ist das wichtigste Prüfwerkzeug: Es fragt handball.net
+**frisch** ab und liest die **fertigen** `.ics`-Dateien – beide Seiten also
+getrennt ermittelt. Ein Fehler in der Verarbeitung fällt hier auf, weil nichts
+aus derselben Quelle im Speicher stammt.
+
+Geprüft wird je Spiel: Vollständigkeit (keins fehlt, keins zu viel), Datum und
+Uhrzeit auf die Sekunde, Gegner im Titel, Halle in der Ortsangabe, Endstand.
+
+Der Lauf hängt im Workflow **hinter** dem Bauen. Schlägt er an, wird nicht
+committet – die bisherigen, korrekten Dateien bleiben stehen. Lieber ein Tag
+alte richtige Daten als neue falsche. Er läuft nur nachts; die stündlichen
+Läufe am Wochenende würden die Abfragen sonst verdoppeln.
+
+Gegen absichtlich beschädigte Kalender geprüft: verschobene Uhrzeit, fehlender
+Termin, falscher Gegner und Tagestermin trotz Anwurfzeit werden alle gefunden.
+
+**Ergebnisse stehen aus Sicht der jeweiligen Mannschaft** (`eigene:fremde`),
+nicht als Heim:Gast. In der Zeile steht nur der Gegner – „30:20" rot neben
+einem Auswärtsspiel läse sich sonst, als hätten wir 30 geworfen.
+
 ## Alle Mannschaften und die Wochenend-Übersicht
 
 `teams.json` führt 23 Mannschaften: drei aktive und zwanzig Jugendteams.
