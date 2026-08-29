@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-08-29T18:31:01+00:00",
+  "aktualisiert": "2026-08-29T19:01:08+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -13,12 +13,38 @@
       "saison": "2026/27",
       "tabelle": {
         "runde": 1,
-        "gespielt": false,
+        "gespielt": true,
         "mannschaften": 12,
         "verlauf": [],
         "eintraege": [
           {
             "platz": 1,
+            "team": "HSG Worms",
+            "team_id": 80913,
+            "spiele": 1,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 32,
+            "gegentore": 29,
+            "differenz": 3
+          },
+          {
+            "platz": 2,
+            "team": "HSG Zotzenheim/St.Johann/Sprendlingen",
+            "team_id": 80922,
+            "spiele": 1,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 29,
+            "gegentore": 32,
+            "differenz": -3
+          },
+          {
+            "platz": 3,
             "team": "HSV Sobernheim H1",
             "team_id": 80912,
             "spiele": 0,
@@ -31,20 +57,7 @@
             "differenz": 0
           },
           {
-            "platz": 2,
-            "team": "HSG Worms",
-            "team_id": 80913,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 3,
+            "platz": 4,
             "team": "HSV Alzey",
             "team_id": 80914,
             "spiele": 0,
@@ -57,7 +70,7 @@
             "differenz": 0
           },
           {
-            "platz": 4,
+            "platz": 5,
             "team": "HSG Rhein-Nahe Bingen 2",
             "team_id": 80915,
             "spiele": 0,
@@ -70,7 +83,7 @@
             "differenz": 0
           },
           {
-            "platz": 5,
+            "platz": 6,
             "team": "GW Bingen-Büdesheim",
             "team_id": 80916,
             "spiele": 0,
@@ -83,7 +96,7 @@
             "differenz": 0
           },
           {
-            "platz": 6,
+            "platz": 7,
             "team": "TV Nieder-Olm 2",
             "team_id": 80917,
             "spiele": 0,
@@ -96,7 +109,7 @@
             "differenz": 0
           },
           {
-            "platz": 7,
+            "platz": 8,
             "team": "HSC Ingelheim",
             "team_id": 80918,
             "spiele": 0,
@@ -109,7 +122,7 @@
             "differenz": 0
           },
           {
-            "platz": 8,
+            "platz": 9,
             "team": "TSG MZ-Bretzenheim 2",
             "team_id": 80919,
             "spiele": 0,
@@ -122,7 +135,7 @@
             "differenz": 0
           },
           {
-            "platz": 9,
+            "platz": 10,
             "team": "TG Osthofen 2",
             "team_id": 80920,
             "spiele": 0,
@@ -135,22 +148,9 @@
             "differenz": 0
           },
           {
-            "platz": 10,
+            "platz": 11,
             "team": "SG Saulheim 2",
             "team_id": 80921,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 11,
-            "team": "HSG Zotzenheim/St.Johann/Sprendlingen",
-            "team_id": 80922,
             "spiele": 0,
             "punkte": 0,
             "siege": 0,
@@ -575,10 +575,29 @@
         "runde": 1,
         "gespielt": true,
         "mannschaften": 12,
-        "verlauf": [],
+        "verlauf": [
+          {
+            "runde": 1,
+            "platz": 4,
+            "punkte": 0
+          }
+        ],
         "eintraege": [
           {
             "platz": 1,
+            "team": "TV THALEISCHWEILER Herren",
+            "team_id": 80973,
+            "spiele": 1,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 22,
+            "gegentore": 20,
+            "differenz": 2
+          },
+          {
+            "platz": 2,
             "team": "TSV Kandel 2",
             "team_id": 80975,
             "spiele": 1,
@@ -591,7 +610,7 @@
             "differenz": 1
           },
           {
-            "platz": 2,
+            "platz": 3,
             "team": "HSV Lingenfeld/Schwegenheim 2",
             "team_id": 80982,
             "spiele": 1,
@@ -604,7 +623,20 @@
             "differenz": -1
           },
           {
-            "platz": 3,
+            "platz": 4,
+            "team": "HSG Mutterstadt/Ruchheim 2",
+            "team_id": 80980,
+            "spiele": 1,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 20,
+            "gegentore": 22,
+            "differenz": -2
+          },
+          {
+            "platz": 5,
             "team": "SG LaFt - Herren",
             "team_id": 80970,
             "spiele": 0,
@@ -617,20 +649,7 @@
             "differenz": 0
           },
           {
-            "platz": 4,
-            "team": "TV THALEISCHWEILER Herren",
-            "team_id": 80973,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 5,
+            "platz": 6,
             "team": "MSG Kaiserslautern/Dansenberg 2",
             "team_id": 80974,
             "spiele": 0,
@@ -643,7 +662,7 @@
             "differenz": 0
           },
           {
-            "platz": 6,
+            "platz": 7,
             "team": "TUS Neuhofen 2",
             "team_id": 80976,
             "spiele": 0,
@@ -656,7 +675,7 @@
             "differenz": 0
           },
           {
-            "platz": 7,
+            "platz": 8,
             "team": "TV Offenbach 4",
             "team_id": 80977,
             "spiele": 0,
@@ -669,7 +688,7 @@
             "differenz": 0
           },
           {
-            "platz": 8,
+            "platz": 9,
             "team": "MSG Iggelheim/Meckenheim 3",
             "team_id": 80978,
             "spiele": 0,
@@ -682,22 +701,9 @@
             "differenz": 0
           },
           {
-            "platz": 9,
+            "platz": 10,
             "team": "TV Kirrweiler 2",
             "team_id": 80979,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 10,
-            "team": "HSG Mutterstadt/Ruchheim 2",
-            "team_id": 80980,
             "spiele": 0,
             "punkte": 0,
             "siege": 0,
@@ -735,7 +741,9 @@
           }
         ]
       },
-      "form": [],
+      "form": [
+        "N"
+      ],
       "statistik": {
         "fahrten": {
           "gesamt_km": 658,
@@ -761,8 +769,8 @@
           "gesamt": {
             "s": 0,
             "u": 0,
-            "n": 0,
-            "spiele": 0
+            "n": 1,
+            "spiele": 1
           },
           "heim": {
             "s": 0,
@@ -773,26 +781,35 @@
           "auswaerts": {
             "s": 0,
             "u": 0,
-            "n": 0,
-            "spiele": 0
+            "n": 1,
+            "spiele": 1
           }
         },
         "serien": {
           "ohne_niederlage": 0,
-          "aktuell": 0,
-          "aktuell_art": null
+          "aktuell": 1,
+          "aktuell_art": "N"
         },
         "krimis": {
-          "anzahl": 0,
-          "anteil": 0,
-          "gesamt": 0
+          "anzahl": 1,
+          "gesamt": 1,
+          "anteil": 100
         },
-        "tore": {},
+        "tore": {
+          "erzielt": 20,
+          "kassiert": 22,
+          "schnitt": 20.0,
+          "torreichstes": {
+            "gegner": "TV THALEISCHWEILER Herren",
+            "stand": "20:22",
+            "summe": 42
+          }
+        },
         "anwurf": {
           "spaet": {
-            "spiele": 0,
+            "spiele": 1,
             "punkte": 0,
-            "schnitt": 0
+            "schnitt": 0.0
           },
           "frueh": {
             "spiele": 0,
@@ -817,7 +834,14 @@
           "spieltag": 1,
           "heim": false,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 0,
+          "ergebnis": {
+            "heim": 22,
+            "gast": 20,
+            "eigene": 20,
+            "fremde": 22,
+            "ausgang": "N"
+          }
         },
         "2627RPBKRKERMB0206": {
           "datum": "2026-09-06T20:00:00",
@@ -3059,8 +3083,8 @@
             "siege": 0,
             "remis": 1,
             "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
+            "tore": 28,
+            "gegentore": 28,
             "differenz": 0
           },
           {
@@ -3072,8 +3096,8 @@
             "siege": 0,
             "remis": 1,
             "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
+            "tore": 28,
+            "gegentore": 28,
             "differenz": 0
           },
           {
