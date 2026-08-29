@@ -7,3 +7,9 @@ workers_dev = true
 [[kv_namespaces]]
 binding = "ZAEHLER"
 id = "9cdf5b8b1e044059909e7af519b2802a"
+
+# Sicherheitsnetz, falls GitHub seine geplanten Laeufe verschiebt oder
+# ausfallen laesst. Der Worker stoesst den Workflow nur an, wenn die
+# veroeffentlichten Daten aelter als 50 Minuten sind.
+[triggers]
+crons = ["5 12-22 * * 6,0", "17 3 * * *"]

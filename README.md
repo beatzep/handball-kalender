@@ -338,6 +338,34 @@ npx wrangler deploy    # bei jeder Änderung am Worker
 node worker/test.mjs   # Logik gegen simuliertes KV prüfen
 ```
 
+### Der Worker als Sicherheitsnetz für den Workflow
+
+GitHub verschiebt geplante Läufe bei Last und lässt sie auch ganz ausfallen.
+Am 29.08.2026 fielen die Läufe um 14:05 und 15:05 aus, der letzte war von
+12:01 – Ergebnisse standen dadurch stundenlang nicht auf der Seite, obwohl
+stündlich geprüft werden sollte. Ein Handstart über den Actions-Tab half,
+aber darauf ist kein Verlass.
+
+Cloudflare hält seine Cron-Zeiten dagegen ein. Der Worker schaut zu denselben
+Zeiten nach, wie alt `daten.json` ist, und stößt den Workflow per
+`repository_dispatch` nur an, wenn GitHub selbst nicht geliefert hat (älter
+als 50 Minuten). Läuft dort alles normal, passiert nichts – es gibt also
+keine doppelten Läufe.
+
+Dafür braucht der Worker einen GitHub-Token:
+
+```bash
+npx wrangler secret put GITHUB_TOKEN
+```
+
+Ein **Fine-grained Token** genügt, beschränkt auf dieses eine Repository, mit
+der einen Berechtigung **Actions: Read and write**. Mehr braucht er nicht, und
+mehr sollte er nicht haben. Ohne Token protokolliert der Worker das und tut
+nichts – die geplanten Läufe von GitHub greifen dann wie bisher.
+
+`node worker/test_cron.mjs` prüft die Entscheidung: frische Daten lösen nichts
+aus, alte schon, ein abgelehnter Anstoß bringt den Worker nicht um.
+
 Die Seite bekommt die Adresse über `--worker-url`. **Ohne diese Angabe
 entfällt der Block ersatzlos** — und ist der Worker nicht erreichbar,
 blendet die Seite ihn aus, statt einen toten Knopf zu zeigen.

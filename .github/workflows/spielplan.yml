@@ -9,6 +9,10 @@ on:
     # Verband traegt das Ergebnis erst danach ein.
     - cron: "5 12-22 * * 6,0"
   workflow_dispatch:        # erlaubt den Handstart ueber den Actions-Tab
+  # Angestossen vom Cloudflare Worker, wenn GitHub seinen eigenen Zeitplan
+  # nicht eingehalten hat. Siehe scheduled() in worker/index.js.
+  repository_dispatch:
+    types: [spielplan-nachziehen]
 
 permissions:
   contents: write           # ohne das scheitert der Commit unten mit 403
@@ -76,7 +80,7 @@ jobs:
       # Nur beim naechtlichen Lauf: die stuendlichen Laeufe am Wochenende
       # wuerden die Abfragen sonst verdoppeln.
       - name: Gegen handball.net abgleichen
-        if: github.event.schedule != '5 12-22 * * 6,0'
+        if: github.event.schedule != '5 12-22 * * 6,0' && github.event_name != 'repository_dispatch'
         run: python3 pruefe_gegen_quelle.py
 
       - name: Zusammenfassung schreiben

@@ -544,4 +544,64 @@ export default {
                        grund: String((e && e.message) || e) }, request, 400);
     }
   },
+
+  /**
+   * Sicherheitsnetz fuer den Spielplan-Workflow.
+   *
+   * GitHub verschiebt geplante Laeufe bei Last, manchmal um Stunden, und
+   * laesst sie auch ganz ausfallen: am 29.08.2026 fielen die Laeufe um
+   * 14:05 und 15:05 aus, der letzte war von 12:01. Ergebnisse standen
+   * dadurch stundenlang nicht auf der Seite.
+   *
+   * Cloudflare haelt seine Cron-Zeiten dagegen ein. Dieser Aufruf schaut
+   * nach, wie alt die veroeffentlichten Daten sind, und stoesst den
+   * Workflow nur an, wenn GitHub selbst nicht geliefert hat. Laeuft dort
+   * alles normal, passiert hier nichts.
+   */
+  async scheduled(event, env, ctx) {
+    ctx.waitUntil(nachschauen(env));
+  },
 };
+
+const HOECHSTALTER_MIN = 50;
+
+async function nachschauen(env) {
+  if (!env.GITHUB_TOKEN) {
+    console.log("kein GITHUB_TOKEN gesetzt - nichts angestossen");
+    return;
+  }
+  let alter = Infinity;
+  try {
+    const antwort = await fetch(DATEN_URL, { cf: { cacheTtl: 0 } });
+    if (antwort.ok) {
+      const roh = await antwort.json();
+      const stand = Date.parse(roh.aktualisiert);
+      if (Number.isFinite(stand)) alter = (Date.now() - stand) / 60000;
+    }
+  } catch (e) {
+    // Sind die Daten nicht erreichbar, ist das erst recht ein Grund
+    // nachzulegen - alter bleibt auf Infinity.
+    console.error("Daten nicht erreichbar:", String(e));
+  }
+
+  if (alter < HOECHSTALTER_MIN) {
+    console.log(`Daten sind ${Math.round(alter)} Minuten alt - GitHub war puenktlich`);
+    return;
+  }
+
+  const r = await fetch(
+    "https://api.github.com/repos/beatzep/handball-kalender/dispatches",
+    {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${env.GITHUB_TOKEN}`,
+        Accept: "application/vnd.github+json",
+        "Content-Type": "application/json",
+        // Ohne User-Agent antwortet die GitHub-API mit 403.
+        "User-Agent": "muru-zaehler",
+      },
+      body: JSON.stringify({ event_type: "spielplan-nachziehen" }),
+    });
+  console.log(`Daten waren ${Math.round(alter)} Minuten alt, Workflow angestossen:`,
+              r.status, r.status === 204 ? "" : await r.text());
+}
