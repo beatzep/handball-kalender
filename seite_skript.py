@@ -50,6 +50,28 @@ window.muruGeraet = (function () {
   option.hidden = wieviele < 2;
 })();
 
+// Die Seite traegt alle 23 Mannschaften im Dokument, sichtbar ist immer nur
+// eine. Trotzdem holte beim Laden jeder Block seine Daten vom Zaehler: 24
+// Abrufe der Tipptabelle pro Seitenaufruf. Davon erlaubt der kostenlose
+// Tarif 1.000 am Tag - nach gut vierzig Besuchern war die Tipprunde tot.
+// Deshalb meldet sich hier an, wer Daten braucht, und wird erst gerufen,
+// wenn seine Mannschaft angezeigt wird.
+(function () {
+  var wartend = {}, erledigt = {};
+  window.muruBeiAnzeige = function (schluessel, laden) {
+    if (erledigt[schluessel]) { laden(); return; }
+    (wartend[schluessel] = wartend[schluessel] || []).push(laden);
+  };
+  window.muruAngezeigt = function (schluessel) {
+    if (!schluessel || erledigt[schluessel]) return;
+    erledigt[schluessel] = true;
+    (wartend[schluessel] || []).forEach(function (laden) {
+      try { laden(); } catch (e) { /* ein Block darf die anderen nicht mitnehmen */ }
+    });
+    delete wartend[schluessel];
+  };
+})();
+
 (function () {
   var seite = document.documentElement;
   var wahl = document.getElementById('teamwahl');
@@ -67,6 +89,7 @@ window.muruGeraet = (function () {
       if (passt) treffer = true;
     });
     if (!treffer) return false;
+    if (window.muruAngezeigt) window.muruAngezeigt(schluessel);
     wahl.value = schluessel;
     try { localStorage.setItem(SPEICHER, schluessel); } catch (e) {}
     return true;
@@ -221,9 +244,10 @@ window.muruGeraet = (function () {
 
     function melde(text) { if (vergleichEl) vergleichEl.textContent = text; }
 
-    // Stand holen
+    // Stand holen - erst, wenn diese Mannschaft angezeigt wird
     var adresse = worker + '/stand?spiel=' + encodeURIComponent(spiel) +
                   (vorher ? '&vergleich=' + encodeURIComponent(vorher) : '');
+    function holeStand() {
     fetch(adresse)
       .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
       .then(function (d) {
@@ -239,6 +263,13 @@ window.muruGeraet = (function () {
         // Ein sichtbarer, aber toter Knopf ist schlechter als keiner.
         block.hidden = true;
       });
+    }
+    var wessen = block.closest('[data-team]');
+    if (wessen && window.muruBeiAnzeige) {
+      window.muruBeiAnzeige(wessen.getAttribute('data-team'), holeStand);
+    } else {
+      holeStand();
+    }
 
     // Klicks buendeln: ein Aufruf je zwei Sekunden statt einer pro Klick
     function sende() {

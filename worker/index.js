@@ -173,6 +173,84 @@ function punkte(rohTipp, ergebnis) {
   return 0;
 }
 
+// Wer getippt hat, steht zusaetzlich in einer Liste. Ohne sie braucht
+// jeder Abruf der Tabelle ein list() - davon erlaubt der kostenlose Tarif
+// 1.000 am Tag, und die Seite kam auf 24 pro Seitenaufruf. Nach gut vierzig
+// Besuchern war die Tipptabelle bis Mitternacht tot.
+//
+// Die Liste ist nur eine Abkuerzung, nicht die Wahrheit: massgeblich
+// bleiben die Eintraege "tipper:<id>". Faellt sie aus oder ist sie
+// veraltet, wird sie aus dem Speicher neu aufgebaut.
+const INDEX_SCHLUESSEL = "tipper-index";     // ohne "tipper:", sonst listet er sich selbst
+const INDEX_FRISCH_MS = 6 * 60 * 60 * 1000;
+
+const INDEX_SPERRE_MS = 60 * 60 * 1000;      // nach einem Fehlschlag Ruhe geben
+
+async function indexLesen(env) {
+  try {
+    const roh = JSON.parse((await env.ZAEHLER.get(INDEX_SCHLUESSEL)) || "null");
+    if (roh && Array.isArray(roh.ids)) {
+      return {
+        stand: Number(roh.stand) || 0,
+        gesperrtBis: Number(roh.gesperrtBis) || 0,
+        ids: roh.ids.filter(x => typeof x === "string"),
+      };
+    }
+  } catch { /* neu aufbauen */ }
+  return null;
+}
+
+async function indexSchreiben(env, index) {
+  await env.ZAEHLER.put(INDEX_SCHLUESSEL, JSON.stringify(index));
+}
+
+/** Liefert alle Tipper-Kennungen und haelt die Liste nebenbei frisch. */
+async function tipperKennungen(env) {
+  const index = await indexLesen(env);
+  const jetzt = Date.now();
+  if (index && jetzt - index.stand < INDEX_FRISCH_MS) {
+    return { ids: index.ids, quelle: "liste" };
+  }
+  // Ist das Tageskontingent gerade erschoepft, rennt nicht jeder Abruf
+  // erneut dagegen - eine Stunde Ruhe, dann der naechste Versuch.
+  if (index && jetzt < index.gesperrtBis) {
+    return { ids: index.ids, quelle: "liste (veraltet)" };
+  }
+  try {
+    const liste = await env.ZAEHLER.list({ prefix: "tipper:" });
+    const ids = liste.keys.map(k => k.name.slice("tipper:".length));
+    // Wer inzwischen ueber /tipp dazugekommen ist, aber noch nicht im
+    // Speicher gelistet war, geht dabei nicht verloren.
+    for (const id of (index ? index.ids : [])) {
+      if (!ids.includes(id)) ids.push(id);
+    }
+    await indexSchreiben(env, { stand: jetzt, gesperrtBis: 0, ids });
+    return { ids, quelle: "speicher" };
+  } catch (e) {
+    if (index) {
+      try { await indexSchreiben(env, { ...index, gesperrtBis: jetzt + INDEX_SPERRE_MS }); }
+      catch { /* dann eben beim naechsten Mal */ }
+      return { ids: index.ids, quelle: "liste (veraltet)" };
+    }
+    throw e;
+  }
+}
+
+/**
+ * Nimmt eine Kennung in die Liste auf. Legt sie noetigenfalls an - mit
+ * stand 0, damit sie beim naechsten moeglichen Zugriff aus dem Speicher
+ * vervollstaendigt wird. So waechst die Tabelle auch dann weiter, wenn
+ * gerade kein list() moeglich ist.
+ */
+async function indexErgaenzen(env, id) {
+  try {
+    const index = (await indexLesen(env)) || { stand: 0, gesperrtBis: 0, ids: [] };
+    if (index.ids.includes(id)) return;
+    index.ids.push(id);
+    await indexSchreiben(env, index);
+  } catch { /* die Liste wird ohnehin regelmaessig neu aufgebaut */ }
+}
+
 async function tipperLesen(env, id) {
   const wert = JSON.parse((await env.ZAEHLER.get(`tipper:${id}`)) || "null");
   if (wert && typeof wert === "object" && !Array.isArray(wert)) {
@@ -374,6 +452,7 @@ export default {
         }
         tipper.tipps[spiel] = [th, tg];
         await env.ZAEHLER.put(`tipper:${geraet}`, JSON.stringify(tipper));
+        await indexErgaenzen(env, geraet);
         return antwort({ spiel, tipp: [th, tg], name: tipper.name }, request);
       }
 
@@ -398,7 +477,7 @@ export default {
         // alle Spiele des Vereins - wer viele Mannschaften tippt, haette
         // dann automatisch mehr Punkte.
         const nurMannschaft = url.searchParams.get("mannschaft") || "";
-        const liste = await env.ZAEHLER.list({ prefix: "tipper:" });
+        const kennungen = await tipperKennungen(env);
 
         // Jeder Speicherzugriff zaehlt gegen das Subrequest-Limit der Anfrage
         // (50 im kostenlosen Tarif), und list() sowie das Laden der Spieldaten
@@ -407,13 +486,12 @@ export default {
         // fielen still aus der Tabelle. Jetzt wird die Grenze eingehalten und
         // eine unvollstaendige Tabelle als solche gemeldet.
         const LESE_HOECHSTENS = 45;
-        const zuLesen = liste.keys.slice(0, LESE_HOECHSTENS);
-        const ausgelassen = liste.keys.length - zuLesen.length;
+        const zuLesen = kennungen.ids.slice(0, LESE_HOECHSTENS);
+        const ausgelassen = kennungen.ids.length - zuLesen.length;
         let unlesbar = 0;
 
         const eintraege = [];
-        for (const schluessel of zuLesen) {
-          const id = schluessel.name.slice("tipper:".length);
+        for (const id of zuLesen) {
           const tipper = await tipperLesenWeich(env, id);
           if (tipper.unlesbar) { unlesbar += 1; continue; }
           if (!tipper.name) continue;          // ohne Namen nicht in der Tabelle

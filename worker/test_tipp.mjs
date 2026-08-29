@@ -106,6 +106,7 @@ speicher.set("tipper:nur-ma", JSON.stringify({ name: "Nur mA", tipps: { MASPIEL:
 speicher.set("tipper:beide", JSON.stringify({ name: "Beide",
   tipps: { H1SPIEL: [30, 25], MASPIEL: [40, 1] } }));
 
+speicher.delete("tipper-index");     // wie ein Neuaufbau nach direktem Schreiben
 r = await ruf("/tipptabelle?mannschaft=herren1");
 let namen = r.daten.tabelle.map(e => e.name).sort();
 pruefe("Herren-I-Tabelle zeigt nur deren Tipper",
@@ -130,6 +131,7 @@ pruefe("Ohne Angabe alle Mannschaften", r.daten.tabelle.length === 3,
 // jetzt je Tipper gekapselt, und was sich deuten laesst, wird gedeutet.
 speicher.set("tipper:objekt", JSON.stringify({ name: "Objektform",
   tipps: { H1SPIEL: { heim: 30, gast: 25 } } }));
+speicher.delete("tipper-index");
 r = await ruf("/tipptabelle?mannschaft=herren1");
 pruefe("Ein abweichend gespeicherter Tipp kippt die Tabelle nicht",
        r.status === 200, JSON.stringify(r).slice(0, 160));
@@ -143,6 +145,7 @@ speicher.set("tipper:namelos", JSON.stringify({ name: null, tipps: { H1SPIEL: [3
 speicher.set("tipper:kaputt", "{kein json");
 speicher.set("tipper:string", JSON.stringify("nur ein String"));
 speicher.set("tipper:liste", JSON.stringify([1, 2, 3]));
+speicher.delete("tipper-index");
 r = await ruf("/tipptabelle?mannschaft=herren1");
 pruefe("Sechs unbrauchbare Eintraege gleichzeitig: Tabelle steht",
        r.status === 200, JSON.stringify(r).slice(0, 160));
@@ -164,12 +167,138 @@ pruefe("Die Tabelle veraendert keinen gespeicherten Tipp",
 for (let i = 0; i < 60; i++) {
   speicher.set(`tipper:m${i}`, JSON.stringify({ name: `M${i}`, tipps: { H1SPIEL: [30, 25] } }));
 }
+speicher.delete("tipper-index");
 r = await ruf("/tipptabelle?mannschaft=herren1");
 pruefe("Sehr viele Tipper: Tabelle bleibt erreichbar", r.status === 200,
        JSON.stringify(r.daten).slice(0, 120));
 pruefe("Unvollstaendige Tabelle wird als solche gemeldet",
        !!r.daten.unvollstaendig && r.daten.unvollstaendig.ausgelassen > 0,
        JSON.stringify(r.daten.unvollstaendig));
+
+// Das Tageskontingent fuer list() (1.000 im kostenlosen Tarif) war live
+// erschoepft, weil die Seite pro Aufruf 24 Tabellen lud. Der Lesepfad darf
+// deshalb gar kein list() mehr brauchen.
+let listAufrufe = 0;
+const zaehlendesEnv = { ZAEHLER: {
+  get: env.ZAEHLER.get, put: env.ZAEHLER.put,
+  list: async (o) => { listAufrufe += 1; return env.ZAEHLER.list(o); },
+}};
+const rufZ = async (pfad) => {
+  const r = await worker.fetch(new Request("https://x.dev" + pfad, { headers: H }),
+                               zaehlendesEnv);
+  return { status: r.status, daten: await r.json() };
+};
+
+speicher.delete("tipper-index");
+await rufZ("/tipptabelle?mannschaft=herren1");     // baut die Liste auf
+const nachErstem = listAufrufe;
+for (let i = 0; i < 30; i++) await rufZ("/tipptabelle?mannschaft=herren1");
+pruefe("Weitere Abrufe brauchen kein list() mehr",
+       nachErstem === 1 && listAufrufe === 1, `erst ${nachErstem}, dann ${listAufrufe}`);
+
+// Und wenn das Kontingent doch erschoepft ist: lieber eine etwas aeltere
+// Liste als die leere Flaeche, die monatelang zu sehen war.
+const sperrendesEnv = { ZAEHLER: {
+  get: env.ZAEHLER.get, put: env.ZAEHLER.put,
+  list: async () => { throw new Error("KV list() limit exceeded for the day."); },
+}};
+const rufS = async (pfad) => {
+  const r = await worker.fetch(new Request("https://x.dev" + pfad, { headers: H }),
+                               sperrendesEnv);
+  return { status: r.status, daten: await r.json() };
+};
+r = await rufS("/tipptabelle?mannschaft=herren1");
+pruefe("Bei erschoepftem list()-Kontingent steht die Tabelle trotzdem",
+       r.status === 200 && r.daten.tabelle.length > 0,
+       JSON.stringify(r.daten).slice(0, 120));
+
+// Ein neuer Tipper muss sofort auftauchen, nicht erst beim Neuaufbau.
+// Die Spieldaten oben kennen nur gelaufene Partien - hier eine kommende.
+const vorherigeSpiele = globalThis.fetch;
+globalThis.fetch = async () => ({ ok: true, json: async () => ({ teams: {
+  herren1: { name: "Herren I", spiele: {
+    H1SPIEL: { datum: VERGANGEN, gegner: "A", heim: true,
+               ergebnis: { heim: 30, gast: 25 } },
+    NAECHSTES: { datum: ZUKUNFT, gegner: "D", heim: true, ergebnis: null } } },
+  ma: { name: "mA-Jugend", spiele: {
+    MASPIEL: { datum: VERGANGEN, gegner: "B", heim: true,
+               ergebnis: { heim: 20, gast: 22 } } } },
+}})});
+// Die 60 Eintraege aus der Mengenprobe raeumen, sonst faellt der neue
+// hinter die Lesegrenze. Die gemerkte Liste wird mitgezogen statt neu
+// aufgebaut - sonst wuerde der Test nicht zeigen, dass /tipp sie pflegt.
+for (let i = 0; i < 60; i++) speicher.delete(`tipper:m${i}`);
+{
+  const idx = JSON.parse(speicher.get("tipper-index"));
+  idx.ids = idx.ids.filter(id => !/^m\d+$/.test(id));
+  speicher.set("tipper-index", JSON.stringify(idx));
+}
+r = await ruf("/tipp", "POST",
+  { geraet: "frisch", spiel: "NAECHSTES", heim: 1, gast: 2, name: "Frisch Getippt" });
+pruefe("Neuer Tipp wird angenommen", r.status === 200, JSON.stringify(r.daten));
+r = await ruf("/tipptabelle");
+pruefe("Neuer Tipper steht sofort in der Tabelle",
+       r.daten.tabelle.some(e => e.name === "Frisch Getippt"),
+       JSON.stringify(r.daten.tabelle.map(e => e.name)));
+globalThis.fetch = vorherigeSpiele;
+
+// Genau die Lage vom 29.08.2026: kein Index, und list() geht nicht mehr.
+// Wer jetzt tippt, muss trotzdem in der Tabelle erscheinen, und sobald das
+// Kontingent wieder da ist, muessen die Aelteren dazukommen.
+{
+  const vorher2 = globalThis.fetch;
+  globalThis.fetch = async () => ({ ok: true, json: async () => ({ teams: {
+    herren1: { name: "Herren I", spiele: {
+      H1SPIEL: { datum: VERGANGEN, gegner: "A", heim: true,
+                 ergebnis: { heim: 30, gast: 25 } },
+      NAECHSTES: { datum: ZUKUNFT, gegner: "D", heim: true, ergebnis: null } } },
+  }})});
+  const s2 = new Map();
+  let listErlaubt = false;
+  const env2 = { ZAEHLER: {
+    get: async (k) => (s2.has(k) ? s2.get(k) : null),
+    put: async (k, v) => void s2.set(k, v),
+    list: async ({ prefix }) => {
+      if (!listErlaubt) throw new Error("KV list() limit exceeded for the day.");
+      return { keys: [...s2.keys()].filter(k => k.startsWith(prefix)).map(name => ({ name })) };
+    },
+  }};
+  const ruf2 = async (pfad, methode = "GET", koerper) => {
+    const r = await worker.fetch(new Request("https://x.dev" + pfad, {
+      method: methode, headers: H, body: koerper ? JSON.stringify(koerper) : undefined,
+    }), env2);
+    return { status: r.status, daten: await r.json() };
+  };
+
+  // Ein Alteingesessener liegt im Speicher, aber in keiner Liste
+  s2.set("tipper:alt", JSON.stringify({ name: "Schon dabei", tipps: { H1SPIEL: [30, 25] } }));
+
+  let x = await ruf2("/tipptabelle?mannschaft=herren1");
+  pruefe("Ohne Liste und ohne list() sagt die Tabelle es ehrlich", x.status === 400,
+         JSON.stringify(x.daten));
+
+  x = await ruf2("/tipp", "POST",
+    { geraet: "neuling", spiel: "NAECHSTES", heim: 3, gast: 2, name: "Neu Getippt" });
+  pruefe("Tippen geht auch ohne Liste", x.status === 200, JSON.stringify(x.daten));
+
+  x = await ruf2("/tipptabelle?mannschaft=herren1");
+  pruefe("Wer jetzt tippt, steht sofort in der Tabelle",
+         x.status === 200 && x.daten.tabelle.some(e => e.name === "Neu Getippt"),
+         JSON.stringify(x.daten).slice(0, 140));
+
+  listErlaubt = true;                      // am naechsten Tag
+  {                                        // und die Stundensperre ist abgelaufen
+    const idx = JSON.parse(s2.get("tipper-index"));
+    idx.gesperrtBis = 0;
+    s2.set("tipper-index", JSON.stringify(idx));
+  }
+  x = await ruf2("/tipptabelle?mannschaft=herren1");
+  const drin = (x.daten.tabelle || []).map(e => e.name).sort();
+  pruefe("Sobald list() wieder geht, sind die Aelteren dabei",
+         drin.includes("Schon dabei") && drin.includes("Neu Getippt"),
+         JSON.stringify(drin));
+  globalThis.fetch = vorher2;
+}
 
 let fehler = 0;
 for (const p of pruefungen) {

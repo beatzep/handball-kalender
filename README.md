@@ -334,6 +334,44 @@ blendet die Seite ihn aus, statt einen toten Knopf zu zeigen.
 Weil die Zähler an die Spielnummer hängen, fangen sie vor jedem Spiel bei
 null an; der Stand des letzten Spiels bleibt als Vergleich stehen.
 
+### Was am 29.08.2026 die Tipptabelle lahmgelegt hat
+
+Die Tabelle war tot und niemand konnte es sehen. Drei Fehler übereinander:
+
+1. **Die Seite lud 24 Tabellen auf einmal.** Alle 23 Mannschaften stehen im
+   Dokument, sichtbar ist immer nur eine – trotzdem holte jeder Block beim
+   Laden seine Daten. Jeder Abruf brauchte ein `list()`, und davon erlaubt
+   der kostenlose Tarif **1.000 am Tag**. Nach gut vierzig Besuchern war die
+   Tipprunde bis Mitternacht UTC tot, jeden Tag aufs Neue.
+2. **Der Worker verschluckte den Grund.** Jede Ausnahme wurde zu
+   `"Anfrage fehlerhaft"` ohne weitere Angabe. Erst als der `catch` die
+   Meldung durchreichte, stand da `KV list() limit exceeded for the day.`
+3. **Die Seite verschluckte den Fehler.** Bei einem Fehlschlag setzte sie
+   `tabelle.innerHTML = ''` – keine Tabelle, kein Hinweis. Es sah aus, als
+   hätte einfach noch niemand getippt.
+
+Behoben ohne jede Änderung am Speicherschema:
+
+- Blöcke melden sich über `window.muruBeiAnzeige` an und laden erst, wenn
+  ihre Mannschaft angezeigt wird. Von 46 Abrufen pro Seitenaufruf auf 2.
+- Der eigene Tippstand wird einmal für die ganze Seite geholt statt 24-mal
+  unter derselben Adresse.
+- Wer getippt hat, steht zusätzlich in `tipper-index`. Der Lesepfad braucht
+  damit **kein** `list()` mehr; die Liste wird alle sechs Stunden aus dem
+  Speicher aufgefrischt und wächst bei jedem neuen Tipp mit. Maßgeblich
+  bleiben die Einträge `tipper:<id>` – die Liste ist nur eine Abkürzung.
+- Schlägt das Auffrischen fehl, wird eine Stunde lang nicht erneut
+  angerannt und die ältere Liste weiterverwendet.
+- Ein einzelner unbrauchbarer Eintrag kippt nicht mehr die Wertung aller
+  anderen, und abweichend gespeicherte Tipps werden gedeutet statt
+  verworfen (`alsTipp`).
+
+`worker/test_tipp.mjs` deckt das ab, einschließlich der Lage vom 29.08.:
+kein Index und kein `list()` möglich – wer dann tippt, muss trotzdem in der
+Tabelle erscheinen, und sobald das Kontingent wieder da ist, kommen die
+Älteren dazu. Ein Test belegt, dass die Tabelle keinen gespeicherten Tipp
+verändert.
+
 **Bekannte Grenzen, bewusst in Kauf genommen:**
 
 - Klicks werden im Browser gesammelt und alle zwei Sekunden gebündelt

@@ -6,6 +6,17 @@ TIPP = """
   if (!bloecke.length || !window.muruGeraet) return;
   var geraet = window.muruGeraet();
 
+  // Der eigene Stand ist fuer alle Bloecke derselbe. Frueher holte ihn
+  // jeder einzeln - vierundzwanzig Mal dieselbe Adresse pro Seitenaufruf.
+  var eigenerStand = null;
+  function holeEigenenStand(worker) {
+    if (!eigenerStand) {
+      eigenerStand = fetch(worker + '/tipper?geraet=' + encodeURIComponent(geraet))
+        .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); });
+    }
+    return eigenerStand;
+  }
+
   bloecke.forEach(function (block) {
     var huelle = block.closest('.mitmachen');
     var worker = huelle && huelle.getAttribute('data-worker');
@@ -67,14 +78,13 @@ TIPP = """
         .catch(function () {
           // Frueher wurde hier stumm geleert. Die Tabelle war dadurch
           // monatelang kaputt, ohne dass es jemand sehen konnte.
-          tabelle.innerHTML = '<p class="tippfuss">Die Tabelle laesst sich '
+          tabelle.innerHTML = '<p class="tippfuss">Die Tabelle lässt sich '
             + 'gerade nicht laden. Dein Tipp ist gespeichert.</p>';
         });
     }
 
     // Eigener Stand: Name und ein bereits abgegebener Tipp
-    fetch(worker + '/tipper?geraet=' + encodeURIComponent(geraet))
-      .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+    holeEigenenStand(worker)
       .then(function (d) {
         if (d.name) nameFeld.value = d.name;
         if (d.tipps && Object.keys(d.tipps).length) getippt = true;
@@ -87,7 +97,12 @@ TIPP = """
       })
       .catch(function () { block.hidden = true; });
 
-    ladeTabelle();
+    var wessen = block.closest('[data-team]');
+    if (wessen && window.muruBeiAnzeige) {
+      window.muruBeiAnzeige(wessen.getAttribute('data-team'), ladeTabelle);
+    } else {
+      ladeTabelle();
+    }
 
     senden.addEventListener('click', function () {
       var h = parseInt(heimFeld.value, 10), g = parseInt(gastFeld.value, 10);
