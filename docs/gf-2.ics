@@ -28,13 +28,13 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:2627RPBKROFJGI0103@handball.net
-DTSTAMP:20260829T132422Z
+DTSTAMP:20260829T141317Z
 DTSTART;TZID=Europe/Berlin:20260829T140000
 DTEND;TZID=Europe/Berlin:20260829T160000
-SUMMARY:🏠 MuRu gF II - TSV Speyer III
-DESCRIPTION:Heimspiel gegen TSV Speyer III\nAnwurf: 14:00 Uhr\nLiga: F-Juge
- nd GEMISCHT\nSpieltag: 1\nSpielnummer: 2627RPBKROFJGI0103\nhttps://www.han
- dball.net/match/362404
+SUMMARY:🏠 MuRu gF II - TSV Speyer 3
+DESCRIPTION:Heimspiel gegen TSV Speyer 3\nAnwurf: 14:00 Uhr\nLiga: F-Jugend
+  GEMISCHT\nSpieltag: 1\nSpielnummer: 2627RPBKROFJGI0103\nhttps://www.handb
+ all.net/match/362404
 URL:https://www.handball.net/match/362404
 SEQUENCE:0
 STATUS:CONFIRMED
@@ -45,17 +45,17 @@ GEO:49.444531;8.359517
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-P1D
-DESCRIPTION:Morgen Spiel: 🏠 MuRu gF II - TSV Speyer III
+DESCRIPTION:Morgen Spiel: 🏠 MuRu gF II - TSV Speyer 3
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-PT3H
-DESCRIPTION:Gleich Spiel: 🏠 MuRu gF II - TSV Speyer III
+DESCRIPTION:Gleich Spiel: 🏠 MuRu gF II - TSV Speyer 3
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RPBKROFJGI0304@handball.net
-DTSTAMP:20260829T132422Z
+DTSTAMP:20260829T141317Z
 DTSTART;TZID=Europe/Berlin:20260920T110000
 DTEND;TZID=Europe/Berlin:20260920T130000
 SUMMARY:🏠 MuRu gF II - HSG Lingenfeld/Schwegenheim
@@ -82,13 +82,13 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RPBKROFJGI0401@handball.net
-DTSTAMP:20260829T132422Z
+DTSTAMP:20260829T141317Z
 DTSTART;TZID=Europe/Berlin:20260927T120000
 DTEND;TZID=Europe/Berlin:20260927T140000
-SUMMARY:🏠 MuRu gF II - TUS Neuhofen III
-DESCRIPTION:Heimspiel gegen TUS Neuhofen III\nAnwurf: 12:00 Uhr\nLiga: F-Ju
- gend GEMISCHT\nSpieltag: 4\nSpielnummer: 2627RPBKROFJGI0401\nhttps://www.h
- andball.net/match/362414
+SUMMARY:🏠 MuRu gF II - TUS Neuhofen 3
+DESCRIPTION:Heimspiel gegen TUS Neuhofen 3\nAnwurf: 12:00 Uhr\nLiga: F-Juge
+ nd GEMISCHT\nSpieltag: 4\nSpielnummer: 2627RPBKROFJGI0401\nhttps://www.han
+ dball.net/match/362414
 URL:https://www.handball.net/match/362414
 SEQUENCE:0
 STATUS:CONFIRMED
@@ -99,23 +99,23 @@ GEO:49.444531;8.359517
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-P1D
-DESCRIPTION:Morgen Spiel: 🏠 MuRu gF II - TUS Neuhofen III
+DESCRIPTION:Morgen Spiel: 🏠 MuRu gF II - TUS Neuhofen 3
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-PT3H
-DESCRIPTION:Gleich Spiel: 🏠 MuRu gF II - TUS Neuhofen III
+DESCRIPTION:Gleich Spiel: 🏠 MuRu gF II - TUS Neuhofen 3
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RPBKROFJGI0503@handball.net
-DTSTAMP:20260829T132422Z
+DTSTAMP:20260829T141317Z
 DTSTART;TZID=Europe/Berlin:20261025T100000
 DTEND;TZID=Europe/Berlin:20261025T120000
-SUMMARY:🚗 HSG Dudenhofen/Schifferstadt III - MuRu gF II
-DESCRIPTION:Auswärtsspiel gegen HSG Dudenhofen/Schifferstadt III\nAnwurf: 
- 10:00 Uhr\nLiga: F-Jugend GEMISCHT\nSpieltag: 5\nSpielnummer: 2627RPBKROFJ
- GI0503\nhttps://www.handball.net/match/362420
+SUMMARY:🚗 HSG Dudenhofen/Schifferstadt 3 - MuRu gF II
+DESCRIPTION:Auswärtsspiel gegen HSG Dudenhofen/Schifferstadt 3\nAnwurf: 10
+ :00 Uhr\nLiga: F-Jugend GEMISCHT\nSpieltag: 5\nSpielnummer: 2627RPBKROFJGI
+ 0503\nhttps://www.handball.net/match/362420
 URL:https://www.handball.net/match/362420
 SEQUENCE:0
 STATUS:CONFIRMED
@@ -126,25 +126,23 @@ GEO:49.323054;8.383972
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-P1D
-DESCRIPTION:Morgen Spiel: 🚗 HSG Dudenhofen/Schifferstadt III - MuRu gF I
- I
+DESCRIPTION:Morgen Spiel: 🚗 HSG Dudenhofen/Schifferstadt 3 - MuRu gF II
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-PT3H
-DESCRIPTION:Gleich Spiel: 🚗 HSG Dudenhofen/Schifferstadt III - MuRu gF I
- I
+DESCRIPTION:Gleich Spiel: 🚗 HSG Dudenhofen/Schifferstadt 3 - MuRu gF II
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RPBKROFJGI0602@handball.net
-DTSTAMP:20260829T132422Z
+DTSTAMP:20260829T141317Z
 DTSTART;TZID=Europe/Berlin:20261107T130000
 DTEND;TZID=Europe/Berlin:20261107T150000
-SUMMARY:🏠 MuRu gF II - TUS Heiligenstein II
-DESCRIPTION:Heimspiel gegen TUS Heiligenstein II\nAnwurf: 13:00 Uhr\nLiga: 
- F-Jugend GEMISCHT\nSpieltag: 6\nSpielnummer: 2627RPBKROFJGI0602\nhttps://w
- ww.handball.net/match/362423
+SUMMARY:🏠 MuRu gF II - TUS Heiligenstein 2
+DESCRIPTION:Heimspiel gegen TUS Heiligenstein 2\nAnwurf: 13:00 Uhr\nLiga: F
+ -Jugend GEMISCHT\nSpieltag: 6\nSpielnummer: 2627RPBKROFJGI0602\nhttps://ww
+ w.handball.net/match/362423
 URL:https://www.handball.net/match/362423
 SEQUENCE:0
 STATUS:CONFIRMED
@@ -156,17 +154,17 @@ GEO:49.487079;8.364587
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-P1D
-DESCRIPTION:Morgen Spiel: 🏠 MuRu gF II - TUS Heiligenstein II
+DESCRIPTION:Morgen Spiel: 🏠 MuRu gF II - TUS Heiligenstein 2
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-PT3H
-DESCRIPTION:Gleich Spiel: 🏠 MuRu gF II - TUS Heiligenstein II
+DESCRIPTION:Gleich Spiel: 🏠 MuRu gF II - TUS Heiligenstein 2
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RPBKROFJGI0702@handball.net
-DTSTAMP:20260829T132422Z
+DTSTAMP:20260829T141317Z
 DTSTART;TZID=Europe/Berlin:20261115T100000
 DTEND;TZID=Europe/Berlin:20261115T120000
 SUMMARY:🚗 TV Kirrweiler - MuRu gF II
@@ -193,13 +191,13 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RPBKROFJGI0803@handball.net
-DTSTAMP:20260829T132422Z
+DTSTAMP:20260829T141317Z
 DTSTART;TZID=Europe/Berlin:20261128T110000
 DTEND;TZID=Europe/Berlin:20261128T130000
-SUMMARY:🚗 TSV Speyer III - MuRu gF II
-DESCRIPTION:Auswärtsspiel gegen TSV Speyer III\nAnwurf: 11:00 Uhr\nLiga: F
- -Jugend GEMISCHT\nSpieltag: 8\nSpielnummer: 2627RPBKROFJGI0803\nhttps://ww
- w.handball.net/match/362432
+SUMMARY:🚗 TSV Speyer 3 - MuRu gF II
+DESCRIPTION:Auswärtsspiel gegen TSV Speyer 3\nAnwurf: 11:00 Uhr\nLiga: F-J
+ ugend GEMISCHT\nSpieltag: 8\nSpielnummer: 2627RPBKROFJGI0803\nhttps://www.
+ handball.net/match/362432
 URL:https://www.handball.net/match/362432
 SEQUENCE:0
 STATUS:CONFIRMED
@@ -209,17 +207,17 @@ LOCATION:Sporthalle-West Speyer\, Im Ehrlich 67A\, 67346 Speyer
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-P1D
-DESCRIPTION:Morgen Spiel: 🚗 TSV Speyer III - MuRu gF II
+DESCRIPTION:Morgen Spiel: 🚗 TSV Speyer 3 - MuRu gF II
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-PT3H
-DESCRIPTION:Gleich Spiel: 🚗 TSV Speyer III - MuRu gF II
+DESCRIPTION:Gleich Spiel: 🚗 TSV Speyer 3 - MuRu gF II
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RPBKROFJGI1004@handball.net
-DTSTAMP:20260829T132422Z
+DTSTAMP:20260829T141317Z
 DTSTART;TZID=Europe/Berlin:20270130T110000
 DTEND;TZID=Europe/Berlin:20270130T130000
 SUMMARY:🚗 HSG Lingenfeld/Schwegenheim - MuRu gF II
@@ -245,13 +243,13 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RPBKROFJGI1101@handball.net
-DTSTAMP:20260829T132422Z
+DTSTAMP:20260829T141317Z
 DTSTART;TZID=Europe/Berlin:20270213T140000
 DTEND;TZID=Europe/Berlin:20270213T160000
-SUMMARY:🚗 TUS Neuhofen III - MuRu gF II
-DESCRIPTION:Auswärtsspiel gegen TUS Neuhofen III\nAnwurf: 14:00 Uhr\nLiga:
-  F-Jugend GEMISCHT\nSpieltag: 11\nSpielnummer: 2627RPBKROFJGI1101\nhttps:/
- /www.handball.net/match/362442
+SUMMARY:🚗 TUS Neuhofen 3 - MuRu gF II
+DESCRIPTION:Auswärtsspiel gegen TUS Neuhofen 3\nAnwurf: 14:00 Uhr\nLiga: F
+ -Jugend GEMISCHT\nSpieltag: 11\nSpielnummer: 2627RPBKROFJGI1101\nhttps://w
+ ww.handball.net/match/362442
 URL:https://www.handball.net/match/362442
 SEQUENCE:0
 STATUS:CONFIRMED
@@ -262,23 +260,23 @@ GEO:49.420979;8.423410
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-P1D
-DESCRIPTION:Morgen Spiel: 🚗 TUS Neuhofen III - MuRu gF II
+DESCRIPTION:Morgen Spiel: 🚗 TUS Neuhofen 3 - MuRu gF II
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-PT3H
-DESCRIPTION:Gleich Spiel: 🚗 TUS Neuhofen III - MuRu gF II
+DESCRIPTION:Gleich Spiel: 🚗 TUS Neuhofen 3 - MuRu gF II
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RPBKROFJGI1203@handball.net
-DTSTAMP:20260829T132422Z
+DTSTAMP:20260829T141317Z
 DTSTART;TZID=Europe/Berlin:20270220T123000
 DTEND;TZID=Europe/Berlin:20270220T143000
-SUMMARY:🏠 MuRu gF II - HSG Dudenhofen/Schifferstadt III
-DESCRIPTION:Heimspiel gegen HSG Dudenhofen/Schifferstadt III\nAnwurf: 12:30
-  Uhr\nLiga: F-Jugend GEMISCHT\nSpieltag: 12\nSpielnummer: 2627RPBKROFJGI12
- 03\nhttps://www.handball.net/match/362448
+SUMMARY:🏠 MuRu gF II - HSG Dudenhofen/Schifferstadt 3
+DESCRIPTION:Heimspiel gegen HSG Dudenhofen/Schifferstadt 3\nAnwurf: 12:30 U
+ hr\nLiga: F-Jugend GEMISCHT\nSpieltag: 12\nSpielnummer: 2627RPBKROFJGI1203
+ \nhttps://www.handball.net/match/362448
 URL:https://www.handball.net/match/362448
 SEQUENCE:0
 STATUS:CONFIRMED
@@ -290,25 +288,23 @@ GEO:49.487079;8.364587
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-P1D
-DESCRIPTION:Morgen Spiel: 🏠 MuRu gF II - HSG Dudenhofen/Schifferstadt II
- I
+DESCRIPTION:Morgen Spiel: 🏠 MuRu gF II - HSG Dudenhofen/Schifferstadt 3
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-PT3H
-DESCRIPTION:Gleich Spiel: 🏠 MuRu gF II - HSG Dudenhofen/Schifferstadt II
- I
+DESCRIPTION:Gleich Spiel: 🏠 MuRu gF II - HSG Dudenhofen/Schifferstadt 3
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RPBKROFJGI1302@handball.net
-DTSTAMP:20260829T132422Z
+DTSTAMP:20260829T141317Z
 DTSTART;TZID=Europe/Berlin:20270307T110000
 DTEND;TZID=Europe/Berlin:20270307T130000
-SUMMARY:🚗 TUS Heiligenstein II - MuRu gF II
-DESCRIPTION:Auswärtsspiel gegen TUS Heiligenstein II\nAnwurf: 11:00 Uhr\nL
- iga: F-Jugend GEMISCHT\nSpieltag: 13\nSpielnummer: 2627RPBKROFJGI1302\nhtt
- ps://www.handball.net/match/362451
+SUMMARY:🚗 TUS Heiligenstein 2 - MuRu gF II
+DESCRIPTION:Auswärtsspiel gegen TUS Heiligenstein 2\nAnwurf: 11:00 Uhr\nLi
+ ga: F-Jugend GEMISCHT\nSpieltag: 13\nSpielnummer: 2627RPBKROFJGI1302\nhttp
+ s://www.handball.net/match/362451
 URL:https://www.handball.net/match/362451
 SEQUENCE:0
 STATUS:CONFIRMED
@@ -320,17 +316,17 @@ GEO:49.279315;8.404978
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-P1D
-DESCRIPTION:Morgen Spiel: 🚗 TUS Heiligenstein II - MuRu gF II
+DESCRIPTION:Morgen Spiel: 🚗 TUS Heiligenstein 2 - MuRu gF II
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-PT3H
-DESCRIPTION:Gleich Spiel: 🚗 TUS Heiligenstein II - MuRu gF II
+DESCRIPTION:Gleich Spiel: 🚗 TUS Heiligenstein 2 - MuRu gF II
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RPBKROFJGI1402@handball.net
-DTSTAMP:20260829T132422Z
+DTSTAMP:20260829T141317Z
 DTSTART;TZID=Europe/Berlin:20270314T100000
 DTEND;TZID=Europe/Berlin:20270314T120000
 SUMMARY:🏠 MuRu gF II - TV Kirrweiler

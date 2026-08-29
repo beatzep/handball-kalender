@@ -454,6 +454,15 @@ table.tabelle tr.wir td.platz { box-shadow: inset 2px 0 0 var(--gold); }
 #meine-inhalt .konflikt strong { color: var(--tinte); font-weight: 600; }
 #meine-inhalt .wessen { font-size: .74rem; font-weight: 600; letter-spacing: .06em;
   text-transform: uppercase; color: var(--gold-tief); margin-bottom: 2px; }
+/* Wie auf der Wochenend-Uebersicht: der Name deckt die ganze Zeile ab.
+   Der Hallenlink liegt darueber und bleibt einzeln antippbar. */
+#meine-inhalt .spiel { position: relative; }
+#meine-inhalt .zurmannschaft { color: inherit; text-decoration: none; }
+#meine-inhalt .zurmannschaft::after { content: ''; position: absolute; inset: 0; }
+#meine-inhalt .spiel:hover .wessen { color: var(--gold); }
+#meine-inhalt .spiel .halle a { position: relative; z-index: 1; }
+#meine-inhalt .zurmannschaft:focus-visible { outline: 2px solid var(--gold);
+                                            outline-offset: 3px; }
 #meine-inhalt .spiel.stoerung { box-shadow: inset 2px 0 0 var(--niederlage);
   padding-left: 10px; margin-left: -10px; }
 #meine-inhalt .leer { color: var(--leise); font-size: .95rem; margin: 18px 0 0; }
@@ -542,14 +551,14 @@ table.tabelle tr.wir td.platz { box-shadow: inset 2px 0 0 var(--gold); }
  data-tag="2026-08-29">
 <div class="uhr">12:30</div>
 <div><div class="wer"><a class="zurmannschaft" href="index.html#gf">gF-Jugend</a></div>
-<div class="gegen">bei JSG Mundenheim/Rheingönheim II</div>
+<div class="gegen">bei JSG Mundenheim/Rheingönheim 2</div>
 <div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Heinrich-Ries-Halle%20Ludwigshafen%20Pettenkoferstra%C3%9Fe%2C%2067063%20Ludwigshafen-Friesenheim" target="_blank" rel="noopener">Heinrich-Ries-Halle Ludwigshafen</a></div></div>
 <div class="rechts"><div class="hz ">A</div></div>
 </div><div class="partie heimspiel" data-heim="ja"
  data-tag="2026-08-29">
 <div class="uhr">14:00</div>
 <div><div class="wer"><a class="zurmannschaft" href="index.html#gf-2">gF-Jugend II</a></div>
-<div class="gegen">gegen TSV Speyer III</div>
+<div class="gegen">gegen TSV Speyer 3</div>
 <div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
 <div class="rechts"><div class="hz heim">H</div></div>
 </div><div class="partie" data-heim="nein"
@@ -633,14 +642,14 @@ table.tabelle tr.wir td.platz { box-shadow: inset 2px 0 0 var(--gold); }
  data-tag="2026-08-30">
 <div class="uhr">15:30</div>
 <div><div class="wer"><a class="zurmannschaft" href="index.html#gc">gC-Jugend</a></div>
-<div class="gegen">gegen JSG Mundenheim/Rheingönheim II</div>
+<div class="gegen">gegen JSG Mundenheim/Rheingönheim 2</div>
 <div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
 <div class="rechts"><div class="hz heim">H</div></div>
 </div><div class="partie" data-heim="nein"
  data-tag="2026-08-30">
 <div class="uhr">16:15</div>
 <div><div class="wer"><a class="zurmannschaft" href="index.html#ge-3">gE-Jugend III</a></div>
-<div class="gegen">bei TV Offenbach IV</div>
+<div class="gegen">bei TV Offenbach 4</div>
 <div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Queichtalhalle%20Offenbach%20Konrad-Lerch-Ring%203%2C%2076877%20Offenbach" target="_blank" rel="noopener">Queichtalhalle Offenbach</a></div></div>
 <div class="rechts"><div class="hz ">A</div></div>
 </div><div class="partie heimspiel" data-heim="ja"
@@ -703,7 +712,7 @@ table.tabelle tr.wir td.platz { box-shadow: inset 2px 0 0 var(--gold); }
  data-tag="2026-09-06">
 <div class="uhr">10:00</div>
 <div><div class="wer"><a class="zurmannschaft" href="index.html#minis-2">Minis II</a></div>
-<div class="gegen">gegen HSG Dudenhofen/Schifferstadt III</div>
+<div class="gegen">gegen HSG Dudenhofen/Schifferstadt 3</div>
 <div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TVR-Sporthalle%20Ludwigshafen%20Fu%C3%9Fg%C3%B6nheimer%20Str.%20127%20%28Ortsende%29%2C%2067071%20Ludwigshafen" target="_blank" rel="noopener">TVR-Sporthalle Ludwigshafen</a></div></div>
 <div class="rechts"><div class="hz heim">H</div></div>
 </div><div class="partie" data-heim="nein"
@@ -738,7 +747,7 @@ table.tabelle tr.wir td.platz { box-shadow: inset 2px 0 0 var(--gold); }
  data-tag="2026-09-06">
 <div class="uhr">12:00</div>
 <div><div class="wer"><a class="zurmannschaft" href="index.html#wc-2">wC-Jugend II</a></div>
-<div class="gegen">bei Mjsg SG Saulheim/HSV Alzey III</div>
+<div class="gegen">bei Mjsg SG Saulheim/HSV Alzey 3</div>
 <div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Rundsporthalle%20Alzey%20Frankenstra%C3%9Fe%2017%2C%2055232%20Alzey" target="_blank" rel="noopener">Rundsporthalle Alzey</a></div></div>
 <div class="rechts"><div class="hz ">A</div></div>
 </div><div class="partie" data-heim="nein"
@@ -752,7 +761,7 @@ table.tabelle tr.wir td.platz { box-shadow: inset 2px 0 0 var(--gold); }
  data-tag="2026-09-06">
 <div class="uhr">12:30</div>
 <div><div class="wer"><a class="zurmannschaft" href="index.html#gf">gF-Jugend</a></div>
-<div class="gegen">gegen TSG Friesenheim II</div>
+<div class="gegen">gegen TSG Friesenheim 2</div>
 <div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TVR-Sporthalle%20Ludwigshafen%20Fu%C3%9Fg%C3%B6nheimer%20Str.%20127%20%28Ortsende%29%2C%2067071%20Ludwigshafen" target="_blank" rel="noopener">TVR-Sporthalle Ludwigshafen</a></div></div>
 <div class="rechts"><div class="hz heim">H</div></div>
 </div><div class="partie heimspiel" data-heim="ja"
@@ -969,7 +978,7 @@ table.tabelle tr.wir td.platz { box-shadow: inset 2px 0 0 var(--gold); }
  data-tag="2026-09-19">
 <div class="uhr">14:00</div>
 <div><div class="wer"><a class="zurmannschaft" href="index.html#minis-3">Minis III</a></div>
-<div class="gegen">bei TUS Neuhofen II</div>
+<div class="gegen">bei TUS Neuhofen 2</div>
 <div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Rehbachhalle%20Neuhofen%20Jahnstr.%2025%2C%2067141%20Neuhofen" target="_blank" rel="noopener">Rehbachhalle Neuhofen</a></div></div>
 <div class="rechts"><div class="hz ">A</div></div>
 </div><div class="partie" data-heim="nein"
@@ -1087,7 +1096,7 @@ table.tabelle tr.wir td.platz { box-shadow: inset 2px 0 0 var(--gold); }
 </div></div>
 
   <p class="fuss">
-    Stand: 29.08.2026, 15:57 Uhr. Wird täglich mit
+    Stand: 29.08.2026, 16:13 Uhr. Wird täglich mit
     <a href="https://www.handball.net" target="_blank" rel="noopener">handball.net</a>
     abgeglichen. <a href="./">Spielplan abonnieren</a>
   </p>
