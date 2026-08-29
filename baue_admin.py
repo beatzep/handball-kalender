@@ -219,8 +219,8 @@ def main() -> None:
   <button id="abmelden" type="button" hidden>Abmelden</button>
 
   <p class="fuss">
-    Die Zahlen liegen beim Zähler-Dienst und werden nur nach Anmeldung
-    herausgegeben. <a href="./">Zurück zum Spielplan</a>
+    Die Zahlen gibt es nur nach Anmeldung.
+    <a href="./">Zurück zum Spielplan</a>
   </p>
 </main>
 

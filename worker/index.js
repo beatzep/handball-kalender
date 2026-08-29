@@ -313,7 +313,7 @@ export default {
         const partie = spiele[spiel];
         if (!partie) return antwort({ fehler: "unbekanntes Spiel" }, request, 404);
         if (angepfiffen(partie.datum)) {
-          return antwort({ fehler: "Das Spiel läuft schon – Tippschluss ist der Anwurf" },
+          return antwort({ fehler: "Zu spät, das Spiel läuft schon." },
                          request, 409);
         }
 

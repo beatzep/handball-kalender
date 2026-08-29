@@ -13,8 +13,10 @@ STIL = """
   --grund: #ffffff; --schwarz: #14140f; --auf-schwarz: #f7f5f0;
   --sieg: #2f7d4f; --niederlage: #a4443a;
 }
+/* Dunkle Farben an drei Stellen: nach Systemeinstellung (solange niemand
+   ausdruecklich hell gewaehlt hat) und bei ausdruecklicher Wahl. */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-ansicht="hell"]) {
     --gold: #e8ac52; --gold-tief: #dd9933; --gold-schwach: rgba(232,172,82,.12);
     --tinte: #f2efe8; --tinte-weich: #b8b4a9; --leise: #8c877c;
     --linie: #33312b; --linie-zart: #24221e;
@@ -22,6 +24,36 @@ STIL = """
     --sieg: #5cbf85; --niederlage: #e08076;
   }
 }
+:root[data-ansicht="dunkel"] {
+  --gold: #e8ac52; --gold-tief: #dd9933; --gold-schwach: rgba(232,172,82,.12);
+  --tinte: #f2efe8; --tinte-weich: #b8b4a9; --leise: #8c877c;
+  --linie: #33312b; --linie-zart: #24221e;
+  --grund: #0d0d0b; --schwarz: #000000; --auf-schwarz: #f2efe8;
+  --sieg: #5cbf85; --niederlage: #e08076;
+}
+
+/* ---------- Umschalter hell/dunkel ---------- */
+.kopf .huelle { position: relative; }
+#ansicht {
+  position: absolute; top: 22px; right: 18px;
+  width: 42px; height: 42px; padding: 0; cursor: pointer;
+  background: transparent; border: 1px solid rgba(247,245,240,.28);
+  color: rgba(247,245,240,.8); display: flex; align-items: center;
+  justify-content: center;
+}
+#ansicht:hover { color: var(--gold); border-color: var(--gold); }
+#ansicht:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+#ansicht svg { width: 20px; height: 20px; display: block; }
+/* Gezeigt wird, was beim Tippen passiert: im Hellen der Mond, im Dunklen die Sonne. */
+#ansicht .sonne { display: none; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-ansicht="hell"]) #ansicht .sonne { display: block; }
+  :root:not([data-ansicht="hell"]) #ansicht .mond { display: none; }
+}
+:root[data-ansicht="dunkel"] #ansicht .sonne { display: block; }
+:root[data-ansicht="dunkel"] #ansicht .mond { display: none; }
+:root[data-ansicht="hell"] #ansicht .sonne { display: none; }
+:root[data-ansicht="hell"] #ansicht .mond { display: block; }
 *, *::before, *::after { box-sizing: border-box; border-radius: 0; }
 
 /* Ohne touch-action deutet das Handy zwei schnelle Tipps auf denselben

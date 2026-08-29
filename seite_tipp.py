@@ -119,7 +119,7 @@ TIPP = """
           return;
         }
         navigator.clipboard.writeText(link).then(function () {
-          sage('Link kopiert – damit tippst du auf jedem Gerät weiter.', 'gut');
+          sage('Link kopiert. Damit tippst du auf jedem Gerät weiter.', 'gut');
         });
       });
     }

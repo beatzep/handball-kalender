@@ -19,8 +19,10 @@ automatisch im Handykalender, Verlegungen inklusive.">
   --grund: #ffffff; --schwarz: #14140f; --auf-schwarz: #f7f5f0;
   --sieg: #2f7d4f; --niederlage: #a4443a;
 }
+/* Dunkle Farben an drei Stellen: nach Systemeinstellung (solange niemand
+   ausdruecklich hell gewaehlt hat) und bei ausdruecklicher Wahl. */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-ansicht="hell"]) {
     --gold: #e8ac52; --gold-tief: #dd9933; --gold-schwach: rgba(232,172,82,.12);
     --tinte: #f2efe8; --tinte-weich: #b8b4a9; --leise: #8c877c;
     --linie: #33312b; --linie-zart: #24221e;
@@ -28,6 +30,36 @@ automatisch im Handykalender, Verlegungen inklusive.">
     --sieg: #5cbf85; --niederlage: #e08076;
   }
 }
+:root[data-ansicht="dunkel"] {
+  --gold: #e8ac52; --gold-tief: #dd9933; --gold-schwach: rgba(232,172,82,.12);
+  --tinte: #f2efe8; --tinte-weich: #b8b4a9; --leise: #8c877c;
+  --linie: #33312b; --linie-zart: #24221e;
+  --grund: #0d0d0b; --schwarz: #000000; --auf-schwarz: #f2efe8;
+  --sieg: #5cbf85; --niederlage: #e08076;
+}
+
+/* ---------- Umschalter hell/dunkel ---------- */
+.kopf .huelle { position: relative; }
+#ansicht {
+  position: absolute; top: 22px; right: 18px;
+  width: 42px; height: 42px; padding: 0; cursor: pointer;
+  background: transparent; border: 1px solid rgba(247,245,240,.28);
+  color: rgba(247,245,240,.8); display: flex; align-items: center;
+  justify-content: center;
+}
+#ansicht:hover { color: var(--gold); border-color: var(--gold); }
+#ansicht:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+#ansicht svg { width: 20px; height: 20px; display: block; }
+/* Gezeigt wird, was beim Tippen passiert: im Hellen der Mond, im Dunklen die Sonne. */
+#ansicht .sonne { display: none; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-ansicht="hell"]) #ansicht .sonne { display: block; }
+  :root:not([data-ansicht="hell"]) #ansicht .mond { display: none; }
+}
+:root[data-ansicht="dunkel"] #ansicht .sonne { display: block; }
+:root[data-ansicht="dunkel"] #ansicht .mond { display: none; }
+:root[data-ansicht="hell"] #ansicht .sonne { display: none; }
+:root[data-ansicht="hell"] #ansicht .mond { display: block; }
 *, *::before, *::after { box-sizing: border-box; border-radius: 0; }
 
 /* Ohne touch-action deutet das Handy zwei schnelle Tipps auf denselben
@@ -407,6 +439,19 @@ table.tabelle tr.wir td.platz { box-shadow: inset 2px 0 0 var(--gold); }
 
 <header class="kopf">
   <div class="huelle">
+    <button id="ansicht" type="button" aria-label="Ansicht umschalten">
+      <svg class="mond" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"
+           aria-hidden="true">
+        <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/>
+      </svg>
+      <svg class="sonne" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"
+           aria-hidden="true">
+        <circle cx="12" cy="12" r="4.2"/>
+        <path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.2 5.2l1.4 1.4M17.4 17.4l1.4 1.4M18.8 5.2l-1.4 1.4M6.6 17.4l-1.4 1.4"/>
+      </svg>
+    </button>
     <div class="marke">
       <img src="logo.png" alt="Wappen der HSG Mutterstadt/Ruchheim" width="149" height="200">
       <div>
@@ -492,24 +537,24 @@ rel="noopener">Hans-Böckler-Straße 2, 55128 Mainz</a></dd></div>
 
 <div class="weg">
   <h3>iPhone, iPad und Mac</h3>
-  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen kommen danach von selbst an.</p>
+  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen ziehen sich danach automatisch nach.</p>
   <a class="knopf" href="webcal://beatzep.github.io/handball-kalender/herren1.ics">Herren I abonnieren</a>
   <p class="tipp">
-    <b>Am Mac</b> fragt der Kalender vorher nach Einstellungen: Haken bei
-    „Entfernen: Hinweise“ <b>abwählen</b> (sonst fehlen die Erinnerungen) und
-    „Automatisch aktualisieren“ auf <b>Jede Stunde</b> stellen – der Standard
-    „Wöchentlich“ ist für Verlegungen zu träge.
+    <b>Am Mac</b> fragt der Kalender vorher noch was: Den Haken bei
+    „Entfernen: Hinweise“ <b>rausnehmen</b>, sonst kriegst du keine
+    Erinnerungen. Und „Automatisch aktualisieren“ auf <b>Jede Stunde</b>
+    stellen. Wöchentlich ist zu selten, dann kriegst du Verlegungen zu spät mit.
   </p>
   <p class="tipp" data-ios-tipp hidden>
-    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen –
-    dann liegt der Spielplan als App auf dem Handy.
+    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen.
+    Dann liegt der Spielplan als App auf dem Handy.
   </p>
 </div>
 
 <div class="weg">
   <h3>Android und Google Kalender</h3>
-  <p>Google erlaubt das Abonnieren nur am Computer, nicht in der Handy-App.
-     Einmal am Rechner einrichten – danach ist es auf dem Handy.</p>
+  <p>Bei Google geht das Abonnieren nur am Computer, nicht in der Handy-App.
+     Einmal am Rechner einrichten, danach ist es auf dem Handy.</p>
   <button class="knopf stumm" type="button" data-kopiere="https://beatzep.github.io/handball-kalender/herren1.ics">Adresse kopieren</button>
   <ol class="schritte">
     <li>Am Computer <code>calendar.google.com</code> öffnen</li>
@@ -531,8 +576,8 @@ rel="noopener">Hans-Böckler-Straße 2, 55128 Mainz</a></dd></div>
   </div>
   <button type="button" class="knopf stumm" data-grafik='{"art": "spiel", "verein": "HSG Mutterstadt/Ruchheim", "mannschaft": "Herren I", "gegner": "TSG MZ-Bretzenheim II", "heim": false, "datum": "2026-08-29T20:00:00+02:00", "datum_text": "Samstag, 29.08.2026", "uhrzeit": "20:00", "halle": "IGS 1 Mainz-Bretzenheim", "ort": "55128 Mainz", "liga": "Männer Bezirksoberliga", "spieltag": 1}'>Bild fürs nächste Spiel</button>
   
-  <p class="statfuss">Das Bild entsteht auf deinem Gerät aus den Spieldaten –
-     nichts wird hochgeladen.</p>
+  <p class="statfuss">Das Bild wird auf deinem Handy erzeugt. Es geht nichts
+     an uns oder sonstwohin.</p>
 </div></div>
   <div class="teil" data-ansicht="spiele" hidden><div class="monat">August 2026</div><div class="spiel jetzt">
 <div class="datum">Sa 29.08.<span>20:00</span></div>
@@ -662,11 +707,11 @@ rel="noopener">Hans-Böckler-Straße 2, 55128 Mainz</a></dd></div>
   <div class="teil" data-ansicht="statistik" hidden>
     <div class="rubrik">Unterwegs</div><dl class="kennzahlen"><div><dt>Kilometer</dt><dd>1.539<span class="zusatz">18 Fahrten, hin und zurück</span></dd></div><div><dt>Im Auto</dt><dd>22,0<span class="klein"> Std</span><span class="zusatz">geschätzt bei 70 km/h</span></dd></div><div><dt>Weiteste Fahrt</dt><dd>169<span class="klein"> km</span><span class="zusatz">Bingen, Rundsporthalle</span></dd></div><div><dt>Kürzeste Fahrt</dt><dd>12<span class="klein"> km</span><span class="zusatz">TVR-Sporthalle Ludwigshafen</span></dd></div></dl><div class="verbrauch">
 <div class="wert">28,6<span class="einheit">Liter Bier / 100 km</span></div>
-<p class="rechnung">880 Bier über die Saison (440 Liter) –
-aus 66 Trainings in 33 Wochen und 22 Spielen –
+<p class="rechnung">880 Bier über die Saison, das sind 440 Liter.
+Aus 66 Trainings in 33 Wochen und 22 Spielen,
 geteilt durch 1.539 gefahrene Kilometer.</p>
 <p class="pointe">Ein Sattelschlepper kommt mit 30 aus.</p>
-</div><dl class="kennzahlen"><div class="breit"><dt>Zeit für Handball</dt><dd>248<span class="klein"> Std</span><span class="zusatz">10,3 Tage am Stück – Training, Spiele, Warmup, Dritte Halbzeit und Fahrten</span></dd></div></dl><p class="statfuss">Sobald gespielt wird, kommen hier Bilanz, Serien und Auffälligkeiten dazu.</p>
+</div><dl class="kennzahlen"><div class="breit"><dt>Zeit für Handball</dt><dd>248<span class="klein"> Std</span><span class="zusatz">10,3 Tage am Stück. Training, Spiele, Warmup, Dritte Halbzeit und Fahrten.</span></dd></div></dl><p class="statfuss">Sobald gespielt wird, kommen hier Bilanz, Serien und Rekorde dazu.</p>
   </div>
 </section><section data-team="herren2" hidden>
   <p class="liga">Männer Bezirksklasse &middot; 20 Spiele</p>
@@ -733,24 +778,24 @@ rel="noopener">Schulstr. 2, 66987 Thaleischweiler</a></dd></div>
 
 <div class="weg">
   <h3>iPhone, iPad und Mac</h3>
-  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen kommen danach von selbst an.</p>
+  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen ziehen sich danach automatisch nach.</p>
   <a class="knopf" href="webcal://beatzep.github.io/handball-kalender/herren2.ics">Herren II abonnieren</a>
   <p class="tipp">
-    <b>Am Mac</b> fragt der Kalender vorher nach Einstellungen: Haken bei
-    „Entfernen: Hinweise“ <b>abwählen</b> (sonst fehlen die Erinnerungen) und
-    „Automatisch aktualisieren“ auf <b>Jede Stunde</b> stellen – der Standard
-    „Wöchentlich“ ist für Verlegungen zu träge.
+    <b>Am Mac</b> fragt der Kalender vorher noch was: Den Haken bei
+    „Entfernen: Hinweise“ <b>rausnehmen</b>, sonst kriegst du keine
+    Erinnerungen. Und „Automatisch aktualisieren“ auf <b>Jede Stunde</b>
+    stellen. Wöchentlich ist zu selten, dann kriegst du Verlegungen zu spät mit.
   </p>
   <p class="tipp" data-ios-tipp hidden>
-    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen –
-    dann liegt der Spielplan als App auf dem Handy.
+    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen.
+    Dann liegt der Spielplan als App auf dem Handy.
   </p>
 </div>
 
 <div class="weg">
   <h3>Android und Google Kalender</h3>
-  <p>Google erlaubt das Abonnieren nur am Computer, nicht in der Handy-App.
-     Einmal am Rechner einrichten – danach ist es auf dem Handy.</p>
+  <p>Bei Google geht das Abonnieren nur am Computer, nicht in der Handy-App.
+     Einmal am Rechner einrichten, danach ist es auf dem Handy.</p>
   <button class="knopf stumm" type="button" data-kopiere="https://beatzep.github.io/handball-kalender/herren2.ics">Adresse kopieren</button>
   <ol class="schritte">
     <li>Am Computer <code>calendar.google.com</code> öffnen</li>
@@ -772,8 +817,8 @@ rel="noopener">Schulstr. 2, 66987 Thaleischweiler</a></dd></div>
   </div>
   <button type="button" class="knopf stumm" data-grafik='{"art": "spiel", "verein": "HSG Mutterstadt/Ruchheim", "mannschaft": "Herren II", "gegner": "TV THALEISCHWEILER Herren", "heim": false, "datum": "2026-08-29T19:00:00+02:00", "datum_text": "Samstag, 29.08.2026", "uhrzeit": "19:00", "halle": "IGS-Sporthalle Thaleischweiler", "ort": "66987 Thaleischweiler", "liga": "Männer Bezirksklasse", "spieltag": 1}'>Bild fürs nächste Spiel</button>
   
-  <p class="statfuss">Das Bild entsteht auf deinem Gerät aus den Spieldaten –
-     nichts wird hochgeladen.</p>
+  <p class="statfuss">Das Bild wird auf deinem Handy erzeugt. Es geht nichts
+     an uns oder sonstwohin.</p>
 </div></div>
   <div class="teil" data-ansicht="spiele" hidden><div class="monat">August 2026</div><div class="spiel jetzt">
 <div class="datum">Sa 29.08.<span>19:00</span></div>
@@ -891,7 +936,7 @@ rel="noopener">Schulstr. 2, 66987 Thaleischweiler</a></dd></div>
 <p class="tabellenfuss">Die Saison hat noch nicht begonnen.</p>
   </div>
   <div class="teil" data-ansicht="statistik" hidden>
-    <div class="rubrik">Unterwegs</div><dl class="kennzahlen"><div><dt>Kilometer</dt><dd>658<span class="zusatz">15 Fahrten, hin und zurück</span></dd></div><div><dt>Im Auto</dt><dd>9,4<span class="klein"> Std</span><span class="zusatz">geschätzt bei 70 km/h</span></dd></div><div><dt>Weiteste Fahrt</dt><dd>157<span class="klein"> km</span><span class="zusatz">IGS-Sporthalle Thaleischweiler</span></dd></div><div><dt>Kürzeste Fahrt</dt><dd>12<span class="klein"> km</span><span class="zusatz">TVR-Sporthalle Ludwigshafen</span></dd></div></dl><p class="statfuss">Nicht eingerechnet, weil im Verband keine Koordinaten hinterlegt sind: Sporthalle Schwegenheim.</p><p class="statfuss">Sobald gespielt wird, kommen hier Bilanz, Serien und Auffälligkeiten dazu.</p>
+    <div class="rubrik">Unterwegs</div><dl class="kennzahlen"><div><dt>Kilometer</dt><dd>658<span class="zusatz">15 Fahrten, hin und zurück</span></dd></div><div><dt>Im Auto</dt><dd>9,4<span class="klein"> Std</span><span class="zusatz">geschätzt bei 70 km/h</span></dd></div><div><dt>Weiteste Fahrt</dt><dd>157<span class="klein"> km</span><span class="zusatz">IGS-Sporthalle Thaleischweiler</span></dd></div><div><dt>Kürzeste Fahrt</dt><dd>12<span class="klein"> km</span><span class="zusatz">TVR-Sporthalle Ludwigshafen</span></dd></div></dl><p class="statfuss">Bei diesen Hallen fehlt beim Verband die Adresse, die Kilometer fehlen also in der Summe: Sporthalle Schwegenheim.</p><p class="statfuss">Sobald gespielt wird, kommen hier Bilanz, Serien und Rekorde dazu.</p>
   </div>
 </section><section data-team="damen" hidden>
   <p class="liga">Frauen Verbandsliga &middot; 18 Spiele</p>
@@ -958,24 +1003,24 @@ rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
 
 <div class="weg">
   <h3>iPhone, iPad und Mac</h3>
-  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen kommen danach von selbst an.</p>
+  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen ziehen sich danach automatisch nach.</p>
   <a class="knopf" href="webcal://beatzep.github.io/handball-kalender/damen.ics">Damen abonnieren</a>
   <p class="tipp">
-    <b>Am Mac</b> fragt der Kalender vorher nach Einstellungen: Haken bei
-    „Entfernen: Hinweise“ <b>abwählen</b> (sonst fehlen die Erinnerungen) und
-    „Automatisch aktualisieren“ auf <b>Jede Stunde</b> stellen – der Standard
-    „Wöchentlich“ ist für Verlegungen zu träge.
+    <b>Am Mac</b> fragt der Kalender vorher noch was: Den Haken bei
+    „Entfernen: Hinweise“ <b>rausnehmen</b>, sonst kriegst du keine
+    Erinnerungen. Und „Automatisch aktualisieren“ auf <b>Jede Stunde</b>
+    stellen. Wöchentlich ist zu selten, dann kriegst du Verlegungen zu spät mit.
   </p>
   <p class="tipp" data-ios-tipp hidden>
-    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen –
-    dann liegt der Spielplan als App auf dem Handy.
+    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen.
+    Dann liegt der Spielplan als App auf dem Handy.
   </p>
 </div>
 
 <div class="weg">
   <h3>Android und Google Kalender</h3>
-  <p>Google erlaubt das Abonnieren nur am Computer, nicht in der Handy-App.
-     Einmal am Rechner einrichten – danach ist es auf dem Handy.</p>
+  <p>Bei Google geht das Abonnieren nur am Computer, nicht in der Handy-App.
+     Einmal am Rechner einrichten, danach ist es auf dem Handy.</p>
   <button class="knopf stumm" type="button" data-kopiere="https://beatzep.github.io/handball-kalender/damen.ics">Adresse kopieren</button>
   <ol class="schritte">
     <li>Am Computer <code>calendar.google.com</code> öffnen</li>
@@ -997,8 +1042,8 @@ rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
   </div>
   <button type="button" class="knopf stumm" data-grafik='{"art": "spiel", "verein": "HSG Mutterstadt/Ruchheim", "mannschaft": "Damen", "gegner": "FSG Selz-Wiesbach", "heim": true, "datum": "2026-09-06T18:00:00+02:00", "datum_text": "Sonntag, 06.09.2026", "uhrzeit": "18:00", "halle": "TSG-Sporthalle Mutterstadt", "ort": "67112 Mutterstadt", "liga": "Frauen Verbandsliga", "spieltag": 2}'>Bild fürs nächste Spiel</button>
   
-  <p class="statfuss">Das Bild entsteht auf deinem Gerät aus den Spieldaten –
-     nichts wird hochgeladen.</p>
+  <p class="statfuss">Das Bild wird auf deinem Handy erzeugt. Es geht nichts
+     an uns oder sonstwohin.</p>
 </div></div>
   <div class="teil" data-ansicht="spiele" hidden><div class="monat">September 2026</div><div class="spiel jetzt">
 <div class="datum">So 06.09.<span>18:00</span></div>
@@ -1106,7 +1151,7 @@ rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
 <p class="tabellenfuss">Die Saison hat noch nicht begonnen.</p>
   </div>
   <div class="teil" data-ansicht="statistik" hidden>
-    <div class="rubrik">Unterwegs</div><dl class="kennzahlen"><div><dt>Kilometer</dt><dd>989<span class="zusatz">13 Fahrten, hin und zurück</span></dd></div><div><dt>Im Auto</dt><dd>14,1<span class="klein"> Std</span><span class="zusatz">geschätzt bei 70 km/h</span></dd></div><div><dt>Weiteste Fahrt</dt><dd>167<span class="klein"> km</span><span class="zusatz">Am Großen Sand Mainz</span></dd></div><div><dt>Kürzeste Fahrt</dt><dd>12<span class="klein"> km</span><span class="zusatz">TVR-Sporthalle Ludwigshafen</span></dd></div></dl><p class="statfuss">Nicht eingerechnet, weil im Verband keine Koordinaten hinterlegt sind: Sporthalle Freinsheim.</p><p class="statfuss">Sobald gespielt wird, kommen hier Bilanz, Serien und Auffälligkeiten dazu.</p>
+    <div class="rubrik">Unterwegs</div><dl class="kennzahlen"><div><dt>Kilometer</dt><dd>989<span class="zusatz">13 Fahrten, hin und zurück</span></dd></div><div><dt>Im Auto</dt><dd>14,1<span class="klein"> Std</span><span class="zusatz">geschätzt bei 70 km/h</span></dd></div><div><dt>Weiteste Fahrt</dt><dd>167<span class="klein"> km</span><span class="zusatz">Am Großen Sand Mainz</span></dd></div><div><dt>Kürzeste Fahrt</dt><dd>12<span class="klein"> km</span><span class="zusatz">TVR-Sporthalle Ludwigshafen</span></dd></div></dl><p class="statfuss">Bei diesen Hallen fehlt beim Verband die Adresse, die Kilometer fehlen also in der Summe: Sporthalle Freinsheim.</p><p class="statfuss">Sobald gespielt wird, kommen hier Bilanz, Serien und Rekorde dazu.</p>
   </div>
 </section><section data-team="ma" hidden>
   <p class="liga">Oberliga MÄNNLICH &middot; 18 Spiele</p>
@@ -1173,24 +1218,24 @@ rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
 
 <div class="weg">
   <h3>iPhone, iPad und Mac</h3>
-  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen kommen danach von selbst an.</p>
+  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen ziehen sich danach automatisch nach.</p>
   <a class="knopf" href="webcal://beatzep.github.io/handball-kalender/ma.ics">mA-Jugend abonnieren</a>
   <p class="tipp">
-    <b>Am Mac</b> fragt der Kalender vorher nach Einstellungen: Haken bei
-    „Entfernen: Hinweise“ <b>abwählen</b> (sonst fehlen die Erinnerungen) und
-    „Automatisch aktualisieren“ auf <b>Jede Stunde</b> stellen – der Standard
-    „Wöchentlich“ ist für Verlegungen zu träge.
+    <b>Am Mac</b> fragt der Kalender vorher noch was: Den Haken bei
+    „Entfernen: Hinweise“ <b>rausnehmen</b>, sonst kriegst du keine
+    Erinnerungen. Und „Automatisch aktualisieren“ auf <b>Jede Stunde</b>
+    stellen. Wöchentlich ist zu selten, dann kriegst du Verlegungen zu spät mit.
   </p>
   <p class="tipp" data-ios-tipp hidden>
-    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen –
-    dann liegt der Spielplan als App auf dem Handy.
+    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen.
+    Dann liegt der Spielplan als App auf dem Handy.
   </p>
 </div>
 
 <div class="weg">
   <h3>Android und Google Kalender</h3>
-  <p>Google erlaubt das Abonnieren nur am Computer, nicht in der Handy-App.
-     Einmal am Rechner einrichten – danach ist es auf dem Handy.</p>
+  <p>Bei Google geht das Abonnieren nur am Computer, nicht in der Handy-App.
+     Einmal am Rechner einrichten, danach ist es auf dem Handy.</p>
   <button class="knopf stumm" type="button" data-kopiere="https://beatzep.github.io/handball-kalender/ma.ics">Adresse kopieren</button>
   <ol class="schritte">
     <li>Am Computer <code>calendar.google.com</code> öffnen</li>
@@ -1212,8 +1257,8 @@ rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
   </div>
   <button type="button" class="knopf stumm" data-grafik='{"art": "spiel", "verein": "HSG Mutterstadt/Ruchheim", "mannschaft": "mA-Jugend", "gegner": "Südpfalz Tiger", "heim": true, "datum": "2026-09-05T17:45:00+02:00", "datum_text": "Samstag, 05.09.2026", "uhrzeit": "17:45", "halle": "TSG-Sporthalle Mutterstadt", "ort": "67112 Mutterstadt", "liga": "Oberliga MÄNNLICH", "spieltag": 2}'>Bild fürs nächste Spiel</button>
   
-  <p class="statfuss">Das Bild entsteht auf deinem Gerät aus den Spieldaten –
-     nichts wird hochgeladen.</p>
+  <p class="statfuss">Das Bild wird auf deinem Handy erzeugt. Es geht nichts
+     an uns oder sonstwohin.</p>
 </div></div>
   <div class="teil" data-ansicht="spiele" hidden><div class="monat">September 2026</div><div class="spiel jetzt">
 <div class="datum">Sa 05.09.<span>17:45</span></div>
@@ -1321,7 +1366,7 @@ rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
 <p class="tabellenfuss">Die Saison hat noch nicht begonnen.</p>
   </div>
   <div class="teil" data-ansicht="statistik" hidden>
-    <div class="rubrik">Unterwegs</div><dl class="kennzahlen"><div><dt>Kilometer</dt><dd>614<span class="zusatz">13 Fahrten, hin und zurück</span></dd></div><div><dt>Im Auto</dt><dd>8,8<span class="klein"> Std</span><span class="zusatz">geschätzt bei 70 km/h</span></dd></div><div><dt>Weiteste Fahrt</dt><dd>147<span class="klein"> km</span><span class="zusatz">Tsr-Sporthalle Rodalben</span></dd></div><div><dt>Kürzeste Fahrt</dt><dd>12<span class="klein"> km</span><span class="zusatz">TVR-Sporthalle Ludwigshafen</span></dd></div></dl><p class="statfuss">Nicht eingerechnet, weil im Verband keine Koordinaten hinterlegt sind: Löwensteinhalle Albersweiler.</p><p class="statfuss">Sobald gespielt wird, kommen hier Bilanz, Serien und Auffälligkeiten dazu.</p>
+    <div class="rubrik">Unterwegs</div><dl class="kennzahlen"><div><dt>Kilometer</dt><dd>614<span class="zusatz">13 Fahrten, hin und zurück</span></dd></div><div><dt>Im Auto</dt><dd>8,8<span class="klein"> Std</span><span class="zusatz">geschätzt bei 70 km/h</span></dd></div><div><dt>Weiteste Fahrt</dt><dd>147<span class="klein"> km</span><span class="zusatz">Tsr-Sporthalle Rodalben</span></dd></div><div><dt>Kürzeste Fahrt</dt><dd>12<span class="klein"> km</span><span class="zusatz">TVR-Sporthalle Ludwigshafen</span></dd></div></dl><p class="statfuss">Bei diesen Hallen fehlt beim Verband die Adresse, die Kilometer fehlen also in der Summe: Löwensteinhalle Albersweiler.</p><p class="statfuss">Sobald gespielt wird, kommen hier Bilanz, Serien und Rekorde dazu.</p>
   </div>
 </section><section data-team="wa" hidden>
   <p class="liga">Verbandsliga WEIBLICH &middot; 18 Spiele</p>
@@ -1388,24 +1433,24 @@ rel="noopener">August-Croissant-Str. 27, 76829 Landau</a></dd></div>
 
 <div class="weg">
   <h3>iPhone, iPad und Mac</h3>
-  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen kommen danach von selbst an.</p>
+  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen ziehen sich danach automatisch nach.</p>
   <a class="knopf" href="webcal://beatzep.github.io/handball-kalender/wa.ics">wA-Jugend abonnieren</a>
   <p class="tipp">
-    <b>Am Mac</b> fragt der Kalender vorher nach Einstellungen: Haken bei
-    „Entfernen: Hinweise“ <b>abwählen</b> (sonst fehlen die Erinnerungen) und
-    „Automatisch aktualisieren“ auf <b>Jede Stunde</b> stellen – der Standard
-    „Wöchentlich“ ist für Verlegungen zu träge.
+    <b>Am Mac</b> fragt der Kalender vorher noch was: Den Haken bei
+    „Entfernen: Hinweise“ <b>rausnehmen</b>, sonst kriegst du keine
+    Erinnerungen. Und „Automatisch aktualisieren“ auf <b>Jede Stunde</b>
+    stellen. Wöchentlich ist zu selten, dann kriegst du Verlegungen zu spät mit.
   </p>
   <p class="tipp" data-ios-tipp hidden>
-    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen –
-    dann liegt der Spielplan als App auf dem Handy.
+    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen.
+    Dann liegt der Spielplan als App auf dem Handy.
   </p>
 </div>
 
 <div class="weg">
   <h3>Android und Google Kalender</h3>
-  <p>Google erlaubt das Abonnieren nur am Computer, nicht in der Handy-App.
-     Einmal am Rechner einrichten – danach ist es auf dem Handy.</p>
+  <p>Bei Google geht das Abonnieren nur am Computer, nicht in der Handy-App.
+     Einmal am Rechner einrichten, danach ist es auf dem Handy.</p>
   <button class="knopf stumm" type="button" data-kopiere="https://beatzep.github.io/handball-kalender/wa.ics">Adresse kopieren</button>
   <ol class="schritte">
     <li>Am Computer <code>calendar.google.com</code> öffnen</li>
@@ -1427,8 +1472,8 @@ rel="noopener">August-Croissant-Str. 27, 76829 Landau</a></dd></div>
   </div>
   <button type="button" class="knopf stumm" data-grafik='{"art": "spiel", "verein": "HSG Mutterstadt/Ruchheim", "mannschaft": "wA-Jugend", "gegner": "HSG Landau/Land", "heim": false, "datum": "2026-08-29T16:00:00+02:00", "datum_text": "Samstag, 29.08.2026", "uhrzeit": "16:00", "halle": "Bbs-Sporthalle Landau", "ort": "76829 Landau", "liga": "Verbandsliga WEIBLICH", "spieltag": 1}'>Bild fürs nächste Spiel</button>
   
-  <p class="statfuss">Das Bild entsteht auf deinem Gerät aus den Spieldaten –
-     nichts wird hochgeladen.</p>
+  <p class="statfuss">Das Bild wird auf deinem Handy erzeugt. Es geht nichts
+     an uns oder sonstwohin.</p>
 </div></div>
   <div class="teil" data-ansicht="spiele" hidden><div class="monat">August 2026</div><div class="spiel jetzt">
 <div class="datum">Sa 29.08.<span>16:00</span></div>
@@ -1536,7 +1581,7 @@ rel="noopener">August-Croissant-Str. 27, 76829 Landau</a></dd></div>
 <p class="tabellenfuss">Die Saison hat noch nicht begonnen.</p>
   </div>
   <div class="teil" data-ansicht="statistik" hidden>
-    <div class="rubrik">Unterwegs</div><dl class="kennzahlen"><div><dt>Kilometer</dt><dd>489<span class="zusatz">14 Fahrten, hin und zurück</span></dd></div><div><dt>Im Auto</dt><dd>7,0<span class="klein"> Std</span><span class="zusatz">geschätzt bei 70 km/h</span></dd></div><div><dt>Weiteste Fahrt</dt><dd>116<span class="klein"> km</span><span class="zusatz">Schillerschule Kaiserslautern</span></dd></div><div><dt>Kürzeste Fahrt</dt><dd>11<span class="klein"> km</span><span class="zusatz">Loschky-Halle Niederfeld</span></dd></div></dl><p class="statfuss">Sobald gespielt wird, kommen hier Bilanz, Serien und Auffälligkeiten dazu.</p>
+    <div class="rubrik">Unterwegs</div><dl class="kennzahlen"><div><dt>Kilometer</dt><dd>489<span class="zusatz">14 Fahrten, hin und zurück</span></dd></div><div><dt>Im Auto</dt><dd>7,0<span class="klein"> Std</span><span class="zusatz">geschätzt bei 70 km/h</span></dd></div><div><dt>Weiteste Fahrt</dt><dd>116<span class="klein"> km</span><span class="zusatz">Schillerschule Kaiserslautern</span></dd></div><div><dt>Kürzeste Fahrt</dt><dd>11<span class="klein"> km</span><span class="zusatz">Loschky-Halle Niederfeld</span></dd></div></dl><p class="statfuss">Sobald gespielt wird, kommen hier Bilanz, Serien und Rekorde dazu.</p>
   </div>
 </section><section data-team="mb" hidden>
   <p class="liga">Oberliga MÄNNLICH &middot; 20 Spiele</p>
@@ -1603,24 +1648,24 @@ rel="noopener">Staudernheimer Straße, 55566 Bad Sobernheim</a></dd></div>
 
 <div class="weg">
   <h3>iPhone, iPad und Mac</h3>
-  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen kommen danach von selbst an.</p>
+  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen ziehen sich danach automatisch nach.</p>
   <a class="knopf" href="webcal://beatzep.github.io/handball-kalender/mb.ics">mB-Jugend abonnieren</a>
   <p class="tipp">
-    <b>Am Mac</b> fragt der Kalender vorher nach Einstellungen: Haken bei
-    „Entfernen: Hinweise“ <b>abwählen</b> (sonst fehlen die Erinnerungen) und
-    „Automatisch aktualisieren“ auf <b>Jede Stunde</b> stellen – der Standard
-    „Wöchentlich“ ist für Verlegungen zu träge.
+    <b>Am Mac</b> fragt der Kalender vorher noch was: Den Haken bei
+    „Entfernen: Hinweise“ <b>rausnehmen</b>, sonst kriegst du keine
+    Erinnerungen. Und „Automatisch aktualisieren“ auf <b>Jede Stunde</b>
+    stellen. Wöchentlich ist zu selten, dann kriegst du Verlegungen zu spät mit.
   </p>
   <p class="tipp" data-ios-tipp hidden>
-    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen –
-    dann liegt der Spielplan als App auf dem Handy.
+    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen.
+    Dann liegt der Spielplan als App auf dem Handy.
   </p>
 </div>
 
 <div class="weg">
   <h3>Android und Google Kalender</h3>
-  <p>Google erlaubt das Abonnieren nur am Computer, nicht in der Handy-App.
-     Einmal am Rechner einrichten – danach ist es auf dem Handy.</p>
+  <p>Bei Google geht das Abonnieren nur am Computer, nicht in der Handy-App.
+     Einmal am Rechner einrichten, danach ist es auf dem Handy.</p>
   <button class="knopf stumm" type="button" data-kopiere="https://beatzep.github.io/handball-kalender/mb.ics">Adresse kopieren</button>
   <ol class="schritte">
     <li>Am Computer <code>calendar.google.com</code> öffnen</li>
@@ -1642,8 +1687,8 @@ rel="noopener">Staudernheimer Straße, 55566 Bad Sobernheim</a></dd></div>
   </div>
   <button type="button" class="knopf stumm" data-grafik='{"art": "spiel", "verein": "HSG Mutterstadt/Ruchheim", "mannschaft": "mB-Jugend", "gegner": "Mjsg Sobernheim/Meisenheim", "heim": false, "datum": "2026-08-29T18:00:00+02:00", "datum_text": "Samstag, 29.08.2026", "uhrzeit": "18:00", "halle": "Bad Sobernheim, Dr. W.Dümmler Halle", "ort": "55566 Bad Sobernheim", "liga": "Oberliga MÄNNLICH", "spieltag": 1}'>Bild fürs nächste Spiel</button><button type="button" class="knopf stumm" data-grafik='{"art": "ergebnis", "verein": "HSG Mutterstadt/Ruchheim", "mannschaft": "mB-Jugend", "gegner": "TV 03 Wörth", "heim": true, "datum": "2026-08-22T00:00:00+02:00", "datum_text": "Samstag, 22.08.2026", "uhrzeit": "00:00", "halle": "", "ort": "", "liga": "Oberliga MÄNNLICH", "spieltag": 1, "stand": "22:16", "ausgang": "Sieg"}'>Bild vom letzten Ergebnis</button>
   <button type="button" class="knopf stumm" data-teile="mB-Jugend: 22:16 zu Hause gegen TV 03 Wörth gewonnen.">Ergebnis als Text</button>
-  <p class="statfuss">Das Bild entsteht auf deinem Gerät aus den Spieldaten –
-     nichts wird hochgeladen.</p>
+  <p class="statfuss">Das Bild wird auf deinem Handy erzeugt. Es geht nichts
+     an uns oder sonstwohin.</p>
 </div></div>
   <div class="teil" data-ansicht="spiele" hidden><div class="monat">August 2026</div><div class="spiel vorbei">
 <div class="datum">Sa 22.08.<span>00:00</span></div>
@@ -1761,7 +1806,7 @@ rel="noopener">Staudernheimer Straße, 55566 Bad Sobernheim</a></dd></div>
 <p class="tabellenfuss">Die Saison hat noch nicht begonnen.</p>
   </div>
   <div class="teil" data-ansicht="statistik" hidden>
-    <div class="rubrik">Unterwegs</div><dl class="kennzahlen"><div><dt>Kilometer</dt><dd>721<span class="zusatz">13 Fahrten, hin und zurück</span></dd></div><div><dt>Im Auto</dt><dd>10,3<span class="klein"> Std</span><span class="zusatz">geschätzt bei 70 km/h</span></dd></div><div><dt>Weiteste Fahrt</dt><dd>163<span class="klein"> km</span><span class="zusatz">Bad Sobernheim, Dr. W.Dümmler Halle</span></dd></div><div><dt>Kürzeste Fahrt</dt><dd>12<span class="klein"> km</span><span class="zusatz">TVR-Sporthalle Ludwigshafen</span></dd></div></dl><p class="statfuss">Nicht eingerechnet, weil im Verband keine Koordinaten hinterlegt sind: Waldsporthalle Budenheim.</p><div class="rubrik">Bilanz</div><dl class="kennzahlen"><div><dt>Gesamt</dt><dd>2<span class="klein">S</span> 0<span class="klein">U</span> 0<span class="klein">N</span><span class="zusatz">aus 2 Spielen</span></dd></div><div><dt>Zu Hause</dt><dd>1<span class="klein">S</span> 0<span class="klein">U</span> 0<span class="klein">N</span></dd></div><div><dt>Auswärts</dt><dd>1<span class="klein">S</span> 0<span class="klein">U</span> 0<span class="klein">N</span></dd></div><div><dt>Tore pro Spiel</dt><dd>19,0<span class="zusatz">38:26 insgesamt</span></dd></div><div><dt>Krimis</dt><dd>0<span class="klein">%</span><span class="zusatz">0 von 2 Spielen auf zwei Tore oder weniger</span></dd></div><div><dt>Längste Serie</dt><dd>2<span class="klein"> Spiele</span><span class="zusatz">ohne Niederlage</span></dd></div></dl><div class="rubrik">Auffälligkeiten</div><dl class="kennzahlen"><div class="breit"><dt>Torreichstes Spiel</dt><dd>22:16<span class="zusatz">gegen TV 03 Wörth, 38 Tore</span></dd></div></dl>
+    <div class="rubrik">Unterwegs</div><dl class="kennzahlen"><div><dt>Kilometer</dt><dd>721<span class="zusatz">13 Fahrten, hin und zurück</span></dd></div><div><dt>Im Auto</dt><dd>10,3<span class="klein"> Std</span><span class="zusatz">geschätzt bei 70 km/h</span></dd></div><div><dt>Weiteste Fahrt</dt><dd>163<span class="klein"> km</span><span class="zusatz">Bad Sobernheim, Dr. W.Dümmler Halle</span></dd></div><div><dt>Kürzeste Fahrt</dt><dd>12<span class="klein"> km</span><span class="zusatz">TVR-Sporthalle Ludwigshafen</span></dd></div></dl><p class="statfuss">Bei diesen Hallen fehlt beim Verband die Adresse, die Kilometer fehlen also in der Summe: Waldsporthalle Budenheim.</p><div class="rubrik">Bilanz</div><dl class="kennzahlen"><div><dt>Gesamt</dt><dd>2<span class="klein">S</span> 0<span class="klein">U</span> 0<span class="klein">N</span><span class="zusatz">aus 2 Spielen</span></dd></div><div><dt>Zu Hause</dt><dd>1<span class="klein">S</span> 0<span class="klein">U</span> 0<span class="klein">N</span></dd></div><div><dt>Auswärts</dt><dd>1<span class="klein">S</span> 0<span class="klein">U</span> 0<span class="klein">N</span></dd></div><div><dt>Tore pro Spiel</dt><dd>19,0<span class="zusatz">38:26 insgesamt</span></dd></div><div><dt>Krimis</dt><dd>0<span class="klein">%</span><span class="zusatz">0 von 2 Spielen mit höchstens zwei Toren Unterschied</span></dd></div><div><dt>Längste Serie</dt><dd>2<span class="klein"> Spiele</span><span class="zusatz">ohne Niederlage</span></dd></div></dl><div class="rubrik">Rekorde</div><dl class="kennzahlen"><div class="breit"><dt>Torreichstes Spiel</dt><dd>22:16<span class="zusatz">gegen TV 03 Wörth, 38 Tore</span></dd></div></dl>
   </div>
 </section><section data-team="mb-2" hidden>
   <p class="liga">Verbandsliga MÄNNLICH &middot; 17 Spiele</p>
@@ -1828,24 +1873,24 @@ rel="noopener">Martin-Luther-Str. 18, 67304 Eisenberg</a></dd></div>
 
 <div class="weg">
   <h3>iPhone, iPad und Mac</h3>
-  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen kommen danach von selbst an.</p>
+  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen ziehen sich danach automatisch nach.</p>
   <a class="knopf" href="webcal://beatzep.github.io/handball-kalender/mb-2.ics">mB-Jugend II abonnieren</a>
   <p class="tipp">
-    <b>Am Mac</b> fragt der Kalender vorher nach Einstellungen: Haken bei
-    „Entfernen: Hinweise“ <b>abwählen</b> (sonst fehlen die Erinnerungen) und
-    „Automatisch aktualisieren“ auf <b>Jede Stunde</b> stellen – der Standard
-    „Wöchentlich“ ist für Verlegungen zu träge.
+    <b>Am Mac</b> fragt der Kalender vorher noch was: Den Haken bei
+    „Entfernen: Hinweise“ <b>rausnehmen</b>, sonst kriegst du keine
+    Erinnerungen. Und „Automatisch aktualisieren“ auf <b>Jede Stunde</b>
+    stellen. Wöchentlich ist zu selten, dann kriegst du Verlegungen zu spät mit.
   </p>
   <p class="tipp" data-ios-tipp hidden>
-    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen –
-    dann liegt der Spielplan als App auf dem Handy.
+    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen.
+    Dann liegt der Spielplan als App auf dem Handy.
   </p>
 </div>
 
 <div class="weg">
   <h3>Android und Google Kalender</h3>
-  <p>Google erlaubt das Abonnieren nur am Computer, nicht in der Handy-App.
-     Einmal am Rechner einrichten – danach ist es auf dem Handy.</p>
+  <p>Bei Google geht das Abonnieren nur am Computer, nicht in der Handy-App.
+     Einmal am Rechner einrichten, danach ist es auf dem Handy.</p>
   <button class="knopf stumm" type="button" data-kopiere="https://beatzep.github.io/handball-kalender/mb-2.ics">Adresse kopieren</button>
   <ol class="schritte">
     <li>Am Computer <code>calendar.google.com</code> öffnen</li>
@@ -1867,8 +1912,8 @@ rel="noopener">Martin-Luther-Str. 18, 67304 Eisenberg</a></dd></div>
   </div>
   <button type="button" class="knopf stumm" data-grafik='{"art": "spiel", "verein": "HSG Mutterstadt/Ruchheim", "mannschaft": "mB-Jugend II", "gegner": "Hr Göllheim/Eisenberg/Kindenheim/Asselheim", "heim": false, "datum": "2026-08-30T18:00:00+02:00", "datum_text": "Sonntag, 30.08.2026", "uhrzeit": "18:00", "halle": "Berufsschule Eisenberg", "ort": "67304 Eisenberg", "liga": "Verbandsliga MÄNNLICH", "spieltag": 1}'>Bild fürs nächste Spiel</button><button type="button" class="knopf stumm" data-grafik='{"art": "ergebnis", "verein": "HSG Mutterstadt/Ruchheim", "mannschaft": "mB-Jugend II", "gegner": "TG Waldsee", "heim": true, "datum": "2026-08-22T00:00:00+02:00", "datum_text": "Samstag, 22.08.2026", "uhrzeit": "00:00", "halle": "", "ort": "", "liga": "Verbandsliga MÄNNLICH", "spieltag": 1, "stand": "11:28", "ausgang": "Niederlage"}'>Bild vom letzten Ergebnis</button>
   <button type="button" class="knopf stumm" data-teile="mB-Jugend II: 11:28 zu Hause gegen TG Waldsee verloren.">Ergebnis als Text</button>
-  <p class="statfuss">Das Bild entsteht auf deinem Gerät aus den Spieldaten –
-     nichts wird hochgeladen.</p>
+  <p class="statfuss">Das Bild wird auf deinem Handy erzeugt. Es geht nichts
+     an uns oder sonstwohin.</p>
 </div></div>
   <div class="teil" data-ansicht="spiele" hidden><div class="monat">August 2026</div><div class="spiel vorbei">
 <div class="datum">Sa 22.08.<span>00:00</span></div>
@@ -1971,7 +2016,7 @@ rel="noopener">Martin-Luther-Str. 18, 67304 Eisenberg</a></dd></div>
 <p class="tabellenfuss">Die Saison hat noch nicht begonnen.</p>
   </div>
   <div class="teil" data-ansicht="statistik" hidden>
-    <div class="rubrik">Unterwegs</div><dl class="kennzahlen"><div><dt>Kilometer</dt><dd>525<span class="zusatz">10 Fahrten, hin und zurück</span></dd></div><div><dt>Im Auto</dt><dd>7,5<span class="klein"> Std</span><span class="zusatz">geschätzt bei 70 km/h</span></dd></div><div><dt>Weiteste Fahrt</dt><dd>169<span class="klein"> km</span><span class="zusatz">Bingen, Rundsporthalle</span></dd></div><div><dt>Kürzeste Fahrt</dt><dd>12<span class="klein"> km</span><span class="zusatz">Gesamtschule Ludwigshafen</span></dd></div></dl><p class="statfuss">Nicht eingerechnet, weil im Verband keine Koordinaten hinterlegt sind: Sporthalle Freinsheim.</p><div class="rubrik">Bilanz</div><dl class="kennzahlen"><div><dt>Gesamt</dt><dd>0<span class="klein">S</span> 0<span class="klein">U</span> 3<span class="klein">N</span><span class="zusatz">aus 3 Spielen</span></dd></div><div><dt>Zu Hause</dt><dd>0<span class="klein">S</span> 0<span class="klein">U</span> 2<span class="klein">N</span></dd></div><div><dt>Auswärts</dt><dd>0<span class="klein">S</span> 0<span class="klein">U</span> 1<span class="klein">N</span></dd></div><div><dt>Tore pro Spiel</dt><dd>14,0<span class="zusatz">42:83 insgesamt</span></dd></div><div><dt>Krimis</dt><dd>0<span class="klein">%</span><span class="zusatz">0 von 3 Spielen auf zwei Tore oder weniger</span></dd></div></dl><div class="rubrik">Auffälligkeiten</div><dl class="kennzahlen"><div class="breit"><dt>Torreichstes Spiel</dt><dd>20:30<span class="zusatz">gegen Mjsg Heiligenstein/Lingenfeld/Schwegenheim, 50 Tore</span></dd></div></dl>
+    <div class="rubrik">Unterwegs</div><dl class="kennzahlen"><div><dt>Kilometer</dt><dd>525<span class="zusatz">10 Fahrten, hin und zurück</span></dd></div><div><dt>Im Auto</dt><dd>7,5<span class="klein"> Std</span><span class="zusatz">geschätzt bei 70 km/h</span></dd></div><div><dt>Weiteste Fahrt</dt><dd>169<span class="klein"> km</span><span class="zusatz">Bingen, Rundsporthalle</span></dd></div><div><dt>Kürzeste Fahrt</dt><dd>12<span class="klein"> km</span><span class="zusatz">Gesamtschule Ludwigshafen</span></dd></div></dl><p class="statfuss">Bei diesen Hallen fehlt beim Verband die Adresse, die Kilometer fehlen also in der Summe: Sporthalle Freinsheim.</p><div class="rubrik">Bilanz</div><dl class="kennzahlen"><div><dt>Gesamt</dt><dd>0<span class="klein">S</span> 0<span class="klein">U</span> 3<span class="klein">N</span><span class="zusatz">aus 3 Spielen</span></dd></div><div><dt>Zu Hause</dt><dd>0<span class="klein">S</span> 0<span class="klein">U</span> 2<span class="klein">N</span></dd></div><div><dt>Auswärts</dt><dd>0<span class="klein">S</span> 0<span class="klein">U</span> 1<span class="klein">N</span></dd></div><div><dt>Tore pro Spiel</dt><dd>14,0<span class="zusatz">42:83 insgesamt</span></dd></div><div><dt>Krimis</dt><dd>0<span class="klein">%</span><span class="zusatz">0 von 3 Spielen mit höchstens zwei Toren Unterschied</span></dd></div></dl><div class="rubrik">Rekorde</div><dl class="kennzahlen"><div class="breit"><dt>Torreichstes Spiel</dt><dd>20:30<span class="zusatz">gegen Mjsg Heiligenstein/Lingenfeld/Schwegenheim, 50 Tore</span></dd></div></dl>
   </div>
 </section><section data-team="wb" hidden>
   <p class="liga">Regionalliga SW B-Jugend weiblich &middot; 6 Spiele</p>
@@ -2038,24 +2083,24 @@ rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
 
 <div class="weg">
   <h3>iPhone, iPad und Mac</h3>
-  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen kommen danach von selbst an.</p>
+  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen ziehen sich danach automatisch nach.</p>
   <a class="knopf" href="webcal://beatzep.github.io/handball-kalender/wb.ics">wB-Jugend abonnieren</a>
   <p class="tipp">
-    <b>Am Mac</b> fragt der Kalender vorher nach Einstellungen: Haken bei
-    „Entfernen: Hinweise“ <b>abwählen</b> (sonst fehlen die Erinnerungen) und
-    „Automatisch aktualisieren“ auf <b>Jede Stunde</b> stellen – der Standard
-    „Wöchentlich“ ist für Verlegungen zu träge.
+    <b>Am Mac</b> fragt der Kalender vorher noch was: Den Haken bei
+    „Entfernen: Hinweise“ <b>rausnehmen</b>, sonst kriegst du keine
+    Erinnerungen. Und „Automatisch aktualisieren“ auf <b>Jede Stunde</b>
+    stellen. Wöchentlich ist zu selten, dann kriegst du Verlegungen zu spät mit.
   </p>
   <p class="tipp" data-ios-tipp hidden>
-    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen –
-    dann liegt der Spielplan als App auf dem Handy.
+    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen.
+    Dann liegt der Spielplan als App auf dem Handy.
   </p>
 </div>
 
 <div class="weg">
   <h3>Android und Google Kalender</h3>
-  <p>Google erlaubt das Abonnieren nur am Computer, nicht in der Handy-App.
-     Einmal am Rechner einrichten – danach ist es auf dem Handy.</p>
+  <p>Bei Google geht das Abonnieren nur am Computer, nicht in der Handy-App.
+     Einmal am Rechner einrichten, danach ist es auf dem Handy.</p>
   <button class="knopf stumm" type="button" data-kopiere="https://beatzep.github.io/handball-kalender/wb.ics">Adresse kopieren</button>
   <ol class="schritte">
     <li>Am Computer <code>calendar.google.com</code> öffnen</li>
@@ -2077,8 +2122,8 @@ rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
   </div>
   <button type="button" class="knopf stumm" data-grafik='{"art": "spiel", "verein": "HSG Mutterstadt/Ruchheim", "mannschaft": "wB-Jugend", "gegner": "HSG Wittlich", "heim": true, "datum": "2026-08-30T17:45:00+02:00", "datum_text": "Sonntag, 30.08.2026", "uhrzeit": "17:45", "halle": "TSG-Sporthalle Mutterstadt", "ort": "67112 Mutterstadt", "liga": "Regionalliga SW B-Jugend weiblich", "spieltag": 2}'>Bild fürs nächste Spiel</button><button type="button" class="knopf stumm" data-grafik='{"art": "ergebnis", "verein": "HSG Mutterstadt/Ruchheim", "mannschaft": "wB-Jugend", "gegner": "JSG Osthofen/Worms", "heim": false, "datum": "2026-08-23T17:30:00+02:00", "datum_text": "Sonntag, 23.08.2026", "uhrzeit": "17:30", "halle": "Nikolaus-Dörr-Halle Worms", "ort": "67547 Worms", "liga": "Regionalliga SW B-Jugend weiblich", "spieltag": 1, "stand": "29:25", "ausgang": "Sieg"}'>Bild vom letzten Ergebnis</button>
   <button type="button" class="knopf stumm" data-teile="wB-Jugend: 29:25 auswärts gegen JSG Osthofen/Worms gewonnen. Damit Platz 2 mit 2 Punkten in der Regionalliga SW B-Jugend weiblich.">Ergebnis als Text</button>
-  <p class="statfuss">Das Bild entsteht auf deinem Gerät aus den Spieldaten –
-     nichts wird hochgeladen.</p>
+  <p class="statfuss">Das Bild wird auf deinem Handy erzeugt. Es geht nichts
+     an uns oder sonstwohin.</p>
 </div></div>
   <div class="teil" data-ansicht="spiele" hidden><div class="monat">August 2026</div><div class="spiel vorbei">
 <div class="datum">So 23.08.<span>17:30</span></div>
@@ -2136,7 +2181,7 @@ rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
 <p class="tabellenfuss">Stand nach Spieltag 6.</p>
   </div>
   <div class="teil" data-ansicht="statistik" hidden>
-    <div class="rubrik">Unterwegs</div><dl class="kennzahlen"><div><dt>Kilometer</dt><dd>720<span class="zusatz">5 Fahrten, hin und zurück</span></dd></div><div><dt>Im Auto</dt><dd>10,3<span class="klein"> Std</span><span class="zusatz">geschätzt bei 70 km/h</span></dd></div><div><dt>Weiteste Fahrt</dt><dd>324<span class="klein"> km</span><span class="zusatz">Seffersbachhalle</span></dd></div><div><dt>Kürzeste Fahrt</dt><dd>12<span class="klein"> km</span><span class="zusatz">TVR-Sporthalle Ludwigshafen</span></dd></div></dl><div class="rubrik">Bilanz</div><dl class="kennzahlen"><div><dt>Gesamt</dt><dd>1<span class="klein">S</span> 0<span class="klein">U</span> 0<span class="klein">N</span><span class="zusatz">aus 1 Spielen</span></dd></div><div><dt>Zu Hause</dt><dd>0<span class="klein">S</span> 0<span class="klein">U</span> 0<span class="klein">N</span></dd></div><div><dt>Auswärts</dt><dd>1<span class="klein">S</span> 0<span class="klein">U</span> 0<span class="klein">N</span></dd></div><div><dt>Tore pro Spiel</dt><dd>29,0<span class="zusatz">29:25 insgesamt</span></dd></div><div><dt>Krimis</dt><dd>0<span class="klein">%</span><span class="zusatz">0 von 1 Spielen auf zwei Tore oder weniger</span></dd></div><div><dt>Längste Serie</dt><dd>1<span class="klein"> Spiele</span><span class="zusatz">ohne Niederlage</span></dd></div></dl><div class="rubrik">Auffälligkeiten</div><dl class="kennzahlen"><div class="breit"><dt>Torreichstes Spiel</dt><dd>29:25<span class="zusatz">gegen JSG Osthofen/Worms, 54 Tore</span></dd></div></dl>
+    <div class="rubrik">Unterwegs</div><dl class="kennzahlen"><div><dt>Kilometer</dt><dd>720<span class="zusatz">5 Fahrten, hin und zurück</span></dd></div><div><dt>Im Auto</dt><dd>10,3<span class="klein"> Std</span><span class="zusatz">geschätzt bei 70 km/h</span></dd></div><div><dt>Weiteste Fahrt</dt><dd>324<span class="klein"> km</span><span class="zusatz">Seffersbachhalle</span></dd></div><div><dt>Kürzeste Fahrt</dt><dd>12<span class="klein"> km</span><span class="zusatz">TVR-Sporthalle Ludwigshafen</span></dd></div></dl><div class="rubrik">Bilanz</div><dl class="kennzahlen"><div><dt>Gesamt</dt><dd>1<span class="klein">S</span> 0<span class="klein">U</span> 0<span class="klein">N</span><span class="zusatz">aus 1 Spiel</span></dd></div><div><dt>Zu Hause</dt><dd>0<span class="klein">S</span> 0<span class="klein">U</span> 0<span class="klein">N</span></dd></div><div><dt>Auswärts</dt><dd>1<span class="klein">S</span> 0<span class="klein">U</span> 0<span class="klein">N</span></dd></div><div><dt>Tore pro Spiel</dt><dd>29,0<span class="zusatz">29:25 insgesamt</span></dd></div><div><dt>Krimis</dt><dd>0<span class="klein">%</span><span class="zusatz">0 von 1 Spiel mit höchstens zwei Toren Unterschied</span></dd></div><div><dt>Längste Serie</dt><dd>1<span class="klein"> Spiel</span><span class="zusatz">ohne Niederlage</span></dd></div></dl><div class="rubrik">Rekorde</div><dl class="kennzahlen"><div class="breit"><dt>Torreichstes Spiel</dt><dd>29:25<span class="zusatz">gegen JSG Osthofen/Worms, 54 Tore</span></dd></div></dl>
   </div>
 </section><section data-team="gc" hidden>
   <p class="liga">Verbandsliga GEMISCHT &middot; 18 Spiele</p>
@@ -2203,24 +2248,24 @@ rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
 
 <div class="weg">
   <h3>iPhone, iPad und Mac</h3>
-  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen kommen danach von selbst an.</p>
+  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen ziehen sich danach automatisch nach.</p>
   <a class="knopf" href="webcal://beatzep.github.io/handball-kalender/gc.ics">gC-Jugend abonnieren</a>
   <p class="tipp">
-    <b>Am Mac</b> fragt der Kalender vorher nach Einstellungen: Haken bei
-    „Entfernen: Hinweise“ <b>abwählen</b> (sonst fehlen die Erinnerungen) und
-    „Automatisch aktualisieren“ auf <b>Jede Stunde</b> stellen – der Standard
-    „Wöchentlich“ ist für Verlegungen zu träge.
+    <b>Am Mac</b> fragt der Kalender vorher noch was: Den Haken bei
+    „Entfernen: Hinweise“ <b>rausnehmen</b>, sonst kriegst du keine
+    Erinnerungen. Und „Automatisch aktualisieren“ auf <b>Jede Stunde</b>
+    stellen. Wöchentlich ist zu selten, dann kriegst du Verlegungen zu spät mit.
   </p>
   <p class="tipp" data-ios-tipp hidden>
-    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen –
-    dann liegt der Spielplan als App auf dem Handy.
+    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen.
+    Dann liegt der Spielplan als App auf dem Handy.
   </p>
 </div>
 
 <div class="weg">
   <h3>Android und Google Kalender</h3>
-  <p>Google erlaubt das Abonnieren nur am Computer, nicht in der Handy-App.
-     Einmal am Rechner einrichten – danach ist es auf dem Handy.</p>
+  <p>Bei Google geht das Abonnieren nur am Computer, nicht in der Handy-App.
+     Einmal am Rechner einrichten, danach ist es auf dem Handy.</p>
   <button class="knopf stumm" type="button" data-kopiere="https://beatzep.github.io/handball-kalender/gc.ics">Adresse kopieren</button>
   <ol class="schritte">
     <li>Am Computer <code>calendar.google.com</code> öffnen</li>
@@ -2242,8 +2287,8 @@ rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
   </div>
   <button type="button" class="knopf stumm" data-grafik='{"art": "spiel", "verein": "HSG Mutterstadt/Ruchheim", "mannschaft": "gC-Jugend", "gegner": "JSG Mundenheim/Rheingönheim II", "heim": true, "datum": "2026-08-30T15:30:00+02:00", "datum_text": "Sonntag, 30.08.2026", "uhrzeit": "15:30", "halle": "TSG-Sporthalle Mutterstadt", "ort": "67112 Mutterstadt", "liga": "Verbandsliga GEMISCHT", "spieltag": 1}'>Bild fürs nächste Spiel</button><button type="button" class="knopf stumm" data-grafik='{"art": "ergebnis", "verein": "HSG Mutterstadt/Ruchheim", "mannschaft": "gC-Jugend", "gegner": "JSG Gonsenheim/Schott", "heim": false, "datum": "2026-08-23T00:00:00+02:00", "datum_text": "Sonntag, 23.08.2026", "uhrzeit": "00:00", "halle": "", "ort": "", "liga": "Verbandsliga GEMISCHT", "spieltag": 1, "stand": "24:28", "ausgang": "Niederlage"}'>Bild vom letzten Ergebnis</button>
   <button type="button" class="knopf stumm" data-teile="gC-Jugend: 24:28 auswärts gegen JSG Gonsenheim/Schott verloren.">Ergebnis als Text</button>
-  <p class="statfuss">Das Bild entsteht auf deinem Gerät aus den Spieldaten –
-     nichts wird hochgeladen.</p>
+  <p class="statfuss">Das Bild wird auf deinem Handy erzeugt. Es geht nichts
+     an uns oder sonstwohin.</p>
 </div></div>
   <div class="teil" data-ansicht="spiele" hidden><div class="monat">August 2026</div><div class="spiel vorbei">
 <div class="datum">So 23.08.<span>00:00</span></div>
@@ -2351,7 +2396,7 @@ rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
 <p class="tabellenfuss">Die Saison hat noch nicht begonnen.</p>
   </div>
   <div class="teil" data-ansicht="statistik" hidden>
-    <div class="rubrik">Unterwegs</div><dl class="kennzahlen"><div><dt>Kilometer</dt><dd>681<span class="zusatz">12 Fahrten, hin und zurück</span></dd></div><div><dt>Im Auto</dt><dd>9,7<span class="klein"> Std</span><span class="zusatz">geschätzt bei 70 km/h</span></dd></div><div><dt>Weiteste Fahrt</dt><dd>170<span class="klein"> km</span><span class="zusatz">Budenheim, Waldsporthalle (Hv Rheinhessen)</span></dd></div><div><dt>Kürzeste Fahrt</dt><dd>12<span class="klein"> km</span><span class="zusatz">TVR-Sporthalle Ludwigshafen</span></dd></div></dl><div class="rubrik">Bilanz</div><dl class="kennzahlen"><div><dt>Gesamt</dt><dd>0<span class="klein">S</span> 0<span class="klein">U</span> 2<span class="klein">N</span><span class="zusatz">aus 2 Spielen</span></dd></div><div><dt>Zu Hause</dt><dd>0<span class="klein">S</span> 0<span class="klein">U</span> 1<span class="klein">N</span></dd></div><div><dt>Auswärts</dt><dd>0<span class="klein">S</span> 0<span class="klein">U</span> 1<span class="klein">N</span></dd></div><div><dt>Tore pro Spiel</dt><dd>19,5<span class="zusatz">39:44 insgesamt</span></dd></div><div><dt>Krimis</dt><dd>50<span class="klein">%</span><span class="zusatz">1 von 2 Spielen auf zwei Tore oder weniger</span></dd></div></dl><div class="rubrik">Auffälligkeiten</div><dl class="kennzahlen"><div class="breit"><dt>Torreichstes Spiel</dt><dd>24:28<span class="zusatz">gegen JSG Gonsenheim/Schott, 52 Tore</span></dd></div></dl>
+    <div class="rubrik">Unterwegs</div><dl class="kennzahlen"><div><dt>Kilometer</dt><dd>681<span class="zusatz">12 Fahrten, hin und zurück</span></dd></div><div><dt>Im Auto</dt><dd>9,7<span class="klein"> Std</span><span class="zusatz">geschätzt bei 70 km/h</span></dd></div><div><dt>Weiteste Fahrt</dt><dd>170<span class="klein"> km</span><span class="zusatz">Budenheim, Waldsporthalle (Hv Rheinhessen)</span></dd></div><div><dt>Kürzeste Fahrt</dt><dd>12<span class="klein"> km</span><span class="zusatz">TVR-Sporthalle Ludwigshafen</span></dd></div></dl><div class="rubrik">Bilanz</div><dl class="kennzahlen"><div><dt>Gesamt</dt><dd>0<span class="klein">S</span> 0<span class="klein">U</span> 2<span class="klein">N</span><span class="zusatz">aus 2 Spielen</span></dd></div><div><dt>Zu Hause</dt><dd>0<span class="klein">S</span> 0<span class="klein">U</span> 1<span class="klein">N</span></dd></div><div><dt>Auswärts</dt><dd>0<span class="klein">S</span> 0<span class="klein">U</span> 1<span class="klein">N</span></dd></div><div><dt>Tore pro Spiel</dt><dd>19,5<span class="zusatz">39:44 insgesamt</span></dd></div><div><dt>Krimis</dt><dd>50<span class="klein">%</span><span class="zusatz">1 von 2 Spielen mit höchstens zwei Toren Unterschied</span></dd></div></dl><div class="rubrik">Rekorde</div><dl class="kennzahlen"><div class="breit"><dt>Torreichstes Spiel</dt><dd>24:28<span class="zusatz">gegen JSG Gonsenheim/Schott, 52 Tore</span></dd></div></dl>
   </div>
 </section><section data-team="gc-2" hidden>
   <p class="liga">Bezirksoberliga GEMISCHT &middot; 16 Spiele</p>
@@ -2418,24 +2463,24 @@ rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
 
 <div class="weg">
   <h3>iPhone, iPad und Mac</h3>
-  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen kommen danach von selbst an.</p>
+  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen ziehen sich danach automatisch nach.</p>
   <a class="knopf" href="webcal://beatzep.github.io/handball-kalender/gc-2.ics">gC-Jugend II abonnieren</a>
   <p class="tipp">
-    <b>Am Mac</b> fragt der Kalender vorher nach Einstellungen: Haken bei
-    „Entfernen: Hinweise“ <b>abwählen</b> (sonst fehlen die Erinnerungen) und
-    „Automatisch aktualisieren“ auf <b>Jede Stunde</b> stellen – der Standard
-    „Wöchentlich“ ist für Verlegungen zu träge.
+    <b>Am Mac</b> fragt der Kalender vorher noch was: Den Haken bei
+    „Entfernen: Hinweise“ <b>rausnehmen</b>, sonst kriegst du keine
+    Erinnerungen. Und „Automatisch aktualisieren“ auf <b>Jede Stunde</b>
+    stellen. Wöchentlich ist zu selten, dann kriegst du Verlegungen zu spät mit.
   </p>
   <p class="tipp" data-ios-tipp hidden>
-    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen –
-    dann liegt der Spielplan als App auf dem Handy.
+    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen.
+    Dann liegt der Spielplan als App auf dem Handy.
   </p>
 </div>
 
 <div class="weg">
   <h3>Android und Google Kalender</h3>
-  <p>Google erlaubt das Abonnieren nur am Computer, nicht in der Handy-App.
-     Einmal am Rechner einrichten – danach ist es auf dem Handy.</p>
+  <p>Bei Google geht das Abonnieren nur am Computer, nicht in der Handy-App.
+     Einmal am Rechner einrichten, danach ist es auf dem Handy.</p>
   <button class="knopf stumm" type="button" data-kopiere="https://beatzep.github.io/handball-kalender/gc-2.ics">Adresse kopieren</button>
   <ol class="schritte">
     <li>Am Computer <code>calendar.google.com</code> öffnen</li>
@@ -2457,8 +2502,8 @@ rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
   </div>
   <button type="button" class="knopf stumm" data-grafik='{"art": "spiel", "verein": "HSG Mutterstadt/Ruchheim", "mannschaft": "gC-Jugend II", "gegner": "HSG Dudenhofen/Schifferstadt", "heim": true, "datum": "2026-08-30T13:45:00+02:00", "datum_text": "Sonntag, 30.08.2026", "uhrzeit": "13:45", "halle": "TSG-Sporthalle Mutterstadt", "ort": "67112 Mutterstadt", "liga": "Bezirksoberliga GEMISCHT", "spieltag": 1}'>Bild fürs nächste Spiel</button>
   
-  <p class="statfuss">Das Bild entsteht auf deinem Gerät aus den Spieldaten –
-     nichts wird hochgeladen.</p>
+  <p class="statfuss">Das Bild wird auf deinem Handy erzeugt. Es geht nichts
+     an uns oder sonstwohin.</p>
 </div></div>
   <div class="teil" data-ansicht="spiele" hidden><div class="monat">August 2026</div><div class="spiel jetzt">
 <div class="datum">So 30.08.<span>13:45</span></div>
@@ -2556,7 +2601,7 @@ rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
 <p class="tabellenfuss">Die Saison hat noch nicht begonnen.</p>
   </div>
   <div class="teil" data-ansicht="statistik" hidden>
-    <div class="rubrik">Unterwegs</div><dl class="kennzahlen"><div><dt>Kilometer</dt><dd>635<span class="zusatz">12 Fahrten, hin und zurück</span></dd></div><div><dt>Im Auto</dt><dd>9,1<span class="klein"> Std</span><span class="zusatz">geschätzt bei 70 km/h</span></dd></div><div><dt>Weiteste Fahrt</dt><dd>157<span class="klein"> km</span><span class="zusatz">IGS-Sporthalle Thaleischweiler</span></dd></div><div><dt>Kürzeste Fahrt</dt><dd>11<span class="klein"> km</span><span class="zusatz">Loschky-Halle Niederfeld</span></dd></div></dl><p class="statfuss">Sobald gespielt wird, kommen hier Bilanz, Serien und Auffälligkeiten dazu.</p>
+    <div class="rubrik">Unterwegs</div><dl class="kennzahlen"><div><dt>Kilometer</dt><dd>635<span class="zusatz">12 Fahrten, hin und zurück</span></dd></div><div><dt>Im Auto</dt><dd>9,1<span class="klein"> Std</span><span class="zusatz">geschätzt bei 70 km/h</span></dd></div><div><dt>Weiteste Fahrt</dt><dd>157<span class="klein"> km</span><span class="zusatz">IGS-Sporthalle Thaleischweiler</span></dd></div><div><dt>Kürzeste Fahrt</dt><dd>11<span class="klein"> km</span><span class="zusatz">Loschky-Halle Niederfeld</span></dd></div></dl><p class="statfuss">Sobald gespielt wird, kommen hier Bilanz, Serien und Rekorde dazu.</p>
   </div>
 </section><section data-team="wc" hidden>
   <p class="liga">Regionalliga  SW C-Jugend weiblich &middot; 6 Spiele</p>
@@ -2623,24 +2668,24 @@ rel="noopener">Landauer Str. 22, 66482 Zweibrücken</a></dd></div>
 
 <div class="weg">
   <h3>iPhone, iPad und Mac</h3>
-  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen kommen danach von selbst an.</p>
+  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen ziehen sich danach automatisch nach.</p>
   <a class="knopf" href="webcal://beatzep.github.io/handball-kalender/wc.ics">wC-Jugend abonnieren</a>
   <p class="tipp">
-    <b>Am Mac</b> fragt der Kalender vorher nach Einstellungen: Haken bei
-    „Entfernen: Hinweise“ <b>abwählen</b> (sonst fehlen die Erinnerungen) und
-    „Automatisch aktualisieren“ auf <b>Jede Stunde</b> stellen – der Standard
-    „Wöchentlich“ ist für Verlegungen zu träge.
+    <b>Am Mac</b> fragt der Kalender vorher noch was: Den Haken bei
+    „Entfernen: Hinweise“ <b>rausnehmen</b>, sonst kriegst du keine
+    Erinnerungen. Und „Automatisch aktualisieren“ auf <b>Jede Stunde</b>
+    stellen. Wöchentlich ist zu selten, dann kriegst du Verlegungen zu spät mit.
   </p>
   <p class="tipp" data-ios-tipp hidden>
-    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen –
-    dann liegt der Spielplan als App auf dem Handy.
+    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen.
+    Dann liegt der Spielplan als App auf dem Handy.
   </p>
 </div>
 
 <div class="weg">
   <h3>Android und Google Kalender</h3>
-  <p>Google erlaubt das Abonnieren nur am Computer, nicht in der Handy-App.
-     Einmal am Rechner einrichten – danach ist es auf dem Handy.</p>
+  <p>Bei Google geht das Abonnieren nur am Computer, nicht in der Handy-App.
+     Einmal am Rechner einrichten, danach ist es auf dem Handy.</p>
   <button class="knopf stumm" type="button" data-kopiere="https://beatzep.github.io/handball-kalender/wc.ics">Adresse kopieren</button>
   <ol class="schritte">
     <li>Am Computer <code>calendar.google.com</code> öffnen</li>
@@ -2662,8 +2707,8 @@ rel="noopener">Landauer Str. 22, 66482 Zweibrücken</a></dd></div>
   </div>
   <button type="button" class="knopf stumm" data-grafik='{"art": "spiel", "verein": "HSG Mutterstadt/Ruchheim", "mannschaft": "wC-Jugend", "gegner": "SG Zweibrücken", "heim": false, "datum": "2026-08-29T14:00:00+02:00", "datum_text": "Samstag, 29.08.2026", "uhrzeit": "14:00", "halle": "Ignaz-Roth-Halle", "ort": "66482 Zweibrücken", "liga": "Regionalliga  SW C-Jugend weiblich", "spieltag": 2}'>Bild fürs nächste Spiel</button><button type="button" class="knopf stumm" data-grafik='{"art": "ergebnis", "verein": "HSG Mutterstadt/Ruchheim", "mannschaft": "wC-Jugend", "gegner": "JSG  Mundenheim/Rheingönheim", "heim": true, "datum": "2026-08-23T14:00:00+02:00", "datum_text": "Sonntag, 23.08.2026", "uhrzeit": "14:00", "halle": "TVR-Sporthalle Ludwigshafen", "ort": "67071 Ludwigshafen", "liga": "Regionalliga  SW C-Jugend weiblich", "spieltag": 1, "stand": "27:25", "ausgang": "Sieg"}'>Bild vom letzten Ergebnis</button>
   <button type="button" class="knopf stumm" data-teile="wC-Jugend: 27:25 zu Hause gegen JSG  Mundenheim/Rheingönheim gewonnen. Damit Platz 2 mit 2 Punkten in der Regionalliga  SW C-Jugend weiblich.">Ergebnis als Text</button>
-  <p class="statfuss">Das Bild entsteht auf deinem Gerät aus den Spieldaten –
-     nichts wird hochgeladen.</p>
+  <p class="statfuss">Das Bild wird auf deinem Handy erzeugt. Es geht nichts
+     an uns oder sonstwohin.</p>
 </div></div>
   <div class="teil" data-ansicht="spiele" hidden><div class="monat">August 2026</div><div class="spiel vorbei">
 <div class="datum">So 23.08.<span>14:00</span></div>
@@ -2721,7 +2766,7 @@ rel="noopener">Landauer Str. 22, 66482 Zweibrücken</a></dd></div>
 <p class="tabellenfuss">Stand nach Spieltag 6.</p>
   </div>
   <div class="teil" data-ansicht="statistik" hidden>
-    <div class="rubrik">Unterwegs</div><dl class="kennzahlen"><div><dt>Kilometer</dt><dd>544<span class="zusatz">4 Fahrten, hin und zurück</span></dd></div><div><dt>Im Auto</dt><dd>7,8<span class="klein"> Std</span><span class="zusatz">geschätzt bei 70 km/h</span></dd></div><div><dt>Weiteste Fahrt</dt><dd>323<span class="klein"> km</span><span class="zusatz">Engers, Sporthalle</span></dd></div><div><dt>Kürzeste Fahrt</dt><dd>12<span class="klein"> km</span><span class="zusatz">TVR-Sporthalle Ludwigshafen</span></dd></div></dl><div class="rubrik">Bilanz</div><dl class="kennzahlen"><div><dt>Gesamt</dt><dd>1<span class="klein">S</span> 0<span class="klein">U</span> 0<span class="klein">N</span><span class="zusatz">aus 1 Spielen</span></dd></div><div><dt>Zu Hause</dt><dd>1<span class="klein">S</span> 0<span class="klein">U</span> 0<span class="klein">N</span></dd></div><div><dt>Auswärts</dt><dd>0<span class="klein">S</span> 0<span class="klein">U</span> 0<span class="klein">N</span></dd></div><div><dt>Tore pro Spiel</dt><dd>27,0<span class="zusatz">27:25 insgesamt</span></dd></div><div><dt>Krimis</dt><dd>100<span class="klein">%</span><span class="zusatz">1 von 1 Spielen auf zwei Tore oder weniger</span></dd></div><div><dt>Längste Serie</dt><dd>1<span class="klein"> Spiele</span><span class="zusatz">ohne Niederlage</span></dd></div></dl><div class="rubrik">Auffälligkeiten</div><dl class="kennzahlen"><div class="breit"><dt>Torreichstes Spiel</dt><dd>27:25<span class="zusatz">gegen JSG  Mundenheim/Rheingönheim, 52 Tore</span></dd></div></dl>
+    <div class="rubrik">Unterwegs</div><dl class="kennzahlen"><div><dt>Kilometer</dt><dd>544<span class="zusatz">4 Fahrten, hin und zurück</span></dd></div><div><dt>Im Auto</dt><dd>7,8<span class="klein"> Std</span><span class="zusatz">geschätzt bei 70 km/h</span></dd></div><div><dt>Weiteste Fahrt</dt><dd>323<span class="klein"> km</span><span class="zusatz">Engers, Sporthalle</span></dd></div><div><dt>Kürzeste Fahrt</dt><dd>12<span class="klein"> km</span><span class="zusatz">TVR-Sporthalle Ludwigshafen</span></dd></div></dl><div class="rubrik">Bilanz</div><dl class="kennzahlen"><div><dt>Gesamt</dt><dd>1<span class="klein">S</span> 0<span class="klein">U</span> 0<span class="klein">N</span><span class="zusatz">aus 1 Spiel</span></dd></div><div><dt>Zu Hause</dt><dd>1<span class="klein">S</span> 0<span class="klein">U</span> 0<span class="klein">N</span></dd></div><div><dt>Auswärts</dt><dd>0<span class="klein">S</span> 0<span class="klein">U</span> 0<span class="klein">N</span></dd></div><div><dt>Tore pro Spiel</dt><dd>27,0<span class="zusatz">27:25 insgesamt</span></dd></div><div><dt>Krimis</dt><dd>100<span class="klein">%</span><span class="zusatz">1 von 1 Spiel mit höchstens zwei Toren Unterschied</span></dd></div><div><dt>Längste Serie</dt><dd>1<span class="klein"> Spiel</span><span class="zusatz">ohne Niederlage</span></dd></div></dl><div class="rubrik">Rekorde</div><dl class="kennzahlen"><div class="breit"><dt>Torreichstes Spiel</dt><dd>27:25<span class="zusatz">gegen JSG  Mundenheim/Rheingönheim, 52 Tore</span></dd></div></dl>
   </div>
 </section><section data-team="wc-2" hidden>
   <p class="liga">Verbandsliga WEIBLICH &middot; 18 Spiele</p>
@@ -2788,24 +2833,24 @@ rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
 
 <div class="weg">
   <h3>iPhone, iPad und Mac</h3>
-  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen kommen danach von selbst an.</p>
+  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen ziehen sich danach automatisch nach.</p>
   <a class="knopf" href="webcal://beatzep.github.io/handball-kalender/wc-2.ics">wC-Jugend II abonnieren</a>
   <p class="tipp">
-    <b>Am Mac</b> fragt der Kalender vorher nach Einstellungen: Haken bei
-    „Entfernen: Hinweise“ <b>abwählen</b> (sonst fehlen die Erinnerungen) und
-    „Automatisch aktualisieren“ auf <b>Jede Stunde</b> stellen – der Standard
-    „Wöchentlich“ ist für Verlegungen zu träge.
+    <b>Am Mac</b> fragt der Kalender vorher noch was: Den Haken bei
+    „Entfernen: Hinweise“ <b>rausnehmen</b>, sonst kriegst du keine
+    Erinnerungen. Und „Automatisch aktualisieren“ auf <b>Jede Stunde</b>
+    stellen. Wöchentlich ist zu selten, dann kriegst du Verlegungen zu spät mit.
   </p>
   <p class="tipp" data-ios-tipp hidden>
-    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen –
-    dann liegt der Spielplan als App auf dem Handy.
+    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen.
+    Dann liegt der Spielplan als App auf dem Handy.
   </p>
 </div>
 
 <div class="weg">
   <h3>Android und Google Kalender</h3>
-  <p>Google erlaubt das Abonnieren nur am Computer, nicht in der Handy-App.
-     Einmal am Rechner einrichten – danach ist es auf dem Handy.</p>
+  <p>Bei Google geht das Abonnieren nur am Computer, nicht in der Handy-App.
+     Einmal am Rechner einrichten, danach ist es auf dem Handy.</p>
   <button class="knopf stumm" type="button" data-kopiere="https://beatzep.github.io/handball-kalender/wc-2.ics">Adresse kopieren</button>
   <ol class="schritte">
     <li>Am Computer <code>calendar.google.com</code> öffnen</li>
@@ -2827,8 +2872,8 @@ rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
   </div>
   <button type="button" class="knopf stumm" data-grafik='{"art": "spiel", "verein": "HSG Mutterstadt/Ruchheim", "mannschaft": "wC-Jugend II", "gegner": "HSG Dudenhofen/Schifferstadt", "heim": true, "datum": "2026-08-30T10:30:00+02:00", "datum_text": "Sonntag, 30.08.2026", "uhrzeit": "10:30", "halle": "TSG-Sporthalle Mutterstadt", "ort": "67112 Mutterstadt", "liga": "Verbandsliga WEIBLICH", "spieltag": 1}'>Bild fürs nächste Spiel</button>
   
-  <p class="statfuss">Das Bild entsteht auf deinem Gerät aus den Spieldaten –
-     nichts wird hochgeladen.</p>
+  <p class="statfuss">Das Bild wird auf deinem Handy erzeugt. Es geht nichts
+     an uns oder sonstwohin.</p>
 </div></div>
   <div class="teil" data-ansicht="spiele" hidden><div class="monat">August 2026</div><div class="spiel jetzt">
 <div class="datum">So 30.08.<span>10:30</span></div>
@@ -2936,7 +2981,7 @@ rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
 <p class="tabellenfuss">Die Saison hat noch nicht begonnen.</p>
   </div>
   <div class="teil" data-ansicht="statistik" hidden>
-    <div class="rubrik">Unterwegs</div><dl class="kennzahlen"><div><dt>Kilometer</dt><dd>361<span class="zusatz">12 Fahrten, hin und zurück</span></dd></div><div><dt>Im Auto</dt><dd>5,2<span class="klein"> Std</span><span class="zusatz">geschätzt bei 70 km/h</span></dd></div><div><dt>Weiteste Fahrt</dt><dd>97<span class="klein"> km</span><span class="zusatz">Rundsporthalle Alzey</span></dd></div><div><dt>Kürzeste Fahrt</dt><dd>12<span class="klein"> km</span><span class="zusatz">TVR-Sporthalle Ludwigshafen</span></dd></div></dl><p class="statfuss">Nicht eingerechnet, weil im Verband keine Koordinaten hinterlegt sind: Sporthalle Freinsheim.</p><p class="statfuss">Sobald gespielt wird, kommen hier Bilanz, Serien und Auffälligkeiten dazu.</p>
+    <div class="rubrik">Unterwegs</div><dl class="kennzahlen"><div><dt>Kilometer</dt><dd>361<span class="zusatz">12 Fahrten, hin und zurück</span></dd></div><div><dt>Im Auto</dt><dd>5,2<span class="klein"> Std</span><span class="zusatz">geschätzt bei 70 km/h</span></dd></div><div><dt>Weiteste Fahrt</dt><dd>97<span class="klein"> km</span><span class="zusatz">Rundsporthalle Alzey</span></dd></div><div><dt>Kürzeste Fahrt</dt><dd>12<span class="klein"> km</span><span class="zusatz">TVR-Sporthalle Ludwigshafen</span></dd></div></dl><p class="statfuss">Bei diesen Hallen fehlt beim Verband die Adresse, die Kilometer fehlen also in der Summe: Sporthalle Freinsheim.</p><p class="statfuss">Sobald gespielt wird, kommen hier Bilanz, Serien und Rekorde dazu.</p>
   </div>
 </section><section data-team="gd" hidden>
   <p class="liga">Bezirksliga GEMISCHT &middot; 19 Spiele</p>
@@ -3003,24 +3048,24 @@ rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
 
 <div class="weg">
   <h3>iPhone, iPad und Mac</h3>
-  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen kommen danach von selbst an.</p>
+  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen ziehen sich danach automatisch nach.</p>
   <a class="knopf" href="webcal://beatzep.github.io/handball-kalender/gd.ics">gD-Jugend abonnieren</a>
   <p class="tipp">
-    <b>Am Mac</b> fragt der Kalender vorher nach Einstellungen: Haken bei
-    „Entfernen: Hinweise“ <b>abwählen</b> (sonst fehlen die Erinnerungen) und
-    „Automatisch aktualisieren“ auf <b>Jede Stunde</b> stellen – der Standard
-    „Wöchentlich“ ist für Verlegungen zu träge.
+    <b>Am Mac</b> fragt der Kalender vorher noch was: Den Haken bei
+    „Entfernen: Hinweise“ <b>rausnehmen</b>, sonst kriegst du keine
+    Erinnerungen. Und „Automatisch aktualisieren“ auf <b>Jede Stunde</b>
+    stellen. Wöchentlich ist zu selten, dann kriegst du Verlegungen zu spät mit.
   </p>
   <p class="tipp" data-ios-tipp hidden>
-    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen –
-    dann liegt der Spielplan als App auf dem Handy.
+    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen.
+    Dann liegt der Spielplan als App auf dem Handy.
   </p>
 </div>
 
 <div class="weg">
   <h3>Android und Google Kalender</h3>
-  <p>Google erlaubt das Abonnieren nur am Computer, nicht in der Handy-App.
-     Einmal am Rechner einrichten – danach ist es auf dem Handy.</p>
+  <p>Bei Google geht das Abonnieren nur am Computer, nicht in der Handy-App.
+     Einmal am Rechner einrichten, danach ist es auf dem Handy.</p>
   <button class="knopf stumm" type="button" data-kopiere="https://beatzep.github.io/handball-kalender/gd.ics">Adresse kopieren</button>
   <ol class="schritte">
     <li>Am Computer <code>calendar.google.com</code> öffnen</li>
@@ -3042,8 +3087,8 @@ rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
   </div>
   <button type="button" class="knopf stumm" data-grafik='{"art": "spiel", "verein": "HSG Mutterstadt/Ruchheim", "mannschaft": "gD-Jugend", "gegner": "Mjsg SG Saulheim/HSV Alzey", "heim": true, "datum": "2026-08-30T12:15:00+02:00", "datum_text": "Sonntag, 30.08.2026", "uhrzeit": "12:15", "halle": "TSG-Sporthalle Mutterstadt", "ort": "67112 Mutterstadt", "liga": "Bezirksliga GEMISCHT", "spieltag": 1}'>Bild fürs nächste Spiel</button><button type="button" class="knopf stumm" data-grafik='{"art": "ergebnis", "verein": "HSG Mutterstadt/Ruchheim", "mannschaft": "gD-Jugend", "gegner": "Hr Göllheim/Eisenberg/Asselheim/Kindenheim", "heim": true, "datum": "2026-08-16T00:00:00+02:00", "datum_text": "Sonntag, 16.08.2026", "uhrzeit": "00:00", "halle": "", "ort": "", "liga": "Bezirksliga GEMISCHT", "spieltag": 1, "stand": "16:20", "ausgang": "Niederlage"}'>Bild vom letzten Ergebnis</button>
   <button type="button" class="knopf stumm" data-teile="gD-Jugend: 16:20 zu Hause gegen Hr Göllheim/Eisenberg/Asselheim/Kindenheim verloren.">Ergebnis als Text</button>
-  <p class="statfuss">Das Bild entsteht auf deinem Gerät aus den Spieldaten –
-     nichts wird hochgeladen.</p>
+  <p class="statfuss">Das Bild wird auf deinem Handy erzeugt. Es geht nichts
+     an uns oder sonstwohin.</p>
 </div></div>
   <div class="teil" data-ansicht="spiele" hidden><div class="monat">August 2026</div><div class="spiel vorbei">
 <div class="datum">So 16.08.<span>00:00</span></div>
@@ -3156,7 +3201,7 @@ rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
 <p class="tabellenfuss">Die Saison hat noch nicht begonnen.</p>
   </div>
   <div class="teil" data-ansicht="statistik" hidden>
-    <div class="rubrik">Unterwegs</div><dl class="kennzahlen"><div><dt>Kilometer</dt><dd>508<span class="zusatz">12 Fahrten, hin und zurück</span></dd></div><div><dt>Im Auto</dt><dd>7,3<span class="klein"> Std</span><span class="zusatz">geschätzt bei 70 km/h</span></dd></div><div><dt>Weiteste Fahrt</dt><dd>130<span class="klein"> km</span><span class="zusatz">Ritter-Hundt-Zentrum Saulheim</span></dd></div><div><dt>Kürzeste Fahrt</dt><dd>12<span class="klein"> km</span><span class="zusatz">TVR-Sporthalle Ludwigshafen</span></dd></div></dl><div class="rubrik">Bilanz</div><dl class="kennzahlen"><div><dt>Gesamt</dt><dd>1<span class="klein">S</span> 0<span class="klein">U</span> 2<span class="klein">N</span><span class="zusatz">aus 3 Spielen</span></dd></div><div><dt>Zu Hause</dt><dd>0<span class="klein">S</span> 0<span class="klein">U</span> 1<span class="klein">N</span></dd></div><div><dt>Auswärts</dt><dd>1<span class="klein">S</span> 0<span class="klein">U</span> 1<span class="klein">N</span></dd></div><div><dt>Tore pro Spiel</dt><dd>16,0<span class="zusatz">48:38 insgesamt</span></dd></div><div><dt>Krimis</dt><dd>0<span class="klein">%</span><span class="zusatz">0 von 3 Spielen auf zwei Tore oder weniger</span></dd></div><div><dt>Längste Serie</dt><dd>1<span class="klein"> Spiele</span><span class="zusatz">ohne Niederlage</span></dd></div></dl><div class="rubrik">Auffälligkeiten</div><dl class="kennzahlen"><div class="breit"><dt>Torreichstes Spiel</dt><dd>16:20<span class="zusatz">gegen Hr Göllheim/Eisenberg/Asselheim/Kindenheim, 36 Tore</span></dd></div></dl>
+    <div class="rubrik">Unterwegs</div><dl class="kennzahlen"><div><dt>Kilometer</dt><dd>508<span class="zusatz">12 Fahrten, hin und zurück</span></dd></div><div><dt>Im Auto</dt><dd>7,3<span class="klein"> Std</span><span class="zusatz">geschätzt bei 70 km/h</span></dd></div><div><dt>Weiteste Fahrt</dt><dd>130<span class="klein"> km</span><span class="zusatz">Ritter-Hundt-Zentrum Saulheim</span></dd></div><div><dt>Kürzeste Fahrt</dt><dd>12<span class="klein"> km</span><span class="zusatz">TVR-Sporthalle Ludwigshafen</span></dd></div></dl><div class="rubrik">Bilanz</div><dl class="kennzahlen"><div><dt>Gesamt</dt><dd>1<span class="klein">S</span> 0<span class="klein">U</span> 2<span class="klein">N</span><span class="zusatz">aus 3 Spielen</span></dd></div><div><dt>Zu Hause</dt><dd>0<span class="klein">S</span> 0<span class="klein">U</span> 1<span class="klein">N</span></dd></div><div><dt>Auswärts</dt><dd>1<span class="klein">S</span> 0<span class="klein">U</span> 1<span class="klein">N</span></dd></div><div><dt>Tore pro Spiel</dt><dd>16,0<span class="zusatz">48:38 insgesamt</span></dd></div><div><dt>Krimis</dt><dd>0<span class="klein">%</span><span class="zusatz">0 von 3 Spielen mit höchstens zwei Toren Unterschied</span></dd></div><div><dt>Längste Serie</dt><dd>1<span class="klein"> Spiel</span><span class="zusatz">ohne Niederlage</span></dd></div></dl><div class="rubrik">Rekorde</div><dl class="kennzahlen"><div class="breit"><dt>Torreichstes Spiel</dt><dd>16:20<span class="zusatz">gegen Hr Göllheim/Eisenberg/Asselheim/Kindenheim, 36 Tore</span></dd></div></dl>
   </div>
 </section><section data-team="wd" hidden>
   <p class="liga">Bezirksoberliga WEIBLICH &middot; 19 Spiele</p>
@@ -3223,24 +3268,24 @@ rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
 
 <div class="weg">
   <h3>iPhone, iPad und Mac</h3>
-  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen kommen danach von selbst an.</p>
+  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen ziehen sich danach automatisch nach.</p>
   <a class="knopf" href="webcal://beatzep.github.io/handball-kalender/wd.ics">wD-Jugend abonnieren</a>
   <p class="tipp">
-    <b>Am Mac</b> fragt der Kalender vorher nach Einstellungen: Haken bei
-    „Entfernen: Hinweise“ <b>abwählen</b> (sonst fehlen die Erinnerungen) und
-    „Automatisch aktualisieren“ auf <b>Jede Stunde</b> stellen – der Standard
-    „Wöchentlich“ ist für Verlegungen zu träge.
+    <b>Am Mac</b> fragt der Kalender vorher noch was: Den Haken bei
+    „Entfernen: Hinweise“ <b>rausnehmen</b>, sonst kriegst du keine
+    Erinnerungen. Und „Automatisch aktualisieren“ auf <b>Jede Stunde</b>
+    stellen. Wöchentlich ist zu selten, dann kriegst du Verlegungen zu spät mit.
   </p>
   <p class="tipp" data-ios-tipp hidden>
-    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen –
-    dann liegt der Spielplan als App auf dem Handy.
+    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen.
+    Dann liegt der Spielplan als App auf dem Handy.
   </p>
 </div>
 
 <div class="weg">
   <h3>Android und Google Kalender</h3>
-  <p>Google erlaubt das Abonnieren nur am Computer, nicht in der Handy-App.
-     Einmal am Rechner einrichten – danach ist es auf dem Handy.</p>
+  <p>Bei Google geht das Abonnieren nur am Computer, nicht in der Handy-App.
+     Einmal am Rechner einrichten, danach ist es auf dem Handy.</p>
   <button class="knopf stumm" type="button" data-kopiere="https://beatzep.github.io/handball-kalender/wd.ics">Adresse kopieren</button>
   <ol class="schritte">
     <li>Am Computer <code>calendar.google.com</code> öffnen</li>
@@ -3262,8 +3307,8 @@ rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
   </div>
   <button type="button" class="knopf stumm" data-grafik='{"art": "spiel", "verein": "HSG Mutterstadt/Ruchheim", "mannschaft": "wD-Jugend", "gegner": "Wjsg Mainz05/TV Nieder-Olm Wd1", "heim": true, "datum": "2026-09-05T12:00:00+02:00", "datum_text": "Samstag, 05.09.2026", "uhrzeit": "12:00", "halle": "TSG-Sporthalle Mutterstadt", "ort": "67112 Mutterstadt", "liga": "Bezirksoberliga WEIBLICH", "spieltag": 2}'>Bild fürs nächste Spiel</button>
   
-  <p class="statfuss">Das Bild entsteht auf deinem Gerät aus den Spieldaten –
-     nichts wird hochgeladen.</p>
+  <p class="statfuss">Das Bild wird auf deinem Handy erzeugt. Es geht nichts
+     an uns oder sonstwohin.</p>
 </div></div>
   <div class="teil" data-ansicht="spiele" hidden><div class="monat">September 2026</div><div class="spiel jetzt">
 <div class="datum">Sa 05.09.<span>12:00</span></div>
@@ -3376,7 +3421,7 @@ rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
 <p class="tabellenfuss">Die Saison hat noch nicht begonnen.</p>
   </div>
   <div class="teil" data-ansicht="statistik" hidden>
-    <div class="rubrik">Unterwegs</div><dl class="kennzahlen"><div><dt>Kilometer</dt><dd>766<span class="zusatz">13 Fahrten, hin und zurück</span></dd></div><div><dt>Im Auto</dt><dd>10,9<span class="klein"> Std</span><span class="zusatz">geschätzt bei 70 km/h</span></dd></div><div><dt>Weiteste Fahrt</dt><dd>155<span class="klein"> km</span><span class="zusatz">IGS 1 Mainz-Bretzenheim</span></dd></div><div><dt>Kürzeste Fahrt</dt><dd>12<span class="klein"> km</span><span class="zusatz">TVR-Sporthalle Ludwigshafen</span></dd></div></dl><p class="statfuss">Sobald gespielt wird, kommen hier Bilanz, Serien und Auffälligkeiten dazu.</p>
+    <div class="rubrik">Unterwegs</div><dl class="kennzahlen"><div><dt>Kilometer</dt><dd>766<span class="zusatz">13 Fahrten, hin und zurück</span></dd></div><div><dt>Im Auto</dt><dd>10,9<span class="klein"> Std</span><span class="zusatz">geschätzt bei 70 km/h</span></dd></div><div><dt>Weiteste Fahrt</dt><dd>155<span class="klein"> km</span><span class="zusatz">IGS 1 Mainz-Bretzenheim</span></dd></div><div><dt>Kürzeste Fahrt</dt><dd>12<span class="klein"> km</span><span class="zusatz">TVR-Sporthalle Ludwigshafen</span></dd></div></dl><p class="statfuss">Sobald gespielt wird, kommen hier Bilanz, Serien und Rekorde dazu.</p>
   </div>
 </section><section data-team="wd-2" hidden>
   <p class="liga">Bezirksliga WEIBLICH &middot; 18 Spiele</p>
@@ -3443,24 +3488,24 @@ rel="noopener">Schubertstr. 7, 76870 Kandel</a></dd></div>
 
 <div class="weg">
   <h3>iPhone, iPad und Mac</h3>
-  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen kommen danach von selbst an.</p>
+  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen ziehen sich danach automatisch nach.</p>
   <a class="knopf" href="webcal://beatzep.github.io/handball-kalender/wd-2.ics">wD-Jugend II abonnieren</a>
   <p class="tipp">
-    <b>Am Mac</b> fragt der Kalender vorher nach Einstellungen: Haken bei
-    „Entfernen: Hinweise“ <b>abwählen</b> (sonst fehlen die Erinnerungen) und
-    „Automatisch aktualisieren“ auf <b>Jede Stunde</b> stellen – der Standard
-    „Wöchentlich“ ist für Verlegungen zu träge.
+    <b>Am Mac</b> fragt der Kalender vorher noch was: Den Haken bei
+    „Entfernen: Hinweise“ <b>rausnehmen</b>, sonst kriegst du keine
+    Erinnerungen. Und „Automatisch aktualisieren“ auf <b>Jede Stunde</b>
+    stellen. Wöchentlich ist zu selten, dann kriegst du Verlegungen zu spät mit.
   </p>
   <p class="tipp" data-ios-tipp hidden>
-    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen –
-    dann liegt der Spielplan als App auf dem Handy.
+    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen.
+    Dann liegt der Spielplan als App auf dem Handy.
   </p>
 </div>
 
 <div class="weg">
   <h3>Android und Google Kalender</h3>
-  <p>Google erlaubt das Abonnieren nur am Computer, nicht in der Handy-App.
-     Einmal am Rechner einrichten – danach ist es auf dem Handy.</p>
+  <p>Bei Google geht das Abonnieren nur am Computer, nicht in der Handy-App.
+     Einmal am Rechner einrichten, danach ist es auf dem Handy.</p>
   <button class="knopf stumm" type="button" data-kopiere="https://beatzep.github.io/handball-kalender/wd-2.ics">Adresse kopieren</button>
   <ol class="schritte">
     <li>Am Computer <code>calendar.google.com</code> öffnen</li>
@@ -3482,8 +3527,8 @@ rel="noopener">Schubertstr. 7, 76870 Kandel</a></dd></div>
   </div>
   <button type="button" class="knopf stumm" data-grafik='{"art": "spiel", "verein": "HSG Mutterstadt/Ruchheim", "mannschaft": "wD-Jugend II", "gegner": "Mwsg Kandel/Hagenbach", "heim": false, "datum": "2026-08-30T14:00:00+02:00", "datum_text": "Sonntag, 30.08.2026", "uhrzeit": "14:00", "halle": "Kandel, IGS Sporthalle", "ort": "76870 Kandel", "liga": "Bezirksliga WEIBLICH", "spieltag": 1}'>Bild fürs nächste Spiel</button><button type="button" class="knopf stumm" data-grafik='{"art": "ergebnis", "verein": "HSG Mutterstadt/Ruchheim", "mannschaft": "wD-Jugend II", "gegner": "Südpfalz Tiger", "heim": true, "datum": "2026-08-15T00:00:00+02:00", "datum_text": "Samstag, 15.08.2026", "uhrzeit": "00:00", "halle": "", "ort": "", "liga": "Bezirksliga WEIBLICH", "spieltag": 1, "stand": "8:22", "ausgang": "Niederlage"}'>Bild vom letzten Ergebnis</button>
   <button type="button" class="knopf stumm" data-teile="wD-Jugend II: 8:22 zu Hause gegen Südpfalz Tiger verloren.">Ergebnis als Text</button>
-  <p class="statfuss">Das Bild entsteht auf deinem Gerät aus den Spieldaten –
-     nichts wird hochgeladen.</p>
+  <p class="statfuss">Das Bild wird auf deinem Handy erzeugt. Es geht nichts
+     an uns oder sonstwohin.</p>
 </div></div>
   <div class="teil" data-ansicht="spiele" hidden><div class="monat">August 2026</div><div class="spiel vorbei">
 <div class="datum">Sa 15.08.<span>00:00</span></div>
@@ -3591,7 +3636,7 @@ rel="noopener">Schubertstr. 7, 76870 Kandel</a></dd></div>
 <p class="tabellenfuss">Die Saison hat noch nicht begonnen.</p>
   </div>
   <div class="teil" data-ansicht="statistik" hidden>
-    <div class="rubrik">Unterwegs</div><dl class="kennzahlen"><div><dt>Kilometer</dt><dd>340<span class="zusatz">12 Fahrten, hin und zurück</span></dd></div><div><dt>Im Auto</dt><dd>4,9<span class="klein"> Std</span><span class="zusatz">geschätzt bei 70 km/h</span></dd></div><div><dt>Weiteste Fahrt</dt><dd>111<span class="klein"> km</span><span class="zusatz">Kandel, IGS Sporthalle</span></dd></div><div><dt>Kürzeste Fahrt</dt><dd>11<span class="klein"> km</span><span class="zusatz">Kurpfalzhalle Dannstadt</span></dd></div></dl><div class="rubrik">Bilanz</div><dl class="kennzahlen"><div><dt>Gesamt</dt><dd>1<span class="klein">S</span> 0<span class="klein">U</span> 1<span class="klein">N</span><span class="zusatz">aus 2 Spielen</span></dd></div><div><dt>Zu Hause</dt><dd>0<span class="klein">S</span> 0<span class="klein">U</span> 1<span class="klein">N</span></dd></div><div><dt>Auswärts</dt><dd>1<span class="klein">S</span> 0<span class="klein">U</span> 0<span class="klein">N</span></dd></div><div><dt>Tore pro Spiel</dt><dd>10,0<span class="zusatz">20:33 insgesamt</span></dd></div><div><dt>Krimis</dt><dd>50<span class="klein">%</span><span class="zusatz">1 von 2 Spielen auf zwei Tore oder weniger</span></dd></div><div><dt>Längste Serie</dt><dd>1<span class="klein"> Spiele</span><span class="zusatz">ohne Niederlage</span></dd></div></dl><div class="rubrik">Auffälligkeiten</div><dl class="kennzahlen"><div class="breit"><dt>Torreichstes Spiel</dt><dd>8:22<span class="zusatz">gegen Südpfalz Tiger, 30 Tore</span></dd></div></dl>
+    <div class="rubrik">Unterwegs</div><dl class="kennzahlen"><div><dt>Kilometer</dt><dd>340<span class="zusatz">12 Fahrten, hin und zurück</span></dd></div><div><dt>Im Auto</dt><dd>4,9<span class="klein"> Std</span><span class="zusatz">geschätzt bei 70 km/h</span></dd></div><div><dt>Weiteste Fahrt</dt><dd>111<span class="klein"> km</span><span class="zusatz">Kandel, IGS Sporthalle</span></dd></div><div><dt>Kürzeste Fahrt</dt><dd>11<span class="klein"> km</span><span class="zusatz">Kurpfalzhalle Dannstadt</span></dd></div></dl><div class="rubrik">Bilanz</div><dl class="kennzahlen"><div><dt>Gesamt</dt><dd>1<span class="klein">S</span> 0<span class="klein">U</span> 1<span class="klein">N</span><span class="zusatz">aus 2 Spielen</span></dd></div><div><dt>Zu Hause</dt><dd>0<span class="klein">S</span> 0<span class="klein">U</span> 1<span class="klein">N</span></dd></div><div><dt>Auswärts</dt><dd>1<span class="klein">S</span> 0<span class="klein">U</span> 0<span class="klein">N</span></dd></div><div><dt>Tore pro Spiel</dt><dd>10,0<span class="zusatz">20:33 insgesamt</span></dd></div><div><dt>Krimis</dt><dd>50<span class="klein">%</span><span class="zusatz">1 von 2 Spielen mit höchstens zwei Toren Unterschied</span></dd></div><div><dt>Längste Serie</dt><dd>1<span class="klein"> Spiel</span><span class="zusatz">ohne Niederlage</span></dd></div></dl><div class="rubrik">Rekorde</div><dl class="kennzahlen"><div class="breit"><dt>Torreichstes Spiel</dt><dd>8:22<span class="zusatz">gegen Südpfalz Tiger, 30 Tore</span></dd></div></dl>
   </div>
 </section><section data-team="ge" hidden>
   <p class="liga">Bezirksoberliga GEMISCHT &middot; 21 Spiele</p>
@@ -3658,24 +3703,24 @@ rel="noopener">Adlerdamm, 67061 Ludwigshafen</a></dd></div>
 
 <div class="weg">
   <h3>iPhone, iPad und Mac</h3>
-  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen kommen danach von selbst an.</p>
+  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen ziehen sich danach automatisch nach.</p>
   <a class="knopf" href="webcal://beatzep.github.io/handball-kalender/ge.ics">gE-Jugend abonnieren</a>
   <p class="tipp">
-    <b>Am Mac</b> fragt der Kalender vorher nach Einstellungen: Haken bei
-    „Entfernen: Hinweise“ <b>abwählen</b> (sonst fehlen die Erinnerungen) und
-    „Automatisch aktualisieren“ auf <b>Jede Stunde</b> stellen – der Standard
-    „Wöchentlich“ ist für Verlegungen zu träge.
+    <b>Am Mac</b> fragt der Kalender vorher noch was: Den Haken bei
+    „Entfernen: Hinweise“ <b>rausnehmen</b>, sonst kriegst du keine
+    Erinnerungen. Und „Automatisch aktualisieren“ auf <b>Jede Stunde</b>
+    stellen. Wöchentlich ist zu selten, dann kriegst du Verlegungen zu spät mit.
   </p>
   <p class="tipp" data-ios-tipp hidden>
-    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen –
-    dann liegt der Spielplan als App auf dem Handy.
+    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen.
+    Dann liegt der Spielplan als App auf dem Handy.
   </p>
 </div>
 
 <div class="weg">
   <h3>Android und Google Kalender</h3>
-  <p>Google erlaubt das Abonnieren nur am Computer, nicht in der Handy-App.
-     Einmal am Rechner einrichten – danach ist es auf dem Handy.</p>
+  <p>Bei Google geht das Abonnieren nur am Computer, nicht in der Handy-App.
+     Einmal am Rechner einrichten, danach ist es auf dem Handy.</p>
   <button class="knopf stumm" type="button" data-kopiere="https://beatzep.github.io/handball-kalender/ge.ics">Adresse kopieren</button>
   <ol class="schritte">
     <li>Am Computer <code>calendar.google.com</code> öffnen</li>
@@ -3697,8 +3742,8 @@ rel="noopener">Adlerdamm, 67061 Ludwigshafen</a></dd></div>
   </div>
   <button type="button" class="knopf stumm" data-grafik='{"art": "spiel", "verein": "HSG Mutterstadt/Ruchheim", "mannschaft": "gE-Jugend", "gegner": "JSG Mundenheim/Rheingönheim", "heim": false, "datum": "2026-08-29T12:30:00+02:00", "datum_text": "Samstag, 29.08.2026", "uhrzeit": "12:30", "halle": "Halle Schulzentrum (Mt) Mundenheim", "ort": "67061 Ludwigshafen", "liga": "Bezirksoberliga GEMISCHT", "spieltag": 1}'>Bild fürs nächste Spiel</button>
   
-  <p class="statfuss">Das Bild entsteht auf deinem Gerät aus den Spieldaten –
-     nichts wird hochgeladen.</p>
+  <p class="statfuss">Das Bild wird auf deinem Handy erzeugt. Es geht nichts
+     an uns oder sonstwohin.</p>
 </div></div>
   <div class="teil" data-ansicht="spiele" hidden><div class="monat">August 2026</div><div class="spiel jetzt">
 <div class="datum">Sa 29.08.<span>12:30</span></div>
@@ -3821,7 +3866,7 @@ rel="noopener">Adlerdamm, 67061 Ludwigshafen</a></dd></div>
 <p class="tabellenfuss">Die Saison hat noch nicht begonnen.</p>
   </div>
   <div class="teil" data-ansicht="statistik" hidden>
-    <div class="rubrik">Unterwegs</div><dl class="kennzahlen"><div><dt>Kilometer</dt><dd>366<span class="zusatz">15 Fahrten, hin und zurück</span></dd></div><div><dt>Im Auto</dt><dd>5,2<span class="klein"> Std</span><span class="zusatz">geschätzt bei 70 km/h</span></dd></div><div><dt>Weiteste Fahrt</dt><dd>118<span class="klein"> km</span><span class="zusatz">Sporthalle Dansenberg</span></dd></div><div><dt>Kürzeste Fahrt</dt><dd>12<span class="klein"> km</span><span class="zusatz">TVR-Sporthalle Ludwigshafen</span></dd></div></dl><p class="statfuss">Nicht eingerechnet, weil im Verband keine Koordinaten hinterlegt sind: Sporthalle Freinsheim.</p><p class="statfuss">Sobald gespielt wird, kommen hier Bilanz, Serien und Auffälligkeiten dazu.</p>
+    <div class="rubrik">Unterwegs</div><dl class="kennzahlen"><div><dt>Kilometer</dt><dd>366<span class="zusatz">15 Fahrten, hin und zurück</span></dd></div><div><dt>Im Auto</dt><dd>5,2<span class="klein"> Std</span><span class="zusatz">geschätzt bei 70 km/h</span></dd></div><div><dt>Weiteste Fahrt</dt><dd>118<span class="klein"> km</span><span class="zusatz">Sporthalle Dansenberg</span></dd></div><div><dt>Kürzeste Fahrt</dt><dd>12<span class="klein"> km</span><span class="zusatz">TVR-Sporthalle Ludwigshafen</span></dd></div></dl><p class="statfuss">Bei diesen Hallen fehlt beim Verband die Adresse, die Kilometer fehlen also in der Summe: Sporthalle Freinsheim.</p><p class="statfuss">Sobald gespielt wird, kommen hier Bilanz, Serien und Rekorde dazu.</p>
   </div>
 </section><section data-team="ge-2" hidden>
   <p class="liga">Bezirksklasse GEMISCHT &middot; 8 Spiele</p>
@@ -3888,24 +3933,24 @@ rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
 
 <div class="weg">
   <h3>iPhone, iPad und Mac</h3>
-  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen kommen danach von selbst an.</p>
+  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen ziehen sich danach automatisch nach.</p>
   <a class="knopf" href="webcal://beatzep.github.io/handball-kalender/ge-2.ics">gE-Jugend II abonnieren</a>
   <p class="tipp">
-    <b>Am Mac</b> fragt der Kalender vorher nach Einstellungen: Haken bei
-    „Entfernen: Hinweise“ <b>abwählen</b> (sonst fehlen die Erinnerungen) und
-    „Automatisch aktualisieren“ auf <b>Jede Stunde</b> stellen – der Standard
-    „Wöchentlich“ ist für Verlegungen zu träge.
+    <b>Am Mac</b> fragt der Kalender vorher noch was: Den Haken bei
+    „Entfernen: Hinweise“ <b>rausnehmen</b>, sonst kriegst du keine
+    Erinnerungen. Und „Automatisch aktualisieren“ auf <b>Jede Stunde</b>
+    stellen. Wöchentlich ist zu selten, dann kriegst du Verlegungen zu spät mit.
   </p>
   <p class="tipp" data-ios-tipp hidden>
-    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen –
-    dann liegt der Spielplan als App auf dem Handy.
+    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen.
+    Dann liegt der Spielplan als App auf dem Handy.
   </p>
 </div>
 
 <div class="weg">
   <h3>Android und Google Kalender</h3>
-  <p>Google erlaubt das Abonnieren nur am Computer, nicht in der Handy-App.
-     Einmal am Rechner einrichten – danach ist es auf dem Handy.</p>
+  <p>Bei Google geht das Abonnieren nur am Computer, nicht in der Handy-App.
+     Einmal am Rechner einrichten, danach ist es auf dem Handy.</p>
   <button class="knopf stumm" type="button" data-kopiere="https://beatzep.github.io/handball-kalender/ge-2.ics">Adresse kopieren</button>
   <ol class="schritte">
     <li>Am Computer <code>calendar.google.com</code> öffnen</li>
@@ -3927,8 +3972,8 @@ rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
   </div>
   <button type="button" class="knopf stumm" data-grafik='{"art": "spiel", "verein": "HSG Mutterstadt/Ruchheim", "mannschaft": "gE-Jugend II", "gegner": "HSG Grethen/Maxdorf", "heim": true, "datum": "2026-08-29T15:30:00+02:00", "datum_text": "Samstag, 29.08.2026", "uhrzeit": "15:30", "halle": "TSG-Sporthalle Mutterstadt", "ort": "67112 Mutterstadt", "liga": "Bezirksklasse GEMISCHT", "spieltag": 1}'>Bild fürs nächste Spiel</button>
   
-  <p class="statfuss">Das Bild entsteht auf deinem Gerät aus den Spieldaten –
-     nichts wird hochgeladen.</p>
+  <p class="statfuss">Das Bild wird auf deinem Handy erzeugt. Es geht nichts
+     an uns oder sonstwohin.</p>
 </div></div>
   <div class="teil" data-ansicht="spiele" hidden><div class="monat">August 2026</div><div class="spiel jetzt">
 <div class="datum">Sa 29.08.<span>15:30</span></div>
@@ -3986,7 +4031,7 @@ rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
 <p class="tabellenfuss">Die Saison hat noch nicht begonnen.</p>
   </div>
   <div class="teil" data-ansicht="statistik" hidden>
-    <div class="rubrik">Unterwegs</div><dl class="kennzahlen"><div><dt>Kilometer</dt><dd>193<span class="zusatz">6 Fahrten, hin und zurück</span></dd></div><div><dt>Im Auto</dt><dd>2,8<span class="klein"> Std</span><span class="zusatz">geschätzt bei 70 km/h</span></dd></div><div><dt>Weiteste Fahrt</dt><dd>118<span class="klein"> km</span><span class="zusatz">Sporthalle Dansenberg</span></dd></div><div><dt>Kürzeste Fahrt</dt><dd>11<span class="klein"> km</span><span class="zusatz">Loschky-Halle Niederfeld</span></dd></div></dl><p class="statfuss">Sobald gespielt wird, kommen hier Bilanz, Serien und Auffälligkeiten dazu.</p>
+    <div class="rubrik">Unterwegs</div><dl class="kennzahlen"><div><dt>Kilometer</dt><dd>193<span class="zusatz">6 Fahrten, hin und zurück</span></dd></div><div><dt>Im Auto</dt><dd>2,8<span class="klein"> Std</span><span class="zusatz">geschätzt bei 70 km/h</span></dd></div><div><dt>Weiteste Fahrt</dt><dd>118<span class="klein"> km</span><span class="zusatz">Sporthalle Dansenberg</span></dd></div><div><dt>Kürzeste Fahrt</dt><dd>11<span class="klein"> km</span><span class="zusatz">Loschky-Halle Niederfeld</span></dd></div></dl><p class="statfuss">Sobald gespielt wird, kommen hier Bilanz, Serien und Rekorde dazu.</p>
   </div>
 </section><section data-team="ge-3" hidden>
   <p class="liga">Bezirksklasse GEMISCHT &middot; 9 Spiele</p>
@@ -4053,24 +4098,24 @@ rel="noopener">Konrad-Lerch-Ring 3, 76877 Offenbach</a></dd></div>
 
 <div class="weg">
   <h3>iPhone, iPad und Mac</h3>
-  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen kommen danach von selbst an.</p>
+  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen ziehen sich danach automatisch nach.</p>
   <a class="knopf" href="webcal://beatzep.github.io/handball-kalender/ge-3.ics">gE-Jugend III abonnieren</a>
   <p class="tipp">
-    <b>Am Mac</b> fragt der Kalender vorher nach Einstellungen: Haken bei
-    „Entfernen: Hinweise“ <b>abwählen</b> (sonst fehlen die Erinnerungen) und
-    „Automatisch aktualisieren“ auf <b>Jede Stunde</b> stellen – der Standard
-    „Wöchentlich“ ist für Verlegungen zu träge.
+    <b>Am Mac</b> fragt der Kalender vorher noch was: Den Haken bei
+    „Entfernen: Hinweise“ <b>rausnehmen</b>, sonst kriegst du keine
+    Erinnerungen. Und „Automatisch aktualisieren“ auf <b>Jede Stunde</b>
+    stellen. Wöchentlich ist zu selten, dann kriegst du Verlegungen zu spät mit.
   </p>
   <p class="tipp" data-ios-tipp hidden>
-    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen –
-    dann liegt der Spielplan als App auf dem Handy.
+    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen.
+    Dann liegt der Spielplan als App auf dem Handy.
   </p>
 </div>
 
 <div class="weg">
   <h3>Android und Google Kalender</h3>
-  <p>Google erlaubt das Abonnieren nur am Computer, nicht in der Handy-App.
-     Einmal am Rechner einrichten – danach ist es auf dem Handy.</p>
+  <p>Bei Google geht das Abonnieren nur am Computer, nicht in der Handy-App.
+     Einmal am Rechner einrichten, danach ist es auf dem Handy.</p>
   <button class="knopf stumm" type="button" data-kopiere="https://beatzep.github.io/handball-kalender/ge-3.ics">Adresse kopieren</button>
   <ol class="schritte">
     <li>Am Computer <code>calendar.google.com</code> öffnen</li>
@@ -4092,8 +4137,8 @@ rel="noopener">Konrad-Lerch-Ring 3, 76877 Offenbach</a></dd></div>
   </div>
   <button type="button" class="knopf stumm" data-grafik='{"art": "spiel", "verein": "HSG Mutterstadt/Ruchheim", "mannschaft": "gE-Jugend III", "gegner": "TV Offenbach IV", "heim": false, "datum": "2026-08-30T16:15:00+02:00", "datum_text": "Sonntag, 30.08.2026", "uhrzeit": "16:15", "halle": "Queichtalhalle Offenbach", "ort": "76877 Offenbach", "liga": "Bezirksklasse GEMISCHT", "spieltag": 1}'>Bild fürs nächste Spiel</button>
   
-  <p class="statfuss">Das Bild entsteht auf deinem Gerät aus den Spieldaten –
-     nichts wird hochgeladen.</p>
+  <p class="statfuss">Das Bild wird auf deinem Handy erzeugt. Es geht nichts
+     an uns oder sonstwohin.</p>
 </div></div>
   <div class="teil" data-ansicht="spiele" hidden><div class="monat">August 2026</div><div class="spiel jetzt">
 <div class="datum">So 30.08.<span>16:15</span></div>
@@ -4156,7 +4201,7 @@ rel="noopener">Konrad-Lerch-Ring 3, 76877 Offenbach</a></dd></div>
 <p class="tabellenfuss">Die Saison hat noch nicht begonnen.</p>
   </div>
   <div class="teil" data-ansicht="statistik" hidden>
-    <div class="rubrik">Unterwegs</div><dl class="kennzahlen"><div><dt>Kilometer</dt><dd>274<span class="zusatz">7 Fahrten, hin und zurück</span></dd></div><div><dt>Im Auto</dt><dd>3,9<span class="klein"> Std</span><span class="zusatz">geschätzt bei 70 km/h</span></dd></div><div><dt>Weiteste Fahrt</dt><dd>116<span class="klein"> km</span><span class="zusatz">Schillerschule Kaiserslautern</span></dd></div><div><dt>Kürzeste Fahrt</dt><dd>12<span class="klein"> km</span><span class="zusatz">TVR-Sporthalle Ludwigshafen</span></dd></div></dl><p class="statfuss">Sobald gespielt wird, kommen hier Bilanz, Serien und Auffälligkeiten dazu.</p>
+    <div class="rubrik">Unterwegs</div><dl class="kennzahlen"><div><dt>Kilometer</dt><dd>274<span class="zusatz">7 Fahrten, hin und zurück</span></dd></div><div><dt>Im Auto</dt><dd>3,9<span class="klein"> Std</span><span class="zusatz">geschätzt bei 70 km/h</span></dd></div><div><dt>Weiteste Fahrt</dt><dd>116<span class="klein"> km</span><span class="zusatz">Schillerschule Kaiserslautern</span></dd></div><div><dt>Kürzeste Fahrt</dt><dd>12<span class="klein"> km</span><span class="zusatz">TVR-Sporthalle Ludwigshafen</span></dd></div></dl><p class="statfuss">Sobald gespielt wird, kommen hier Bilanz, Serien und Rekorde dazu.</p>
   </div>
 </section><section data-team="gf" hidden>
   <p class="liga">F-Jugend GEMISCHT &middot; 14 Spiele</p>
@@ -4223,24 +4268,24 @@ rel="noopener">Pettenkoferstraße, 67063 Ludwigshafen-Friesenheim</a></dd></div>
 
 <div class="weg">
   <h3>iPhone, iPad und Mac</h3>
-  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen kommen danach von selbst an.</p>
+  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen ziehen sich danach automatisch nach.</p>
   <a class="knopf" href="webcal://beatzep.github.io/handball-kalender/gf.ics">gF-Jugend abonnieren</a>
   <p class="tipp">
-    <b>Am Mac</b> fragt der Kalender vorher nach Einstellungen: Haken bei
-    „Entfernen: Hinweise“ <b>abwählen</b> (sonst fehlen die Erinnerungen) und
-    „Automatisch aktualisieren“ auf <b>Jede Stunde</b> stellen – der Standard
-    „Wöchentlich“ ist für Verlegungen zu träge.
+    <b>Am Mac</b> fragt der Kalender vorher noch was: Den Haken bei
+    „Entfernen: Hinweise“ <b>rausnehmen</b>, sonst kriegst du keine
+    Erinnerungen. Und „Automatisch aktualisieren“ auf <b>Jede Stunde</b>
+    stellen. Wöchentlich ist zu selten, dann kriegst du Verlegungen zu spät mit.
   </p>
   <p class="tipp" data-ios-tipp hidden>
-    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen –
-    dann liegt der Spielplan als App auf dem Handy.
+    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen.
+    Dann liegt der Spielplan als App auf dem Handy.
   </p>
 </div>
 
 <div class="weg">
   <h3>Android und Google Kalender</h3>
-  <p>Google erlaubt das Abonnieren nur am Computer, nicht in der Handy-App.
-     Einmal am Rechner einrichten – danach ist es auf dem Handy.</p>
+  <p>Bei Google geht das Abonnieren nur am Computer, nicht in der Handy-App.
+     Einmal am Rechner einrichten, danach ist es auf dem Handy.</p>
   <button class="knopf stumm" type="button" data-kopiere="https://beatzep.github.io/handball-kalender/gf.ics">Adresse kopieren</button>
   <ol class="schritte">
     <li>Am Computer <code>calendar.google.com</code> öffnen</li>
@@ -4262,8 +4307,8 @@ rel="noopener">Pettenkoferstraße, 67063 Ludwigshafen-Friesenheim</a></dd></div>
   </div>
   <button type="button" class="knopf stumm" data-grafik='{"art": "spiel", "verein": "HSG Mutterstadt/Ruchheim", "mannschaft": "gF-Jugend", "gegner": "JSG Mundenheim/Rheingönheim II", "heim": false, "datum": "2026-08-29T12:30:00+02:00", "datum_text": "Samstag, 29.08.2026", "uhrzeit": "12:30", "halle": "Heinrich-Ries-Halle Ludwigshafen", "ort": "67063 Ludwigshafen-Friesenheim", "liga": "F-Jugend GEMISCHT", "spieltag": 1}'>Bild fürs nächste Spiel</button>
   
-  <p class="statfuss">Das Bild entsteht auf deinem Gerät aus den Spieldaten –
-     nichts wird hochgeladen.</p>
+  <p class="statfuss">Das Bild wird auf deinem Handy erzeugt. Es geht nichts
+     an uns oder sonstwohin.</p>
 </div></div>
   <div class="teil" data-ansicht="spiele" hidden><div class="monat">August 2026</div><div class="spiel jetzt">
 <div class="datum">Sa 29.08.<span>12:30</span></div>
@@ -4351,7 +4396,7 @@ rel="noopener">Pettenkoferstraße, 67063 Ludwigshafen-Friesenheim</a></dd></div>
 <p class="tabellenfuss">Die Saison hat noch nicht begonnen.</p>
   </div>
   <div class="teil" data-ansicht="statistik" hidden>
-    <div class="rubrik">Unterwegs</div><dl class="kennzahlen"><div><dt>Kilometer</dt><dd>358<span class="zusatz">13 Fahrten, hin und zurück</span></dd></div><div><dt>Im Auto</dt><dd>5,1<span class="klein"> Std</span><span class="zusatz">geschätzt bei 70 km/h</span></dd></div><div><dt>Weiteste Fahrt</dt><dd>116<span class="klein"> km</span><span class="zusatz">Schillerschule Kaiserslautern</span></dd></div><div><dt>Kürzeste Fahrt</dt><dd>11<span class="klein"> km</span><span class="zusatz">Loschky-Halle Niederfeld</span></dd></div></dl><p class="statfuss">Sobald gespielt wird, kommen hier Bilanz, Serien und Auffälligkeiten dazu.</p>
+    <div class="rubrik">Unterwegs</div><dl class="kennzahlen"><div><dt>Kilometer</dt><dd>358<span class="zusatz">13 Fahrten, hin und zurück</span></dd></div><div><dt>Im Auto</dt><dd>5,1<span class="klein"> Std</span><span class="zusatz">geschätzt bei 70 km/h</span></dd></div><div><dt>Weiteste Fahrt</dt><dd>116<span class="klein"> km</span><span class="zusatz">Schillerschule Kaiserslautern</span></dd></div><div><dt>Kürzeste Fahrt</dt><dd>11<span class="klein"> km</span><span class="zusatz">Loschky-Halle Niederfeld</span></dd></div></dl><p class="statfuss">Sobald gespielt wird, kommen hier Bilanz, Serien und Rekorde dazu.</p>
   </div>
 </section><section data-team="gf-2" hidden>
   <p class="liga">F-Jugend GEMISCHT &middot; 12 Spiele</p>
@@ -4418,24 +4463,24 @@ rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
 
 <div class="weg">
   <h3>iPhone, iPad und Mac</h3>
-  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen kommen danach von selbst an.</p>
+  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen ziehen sich danach automatisch nach.</p>
   <a class="knopf" href="webcal://beatzep.github.io/handball-kalender/gf-2.ics">gF-Jugend II abonnieren</a>
   <p class="tipp">
-    <b>Am Mac</b> fragt der Kalender vorher nach Einstellungen: Haken bei
-    „Entfernen: Hinweise“ <b>abwählen</b> (sonst fehlen die Erinnerungen) und
-    „Automatisch aktualisieren“ auf <b>Jede Stunde</b> stellen – der Standard
-    „Wöchentlich“ ist für Verlegungen zu träge.
+    <b>Am Mac</b> fragt der Kalender vorher noch was: Den Haken bei
+    „Entfernen: Hinweise“ <b>rausnehmen</b>, sonst kriegst du keine
+    Erinnerungen. Und „Automatisch aktualisieren“ auf <b>Jede Stunde</b>
+    stellen. Wöchentlich ist zu selten, dann kriegst du Verlegungen zu spät mit.
   </p>
   <p class="tipp" data-ios-tipp hidden>
-    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen –
-    dann liegt der Spielplan als App auf dem Handy.
+    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen.
+    Dann liegt der Spielplan als App auf dem Handy.
   </p>
 </div>
 
 <div class="weg">
   <h3>Android und Google Kalender</h3>
-  <p>Google erlaubt das Abonnieren nur am Computer, nicht in der Handy-App.
-     Einmal am Rechner einrichten – danach ist es auf dem Handy.</p>
+  <p>Bei Google geht das Abonnieren nur am Computer, nicht in der Handy-App.
+     Einmal am Rechner einrichten, danach ist es auf dem Handy.</p>
   <button class="knopf stumm" type="button" data-kopiere="https://beatzep.github.io/handball-kalender/gf-2.ics">Adresse kopieren</button>
   <ol class="schritte">
     <li>Am Computer <code>calendar.google.com</code> öffnen</li>
@@ -4457,8 +4502,8 @@ rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
   </div>
   <button type="button" class="knopf stumm" data-grafik='{"art": "spiel", "verein": "HSG Mutterstadt/Ruchheim", "mannschaft": "gF-Jugend II", "gegner": "TSV Speyer III", "heim": true, "datum": "2026-08-29T14:00:00+02:00", "datum_text": "Samstag, 29.08.2026", "uhrzeit": "14:00", "halle": "TSG-Sporthalle Mutterstadt", "ort": "67112 Mutterstadt", "liga": "F-Jugend GEMISCHT", "spieltag": 1}'>Bild fürs nächste Spiel</button>
   
-  <p class="statfuss">Das Bild entsteht auf deinem Gerät aus den Spieldaten –
-     nichts wird hochgeladen.</p>
+  <p class="statfuss">Das Bild wird auf deinem Handy erzeugt. Es geht nichts
+     an uns oder sonstwohin.</p>
 </div></div>
   <div class="teil" data-ansicht="spiele" hidden><div class="monat">August 2026</div><div class="spiel jetzt">
 <div class="datum">Sa 29.08.<span>14:00</span></div>
@@ -4536,7 +4581,7 @@ rel="noopener">Bohligstr. 1, 67112 Mutterstadt</a></dd></div>
 <p class="tabellenfuss">Die Saison hat noch nicht begonnen.</p>
   </div>
   <div class="teil" data-ansicht="statistik" hidden>
-    <div class="rubrik">Unterwegs</div><dl class="kennzahlen"><div><dt>Kilometer</dt><dd>178<span class="zusatz">6 Fahrten, hin und zurück</span></dd></div><div><dt>Im Auto</dt><dd>2,5<span class="klein"> Std</span><span class="zusatz">geschätzt bei 70 km/h</span></dd></div><div><dt>Weiteste Fahrt</dt><dd>56<span class="klein"> km</span><span class="zusatz">Reblandhalle Kirrweiler</span></dd></div><div><dt>Kürzeste Fahrt</dt><dd>12<span class="klein"> km</span><span class="zusatz">TVR-Sporthalle Ludwigshafen</span></dd></div></dl><p class="statfuss">Nicht eingerechnet, weil im Verband keine Koordinaten hinterlegt sind: Sporthalle Schwegenheim, Sporthalle-West Speyer.</p><p class="statfuss">Sobald gespielt wird, kommen hier Bilanz, Serien und Auffälligkeiten dazu.</p>
+    <div class="rubrik">Unterwegs</div><dl class="kennzahlen"><div><dt>Kilometer</dt><dd>178<span class="zusatz">6 Fahrten, hin und zurück</span></dd></div><div><dt>Im Auto</dt><dd>2,5<span class="klein"> Std</span><span class="zusatz">geschätzt bei 70 km/h</span></dd></div><div><dt>Weiteste Fahrt</dt><dd>56<span class="klein"> km</span><span class="zusatz">Reblandhalle Kirrweiler</span></dd></div><div><dt>Kürzeste Fahrt</dt><dd>12<span class="klein"> km</span><span class="zusatz">TVR-Sporthalle Ludwigshafen</span></dd></div></dl><p class="statfuss">Bei diesen Hallen fehlt beim Verband die Adresse, die Kilometer fehlen also in der Summe: Sporthalle Schwegenheim, Sporthalle-West Speyer.</p><p class="statfuss">Sobald gespielt wird, kommen hier Bilanz, Serien und Rekorde dazu.</p>
   </div>
 </section><section data-team="minis" hidden>
   <p class="liga">Minis Gemischt &middot; 7 Spiele</p>
@@ -4603,24 +4648,24 @@ rel="noopener">Mühlaustr. 51, 67069 Ludwigshafen</a></dd></div>
 
 <div class="weg">
   <h3>iPhone, iPad und Mac</h3>
-  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen kommen danach von selbst an.</p>
+  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen ziehen sich danach automatisch nach.</p>
   <a class="knopf" href="webcal://beatzep.github.io/handball-kalender/minis.ics">Minis abonnieren</a>
   <p class="tipp">
-    <b>Am Mac</b> fragt der Kalender vorher nach Einstellungen: Haken bei
-    „Entfernen: Hinweise“ <b>abwählen</b> (sonst fehlen die Erinnerungen) und
-    „Automatisch aktualisieren“ auf <b>Jede Stunde</b> stellen – der Standard
-    „Wöchentlich“ ist für Verlegungen zu träge.
+    <b>Am Mac</b> fragt der Kalender vorher noch was: Den Haken bei
+    „Entfernen: Hinweise“ <b>rausnehmen</b>, sonst kriegst du keine
+    Erinnerungen. Und „Automatisch aktualisieren“ auf <b>Jede Stunde</b>
+    stellen. Wöchentlich ist zu selten, dann kriegst du Verlegungen zu spät mit.
   </p>
   <p class="tipp" data-ios-tipp hidden>
-    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen –
-    dann liegt der Spielplan als App auf dem Handy.
+    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen.
+    Dann liegt der Spielplan als App auf dem Handy.
   </p>
 </div>
 
 <div class="weg">
   <h3>Android und Google Kalender</h3>
-  <p>Google erlaubt das Abonnieren nur am Computer, nicht in der Handy-App.
-     Einmal am Rechner einrichten – danach ist es auf dem Handy.</p>
+  <p>Bei Google geht das Abonnieren nur am Computer, nicht in der Handy-App.
+     Einmal am Rechner einrichten, danach ist es auf dem Handy.</p>
   <button class="knopf stumm" type="button" data-kopiere="https://beatzep.github.io/handball-kalender/minis.ics">Adresse kopieren</button>
   <ol class="schritte">
     <li>Am Computer <code>calendar.google.com</code> öffnen</li>
@@ -4642,8 +4687,8 @@ rel="noopener">Mühlaustr. 51, 67069 Ludwigshafen</a></dd></div>
   </div>
   <button type="button" class="knopf stumm" data-grafik='{"art": "spiel", "verein": "HSG Mutterstadt/Ruchheim", "mannschaft": "Minis", "gegner": "TV Edigheim", "heim": false, "datum": "2026-08-30T10:00:00+02:00", "datum_text": "Sonntag, 30.08.2026", "uhrzeit": "10:00", "halle": "Schulzentrum Edigheim", "ort": "67069 Ludwigshafen", "liga": "Minis Gemischt", "spieltag": 1}'>Bild fürs nächste Spiel</button>
   
-  <p class="statfuss">Das Bild entsteht auf deinem Gerät aus den Spieldaten –
-     nichts wird hochgeladen.</p>
+  <p class="statfuss">Das Bild wird auf deinem Handy erzeugt. Es geht nichts
+     an uns oder sonstwohin.</p>
 </div></div>
   <div class="teil" data-ansicht="spiele" hidden><div class="monat">August 2026</div><div class="spiel jetzt">
 <div class="datum">So 30.08.<span>10:00</span></div>
@@ -4684,10 +4729,10 @@ rel="noopener">Mühlaustr. 51, 67069 Ludwigshafen</a></dd></div>
   <div class="teil" data-ansicht="tabelle" hidden>
     
     
-    <p class="tabellenfuss">Für diese Liga liegt noch keine Tabelle vor.</p>
+    <p class="tabellenfuss">Hier wird nicht gewertet, deshalb gibt es keine Tabelle.</p>
   </div>
   <div class="teil" data-ansicht="statistik" hidden>
-    <div class="rubrik">Unterwegs</div><dl class="kennzahlen"><div><dt>Kilometer</dt><dd>336<span class="zusatz">7 Fahrten, hin und zurück</span></dd></div><div><dt>Im Auto</dt><dd>4,8<span class="klein"> Std</span><span class="zusatz">geschätzt bei 70 km/h</span></dd></div><div><dt>Weiteste Fahrt</dt><dd>115<span class="klein"> km</span><span class="zusatz">Bienwaldhalle Wörth</span></dd></div><div><dt>Kürzeste Fahrt</dt><dd>12<span class="klein"> km</span><span class="zusatz">TVR-Sporthalle Ludwigshafen</span></dd></div></dl><p class="statfuss">Sobald gespielt wird, kommen hier Bilanz, Serien und Auffälligkeiten dazu.</p>
+    <div class="rubrik">Unterwegs</div><dl class="kennzahlen"><div><dt>Kilometer</dt><dd>336<span class="zusatz">7 Fahrten, hin und zurück</span></dd></div><div><dt>Im Auto</dt><dd>4,8<span class="klein"> Std</span><span class="zusatz">geschätzt bei 70 km/h</span></dd></div><div><dt>Weiteste Fahrt</dt><dd>115<span class="klein"> km</span><span class="zusatz">Bienwaldhalle Wörth</span></dd></div><div><dt>Kürzeste Fahrt</dt><dd>12<span class="klein"> km</span><span class="zusatz">TVR-Sporthalle Ludwigshafen</span></dd></div></dl><p class="statfuss">Sobald gespielt wird, kommen hier Bilanz, Serien und Rekorde dazu.</p>
   </div>
 </section><section data-team="minis-2" hidden>
   <p class="liga">Minis Gemischt &middot; 7 Spiele</p>
@@ -4754,24 +4799,24 @@ rel="noopener">Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen</a></dd></
 
 <div class="weg">
   <h3>iPhone, iPad und Mac</h3>
-  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen kommen danach von selbst an.</p>
+  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen ziehen sich danach automatisch nach.</p>
   <a class="knopf" href="webcal://beatzep.github.io/handball-kalender/minis-2.ics">Minis II abonnieren</a>
   <p class="tipp">
-    <b>Am Mac</b> fragt der Kalender vorher nach Einstellungen: Haken bei
-    „Entfernen: Hinweise“ <b>abwählen</b> (sonst fehlen die Erinnerungen) und
-    „Automatisch aktualisieren“ auf <b>Jede Stunde</b> stellen – der Standard
-    „Wöchentlich“ ist für Verlegungen zu träge.
+    <b>Am Mac</b> fragt der Kalender vorher noch was: Den Haken bei
+    „Entfernen: Hinweise“ <b>rausnehmen</b>, sonst kriegst du keine
+    Erinnerungen. Und „Automatisch aktualisieren“ auf <b>Jede Stunde</b>
+    stellen. Wöchentlich ist zu selten, dann kriegst du Verlegungen zu spät mit.
   </p>
   <p class="tipp" data-ios-tipp hidden>
-    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen –
-    dann liegt der Spielplan als App auf dem Handy.
+    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen.
+    Dann liegt der Spielplan als App auf dem Handy.
   </p>
 </div>
 
 <div class="weg">
   <h3>Android und Google Kalender</h3>
-  <p>Google erlaubt das Abonnieren nur am Computer, nicht in der Handy-App.
-     Einmal am Rechner einrichten – danach ist es auf dem Handy.</p>
+  <p>Bei Google geht das Abonnieren nur am Computer, nicht in der Handy-App.
+     Einmal am Rechner einrichten, danach ist es auf dem Handy.</p>
   <button class="knopf stumm" type="button" data-kopiere="https://beatzep.github.io/handball-kalender/minis-2.ics">Adresse kopieren</button>
   <ol class="schritte">
     <li>Am Computer <code>calendar.google.com</code> öffnen</li>
@@ -4793,8 +4838,8 @@ rel="noopener">Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen</a></dd></
   </div>
   <button type="button" class="knopf stumm" data-grafik='{"art": "spiel", "verein": "HSG Mutterstadt/Ruchheim", "mannschaft": "Minis II", "gegner": "JSG Mundenheim/Rheingönheim II", "heim": true, "datum": "2026-09-06T10:00:00+02:00", "datum_text": "Sonntag, 06.09.2026", "uhrzeit": "10:00", "halle": "TVR-Sporthalle Ludwigshafen", "ort": "67071 Ludwigshafen", "liga": "Minis Gemischt", "spieltag": 1}'>Bild fürs nächste Spiel</button>
   
-  <p class="statfuss">Das Bild entsteht auf deinem Gerät aus den Spieldaten –
-     nichts wird hochgeladen.</p>
+  <p class="statfuss">Das Bild wird auf deinem Handy erzeugt. Es geht nichts
+     an uns oder sonstwohin.</p>
 </div></div>
   <div class="teil" data-ansicht="spiele" hidden><div class="monat">September 2026</div><div class="spiel jetzt">
 <div class="datum">So 06.09.<span>10:00</span></div>
@@ -4835,10 +4880,10 @@ rel="noopener">Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen</a></dd></
   <div class="teil" data-ansicht="tabelle" hidden>
     
     
-    <p class="tabellenfuss">Für diese Liga liegt noch keine Tabelle vor.</p>
+    <p class="tabellenfuss">Hier wird nicht gewertet, deshalb gibt es keine Tabelle.</p>
   </div>
   <div class="teil" data-ansicht="statistik" hidden>
-    <div class="rubrik">Unterwegs</div><dl class="kennzahlen"><div><dt>Kilometer</dt><dd>182<span class="zusatz">7 Fahrten, hin und zurück</span></dd></div><div><dt>Im Auto</dt><dd>2,6<span class="klein"> Std</span><span class="zusatz">geschätzt bei 70 km/h</span></dd></div><div><dt>Weiteste Fahrt</dt><dd>96<span class="klein"> km</span><span class="zusatz">Gustav-Heinemann-Schule Alzey</span></dd></div><div><dt>Kürzeste Fahrt</dt><dd>12<span class="klein"> km</span><span class="zusatz">TVR-Sporthalle Ludwigshafen</span></dd></div></dl><p class="statfuss">Sobald gespielt wird, kommen hier Bilanz, Serien und Auffälligkeiten dazu.</p>
+    <div class="rubrik">Unterwegs</div><dl class="kennzahlen"><div><dt>Kilometer</dt><dd>182<span class="zusatz">7 Fahrten, hin und zurück</span></dd></div><div><dt>Im Auto</dt><dd>2,6<span class="klein"> Std</span><span class="zusatz">geschätzt bei 70 km/h</span></dd></div><div><dt>Weiteste Fahrt</dt><dd>96<span class="klein"> km</span><span class="zusatz">Gustav-Heinemann-Schule Alzey</span></dd></div><div><dt>Kürzeste Fahrt</dt><dd>12<span class="klein"> km</span><span class="zusatz">TVR-Sporthalle Ludwigshafen</span></dd></div></dl><p class="statfuss">Sobald gespielt wird, kommen hier Bilanz, Serien und Rekorde dazu.</p>
   </div>
 </section><section data-team="minis-3" hidden>
   <p class="liga">Minis Gemischt &middot; 7 Spiele</p>
@@ -4905,24 +4950,24 @@ rel="noopener">Martin-Luther-Str. 18, 67304 Eisenberg</a></dd></div>
 
 <div class="weg">
   <h3>iPhone, iPad und Mac</h3>
-  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen kommen danach von selbst an.</p>
+  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen ziehen sich danach automatisch nach.</p>
   <a class="knopf" href="webcal://beatzep.github.io/handball-kalender/minis-3.ics">Minis III abonnieren</a>
   <p class="tipp">
-    <b>Am Mac</b> fragt der Kalender vorher nach Einstellungen: Haken bei
-    „Entfernen: Hinweise“ <b>abwählen</b> (sonst fehlen die Erinnerungen) und
-    „Automatisch aktualisieren“ auf <b>Jede Stunde</b> stellen – der Standard
-    „Wöchentlich“ ist für Verlegungen zu träge.
+    <b>Am Mac</b> fragt der Kalender vorher noch was: Den Haken bei
+    „Entfernen: Hinweise“ <b>rausnehmen</b>, sonst kriegst du keine
+    Erinnerungen. Und „Automatisch aktualisieren“ auf <b>Jede Stunde</b>
+    stellen. Wöchentlich ist zu selten, dann kriegst du Verlegungen zu spät mit.
   </p>
   <p class="tipp" data-ios-tipp hidden>
-    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen –
-    dann liegt der Spielplan als App auf dem Handy.
+    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen.
+    Dann liegt der Spielplan als App auf dem Handy.
   </p>
 </div>
 
 <div class="weg">
   <h3>Android und Google Kalender</h3>
-  <p>Google erlaubt das Abonnieren nur am Computer, nicht in der Handy-App.
-     Einmal am Rechner einrichten – danach ist es auf dem Handy.</p>
+  <p>Bei Google geht das Abonnieren nur am Computer, nicht in der Handy-App.
+     Einmal am Rechner einrichten, danach ist es auf dem Handy.</p>
   <button class="knopf stumm" type="button" data-kopiere="https://beatzep.github.io/handball-kalender/minis-3.ics">Adresse kopieren</button>
   <ol class="schritte">
     <li>Am Computer <code>calendar.google.com</code> öffnen</li>
@@ -4944,8 +4989,8 @@ rel="noopener">Martin-Luther-Str. 18, 67304 Eisenberg</a></dd></div>
   </div>
   <button type="button" class="knopf stumm" data-grafik='{"art": "spiel", "verein": "HSG Mutterstadt/Ruchheim", "mannschaft": "Minis III", "gegner": "Hr Göllheim/Eisenberg/Asselheim/Kindenheim", "heim": false, "datum": "2026-09-19T11:00:00+02:00", "datum_text": "Samstag, 19.09.2026", "uhrzeit": "11:00", "halle": "Berufsschule Eisenberg", "ort": "67304 Eisenberg", "liga": "Minis Gemischt", "spieltag": 1}'>Bild fürs nächste Spiel</button>
   
-  <p class="statfuss">Das Bild entsteht auf deinem Gerät aus den Spieldaten –
-     nichts wird hochgeladen.</p>
+  <p class="statfuss">Das Bild wird auf deinem Handy erzeugt. Es geht nichts
+     an uns oder sonstwohin.</p>
 </div></div>
   <div class="teil" data-ansicht="spiele" hidden><div class="monat">September 2026</div><div class="spiel jetzt">
 <div class="datum">Sa 19.09.<span>11:00</span></div>
@@ -4986,10 +5031,10 @@ rel="noopener">Martin-Luther-Str. 18, 67304 Eisenberg</a></dd></div>
   <div class="teil" data-ansicht="tabelle" hidden>
     
     
-    <p class="tabellenfuss">Für diese Liga liegt noch keine Tabelle vor.</p>
+    <p class="tabellenfuss">Hier wird nicht gewertet, deshalb gibt es keine Tabelle.</p>
   </div>
   <div class="teil" data-ansicht="statistik" hidden>
-    <div class="rubrik">Unterwegs</div><dl class="kennzahlen"><div><dt>Kilometer</dt><dd>179<span class="zusatz">3 Fahrten, hin und zurück</span></dd></div><div><dt>Im Auto</dt><dd>2,6<span class="klein"> Std</span><span class="zusatz">geschätzt bei 70 km/h</span></dd></div><div><dt>Weiteste Fahrt</dt><dd>100<span class="klein"> km</span><span class="zusatz">Realschule Plus Annweiler</span></dd></div><div><dt>Kürzeste Fahrt</dt><dd>14<span class="klein"> km</span><span class="zusatz">Rehbachhalle Neuhofen</span></dd></div></dl><p class="statfuss">Sobald gespielt wird, kommen hier Bilanz, Serien und Auffälligkeiten dazu.</p>
+    <div class="rubrik">Unterwegs</div><dl class="kennzahlen"><div><dt>Kilometer</dt><dd>179<span class="zusatz">3 Fahrten, hin und zurück</span></dd></div><div><dt>Im Auto</dt><dd>2,6<span class="klein"> Std</span><span class="zusatz">geschätzt bei 70 km/h</span></dd></div><div><dt>Weiteste Fahrt</dt><dd>100<span class="klein"> km</span><span class="zusatz">Realschule Plus Annweiler</span></dd></div><div><dt>Kürzeste Fahrt</dt><dd>14<span class="klein"> km</span><span class="zusatz">Rehbachhalle Neuhofen</span></dd></div></dl><p class="statfuss">Sobald gespielt wird, kommen hier Bilanz, Serien und Rekorde dazu.</p>
   </div>
 </section>
   <p class="fuss">
@@ -5000,6 +5045,53 @@ rel="noopener">Martin-Luther-Str. 18, 67304 Eisenberg</a></dd></div>
 </main>
 
 <script>
+(function () {
+  var SCHLUESSEL = 'muru-ansicht';
+  var wurzel = document.documentElement;
+  var knopf = document.getElementById('ansicht');
+
+  function gespeichert() {
+    try { return localStorage.getItem(SCHLUESSEL) || ''; } catch (e) { return ''; }
+  }
+
+  function istDunkel() {
+    var wahl = wurzel.getAttribute('data-ansicht');
+    if (wahl) return wahl === 'dunkel';
+    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+  }
+
+  function beschrifte() {
+    if (!knopf) return;
+    knopf.setAttribute('aria-label',
+      istDunkel() ? 'Zu heller Ansicht wechseln' : 'Zu dunkler Ansicht wechseln');
+  }
+
+  var wahl = gespeichert();
+  if (wahl === 'hell' || wahl === 'dunkel') wurzel.setAttribute('data-ansicht', wahl);
+  beschrifte();
+
+  if (knopf) {
+    knopf.addEventListener('click', function () {
+      var neu = istDunkel() ? 'hell' : 'dunkel';
+      wurzel.setAttribute('data-ansicht', neu);
+      try { localStorage.setItem(SCHLUESSEL, neu); } catch (e) {}
+      // Farbe der Systemleisten mitziehen
+      var meta = document.querySelector('meta[name="theme-color"]');
+      if (meta) meta.setAttribute('content', neu === 'dunkel' ? '#000000' : '#14140f');
+      beschrifte();
+    });
+  }
+
+  // Ohne eigene Wahl der Systemeinstellung folgen, auch wenn sie sich aendert
+  var beobachter = window.matchMedia('(prefers-color-scheme: dark)');
+  if (beobachter.addEventListener) {
+    beobachter.addEventListener('change', function () {
+      if (!gespeichert()) beschrifte();
+    });
+  }
+})();
+
+
 // ---------------------------------------------------------------------
 // Geraetekennung - anonym, bleibt im Browser
 // ---------------------------------------------------------------------
@@ -5510,7 +5602,7 @@ window.muruGeraet = (function () {
           return;
         }
         navigator.clipboard.writeText(link).then(function () {
-          sage('Link kopiert – damit tippst du auf jedem Gerät weiter.', 'gut');
+          sage('Link kopiert. Damit tippst du auf jedem Gerät weiter.', 'gut');
         });
       });
     }

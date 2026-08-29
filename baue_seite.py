@@ -16,6 +16,7 @@ from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
+from seite_ansicht import ANSICHT
 from seite_grafik import GRAFIK
 from seite_skript import SKRIPT
 from seite_tipp import TIPP
@@ -152,8 +153,8 @@ def teilenblock(team: dict, naechstes: dict | None, letztes: dict | None) -> str
   </div>
   {"".join(knoepfe)}
   {satzknopf}
-  <p class="statfuss">Das Bild entsteht auf deinem Gerät aus den Spieldaten –
-     nichts wird hochgeladen.</p>
+  <p class="statfuss">Das Bild wird auf deinem Handy erzeugt. Es geht nichts
+     an uns oder sonstwohin.</p>
 </div>"""
 
 
@@ -374,6 +375,13 @@ def verlaufsblock(tabelle: dict) -> str:
 </div>"""
 
 
+def spiel_wort(n: int, fall: str = "nominativ") -> str:
+    """1 Spiel, 2 Spiele - beziehungsweise 'aus 1 Spiel', 'aus 2 Spielen'."""
+    if n == 1:
+        return "1 Spiel"
+    return f"{n} Spielen" if fall == "dativ" else f"{n} Spiele"
+
+
 def zahl(n) -> str:
     """Tausenderpunkte, wie man Zahlen hierzulande schreibt."""
     return f"{n:,}".replace(",", ".")
@@ -414,24 +422,24 @@ def statistikblock(st: dict) -> str:
                      f'<dl class="kennzahlen">{"".join(felder)}</dl>')
         if f.get("ohne_koordinaten"):
             teile.append(
-                '<p class="statfuss">Nicht eingerechnet, weil im Verband keine '
-                'Koordinaten hinterlegt sind: '
+                '<p class="statfuss">Bei diesen Hallen fehlt beim Verband die '
+                'Adresse, die Kilometer fehlen also in der Summe: '
                 + ", ".join(sicher(h) for h in f["ohne_koordinaten"]) + ".</p>")
 
     a = st.get("alltag") or {}
     if a.get("verbrauch"):
         teile.append(f"""<div class="verbrauch">
 <div class="wert">{str(a["verbrauch"]).replace(".", ",")}<span class="einheit">Liter Bier / 100 km</span></div>
-<p class="rechnung">{zahl(a["biere"])} Bier über die Saison ({zahl(a["liter"])} Liter) –
-aus {a["trainings"]} Trainings in {a["wochen"]} Wochen und {a["spiele"]} Spielen –
+<p class="rechnung">{zahl(a["biere"])} Bier über die Saison, das sind {zahl(a["liter"])} Liter.
+Aus {a["trainings"]} Trainings in {a["wochen"]} Wochen und {spiel_wort(a["spiele"], "dativ")},
 geteilt durch {zahl(f.get("gesamt_km", 0))} gefahrene Kilometer.</p>
 <p class="pointe">Ein Sattelschlepper kommt mit 30 aus.</p>
 </div>""")
         teile.append('<dl class="kennzahlen">'
                      + kennzahl("Zeit für Handball", f'{zahl(a["stunden"])}'
                                 f'<span class="klein"> Std</span>',
-                                f'{str(a["tage"]).replace(".", ",")} Tage am Stück – '
-                                'Training, Spiele, Warmup, Dritte Halbzeit und Fahrten',
+                                f'{str(a["tage"]).replace(".", ",")} Tage am Stück. '
+                                'Training, Spiele, Warmup, Dritte Halbzeit und Fahrten.',
                                 breit=True)
                      + "</dl>")
 
@@ -445,7 +453,7 @@ geteilt durch {zahl(f.get("gesamt_km", 0))} gefahrene Kilometer.</p>
             kennzahl("Gesamt", f'{g["s"]}<span class="klein">S</span> '
                      f'{g["u"]}<span class="klein">U</span> '
                      f'{g["n"]}<span class="klein">N</span>',
-                     f'aus {g["spiele"]} Spielen'),
+                     f'aus {spiel_wort(g["spiele"], "dativ")}'),
             kennzahl("Zu Hause", f'{h["s"]}<span class="klein">S</span> '
                      f'{h["u"]}<span class="klein">U</span> '
                      f'{h["n"]}<span class="klein">N</span>'),
@@ -459,11 +467,12 @@ geteilt durch {zahl(f.get("gesamt_km", 0))} gefahrene Kilometer.</p>
                                    f'{to["erzielt"]}:{to["kassiert"]} insgesamt'))
         if kr.get("gesamt"):
             felder.append(kennzahl("Krimis", f'{kr["anteil"]}<span class="klein">%</span>',
-                                   f'{kr["anzahl"]} von {kr["gesamt"]} Spielen '
-                                   'auf zwei Tore oder weniger'))
+                                   f'{kr["anzahl"]} von {spiel_wort(kr["gesamt"], "dativ")} '
+                                   'mit höchstens zwei Toren Unterschied'))
         if se.get("ohne_niederlage"):
-            felder.append(kennzahl("Längste Serie", f'{se["ohne_niederlage"]}'
-                                   f'<span class="klein"> Spiele</span>',
+            felder.append(kennzahl("Längste Serie",
+                                   f'{se["ohne_niederlage"]}<span class="klein">'
+                                   f'{" Spiel" if se["ohne_niederlage"] == 1 else " Spiele"}</span>',
                                    "ohne Niederlage"))
         teile.append('<div class="rubrik">Bilanz</div>'
                      f'<dl class="kennzahlen">{"".join(felder)}</dl>')
@@ -490,11 +499,11 @@ geteilt durch {zahl(f.get("gesamt_km", 0))} gefahrene Kilometer.</p>
                                     f'gegen {sicher(t["gegner"])}, {t["summe"]} Tore',
                                     breit=True))
         if weitere:
-            teile.append('<div class="rubrik">Auffälligkeiten</div>'
+            teile.append('<div class="rubrik">Rekorde</div>'
                          f'<dl class="kennzahlen">{"".join(weitere)}</dl>')
     else:
         teile.append('<p class="statfuss">Sobald gespielt wird, kommen hier '
-                     'Bilanz, Serien und Auffälligkeiten dazu.</p>')
+                     'Bilanz, Serien und Rekorde dazu.</p>')
 
     return "".join(teile)
 
@@ -503,7 +512,8 @@ def tabellenblock(tabelle: dict, eigenes_team: int | None) -> str:
     """Vor dem ersten Spieltag steht ueberall 0 - die Reihenfolge ist dann
     ohne Aussage, darum der Hinweis darunter."""
     if not tabelle or not tabelle.get("eintraege"):
-        return "<p class=\"tabellenfuss\">Für diese Liga liegt noch keine Tabelle vor.</p>"
+        return ('<p class="tabellenfuss">Hier wird nicht gewertet, '
+                'deshalb gibt es keine Tabelle.</p>')
 
     zeilen = []
     for e in tabelle["eintraege"]:
@@ -552,24 +562,24 @@ def abo_block(team: dict, basis: str) -> str:
 
 <div class="weg">
   <h3>iPhone, iPad und Mac</h3>
-  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen kommen danach von selbst an.</p>
+  <p>Antippen, „Abonnieren“ bestätigen. Verlegungen ziehen sich danach automatisch nach.</p>
   <a class="knopf" href="{webcal}">{sicher(team['name'])} abonnieren</a>
   <p class="tipp">
-    <b>Am Mac</b> fragt der Kalender vorher nach Einstellungen: Haken bei
-    „Entfernen: Hinweise“ <b>abwählen</b> (sonst fehlen die Erinnerungen) und
-    „Automatisch aktualisieren“ auf <b>Jede Stunde</b> stellen – der Standard
-    „Wöchentlich“ ist für Verlegungen zu träge.
+    <b>Am Mac</b> fragt der Kalender vorher noch was: Den Haken bei
+    „Entfernen: Hinweise“ <b>rausnehmen</b>, sonst kriegst du keine
+    Erinnerungen. Und „Automatisch aktualisieren“ auf <b>Jede Stunde</b>
+    stellen. Wöchentlich ist zu selten, dann kriegst du Verlegungen zu spät mit.
   </p>
   <p class="tipp" data-ios-tipp hidden>
-    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen –
-    dann liegt der Spielplan als App auf dem Handy.
+    <b>Tipp:</b> Diese Seite über <b>Teilen&nbsp;→ Zum Home-Bildschirm</b> ablegen.
+    Dann liegt der Spielplan als App auf dem Handy.
   </p>
 </div>
 
 <div class="weg">
   <h3>Android und Google Kalender</h3>
-  <p>Google erlaubt das Abonnieren nur am Computer, nicht in der Handy-App.
-     Einmal am Rechner einrichten – danach ist es auf dem Handy.</p>
+  <p>Bei Google geht das Abonnieren nur am Computer, nicht in der Handy-App.
+     Einmal am Rechner einrichten, danach ist es auf dem Handy.</p>
   <button class="knopf stumm" type="button" data-kopiere="{ics_url}">Adresse kopieren</button>
   <ol class="schritte">
     <li>Am Computer <code>calendar.google.com</code> öffnen</li>
@@ -599,7 +609,7 @@ def mannschaftsblock(schluessel: str, team: dict, basis: str, heute: datetime,
     kommend = [s for _, s in kommend]
 
     kopf = " &middot; ".join(t for t in [
-        sicher(team.get("liga")), f"{len(spiele)} Spiele"] if t)
+        sicher(team.get("liga")), spiel_wort(len(spiele))] if t)
 
     return f"""<section data-team="{sicher(schluessel)}" hidden>
   <p class="liga">{kopf}</p>
@@ -684,6 +694,19 @@ automatisch im Handykalender, Verlegungen inklusive.">
 
 <header class="kopf">
   <div class="huelle">
+    <button id="ansicht" type="button" aria-label="Ansicht umschalten">
+      <svg class="mond" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"
+           aria-hidden="true">
+        <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/>
+      </svg>
+      <svg class="sonne" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"
+           aria-hidden="true">
+        <circle cx="12" cy="12" r="4.2"/>
+        <path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.2 5.2l1.4 1.4M17.4 17.4l1.4 1.4M18.8 5.2l-1.4 1.4M6.6 17.4l-1.4 1.4"/>
+      </svg>
+    </button>
     <div class="marke">
       <img src="logo.png" alt="Wappen der HSG Mutterstadt/Ruchheim" width="149" height="200">
       <div>
@@ -712,7 +735,8 @@ automatisch im Handykalender, Verlegungen inklusive.">
   </p>
 </main>
 
-<script>{SKRIPT}
+<script>{ANSICHT}
+{SKRIPT}
 {TIPP}
 {GRAFIK}
 {ZAEHLUNG}</script>
