@@ -350,10 +350,20 @@ Cloudflare hält seine Cron-Zeiten dagegen ein. Der Worker schaut zu denselben
 Zeiten nach und stößt den Workflow per `repository_dispatch` an, wenn drei
 Dinge zusammenkommen:
 
-1. `daten.json` ist älter als 50 Minuten – GitHub hat also nicht geliefert,
+1. `daten.json` ist älter als 25 Minuten – GitHub hat also nicht geliefert,
 2. in den letzten sechs Stunden wurde gespielt – es gibt etwas zu holen,
 3. oder die Daten sind älter als 25 Stunden – dann ist der nächtliche Lauf
    ausgefallen und Verlegungen müssen ankommen, auch ohne Spiel.
+
+Nachgeschaut wird am Wochenende **alle 15 Minuten**; das Nachschauen selbst
+ist ein Abruf von `daten.json` und kostet nichts. Angestoßen wird höchstens
+alle 25 Minuten – diese Schwelle begrenzt, wie oft der Workflow überhaupt
+laufen kann, egal wie eng der Cron getaktet ist. Sie ist die Rücksicht auf
+handball.net, das bei jedem Lauf 23 Mannschaften beantworten muss: rund 1.100
+Abfragen an einem Spieltag, an dem GitHub komplett ausfällt, statt 500.
+
+Praktisch heißt das: Endet ein Spiel um 21:45 und der Verband trägt um 21:50
+ein, steht das Ergebnis gegen 22:02 auf der Seite statt erst nach 23:00.
 
 Läuft bei GitHub alles normal, passiert nichts – es gibt keine doppelten
 Läufe. Die zweite Bedingung hält den Worker unter der Woche still, ohne dass

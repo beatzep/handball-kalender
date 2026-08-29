@@ -563,7 +563,12 @@ export default {
   },
 };
 
-const HOECHSTALTER_MIN = 50;
+// Wie alt die veroeffentlichten Daten sein duerfen, bevor nachgelegt wird.
+// Der Wert begrenzt zugleich, wie oft der Workflow hoechstens laeuft: bei 25
+// Minuten also hoechstens gut zweimal die Stunde, egal wie eng der Cron
+// getaktet ist. Das schont handball.net, das bei jedem Lauf 23 Mannschaften
+// beantworten muss.
+const HOECHSTALTER_MIN = 25;
 const TAGESFRIST_MIN = 25 * 60;        // der naechtliche Lauf darf nicht ausfallen
 const NACHSPIELZEIT_MS = 6 * 60 * 60 * 1000;
 

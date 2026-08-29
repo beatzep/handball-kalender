@@ -14,4 +14,6 @@ id = "9cdf5b8b1e044059909e7af519b2802a"
 [triggers]
 # Cloudflare weist "6,0" als ungueltig ab - anders als GitHub zaehlt sein
 # Parser den Sonntag nicht als 0. Mit den Kuerzeln ist es ohnehin lesbarer.
-crons = ["5 12-22 * * SAT,SUN", "17 3 * * *"]
+# Am Wochenende alle 15 Minuten nachschauen. Das Nachschauen selbst kostet
+# nichts - angestossen wird nur, wenn die Daten wirklich veraltet sind.
+crons = ["*/15 12-22 * * SAT,SUN", "17 3 * * *"]

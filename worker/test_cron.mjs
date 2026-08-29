@@ -46,8 +46,13 @@ async function lauf({ alterMinuten, token = "geheim", datenErreichbar = true,
 let g = await lauf({ alterMinuten: 5 });
 pruefe("Frische Daten: kein Anstoss", g.length === 0, `${g.length} Aufrufe`);
 
-g = await lauf({ alterMinuten: 45 });
-pruefe("45 Minuten alt: noch kein Anstoss", g.length === 0, `${g.length} Aufrufe`);
+g = await lauf({ alterMinuten: 20 });
+pruefe("20 Minuten alt: noch kein Anstoss", g.length === 0, `${g.length} Aufrufe`);
+
+// Bei viertelstuendlicher Pruefung darf nicht jedes Mal angestossen werden -
+// sonst laeuft der Workflow viermal die Stunde gegen handball.net.
+g = await lauf({ alterMinuten: 26 });
+pruefe("26 Minuten alt: jetzt wird nachgelegt", g.length === 1, `${g.length} Aufrufe`);
 
 g = await lauf({ alterMinuten: 200 });
 pruefe("Daten drei Stunden alt: Workflow wird angestossen", g.length === 1,
