@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-08-29T14:13:17+00:00",
+  "aktualisiert": "2026-08-29T14:46:07+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -4673,29 +4673,29 @@
           },
           {
             "platz": 2,
-            "team": "TV Engers",
-            "team_id": 86941,
-            "spiele": 1,
+            "team": "JSG  Mundenheim/Rheingönheim",
+            "team_id": 86950,
+            "spiele": 2,
             "punkte": 2,
             "siege": 1,
             "remis": 0,
-            "niederlagen": 0,
-            "tore": 34,
-            "gegentore": 20,
-            "differenz": 14
+            "niederlagen": 1,
+            "tore": 56,
+            "gegentore": 49,
+            "differenz": 7
           },
           {
             "platz": 3,
-            "team": "JSG  Mundenheim/Rheingönheim",
-            "team_id": 86950,
-            "spiele": 1,
-            "punkte": 0,
-            "siege": 0,
+            "team": "TV Engers",
+            "team_id": 86941,
+            "spiele": 2,
+            "punkte": 2,
+            "siege": 1,
             "remis": 0,
             "niederlagen": 1,
-            "tore": 25,
-            "gegentore": 27,
-            "differenz": -2
+            "tore": 56,
+            "gegentore": 51,
+            "differenz": 5
           },
           {
             "platz": 4,
@@ -7477,7 +7477,9 @@
           }
         ]
       },
-      "form": [],
+      "form": [
+        "N"
+      ],
       "statistik": {
         "fahrten": {
           "gesamt_km": 193,
@@ -7501,14 +7503,14 @@
           "gesamt": {
             "s": 0,
             "u": 0,
-            "n": 0,
-            "spiele": 0
+            "n": 1,
+            "spiele": 1
           },
           "heim": {
             "s": 0,
             "u": 0,
-            "n": 0,
-            "spiele": 0
+            "n": 1,
+            "spiele": 1
           },
           "auswaerts": {
             "s": 0,
@@ -7519,15 +7521,24 @@
         },
         "serien": {
           "ohne_niederlage": 0,
-          "aktuell": 0,
-          "aktuell_art": null
+          "aktuell": 1,
+          "aktuell_art": "N"
         },
         "krimis": {
           "anzahl": 0,
-          "anteil": 0,
-          "gesamt": 0
+          "gesamt": 1,
+          "anteil": 0
         },
-        "tore": {},
+        "tore": {
+          "erzielt": 15,
+          "kassiert": 25,
+          "schnitt": 15.0,
+          "torreichstes": {
+            "gegner": "HSG Grethen/Maxdorf",
+            "stand": "15:25",
+            "summe": 40
+          }
+        },
         "anwurf": {
           "spaet": {
             "spiele": 0,
@@ -7535,9 +7546,9 @@
             "schnitt": 0
           },
           "frueh": {
-            "spiele": 0,
+            "spiele": 1,
             "punkte": 0,
-            "schnitt": 0
+            "schnitt": 0.0
           }
         },
         "gegner": {},
@@ -7557,7 +7568,14 @@
           "spieltag": 1,
           "heim": true,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 0,
+          "ergebnis": {
+            "heim": 15,
+            "gast": 25,
+            "eigene": 15,
+            "fremde": 25,
+            "ausgang": "N"
+          }
         },
         "2627RPBKRKEJGE0204": {
           "datum": "2026-09-06T13:15:00",
