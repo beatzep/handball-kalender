@@ -19,6 +19,7 @@ from zoneinfo import ZoneInfo
 from seite_grafik import GRAFIK
 from seite_skript import SKRIPT
 from seite_tipp import TIPP
+from seite_zaehlung import ZAEHLUNG
 from seite_stil import STIL
 
 TZ = ZoneInfo("Europe/Berlin")
@@ -701,7 +702,8 @@ automatisch im Handykalender, Verlegungen inklusive.">
 
 <script>{SKRIPT}
 {TIPP}
-{GRAFIK}</script>
+{GRAFIK}
+{ZAEHLUNG}</script>
 </body>
 </html>
 """

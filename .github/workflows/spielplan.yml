@@ -48,6 +48,9 @@ jobs:
             --basis-url "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}" \
             --worker-url "https://muru-zaehler.edis-herrmann.workers.dev" \
             --out docs/index.html
+          python3 baue_admin.py \
+            --worker-url "https://muru-zaehler.edis-herrmann.workers.dev" \
+            --out docs/admin.html
 
       # Nach dem Seitenbau, damit die eben erzeugte Seite geprueft wird -
       # nicht die vom Vortag.

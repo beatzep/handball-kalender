@@ -96,6 +96,37 @@ Beim nächsten Lauf wird verglichen:
 Die Meldungen landen an drei Stellen: im gelben Kasten auf der Seite, in der
 Commit-Nachricht und in der Zusammenfassung des Action-Laufs.
 
+## Auswertung der Nutzung
+
+`docs/admin.html` zeigt Aufrufe, Aktionen und Verteilung nach Mannschaft und
+Bereich. Die Seite liegt offen im Verzeichnis und ist ohne Anmeldung leer –
+die Zahlen gibt der Worker nur gegen Benutzer und Passwort heraus, die dort
+als Secrets liegen (`wrangler secret put ADMIN_BENUTZER` / `ADMIN_PASSWORT`).
+
+Ein Passwort, das die Seite selbst prüft, wäre wertlos: Auf GitHub Pages
+steht jeder Prüfcode im Quelltext. Deshalb liegt die Prüfung im Worker.
+
+**Gezählt wird aggregiert.** Summen je Tag: Aufrufe, gewählte Mannschaft,
+geöffneter Bereich, geklickte Aktionen. Keine Kennung, keine Adresse, keine
+Wiedererkennung, kein Zeitstempel je Besuch – damit braucht es weder Banner
+noch Einwilligung. Die Gerätekennung aus Tipprunde und Zusagen wird dafür
+bewusst **nicht** verwendet; sie ist zweckgebunden.
+
+**Die Grenzen des kostenlosen Speichers bestimmen das Design.** Erlaubt sind
+rund 1.000 Schreibvorgänge am Tag und nur einer je Sekunde auf denselben
+Schlüssel. Daraus folgt:
+
+- Ein Besuch meldet sich zweimal – einmal beim Öffnen, einmal gebündelt beim
+  Verlassen. Ein Aufruf je Klick wäre das Tageskontingent an einem Spieltag.
+- Die Tageszähler liegen auf zehn Schlüsseln, zufällig gewählt, und werden
+  beim Auswerten wieder zusammengezählt. Sonst gingen gleichzeitige Zugriffe
+  verloren.
+- Aus demselben Grund sendet der Hype-Zähler seine Klicks alle zehn statt
+  alle zwei Sekunden. Die Anzeige läuft ohnehin sofort mit.
+
+Gelesen wird nebenläufig: 30 Tage × 10 Schlüssel nacheinander brauchten
+1,3 Sekunden, parallel sind es rund 0,5.
+
 ## Tipprunde
 
 Vor jedem Spiel kann getippt werden, nach dem Abpfiff rechnet der Worker die

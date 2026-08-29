@@ -413,7 +413,7 @@ table.tabelle tr.wir td.platz { box-shadow: inset 2px 0 0 var(--gold); }
 <main class="huelle">
 <section data-team="herren1" hidden>
   <p class="liga">Männer Bezirksoberliga &middot; 22 Spiele</p>
-  <div class="marker"><span data-anwurf="2026-08-29T20:00:00+02:00">Morgen</span>
+  <div class="marker"><span data-anwurf="2026-08-29T20:00:00+02:00">Heute</span>
  &middot; Auswärtsspiel</div>
 <h2 class="paarung">TSG MZ-Bretzenheim II &ndash; HSG MuRu</h2>
 <p class="countdown" data-countdown="2026-08-29T20:00:00+02:00"></p>
@@ -654,7 +654,7 @@ geteilt durch 1.539 gefahrene Kilometer.</p>
   </div>
 </section><section data-team="herren2" hidden>
   <p class="liga">Männer Bezirksklasse &middot; 20 Spiele</p>
-  <div class="marker"><span data-anwurf="2026-08-29T19:00:00+02:00">Morgen</span>
+  <div class="marker"><span data-anwurf="2026-08-29T19:00:00+02:00">Heute</span>
  &middot; Auswärtsspiel</div>
 <h2 class="paarung">TV THALEISCHWEILER Herren &ndash; HSG MuRu II</h2>
 <p class="countdown" data-countdown="2026-08-29T19:00:00+02:00"></p>
@@ -1328,7 +1328,10 @@ window.muruGeraet = (function () {
         })
         .then(function () { sendet = false; });
     }
-    setInterval(sende, 2000);
+    // Alle zehn Sekunden statt alle zwei: Der Speicher erlaubt im
+    // kostenlosen Tarif rund tausend Schreibvorgaenge am Tag, und die
+    // Anzeige laeuft ohnehin sofort mit - der Abgleich darf nachhinken.
+    setInterval(sende, 10000);
 
     // Beim Verlassen der Seite wird ein laufendes fetch abgebrochen -
     // sendBeacon wird vom Browser noch zu Ende gebracht.
@@ -1731,6 +1734,69 @@ window.muruGeraet = (function () {
       });
     });
   });
+})();
+
+
+(function () {
+  var huelle = document.querySelector('[data-worker]');
+  var worker = huelle && huelle.getAttribute('data-worker');
+  if (!worker) return;
+
+  var offen = { ereignis: {}, mannschaft: {}, bereich: {} };
+  var etwasOffen = false;
+
+  function merke(gruppe, name) {
+    if (!name) return;
+    offen[gruppe][name] = (offen[gruppe][name] || 0) + 1;
+    etwasOffen = true;
+  }
+
+  function sende(beimVerlassen) {
+    if (!etwasOffen) return;
+    var last = JSON.stringify(offen);
+    offen = { ereignis: {}, mannschaft: {}, bereich: {} };
+    etwasOffen = false;
+    // Beim Verlassen wird ein laufendes fetch abgebrochen - sendBeacon nicht.
+    if (beimVerlassen && navigator.sendBeacon) {
+      navigator.sendBeacon(worker + '/zaehl',
+        new Blob([last], { type: 'application/json' }));
+      return;
+    }
+    fetch(worker + '/zaehl', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' }, body: last
+    }).catch(function () {});
+  }
+
+  merke('ereignis', 'aufruf');
+  var wahl = document.getElementById('teamwahl');
+  if (wahl) merke('mannschaft', wahl.value);
+
+  // Alles Weitere wird gesammelt und erst beim Verlassen gebuendelt
+  // geschickt: Der Speicher vertraegt nur rund tausend Schreibvorgaenge
+  // am Tag, ein Aufruf je Klick waere daran schnell vorbei.
+  document.addEventListener('click', function (e) {
+    var ziel = e.target.closest('button, a');
+    if (!ziel) return;
+    if (ziel.hasAttribute('data-ziel')) merke('bereich', ziel.getAttribute('data-ziel'));
+    else if (ziel.classList.contains('knopf') && ziel.getAttribute('href'))
+      merke('ereignis', ziel.getAttribute('href').indexOf('webcal') === 0 ? 'abo' : 'datei');
+    else if (ziel.hasAttribute('data-grafik')) merke('ereignis', 'grafik');
+    else if (ziel.hasAttribute('data-tippsenden')) merke('ereignis', 'tipp');
+    else if (ziel.hasAttribute('data-emoji')) merke('ereignis', 'hype');
+    else if (ziel.hasAttribute('data-dabei')) merke('ereignis', 'dabei');
+    else if (ziel.hasAttribute('data-teile') || ziel.hasAttribute('data-kopiere'))
+      merke('ereignis', 'teilen');
+  }, true);
+
+  if (wahl) wahl.addEventListener('change', function () { merke('mannschaft', wahl.value); });
+
+  window.addEventListener('pagehide', function () { sende(true); });
+  document.addEventListener('visibilitychange', function () {
+    if (document.visibilityState === 'hidden') sende(true);
+  });
+  // Der erste Aufruf geht sofort raus, damit er auch bei einem
+  // abgebrochenen Besuch gezaehlt wird.
+  setTimeout(function () { sende(false); }, 1500);
 })();
 </script>
 </body>
