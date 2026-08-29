@@ -21,7 +21,8 @@ from seite_stil import STIL
 TZ = ZoneInfo("Europe/Berlin")
 WOCHENTAGE = ["Montag", "Dienstag", "Mittwoch", "Donnerstag",
               "Freitag", "Samstag", "Sonntag"]
-TAGE_VORAUS = 14
+TAGE_VORAUS = 14          # so weit reicht die Anzeige
+TAGE_GEBAUT = 24          # so viel steht in der Datei, siehe unten
 
 
 def sicher(text) -> str:
@@ -65,7 +66,8 @@ def zeile(spiel: dict) -> str:
         e = spiel["ergebnis"]
         # aus Sicht der jeweiligen Mannschaft, siehe baue_seite.py
         ergebnis = (f'<span class="stand {e["ausgang"]}">{e["eigene"]}:{e["fremde"]}</span>')
-    return f"""<div class="partie{' heimspiel' if heim else ''}" data-heim="{'ja' if heim else 'nein'}">
+    return f"""<div class="partie{' heimspiel' if heim else ''}" data-heim="{'ja' if heim else 'nein'}"
+ data-tag="{spiel['wann']:%Y-%m-%d}">
 <div class="uhr">{uhr}</div>
 <div><div class="wer">{sicher(spiel.get('mannschaft'))}</div>
 <div class="gegen">{'gegen' if heim else 'bei'} {sicher(spiel.get('gegner'))}</div>
@@ -83,7 +85,10 @@ def main() -> None:
     daten = json.loads(Path(cfg.daten).read_text(encoding="utf-8"))
     jetzt = datetime.now(TZ)
     von = jetzt.replace(hour=0, minute=0, second=0, microsecond=0)
-    bis = von + timedelta(days=TAGE_VORAUS)
+    # Mehr Tage in die Datei schreiben, als angezeigt werden: Faellt der
+    # naechtliche Lauf aus, kuerzt der Browser trotzdem auf das richtige
+    # Fenster, statt Vergangenes unter 'Heute' zu zeigen.
+    bis = von + timedelta(days=TAGE_GEBAUT)
     spiele = sammle(daten, von, bis)
 
     bloecke, letzter_tag = [], None
@@ -93,7 +98,9 @@ def main() -> None:
             heute_morgen = ("Heute" if tag == jetzt.date()
                             else "Morgen" if tag == jetzt.date() + timedelta(days=1)
                             else WOCHENTAGE[spiel["wann"].weekday()])
-            bloecke.append(f'<div class="tag">{heute_morgen}, {spiel["wann"]:%d.%m.}</div>')
+            bloecke.append(f'<div class="tag" data-tag="{spiel["wann"]:%Y-%m-%d}"'
+                           f' data-wochentag="{WOCHENTAGE[spiel["wann"].weekday()]}">'
+                           f'{heute_morgen}, {spiel["wann"]:%d.%m.}</div>')
             letzter_tag = tag
         bloecke.append(zeile(spiel))
 
@@ -139,7 +146,7 @@ Mutterstadt/Ruchheim in den nächsten zwei Wochen.">
       </div>
     </div>
     <h1>Wer spielt<br>wann</h1>
-    <p class="saison">{len(spiele)} Spiele in den nächsten zwei Wochen,
+    <p class="saison" id="umfang">{len(spiele)} Spiele in den nächsten zwei Wochen,
        davon {heimspiele} zu Hause</p>
     <p class="uebersichtlink"><a href="./">Zum Spielplan einer Mannschaft &rsaquo;</a></p>
   </div>
@@ -164,6 +171,41 @@ Mutterstadt/Ruchheim in den nächsten zwei Wochen.">
 (function () {{
   var knoepfe = [].slice.call(document.querySelectorAll('[data-filter]'));
   var liste = document.getElementById('liste');
+
+  // Anzeigefenster im Browser bestimmen: Die Datei enthaelt mehr Tage als
+  // gezeigt werden, damit ein ausgefallener naechtlicher Lauf nicht dazu
+  // fuehrt, dass Vergangenes unter "Heute" steht.
+  var TAGE = {TAGE_VORAUS};
+  var heute = new Date(); heute.setHours(0, 0, 0, 0);
+  var ende = new Date(heute.getTime() + TAGE * 86400000);
+  function alsDatum(text) {{
+    var t = String(text).split('-');
+    return new Date(+t[0], +t[1] - 1, +t[2]);
+  }}
+  function imFenster(el) {{
+    var d = alsDatum(el.getAttribute('data-tag'));
+    return d >= heute && d < ende;
+  }}
+  [].slice.call(liste.children).forEach(function (el) {{
+    if (!imFenster(el)) el.remove();
+  }});
+  // Tagesueberschriften stimmen sonst nicht mehr ("Heute" von gestern)
+  liste.querySelectorAll('.tag').forEach(function (el) {{
+    var d = alsDatum(el.getAttribute('data-tag'));
+    var abstand = Math.round((d - heute) / 86400000);
+    var wort = abstand === 0 ? 'Heute' : abstand === 1 ? 'Morgen'
+             : el.getAttribute('data-wochentag');
+    var tagText = ('0' + d.getDate()).slice(-2) + '.' +
+                  ('0' + (d.getMonth() + 1)).slice(-2) + '.';
+    el.textContent = wort + ', ' + tagText;
+  }});
+  var partien = liste.querySelectorAll('.partie');
+  var daheim = liste.querySelectorAll('.partie[data-heim="ja"]').length;
+  var umfang = document.getElementById('umfang');
+  if (umfang) {{
+    umfang.textContent = partien.length + ' Spiele in den nächsten zwei Wochen, davon '
+                       + daheim + ' zu Hause';
+  }}
 
   function setze(art) {{
     knoepfe.forEach(function (k) {{

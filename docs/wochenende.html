@@ -477,8 +477,8 @@ table.tabelle tr.wir td.platz { box-shadow: inset 2px 0 0 var(--gold); }
       </div>
     </div>
     <h1>Wer spielt<br>wann</h1>
-    <p class="saison">38 Spiele in den nächsten zwei Wochen,
-       davon 21 zu Hause</p>
+    <p class="saison" id="umfang">79 Spiele in den nächsten zwei Wochen,
+       davon 39 zu Hause</p>
     <p class="uebersichtlink"><a href="./">Zum Spielplan einer Mannschaft &rsaquo;</a></p>
   </div>
 </header>
@@ -489,238 +489,563 @@ table.tabelle tr.wir td.platz { box-shadow: inset 2px 0 0 var(--gold); }
     <button type="button" data-filter="heim" aria-pressed="false">Nur Heimspiele</button>
   </div>
 
-  <div id="liste"><div class="tag">Heute, 29.08.</div><div class="partie" data-heim="nein">
+  <div id="liste"><div class="tag" data-tag="2026-08-29" data-wochentag="Samstag">Heute, 29.08.</div><div class="partie" data-heim="nein"
+ data-tag="2026-08-29">
 <div class="uhr">12:30</div>
 <div><div class="wer">gE-Jugend</div>
 <div class="gegen">bei JSG Mundenheim/Rheingönheim</div>
 <div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Halle%20Schulzentrum%20%28Mt%29%20Mundenheim%20Adlerdamm%2C%2067061%20Ludwigshafen" target="_blank" rel="noopener">Halle Schulzentrum (Mt) Mundenheim</a></div></div>
 <div class="rechts"><div class="hz ">A</div></div>
-</div><div class="partie" data-heim="nein">
+</div><div class="partie" data-heim="nein"
+ data-tag="2026-08-29">
 <div class="uhr">12:30</div>
 <div><div class="wer">gF-Jugend</div>
 <div class="gegen">bei JSG Mundenheim/Rheingönheim II</div>
 <div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Heinrich-Ries-Halle%20Ludwigshafen%20Pettenkoferstra%C3%9Fe%2C%2067063%20Ludwigshafen-Friesenheim" target="_blank" rel="noopener">Heinrich-Ries-Halle Ludwigshafen</a></div></div>
 <div class="rechts"><div class="hz ">A</div></div>
-</div><div class="partie heimspiel" data-heim="ja">
+</div><div class="partie heimspiel" data-heim="ja"
+ data-tag="2026-08-29">
 <div class="uhr">14:00</div>
 <div><div class="wer">gF-Jugend II</div>
 <div class="gegen">gegen TSV Speyer III</div>
 <div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
 <div class="rechts"><div class="hz heim">H</div></div>
-</div><div class="partie" data-heim="nein">
+</div><div class="partie" data-heim="nein"
+ data-tag="2026-08-29">
 <div class="uhr">14:00</div>
 <div><div class="wer">wC-Jugend</div>
 <div class="gegen">bei SG Zweibrücken</div>
 <div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Ignaz-Roth-Halle%20Landauer%20Str.%2022%2C%2066482%20Zweibr%C3%BCcken" target="_blank" rel="noopener">Ignaz-Roth-Halle</a></div></div>
 <div class="rechts"><div class="hz ">A</div></div>
-</div><div class="partie heimspiel" data-heim="ja">
+</div><div class="partie heimspiel" data-heim="ja"
+ data-tag="2026-08-29">
 <div class="uhr">15:30</div>
 <div><div class="wer">gE-Jugend II</div>
 <div class="gegen">gegen HSG Grethen/Maxdorf</div>
 <div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
 <div class="rechts"><div class="hz heim">H</div></div>
-</div><div class="partie" data-heim="nein">
+</div><div class="partie" data-heim="nein"
+ data-tag="2026-08-29">
 <div class="uhr">16:00</div>
 <div><div class="wer">wA-Jugend</div>
 <div class="gegen">bei HSG Landau/Land</div>
 <div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Bbs-Sporthalle%20Landau%20August-Croissant-Str.%2027%2C%2076829%20Landau" target="_blank" rel="noopener">Bbs-Sporthalle Landau</a></div></div>
 <div class="rechts"><div class="hz ">A</div></div>
-</div><div class="partie" data-heim="nein">
+</div><div class="partie" data-heim="nein"
+ data-tag="2026-08-29">
 <div class="uhr">18:00</div>
 <div><div class="wer">mB-Jugend</div>
 <div class="gegen">bei Mjsg Sobernheim/Meisenheim</div>
 <div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Bad%20Sobernheim%2C%20Dr.%20W.D%C3%BCmmler%20Halle%20Staudernheimer%20Stra%C3%9Fe%2C%2055566%20Bad%20Sobernheim" target="_blank" rel="noopener">Bad Sobernheim, Dr. W.Dümmler Halle</a></div></div>
 <div class="rechts"><div class="hz ">A</div></div>
-</div><div class="partie" data-heim="nein">
+</div><div class="partie" data-heim="nein"
+ data-tag="2026-08-29">
 <div class="uhr">19:00</div>
 <div><div class="wer">Herren II</div>
 <div class="gegen">bei TV THALEISCHWEILER Herren</div>
 <div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=IGS-Sporthalle%20Thaleischweiler%20Schulstr.%202%2C%2066987%20Thaleischweiler" target="_blank" rel="noopener">IGS-Sporthalle Thaleischweiler</a></div></div>
 <div class="rechts"><div class="hz ">A</div></div>
-</div><div class="partie" data-heim="nein">
+</div><div class="partie" data-heim="nein"
+ data-tag="2026-08-29">
 <div class="uhr">20:00</div>
 <div><div class="wer">Herren I</div>
 <div class="gegen">bei TSG MZ-Bretzenheim II</div>
 <div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=IGS%201%20Mainz-Bretzenheim%20Hans-B%C3%B6ckler-Stra%C3%9Fe%202%2C%2055128%20Mainz" target="_blank" rel="noopener">IGS 1 Mainz-Bretzenheim</a></div></div>
 <div class="rechts"><div class="hz ">A</div></div>
-</div><div class="tag">Morgen, 30.08.</div><div class="partie" data-heim="nein">
+</div><div class="tag" data-tag="2026-08-30" data-wochentag="Sonntag">Morgen, 30.08.</div><div class="partie" data-heim="nein"
+ data-tag="2026-08-30">
 <div class="uhr">10:00</div>
 <div><div class="wer">Minis</div>
 <div class="gegen">bei TV Edigheim</div>
 <div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Schulzentrum%20Edigheim%20M%C3%BChlaustr.%2051%2C%2067069%20Ludwigshafen" target="_blank" rel="noopener">Schulzentrum Edigheim</a></div></div>
 <div class="rechts"><div class="hz ">A</div></div>
-</div><div class="partie heimspiel" data-heim="ja">
+</div><div class="partie heimspiel" data-heim="ja"
+ data-tag="2026-08-30">
 <div class="uhr">10:30</div>
 <div><div class="wer">wC-Jugend II</div>
 <div class="gegen">gegen HSG Dudenhofen/Schifferstadt</div>
 <div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
 <div class="rechts"><div class="hz heim">H</div></div>
-</div><div class="partie heimspiel" data-heim="ja">
+</div><div class="partie heimspiel" data-heim="ja"
+ data-tag="2026-08-30">
 <div class="uhr">12:15</div>
 <div><div class="wer">gD-Jugend</div>
 <div class="gegen">gegen Mjsg SG Saulheim/HSV Alzey</div>
 <div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
 <div class="rechts"><div class="hz heim">H</div></div>
-</div><div class="partie heimspiel" data-heim="ja">
+</div><div class="partie heimspiel" data-heim="ja"
+ data-tag="2026-08-30">
 <div class="uhr">13:45</div>
 <div><div class="wer">gC-Jugend II</div>
 <div class="gegen">gegen HSG Dudenhofen/Schifferstadt</div>
 <div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
 <div class="rechts"><div class="hz heim">H</div></div>
-</div><div class="partie" data-heim="nein">
+</div><div class="partie" data-heim="nein"
+ data-tag="2026-08-30">
 <div class="uhr">14:00</div>
 <div><div class="wer">wD-Jugend II</div>
 <div class="gegen">bei Mwsg Kandel/Hagenbach</div>
 <div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Kandel%2C%20IGS%20Sporthalle%20Schubertstr.%207%2C%2076870%20Kandel" target="_blank" rel="noopener">Kandel, IGS Sporthalle</a></div></div>
 <div class="rechts"><div class="hz ">A</div></div>
-</div><div class="partie heimspiel" data-heim="ja">
+</div><div class="partie heimspiel" data-heim="ja"
+ data-tag="2026-08-30">
 <div class="uhr">15:30</div>
 <div><div class="wer">gC-Jugend</div>
 <div class="gegen">gegen JSG Mundenheim/Rheingönheim II</div>
 <div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
 <div class="rechts"><div class="hz heim">H</div></div>
-</div><div class="partie" data-heim="nein">
+</div><div class="partie" data-heim="nein"
+ data-tag="2026-08-30">
 <div class="uhr">16:15</div>
 <div><div class="wer">gE-Jugend III</div>
 <div class="gegen">bei TV Offenbach IV</div>
 <div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Queichtalhalle%20Offenbach%20Konrad-Lerch-Ring%203%2C%2076877%20Offenbach" target="_blank" rel="noopener">Queichtalhalle Offenbach</a></div></div>
 <div class="rechts"><div class="hz ">A</div></div>
-</div><div class="partie heimspiel" data-heim="ja">
+</div><div class="partie heimspiel" data-heim="ja"
+ data-tag="2026-08-30">
 <div class="uhr">17:45</div>
 <div><div class="wer">wB-Jugend</div>
 <div class="gegen">gegen HSG Wittlich</div>
 <div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
 <div class="rechts"><div class="hz heim">H</div></div>
-</div><div class="partie" data-heim="nein">
+</div><div class="partie" data-heim="nein"
+ data-tag="2026-08-30">
 <div class="uhr">18:00</div>
 <div><div class="wer">mB-Jugend II</div>
 <div class="gegen">bei Hr Göllheim/Eisenberg/Kindenheim/Asselheim</div>
 <div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Berufsschule%20Eisenberg%20Martin-Luther-Str.%2018%2C%2067304%20Eisenberg" target="_blank" rel="noopener">Berufsschule Eisenberg</a></div></div>
 <div class="rechts"><div class="hz ">A</div></div>
-</div><div class="tag">Samstag, 05.09.</div><div class="partie heimspiel" data-heim="ja">
+</div><div class="tag" data-tag="2026-09-05" data-wochentag="Samstag">Samstag, 05.09.</div><div class="partie heimspiel" data-heim="ja"
+ data-tag="2026-09-05">
 <div class="uhr">12:00</div>
 <div><div class="wer">wD-Jugend</div>
 <div class="gegen">gegen Wjsg Mainz05/TV Nieder-Olm Wd1</div>
 <div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
 <div class="rechts"><div class="hz heim">H</div></div>
-</div><div class="partie heimspiel" data-heim="ja">
+</div><div class="partie heimspiel" data-heim="ja"
+ data-tag="2026-09-05">
 <div class="uhr">13:30</div>
 <div><div class="wer">wA-Jugend</div>
 <div class="gegen">gegen HSG TSG/1.FC-Kaiserslautern</div>
 <div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
 <div class="rechts"><div class="hz heim">H</div></div>
-</div><div class="partie heimspiel" data-heim="ja">
+</div><div class="partie heimspiel" data-heim="ja"
+ data-tag="2026-09-05">
 <div class="uhr">15:30</div>
 <div><div class="wer">wC-Jugend</div>
 <div class="gegen">gegen TV Engers</div>
 <div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
 <div class="rechts"><div class="hz heim">H</div></div>
-</div><div class="partie heimspiel" data-heim="ja">
+</div><div class="partie heimspiel" data-heim="ja"
+ data-tag="2026-09-05">
 <div class="uhr">17:45</div>
 <div><div class="wer">mA-Jugend</div>
 <div class="gegen">gegen Südpfalz Tiger</div>
 <div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
 <div class="rechts"><div class="hz heim">H</div></div>
-</div><div class="partie heimspiel" data-heim="ja">
+</div><div class="partie heimspiel" data-heim="ja"
+ data-tag="2026-09-05">
 <div class="uhr">19:45</div>
 <div><div class="wer">Herren I</div>
 <div class="gegen">gegen HSG Worms</div>
 <div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
 <div class="rechts"><div class="hz heim">H</div></div>
-</div><div class="tag">Sonntag, 06.09.</div><div class="partie heimspiel" data-heim="ja">
+</div><div class="tag" data-tag="2026-09-06" data-wochentag="Sonntag">Sonntag, 06.09.</div><div class="partie heimspiel" data-heim="ja"
+ data-tag="2026-09-06">
 <div class="uhr">10:00</div>
 <div><div class="wer">Minis II</div>
 <div class="gegen">gegen JSG Mundenheim/Rheingönheim II</div>
 <div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TVR-Sporthalle%20Ludwigshafen%20Fu%C3%9Fg%C3%B6nheimer%20Str.%20127%20%28Ortsende%29%2C%2067071%20Ludwigshafen" target="_blank" rel="noopener">TVR-Sporthalle Ludwigshafen</a></div></div>
 <div class="rechts"><div class="hz heim">H</div></div>
-</div><div class="partie heimspiel" data-heim="ja">
+</div><div class="partie heimspiel" data-heim="ja"
+ data-tag="2026-09-06">
 <div class="uhr">10:00</div>
 <div><div class="wer">Minis II</div>
 <div class="gegen">gegen HSG Dudenhofen/Schifferstadt III</div>
 <div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TVR-Sporthalle%20Ludwigshafen%20Fu%C3%9Fg%C3%B6nheimer%20Str.%20127%20%28Ortsende%29%2C%2067071%20Ludwigshafen" target="_blank" rel="noopener">TVR-Sporthalle Ludwigshafen</a></div></div>
 <div class="rechts"><div class="hz heim">H</div></div>
-</div><div class="partie" data-heim="nein">
+</div><div class="partie" data-heim="nein"
+ data-tag="2026-09-06">
 <div class="uhr">10:00</div>
 <div><div class="wer">gC-Jugend</div>
 <div class="gegen">bei Mjsg Bodenheim/Budenheim II</div>
 <div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Budenheim%2C%20Waldsporthalle%20%28Hv%20Rheinhessen%29%20R%C3%B6merstra%C3%9Fe%2C%2055257%20Budenheim" target="_blank" rel="noopener">Budenheim, Waldsporthalle (Hv Rheinhessen)</a></div></div>
 <div class="rechts"><div class="hz ">A</div></div>
-</div><div class="partie heimspiel" data-heim="ja">
+</div><div class="partie heimspiel" data-heim="ja"
+ data-tag="2026-09-06">
 <div class="uhr">10:00</div>
 <div><div class="wer">gE-Jugend III</div>
 <div class="gegen">gegen TUS Heiligenstein</div>
 <div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
 <div class="rechts"><div class="hz heim">H</div></div>
-</div><div class="partie" data-heim="nein">
+</div><div class="partie" data-heim="nein"
+ data-tag="2026-09-06">
 <div class="uhr">11:00</div>
 <div><div class="wer">gD-Jugend</div>
 <div class="gegen">bei Hr Göllheim/Eisenberg/Asselheim/Kindenheim</div>
 <div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=IGS-Sporthalle%20Gr%C3%BCnstadt%20Asselheimer%20Stra%C3%9Fe%2019A%2C%2067269%20Gr%C3%BCnstadt" target="_blank" rel="noopener">IGS-Sporthalle Grünstadt</a></div></div>
 <div class="rechts"><div class="hz ">A</div></div>
-</div><div class="partie heimspiel" data-heim="ja">
+</div><div class="partie heimspiel" data-heim="ja"
+ data-tag="2026-09-06">
 <div class="uhr">11:30</div>
 <div><div class="wer">gE-Jugend</div>
 <div class="gegen">gegen JSG Kaiserslautern/Dansenberg</div>
 <div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
 <div class="rechts"><div class="hz heim">H</div></div>
-</div><div class="partie" data-heim="nein">
+</div><div class="partie" data-heim="nein"
+ data-tag="2026-09-06">
 <div class="uhr">12:00</div>
 <div><div class="wer">wC-Jugend II</div>
 <div class="gegen">bei Mjsg SG Saulheim/HSV Alzey III</div>
 <div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Rundsporthalle%20Alzey%20Frankenstra%C3%9Fe%2017%2C%2055232%20Alzey" target="_blank" rel="noopener">Rundsporthalle Alzey</a></div></div>
 <div class="rechts"><div class="hz ">A</div></div>
-</div><div class="partie" data-heim="nein">
+</div><div class="partie" data-heim="nein"
+ data-tag="2026-09-06">
 <div class="uhr">12:15</div>
 <div><div class="wer">gC-Jugend II</div>
 <div class="gegen">bei TUS Heiligenstein II</div>
 <div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Rhein-Pfalz-Halle%20R%C3%B6merberg-Heiligenstein%20Viehtriftstra%C3%9Fe%20106%2C%2067354%20R%C3%B6merberg-Heiligenstein" target="_blank" rel="noopener">Rhein-Pfalz-Halle Römerberg-Heiligenstein</a></div></div>
 <div class="rechts"><div class="hz ">A</div></div>
-</div><div class="partie heimspiel" data-heim="ja">
+</div><div class="partie heimspiel" data-heim="ja"
+ data-tag="2026-09-06">
 <div class="uhr">12:30</div>
 <div><div class="wer">gF-Jugend</div>
 <div class="gegen">gegen TSG Friesenheim II</div>
 <div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TVR-Sporthalle%20Ludwigshafen%20Fu%C3%9Fg%C3%B6nheimer%20Str.%20127%20%28Ortsende%29%2C%2067071%20Ludwigshafen" target="_blank" rel="noopener">TVR-Sporthalle Ludwigshafen</a></div></div>
 <div class="rechts"><div class="hz heim">H</div></div>
-</div><div class="partie heimspiel" data-heim="ja">
+</div><div class="partie heimspiel" data-heim="ja"
+ data-tag="2026-09-06">
 <div class="uhr">13:00</div>
 <div><div class="wer">wD-Jugend II</div>
 <div class="gegen">gegen HSG Eckbachtal II</div>
 <div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
 <div class="rechts"><div class="hz heim">H</div></div>
-</div><div class="partie" data-heim="nein">
+</div><div class="partie" data-heim="nein"
+ data-tag="2026-09-06">
 <div class="uhr">13:15</div>
 <div><div class="wer">gE-Jugend II</div>
 <div class="gegen">bei Hlz Friesenheim/Hochdorf II</div>
 <div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Sportzentrum%20TV%20Hochdorf%20Im%20Einolf%202%2C%2067126%20Hochdorf" target="_blank" rel="noopener">Sportzentrum TV Hochdorf</a></div></div>
 <div class="rechts"><div class="hz ">A</div></div>
-</div><div class="partie heimspiel" data-heim="ja">
+</div><div class="partie heimspiel" data-heim="ja"
+ data-tag="2026-09-06">
 <div class="uhr">16:15</div>
 <div><div class="wer">mB-Jugend</div>
 <div class="gegen">gegen TV Kirrweiler</div>
 <div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
 <div class="rechts"><div class="hz heim">H</div></div>
-</div><div class="partie" data-heim="nein">
+</div><div class="partie" data-heim="nein"
+ data-tag="2026-09-06">
 <div class="uhr">16:30</div>
 <div><div class="wer">wB-Jugend</div>
 <div class="gegen">bei Hf Untere Saar</div>
 <div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Seffersbachhalle%20Ringstra%C3%9Fe%205%2C%2066663%20Merzig" target="_blank" rel="noopener">Seffersbachhalle</a></div></div>
 <div class="rechts"><div class="hz ">A</div></div>
-</div><div class="partie heimspiel" data-heim="ja">
+</div><div class="partie heimspiel" data-heim="ja"
+ data-tag="2026-09-06">
 <div class="uhr">18:00</div>
 <div><div class="wer">Damen</div>
 <div class="gegen">gegen FSG Selz-Wiesbach</div>
 <div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
 <div class="rechts"><div class="hz heim">H</div></div>
-</div><div class="partie heimspiel" data-heim="ja">
+</div><div class="partie heimspiel" data-heim="ja"
+ data-tag="2026-09-06">
 <div class="uhr">20:00</div>
 <div><div class="wer">Herren II</div>
 <div class="gegen">gegen HSG Grethen/Maxdorf</div>
 <div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
 <div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="tag" data-tag="2026-09-12" data-wochentag="Samstag">Samstag, 12.09.</div><div class="partie" data-heim="nein"
+ data-tag="2026-09-12">
+<div class="uhr">11:00</div>
+<div><div class="wer">gE-Jugend III</div>
+<div class="gegen">bei JSG Mundenheim/Rheingönheim III</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Heinrich-Ries-Halle%20Ludwigshafen%20Pettenkoferstra%C3%9Fe%2C%2067063%20Ludwigshafen-Friesenheim" target="_blank" rel="noopener">Heinrich-Ries-Halle Ludwigshafen</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="partie" data-heim="nein"
+ data-tag="2026-09-12">
+<div class="uhr">13:15</div>
+<div><div class="wer">gC-Jugend II</div>
+<div class="gegen">bei JSG Rodalben/Thaleischweiler II</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=IGS-Sporthalle%20Thaleischweiler%20Schulstr.%202%2C%2066987%20Thaleischweiler" target="_blank" rel="noopener">IGS-Sporthalle Thaleischweiler</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="partie" data-heim="nein"
+ data-tag="2026-09-12">
+<div class="uhr">14:00</div>
+<div><div class="wer">wC-Jugend</div>
+<div class="gegen">bei JSG  Mundenheim/Rheingönheim</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Halle%20Schulzentrum%20%28Mt%29%20Mundenheim%20Adlerdamm%2C%2067061%20Ludwigshafen" target="_blank" rel="noopener">Halle Schulzentrum (Mt) Mundenheim</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="partie heimspiel" data-heim="ja"
+ data-tag="2026-09-12">
+<div class="uhr">14:15</div>
+<div><div class="wer">wD-Jugend II</div>
+<div class="gegen">gegen JSG Mundenheim/Rheingönheim</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TVR-Sporthalle%20Ludwigshafen%20Fu%C3%9Fg%C3%B6nheimer%20Str.%20127%20%28Ortsende%29%2C%2067071%20Ludwigshafen" target="_blank" rel="noopener">TVR-Sporthalle Ludwigshafen</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="partie heimspiel" data-heim="ja"
+ data-tag="2026-09-12">
+<div class="uhr">15:45</div>
+<div><div class="wer">wC-Jugend II</div>
+<div class="gegen">gegen SC Bobenheim-Roxheim</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TVR-Sporthalle%20Ludwigshafen%20Fu%C3%9Fg%C3%B6nheimer%20Str.%20127%20%28Ortsende%29%2C%2067071%20Ludwigshafen" target="_blank" rel="noopener">TVR-Sporthalle Ludwigshafen</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="partie heimspiel" data-heim="ja"
+ data-tag="2026-09-12">
+<div class="uhr">17:30</div>
+<div><div class="wer">wB-Jugend</div>
+<div class="gegen">gegen JSG Osthofen/Worms</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TVR-Sporthalle%20Ludwigshafen%20Fu%C3%9Fg%C3%B6nheimer%20Str.%20127%20%28Ortsende%29%2C%2067071%20Ludwigshafen" target="_blank" rel="noopener">TVR-Sporthalle Ludwigshafen</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="partie heimspiel" data-heim="ja"
+ data-tag="2026-09-12">
+<div class="uhr">20:00</div>
+<div><div class="wer">Damen</div>
+<div class="gegen">gegen TV Kirrweiler</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TVR-Sporthalle%20Ludwigshafen%20Fu%C3%9Fg%C3%B6nheimer%20Str.%20127%20%28Ortsende%29%2C%2067071%20Ludwigshafen" target="_blank" rel="noopener">TVR-Sporthalle Ludwigshafen</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="tag" data-tag="2026-09-13" data-wochentag="Sonntag">Sonntag, 13.09.</div><div class="partie heimspiel" data-heim="ja"
+ data-tag="2026-09-13">
+<div class="uhr">10:30</div>
+<div><div class="wer">gC-Jugend</div>
+<div class="gegen">gegen TV Edigheim</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TVR-Sporthalle%20Ludwigshafen%20Fu%C3%9Fg%C3%B6nheimer%20Str.%20127%20%28Ortsende%29%2C%2067071%20Ludwigshafen" target="_blank" rel="noopener">TVR-Sporthalle Ludwigshafen</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="partie" data-heim="nein"
+ data-tag="2026-09-13">
+<div class="uhr">11:45</div>
+<div><div class="wer">gD-Jugend</div>
+<div class="gegen">bei HSG Eckbachtal</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Xx%20Sporthalle%20Bahnhofstra%C3%9Fe%207%2C%2067246%20Dirmstein" target="_blank" rel="noopener">Xx Sporthalle</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="partie heimspiel" data-heim="ja"
+ data-tag="2026-09-13">
+<div class="uhr">12:15</div>
+<div><div class="wer">mB-Jugend</div>
+<div class="gegen">gegen TV Nieder-Olm Mb2</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TVR-Sporthalle%20Ludwigshafen%20Fu%C3%9Fg%C3%B6nheimer%20Str.%20127%20%28Ortsende%29%2C%2067071%20Ludwigshafen" target="_blank" rel="noopener">TVR-Sporthalle Ludwigshafen</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="partie" data-heim="nein"
+ data-tag="2026-09-13">
+<div class="uhr">13:15</div>
+<div><div class="wer">gE-Jugend</div>
+<div class="gegen">bei HSG Eckbachtal</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Xx%20Sporthalle%20Bahnhofstra%C3%9Fe%207%2C%2067246%20Dirmstein" target="_blank" rel="noopener">Xx Sporthalle</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="partie" data-heim="nein"
+ data-tag="2026-09-13">
+<div class="uhr">13:45</div>
+<div><div class="wer">wD-Jugend</div>
+<div class="gegen">bei JSG Mundenheim/Rheingönheim</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="partie heimspiel" data-heim="ja"
+ data-tag="2026-09-13">
+<div class="uhr">14:00</div>
+<div><div class="wer">mA-Jugend</div>
+<div class="gegen">gegen Mjsg SG Saulheim/HSV Alzey</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TVR-Sporthalle%20Ludwigshafen%20Fu%C3%9Fg%C3%B6nheimer%20Str.%20127%20%28Ortsende%29%2C%2067071%20Ludwigshafen" target="_blank" rel="noopener">TVR-Sporthalle Ludwigshafen</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="partie" data-heim="nein"
+ data-tag="2026-09-13">
+<div class="uhr">14:30</div>
+<div><div class="wer">gE-Jugend II</div>
+<div class="gegen">bei JSG Kaiserslautern/Dansenberg II</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Sporthalle%20Dansenberg%20Am%20Handballplatz%201%2C%2067661%20Kaiserslautern-Dansenberg" target="_blank" rel="noopener">Sporthalle Dansenberg</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="partie heimspiel" data-heim="ja"
+ data-tag="2026-09-13">
+<div class="uhr">16:00</div>
+<div><div class="wer">Herren II</div>
+<div class="gegen">gegen TV Kirrweiler II</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TVR-Sporthalle%20Ludwigshafen%20Fu%C3%9Fg%C3%B6nheimer%20Str.%20127%20%28Ortsende%29%2C%2067071%20Ludwigshafen" target="_blank" rel="noopener">TVR-Sporthalle Ludwigshafen</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="partie heimspiel" data-heim="ja"
+ data-tag="2026-09-13">
+<div class="uhr">16:00</div>
+<div><div class="wer">wD-Jugend</div>
+<div class="gegen">gegen Mjsg SG Saulheim/HSV Alzey</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="partie" data-heim="nein"
+ data-tag="2026-09-13">
+<div class="uhr">17:00</div>
+<div><div class="wer">wA-Jugend</div>
+<div class="gegen">bei Vsk Niederfeld</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Loschky-Halle%20Niederfeld%20Abteistra%C3%9Fe%2018%2C%2067059%20Ludwigshafen" target="_blank" rel="noopener">Loschky-Halle Niederfeld</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="partie" data-heim="nein"
+ data-tag="2026-09-13">
+<div class="uhr">17:30</div>
+<div><div class="wer">wD-Jugend</div>
+<div class="gegen">bei SV Bornheim</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="partie heimspiel" data-heim="ja"
+ data-tag="2026-09-13">
+<div class="uhr">18:00</div>
+<div><div class="wer">Herren I</div>
+<div class="gegen">gegen HSV Sobernheim H1</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TVR-Sporthalle%20Ludwigshafen%20Fu%C3%9Fg%C3%B6nheimer%20Str.%20127%20%28Ortsende%29%2C%2067071%20Ludwigshafen" target="_blank" rel="noopener">TVR-Sporthalle Ludwigshafen</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="tag" data-tag="2026-09-16" data-wochentag="Mittwoch">Mittwoch, 16.09.</div><div class="partie" data-heim="nein"
+ data-tag="2026-09-16">
+<div class="uhr">18:00</div>
+<div><div class="wer">wD-Jugend</div>
+<div class="gegen">bei SV Bornheim</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Sporthalle%20Bornheim%20Dammgasse%201%2C%2076879%20Bornheim" target="_blank" rel="noopener">Sporthalle Bornheim</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="tag" data-tag="2026-09-19" data-wochentag="Samstag">Samstag, 19.09.</div><div class="partie" data-heim="nein"
+ data-tag="2026-09-19">
+<div class="uhr">11:00</div>
+<div><div class="wer">Minis III</div>
+<div class="gegen">bei Hr Göllheim/Eisenberg/Asselheim/Kindenheim</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Berufsschule%20Eisenberg%20Martin-Luther-Str.%2018%2C%2067304%20Eisenberg" target="_blank" rel="noopener">Berufsschule Eisenberg</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="partie heimspiel" data-heim="ja"
+ data-tag="2026-09-19">
+<div class="uhr">12:00</div>
+<div><div class="wer">gE-Jugend III</div>
+<div class="gegen">gegen HSG Dudenhofen/Schifferstadt IV</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="partie" data-heim="nein"
+ data-tag="2026-09-19">
+<div class="uhr">12:00</div>
+<div><div class="wer">gF-Jugend</div>
+<div class="gegen">bei Vsk Niederfeld</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Loschky-Halle%20Niederfeld%20Abteistra%C3%9Fe%2018%2C%2067059%20Ludwigshafen" target="_blank" rel="noopener">Loschky-Halle Niederfeld</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="partie heimspiel" data-heim="ja"
+ data-tag="2026-09-19">
+<div class="uhr">13:30</div>
+<div><div class="wer">gE-Jugend II</div>
+<div class="gegen">gegen TUS Neuhofen II</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="partie" data-heim="nein"
+ data-tag="2026-09-19">
+<div class="uhr">14:00</div>
+<div><div class="wer">Minis III</div>
+<div class="gegen">bei TUS Neuhofen II</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Rehbachhalle%20Neuhofen%20Jahnstr.%2025%2C%2067141%20Neuhofen" target="_blank" rel="noopener">Rehbachhalle Neuhofen</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="partie" data-heim="nein"
+ data-tag="2026-09-19">
+<div class="uhr">14:00</div>
+<div><div class="wer">mB-Jugend II</div>
+<div class="gegen">bei Mjsg Büdesheim/Zotzenheim/St.Johann/Sprendlingen</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Bingen%2C%20Rundsporthalle%20Nuits-St.Georges-Stra%C3%9Fe%2C%2055411%20Bingen" target="_blank" rel="noopener">Bingen, Rundsporthalle</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="partie" data-heim="nein"
+ data-tag="2026-09-19">
+<div class="uhr">14:00</div>
+<div><div class="wer">wB-Jugend</div>
+<div class="gegen">bei HSG Wittlich</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Wittlich%2C%20Bbs-Halle%20Max-Planck-Stra%C3%9Fe%2C%2054516%20Wittlich" target="_blank" rel="noopener">Wittlich, Bbs-Halle</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="partie heimspiel" data-heim="ja"
+ data-tag="2026-09-19">
+<div class="uhr">15:00</div>
+<div><div class="wer">gE-Jugend</div>
+<div class="gegen">gegen TV Edigheim</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="partie" data-heim="nein"
+ data-tag="2026-09-19">
+<div class="uhr">16:00</div>
+<div><div class="wer">gC-Jugend</div>
+<div class="gegen">bei JSG Osthofen/Worms</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Wonnegauhalle%20Osthofen%20Herrnsheimer%20Stra%C3%9Fe%2024%2C%2067574%20Osthofen" target="_blank" rel="noopener">Wonnegauhalle Osthofen</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="partie" data-heim="nein"
+ data-tag="2026-09-19">
+<div class="uhr">16:00</div>
+<div><div class="wer">mA-Jugend</div>
+<div class="gegen">bei TS RODALBEN mA</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Tsr-Sporthalle%20Rodalben%20Turnstra%C3%9Fe%2010%2C%2066976%20Rodalben" target="_blank" rel="noopener">Tsr-Sporthalle Rodalben</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="partie heimspiel" data-heim="ja"
+ data-tag="2026-09-19">
+<div class="uhr">16:30</div>
+<div><div class="wer">wD-Jugend</div>
+<div class="gegen">gegen TSG MZ-Bretzenheim</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="partie" data-heim="nein"
+ data-tag="2026-09-19">
+<div class="uhr">16:30</div>
+<div><div class="wer">wD-Jugend II</div>
+<div class="gegen">bei WSG Rheinauen</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Rehbachhalle%20Neuhofen%20Jahnstr.%2025%2C%2067141%20Neuhofen" target="_blank" rel="noopener">Rehbachhalle Neuhofen</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="partie" data-heim="nein"
+ data-tag="2026-09-19">
+<div class="uhr">17:00</div>
+<div><div class="wer">Damen</div>
+<div class="gegen">bei SV Bornheim</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Sporthalle%20Bornheim%20Dammgasse%201%2C%2076879%20Bornheim" target="_blank" rel="noopener">Sporthalle Bornheim</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="partie" data-heim="nein"
+ data-tag="2026-09-19">
+<div class="uhr">18:00</div>
+<div><div class="wer">Herren I</div>
+<div class="gegen">bei GW Bingen-Büdesheim</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Bingen%2C%20Rundsporthalle%20Nuits-St.Georges-Stra%C3%9Fe%2C%2055411%20Bingen" target="_blank" rel="noopener">Bingen, Rundsporthalle</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="tag" data-tag="2026-09-20" data-wochentag="Sonntag">Sonntag, 20.09.</div><div class="partie heimspiel" data-heim="ja"
+ data-tag="2026-09-20">
+<div class="uhr">11:00</div>
+<div><div class="wer">gF-Jugend II</div>
+<div class="gegen">gegen HSG Lingenfeld/Schwegenheim</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="partie" data-heim="nein"
+ data-tag="2026-09-20">
+<div class="uhr">11:00</div>
+<div><div class="wer">mB-Jugend</div>
+<div class="gegen">bei TV 03 Wörth</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Bienwaldhalle%20W%C3%B6rth%20Am%20Bienwald%203%2C%2076744%20W%C3%B6rth" target="_blank" rel="noopener">Bienwaldhalle Wörth</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="partie heimspiel" data-heim="ja"
+ data-tag="2026-09-20">
+<div class="uhr">12:30</div>
+<div><div class="wer">gD-Jugend</div>
+<div class="gegen">gegen Hlz Friesenheim/Hochdorf II</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="partie" data-heim="nein"
+ data-tag="2026-09-20">
+<div class="uhr">12:45</div>
+<div><div class="wer">wC-Jugend II</div>
+<div class="gegen">bei Hr Göllheim/Eisenberg/Asselheim/Kindenheim</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Berufsschule%20Eisenberg%20Martin-Luther-Str.%2018%2C%2067304%20Eisenberg" target="_blank" rel="noopener">Berufsschule Eisenberg</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="partie heimspiel" data-heim="ja"
+ data-tag="2026-09-20">
+<div class="uhr">14:00</div>
+<div><div class="wer">wA-Jugend</div>
+<div class="gegen">gegen Vorderpfälzer Luchse</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="partie" data-heim="nein"
+ data-tag="2026-09-20">
+<div class="uhr">14:15</div>
+<div><div class="wer">gC-Jugend II</div>
+<div class="gegen">bei Mwsg Kandel/Hagenbach II</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Kandel%2C%20IGS%20Sporthalle%20Schubertstr.%207%2C%2076870%20Kandel" target="_blank" rel="noopener">Kandel, IGS Sporthalle</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="partie heimspiel" data-heim="ja"
+ data-tag="2026-09-20">
+<div class="uhr">16:00</div>
+<div><div class="wer">wC-Jugend</div>
+<div class="gegen">gegen SG Zweibrücken</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
 </div></div>
 
   <p class="fuss">
-    Stand: 29.08.2026, 05:01 Uhr. Wird täglich mit
+    Stand: 29.08.2026, 05:05 Uhr. Wird täglich mit
     <a href="https://www.handball.net" target="_blank" rel="noopener">handball.net</a>
     abgeglichen. <a href="./">Spielplan abonnieren</a>
   </p>
@@ -776,6 +1101,41 @@ table.tabelle tr.wir td.platz { box-shadow: inset 2px 0 0 var(--gold); }
 (function () {
   var knoepfe = [].slice.call(document.querySelectorAll('[data-filter]'));
   var liste = document.getElementById('liste');
+
+  // Anzeigefenster im Browser bestimmen: Die Datei enthaelt mehr Tage als
+  // gezeigt werden, damit ein ausgefallener naechtlicher Lauf nicht dazu
+  // fuehrt, dass Vergangenes unter "Heute" steht.
+  var TAGE = 14;
+  var heute = new Date(); heute.setHours(0, 0, 0, 0);
+  var ende = new Date(heute.getTime() + TAGE * 86400000);
+  function alsDatum(text) {
+    var t = String(text).split('-');
+    return new Date(+t[0], +t[1] - 1, +t[2]);
+  }
+  function imFenster(el) {
+    var d = alsDatum(el.getAttribute('data-tag'));
+    return d >= heute && d < ende;
+  }
+  [].slice.call(liste.children).forEach(function (el) {
+    if (!imFenster(el)) el.remove();
+  });
+  // Tagesueberschriften stimmen sonst nicht mehr ("Heute" von gestern)
+  liste.querySelectorAll('.tag').forEach(function (el) {
+    var d = alsDatum(el.getAttribute('data-tag'));
+    var abstand = Math.round((d - heute) / 86400000);
+    var wort = abstand === 0 ? 'Heute' : abstand === 1 ? 'Morgen'
+             : el.getAttribute('data-wochentag');
+    var tagText = ('0' + d.getDate()).slice(-2) + '.' +
+                  ('0' + (d.getMonth() + 1)).slice(-2) + '.';
+    el.textContent = wort + ', ' + tagText;
+  });
+  var partien = liste.querySelectorAll('.partie');
+  var daheim = liste.querySelectorAll('.partie[data-heim="ja"]').length;
+  var umfang = document.getElementById('umfang');
+  if (umfang) {
+    umfang.textContent = partien.length + ' Spiele in den nächsten zwei Wochen, davon '
+                       + daheim + ' zu Hause';
+  }
 
   function setze(art) {
     knoepfe.forEach(function (k) {

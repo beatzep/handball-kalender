@@ -40,6 +40,9 @@ jobs:
           for datei in docs/*.ics; do
             python3 pruefe_ics.py "$datei"
           done
+          # Strenger Durchgang fuer fremde Kalender-Programme: Google ist
+          # deutlich weniger nachsichtig als Apple.
+          python3 pruefe_streng.py
 
       - name: Seite bauen
         run: |
