@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-08-29T14:46:07+00:00",
+  "aktualisiert": "2026-08-29T15:16:02+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -4215,25 +4215,64 @@
       "saison": "2026/27",
       "tabelle": {
         "runde": 1,
-        "gespielt": false,
+        "gespielt": true,
         "mannschaften": 9,
         "verlauf": [],
         "eintraege": [
           {
             "platz": 1,
-            "team": "Vsk Niederfeld",
-            "team_id": 81116,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
+            "team": "HSG Landau/Land II",
+            "team_id": 81125,
+            "spiele": 1,
+            "punkte": 2,
+            "siege": 1,
             "remis": 0,
             "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
+            "tore": 31,
+            "gegentore": 25,
+            "differenz": 6
           },
           {
             "platz": 2,
+            "team": "Mwsg Kandel/Hagenbach II",
+            "team_id": 81124,
+            "spiele": 1,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 30,
+            "gegentore": 25,
+            "differenz": 5
+          },
+          {
+            "platz": 3,
+            "team": "Vsk Niederfeld",
+            "team_id": 81116,
+            "spiele": 1,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 25,
+            "gegentore": 30,
+            "differenz": -5
+          },
+          {
+            "platz": 4,
+            "team": "TSV Speyer II",
+            "team_id": 81129,
+            "spiele": 1,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 25,
+            "gegentore": 31,
+            "differenz": -6
+          },
+          {
+            "platz": 5,
             "team": "HSG Trifels",
             "team_id": 81122,
             "spiele": 0,
@@ -4246,7 +4285,7 @@
             "differenz": 0
           },
           {
-            "platz": 3,
+            "platz": 6,
             "team": "JSG Rodalben/Thaleischweiler II",
             "team_id": 81123,
             "spiele": 0,
@@ -4259,33 +4298,7 @@
             "differenz": 0
           },
           {
-            "platz": 4,
-            "team": "Mwsg Kandel/Hagenbach II",
-            "team_id": 81124,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 5,
-            "team": "HSG Landau/Land II",
-            "team_id": 81125,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 6,
+            "platz": 7,
             "team": "HSG Dudenhofen/Schifferstadt",
             "team_id": 81126,
             "spiele": 0,
@@ -4298,22 +4311,9 @@
             "differenz": 0
           },
           {
-            "platz": 7,
+            "platz": 8,
             "team": "TUS Heiligenstein II",
             "team_id": 81127,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 8,
-            "team": "TSV Speyer II",
-            "team_id": 81129,
             "spiele": 0,
             "punkte": 0,
             "siege": 0,
@@ -7356,10 +7356,29 @@
         "runde": 1,
         "gespielt": true,
         "mannschaften": 9,
-        "verlauf": [],
+        "verlauf": [
+          {
+            "runde": 1,
+            "platz": 4,
+            "punkte": 0
+          }
+        ],
         "eintraege": [
           {
             "platz": 1,
+            "team": "HSG Grethen/Maxdorf",
+            "team_id": 81338,
+            "spiele": 1,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 25,
+            "gegentore": 15,
+            "differenz": 10
+          },
+          {
+            "platz": 2,
             "team": "Hlz Friesenheim/Hochdorf 2",
             "team_id": 81336,
             "spiele": 1,
@@ -7372,7 +7391,7 @@
             "differenz": 7
           },
           {
-            "platz": 2,
+            "platz": 3,
             "team": "JSG Kaiserslautern/Dansenberg II",
             "team_id": 87382,
             "spiele": 1,
@@ -7385,7 +7404,20 @@
             "differenz": -7
           },
           {
-            "platz": 3,
+            "platz": 4,
+            "team": "HSG Mutterstadt/Ruchheim II",
+            "team_id": 81335,
+            "spiele": 1,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 15,
+            "gegentore": 25,
+            "differenz": -10
+          },
+          {
+            "platz": 5,
             "team": "JSG Mundenheim/Rheingönheim 2",
             "team_id": 81334,
             "spiele": 0,
@@ -7398,35 +7430,9 @@
             "differenz": 0
           },
           {
-            "platz": 4,
-            "team": "HSG Mutterstadt/Ruchheim II",
-            "team_id": 81335,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 5,
+            "platz": 6,
             "team": "Vsk Niederfeld",
             "team_id": 81337,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 6,
-            "team": "HSG Grethen/Maxdorf",
-            "team_id": 81338,
             "spiele": 0,
             "punkte": 0,
             "siege": 0,
@@ -7720,6 +7726,32 @@
           },
           {
             "platz": 3,
+            "team": "JSG Kaiserslautern/Dansenberg III",
+            "team_id": 87383,
+            "spiele": 1,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 21,
+            "gegentore": 14,
+            "differenz": 7
+          },
+          {
+            "platz": 4,
+            "team": "HSG Dudenhofen/Schifferstadt IV",
+            "team_id": 81346,
+            "spiele": 1,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 14,
+            "gegentore": 21,
+            "differenz": -7
+          },
+          {
+            "platz": 5,
             "team": "JSG Mundenheim/Rheingönheim 3",
             "team_id": 81342,
             "spiele": 1,
@@ -7732,7 +7764,7 @@
             "differenz": -13
           },
           {
-            "platz": 4,
+            "platz": 6,
             "team": "HSG Grethen/Maxdorf II",
             "team_id": 81345,
             "spiele": 1,
@@ -7745,7 +7777,7 @@
             "differenz": -21
           },
           {
-            "platz": 5,
+            "platz": 7,
             "team": "HSG Mutterstadt/Ruchheim III",
             "team_id": 81343,
             "spiele": 0,
@@ -7758,7 +7790,7 @@
             "differenz": 0
           },
           {
-            "platz": 6,
+            "platz": 8,
             "team": "TV Offenbach 4",
             "team_id": 81344,
             "spiele": 0,
@@ -7771,20 +7803,7 @@
             "differenz": 0
           },
           {
-            "platz": 7,
-            "team": "HSG Dudenhofen/Schifferstadt IV",
-            "team_id": 81346,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 8,
+            "platz": 9,
             "team": "TSV Speyer II",
             "team_id": 81348,
             "spiele": 0,
@@ -7797,22 +7816,9 @@
             "differenz": 0
           },
           {
-            "platz": 9,
+            "platz": 10,
             "team": "TG Waldsee II",
             "team_id": 81349,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 10,
-            "team": "JSG Kaiserslautern/Dansenberg III",
-            "team_id": 87383,
             "spiele": 0,
             "punkte": 0,
             "siege": 0,
