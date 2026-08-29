@@ -347,10 +347,20 @@ stündlich geprüft werden sollte. Ein Handstart über den Actions-Tab half,
 aber darauf ist kein Verlass.
 
 Cloudflare hält seine Cron-Zeiten dagegen ein. Der Worker schaut zu denselben
-Zeiten nach, wie alt `daten.json` ist, und stößt den Workflow per
-`repository_dispatch` nur an, wenn GitHub selbst nicht geliefert hat (älter
-als 50 Minuten). Läuft dort alles normal, passiert nichts – es gibt also
-keine doppelten Läufe.
+Zeiten nach und stößt den Workflow per `repository_dispatch` an, wenn drei
+Dinge zusammenkommen:
+
+1. `daten.json` ist älter als 50 Minuten – GitHub hat also nicht geliefert,
+2. in den letzten sechs Stunden wurde gespielt – es gibt etwas zu holen,
+3. oder die Daten sind älter als 25 Stunden – dann ist der nächtliche Lauf
+   ausgefallen und Verlegungen müssen ankommen, auch ohne Spiel.
+
+Läuft bei GitHub alles normal, passiert nichts – es gibt keine doppelten
+Läufe. Die zweite Bedingung hält den Worker unter der Woche still, ohne dass
+es auf den Cron-Ausdruck ankommt. Das ist kein Luxus: Cloudflare hat
+`5 12-22 * * 6,0` als ungültig abgewiesen, weil sein Parser den Sonntag
+anders als GitHub nicht als `0` zählt. Mit `SAT,SUN` läuft es, aber die
+Entscheidung soll nicht an solchen Stolperstellen hängen.
 
 Dafür braucht der Worker einen GitHub-Token:
 

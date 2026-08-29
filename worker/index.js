@@ -564,6 +564,28 @@ export default {
 };
 
 const HOECHSTALTER_MIN = 50;
+const TAGESFRIST_MIN = 25 * 60;        // der naechtliche Lauf darf nicht ausfallen
+const NACHSPIELZEIT_MS = 6 * 60 * 60 * 1000;
+
+/**
+ * Ist gerade ein Spiel gelaufen, dessen Ergebnis eingetragen werden koennte?
+ *
+ * Ohne diese Frage wuerde der Worker unter der Woche stundenlang Laeufe
+ * anstossen, in denen es nichts zu holen gibt - und er haenge davon ab, dass
+ * die Wochentage im Cron-Ausdruck stimmen. Cloudflare hat "6,0" fuer
+ * Samstag und Sonntag abgewiesen; solche Stolperstellen sollen nicht
+ * daruber entscheiden, wie oft der Workflow laeuft.
+ */
+function spielKuerzlich(roh) {
+  const jetzt = Date.now();
+  for (const mannschaft of Object.values(roh.teams || {})) {
+    for (const spiel of Object.values(mannschaft.spiele || {})) {
+      const anwurf = alsOrtszeit(spiel.datum);
+      if (anwurf <= jetzt && jetzt - anwurf < NACHSPIELZEIT_MS) return true;
+    }
+  }
+  return false;
+}
 
 async function nachschauen(env) {
   if (!env.GITHUB_TOKEN) {
@@ -571,12 +593,14 @@ async function nachschauen(env) {
     return;
   }
   let alter = Infinity;
+  let gespielt = true;      // ohne Daten im Zweifel nachlegen
   try {
     const antwort = await fetch(DATEN_URL, { cf: { cacheTtl: 0 } });
     if (antwort.ok) {
       const roh = await antwort.json();
       const stand = Date.parse(roh.aktualisiert);
       if (Number.isFinite(stand)) alter = (Date.now() - stand) / 60000;
+      gespielt = spielKuerzlich(roh);
     }
   } catch (e) {
     // Sind die Daten nicht erreichbar, ist das erst recht ein Grund
@@ -586,6 +610,11 @@ async function nachschauen(env) {
 
   if (alter < HOECHSTALTER_MIN) {
     console.log(`Daten sind ${Math.round(alter)} Minuten alt - GitHub war puenktlich`);
+    return;
+  }
+  if (!gespielt && alter < TAGESFRIST_MIN) {
+    console.log(`Daten sind ${Math.round(alter)} Minuten alt, aber es lief kein `
+                + `Spiel - kein Grund nachzulegen`);
     return;
   }
 

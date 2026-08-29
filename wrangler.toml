@@ -12,4 +12,6 @@ id = "9cdf5b8b1e044059909e7af519b2802a"
 # ausfallen laesst. Der Worker stoesst den Workflow nur an, wenn die
 # veroeffentlichten Daten aelter als 50 Minuten sind.
 [triggers]
-crons = ["5 12-22 * * 6,0", "17 3 * * *"]
+# Cloudflare weist "6,0" als ungueltig ab - anders als GitHub zaehlt sein
+# Parser den Sonntag nicht als 0. Mit den Kuerzeln ist es ohnehin lesbarer.
+crons = ["5 12-22 * * SAT,SUN", "17 3 * * *"]
