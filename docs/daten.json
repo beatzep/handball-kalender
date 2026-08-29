@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-08-29T16:16:01+00:00",
+  "aktualisiert": "2026-08-29T16:29:18+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -573,12 +573,38 @@
       "saison": "2026/27",
       "tabelle": {
         "runde": 1,
-        "gespielt": false,
+        "gespielt": true,
         "mannschaften": 12,
         "verlauf": [],
         "eintraege": [
           {
             "platz": 1,
+            "team": "TSV Kandel 2",
+            "team_id": 80975,
+            "spiele": 1,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 31,
+            "gegentore": 30,
+            "differenz": 1
+          },
+          {
+            "platz": 2,
+            "team": "HSV Lingenfeld/Schwegenheim 2",
+            "team_id": 80982,
+            "spiele": 1,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 30,
+            "gegentore": 31,
+            "differenz": -1
+          },
+          {
+            "platz": 3,
             "team": "SG LaFt - Herren",
             "team_id": 80970,
             "spiele": 0,
@@ -591,7 +617,7 @@
             "differenz": 0
           },
           {
-            "platz": 2,
+            "platz": 4,
             "team": "TV THALEISCHWEILER Herren",
             "team_id": 80973,
             "spiele": 0,
@@ -604,7 +630,7 @@
             "differenz": 0
           },
           {
-            "platz": 3,
+            "platz": 5,
             "team": "MSG Kaiserslautern/Dansenberg 2",
             "team_id": 80974,
             "spiele": 0,
@@ -617,20 +643,7 @@
             "differenz": 0
           },
           {
-            "platz": 4,
-            "team": "TSV Kandel 2",
-            "team_id": 80975,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 5,
+            "platz": 6,
             "team": "TUS Neuhofen 2",
             "team_id": 80976,
             "spiele": 0,
@@ -643,7 +656,7 @@
             "differenz": 0
           },
           {
-            "platz": 6,
+            "platz": 7,
             "team": "TV Offenbach 4",
             "team_id": 80977,
             "spiele": 0,
@@ -656,7 +669,7 @@
             "differenz": 0
           },
           {
-            "platz": 7,
+            "platz": 8,
             "team": "MSG Iggelheim/Meckenheim 3",
             "team_id": 80978,
             "spiele": 0,
@@ -669,7 +682,7 @@
             "differenz": 0
           },
           {
-            "platz": 8,
+            "platz": 9,
             "team": "TV Kirrweiler 2",
             "team_id": 80979,
             "spiele": 0,
@@ -682,22 +695,9 @@
             "differenz": 0
           },
           {
-            "platz": 9,
+            "platz": 10,
             "team": "HSG Mutterstadt/Ruchheim 2",
             "team_id": 80980,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 10,
-            "team": "HSV Lingenfeld/Schwegenheim 2",
-            "team_id": 80982,
             "spiele": 0,
             "punkte": 0,
             "siege": 0,
@@ -2053,25 +2053,44 @@
       "saison": "2026/27",
       "tabelle": {
         "runde": 1,
-        "gespielt": false,
+        "gespielt": true,
         "mannschaften": 7,
-        "verlauf": [],
+        "verlauf": [
+          {
+            "runde": 1,
+            "platz": 1,
+            "punkte": 2
+          }
+        ],
         "eintraege": [
           {
             "platz": 1,
             "team": "HSG Mutterstadt/Ruchheim Wa",
             "team_id": 81066,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
+            "spiele": 1,
+            "punkte": 2,
+            "siege": 1,
             "remis": 0,
             "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
+            "tore": 41,
+            "gegentore": 25,
+            "differenz": 16
           },
           {
             "platz": 2,
+            "team": "HSG Landau/Land",
+            "team_id": 81073,
+            "spiele": 1,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 25,
+            "gegentore": 41,
+            "differenz": -16
+          },
+          {
+            "platz": 3,
             "team": "Vorderpfälzer Luchse",
             "team_id": 81067,
             "spiele": 0,
@@ -2084,7 +2103,7 @@
             "differenz": 0
           },
           {
-            "platz": 3,
+            "platz": 4,
             "team": "HSG TSG/1.FC-Kaiserslautern",
             "team_id": 81068,
             "spiele": 0,
@@ -2097,7 +2116,7 @@
             "differenz": 0
           },
           {
-            "platz": 4,
+            "platz": 5,
             "team": "Vsk Niederfeld",
             "team_id": 81069,
             "spiele": 0,
@@ -2110,7 +2129,7 @@
             "differenz": 0
           },
           {
-            "platz": 5,
+            "platz": 6,
             "team": "TSV Speyer",
             "team_id": 81071,
             "spiele": 0,
@@ -2123,22 +2142,9 @@
             "differenz": 0
           },
           {
-            "platz": 6,
+            "platz": 7,
             "team": "WSG Rheinauen",
             "team_id": 81072,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 7,
-            "team": "HSG Landau/Land",
-            "team_id": 81073,
             "spiele": 0,
             "punkte": 0,
             "siege": 0,
@@ -4239,6 +4245,19 @@
         "eintraege": [
           {
             "platz": 1,
+            "team": "TUS Heiligenstein II",
+            "team_id": 81127,
+            "spiele": 1,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 49,
+            "gegentore": 31,
+            "differenz": 18
+          },
+          {
+            "platz": 2,
             "team": "HSG Landau/Land II",
             "team_id": 81125,
             "spiele": 1,
@@ -4251,7 +4270,7 @@
             "differenz": 6
           },
           {
-            "platz": 2,
+            "platz": 3,
             "team": "Mwsg Kandel/Hagenbach II",
             "team_id": 81124,
             "spiele": 1,
@@ -4264,7 +4283,7 @@
             "differenz": 5
           },
           {
-            "platz": 3,
+            "platz": 4,
             "team": "Vsk Niederfeld",
             "team_id": 81116,
             "spiele": 1,
@@ -4277,7 +4296,7 @@
             "differenz": -5
           },
           {
-            "platz": 4,
+            "platz": 5,
             "team": "TSV Speyer II",
             "team_id": 81129,
             "spiele": 1,
@@ -4290,20 +4309,20 @@
             "differenz": -6
           },
           {
-            "platz": 5,
+            "platz": 6,
             "team": "HSG Trifels",
             "team_id": 81122,
-            "spiele": 0,
+            "spiele": 1,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
+            "niederlagen": 1,
+            "tore": 31,
+            "gegentore": 49,
+            "differenz": -18
           },
           {
-            "platz": 6,
+            "platz": 7,
             "team": "JSG Rodalben/Thaleischweiler II",
             "team_id": 81123,
             "spiele": 0,
@@ -4316,22 +4335,9 @@
             "differenz": 0
           },
           {
-            "platz": 7,
+            "platz": 8,
             "team": "HSG Dudenhofen/Schifferstadt",
             "team_id": 81126,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 8,
-            "team": "TUS Heiligenstein II",
-            "team_id": 81127,
             "spiele": 0,
             "punkte": 0,
             "siege": 0,
@@ -5915,6 +5921,32 @@
           },
           {
             "platz": 2,
+            "team": "Wjsg Mainz05/TV Nieder-Olm Wd1",
+            "team_id": 89474,
+            "spiele": 1,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 24,
+            "gegentore": 23,
+            "differenz": 1
+          },
+          {
+            "platz": 3,
+            "team": "TV 03 Wörth",
+            "team_id": 81242,
+            "spiele": 1,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 23,
+            "gegentore": 24,
+            "differenz": -1
+          },
+          {
+            "platz": 4,
             "team": "JSG Kaiserslautern/Dansenberg",
             "team_id": 87386,
             "spiele": 1,
@@ -5927,7 +5959,7 @@
             "differenz": -5
           },
           {
-            "platz": 3,
+            "platz": 5,
             "team": "SV Bornheim",
             "team_id": 81237,
             "spiele": 0,
@@ -5940,7 +5972,7 @@
             "differenz": 0
           },
           {
-            "platz": 4,
+            "platz": 6,
             "team": "TV Edigheim",
             "team_id": 81238,
             "spiele": 0,
@@ -5953,7 +5985,7 @@
             "differenz": 0
           },
           {
-            "platz": 5,
+            "platz": 7,
             "team": "TV Kirrweiler",
             "team_id": 81240,
             "spiele": 0,
@@ -5966,7 +5998,7 @@
             "differenz": 0
           },
           {
-            "platz": 6,
+            "platz": 8,
             "team": "HSG Mutterstadt/Ruchheim Wd Ol",
             "team_id": 81241,
             "spiele": 0,
@@ -5979,35 +6011,9 @@
             "differenz": 0
           },
           {
-            "platz": 7,
-            "team": "TV 03 Wörth",
-            "team_id": 81242,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 8,
+            "platz": 9,
             "team": "TSG MZ-Bretzenheim",
             "team_id": 81243,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 9,
-            "team": "Wjsg Mainz05/TV Nieder-Olm Wd1",
-            "team_id": 89474,
             "spiele": 0,
             "punkte": 0,
             "siege": 0,
