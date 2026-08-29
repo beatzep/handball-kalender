@@ -139,6 +139,12 @@ Drei Eigenheiten der Verbandsdaten, die dabei zutage traten:
   Maßgeblich ist die Phase mit den **meisten** Spielen.
 - **Nicht jeder Wettbewerb wird gewertet.** Minis haben `has_standings=false`;
   die dortige Liste mit 50 Mannschaften ist eine Sammelliste, keine Tabelle.
+- **Der Tabellenstand steht in jeder Runde.** Die API legt den aktuellen
+  Stand nicht nur in die gespielte Runde, sondern in alle 18 (oder 22) der
+  Saison. Wer die höchste Runde mit Einträgen nimmt, landet am ersten
+  Spieltag bei „Stand nach Spieltag 18" und zeichnet einen Platzverlauf über
+  eine halbe Saison, die nie stattgefunden hat. Maßgeblich ist deshalb die
+  Zahl der tatsächlich absolvierten Spiele (`played`), nicht der Rundenindex.
 - **0:0 ist kein Ergebnis.** In der F-Jugend und bei den Minis wird ohne
   Ergebniszählung gespielt; der Verband markiert die Partien trotzdem als
   beendet (`is_finished`) und lässt `0:0` stehen. Im Kalender wäre das ein

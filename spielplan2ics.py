@@ -100,8 +100,15 @@ def hole_tabelle(phase_id: int | None, team_id: int | None = None) -> dict:
         runden.setdefault(eintrag.get("round") or 1, []).append(eintrag)
 
     mit_spielen = [r for r, e in runden.items() if any(x.get("played") for x in e)]
-    runde = max(mit_spielen) if mit_spielen else min(runden)
-    eintraege = runden[runde]
+    letzte = max(mit_spielen) if mit_spielen else min(runden)
+    eintraege = runden[letzte]
+
+    # Die API legt den aktuellen Stand in *jede* Runde der Saison, auch in
+    # die noch nicht gespielten. Am ersten Spieltag der wD-Bezirksoberliga
+    # stand er so identisch in Runde 1 bis 18 - "Stand nach Spieltag 18" am
+    # Saisonstart. Massgeblich ist deshalb nicht der Rundenindex, sondern
+    # wie viele Spiele tatsaechlich absolviert sind.
+    runde = max((e.get("played") or 0) for e in eintraege) if mit_spielen else letzte
 
     # position ist 0, solange nichts gespielt wurde - dann bleibt die
     # Reihenfolge der API erhalten (sie entspricht der Anzeige auf handball.net)
@@ -110,13 +117,22 @@ def hole_tabelle(phase_id: int | None, team_id: int | None = None) -> dict:
 
     # Platzverlauf: die API liefert fuer jeden Spieltag einen eigenen Stand,
     # daraus laesst sich die eigene Platzierung ueber die Saison ablesen.
+    # Aus demselben Grund wird hier nicht ueber die Rundenindizes gelaufen:
+    # sonst entstuenden achtzehn identische Punkte und die Grafik zeigte
+    # eine halbe Saison, die noch gar nicht stattgefunden hat. Ein Punkt
+    # entsteht erst, wenn sich der Stand tatsaechlich geaendert hat.
     verlauf = []
     for r in sorted(runden):
         eigener = next((e for e in runden[r]
                         if (e.get("team") or {}).get("id") == team_id), None)
-        if eigener and eigener.get("played") and eigener.get("position"):
-            verlauf.append({"runde": r, "platz": eigener["position"],
-                            "punkte": eigener.get("points", 0)})
+        if not (eigener and eigener.get("played") and eigener.get("position")):
+            continue
+        punkt = {"runde": eigener["played"], "platz": eigener["position"],
+                 "punkte": eigener.get("points", 0)}
+        if verlauf and verlauf[-1]["runde"] == punkt["runde"]:
+            verlauf[-1] = punkt          # je Spieltag zaehlt der letzte Stand
+        elif not verlauf or verlauf[-1] != punkt:
+            verlauf.append(punkt)
 
     return {
         "runde": runde,
