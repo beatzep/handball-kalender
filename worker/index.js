@@ -208,13 +208,16 @@ async function indexSchreiben(env, index) {
 async function tipperKennungen(env) {
   const index = await indexLesen(env);
   const jetzt = Date.now();
-  if (index && jetzt - index.stand < INDEX_FRISCH_MS) {
-    return { ids: index.ids, quelle: "liste" };
+  // stand 0 heisst: die Liste ist erst beim Tippen entstanden und wurde nie
+  // gegen den Speicher abgeglichen. Sie enthaelt dann nur, wer seitdem
+  // getippt hat - als vollstaendige Tabelle waere das eine Falschaussage.
+  if (index && index.stand > 0 && jetzt - index.stand < INDEX_FRISCH_MS) {
+    return { ids: index.ids, vollstaendig: true };
   }
   // Ist das Tageskontingent gerade erschoepft, rennt nicht jeder Abruf
   // erneut dagegen - eine Stunde Ruhe, dann der naechste Versuch.
   if (index && jetzt < index.gesperrtBis) {
-    return { ids: index.ids, quelle: "liste (veraltet)" };
+    return { ids: index.ids, vollstaendig: index.stand > 0 };
   }
   try {
     const liste = await env.ZAEHLER.list({ prefix: "tipper:" });
@@ -225,12 +228,12 @@ async function tipperKennungen(env) {
       if (!ids.includes(id)) ids.push(id);
     }
     await indexSchreiben(env, { stand: jetzt, gesperrtBis: 0, ids });
-    return { ids, quelle: "speicher" };
+    return { ids, vollstaendig: true };
   } catch (e) {
     if (index) {
       try { await indexSchreiben(env, { ...index, gesperrtBis: jetzt + INDEX_SPERRE_MS }); }
       catch { /* dann eben beim naechsten Mal */ }
-      return { ids: index.ids, quelle: "liste (veraltet)" };
+      return { ids: index.ids, vollstaendig: index.stand > 0 };
     }
     throw e;
   }
@@ -525,8 +528,10 @@ export default {
                                  || String(a.name).localeCompare(String(b.name)));
         return antwort({
           tabelle: eintraege.map((e, i) => ({ platz: i + 1, ...e })),
-          ...(ausgelassen || unlesbar
-              ? { unvollstaendig: { ausgelassen, unlesbar } } : {}),
+          ...(ausgelassen || unlesbar || !kennungen.vollstaendig
+              ? { unvollstaendig: { ausgelassen, unlesbar,
+                                    ...(kennungen.vollstaendig ? {} : { imAufbau: true }) } }
+              : {}),
         }, request);
       }
 

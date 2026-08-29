@@ -285,6 +285,9 @@ globalThis.fetch = vorherigeSpiele;
   pruefe("Wer jetzt tippt, steht sofort in der Tabelle",
          x.status === 200 && x.daten.tabelle.some(e => e.name === "Neu Getippt"),
          JSON.stringify(x.daten).slice(0, 140));
+  pruefe("Eine erst im Aufbau befindliche Wertung gibt sich als solche zu erkennen",
+         !!(x.daten.unvollstaendig && x.daten.unvollstaendig.imAufbau),
+         JSON.stringify(x.daten.unvollstaendig));
 
   listErlaubt = true;                      // am naechsten Tag
   {                                        // und die Stundensperre ist abgelaufen
@@ -297,6 +300,8 @@ globalThis.fetch = vorherigeSpiele;
   pruefe("Sobald list() wieder geht, sind die Aelteren dabei",
          drin.includes("Schon dabei") && drin.includes("Neu Getippt"),
          JSON.stringify(drin));
+  pruefe("Danach gilt die Wertung wieder als vollstaendig",
+         !x.daten.unvollstaendig, JSON.stringify(x.daten.unvollstaendig));
   globalThis.fetch = vorher2;
 }
 

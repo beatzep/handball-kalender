@@ -5906,10 +5906,14 @@ window.muruGeraet = (function () {
         .then(function (d) {
           zeigeTabelle(d.tabelle);
           if (d.unvollstaendig && tabelle.innerHTML) {
-            var n = (d.unvollstaendig.ausgelassen || 0) + (d.unvollstaendig.unlesbar || 0);
+            var u = d.unvollstaendig;
+            var n = (u.ausgelassen || 0) + (u.unlesbar || 0);
+            var text = u.imAufbau
+              ? 'Diese Wertung wird gerade neu aufgebaut, es fehlen noch '
+                + 'Einträge. Kein Tipp geht dabei verloren.'
+              : n + (n === 1 ? ' Eintrag fehlt' : ' Einträge fehlen') + ' in dieser Wertung.';
             tabelle.insertAdjacentHTML('beforeend',
-              '<p class="tippfuss">' + n + (n === 1 ? ' Eintrag fehlt' : ' Einträge fehlen')
-              + ' in dieser Wertung.</p>');
+              '<p class="tippfuss">' + text + '</p>');
           }
         })
         .catch(function () {
