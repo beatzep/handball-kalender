@@ -113,11 +113,16 @@ a { color: inherit; }
 .wahl select:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 .wahl select option { color: #14140f; background: #fff; }
 .wahl select optgroup { color: #14140f; background: #fff; font-weight: 600; }
-#anheften {
+.wahlknoepfe { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+#anheften, #zumeinen {
   font: inherit; font-size: .86rem; font-weight: 600; cursor: pointer;
-  margin-top: 10px; padding: 9px 14px; background: transparent;
+  padding: 9px 14px; background: transparent;
   color: rgba(247,245,240,.72); border: 1px solid rgba(247,245,240,.28);
 }
+/* Kein Stern: der gehoert zum Anheften und waere daneben verwirrend. */
+#zumeinen::before { content: "‹  "; color: var(--gold); }
+#zumeinen:hover { color: var(--auf-schwarz); border-color: rgba(247,245,240,.5); }
+#zumeinen:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 #anheften::before { content: "☆  "; }
 #anheften[aria-pressed="true"] { color: var(--gold); border-color: var(--gold); }
 #anheften[aria-pressed="true"]::before { content: "★  "; }
@@ -503,8 +508,11 @@ table.tabelle tr.wir td.platz { box-shadow: inset 2px 0 0 var(--gold); }
     <div class="wahl">
       <label for="teamwahl">Mannschaft</label>
       <select id="teamwahl"><option value="meine" hidden>Meine Mannschaften</option><optgroup label="Aktive" data-gruppe="Aktive"><option value="herren1">Herren I</option><option value="herren2">Herren II</option><option value="damen">Damen</option></optgroup><optgroup label="Jugend" data-gruppe="Jugend"><option value="ma">mA-Jugend</option><option value="wa">wA-Jugend</option><option value="mb">mB-Jugend</option><option value="mb-2">mB-Jugend II</option><option value="wb">wB-Jugend</option><option value="gc">gC-Jugend</option><option value="gc-2">gC-Jugend II</option><option value="wc">wC-Jugend</option><option value="wc-2">wC-Jugend II</option><option value="gd">gD-Jugend</option><option value="wd">wD-Jugend</option><option value="wd-2">wD-Jugend II</option><option value="ge">gE-Jugend</option><option value="ge-2">gE-Jugend II</option><option value="ge-3">gE-Jugend III</option><option value="gf">gF-Jugend</option><option value="gf-2">gF-Jugend II</option><option value="minis">Minis</option><option value="minis-2">Minis II</option><option value="minis-3">Minis III</option></optgroup></select>
-      <button id="anheften" type="button" aria-pressed="false"
-              title="Mannschaft oben in der Liste festhalten">Anheften</button>
+      <div class="wahlknoepfe">
+        <button id="anheften" type="button" aria-pressed="false"
+                title="Mannschaft oben in der Liste festhalten">Anheften</button>
+        <button id="zumeinen" type="button" hidden></button>
+      </div>
       <p class="anheftwink" id="anheftwink" hidden></p>
       <p class="uebersichtlink"><a href="wochenende.html">Alle Spiele am Wochenende &rsaquo;</a></p>
     </div>
@@ -5283,6 +5291,7 @@ window.muruGeraet = (function () {
     if (!zeigeMannschaft(ziel.team)) return;
     aktiv = ziel.team;
     zeigeAnsicht(aktiv, ziel.ansicht);
+    if (window.muruKnoepfeAktualisieren) window.muruKnoepfeAktualisieren();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
@@ -5564,12 +5573,48 @@ window.muruGeraet = (function () {
     if (gemerkt && wahl.value !== gemerkt) wahl.value = gemerkt;
   }
 
+  // Der Weg zurueck zum eigenen Blick. Bei mehreren angehefteten fuehrt er
+  // zur verschraenkten Ansicht, bei genau einer direkt zu ihr - "Meine
+  // Mannschaften" gibt es dann ja nicht. Wer schon dort ist, braucht ihn
+  // nicht: ein Knopf zur aktuellen Ansicht kostet nur Platz.
+  function zeigeRueckweg() {
+    var zurueck = document.getElementById('zumeinen');
+    if (!zurueck) return;
+    var liste = lies();
+    var ziel = liste.length >= 2 ? 'meine' : (liste[0] || '');
+    if (!ziel || wahl.value === ziel) { zurueck.hidden = true; return; }
+
+    var beschriftung = 'Meine Mannschaften';
+    if (ziel !== 'meine') {
+      var option = wahl.querySelector('option[value="' + ziel + '"]');
+      if (!option) { zurueck.hidden = true; return; }
+      beschriftung = option.textContent;
+    }
+    zurueck.hidden = false;
+    zurueck.textContent = beschriftung;
+    zurueck.setAttribute('data-ziel', ziel);
+    zurueck.title = 'Zurück zu ' + beschriftung;
+  }
+
   function zeigeKnopf() {
+    zeigeRueckweg();
     if (wahl.value === 'meine') { knopf.hidden = true; return; }
     knopf.hidden = false;
     var an = lies().indexOf(wahl.value) >= 0;
     knopf.setAttribute('aria-pressed', an ? 'true' : 'false');
     knopf.textContent = an ? 'Angeheftet' : 'Anheften';
+  }
+
+  var rueckweg = document.getElementById('zumeinen');
+  if (rueckweg) {
+    rueckweg.addEventListener('click', function () {
+      var ziel = rueckweg.getAttribute('data-ziel');
+      if (!ziel) return;
+      wahl.value = ziel;
+      // Ueber dasselbe Ereignis wie das Auswahlfeld, damit nichts doppelt
+      // gepflegt werden muss.
+      wahl.dispatchEvent(new Event('change'));
+    });
   }
 
   knopf.addEventListener('click', function () {
@@ -5585,6 +5630,9 @@ window.muruGeraet = (function () {
   });
 
   wahl.addEventListener('change', zeigeKnopf);
+  // Auch der Sprung ueber einen Link wechselt die Mannschaft - dann muessen
+  // die Knoepfe mitziehen. Die beiden Bloecke kennen einander sonst nicht.
+  window.muruKnoepfeAktualisieren = zeigeKnopf;
   ordne();
   zeigeKnopf();
 })();

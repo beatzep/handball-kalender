@@ -172,6 +172,7 @@ window.muruGeraet = (function () {
     if (!zeigeMannschaft(ziel.team)) return;
     aktiv = ziel.team;
     zeigeAnsicht(aktiv, ziel.ansicht);
+    if (window.muruKnoepfeAktualisieren) window.muruKnoepfeAktualisieren();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
@@ -453,12 +454,48 @@ window.muruGeraet = (function () {
     if (gemerkt && wahl.value !== gemerkt) wahl.value = gemerkt;
   }
 
+  // Der Weg zurueck zum eigenen Blick. Bei mehreren angehefteten fuehrt er
+  // zur verschraenkten Ansicht, bei genau einer direkt zu ihr - "Meine
+  // Mannschaften" gibt es dann ja nicht. Wer schon dort ist, braucht ihn
+  // nicht: ein Knopf zur aktuellen Ansicht kostet nur Platz.
+  function zeigeRueckweg() {
+    var zurueck = document.getElementById('zumeinen');
+    if (!zurueck) return;
+    var liste = lies();
+    var ziel = liste.length >= 2 ? 'meine' : (liste[0] || '');
+    if (!ziel || wahl.value === ziel) { zurueck.hidden = true; return; }
+
+    var beschriftung = 'Meine Mannschaften';
+    if (ziel !== 'meine') {
+      var option = wahl.querySelector('option[value="' + ziel + '"]');
+      if (!option) { zurueck.hidden = true; return; }
+      beschriftung = option.textContent;
+    }
+    zurueck.hidden = false;
+    zurueck.textContent = beschriftung;
+    zurueck.setAttribute('data-ziel', ziel);
+    zurueck.title = 'Zurück zu ' + beschriftung;
+  }
+
   function zeigeKnopf() {
+    zeigeRueckweg();
     if (wahl.value === 'meine') { knopf.hidden = true; return; }
     knopf.hidden = false;
     var an = lies().indexOf(wahl.value) >= 0;
     knopf.setAttribute('aria-pressed', an ? 'true' : 'false');
     knopf.textContent = an ? 'Angeheftet' : 'Anheften';
+  }
+
+  var rueckweg = document.getElementById('zumeinen');
+  if (rueckweg) {
+    rueckweg.addEventListener('click', function () {
+      var ziel = rueckweg.getAttribute('data-ziel');
+      if (!ziel) return;
+      wahl.value = ziel;
+      // Ueber dasselbe Ereignis wie das Auswahlfeld, damit nichts doppelt
+      // gepflegt werden muss.
+      wahl.dispatchEvent(new Event('change'));
+    });
   }
 
   knopf.addEventListener('click', function () {
@@ -474,6 +511,9 @@ window.muruGeraet = (function () {
   });
 
   wahl.addEventListener('change', zeigeKnopf);
+  // Auch der Sprung ueber einen Link wechselt die Mannschaft - dann muessen
+  // die Knoepfe mitziehen. Die beiden Bloecke kennen einander sonst nicht.
+  window.muruKnoepfeAktualisieren = zeigeKnopf;
   ordne();
   zeigeKnopf();
 })();

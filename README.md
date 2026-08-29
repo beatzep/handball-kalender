@@ -175,6 +175,14 @@ Zwei Dinge waren dabei zu lösen:
   gleiche Fall wie bei einem geteilten Link, den der Empfänger in einem schon
   offenen Tab anklickt. Ein `hashchange`-Empfänger behebt beides.
 
+Umgekehrt führt ein Knopf neben „Anheften" zurück zum eigenen Blick. Was er
+anzeigt, richtet sich nach den angehefteten Mannschaften: bei zweien oder mehr
+`‹ Meine Mannschaften`, bei genau einer deren Name (`‹ Herren I`) – die
+verschränkte Ansicht gibt es dann ja nicht. Ist keine angeheftet oder ist man
+schon am Ziel, verschwindet er; ein Knopf zur aktuellen Ansicht kostet nur
+Platz. Auf 375 px stehen beide Knöpfe nebeneinander (295 px), enger rutscht
+der zweite in die nächste Zeile.
+
 `pruefe_verweise.py` stellt sicher, dass jeder Verweis bei einer Mannschaft
 ankommt, dass keine Zeile ohne Weg dasteht und dass der Rückweg existiert.
 Ein Tippfehler im Schlüssel fiele sonst niemandem auf: die Seite zeigt dann

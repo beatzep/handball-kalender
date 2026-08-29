@@ -107,11 +107,16 @@ a { color: inherit; }
 .wahl select:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 .wahl select option { color: #14140f; background: #fff; }
 .wahl select optgroup { color: #14140f; background: #fff; font-weight: 600; }
-#anheften {
+.wahlknoepfe { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+#anheften, #zumeinen {
   font: inherit; font-size: .86rem; font-weight: 600; cursor: pointer;
-  margin-top: 10px; padding: 9px 14px; background: transparent;
+  padding: 9px 14px; background: transparent;
   color: rgba(247,245,240,.72); border: 1px solid rgba(247,245,240,.28);
 }
+/* Kein Stern: der gehoert zum Anheften und waere daneben verwirrend. */
+#zumeinen::before { content: "‹  "; color: var(--gold); }
+#zumeinen:hover { color: var(--auf-schwarz); border-color: rgba(247,245,240,.5); }
+#zumeinen:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 #anheften::before { content: "☆  "; }
 #anheften[aria-pressed="true"] { color: var(--gold); border-color: var(--gold); }
 #anheften[aria-pressed="true"]::before { content: "★  "; }

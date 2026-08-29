@@ -57,6 +57,13 @@ def main() -> int:
     # Die Ruecktueren muessen ebenfalls stehen
     if 'href="wochenende.html"' not in seite:
         fehler.append("index.html hat keinen Weg zurueck zur Wochenend-Uebersicht")
+    if 'id="zumeinen"' not in seite:
+        fehler.append("index.html hat keinen Knopf zurueck zum eigenen Blick")
+    # Auf den Aufruf pruefen, nicht auf den blossen Namen: ein Tippfehler
+    # wie "...AktualisierenX" enthielte den Namen weiterhin.
+    if "muruKnoepfeAktualisieren()" not in seite:
+        fehler.append("die Knoepfe ziehen bei einem Sprung ueber einen Link "
+                      "nicht mit - der Rueckweg zeigte dann die falsche Mannschaft")
 
     print(f"{gepruefte} Verweise geprueft, {len(vorhanden)} Mannschaften vorhanden")
     for f in fehler:

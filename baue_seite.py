@@ -750,8 +750,11 @@ automatisch im Handykalender, Verlegungen inklusive.">
     <div class="wahl">
       <label for="teamwahl">Mannschaft</label>
       <select id="teamwahl">{optionen}</select>
-      <button id="anheften" type="button" aria-pressed="false"
-              title="Mannschaft oben in der Liste festhalten">Anheften</button>
+      <div class="wahlknoepfe">
+        <button id="anheften" type="button" aria-pressed="false"
+                title="Mannschaft oben in der Liste festhalten">Anheften</button>
+        <button id="zumeinen" type="button" hidden></button>
+      </div>
       <p class="anheftwink" id="anheftwink" hidden></p>
       <p class="uebersichtlink"><a href="wochenende.html">Alle Spiele am Wochenende &rsaquo;</a></p>
     </div>
