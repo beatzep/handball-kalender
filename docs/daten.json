@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-08-29T19:31:03+00:00",
+  "aktualisiert": "2026-08-29T19:38:31+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -175,7 +175,9 @@
           }
         ]
       },
-      "form": [],
+      "form": [
+        "S"
+      ],
       "statistik": {
         "fahrten": {
           "gesamt_km": 1539,
@@ -197,10 +199,10 @@
         },
         "bilanz": {
           "gesamt": {
-            "s": 0,
+            "s": 1,
             "u": 0,
             "n": 0,
-            "spiele": 0
+            "spiele": 1
           },
           "heim": {
             "s": 0,
@@ -209,28 +211,37 @@
             "spiele": 0
           },
           "auswaerts": {
-            "s": 0,
+            "s": 1,
             "u": 0,
             "n": 0,
-            "spiele": 0
+            "spiele": 1
           }
         },
         "serien": {
-          "ohne_niederlage": 0,
-          "aktuell": 0,
-          "aktuell_art": null
+          "ohne_niederlage": 1,
+          "aktuell": 1,
+          "aktuell_art": "S"
         },
         "krimis": {
           "anzahl": 0,
-          "anteil": 0,
-          "gesamt": 0
+          "gesamt": 1,
+          "anteil": 0
         },
-        "tore": {},
+        "tore": {
+          "erzielt": 31,
+          "kassiert": 23,
+          "schnitt": 31.0,
+          "torreichstes": {
+            "gegner": "TSG MZ-Bretzenheim 2",
+            "stand": "31:23",
+            "summe": 54
+          }
+        },
         "anwurf": {
           "spaet": {
-            "spiele": 0,
-            "punkte": 0,
-            "schnitt": 0
+            "spiele": 1,
+            "punkte": 2,
+            "schnitt": 2.0
           },
           "frueh": {
             "spiele": 0,
@@ -264,7 +275,14 @@
           "spieltag": 1,
           "heim": false,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 0,
+          "ergebnis": {
+            "heim": 23,
+            "gast": 31,
+            "eigene": 31,
+            "fremde": 23,
+            "ausgang": "S"
+          }
         },
         "2627RPBKROERMA0206": {
           "datum": "2026-09-05T19:45:00",
