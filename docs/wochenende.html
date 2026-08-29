@@ -3,10 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Auswertung – HSG MuRu Spielplan</title>
-<meta name="robots" content="noindex, nofollow">
+<title>Wer spielt wann – HSG Mutterstadt/Ruchheim</title>
+<meta name="description" content="Alle Spiele aller Mannschaften der HSG
+Mutterstadt/Ruchheim in den nächsten zwei Wochen.">
 <meta name="theme-color" content="#14140f">
 <link rel="icon" href="icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="icon-180.png">
 <style>
 :root {
   --gold: #dd9933; --gold-tief: #b87a22; --gold-schwach: rgba(221,153,51,.10);
@@ -398,196 +400,314 @@ table.tabelle tr.wir td.platz { box-shadow: inset 2px 0 0 var(--gold); }
   .wahl select { max-width: 320px; }
 }
 
-.anmeldung { max-width: 380px; }
-.anmeldung label { display: block; font-size: .82rem; color: var(--leise);
-                   margin: 0 0 6px; }
-.anmeldung input { font: inherit; width: 100%; padding: 13px 14px; margin-bottom: 16px;
-                   background: transparent; color: var(--tinte);
-                   border: 1px solid var(--linie); }
-.anmeldung input:focus-visible { outline: 2px solid var(--gold-tief); outline-offset: 1px; }
-.verlauf { margin-top: 30px; }
-.verlauf .balken { fill: var(--gold); }
-table.verteilung { width: 100%; border-collapse: collapse; font-size: .92rem;
-                   margin-bottom: 8px; }
-table.verteilung td { padding: 10px 0; border-bottom: 1px solid var(--linie-zart); }
-table.verteilung td.anteil { width: 45%; padding: 10px 14px; }
-table.verteilung td.anteil span { display: block; height: 8px; background: var(--gold);
-                                  min-width: 1px; }
-table.verteilung td.pkt { text-align: right; font-weight: 600; white-space: nowrap; }
-.meldung { font-size: .9rem; color: var(--tinte-weich); }
-.meldung.schlecht { color: var(--niederlage); }
-#abmelden { font: inherit; font-size: .84rem; background: none; border: 0; padding: 0;
-            color: var(--leise); text-decoration: underline; cursor: pointer;
-            margin-top: 30px; }
+.filter { display: flex; margin: 30px 0 6px; }
+.filter button { font: inherit; font-size: .88rem; font-weight: 600; cursor: pointer;
+                 background: transparent; color: var(--leise);
+                 border: 1px solid var(--linie); padding: 10px 16px; margin-right: -1px; }
+.filter button[aria-pressed="true"] { color: var(--tinte); border-color: var(--tinte);
+                                      position: relative; z-index: 1; }
+.tag { font-size: .82rem; font-weight: 600; letter-spacing: .06em;
+       text-transform: uppercase; color: var(--leise); padding: 30px 0 10px; }
+.partie { display: grid; grid-template-columns: 58px 1fr auto; gap: 0 14px;
+          align-items: start; padding: 14px 0; border-top: 1px solid var(--linie); }
+.partie .uhr { font-size: .88rem; font-weight: 600; }
+.partie .wer { font-size: 1.02rem; font-weight: 600; line-height: 1.3; }
+.partie .gegen { font-size: .95rem; line-height: 1.35; overflow-wrap: anywhere; }
+.partie .wo { font-size: .86rem; color: var(--leise); margin-top: 2px; }
+.partie .wo a { text-decoration: none; box-shadow: inset 0 -1px 0 var(--linie); }
+.partie .wo a:hover { box-shadow: inset 0 -1px 0 var(--gold); }
+.partie.heimspiel { box-shadow: inset 3px 0 0 var(--gold); padding-left: 12px;
+                    margin-left: -12px; }
 </style>
 </head>
-<body data-worker="https://muru-zaehler.edis-herrmann.workers.dev">
+<body>
 
 <header class="kopf">
   <div class="huelle">
     <div class="marke">
-      <img src="logo.png" alt="" width="149" height="200">
+      <img src="logo.png" alt="Wappen der HSG Mutterstadt/Ruchheim" width="149" height="200">
       <div>
         <div class="zeile1">HSG Mutterstadt/Ruchheim</div>
-        <div class="zeile2">Auswertung</div>
+        <div class="zeile2">Alle Mannschaften</div>
       </div>
     </div>
-    <h1>Nutzung</h1>
-    <p class="saison">Letzte 30 Tage</p>
+    <h1>Wer spielt<br>wann</h1>
+    <p class="saison">38 Spiele in den nächsten zwei Wochen,
+       davon 21 zu Hause</p>
+    <p class="uebersichtlink"><a href="./">Zum Spielplan einer Mannschaft &rsaquo;</a></p>
   </div>
 </header>
 
 <main class="huelle">
-  <form id="anmeldung" class="anmeldung teil">
-    <label for="benutzer">Benutzer</label>
-    <input id="benutzer" type="email" autocomplete="username" required>
-    <label for="passwort">Passwort</label>
-    <input id="passwort" type="password" autocomplete="current-password" required>
-    <button class="knopf" type="submit">Anmelden</button>
-    <p id="meldung" class="meldung"></p>
-  </form>
+  <div class="filter" role="group" aria-label="Auswahl">
+    <button type="button" data-filter="alle" aria-pressed="true">Alle Spiele</button>
+    <button type="button" data-filter="heim" aria-pressed="false">Nur Heimspiele</button>
+  </div>
 
-  <section id="auswertung" class="teil" hidden></section>
-  <button id="abmelden" type="button" hidden>Abmelden</button>
+  <div id="liste"><div class="tag">Heute, 29.08.</div><div class="partie" data-heim="nein">
+<div class="uhr">12:30</div>
+<div><div class="wer">gE-Jugend</div>
+<div class="gegen">bei JSG Mundenheim/Rheingönheim</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Halle%20Schulzentrum%20%28Mt%29%20Mundenheim%20Adlerdamm%2C%2067061%20Ludwigshafen" target="_blank" rel="noopener">Halle Schulzentrum (Mt) Mundenheim</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="partie" data-heim="nein">
+<div class="uhr">12:30</div>
+<div><div class="wer">gF-Jugend</div>
+<div class="gegen">bei JSG Mundenheim/Rheingönheim II</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Heinrich-Ries-Halle%20Ludwigshafen%20Pettenkoferstra%C3%9Fe%2C%2067063%20Ludwigshafen-Friesenheim" target="_blank" rel="noopener">Heinrich-Ries-Halle Ludwigshafen</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="partie heimspiel" data-heim="ja">
+<div class="uhr">14:00</div>
+<div><div class="wer">gF-Jugend II</div>
+<div class="gegen">gegen TSV Speyer III</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="partie" data-heim="nein">
+<div class="uhr">14:00</div>
+<div><div class="wer">wC-Jugend</div>
+<div class="gegen">bei SG Zweibrücken</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Ignaz-Roth-Halle%20Landauer%20Str.%2022%2C%2066482%20Zweibr%C3%BCcken" target="_blank" rel="noopener">Ignaz-Roth-Halle</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="partie heimspiel" data-heim="ja">
+<div class="uhr">15:30</div>
+<div><div class="wer">gE-Jugend II</div>
+<div class="gegen">gegen HSG Grethen/Maxdorf</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="partie" data-heim="nein">
+<div class="uhr">16:00</div>
+<div><div class="wer">wA-Jugend</div>
+<div class="gegen">bei HSG Landau/Land</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Bbs-Sporthalle%20Landau%20August-Croissant-Str.%2027%2C%2076829%20Landau" target="_blank" rel="noopener">Bbs-Sporthalle Landau</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="partie" data-heim="nein">
+<div class="uhr">18:00</div>
+<div><div class="wer">mB-Jugend</div>
+<div class="gegen">bei Mjsg Sobernheim/Meisenheim</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Bad%20Sobernheim%2C%20Dr.%20W.D%C3%BCmmler%20Halle%20Staudernheimer%20Stra%C3%9Fe%2C%2055566%20Bad%20Sobernheim" target="_blank" rel="noopener">Bad Sobernheim, Dr. W.Dümmler Halle</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="partie" data-heim="nein">
+<div class="uhr">19:00</div>
+<div><div class="wer">Herren II</div>
+<div class="gegen">bei TV THALEISCHWEILER Herren</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=IGS-Sporthalle%20Thaleischweiler%20Schulstr.%202%2C%2066987%20Thaleischweiler" target="_blank" rel="noopener">IGS-Sporthalle Thaleischweiler</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="partie" data-heim="nein">
+<div class="uhr">20:00</div>
+<div><div class="wer">Herren I</div>
+<div class="gegen">bei TSG MZ-Bretzenheim II</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=IGS%201%20Mainz-Bretzenheim%20Hans-B%C3%B6ckler-Stra%C3%9Fe%202%2C%2055128%20Mainz" target="_blank" rel="noopener">IGS 1 Mainz-Bretzenheim</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="tag">Morgen, 30.08.</div><div class="partie" data-heim="nein">
+<div class="uhr">10:00</div>
+<div><div class="wer">Minis</div>
+<div class="gegen">bei TV Edigheim</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Schulzentrum%20Edigheim%20M%C3%BChlaustr.%2051%2C%2067069%20Ludwigshafen" target="_blank" rel="noopener">Schulzentrum Edigheim</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="partie heimspiel" data-heim="ja">
+<div class="uhr">10:30</div>
+<div><div class="wer">wC-Jugend II</div>
+<div class="gegen">gegen HSG Dudenhofen/Schifferstadt</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="partie heimspiel" data-heim="ja">
+<div class="uhr">12:15</div>
+<div><div class="wer">gD-Jugend</div>
+<div class="gegen">gegen Mjsg SG Saulheim/HSV Alzey</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="partie heimspiel" data-heim="ja">
+<div class="uhr">13:45</div>
+<div><div class="wer">gC-Jugend II</div>
+<div class="gegen">gegen HSG Dudenhofen/Schifferstadt</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="partie" data-heim="nein">
+<div class="uhr">14:00</div>
+<div><div class="wer">wD-Jugend II</div>
+<div class="gegen">bei Mwsg Kandel/Hagenbach</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Kandel%2C%20IGS%20Sporthalle%20Schubertstr.%207%2C%2076870%20Kandel" target="_blank" rel="noopener">Kandel, IGS Sporthalle</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="partie heimspiel" data-heim="ja">
+<div class="uhr">15:30</div>
+<div><div class="wer">gC-Jugend</div>
+<div class="gegen">gegen JSG Mundenheim/Rheingönheim II</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="partie" data-heim="nein">
+<div class="uhr">16:15</div>
+<div><div class="wer">gE-Jugend III</div>
+<div class="gegen">bei TV Offenbach IV</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Queichtalhalle%20Offenbach%20Konrad-Lerch-Ring%203%2C%2076877%20Offenbach" target="_blank" rel="noopener">Queichtalhalle Offenbach</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="partie heimspiel" data-heim="ja">
+<div class="uhr">17:45</div>
+<div><div class="wer">wB-Jugend</div>
+<div class="gegen">gegen HSG Wittlich</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="partie" data-heim="nein">
+<div class="uhr">18:00</div>
+<div><div class="wer">mB-Jugend II</div>
+<div class="gegen">bei Hr Göllheim/Eisenberg/Kindenheim/Asselheim</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Berufsschule%20Eisenberg%20Martin-Luther-Str.%2018%2C%2067304%20Eisenberg" target="_blank" rel="noopener">Berufsschule Eisenberg</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="tag">Samstag, 05.09.</div><div class="partie heimspiel" data-heim="ja">
+<div class="uhr">12:00</div>
+<div><div class="wer">wD-Jugend</div>
+<div class="gegen">gegen Wjsg Mainz05/TV Nieder-Olm Wd1</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="partie heimspiel" data-heim="ja">
+<div class="uhr">13:30</div>
+<div><div class="wer">wA-Jugend</div>
+<div class="gegen">gegen HSG TSG/1.FC-Kaiserslautern</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="partie heimspiel" data-heim="ja">
+<div class="uhr">15:30</div>
+<div><div class="wer">wC-Jugend</div>
+<div class="gegen">gegen TV Engers</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="partie heimspiel" data-heim="ja">
+<div class="uhr">17:45</div>
+<div><div class="wer">mA-Jugend</div>
+<div class="gegen">gegen Südpfalz Tiger</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="partie heimspiel" data-heim="ja">
+<div class="uhr">19:45</div>
+<div><div class="wer">Herren I</div>
+<div class="gegen">gegen HSG Worms</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="tag">Sonntag, 06.09.</div><div class="partie heimspiel" data-heim="ja">
+<div class="uhr">10:00</div>
+<div><div class="wer">Minis II</div>
+<div class="gegen">gegen JSG Mundenheim/Rheingönheim II</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TVR-Sporthalle%20Ludwigshafen%20Fu%C3%9Fg%C3%B6nheimer%20Str.%20127%20%28Ortsende%29%2C%2067071%20Ludwigshafen" target="_blank" rel="noopener">TVR-Sporthalle Ludwigshafen</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="partie heimspiel" data-heim="ja">
+<div class="uhr">10:00</div>
+<div><div class="wer">Minis II</div>
+<div class="gegen">gegen HSG Dudenhofen/Schifferstadt III</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TVR-Sporthalle%20Ludwigshafen%20Fu%C3%9Fg%C3%B6nheimer%20Str.%20127%20%28Ortsende%29%2C%2067071%20Ludwigshafen" target="_blank" rel="noopener">TVR-Sporthalle Ludwigshafen</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="partie" data-heim="nein">
+<div class="uhr">10:00</div>
+<div><div class="wer">gC-Jugend</div>
+<div class="gegen">bei Mjsg Bodenheim/Budenheim II</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Budenheim%2C%20Waldsporthalle%20%28Hv%20Rheinhessen%29%20R%C3%B6merstra%C3%9Fe%2C%2055257%20Budenheim" target="_blank" rel="noopener">Budenheim, Waldsporthalle (Hv Rheinhessen)</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="partie heimspiel" data-heim="ja">
+<div class="uhr">10:00</div>
+<div><div class="wer">gE-Jugend III</div>
+<div class="gegen">gegen TUS Heiligenstein</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="partie" data-heim="nein">
+<div class="uhr">11:00</div>
+<div><div class="wer">gD-Jugend</div>
+<div class="gegen">bei Hr Göllheim/Eisenberg/Asselheim/Kindenheim</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=IGS-Sporthalle%20Gr%C3%BCnstadt%20Asselheimer%20Stra%C3%9Fe%2019A%2C%2067269%20Gr%C3%BCnstadt" target="_blank" rel="noopener">IGS-Sporthalle Grünstadt</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="partie heimspiel" data-heim="ja">
+<div class="uhr">11:30</div>
+<div><div class="wer">gE-Jugend</div>
+<div class="gegen">gegen JSG Kaiserslautern/Dansenberg</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="partie" data-heim="nein">
+<div class="uhr">12:00</div>
+<div><div class="wer">wC-Jugend II</div>
+<div class="gegen">bei Mjsg SG Saulheim/HSV Alzey III</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Rundsporthalle%20Alzey%20Frankenstra%C3%9Fe%2017%2C%2055232%20Alzey" target="_blank" rel="noopener">Rundsporthalle Alzey</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="partie" data-heim="nein">
+<div class="uhr">12:15</div>
+<div><div class="wer">gC-Jugend II</div>
+<div class="gegen">bei TUS Heiligenstein II</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Rhein-Pfalz-Halle%20R%C3%B6merberg-Heiligenstein%20Viehtriftstra%C3%9Fe%20106%2C%2067354%20R%C3%B6merberg-Heiligenstein" target="_blank" rel="noopener">Rhein-Pfalz-Halle Römerberg-Heiligenstein</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="partie heimspiel" data-heim="ja">
+<div class="uhr">12:30</div>
+<div><div class="wer">gF-Jugend</div>
+<div class="gegen">gegen TSG Friesenheim II</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TVR-Sporthalle%20Ludwigshafen%20Fu%C3%9Fg%C3%B6nheimer%20Str.%20127%20%28Ortsende%29%2C%2067071%20Ludwigshafen" target="_blank" rel="noopener">TVR-Sporthalle Ludwigshafen</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="partie heimspiel" data-heim="ja">
+<div class="uhr">13:00</div>
+<div><div class="wer">wD-Jugend II</div>
+<div class="gegen">gegen HSG Eckbachtal II</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="partie" data-heim="nein">
+<div class="uhr">13:15</div>
+<div><div class="wer">gE-Jugend II</div>
+<div class="gegen">bei Hlz Friesenheim/Hochdorf II</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Sportzentrum%20TV%20Hochdorf%20Im%20Einolf%202%2C%2067126%20Hochdorf" target="_blank" rel="noopener">Sportzentrum TV Hochdorf</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="partie heimspiel" data-heim="ja">
+<div class="uhr">16:15</div>
+<div><div class="wer">mB-Jugend</div>
+<div class="gegen">gegen TV Kirrweiler</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="partie" data-heim="nein">
+<div class="uhr">16:30</div>
+<div><div class="wer">wB-Jugend</div>
+<div class="gegen">bei Hf Untere Saar</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=Seffersbachhalle%20Ringstra%C3%9Fe%205%2C%2066663%20Merzig" target="_blank" rel="noopener">Seffersbachhalle</a></div></div>
+<div class="rechts"><div class="hz ">A</div></div>
+</div><div class="partie heimspiel" data-heim="ja">
+<div class="uhr">18:00</div>
+<div><div class="wer">Damen</div>
+<div class="gegen">gegen FSG Selz-Wiesbach</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div><div class="partie heimspiel" data-heim="ja">
+<div class="uhr">20:00</div>
+<div><div class="wer">Herren II</div>
+<div class="gegen">gegen HSG Grethen/Maxdorf</div>
+<div class="wo"><a href="https://www.google.com/maps/search/?api=1&amp;query=TSG-Sporthalle%20Mutterstadt%20Bohligstr.%201%2C%2067112%20Mutterstadt" target="_blank" rel="noopener">TSG-Sporthalle Mutterstadt</a></div></div>
+<div class="rechts"><div class="hz heim">H</div></div>
+</div></div>
 
   <p class="fuss">
-    Die Zahlen liegen beim Zähler-Dienst und werden nur nach Anmeldung
-    herausgegeben. <a href="./">Zurück zum Spielplan</a>
+    Stand: 29.08.2026, 04:19 Uhr. Wird täglich mit
+    <a href="https://www.handball.net" target="_blank" rel="noopener">handball.net</a>
+    abgeglichen. <a href="./">Spielplan abonnieren</a>
   </p>
 </main>
 
 <script>
 (function () {
-  var worker = document.body.getAttribute('data-worker');
-  var form = document.getElementById('anmeldung');
-  var feldBenutzer = document.getElementById('benutzer');
-  var feldPasswort = document.getElementById('passwort');
-  var meldung = document.getElementById('meldung');
-  var bereich = document.getElementById('auswertung');
-  var abmelden = document.getElementById('abmelden');
+  var knoepfe = [].slice.call(document.querySelectorAll('[data-filter]'));
+  var liste = document.getElementById('liste');
 
-  function zahl(n) { return (n || 0).toLocaleString('de-DE'); }
-
-  function kennzahl(titel, wert, zusatz) {
-    return '<div><dt>' + titel + '</dt><dd>' + wert +
-      (zusatz ? '<span class="zusatz">' + zusatz + '</span>' : '') + '</dd></div>';
+  function setze(art) {
+    knoepfe.forEach(function (k) {
+      k.setAttribute('aria-pressed', k.getAttribute('data-filter') === art ? 'true' : 'false');
+    });
+    liste.querySelectorAll('.partie').forEach(function (p) {
+      p.hidden = art === 'heim' && p.getAttribute('data-heim') !== 'ja';
+    });
+    // Tagesüberschriften ohne sichtbare Spiele verschwinden mit
+    var sichtbar = false, letzte = null;
+    [].slice.call(liste.children).reverse().forEach(function (el) {
+      if (el.classList.contains('tag')) {
+        el.hidden = !sichtbar;
+        sichtbar = false;
+      } else if (!el.hidden) {
+        sichtbar = true;
+      }
+    });
   }
 
-  /** Balken je Tag - eine Kurve taeuscht bei laengeren Luecken Verlauf vor. */
-  function verlaufsbild(tage) {
-    if (!tage.length) return '';
-    var hoechst = Math.max.apply(null, tage.map(function (t) { return t.aufrufe; })) || 1;
-    var B = 320, H = 110, unten = 22, links = 26;
-    var breite = (B - links) / tage.length;
-    var balken = tage.map(function (t, i) {
-      var h = Math.round((H - unten - 8) * t.aufrufe / hoechst);
-      return '<rect x="' + (links + i * breite + 1).toFixed(1) + '" y="' +
-        (H - unten - h) + '" width="' + Math.max(breite - 2, 1).toFixed(1) +
-        '" height="' + Math.max(h, t.aufrufe ? 1 : 0) + '" class="balken"><title>' +
-        t.tag + ': ' + t.aufrufe + '</title></rect>';
-    }).join('');
-    var erster = tage[0].tag.slice(8) + '.' + tage[0].tag.slice(5, 7) + '.';
-    var letzter = tage[tage.length - 1].tag.slice(8) + '.' +
-                  tage[tage.length - 1].tag.slice(5, 7) + '.';
-    return '<div class="verlauf"><div class="titel">Aufrufe je Tag</div>' +
-      '<svg viewBox="0 0 ' + B + ' ' + H + '" role="img" aria-label="Aufrufe je Tag">' +
-      '<line class="gitter" x1="' + links + '" y1="' + (H - unten) + '" x2="' + B +
-      '" y2="' + (H - unten) + '"/>' +
-      '<text x="0" y="14">' + hoechst + '</text>' +
-      '<text x="0" y="' + (H - unten + 4) + '">0</text>' + balken +
-      '<text x="' + links + '" y="' + (H - 4) + '">' + erster + '</text>' +
-      '<text x="' + B + '" y="' + (H - 4) + '" text-anchor="end">' + letzter + '</text>' +
-      '</svg></div>';
-  }
-
-  function aufschluesselung(titel, werte, namen) {
-    var eintraege = Object.keys(werte || {});
-    if (!eintraege.length) return '';
-    var summe = eintraege.reduce(function (s, k) { return s + werte[k]; }, 0) || 1;
-    var zeilen = eintraege.sort(function (a, b) { return werte[b] - werte[a]; })
-      .map(function (k) {
-        var anteil = Math.round(100 * werte[k] / summe);
-        return '<tr><td>' + (namen[k] || k) + '</td><td class="anteil">' +
-          '<span style="width:' + anteil + '%"></span></td>' +
-          '<td class="pkt">' + zahl(werte[k]) + '</td></tr>';
-      }).join('');
-    return '<div class="rubrik">' + titel + '</div><table class="verteilung"><tbody>' +
-      zeilen + '</tbody></table>';
-  }
-
-  function zeige(d) {
-    var e = d.gesamt.ereignis || {};
-    var heute = d.verlauf.length ? d.verlauf[d.verlauf.length - 1].aufrufe : 0;
-    var woche = d.verlauf.slice(-7).reduce(function (s, t) { return s + t.aufrufe; }, 0);
-
-    bereich.innerHTML =
-      '<dl class="kennzahlen">' +
-        kennzahl('Aufrufe heute', zahl(heute)) +
-        kennzahl('Letzte 7 Tage', zahl(woche)) +
-        kennzahl('Kalender abonniert', zahl(e.abo), 'Klicks auf den Abo-Knopf') +
-        kennzahl('Tipper', zahl(d.tipper), 'mit Namen eingetragen') +
-      '</dl>' +
-      verlaufsbild(d.verlauf) +
-      aufschluesselung('Nach Mannschaft', d.gesamt.mannschaft,
-        { herren1: 'Herren I', herren2: 'Herren II', damen: 'Damen' }) +
-      aufschluesselung('Nach Bereich', d.gesamt.bereich,
-        { kalender: 'Kalender', spiele: 'Spiele', tabelle: 'Tabelle',
-          statistik: 'Statistik' }) +
-      aufschluesselung('Aktionen', {
-        abo: e.abo || 0, datei: e.datei || 0, grafik: e.grafik || 0,
-        tipp: e.tipp || 0, hype: e.hype || 0, dabei: e.dabei || 0,
-        teilen: e.teilen || 0 },
-        { abo: 'Kalender abonniert', datei: 'Datei geladen', grafik: 'Bild erzeugt',
-          tipp: 'Tipp abgegeben', hype: 'Angefeuert', dabei: 'Zusage',
-          teilen: 'Geteilt oder kopiert' }) +
-      '<p class="statfuss">Gezählt werden Summen je Tag – ohne Kennung, ohne ' +
-      'Adresse, ohne Wiedererkennung. Ein Besuch meldet sich einmal beim Öffnen ' +
-      'und einmal beim Verlassen.</p>';
-    bereich.hidden = false;
-    form.hidden = true;
-    abmelden.hidden = false;
-  }
-
-  function hole(benutzer, passwort) {
-    meldung.textContent = 'Wird geladen …';
-    meldung.className = 'meldung';
-    fetch(worker + '/auswertung', {
-      method: 'POST', headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ benutzer: benutzer, passwort: passwort, tage: 30 })
-    })
-      .then(function (r) {
-        return r.json().then(function (d) {
-          return r.ok ? d : Promise.reject(d.fehler || 'Fehler ' + r.status);
-        });
-      })
-      .then(function (d) {
-        meldung.textContent = '';
-        try {
-          sessionStorage.setItem('muru-admin', JSON.stringify([benutzer, passwort]));
-        } catch (e) {}
-        zeige(d);
-      })
-      .catch(function (f) {
-        meldung.textContent = String(f);
-        meldung.className = 'meldung schlecht';
-      });
-  }
-
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    hole(feldBenutzer.value.trim(), feldPasswort.value);
+  knoepfe.forEach(function (k) {
+    k.addEventListener('click', function () { setze(k.getAttribute('data-filter')); });
   });
-
-  abmelden.addEventListener('click', function () {
-    try { sessionStorage.removeItem('muru-admin'); } catch (e) {}
-    location.reload();
-  });
-
-  // Innerhalb einer Sitzung nicht jedes Mal neu anmelden
-  try {
-    var gemerkt = JSON.parse(sessionStorage.getItem('muru-admin') || 'null');
-    if (gemerkt) hole(gemerkt[0], gemerkt[1]);
-  } catch (e) {}
 })();
 </script>
 </body>

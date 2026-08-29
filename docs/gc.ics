@@ -1,0 +1,499 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//handball-kalender//spielplan2ics//DE
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:HSG Mutterstadt/Ruchheim – gC-Jugend
+X-WR-TIMEZONE:Europe/Berlin
+X-WR-CALDESC:Spielplan HSG Mutterstadt/Ruchheim – gC-Jugend - Quelle: han
+ dball.net
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VTIMEZONE
+TZID:Europe/Berlin
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:2627RP4BKRCJGD0102@handball.net
+DTSTAMP:20260829T021219Z
+DTSTART;VALUE=DATE:20260823
+DTEND;VALUE=DATE:20260824
+SUMMARY:🏠 MuRu gC 15:16 JSG Osthofen/Worms
+DESCRIPTION:Endstand: 15:16 (Niederlage)\nHeimspiel gegen JSG Osthofen/Worm
+ s\nAnwurf: noch nicht angesetzt\nLiga: Pfalzgascup\nSpieltag: 1\nSpielnumm
+ er: 2627RP4BKRCJGD0102\nhttps://www.handball.net/match/676038
+URL:https://www.handball.net/match/676038
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RP4BKRCJGD0103@handball.net
+DTSTAMP:20260829T021219Z
+DTSTART;VALUE=DATE:20260823
+DTEND;VALUE=DATE:20260824
+SUMMARY:🚗 JSG Gonsenheim/Schott 28:24 MuRu gC
+DESCRIPTION:Endstand: 28:24 (Niederlage)\nAuswärtsspiel gegen JSG Gonsenhe
+ im/Schott\nAnwurf: noch nicht angesetzt\nLiga: Pfalzgascup\nSpieltag: 1\nS
+ pielnummer: 2627RP4BKRCJGD0103\nhttps://www.handball.net/match/676039
+URL:https://www.handball.net/match/676039
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLCJGA0104@handball.net
+DTSTAMP:20260829T021219Z
+DTSTART;TZID=Europe/Berlin:20260830T153000
+DTEND;TZID=Europe/Berlin:20260830T173000
+SUMMARY:🏠 MuRu gC - JSG Mundenheim/Rheingönheim II
+DESCRIPTION:Heimspiel gegen JSG Mundenheim/Rheingönheim II\nAnwurf: 15:30 
+ Uhr\nLiga: Verbandsliga GEMISCHT\nSpieltag: 1\nSpielnummer: 2627RPVLCJGA01
+ 04\nhttps://www.handball.net/match/359696
+URL:https://www.handball.net/match/359696
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu gC - JSG Mundenheim/Rheingönheim II
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu gC - JSG Mundenheim/Rheingönheim II
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLCJGA0205@handball.net
+DTSTAMP:20260829T021219Z
+DTSTART;TZID=Europe/Berlin:20260906T100000
+DTEND;TZID=Europe/Berlin:20260906T120000
+SUMMARY:🚗 Mjsg Bodenheim/Budenheim II - MuRu gC
+DESCRIPTION:Auswärtsspiel gegen Mjsg Bodenheim/Budenheim II\nAnwurf: 10:00
+  Uhr\nLiga: Verbandsliga GEMISCHT\nSpieltag: 2\nSpielnummer: 2627RPVLCJGA0
+ 205\nhttps://www.handball.net/match/359700
+URL:https://www.handball.net/match/359700
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Budenheim\, Waldsporthalle (Hv Rheinhessen)\, Römerstraße\, 5525
+ 7 Budenheim
+GEO:50.018695;8.162957
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 Mjsg Bodenheim/Budenheim II - MuRu gC
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 Mjsg Bodenheim/Budenheim II - MuRu gC
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLCJGA0304@handball.net
+DTSTAMP:20260829T021219Z
+DTSTART;TZID=Europe/Berlin:20260913T103000
+DTEND;TZID=Europe/Berlin:20260913T123000
+SUMMARY:🏠 MuRu gC - TV Edigheim
+DESCRIPTION:Heimspiel gegen TV Edigheim\nAnwurf: 10:30 Uhr\nLiga: Verbandsl
+ iga GEMISCHT\nSpieltag: 3\nSpielnummer: 2627RPVLCJGA0304\nhttps://www.hand
+ ball.net/match/359703
+URL:https://www.handball.net/match/359703
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu gC - TV Edigheim
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu gC - TV Edigheim
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLCJGA0404@handball.net
+DTSTAMP:20260829T021219Z
+DTSTART;TZID=Europe/Berlin:20260919T160000
+DTEND;TZID=Europe/Berlin:20260919T180000
+SUMMARY:🚗 JSG Osthofen/Worms - MuRu gC
+DESCRIPTION:Auswärtsspiel gegen JSG Osthofen/Worms\nAnwurf: 16:00 Uhr\nLig
+ a: Verbandsliga GEMISCHT\nSpieltag: 4\nSpielnummer: 2627RPVLCJGA0404\nhttp
+ s://www.handball.net/match/359707
+URL:https://www.handball.net/match/359707
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Wonnegauhalle Osthofen\, Herrnsheimer Straße 24\, 67574 Osthofen
+GEO:49.700160;8.325410
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 JSG Osthofen/Worms - MuRu gC
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 JSG Osthofen/Worms - MuRu gC
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLCJGA0504@handball.net
+DTSTAMP:20260829T021219Z
+DTSTART;TZID=Europe/Berlin:20260927T113000
+DTEND;TZID=Europe/Berlin:20260927T133000
+SUMMARY:🏠 MuRu gC - TV Nieder-Olm Mc2
+DESCRIPTION:Heimspiel gegen TV Nieder-Olm Mc2\nAnwurf: 11:30 Uhr\nLiga: Ver
+ bandsliga GEMISCHT\nSpieltag: 5\nSpielnummer: 2627RPVLCJGA0504\nhttps://ww
+ w.handball.net/match/359711
+URL:https://www.handball.net/match/359711
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu gC - TV Nieder-Olm Mc2
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu gC - TV Nieder-Olm Mc2
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLCJGA0603@handball.net
+DTSTAMP:20260829T021219Z
+DTSTART;TZID=Europe/Berlin:20261024T154500
+DTEND;TZID=Europe/Berlin:20261024T174500
+SUMMARY:🏠 MuRu gC - Hlz Friesenheim/Hochdorf III
+DESCRIPTION:Heimspiel gegen Hlz Friesenheim/Hochdorf III\nAnwurf: 15:45 Uhr
+ \nLiga: Verbandsliga GEMISCHT\nSpieltag: 6\nSpielnummer: 2627RPVLCJGA0603\
+ nhttps://www.handball.net/match/359715
+URL:https://www.handball.net/match/359715
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu gC - Hlz Friesenheim/Hochdorf III
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu gC - Hlz Friesenheim/Hochdorf III
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLCJGA0701@handball.net
+DTSTAMP:20260829T021219Z
+DTSTART;TZID=Europe/Berlin:20261108T130000
+DTEND;TZID=Europe/Berlin:20261108T150000
+SUMMARY:🚗 TG Waldsee II - MuRu gC
+DESCRIPTION:Auswärtsspiel gegen TG Waldsee II\nAnwurf: 13:00 Uhr\nLiga: Ve
+ rbandsliga GEMISCHT\nSpieltag: 7\nSpielnummer: 2627RPVLCJGA0701\nhttps://w
+ ww.handball.net/match/359717
+URL:https://www.handball.net/match/359717
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Rheinauenhalle 1 Waldsee\, Wörthstraße 1\, 67165 Waldsee
+GEO:49.395580;8.448379
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 TG Waldsee II - MuRu gC
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 TG Waldsee II - MuRu gC
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLCJGA0802@handball.net
+DTSTAMP:20260829T021219Z
+DTSTART;TZID=Europe/Berlin:20261115T131500
+DTEND;TZID=Europe/Berlin:20261115T151500
+SUMMARY:🏠 MuRu gC - DJK GW Büdesheim
+DESCRIPTION:Heimspiel gegen DJK GW Büdesheim\nAnwurf: 13:15 Uhr\nLiga: Ver
+ bandsliga GEMISCHT\nSpieltag: 8\nSpielnummer: 2627RPVLCJGA0802\nhttps://ww
+ w.handball.net/match/359722
+URL:https://www.handball.net/match/359722
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu gC - DJK GW Büdesheim
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu gC - DJK GW Büdesheim
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLCJGA1004@handball.net
+DTSTAMP:20260829T021219Z
+DTSTART;TZID=Europe/Berlin:20261206T143000
+DTEND;TZID=Europe/Berlin:20261206T163000
+SUMMARY:🚗 JSG Mundenheim/Rheingönheim II - MuRu gC
+DESCRIPTION:Auswärtsspiel gegen JSG Mundenheim/Rheingönheim II\nAnwurf: 1
+ 4:30 Uhr\nLiga: Verbandsliga GEMISCHT\nSpieltag: 10\nSpielnummer: 2627RPVL
+ CJGA1004\nhttps://www.handball.net/match/359732
+URL:https://www.handball.net/match/359732
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Heinrich-Ries-Halle Ludwigshafen\, Pettenkoferstraße\, 67063 Ludw
+ igshafen-Friesenheim
+GEO:49.486096;8.422384
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 JSG Mundenheim/Rheingönheim II - MuRu gC
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 JSG Mundenheim/Rheingönheim II - MuRu gC
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLCJGA1105@handball.net
+DTSTAMP:20260829T021219Z
+DTSTART;TZID=Europe/Berlin:20261213T130000
+DTEND;TZID=Europe/Berlin:20261213T150000
+SUMMARY:🏠 MuRu gC - Mjsg Bodenheim/Budenheim II
+DESCRIPTION:Heimspiel gegen Mjsg Bodenheim/Budenheim II\nAnwurf: 13:00 Uhr\
+ nLiga: Verbandsliga GEMISCHT\nSpieltag: 11\nSpielnummer: 2627RPVLCJGA1105\
+ nhttps://www.handball.net/match/359736
+URL:https://www.handball.net/match/359736
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu gC - Mjsg Bodenheim/Budenheim II
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu gC - Mjsg Bodenheim/Budenheim II
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLCJGA1204@handball.net
+DTSTAMP:20260829T021219Z
+DTSTART;TZID=Europe/Berlin:20270117T114500
+DTEND;TZID=Europe/Berlin:20270117T134500
+SUMMARY:🚗 TV Edigheim - MuRu gC
+DESCRIPTION:Auswärtsspiel gegen TV Edigheim\nAnwurf: 11:45 Uhr\nLiga: Verb
+ andsliga GEMISCHT\nSpieltag: 12\nSpielnummer: 2627RPVLCJGA1204\nhttps://ww
+ w.handball.net/match/359739
+URL:https://www.handball.net/match/359739
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Schulzentrum Edigheim\, Mühlaustr. 51\, 67069 Ludwigshafen
+GEO:49.528707;8.381039
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 TV Edigheim - MuRu gC
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 TV Edigheim - MuRu gC
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLCJGA1304@handball.net
+DTSTAMP:20260829T021219Z
+DTSTART;TZID=Europe/Berlin:20270131T133000
+DTEND;TZID=Europe/Berlin:20270131T153000
+SUMMARY:🏠 MuRu gC - JSG Osthofen/Worms
+DESCRIPTION:Heimspiel gegen JSG Osthofen/Worms\nAnwurf: 13:30 Uhr\nLiga: Ve
+ rbandsliga GEMISCHT\nSpieltag: 13\nSpielnummer: 2627RPVLCJGA1304\nhttps://
+ www.handball.net/match/359743
+URL:https://www.handball.net/match/359743
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu gC - JSG Osthofen/Worms
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu gC - JSG Osthofen/Worms
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLCJGA1404@handball.net
+DTSTAMP:20260829T021219Z
+DTSTART;TZID=Europe/Berlin:20270214T100000
+DTEND;TZID=Europe/Berlin:20270214T120000
+SUMMARY:🚗 TV Nieder-Olm Mc2 - MuRu gC
+DESCRIPTION:Auswärtsspiel gegen TV Nieder-Olm Mc2\nAnwurf: 10:00 Uhr\nLiga
+ : Verbandsliga GEMISCHT\nSpieltag: 14\nSpielnummer: 2627RPVLCJGA1404\nhttp
+ s://www.handball.net/match/359747
+URL:https://www.handball.net/match/359747
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Sporthalle der IGS Nieder-Olm\, Karl-Sieben-Straße\, 55268 Nieder
+ -Olm
+GEO:49.903161;8.197635
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 TV Nieder-Olm Mc2 - MuRu gC
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 TV Nieder-Olm Mc2 - MuRu gC
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLCJGA1503@handball.net
+DTSTAMP:20260829T021219Z
+DTSTART;TZID=Europe/Berlin:20270220T153000
+DTEND;TZID=Europe/Berlin:20270220T173000
+SUMMARY:🚗 Hlz Friesenheim/Hochdorf III - MuRu gC
+DESCRIPTION:Auswärtsspiel gegen Hlz Friesenheim/Hochdorf III\nAnwurf: 15:3
+ 0 Uhr\nLiga: Verbandsliga GEMISCHT\nSpieltag: 15\nSpielnummer: 2627RPVLCJG
+ A1503\nhttps://www.handball.net/match/359751
+URL:https://www.handball.net/match/359751
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:TSG Sportzentrum Ludwigshafen-Friesenheim\, Eschenbachstraße 85\,
+  67063 Ludwigshafen
+GEO:49.502500;8.412900
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 Hlz Friesenheim/Hochdorf III - MuRu gC
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 Hlz Friesenheim/Hochdorf III - MuRu gC
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLCJGA1601@handball.net
+DTSTAMP:20260829T021219Z
+DTSTART;TZID=Europe/Berlin:20270228T113000
+DTEND;TZID=Europe/Berlin:20270228T133000
+SUMMARY:🏠 MuRu gC - TG Waldsee II
+DESCRIPTION:Heimspiel gegen TG Waldsee II\nAnwurf: 11:30 Uhr\nLiga: Verband
+ sliga GEMISCHT\nSpieltag: 16\nSpielnummer: 2627RPVLCJGA1601\nhttps://www.h
+ andball.net/match/359753
+URL:https://www.handball.net/match/359753
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu gC - TG Waldsee II
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu gC - TG Waldsee II
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLCJGA1702@handball.net
+DTSTAMP:20260829T021219Z
+DTSTART;TZID=Europe/Berlin:20270306T161500
+DTEND;TZID=Europe/Berlin:20270306T181500
+SUMMARY:🚗 DJK GW Büdesheim - MuRu gC
+DESCRIPTION:Auswärtsspiel gegen DJK GW Büdesheim\nAnwurf: 16:15 Uhr\nLiga
+ : Verbandsliga GEMISCHT\nSpieltag: 17\nSpielnummer: 2627RPVLCJGA1702\nhttp
+ s://www.handball.net/match/359758
+URL:https://www.handball.net/match/359758
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Bingen\, Rundsporthalle\, Nuits-St.Georges-Straße\, 55411 Bingen
+GEO:49.951830;7.911619
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 DJK GW Büdesheim - MuRu gC
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 DJK GW Büdesheim - MuRu gC
+END:VALARM
+END:VEVENT
+END:VCALENDAR

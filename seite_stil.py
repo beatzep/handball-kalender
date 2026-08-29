@@ -74,6 +74,19 @@ a { color: inherit; }
 }
 .wahl select:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 .wahl select option { color: #14140f; background: #fff; }
+.wahl select optgroup { color: #14140f; background: #fff; font-weight: 600; }
+#anheften {
+  font: inherit; font-size: .86rem; font-weight: 600; cursor: pointer;
+  margin-top: 10px; padding: 9px 14px; background: transparent;
+  color: rgba(247,245,240,.72); border: 1px solid rgba(247,245,240,.28);
+}
+#anheften::before { content: "☆  "; }
+#anheften[aria-pressed="true"] { color: var(--gold); border-color: var(--gold); }
+#anheften[aria-pressed="true"]::before { content: "★  "; }
+#anheften:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.uebersichtlink { margin: 14px 0 0; font-size: .9rem; }
+.uebersichtlink a { color: var(--gold); text-decoration: none; font-weight: 600; }
+.uebersichtlink a:hover { color: var(--auf-schwarz); }
 
 /* ---------- Abschnitte ---------- */
 .liga { margin: 28px 0 0; font-size: .88rem; font-weight: 600;

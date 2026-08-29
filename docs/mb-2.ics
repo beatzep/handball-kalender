@@ -1,0 +1,469 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//handball-kalender//spielplan2ics//DE
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:HSG Mutterstadt/Ruchheim – mB-Jugend II
+X-WR-TIMEZONE:Europe/Berlin
+X-WR-CALDESC:Spielplan HSG Mutterstadt/Ruchheim – mB-Jugend II - Quelle: 
+ handball.net
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VTIMEZONE
+TZID:Europe/Berlin
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:2627RP4BKRBJML0102@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;VALUE=DATE:20260822
+DTEND;VALUE=DATE:20260823
+SUMMARY:🏠 MuRu mB II 11:25 Hr Göllheim/Eisenberg/Kindenheim/Asselheim
+DESCRIPTION:Endstand: 11:25 (Niederlage)\nHeimspiel gegen Hr Göllheim/Eise
+ nberg/Kindenheim/Asselheim\nAnwurf: noch nicht angesetzt\nLiga: Pfalzgascu
+ p\nSpieltag: 1\nSpielnummer: 2627RP4BKRBJML0102\nhttps://www.handball.net/
+ match/675227
+URL:https://www.handball.net/match/675227
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RP4BKRBJML0103@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;VALUE=DATE:20260822
+DTEND;VALUE=DATE:20260823
+SUMMARY:🚗 Mjsg Heiligenstein/Lingenfeld/Schwegenheim 30:20 MuRu mB II
+DESCRIPTION:Endstand: 30:20 (Niederlage)\nAuswärtsspiel gegen Mjsg Heilige
+ nstein/Lingenfeld/Schwegenheim\nAnwurf: noch nicht angesetzt\nLiga: Pfalzg
+ ascup\nSpieltag: 1\nSpielnummer: 2627RP4BKRBJML0103\nhttps://www.handball.
+ net/match/675228
+URL:https://www.handball.net/match/675228
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RP4BKRBJML0106@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;VALUE=DATE:20260822
+DTEND;VALUE=DATE:20260823
+SUMMARY:🏠 MuRu mB II 11:28 TG Waldsee
+DESCRIPTION:Endstand: 11:28 (Niederlage)\nHeimspiel gegen TG Waldsee\nAnwur
+ f: noch nicht angesetzt\nLiga: Pfalzgascup\nSpieltag: 1\nSpielnummer: 2627
+ RP4BKRBJML0106\nhttps://www.handball.net/match/675231
+URL:https://www.handball.net/match/675231
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLBJMC0101@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;TZID=Europe/Berlin:20260830T180000
+DTEND;TZID=Europe/Berlin:20260830T200000
+SUMMARY:🚗 Hr Göllheim/Eisenberg/Kindenheim/Asselheim - MuRu mB II
+DESCRIPTION:Auswärtsspiel gegen Hr Göllheim/Eisenberg/Kindenheim/Asselhei
+ m\nAnwurf: 18:00 Uhr\nLiga: Verbandsliga MÄNNLICH\nSpieltag: 1\nSpielnumm
+ er: 2627RPVLBJMC0101\nhttps://www.handball.net/match/557376
+URL:https://www.handball.net/match/557376
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Berufsschule Eisenberg\, Martin-Luther-Str. 18\, 67304 Eisenberg
+GEO:49.558404;8.059217
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 Hr Göllheim/Eisenberg/Kindenheim/Asselheim 
+ - MuRu mB II
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 Hr Göllheim/Eisenberg/Kindenheim/Asselheim 
+ - MuRu mB II
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLBJMC0403@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;TZID=Europe/Berlin:20260919T140000
+DTEND;TZID=Europe/Berlin:20260919T160000
+SUMMARY:🚗 Mjsg Büdesheim/Zotzenheim/St.Johann/Sprendlingen - MuRu mB II
+DESCRIPTION:Auswärtsspiel gegen Mjsg Büdesheim/Zotzenheim/St.Johann/Spren
+ dlingen\nAnwurf: 14:00 Uhr\nLiga: Verbandsliga MÄNNLICH\nSpieltag: 4\nSpi
+ elnummer: 2627RPVLBJMC0403\nhttps://www.handball.net/match/557393
+URL:https://www.handball.net/match/557393
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Bingen\, Rundsporthalle\, Nuits-St.Georges-Straße\, 55411 Bingen
+GEO:49.951830;7.911619
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 Mjsg Büdesheim/Zotzenheim/St.Johann/Sprendl
+ ingen - MuRu mB II
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 Mjsg Büdesheim/Zotzenheim/St.Johann/Sprendl
+ ingen - MuRu mB II
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLBJMC0503@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;TZID=Europe/Berlin:20260927T133000
+DTEND;TZID=Europe/Berlin:20260927T153000
+SUMMARY:🏠 MuRu mB II - MJSG SG Saulheim/HSV Alzey III
+DESCRIPTION:Heimspiel gegen MJSG SG Saulheim/HSV Alzey III\nAnwurf: 13:30 U
+ hr\nLiga: Verbandsliga MÄNNLICH\nSpieltag: 5\nSpielnummer: 2627RPVLBJMC05
+ 03\nhttps://www.handball.net/match/557398
+URL:https://www.handball.net/match/557398
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu mB II - MJSG SG Saulheim/HSV Alzey III
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu mB II - MJSG SG Saulheim/HSV Alzey III
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLBJMC0605@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;TZID=Europe/Berlin:20261024T131500
+DTEND;TZID=Europe/Berlin:20261024T151500
+SUMMARY:🚗 TUS KL-Dansenberg II - MuRu mB II
+DESCRIPTION:Auswärtsspiel gegen TUS KL-Dansenberg II\nAnwurf: 13:15 Uhr\nL
+ iga: Verbandsliga MÄNNLICH\nSpieltag: 6\nSpielnummer: 2627RPVLBJMC0605\nh
+ ttps://www.handball.net/match/557405
+URL:https://www.handball.net/match/557405
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Sporthalle Dansenberg\, Am Handballplatz 1\, 67661 Kaiserslautern-
+ Dansenberg
+GEO:49.406914;7.736269
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 TUS KL-Dansenberg II - MuRu mB II
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 TUS KL-Dansenberg II - MuRu mB II
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLBJMC0703@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;TZID=Europe/Berlin:20261108T150000
+DTEND;TZID=Europe/Berlin:20261108T170000
+SUMMARY:🏠 MuRu mB II - HSG Eckbachtal II
+DESCRIPTION:Heimspiel gegen HSG Eckbachtal II\nAnwurf: 15:00 Uhr\nLiga: Ver
+ bandsliga MÄNNLICH\nSpieltag: 7\nSpielnummer: 2627RPVLBJMC0703\nhttps://w
+ ww.handball.net/match/557408
+URL:https://www.handball.net/match/557408
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu mB II - HSG Eckbachtal II
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu mB II - HSG Eckbachtal II
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLBJMC0802@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;TZID=Europe/Berlin:20261115T163000
+DTEND;TZID=Europe/Berlin:20261115T183000
+SUMMARY:🚗 JSG Mundenheim/Rheingönheim - MuRu mB II
+DESCRIPTION:Auswärtsspiel gegen JSG Mundenheim/Rheingönheim\nAnwurf: 16:3
+ 0 Uhr\nLiga: Verbandsliga MÄNNLICH\nSpieltag: 8\nSpielnummer: 2627RPVLBJM
+ C0802\nhttps://www.handball.net/match/557412
+URL:https://www.handball.net/match/557412
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Halle Schulzentrum (Mt) Mundenheim\, Adlerdamm\, 67061 Ludwigshafe
+ n
+GEO:49.463664;8.436837
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 JSG Mundenheim/Rheingönheim - MuRu mB II
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 JSG Mundenheim/Rheingönheim - MuRu mB II
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLBJMC0903@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;TZID=Europe/Berlin:20261129T113000
+DTEND;TZID=Europe/Berlin:20261129T133000
+SUMMARY:🏠 MuRu mB II - Vsk Niederfeld
+DESCRIPTION:Heimspiel gegen Vsk Niederfeld\nAnwurf: 11:30 Uhr\nLiga: Verban
+ dsliga MÄNNLICH\nSpieltag: 9\nSpielnummer: 2627RPVLBJMC0903\nhttps://www.
+ handball.net/match/557418
+URL:https://www.handball.net/match/557418
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu mB II - Vsk Niederfeld
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu mB II - Vsk Niederfeld
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLBJMC1001@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;TZID=Europe/Berlin:20261205T153000
+DTEND;TZID=Europe/Berlin:20261205T173000
+SUMMARY:🏠 MuRu mB II - Hr Göllheim/Eisenberg/Kindenheim/Asselheim
+DESCRIPTION:Heimspiel gegen Hr Göllheim/Eisenberg/Kindenheim/Asselheim\nAn
+ wurf: 15:30 Uhr\nLiga: Verbandsliga MÄNNLICH\nSpieltag: 10\nSpielnummer: 
+ 2627RPVLBJMC1001\nhttps://www.handball.net/match/557421
+URL:https://www.handball.net/match/557421
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu mB II - Hr Göllheim/Eisenberg/Kindenhe
+ im/Asselheim
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu mB II - Hr Göllheim/Eisenberg/Kindenhe
+ im/Asselheim
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLBJMC1303@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;TZID=Europe/Berlin:20270130T143000
+DTEND;TZID=Europe/Berlin:20270130T163000
+SUMMARY:🏠 MuRu mB II - Mjsg Büdesheim/Zotzenheim/St.Johann/Sprendlingen
+DESCRIPTION:Heimspiel gegen Mjsg Büdesheim/Zotzenheim/St.Johann/Sprendling
+ en\nAnwurf: 14:30 Uhr\nLiga: Verbandsliga MÄNNLICH\nSpieltag: 13\nSpielnu
+ mmer: 2627RPVLBJMC1303\nhttps://www.handball.net/match/557438
+URL:https://www.handball.net/match/557438
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu mB II - Mjsg Büdesheim/Zotzenheim/St.J
+ ohann/Sprendlingen
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu mB II - Mjsg Büdesheim/Zotzenheim/St.J
+ ohann/Sprendlingen
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLBJMC1403@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;TZID=Europe/Berlin:20270214T145000
+DTEND;TZID=Europe/Berlin:20270214T165000
+SUMMARY:🚗 MJSG SG Saulheim/HSV Alzey III - MuRu mB II
+DESCRIPTION:Auswärtsspiel gegen MJSG SG Saulheim/HSV Alzey III\nAnwurf: 14
+ :50 Uhr\nLiga: Verbandsliga MÄNNLICH\nSpieltag: 14\nSpielnummer: 2627RPVL
+ BJMC1403\nhttps://www.handball.net/match/557443
+URL:https://www.handball.net/match/557443
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Gustav-Heinemann-Schule Alzey\, Dr. Georg-Durst-Straße 23\, 55232
+  Alzey
+GEO:49.740570;8.122320
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 MJSG SG Saulheim/HSV Alzey III - MuRu mB II
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 MJSG SG Saulheim/HSV Alzey III - MuRu mB II
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLBJMC1505@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;TZID=Europe/Berlin:20270221T131500
+DTEND;TZID=Europe/Berlin:20270221T151500
+SUMMARY:🏠 MuRu mB II - TUS KL-Dansenberg II
+DESCRIPTION:Heimspiel gegen TUS KL-Dansenberg II\nAnwurf: 13:15 Uhr\nLiga: 
+ Verbandsliga MÄNNLICH\nSpieltag: 15\nSpielnummer: 2627RPVLBJMC1505\nhttps
+ ://www.handball.net/match/557450
+URL:https://www.handball.net/match/557450
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu mB II - TUS KL-Dansenberg II
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu mB II - TUS KL-Dansenberg II
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLBJMC1603@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;TZID=Europe/Berlin:20270228T160000
+DTEND;TZID=Europe/Berlin:20270228T180000
+SUMMARY:🚗 HSG Eckbachtal II - MuRu mB II
+DESCRIPTION:Auswärtsspiel gegen HSG Eckbachtal II\nAnwurf: 16:00 Uhr\nLiga
+ : Verbandsliga MÄNNLICH\nSpieltag: 16\nSpielnummer: 2627RPVLBJMC1603\nhtt
+ ps://www.handball.net/match/557453
+URL:https://www.handball.net/match/557453
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Sporthalle Freinsheim\, Reiboldstr. 12E\, 67251 Freinsheim
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 HSG Eckbachtal II - MuRu mB II
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 HSG Eckbachtal II - MuRu mB II
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLBJMC1702@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;TZID=Europe/Berlin:20270306T123000
+DTEND;TZID=Europe/Berlin:20270306T143000
+SUMMARY:🏠 MuRu mB II - JSG Mundenheim/Rheingönheim
+DESCRIPTION:Heimspiel gegen JSG Mundenheim/Rheingönheim\nAnwurf: 12:30 Uhr
+ \nLiga: Verbandsliga MÄNNLICH\nSpieltag: 17\nSpielnummer: 2627RPVLBJMC170
+ 2\nhttps://www.handball.net/match/557457
+URL:https://www.handball.net/match/557457
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu mB II - JSG Mundenheim/Rheingönheim
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu mB II - JSG Mundenheim/Rheingönheim
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLBJMC1803@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;TZID=Europe/Berlin:20270314T170000
+DTEND;TZID=Europe/Berlin:20270314T190000
+SUMMARY:🚗 Vsk Niederfeld - MuRu mB II
+DESCRIPTION:Auswärtsspiel gegen Vsk Niederfeld\nAnwurf: 17:00 Uhr\nLiga: V
+ erbandsliga MÄNNLICH\nSpieltag: 18\nSpielnummer: 2627RPVLBJMC1803\nhttps:
+ //www.handball.net/match/557463
+URL:https://www.handball.net/match/557463
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Gesamtschule Ludwigshafen\, Hermann-Hesse-Str. 11\, 67071 Ludwigsh
+ afen
+GEO:49.485725;8.365588
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 Vsk Niederfeld - MuRu mB II
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 Vsk Niederfeld - MuRu mB II
+END:VALARM
+END:VEVENT
+END:VCALENDAR

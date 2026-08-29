@@ -1,0 +1,467 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//handball-kalender//spielplan2ics//DE
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:HSG Mutterstadt/Ruchheim – gC-Jugend II
+X-WR-TIMEZONE:Europe/Berlin
+X-WR-CALDESC:Spielplan HSG Mutterstadt/Ruchheim – gC-Jugend II - Quelle: 
+ handball.net
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VTIMEZONE
+TZID:Europe/Berlin
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:2627RPBKROCJGC0105@handball.net
+DTSTAMP:20260829T021220Z
+DTSTART;TZID=Europe/Berlin:20260830T134500
+DTEND;TZID=Europe/Berlin:20260830T154500
+SUMMARY:🏠 MuRu gC II - HSG Dudenhofen/Schifferstadt
+DESCRIPTION:Heimspiel gegen HSG Dudenhofen/Schifferstadt\nAnwurf: 13:45 Uhr
+ \nLiga: Bezirksoberliga GEMISCHT\nSpieltag: 1\nSpielnummer: 2627RPBKROCJGC
+ 0105\nhttps://www.handball.net/match/381873
+URL:https://www.handball.net/match/381873
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu gC II - HSG Dudenhofen/Schifferstadt
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu gC II - HSG Dudenhofen/Schifferstadt
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROCJGC0202@handball.net
+DTSTAMP:20260829T021220Z
+DTSTART;TZID=Europe/Berlin:20260906T121500
+DTEND;TZID=Europe/Berlin:20260906T141500
+SUMMARY:🚗 TUS Heiligenstein II - MuRu gC II
+DESCRIPTION:Auswärtsspiel gegen TUS Heiligenstein II\nAnwurf: 12:15 Uhr\nL
+ iga: Bezirksoberliga GEMISCHT\nSpieltag: 2\nSpielnummer: 2627RPBKROCJGC020
+ 2\nhttps://www.handball.net/match/381875
+URL:https://www.handball.net/match/381875
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Rhein-Pfalz-Halle Römerberg-Heiligenstein\, Viehtriftstraße 106\
+ , 67354 Römerberg-Heiligenstein
+GEO:49.279315;8.404978
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 TUS Heiligenstein II - MuRu gC II
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 TUS Heiligenstein II - MuRu gC II
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROCJGC0305@handball.net
+DTSTAMP:20260829T021220Z
+DTSTART;TZID=Europe/Berlin:20260912T131500
+DTEND;TZID=Europe/Berlin:20260912T151500
+SUMMARY:🚗 JSG Rodalben/Thaleischweiler II - MuRu gC II
+DESCRIPTION:Auswärtsspiel gegen JSG Rodalben/Thaleischweiler II\nAnwurf: 1
+ 3:15 Uhr\nLiga: Bezirksoberliga GEMISCHT\nSpieltag: 3\nSpielnummer: 2627RP
+ BKROCJGC0305\nhttps://www.handball.net/match/381883
+URL:https://www.handball.net/match/381883
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:IGS-Sporthalle Thaleischweiler\, Schulstr. 2\, 66987 Thaleischweil
+ er
+GEO:49.257381;7.579213
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 JSG Rodalben/Thaleischweiler II - MuRu gC II
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 JSG Rodalben/Thaleischweiler II - MuRu gC II
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROCJGC0401@handball.net
+DTSTAMP:20260829T021220Z
+DTSTART;TZID=Europe/Berlin:20260920T141500
+DTEND;TZID=Europe/Berlin:20260920T161500
+SUMMARY:🚗 Mwsg Kandel/Hagenbach II - MuRu gC II
+DESCRIPTION:Auswärtsspiel gegen Mwsg Kandel/Hagenbach II\nAnwurf: 14:15 Uh
+ r\nLiga: Bezirksoberliga GEMISCHT\nSpieltag: 4\nSpielnummer: 2627RPBKROCJG
+ C0401\nhttps://www.handball.net/match/381884
+URL:https://www.handball.net/match/381884
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Kandel\, IGS Sporthalle\, Schubertstr. 7\, 76870 Kandel
+GEO:49.077655;8.193108
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 Mwsg Kandel/Hagenbach II - MuRu gC II
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 Mwsg Kandel/Hagenbach II - MuRu gC II
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROCJGC0603@handball.net
+DTSTAMP:20260829T021220Z
+DTSTART;TZID=Europe/Berlin:20261024T171500
+DTEND;TZID=Europe/Berlin:20261024T191500
+SUMMARY:🚗 HSG Trifels - MuRu gC II
+DESCRIPTION:Auswärtsspiel gegen HSG Trifels\nAnwurf: 17:15 Uhr\nLiga: Bezi
+ rksoberliga GEMISCHT\nSpieltag: 6\nSpielnummer: 2627RPBKROCJGC0603\nhttps:
+ //www.handball.net/match/381896
+URL:https://www.handball.net/match/381896
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Realschule Plus Annweiler\, Am Herrenteich 2\, 76855 Annweiler
+GEO:49.203678;7.976072
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 HSG Trifels - MuRu gC II
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 HSG Trifels - MuRu gC II
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROCJGC0705@handball.net
+DTSTAMP:20260829T021220Z
+DTSTART;TZID=Europe/Berlin:20261108T113000
+DTEND;TZID=Europe/Berlin:20261108T133000
+SUMMARY:🏠 MuRu gC II - Vsk Niederfeld
+DESCRIPTION:Heimspiel gegen Vsk Niederfeld\nAnwurf: 11:30 Uhr\nLiga: Bezirk
+ soberliga GEMISCHT\nSpieltag: 7\nSpielnummer: 2627RPBKROCJGC0705\nhttps://
+ www.handball.net/match/381903
+URL:https://www.handball.net/match/381903
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu gC II - Vsk Niederfeld
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu gC II - Vsk Niederfeld
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROCJGC0804@handball.net
+DTSTAMP:20260829T021220Z
+DTSTART;TZID=Europe/Berlin:20261115T113000
+DTEND;TZID=Europe/Berlin:20261115T133000
+SUMMARY:🏠 MuRu gC II - HSG Landau/Land II
+DESCRIPTION:Heimspiel gegen HSG Landau/Land II\nAnwurf: 11:30 Uhr\nLiga: Be
+ zirksoberliga GEMISCHT\nSpieltag: 8\nSpielnummer: 2627RPBKROCJGC0804\nhttp
+ s://www.handball.net/match/381907
+URL:https://www.handball.net/match/381907
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu gC II - HSG Landau/Land II
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu gC II - HSG Landau/Land II
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROCJGC0903@handball.net
+DTSTAMP:20260829T021220Z
+DTSTART;TZID=Europe/Berlin:20261129T134500
+DTEND;TZID=Europe/Berlin:20261129T154500
+SUMMARY:🚗 TSV Speyer II - MuRu gC II
+DESCRIPTION:Auswärtsspiel gegen TSV Speyer II\nAnwurf: 13:45 Uhr\nLiga: Be
+ zirksoberliga GEMISCHT\nSpieltag: 9\nSpielnummer: 2627RPBKROCJGC0903\nhttp
+ s://www.handball.net/match/381911
+URL:https://www.handball.net/match/381911
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Sporthalle-Ost Speyer\, Fritz-Ober-Str. 3\, 67346 Speyer
+GEO:49.324592;8.438719
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 TSV Speyer II - MuRu gC II
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 TSV Speyer II - MuRu gC II
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROCJGC1005@handball.net
+DTSTAMP:20260829T021220Z
+DTSTART;TZID=Europe/Berlin:20261205T151500
+DTEND;TZID=Europe/Berlin:20261205T171500
+SUMMARY:🚗 HSG Dudenhofen/Schifferstadt - MuRu gC II
+DESCRIPTION:Auswärtsspiel gegen HSG Dudenhofen/Schifferstadt\nAnwurf: 15:1
+ 5 Uhr\nLiga: Bezirksoberliga GEMISCHT\nSpieltag: 10\nSpielnummer: 2627RPBK
+ ROCJGC1005\nhttps://www.handball.net/match/381918
+URL:https://www.handball.net/match/381918
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Ganerbhalle Dudenhofen\, Iggelheimer Straße 33\, 67373 Dudenhofen
+GEO:49.323054;8.383972
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 HSG Dudenhofen/Schifferstadt - MuRu gC II
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 HSG Dudenhofen/Schifferstadt - MuRu gC II
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROCJGC1102@handball.net
+DTSTAMP:20260829T021220Z
+DTSTART;TZID=Europe/Berlin:20261212T154500
+DTEND;TZID=Europe/Berlin:20261212T174500
+SUMMARY:🏠 MuRu gC II - TUS Heiligenstein II
+DESCRIPTION:Heimspiel gegen TUS Heiligenstein II\nAnwurf: 15:45 Uhr\nLiga: 
+ Bezirksoberliga GEMISCHT\nSpieltag: 11\nSpielnummer: 2627RPBKROCJGC1102\nh
+ ttps://www.handball.net/match/381920
+URL:https://www.handball.net/match/381920
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu gC II - TUS Heiligenstein II
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu gC II - TUS Heiligenstein II
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROCJGC1205@handball.net
+DTSTAMP:20260829T021220Z
+DTSTART;TZID=Europe/Berlin:20270124T143000
+DTEND;TZID=Europe/Berlin:20270124T163000
+SUMMARY:🏠 MuRu gC II - JSG Rodalben/Thaleischweiler II
+DESCRIPTION:Heimspiel gegen JSG Rodalben/Thaleischweiler II\nAnwurf: 14:30 
+ Uhr\nLiga: Bezirksoberliga GEMISCHT\nSpieltag: 12\nSpielnummer: 2627RPBKRO
+ CJGC1205\nhttps://www.handball.net/match/381928
+URL:https://www.handball.net/match/381928
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu gC II - JSG Rodalben/Thaleischweiler II
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu gC II - JSG Rodalben/Thaleischweiler II
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROCJGC1301@handball.net
+DTSTAMP:20260829T021220Z
+DTSTART;TZID=Europe/Berlin:20270131T114500
+DTEND;TZID=Europe/Berlin:20270131T134500
+SUMMARY:🏠 MuRu gC II - Mwsg Kandel/Hagenbach II
+DESCRIPTION:Heimspiel gegen Mwsg Kandel/Hagenbach II\nAnwurf: 11:45 Uhr\nLi
+ ga: Bezirksoberliga GEMISCHT\nSpieltag: 13\nSpielnummer: 2627RPBKROCJGC130
+ 1\nhttps://www.handball.net/match/381929
+URL:https://www.handball.net/match/381929
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu gC II - Mwsg Kandel/Hagenbach II
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu gC II - Mwsg Kandel/Hagenbach II
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROCJGC1503@handball.net
+DTSTAMP:20260829T021220Z
+DTSTART;TZID=Europe/Berlin:20270221T113000
+DTEND;TZID=Europe/Berlin:20270221T133000
+SUMMARY:🏠 MuRu gC II - HSG Trifels
+DESCRIPTION:Heimspiel gegen HSG Trifels\nAnwurf: 11:30 Uhr\nLiga: Bezirksob
+ erliga GEMISCHT\nSpieltag: 15\nSpielnummer: 2627RPBKROCJGC1503\nhttps://ww
+ w.handball.net/match/381941
+URL:https://www.handball.net/match/381941
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu gC II - HSG Trifels
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu gC II - HSG Trifels
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROCJGC1605@handball.net
+DTSTAMP:20260829T021220Z
+DTSTART;TZID=Europe/Berlin:20270227T150000
+DTEND;TZID=Europe/Berlin:20270227T170000
+SUMMARY:🚗 Vsk Niederfeld - MuRu gC II
+DESCRIPTION:Auswärtsspiel gegen Vsk Niederfeld\nAnwurf: 15:00 Uhr\nLiga: B
+ ezirksoberliga GEMISCHT\nSpieltag: 16\nSpielnummer: 2627RPBKROCJGC1605\nht
+ tps://www.handball.net/match/381948
+URL:https://www.handball.net/match/381948
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Loschky-Halle Niederfeld\, Abteistraße 18\, 67059 Ludwigshafen
+GEO:49.468463;8.403079
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 Vsk Niederfeld - MuRu gC II
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 Vsk Niederfeld - MuRu gC II
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROCJGC1704@handball.net
+DTSTAMP:20260829T021220Z
+DTSTART;TZID=Europe/Berlin:20270306T161500
+DTEND;TZID=Europe/Berlin:20270306T181500
+SUMMARY:🚗 HSG Landau/Land II - MuRu gC II
+DESCRIPTION:Auswärtsspiel gegen HSG Landau/Land II\nAnwurf: 16:15 Uhr\nLig
+ a: Bezirksoberliga GEMISCHT\nSpieltag: 17\nSpielnummer: 2627RPBKROCJGC1704
+ \nhttps://www.handball.net/match/381952
+URL:https://www.handball.net/match/381952
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Sporthalle West Landau\, Prießnitzweg 12\, 76829 Landau
+GEO:49.197108;8.105074
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 HSG Landau/Land II - MuRu gC II
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 HSG Landau/Land II - MuRu gC II
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROCJGC1803@handball.net
+DTSTAMP:20260829T021220Z
+DTSTART;TZID=Europe/Berlin:20270314T130000
+DTEND;TZID=Europe/Berlin:20270314T150000
+SUMMARY:🏠 MuRu gC II - TSV Speyer II
+DESCRIPTION:Heimspiel gegen TSV Speyer II\nAnwurf: 13:00 Uhr\nLiga: Bezirks
+ oberliga GEMISCHT\nSpieltag: 18\nSpielnummer: 2627RPBKROCJGC1803\nhttps://
+ www.handball.net/match/381956
+URL:https://www.handball.net/match/381956
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu gC II - TSV Speyer II
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu gC II - TSV Speyer II
+END:VALARM
+END:VEVENT
+END:VCALENDAR

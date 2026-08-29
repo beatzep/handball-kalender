@@ -174,7 +174,7 @@ def finde_team(cfg: argparse.Namespace) -> int:
         spiele = hole_json(f"matches?team_id={team['id']}")["data"]
         if not spiele:
             continue
-        saison_id = str(((spiele[0].get("phase") or {}).get("season_id")) or "")
+        saison_id = str(hauptphase(spiele).get("season_id") or "")
         if cfg.saison in (None, "", saison_id):
             passend.append((team, saison_id, len(spiele)))
 
@@ -252,6 +252,13 @@ def anwurf(rohdatum: str) -> datetime:
     return datetime.fromisoformat(rohdatum).replace(tzinfo=TZ)
 
 
+def ohne_uhrzeit(zeitpunkt: datetime) -> bool:
+    """Turnierspiele stehen beim Verband mit 00:00 - die Uhrzeit ist offen.
+
+    Ungeprueft uebernommen erschiene im Kalender ein Termin um Mitternacht."""
+    return zeitpunkt.hour == 0 and zeitpunkt.minute == 0
+
+
 def ist_heimspiel(spiel: dict, team_id: int) -> bool:
     return (spiel.get("local") or {}).get("id") == team_id
 
@@ -300,6 +307,25 @@ def ergebnis(spiel: dict) -> tuple[int, int] | None:
     if r.get("local") is None or r.get("visitor") is None:
         return None
     return int(r["local"]), int(r["visitor"])
+
+
+def hauptphase(spiele: list[dict]) -> dict:
+    """Die Phase, in der die meisten Spiele stattfinden.
+
+    Mannschaften spielen oft Liga *und* Pokal. Die Phase des ersten Spiels
+    zu nehmen liefert dann zufaellig die Pokalgruppe - und damit eine
+    Tabelle mit drei Mannschaften statt der Liga mit zehn."""
+    haeufigkeit: dict[int, int] = {}
+    phasen: dict[int, dict] = {}
+    for spiel in spiele:
+        p = spiel.get("phase") or {}
+        if not p.get("id"):
+            continue
+        haeufigkeit[p["id"]] = haeufigkeit.get(p["id"], 0) + 1
+        phasen[p["id"]] = p
+    if not haeufigkeit:
+        return {}
+    return phasen[max(haeufigkeit, key=haeufigkeit.get)]
 
 
 def liga(spiel: dict) -> str:
@@ -366,6 +392,7 @@ def vergleiche(spiele: list[dict], team_id: int, alt: dict) -> tuple[dict, list[
             "lon": (koordinaten(spiel) or (None, None))[1],
             "spieltag": spiel.get("round"),
             "heim": ist_heimspiel(spiel, team_id),
+            "ohne_zeit": ohne_uhrzeit(beginn),
             "sequence": (vorher or {}).get("sequence", 0),
         }
         tore = ergebnis(spiel)
@@ -506,7 +533,8 @@ def baue_kalender(spiele: list[dict], team_id: int, cfg: argparse.Namespace,
 
         beschreibung = [
             f"{'Heimspiel' if heim else 'Auswärtsspiel'} gegen {gast}",
-            f"Anwurf: {beginn.strftime('%H:%M')} Uhr",
+            ("Anwurf: noch nicht angesetzt" if ohne_uhrzeit(beginn)
+             else f"Anwurf: {beginn.strftime('%H:%M')} Uhr"),
         ]
         if tore:
             eigene, fremde = (tore if heim else tore[::-1])
@@ -527,12 +555,22 @@ def baue_kalender(spiele: list[dict], team_id: int, cfg: argparse.Namespace,
         code = spiel.get("code") or str(spiel["id"])
         folge = ((stand or {}).get(code) or {}).get("sequence", 0)
 
+        # Ohne angesetzte Uhrzeit wird daraus ein ganztaegiger Termin -
+        # ein Eintrag um Mitternacht waere schlicht falsch. DTEND ist bei
+        # Tagesangaben ausschliessend, zeigt also auf den Folgetag.
+        offen = ohne_uhrzeit(beginn)
+        if offen:
+            zeit_zeilen = [f"DTSTART;VALUE=DATE:{beginn:%Y%m%d}",
+                           f"DTEND;VALUE=DATE:{(beginn + timedelta(days=1)):%Y%m%d}"]
+        else:
+            zeit_zeilen = [f"DTSTART;TZID=Europe/Berlin:{lokal(start)}",
+                           f"DTEND;TZID=Europe/Berlin:{lokal(ende)}"]
+
         zeilen += [
             "BEGIN:VEVENT",
             f"UID:{code}@handball.net",
             f"DTSTAMP:{utc(jetzt)}",
-            f"DTSTART;TZID=Europe/Berlin:{lokal(start)}",
-            f"DTEND;TZID=Europe/Berlin:{lokal(ende)}",
+            *zeit_zeilen,
             f"SUMMARY:{escape(titel)}",
             f"DESCRIPTION:{escape(chr(10).join(beschreibung))}",
             f"URL:{SPIEL_URL.format(id=spiel['id'])}",
@@ -548,7 +586,7 @@ def baue_kalender(spiele: list[dict], team_id: int, cfg: argparse.Namespace,
         if punkt:
             zeilen.append(f"GEO:{punkt[0]:.6f};{punkt[1]:.6f}")
 
-        if not cfg.keine_alarme:
+        if not cfg.keine_alarme and not offen:
             for ausloeser, text in (("-P1D", "Morgen Spiel"), ("-PT3H", "Gleich Spiel")):
                 zeilen += [
                     "BEGIN:VALARM",
@@ -592,7 +630,8 @@ def verarbeite_team(team: dict, cfg: argparse.Namespace, alt: dict) -> tuple[dic
     for alt_name in team.get("alias") or []:
         (Path(cfg.out_dir) / alt_name).write_bytes(inhalt)
 
-    saison_id = str(((spiele[0].get("phase") or {}).get("season_id")) or "")
+    phase = hauptphase(spiele)
+    saison_id = str(phase.get("season_id") or "")
     heim = sum(1 for x in spiele if ist_heimspiel(x, team_id))
     print(f"  {team['name']:<12} {len(spiele):2} Spiele "
           f"({heim} Heim / {len(spiele) - heim} Auswärts)  -> {ziel.name}")
@@ -601,11 +640,15 @@ def verarbeite_team(team: dict, cfg: argparse.Namespace, alt: dict) -> tuple[dic
         "team_id": team_id,
         "name": team["name"],
         "kurzname": team["kurzname"],
+        "gruppe": team.get("gruppe", ""),
         "datei": team["datei"],
         "kalender": einstellung.name,
-        "liga": normalisiere(liga(spiele[0])),
+        "liga": normalisiere((phase.get("competition") or {}).get("name", "")),
         "saison": f"20{saison_id[:2]}/{saison_id[2:]}" if len(saison_id) == 4 else "",
-        "tabelle": hole_tabelle((spiele[0].get("phase") or {}).get("id"), team_id),
+        # Ohne Wertung (Minis etwa) gibt es keine Tabelle - die Sammelliste
+        # aller gemeldeten Mannschaften waere keine.
+        "tabelle": (hole_tabelle(phase.get("id"), team_id)
+                    if phase.get("has_standings") else {}),
         "form": form_aus_spielen(neuer_stand),
         "statistik": statistik.alles(list(neuer_stand.values()),
                                      cfg.heimat, team.get("alltag")),

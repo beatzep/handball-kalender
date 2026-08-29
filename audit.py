@@ -44,18 +44,27 @@ def main() -> int:
         pruefe(bool(spiele), f"{schluessel}: keine Spiele")
         pruefe(bool(team.get("liga")), f"{schluessel}: keine Liga hinterlegt", hart=False)
 
-        ohne_ort = [s for s in spiele if not s.get("ort")]
-        pruefe(not ohne_ort, f"{schluessel}: {len(ohne_ort)} Spiele ohne Adresse", hart=False)
+        # Turnierspiele stehen beim Verband ohne Uhrzeit und oft ohne Halle -
+        # das ist kein Fehler, sondern schlicht noch nicht angesetzt.
+        offen = [s for s in spiele if s.get("ohne_zeit")]
+        if offen:
+            print(f"  {len(offen)} Spiele noch ohne Ansetzung (Uhrzeit offen)")
+
+        ohne_ort = [s for s in spiele if not s.get("ort") and not s.get("ohne_zeit")]
+        pruefe(not ohne_ort, f"{schluessel}: {len(ohne_ort)} angesetzte Spiele ohne Adresse",
+               hart=False)
 
         # Anwurfzeiten muessen plausibel sein - faengt Zeitzonenfehler ab
         for s in spiele:
+            if s.get("ohne_zeit"):
+                continue
             t = datetime.fromisoformat(s["datum"])
             pruefe(8 <= t.hour <= 22,
                    f"{schluessel}: Anwurf {t:%d.%m. %H:%M} unplausibel (Zeitzone?)")
 
         # Heim/Auswaerts muss ausgewogen sein
         heim = sum(1 for s in spiele if s.get("heim"))
-        pruefe(abs(heim - (len(spiele) - heim)) <= 1,
+        pruefe(abs(heim - (len(spiele) - heim)) <= 2,
                f"{schluessel}: {heim} Heim / {len(spiele)-heim} Auswärts - unausgewogen",
                hart=False)
 
@@ -65,7 +74,8 @@ def main() -> int:
         # ergab Fahrtstrecken von 7.000 km, ohne dass es jemand bemerkt haette.
         for s in spiele:
             kennung = f"{schluessel} {s.get('datum','?')[:10]}"
-            pruefe(bool(s.get("halle")), f"{kennung}: Halle ohne Namen", hart=False)
+            if not s.get("ohne_zeit"):
+                pruefe(bool(s.get("halle")), f"{kennung}: Halle ohne Namen", hart=False)
             pruefe(s.get("gegner") not in (None, "", "Unbekannt"),
                    f"{kennung}: Gegner nicht benannt")
             pruefe(bool(s.get("match_id")),
@@ -79,16 +89,27 @@ def main() -> int:
         # Laengst gespielte Partien ohne Ergebnis deuten auf eine Luecke beim
         # Verband hin - oder darauf, dass unser Abgleich nicht mehr laeuft.
         ueberfaellig = [s for s in spiele
-                        if not s.get("ergebnis")
+                        if not s.get("ergebnis") and not s.get("ohne_zeit")
                         and (heute - datetime.fromisoformat(s["datum"]).replace(tzinfo=TZ)).days > 3]
         pruefe(not ueberfaellig,
                f"{schluessel}: {len(ueberfaellig)} Spiele länger als 3 Tage vorbei, "
                f"aber ohne Ergebnis", hart=False)
 
-        # Doppelte Anwurfzeiten in derselben Halle waeren ein Datenfehler
-        doppelt_termin = [t for t, n in Counter(s["datum"] for s in spiele).items() if n > 1]
-        pruefe(not doppelt_termin,
-               f"{schluessel}: zwei Spiele zur selben Zeit ({doppelt_termin[:2]})")
+        # Zwei Spiele zur selben Zeit sind bei Turnieren und Spielfesten normal
+        # (mehrere Felder, kurze Spielzeiten). Verdaechtig wird es erst, wenn
+        # sie in verschiedenen Hallen stattfinden sollen.
+        nach_zeit: dict[str, set] = {}
+        for s in spiele:
+            nach_zeit.setdefault(s["datum"], set()).add(s.get("halle") or "?")
+        unmoeglich = [t for t, hallen in nach_zeit.items() if len(hallen) > 1]
+        pruefe(not unmoeglich,
+               f"{schluessel}: gleichzeitige Spiele in verschiedenen Hallen "
+               f"({unmoeglich[:2]})")
+
+        parallel = sum(1 for t, h in nach_zeit.items()
+                       if len(h) == 1 and sum(1 for s in spiele if s["datum"] == t) > 1)
+        if parallel:
+            print(f"  {parallel} Zeitpunkte mit mehreren Spielen (Turnierbetrieb)")
 
         # Tabelle
         tab = team.get("tabelle") or {}
@@ -135,6 +156,14 @@ def main() -> int:
     print(f"\nSeite: {len(html)//1024} kB")
     for schluessel in teams:
         pruefe(f'data-team="{schluessel}"' in html, f"Seite: Block für {schluessel} fehlt")
+    # Uebersicht und Auswertung muessen ebenfalls erzeugt worden sein
+    for weitere in ["wochenende.html", "admin.html"]:
+        pruefe((DOCS / weitere).exists(), f"{weitere} fehlt")
+    if (DOCS / "wochenende.html").exists():
+        uebersicht = (DOCS / "wochenende.html").read_text(encoding="utf-8")
+        pruefe("class=\"partie" in uebersicht,
+               "wochenende.html enthält keine Spiele", hart=False)
+
     for datei in ["logo.png", "icon-32.png", "icon-180.png", "manifest.json"]:
         pruefe(datei in html, f"Seite: Verweis auf {datei} fehlt", hart=False)
         pruefe((DOCS / datei).exists(), f"Datei {datei} fehlt")

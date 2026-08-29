@@ -643,9 +643,14 @@ def main() -> None:
     teams = daten.get("teams") or {}
     heute = datetime.now(TZ)
 
+    # Nach Gruppen gliedern: 23 Einträge in einer Liste findet niemand.
+    gruppen: dict[str, list[str]] = {}
+    for k, t in teams.items():
+        gruppen.setdefault(t.get("gruppe") or "Mannschaften", []).append(
+            f'<option value="{sicher(k)}">{sicher(t["name"])}</option>')
     optionen = "".join(
-        f'<option value="{sicher(k)}">{sicher(t["name"])}</option>'
-        for k, t in teams.items())
+        f'<optgroup label="{sicher(name)}" data-gruppe="{sicher(name)}">{"".join(eintraege)}</optgroup>'
+        for name, eintraege in gruppen.items())
     bloecke = "".join(
         mannschaftsblock(k, t, cfg.basis_url, heute, cfg.worker_url)
         for k, t in teams.items())
@@ -687,6 +692,9 @@ automatisch im Handykalender, Verlegungen inklusive.">
     <div class="wahl">
       <label for="teamwahl">Mannschaft</label>
       <select id="teamwahl">{optionen}</select>
+      <button id="anheften" type="button" aria-pressed="false"
+              title="Mannschaft oben in der Liste festhalten">Anheften</button>
+      <p class="uebersichtlink"><a href="wochenende.html">Alle Spiele am Wochenende &rsaquo;</a></p>
     </div>
   </div>
 </header>

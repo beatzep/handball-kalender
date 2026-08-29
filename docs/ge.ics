@@ -1,0 +1,605 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//handball-kalender//spielplan2ics//DE
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:HSG Mutterstadt/Ruchheim – gE-Jugend
+X-WR-TIMEZONE:Europe/Berlin
+X-WR-CALDESC:Spielplan HSG Mutterstadt/Ruchheim – gE-Jugend - Quelle: han
+ dball.net
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VTIMEZONE
+TZID:Europe/Berlin
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:2627RPBKROEJGC0103@handball.net
+DTSTAMP:20260829T021222Z
+DTSTART;TZID=Europe/Berlin:20260829T123000
+DTEND;TZID=Europe/Berlin:20260829T143000
+SUMMARY:🚗 JSG Mundenheim/Rheingönheim - MuRu gE
+DESCRIPTION:Auswärtsspiel gegen JSG Mundenheim/Rheingönheim\nAnwurf: 12:3
+ 0 Uhr\nLiga: Bezirksoberliga GEMISCHT\nSpieltag: 1\nSpielnummer: 2627RPBKR
+ OEJGC0103\nhttps://www.handball.net/match/385324
+URL:https://www.handball.net/match/385324
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Halle Schulzentrum (Mt) Mundenheim\, Adlerdamm\, 67061 Ludwigshafe
+ n
+GEO:49.463664;8.436837
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 JSG Mundenheim/Rheingönheim - MuRu gE
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 JSG Mundenheim/Rheingönheim - MuRu gE
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROEJGC0203@handball.net
+DTSTAMP:20260829T021222Z
+DTSTART;TZID=Europe/Berlin:20260906T113000
+DTEND;TZID=Europe/Berlin:20260906T133000
+SUMMARY:🏠 MuRu gE - JSG Kaiserslautern/Dansenberg
+DESCRIPTION:Heimspiel gegen JSG Kaiserslautern/Dansenberg\nAnwurf: 11:30 Uh
+ r\nLiga: Bezirksoberliga GEMISCHT\nSpieltag: 2\nSpielnummer: 2627RPBKROEJG
+ C0203\nhttps://www.handball.net/match/385328
+URL:https://www.handball.net/match/385328
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu gE - JSG Kaiserslautern/Dansenberg
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu gE - JSG Kaiserslautern/Dansenberg
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROEJGC0302@handball.net
+DTSTAMP:20260829T021222Z
+DTSTART;TZID=Europe/Berlin:20260913T131500
+DTEND;TZID=Europe/Berlin:20260913T151500
+SUMMARY:🚗 HSG Eckbachtal - MuRu gE
+DESCRIPTION:Auswärtsspiel gegen HSG Eckbachtal\nAnwurf: 13:15 Uhr\nLiga: B
+ ezirksoberliga GEMISCHT\nSpieltag: 3\nSpielnummer: 2627RPBKROEJGC0302\nhtt
+ ps://www.handball.net/match/385331
+URL:https://www.handball.net/match/385331
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Xx Sporthalle\, Bahnhofstraße 7\, 67246 Dirmstein
+GEO:49.565577;8.249173
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 HSG Eckbachtal - MuRu gE
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 HSG Eckbachtal - MuRu gE
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROEJGC0403@handball.net
+DTSTAMP:20260829T021222Z
+DTSTART;TZID=Europe/Berlin:20260919T150000
+DTEND;TZID=Europe/Berlin:20260919T170000
+SUMMARY:🏠 MuRu gE - TV Edigheim
+DESCRIPTION:Heimspiel gegen TV Edigheim\nAnwurf: 15:00 Uhr\nLiga: Bezirksob
+ erliga GEMISCHT\nSpieltag: 4\nSpielnummer: 2627RPBKROEJGC0403\nhttps://www
+ .handball.net/match/385336
+URL:https://www.handball.net/match/385336
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu gE - TV Edigheim
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu gE - TV Edigheim
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROEJGC0501@handball.net
+DTSTAMP:20260829T021222Z
+DTSTART;TZID=Europe/Berlin:20260926T134500
+DTEND;TZID=Europe/Berlin:20260926T154500
+SUMMARY:🚗 Hlz Friesenheim/Hochdorf - MuRu gE
+DESCRIPTION:Auswärtsspiel gegen Hlz Friesenheim/Hochdorf\nAnwurf: 13:45 Uh
+ r\nLiga: Bezirksoberliga GEMISCHT\nSpieltag: 5\nSpielnummer: 2627RPBKROEJG
+ C0501\nhttps://www.handball.net/match/385338
+URL:https://www.handball.net/match/385338
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:TSG Sportzentrum Ludwigshafen-Friesenheim\, Eschenbachstraße 85\,
+  67063 Ludwigshafen
+GEO:49.502500;8.412900
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 Hlz Friesenheim/Hochdorf - MuRu gE
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 Hlz Friesenheim/Hochdorf - MuRu gE
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROEJGC0604@handball.net
+DTSTAMP:20260829T021222Z
+DTSTART;TZID=Europe/Berlin:20261003T140000
+DTEND;TZID=Europe/Berlin:20261003T160000
+SUMMARY:🚗 TUS Neuhofen - MuRu gE
+DESCRIPTION:Auswärtsspiel gegen TUS Neuhofen\nAnwurf: 14:00 Uhr\nLiga: Bez
+ irksoberliga GEMISCHT\nSpieltag: 6\nSpielnummer: 2627RPBKROEJGC0604\nhttps
+ ://www.handball.net/match/385345
+URL:https://www.handball.net/match/385345
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Rehbachhalle Neuhofen\, Jahnstr. 25\, 67141 Neuhofen
+GEO:49.420979;8.423410
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 TUS Neuhofen - MuRu gE
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 TUS Neuhofen - MuRu gE
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROEJGC0701@handball.net
+DTSTAMP:20260829T021222Z
+DTSTART;TZID=Europe/Berlin:20261025T131500
+DTEND;TZID=Europe/Berlin:20261025T151500
+SUMMARY:🏠 MuRu gE - TG Waldsee
+DESCRIPTION:Heimspiel gegen TG Waldsee\nAnwurf: 13:15 Uhr\nLiga: Bezirksobe
+ rliga GEMISCHT\nSpieltag: 7\nSpielnummer: 2627RPBKROEJGC0701\nhttps://www.
+ handball.net/match/385346
+URL:https://www.handball.net/match/385346
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu gE - TG Waldsee
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu gE - TG Waldsee
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROEJGC0803@handball.net
+DTSTAMP:20260829T021222Z
+DTSTART;TZID=Europe/Berlin:20261108T100000
+DTEND;TZID=Europe/Berlin:20261108T120000
+SUMMARY:🏠 MuRu gE - JSG Mundenheim/Rheingönheim
+DESCRIPTION:Heimspiel gegen JSG Mundenheim/Rheingönheim\nAnwurf: 10:00 Uhr
+ \nLiga: Bezirksoberliga GEMISCHT\nSpieltag: 8\nSpielnummer: 2627RPBKROEJGC
+ 0803\nhttps://www.handball.net/match/385352
+URL:https://www.handball.net/match/385352
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu gE - JSG Mundenheim/Rheingönheim
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu gE - JSG Mundenheim/Rheingönheim
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROEJGC0903@handball.net
+DTSTAMP:20260829T021222Z
+DTSTART;TZID=Europe/Berlin:20261115T113000
+DTEND;TZID=Europe/Berlin:20261115T133000
+SUMMARY:🚗 JSG Kaiserslautern/Dansenberg - MuRu gE
+DESCRIPTION:Auswärtsspiel gegen JSG Kaiserslautern/Dansenberg\nAnwurf: 11:
+ 30 Uhr\nLiga: Bezirksoberliga GEMISCHT\nSpieltag: 9\nSpielnummer: 2627RPBK
+ ROEJGC0903\nhttps://www.handball.net/match/385356
+URL:https://www.handball.net/match/385356
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Sporthalle Dansenberg\, Am Handballplatz 1\, 67661 Kaiserslautern-
+ Dansenberg
+GEO:49.406914;7.736269
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 JSG Kaiserslautern/Dansenberg - MuRu gE
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 JSG Kaiserslautern/Dansenberg - MuRu gE
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROEJGC1002@handball.net
+DTSTAMP:20260829T021222Z
+DTSTART;TZID=Europe/Berlin:20261129T100000
+DTEND;TZID=Europe/Berlin:20261129T120000
+SUMMARY:🏠 MuRu gE - HSG Eckbachtal
+DESCRIPTION:Heimspiel gegen HSG Eckbachtal\nAnwurf: 10:00 Uhr\nLiga: Bezirk
+ soberliga GEMISCHT\nSpieltag: 10\nSpielnummer: 2627RPBKROEJGC1002\nhttps:/
+ /www.handball.net/match/385359
+URL:https://www.handball.net/match/385359
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu gE - HSG Eckbachtal
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu gE - HSG Eckbachtal
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROEJGC1103@handball.net
+DTSTAMP:20260829T021222Z
+DTSTART;TZID=Europe/Berlin:20261206T100000
+DTEND;TZID=Europe/Berlin:20261206T120000
+SUMMARY:🚗 TV Edigheim - MuRu gE
+DESCRIPTION:Auswärtsspiel gegen TV Edigheim\nAnwurf: 10:00 Uhr\nLiga: Bezi
+ rksoberliga GEMISCHT\nSpieltag: 11\nSpielnummer: 2627RPBKROEJGC1103\nhttps
+ ://www.handball.net/match/385364
+URL:https://www.handball.net/match/385364
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Schulzentrum Edigheim\, Mühlaustr. 51\, 67069 Ludwigshafen
+GEO:49.528707;8.381039
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 TV Edigheim - MuRu gE
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 TV Edigheim - MuRu gE
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROEJGC1201@handball.net
+DTSTAMP:20260829T021222Z
+DTSTART;TZID=Europe/Berlin:20261213T100000
+DTEND;TZID=Europe/Berlin:20261213T120000
+SUMMARY:🏠 MuRu gE - Hlz Friesenheim/Hochdorf
+DESCRIPTION:Heimspiel gegen Hlz Friesenheim/Hochdorf\nAnwurf: 10:00 Uhr\nLi
+ ga: Bezirksoberliga GEMISCHT\nSpieltag: 12\nSpielnummer: 2627RPBKROEJGC120
+ 1\nhttps://www.handball.net/match/385366
+URL:https://www.handball.net/match/385366
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu gE - Hlz Friesenheim/Hochdorf
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu gE - Hlz Friesenheim/Hochdorf
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROEJGC1304@handball.net
+DTSTAMP:20260829T021222Z
+DTSTART;TZID=Europe/Berlin:20270124T100000
+DTEND;TZID=Europe/Berlin:20270124T120000
+SUMMARY:🏠 MuRu gE - TUS Neuhofen
+DESCRIPTION:Heimspiel gegen TUS Neuhofen\nAnwurf: 10:00 Uhr\nLiga: Bezirkso
+ berliga GEMISCHT\nSpieltag: 13\nSpielnummer: 2627RPBKROEJGC1304\nhttps://w
+ ww.handball.net/match/385373
+URL:https://www.handball.net/match/385373
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu gE - TUS Neuhofen
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu gE - TUS Neuhofen
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROEJGC1401@handball.net
+DTSTAMP:20260829T021222Z
+DTSTART;TZID=Europe/Berlin:20270131T113000
+DTEND;TZID=Europe/Berlin:20270131T133000
+SUMMARY:🚗 TG Waldsee - MuRu gE
+DESCRIPTION:Auswärtsspiel gegen TG Waldsee\nAnwurf: 11:30 Uhr\nLiga: Bezir
+ ksoberliga GEMISCHT\nSpieltag: 14\nSpielnummer: 2627RPBKROEJGC1401\nhttps:
+ //www.handball.net/match/385374
+URL:https://www.handball.net/match/385374
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Rheinauenhalle 1 Waldsee\, Wörthstraße 1\, 67165 Waldsee
+GEO:49.395580;8.448379
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 TG Waldsee - MuRu gE
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 TG Waldsee - MuRu gE
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROEJGC1503@handball.net
+DTSTAMP:20260829T021222Z
+DTSTART;TZID=Europe/Berlin:20270214T120000
+DTEND;TZID=Europe/Berlin:20270214T140000
+SUMMARY:🚗 JSG Mundenheim/Rheingönheim - MuRu gE
+DESCRIPTION:Auswärtsspiel gegen JSG Mundenheim/Rheingönheim\nAnwurf: 12:0
+ 0 Uhr\nLiga: Bezirksoberliga GEMISCHT\nSpieltag: 15\nSpielnummer: 2627RPBK
+ ROEJGC1503\nhttps://www.handball.net/match/385380
+URL:https://www.handball.net/match/385380
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Heinrich-Ries-Halle Ludwigshafen\, Pettenkoferstraße\, 67063 Ludw
+ igshafen-Friesenheim
+GEO:49.486096;8.422384
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 JSG Mundenheim/Rheingönheim - MuRu gE
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 JSG Mundenheim/Rheingönheim - MuRu gE
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROEJGC1603@handball.net
+DTSTAMP:20260829T021222Z
+DTSTART;TZID=Europe/Berlin:20270221T100000
+DTEND;TZID=Europe/Berlin:20270221T120000
+SUMMARY:🏠 MuRu gE - JSG Kaiserslautern/Dansenberg
+DESCRIPTION:Heimspiel gegen JSG Kaiserslautern/Dansenberg\nAnwurf: 10:00 Uh
+ r\nLiga: Bezirksoberliga GEMISCHT\nSpieltag: 16\nSpielnummer: 2627RPBKROEJ
+ GC1603\nhttps://www.handball.net/match/385384
+URL:https://www.handball.net/match/385384
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu gE - JSG Kaiserslautern/Dansenberg
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu gE - JSG Kaiserslautern/Dansenberg
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROEJGC1702@handball.net
+DTSTAMP:20260829T021222Z
+DTSTART;TZID=Europe/Berlin:20270228T100000
+DTEND;TZID=Europe/Berlin:20270228T120000
+SUMMARY:🚗 HSG Eckbachtal - MuRu gE
+DESCRIPTION:Auswärtsspiel gegen HSG Eckbachtal\nAnwurf: 10:00 Uhr\nLiga: B
+ ezirksoberliga GEMISCHT\nSpieltag: 17\nSpielnummer: 2627RPBKROEJGC1702\nht
+ tps://www.handball.net/match/385387
+URL:https://www.handball.net/match/385387
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Sporthalle Freinsheim\, Reiboldstr. 12E\, 67251 Freinsheim
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 HSG Eckbachtal - MuRu gE
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 HSG Eckbachtal - MuRu gE
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROEJGC1803@handball.net
+DTSTAMP:20260829T021222Z
+DTSTART;TZID=Europe/Berlin:20270307T113000
+DTEND;TZID=Europe/Berlin:20270307T133000
+SUMMARY:🏠 MuRu gE - TV Edigheim
+DESCRIPTION:Heimspiel gegen TV Edigheim\nAnwurf: 11:30 Uhr\nLiga: Bezirksob
+ erliga GEMISCHT\nSpieltag: 18\nSpielnummer: 2627RPBKROEJGC1803\nhttps://ww
+ w.handball.net/match/385392
+URL:https://www.handball.net/match/385392
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu gE - TV Edigheim
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu gE - TV Edigheim
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROEJGC1901@handball.net
+DTSTAMP:20260829T021222Z
+DTSTART;TZID=Europe/Berlin:20270314T114500
+DTEND;TZID=Europe/Berlin:20270314T134500
+SUMMARY:🚗 Hlz Friesenheim/Hochdorf - MuRu gE
+DESCRIPTION:Auswärtsspiel gegen Hlz Friesenheim/Hochdorf\nAnwurf: 11:45 Uh
+ r\nLiga: Bezirksoberliga GEMISCHT\nSpieltag: 19\nSpielnummer: 2627RPBKROEJ
+ GC1901\nhttps://www.handball.net/match/385394
+URL:https://www.handball.net/match/385394
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:TSG Sportzentrum Ludwigshafen-Friesenheim\, Eschenbachstraße 85\,
+  67063 Ludwigshafen
+GEO:49.502500;8.412900
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 Hlz Friesenheim/Hochdorf - MuRu gE
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 Hlz Friesenheim/Hochdorf - MuRu gE
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROEJGC2004@handball.net
+DTSTAMP:20260829T021222Z
+DTSTART;TZID=Europe/Berlin:20270411T140000
+DTEND;TZID=Europe/Berlin:20270411T160000
+SUMMARY:🚗 TUS Neuhofen - MuRu gE
+DESCRIPTION:Auswärtsspiel gegen TUS Neuhofen\nAnwurf: 14:00 Uhr\nLiga: Bez
+ irksoberliga GEMISCHT\nSpieltag: 20\nSpielnummer: 2627RPBKROEJGC2004\nhttp
+ s://www.handball.net/match/385401
+URL:https://www.handball.net/match/385401
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Rehbachhalle Neuhofen\, Jahnstr. 25\, 67141 Neuhofen
+GEO:49.420979;8.423410
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 TUS Neuhofen - MuRu gE
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 TUS Neuhofen - MuRu gE
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROEJGC2101@handball.net
+DTSTAMP:20260829T021222Z
+DTSTART;TZID=Europe/Berlin:20270418T100000
+DTEND;TZID=Europe/Berlin:20270418T120000
+SUMMARY:🏠 MuRu gE - TG Waldsee
+DESCRIPTION:Heimspiel gegen TG Waldsee\nAnwurf: 10:00 Uhr\nLiga: Bezirksobe
+ rliga GEMISCHT\nSpieltag: 21\nSpielnummer: 2627RPBKROEJGC2101\nhttps://www
+ .handball.net/match/385402
+URL:https://www.handball.net/match/385402
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu gE - TG Waldsee
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu gE - TG Waldsee
+END:VALARM
+END:VEVENT
+END:VCALENDAR

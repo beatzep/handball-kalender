@@ -325,4 +325,75 @@ window.muruGeraet = (function () {
   schreibe();
   setInterval(schreibe, 1000);
 })();
+
+// ---------------------------------------------------------------------
+// Angeheftete Mannschaften
+// ---------------------------------------------------------------------
+// Bei 23 Einträgen sucht sich sonst jeder tot. Angeheftete stehen oben in
+// einer eigenen Gruppe; gemerkt wird das im Browser.
+(function () {
+  var wahl = document.getElementById('teamwahl');
+  var knopf = document.getElementById('anheften');
+  if (!wahl || !knopf) return;
+
+  var SCHLUESSEL = 'muru-angeheftet';
+
+  function lies() {
+    try { return JSON.parse(localStorage.getItem(SCHLUESSEL) || '[]'); }
+    catch (e) { return []; }
+  }
+  function schreib(liste) {
+    try { localStorage.setItem(SCHLUESSEL, JSON.stringify(liste)); } catch (e) {}
+  }
+
+  function ordne() {
+    var liste = lies();
+    var vorhanden = document.getElementById('angeheftet');
+    if (vorhanden) {
+      // Zurück an ihren Platz, sonst sammeln sich Doppelungen an
+      [].slice.call(vorhanden.children).forEach(function (o) {
+        var heimat = document.querySelector(
+          'optgroup[data-gruppe="' + o.getAttribute('data-gruppe') + '"]');
+        if (heimat) heimat.appendChild(o);
+      });
+      vorhanden.remove();
+    }
+    if (!liste.length) return;
+
+    var gruppe = document.createElement('optgroup');
+    gruppe.id = 'angeheftet';
+    gruppe.label = 'Angeheftet';
+    liste.forEach(function (schluessel) {
+      var option = wahl.querySelector('option[value="' + schluessel + '"]');
+      if (!option) return;
+      if (!option.getAttribute('data-gruppe')) {
+        option.setAttribute('data-gruppe',
+          option.parentNode.getAttribute('data-gruppe') || '');
+      }
+      gruppe.appendChild(option);
+    });
+    if (gruppe.children.length) wahl.insertBefore(gruppe, wahl.firstChild);
+  }
+
+  function zeigeKnopf() {
+    var an = lies().indexOf(wahl.value) >= 0;
+    knopf.setAttribute('aria-pressed', an ? 'true' : 'false');
+    knopf.textContent = an ? 'Angeheftet' : 'Anheften';
+  }
+
+  knopf.addEventListener('click', function () {
+    var liste = lies();
+    var stelle = liste.indexOf(wahl.value);
+    if (stelle >= 0) liste.splice(stelle, 1); else liste.push(wahl.value);
+    schreib(liste);
+    var gemerkt = wahl.value;
+    ordne();
+    wahl.value = gemerkt;
+    zeigeKnopf();
+  });
+
+  wahl.addEventListener('change', zeigeKnopf);
+  ordne();
+  zeigeKnopf();
+})();
 """

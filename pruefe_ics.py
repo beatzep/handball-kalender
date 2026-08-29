@@ -2,6 +2,7 @@
 """Prueft eine erzeugte .ics-Datei auf die Fehler, die in Kalender-Apps
 typischerweise erst auffallen, wenn man zu spaet in der Halle steht."""
 
+import re
 import sys
 from collections import Counter
 from datetime import datetime
@@ -12,12 +13,15 @@ TZ = ZoneInfo("Europe/Berlin")
 
 
 def zeit(wert: str) -> datetime | None:
-    """Liest einen ICS-Zeitstempel; gibt None zurueck statt zu werfen, damit
-    eine kaputte Datei als Befund gemeldet und nicht als Absturz sichtbar wird."""
-    try:
-        return datetime.strptime(wert.rstrip("Z"), "%Y%m%dT%H%M%S")
-    except ValueError:
-        return None
+    """Liest Zeitpunkte und reine Tagesangaben; gibt None zurueck statt zu
+    werfen, damit eine kaputte Datei als Befund und nicht als Absturz erscheint."""
+    roh = wert.rstrip("Z")
+    for muster in ("%Y%m%dT%H%M%S", "%Y%m%d"):
+        try:
+            return datetime.strptime(roh, muster)
+        except ValueError:
+            continue
+    return None
 
 
 def entfalte(roh: str) -> list[str]:
@@ -85,8 +89,13 @@ def main(pfad: str) -> int:
             uids.append(ev["UID"][0][1])
         if "DTSTART" in ev:
             schluessel, wert = ev["DTSTART"][0]
-            if "TZID=Europe/Berlin" not in schluessel:
+            # Spiele ohne angesetzte Uhrzeit stehen als Tagestermin - dort
+            # ist eine Zeitzone weder noetig noch erlaubt.
+            ganztags = "VALUE=DATE" in schluessel
+            if not ganztags and "TZID=Europe/Berlin" not in schluessel:
                 fehler.append(f"Event {i}: DTSTART ohne TZID=Europe/Berlin ({schluessel})")
+            if ganztags and not re.fullmatch(r"\d{8}", wert):
+                fehler.append(f"Event {i}: Tagestermin mit ungültigem Datum ({wert})")
             if wert.endswith("Z"):
                 fehler.append(f"Event {i}: DTSTART als UTC statt Ortszeit")
         if "DTSTART" in ev and "DTEND" in ev:
@@ -102,6 +111,8 @@ def main(pfad: str) -> int:
     for i, ev in enumerate(events, 1):
         if "DTSTART" not in ev:
             continue
+        if "VALUE=DATE" in ev["DTSTART"][0][0]:
+            continue          # Tagestermin: es gibt keine Anwurfzeit zu pruefen
         start = zeit(ev["DTSTART"][0][1])
         if start is None:
             continue

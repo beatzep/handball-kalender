@@ -96,6 +96,34 @@ Beim nächsten Lauf wird verglichen:
 Die Meldungen landen an drei Stellen: im gelben Kasten auf der Seite, in der
 Commit-Nachricht und in der Zusammenfassung des Action-Laufs.
 
+## Alle Mannschaften und die Wochenend-Übersicht
+
+`teams.json` führt 23 Mannschaften: drei aktive und zwanzig Jugendteams.
+Aufgenommen wird nur, wer in der laufenden Saison einen Spielplan hat – von
+42 beim Verband gemeldeten Teams trifft das auf 23 zu.
+
+`baue_wochenende.py` erzeugt `docs/wochenende.html`: alle Spiele aller
+Mannschaften der nächsten zwei Wochen, nach Tag gruppiert, mit Filter auf
+Heimspiele. Gedacht für Zuschauer und Eltern, nicht für Abonnenten.
+
+Im Dropdown lassen sich Mannschaften **anheften** – sie rutschen dann in eine
+eigene Gruppe nach oben. Bei 23 Einträgen sucht sich sonst jeder tot.
+
+Drei Eigenheiten der Verbandsdaten, die dabei zutage traten:
+
+- **Mannschaften spielen Liga *und* Pokal.** Die Phase des ersten Spiels zu
+  nehmen liefert dann zufällig die Pokalgruppe – bei vier Jugendteams stand
+  so die falsche Liga und eine Tabelle mit drei statt zehn Mannschaften.
+  Maßgeblich ist die Phase mit den **meisten** Spielen.
+- **Nicht jeder Wettbewerb wird gewertet.** Minis haben `has_standings=false`;
+  die dortige Liste mit 50 Mannschaften ist eine Sammelliste, keine Tabelle.
+- **Turnierspiele haben keine Anwurfzeit** (00:00 beim Verband). Sie werden
+  als ganztägige Termine geschrieben, ohne Erinnerung – ein Eintrag um
+  Mitternacht wäre schlicht falsch. Betroffen sind 12 von 338 Spielen.
+
+Mehrere Spiele zur selben Zeit sind bei Spielfesten normal; der Audit meldet
+sie nur, wenn sie in **verschiedenen Hallen** stattfinden sollen.
+
 ## Auswertung der Nutzung
 
 `docs/admin.html` zeigt Aufrufe, Aktionen und Verteilung nach Mannschaft und

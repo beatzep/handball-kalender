@@ -1,0 +1,549 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//handball-kalender//spielplan2ics//DE
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:HSG Mutterstadt/Ruchheim – wD-Jugend
+X-WR-TIMEZONE:Europe/Berlin
+X-WR-CALDESC:Spielplan HSG Mutterstadt/Ruchheim – wD-Jugend - Quelle: han
+ dball.net
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VTIMEZONE
+TZID:Europe/Berlin
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:2627RPBKRODJWA0202@handball.net
+DTSTAMP:20260829T021221Z
+DTSTART;TZID=Europe/Berlin:20260905T120000
+DTEND;TZID=Europe/Berlin:20260905T140000
+SUMMARY:🏠 MuRu wD - Wjsg Mainz05/TV Nieder-Olm Wd1
+DESCRIPTION:Heimspiel gegen Wjsg Mainz05/TV Nieder-Olm Wd1\nAnwurf: 12:00 U
+ hr\nLiga: Bezirksoberliga WEIBLICH\nSpieltag: 2\nSpielnummer: 2627RPBKRODJ
+ WA0202\nhttps://www.handball.net/match/385058
+URL:https://www.handball.net/match/385058
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu wD - Wjsg Mainz05/TV Nieder-Olm Wd1
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu wD - Wjsg Mainz05/TV Nieder-Olm Wd1
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RP4BKRDJWE0101@handball.net
+DTSTAMP:20260829T021221Z
+DTSTART;TZID=Europe/Berlin:20260913T134500
+DTEND;TZID=Europe/Berlin:20260913T154500
+SUMMARY:🚗 JSG Mundenheim/Rheingönheim - MuRu wD
+DESCRIPTION:Auswärtsspiel gegen JSG Mundenheim/Rheingönheim\nAnwurf: 13:4
+ 5 Uhr\nLiga: Djugend-Cup\nSpieltag: 1\nSpielnummer: 2627RP4BKRDJWE0101\nht
+ tps://www.handball.net/match/679886
+URL:https://www.handball.net/match/679886
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 JSG Mundenheim/Rheingönheim - MuRu wD
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 JSG Mundenheim/Rheingönheim - MuRu wD
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RP4BKRDJWE0104@handball.net
+DTSTAMP:20260829T021221Z
+DTSTART;TZID=Europe/Berlin:20260913T160000
+DTEND;TZID=Europe/Berlin:20260913T180000
+SUMMARY:🏠 MuRu wD - Mjsg SG Saulheim/HSV Alzey
+DESCRIPTION:Heimspiel gegen Mjsg SG Saulheim/HSV Alzey\nAnwurf: 16:00 Uhr\n
+ Liga: Djugend-Cup\nSpieltag: 1\nSpielnummer: 2627RP4BKRDJWE0104\nhttps://w
+ ww.handball.net/match/679889
+URL:https://www.handball.net/match/679889
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu wD - Mjsg SG Saulheim/HSV Alzey
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu wD - Mjsg SG Saulheim/HSV Alzey
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RP4BKRDJWE0106@handball.net
+DTSTAMP:20260829T021221Z
+DTSTART;TZID=Europe/Berlin:20260913T173000
+DTEND;TZID=Europe/Berlin:20260913T193000
+SUMMARY:🚗 SV Bornheim - MuRu wD
+DESCRIPTION:Auswärtsspiel gegen SV Bornheim\nAnwurf: 17:30 Uhr\nLiga: Djug
+ end-Cup\nSpieltag: 1\nSpielnummer: 2627RP4BKRDJWE0106\nhttps://www.handbal
+ l.net/match/679891
+URL:https://www.handball.net/match/679891
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 SV Bornheim - MuRu wD
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 SV Bornheim - MuRu wD
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKRODJWA0301@handball.net
+DTSTAMP:20260829T021221Z
+DTSTART;TZID=Europe/Berlin:20260916T180000
+DTEND;TZID=Europe/Berlin:20260916T200000
+SUMMARY:🚗 SV Bornheim - MuRu wD
+DESCRIPTION:Auswärtsspiel gegen SV Bornheim\nAnwurf: 18:00 Uhr\nLiga: Bezi
+ rksoberliga WEIBLICH\nSpieltag: 3\nSpielnummer: 2627RPBKRODJWA0301\nhttps:
+ //www.handball.net/match/385062
+URL:https://www.handball.net/match/385062
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Sporthalle Bornheim\, Dammgasse 1\, 76879 Bornheim
+GEO:49.215716;8.170640
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 SV Bornheim - MuRu wD
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 SV Bornheim - MuRu wD
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKRODJWA0403@handball.net
+DTSTAMP:20260829T021221Z
+DTSTART;TZID=Europe/Berlin:20260919T163000
+DTEND;TZID=Europe/Berlin:20260919T183000
+SUMMARY:🏠 MuRu wD - TSG MZ-Bretzenheim
+DESCRIPTION:Heimspiel gegen TSG MZ-Bretzenheim\nAnwurf: 16:30 Uhr\nLiga: Be
+ zirksoberliga WEIBLICH\nSpieltag: 4\nSpielnummer: 2627RPBKRODJWA0403\nhttp
+ s://www.handball.net/match/385069
+URL:https://www.handball.net/match/385069
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu wD - TSG MZ-Bretzenheim
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu wD - TSG MZ-Bretzenheim
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKRODJWA0502@handball.net
+DTSTAMP:20260829T021221Z
+DTSTART;TZID=Europe/Berlin:20260927T100000
+DTEND;TZID=Europe/Berlin:20260927T120000
+SUMMARY:🚗 TV 03 Wörth - MuRu wD
+DESCRIPTION:Auswärtsspiel gegen TV 03 Wörth\nAnwurf: 10:00 Uhr\nLiga: Bez
+ irksoberliga WEIBLICH\nSpieltag: 5\nSpielnummer: 2627RPBKRODJWA0502\nhttps
+ ://www.handball.net/match/385073
+URL:https://www.handball.net/match/385073
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Bienwaldhalle Wörth\, Am Bienwald 3\, 76744 Wörth
+GEO:49.050641;8.260499
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 TV 03 Wörth - MuRu wD
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 TV 03 Wörth - MuRu wD
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKRODJWA0601@handball.net
+DTSTAMP:20260829T021221Z
+DTSTART;TZID=Europe/Berlin:20261024T173000
+DTEND;TZID=Europe/Berlin:20261024T193000
+SUMMARY:🚗 TV Kirrweiler - MuRu wD
+DESCRIPTION:Auswärtsspiel gegen TV Kirrweiler\nAnwurf: 17:30 Uhr\nLiga: Be
+ zirksoberliga WEIBLICH\nSpieltag: 6\nSpielnummer: 2627RPBKRODJWA0601\nhttp
+ s://www.handball.net/match/385077
+URL:https://www.handball.net/match/385077
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Reblandhalle Kirrweiler\, Unterried 6\, 67489 Kirrweiler
+GEO:49.295763;8.172631
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 TV Kirrweiler - MuRu wD
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 TV Kirrweiler - MuRu wD
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKRODJWA0704@handball.net
+DTSTAMP:20260829T021221Z
+DTSTART;TZID=Europe/Berlin:20261107T160000
+DTEND;TZID=Europe/Berlin:20261107T180000
+SUMMARY:🏠 MuRu wD - JSG Kaiserslautern/Dansenberg
+DESCRIPTION:Heimspiel gegen JSG Kaiserslautern/Dansenberg\nAnwurf: 16:00 Uh
+ r\nLiga: Bezirksoberliga WEIBLICH\nSpieltag: 7\nSpielnummer: 2627RPBKRODJW
+ A0704\nhttps://www.handball.net/match/385085
+URL:https://www.handball.net/match/385085
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu wD - JSG Kaiserslautern/Dansenberg
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu wD - JSG Kaiserslautern/Dansenberg
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKRODJWA0803@handball.net
+DTSTAMP:20260829T021221Z
+DTSTART;TZID=Europe/Berlin:20261114T121500
+DTEND;TZID=Europe/Berlin:20261114T141500
+SUMMARY:🚗 TV Edigheim - MuRu wD
+DESCRIPTION:Auswärtsspiel gegen TV Edigheim\nAnwurf: 12:15 Uhr\nLiga: Bezi
+ rksoberliga WEIBLICH\nSpieltag: 8\nSpielnummer: 2627RPBKRODJWA0803\nhttps:
+ //www.handball.net/match/385089
+URL:https://www.handball.net/match/385089
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Schulzentrum Edigheim\, Mühlaustr. 51\, 67069 Ludwigshafen
+GEO:49.528707;8.381039
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 TV Edigheim - MuRu wD
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 TV Edigheim - MuRu wD
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKRODJWA0905@handball.net
+DTSTAMP:20260829T021221Z
+DTSTART;TZID=Europe/Berlin:20261128T140000
+DTEND;TZID=Europe/Berlin:20261128T160000
+SUMMARY:🏠 MuRu wD - Vorderpfälzer Luchse
+DESCRIPTION:Heimspiel gegen Vorderpfälzer Luchse\nAnwurf: 14:00 Uhr\nLiga:
+  Bezirksoberliga WEIBLICH\nSpieltag: 9\nSpielnummer: 2627RPBKRODJWA0905\nh
+ ttps://www.handball.net/match/385096
+URL:https://www.handball.net/match/385096
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu wD - Vorderpfälzer Luchse
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu wD - Vorderpfälzer Luchse
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKRODJWA1102@handball.net
+DTSTAMP:20260829T021221Z
+DTSTART;TZID=Europe/Berlin:20261213T180000
+DTEND;TZID=Europe/Berlin:20261213T200000
+SUMMARY:🚗 Wjsg Mainz05/TV Nieder-Olm Wd1 - MuRu wD
+DESCRIPTION:Auswärtsspiel gegen Wjsg Mainz05/TV Nieder-Olm Wd1\nAnwurf: 18
+ :00 Uhr\nLiga: Bezirksoberliga WEIBLICH\nSpieltag: 11\nSpielnummer: 2627RP
+ BKRODJWA1102\nhttps://www.handball.net/match/385103
+URL:https://www.handball.net/match/385103
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Sporthalle der IGS Nieder-Olm\, Karl-Sieben-Straße\, 55268 Nieder
+ -Olm
+GEO:49.903161;8.197635
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 Wjsg Mainz05/TV Nieder-Olm Wd1 - MuRu wD
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 Wjsg Mainz05/TV Nieder-Olm Wd1 - MuRu wD
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKRODJWA1201@handball.net
+DTSTAMP:20260829T021221Z
+DTSTART;TZID=Europe/Berlin:20270124T130000
+DTEND;TZID=Europe/Berlin:20270124T150000
+SUMMARY:🏠 MuRu wD - SV Bornheim
+DESCRIPTION:Heimspiel gegen SV Bornheim\nAnwurf: 13:00 Uhr\nLiga: Bezirksob
+ erliga WEIBLICH\nSpieltag: 12\nSpielnummer: 2627RPBKRODJWA1201\nhttps://ww
+ w.handball.net/match/385107
+URL:https://www.handball.net/match/385107
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu wD - SV Bornheim
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu wD - SV Bornheim
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKRODJWA1303@handball.net
+DTSTAMP:20260829T021221Z
+DTSTART;TZID=Europe/Berlin:20270130T133000
+DTEND;TZID=Europe/Berlin:20270130T153000
+SUMMARY:🚗 TSG MZ-Bretzenheim - MuRu wD
+DESCRIPTION:Auswärtsspiel gegen TSG MZ-Bretzenheim\nAnwurf: 13:30 Uhr\nLig
+ a: Bezirksoberliga WEIBLICH\nSpieltag: 13\nSpielnummer: 2627RPBKRODJWA1303
+ \nhttps://www.handball.net/match/385114
+URL:https://www.handball.net/match/385114
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:IGS 1 Mainz-Bretzenheim\, Hans-Böckler-Straße 2\, 55128 Mainz
+GEO:49.977270;8.247460
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 TSG MZ-Bretzenheim - MuRu wD
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 TSG MZ-Bretzenheim - MuRu wD
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKRODJWA1402@handball.net
+DTSTAMP:20260829T021221Z
+DTSTART;TZID=Europe/Berlin:20270213T143000
+DTEND;TZID=Europe/Berlin:20270213T163000
+SUMMARY:🏠 MuRu wD - TV 03 Wörth
+DESCRIPTION:Heimspiel gegen TV 03 Wörth\nAnwurf: 14:30 Uhr\nLiga: Bezirkso
+ berliga WEIBLICH\nSpieltag: 14\nSpielnummer: 2627RPBKRODJWA1402\nhttps://w
+ ww.handball.net/match/385118
+URL:https://www.handball.net/match/385118
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu wD - TV 03 Wörth
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu wD - TV 03 Wörth
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKRODJWA1501@handball.net
+DTSTAMP:20260829T021221Z
+DTSTART;TZID=Europe/Berlin:20270220T140000
+DTEND;TZID=Europe/Berlin:20270220T160000
+SUMMARY:🏠 MuRu wD - TV Kirrweiler
+DESCRIPTION:Heimspiel gegen TV Kirrweiler\nAnwurf: 14:00 Uhr\nLiga: Bezirks
+ oberliga WEIBLICH\nSpieltag: 15\nSpielnummer: 2627RPBKRODJWA1501\nhttps://
+ www.handball.net/match/385122
+URL:https://www.handball.net/match/385122
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu wD - TV Kirrweiler
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu wD - TV Kirrweiler
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKRODJWA1604@handball.net
+DTSTAMP:20260829T021221Z
+DTSTART;TZID=Europe/Berlin:20270228T100000
+DTEND;TZID=Europe/Berlin:20270228T120000
+SUMMARY:🚗 JSG Kaiserslautern/Dansenberg - MuRu wD
+DESCRIPTION:Auswärtsspiel gegen JSG Kaiserslautern/Dansenberg\nAnwurf: 10:
+ 00 Uhr\nLiga: Bezirksoberliga WEIBLICH\nSpieltag: 16\nSpielnummer: 2627RPB
+ KRODJWA1604\nhttps://www.handball.net/match/385130
+URL:https://www.handball.net/match/385130
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Sporthalle Dansenberg\, Am Handballplatz 1\, 67661 Kaiserslautern-
+ Dansenberg
+GEO:49.406914;7.736269
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 JSG Kaiserslautern/Dansenberg - MuRu wD
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 JSG Kaiserslautern/Dansenberg - MuRu wD
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKRODJWA1703@handball.net
+DTSTAMP:20260829T021221Z
+DTSTART;TZID=Europe/Berlin:20270306T153000
+DTEND;TZID=Europe/Berlin:20270306T173000
+SUMMARY:🏠 MuRu wD - TV Edigheim
+DESCRIPTION:Heimspiel gegen TV Edigheim\nAnwurf: 15:30 Uhr\nLiga: Bezirksob
+ erliga WEIBLICH\nSpieltag: 17\nSpielnummer: 2627RPBKRODJWA1703\nhttps://ww
+ w.handball.net/match/385134
+URL:https://www.handball.net/match/385134
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu wD - TV Edigheim
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu wD - TV Edigheim
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKRODJWA1805@handball.net
+DTSTAMP:20260829T021221Z
+DTSTART;TZID=Europe/Berlin:20270314T130000
+DTEND;TZID=Europe/Berlin:20270314T150000
+SUMMARY:🚗 Vorderpfälzer Luchse - MuRu wD
+DESCRIPTION:Auswärtsspiel gegen Vorderpfälzer Luchse\nAnwurf: 13:00 Uhr\n
+ Liga: Bezirksoberliga WEIBLICH\nSpieltag: 18\nSpielnummer: 2627RPBKRODJWA1
+ 805\nhttps://www.handball.net/match/385141
+URL:https://www.handball.net/match/385141
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Sporthalle Meckenheim\, Rödersheimer Str. 29\, 67149 Meckenheim
+GEO:49.412227;8.240714
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 Vorderpfälzer Luchse - MuRu wD
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 Vorderpfälzer Luchse - MuRu wD
+END:VALARM
+END:VEVENT
+END:VCALENDAR

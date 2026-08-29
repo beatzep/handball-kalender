@@ -1,0 +1,552 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//handball-kalender//spielplan2ics//DE
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:HSG Mutterstadt/Ruchheim – mB-Jugend
+X-WR-TIMEZONE:Europe/Berlin
+X-WR-CALDESC:Spielplan HSG Mutterstadt/Ruchheim – mB-Jugend - Quelle: han
+ dball.net
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VTIMEZONE
+TZID:Europe/Berlin
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:2627RP4BKRBJMC0101@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;VALUE=DATE:20260822
+DTEND;VALUE=DATE:20260823
+SUMMARY:🚗 HSG Dudenhofen/Schifferstadt II 10:16 MuRu mB
+DESCRIPTION:Endstand: 10:16 (Sieg)\nAuswärtsspiel gegen HSG Dudenhofen/Sch
+ ifferstadt II\nAnwurf: noch nicht angesetzt\nLiga: Pfalzgascup\nSpieltag: 
+ 1\nSpielnummer: 2627RP4BKRBJMC0101\nhttps://www.handball.net/match/675145
+URL:https://www.handball.net/match/675145
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RP4BKRBJMC0103@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;VALUE=DATE:20260822
+DTEND;VALUE=DATE:20260823
+SUMMARY:🏠 MuRu mB 22:16 TV 03 Wörth
+DESCRIPTION:Endstand: 22:16 (Sieg)\nHeimspiel gegen TV 03 Wörth\nAnwurf: n
+ och nicht angesetzt\nLiga: Pfalzgascup\nSpieltag: 1\nSpielnummer: 2627RP4B
+ KRBJMC0103\nhttps://www.handball.net/match/675147
+URL:https://www.handball.net/match/675147
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPOLBJMA0101@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;TZID=Europe/Berlin:20260829T180000
+DTEND;TZID=Europe/Berlin:20260829T200000
+SUMMARY:🚗 Mjsg Sobernheim/Meisenheim - MuRu mB
+DESCRIPTION:Auswärtsspiel gegen Mjsg Sobernheim/Meisenheim\nAnwurf: 18:00 
+ Uhr\nLiga: Oberliga MÄNNLICH\nSpieltag: 1\nSpielnummer: 2627RPOLBJMA0101\
+ nhttps://www.handball.net/match/382682
+URL:https://www.handball.net/match/382682
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Bad Sobernheim\, Dr. W.Dümmler Halle\, Staudernheimer Straße\, 5
+ 5566 Bad Sobernheim
+GEO:49.783616;7.665087
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 Mjsg Sobernheim/Meisenheim - MuRu mB
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 Mjsg Sobernheim/Meisenheim - MuRu mB
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPOLBJMA0201@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;TZID=Europe/Berlin:20260906T161500
+DTEND;TZID=Europe/Berlin:20260906T181500
+SUMMARY:🏠 MuRu mB - TV Kirrweiler
+DESCRIPTION:Heimspiel gegen TV Kirrweiler\nAnwurf: 16:15 Uhr\nLiga: Oberlig
+ a MÄNNLICH\nSpieltag: 2\nSpielnummer: 2627RPOLBJMA0201\nhttps://www.handb
+ all.net/match/382687
+URL:https://www.handball.net/match/382687
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu mB - TV Kirrweiler
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu mB - TV Kirrweiler
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPOLBJMA0303@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;TZID=Europe/Berlin:20260913T121500
+DTEND;TZID=Europe/Berlin:20260913T141500
+SUMMARY:🏠 MuRu mB - TV Nieder-Olm Mb2
+DESCRIPTION:Heimspiel gegen TV Nieder-Olm Mb2\nAnwurf: 12:15 Uhr\nLiga: Obe
+ rliga MÄNNLICH\nSpieltag: 3\nSpielnummer: 2627RPOLBJMA0303\nhttps://www.h
+ andball.net/match/382694
+URL:https://www.handball.net/match/382694
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu mB - TV Nieder-Olm Mb2
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu mB - TV Nieder-Olm Mb2
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPOLBJMA0403@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;TZID=Europe/Berlin:20260920T110000
+DTEND;TZID=Europe/Berlin:20260920T130000
+SUMMARY:🚗 TV 03 Wörth - MuRu mB
+DESCRIPTION:Auswärtsspiel gegen TV 03 Wörth\nAnwurf: 11:00 Uhr\nLiga: Obe
+ rliga MÄNNLICH\nSpieltag: 4\nSpielnummer: 2627RPOLBJMA0403\nhttps://www.h
+ andball.net/match/382699
+URL:https://www.handball.net/match/382699
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Bienwaldhalle Wörth\, Am Bienwald 3\, 76744 Wörth
+GEO:49.050641;8.260499
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 TV 03 Wörth - MuRu mB
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 TV 03 Wörth - MuRu mB
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPOLBJMA0503@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;TZID=Europe/Berlin:20260927T151500
+DTEND;TZID=Europe/Berlin:20260927T171500
+SUMMARY:🏠 MuRu mB - Mjsg SG Saulheim/HSV Alzey
+DESCRIPTION:Heimspiel gegen Mjsg SG Saulheim/HSV Alzey\nAnwurf: 15:15 Uhr\n
+ Liga: Oberliga MÄNNLICH\nSpieltag: 5\nSpielnummer: 2627RPOLBJMA0503\nhttp
+ s://www.handball.net/match/382704
+URL:https://www.handball.net/match/382704
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu mB - Mjsg SG Saulheim/HSV Alzey
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu mB - Mjsg SG Saulheim/HSV Alzey
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPOLBJMA0703@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;TZID=Europe/Berlin:20261108T131500
+DTEND;TZID=Europe/Berlin:20261108T151500
+SUMMARY:🏠 MuRu mB - JSG Osthofen/Worms
+DESCRIPTION:Heimspiel gegen JSG Osthofen/Worms\nAnwurf: 13:15 Uhr\nLiga: Ob
+ erliga MÄNNLICH\nSpieltag: 7\nSpielnummer: 2627RPOLBJMA0703\nhttps://www.
+ handball.net/match/382714
+URL:https://www.handball.net/match/382714
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu mB - JSG Osthofen/Worms
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu mB - JSG Osthofen/Worms
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPOLBJMA0802@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;TZID=Europe/Berlin:20261115T141500
+DTEND;TZID=Europe/Berlin:20261115T161500
+SUMMARY:🚗 TUS Neuhofen - MuRu mB
+DESCRIPTION:Auswärtsspiel gegen TUS Neuhofen\nAnwurf: 14:15 Uhr\nLiga: Obe
+ rliga MÄNNLICH\nSpieltag: 8\nSpielnummer: 2627RPOLBJMA0802\nhttps://www.h
+ andball.net/match/382718
+URL:https://www.handball.net/match/382718
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Rehbachhalle Neuhofen\, Jahnstr. 25\, 67141 Neuhofen
+GEO:49.420979;8.423410
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 TUS Neuhofen - MuRu mB
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 TUS Neuhofen - MuRu mB
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPOLBJMA0605@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;TZID=Europe/Berlin:20261121T160000
+DTEND;TZID=Europe/Berlin:20261121T180000
+SUMMARY:🚗 TG Waldsee - MuRu mB
+DESCRIPTION:Auswärtsspiel gegen TG Waldsee\nAnwurf: 16:00 Uhr\nLiga: Oberl
+ iga MÄNNLICH\nSpieltag: 6\nSpielnummer: 2627RPOLBJMA0605\nhttps://www.han
+ dball.net/match/382711
+URL:https://www.handball.net/match/382711
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Rheinauenhalle 1 Waldsee\, Wörthstraße 1\, 67165 Waldsee
+GEO:49.395580;8.448379
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 TG Waldsee - MuRu mB
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 TG Waldsee - MuRu mB
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPOLBJMA0903@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;TZID=Europe/Berlin:20261129T131500
+DTEND;TZID=Europe/Berlin:20261129T151500
+SUMMARY:🏠 MuRu mB - SF Budenheim II
+DESCRIPTION:Heimspiel gegen SF Budenheim II\nAnwurf: 13:15 Uhr\nLiga: Oberl
+ iga MÄNNLICH\nSpieltag: 9\nSpielnummer: 2627RPOLBJMA0903\nhttps://www.han
+ dball.net/match/382724
+URL:https://www.handball.net/match/382724
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu mB - SF Budenheim II
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu mB - SF Budenheim II
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPOLBJMA1001@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;TZID=Europe/Berlin:20261205T171500
+DTEND;TZID=Europe/Berlin:20261205T191500
+SUMMARY:🏠 MuRu mB - Mjsg Sobernheim/Meisenheim
+DESCRIPTION:Heimspiel gegen Mjsg Sobernheim/Meisenheim\nAnwurf: 17:15 Uhr\n
+ Liga: Oberliga MÄNNLICH\nSpieltag: 10\nSpielnummer: 2627RPOLBJMA1001\nhtt
+ ps://www.handball.net/match/382727
+URL:https://www.handball.net/match/382727
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu mB - Mjsg Sobernheim/Meisenheim
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu mB - Mjsg Sobernheim/Meisenheim
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPOLBJMA1101@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;TZID=Europe/Berlin:20261212T173000
+DTEND;TZID=Europe/Berlin:20261212T193000
+SUMMARY:🚗 TV Kirrweiler - MuRu mB
+DESCRIPTION:Auswärtsspiel gegen TV Kirrweiler\nAnwurf: 17:30 Uhr\nLiga: Ob
+ erliga MÄNNLICH\nSpieltag: 11\nSpielnummer: 2627RPOLBJMA1101\nhttps://www
+ .handball.net/match/382732
+URL:https://www.handball.net/match/382732
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Reblandhalle Kirrweiler\, Unterried 6\, 67489 Kirrweiler
+GEO:49.295763;8.172631
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 TV Kirrweiler - MuRu mB
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 TV Kirrweiler - MuRu mB
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPOLBJMA1203@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;TZID=Europe/Berlin:20270123T110000
+DTEND;TZID=Europe/Berlin:20270123T130000
+SUMMARY:🚗 TV Nieder-Olm Mb2 - MuRu mB
+DESCRIPTION:Auswärtsspiel gegen TV Nieder-Olm Mb2\nAnwurf: 11:00 Uhr\nLiga
+ : Oberliga MÄNNLICH\nSpieltag: 12\nSpielnummer: 2627RPOLBJMA1203\nhttps:/
+ /www.handball.net/match/382739
+URL:https://www.handball.net/match/382739
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Sporthalle der IGS Nieder-Olm\, Karl-Sieben-Straße\, 55268 Nieder
+ -Olm
+GEO:49.903161;8.197635
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 TV Nieder-Olm Mb2 - MuRu mB
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 TV Nieder-Olm Mb2 - MuRu mB
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPOLBJMA1303@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;TZID=Europe/Berlin:20270130T161500
+DTEND;TZID=Europe/Berlin:20270130T181500
+SUMMARY:🏠 MuRu mB - TV 03 Wörth
+DESCRIPTION:Heimspiel gegen TV 03 Wörth\nAnwurf: 16:15 Uhr\nLiga: Oberliga
+  MÄNNLICH\nSpieltag: 13\nSpielnummer: 2627RPOLBJMA1303\nhttps://www.handb
+ all.net/match/382744
+URL:https://www.handball.net/match/382744
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu mB - TV 03 Wörth
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu mB - TV 03 Wörth
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPOLBJMA1403@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;TZID=Europe/Berlin:20270213T160000
+DTEND;TZID=Europe/Berlin:20270213T180000
+SUMMARY:🚗 Mjsg SG Saulheim/HSV Alzey - MuRu mB
+DESCRIPTION:Auswärtsspiel gegen Mjsg SG Saulheim/HSV Alzey\nAnwurf: 16:00 
+ Uhr\nLiga: Oberliga MÄNNLICH\nSpieltag: 14\nSpielnummer: 2627RPOLBJMA1403
+ \nhttps://www.handball.net/match/382749
+URL:https://www.handball.net/match/382749
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Gustav-Heinemann-Schule Alzey\, Dr. Georg-Durst-Straße 23\, 55232
+  Alzey
+GEO:49.740570;8.122320
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 Mjsg SG Saulheim/HSV Alzey - MuRu mB
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 Mjsg SG Saulheim/HSV Alzey - MuRu mB
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPOLBJMA1505@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;TZID=Europe/Berlin:20270221T150000
+DTEND;TZID=Europe/Berlin:20270221T170000
+SUMMARY:🏠 MuRu mB - TG Waldsee
+DESCRIPTION:Heimspiel gegen TG Waldsee\nAnwurf: 15:00 Uhr\nLiga: Oberliga M
+ ÄNNLICH\nSpieltag: 15\nSpielnummer: 2627RPOLBJMA1505\nhttps://www.handbal
+ l.net/match/382756
+URL:https://www.handball.net/match/382756
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu mB - TG Waldsee
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu mB - TG Waldsee
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPOLBJMA1603@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;TZID=Europe/Berlin:20270228T140000
+DTEND;TZID=Europe/Berlin:20270228T160000
+SUMMARY:🚗 JSG Osthofen/Worms - MuRu mB
+DESCRIPTION:Auswärtsspiel gegen JSG Osthofen/Worms\nAnwurf: 14:00 Uhr\nLig
+ a: Oberliga MÄNNLICH\nSpieltag: 16\nSpielnummer: 2627RPOLBJMA1603\nhttps:
+ //www.handball.net/match/382759
+URL:https://www.handball.net/match/382759
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Nikolaus-Dörr-Halle Worms\, Mainzer Straße 51\, 67547 Worms
+GEO:49.642204;8.363049
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 JSG Osthofen/Worms - MuRu mB
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 JSG Osthofen/Worms - MuRu mB
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPOLBJMA1702@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;TZID=Europe/Berlin:20270306T141500
+DTEND;TZID=Europe/Berlin:20270306T161500
+SUMMARY:🏠 MuRu mB - TUS Neuhofen
+DESCRIPTION:Heimspiel gegen TUS Neuhofen\nAnwurf: 14:15 Uhr\nLiga: Oberliga
+  MÄNNLICH\nSpieltag: 17\nSpielnummer: 2627RPOLBJMA1702\nhttps://www.handb
+ all.net/match/382763
+URL:https://www.handball.net/match/382763
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu mB - TUS Neuhofen
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu mB - TUS Neuhofen
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPOLBJMA1803@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;TZID=Europe/Berlin:20270313T142000
+DTEND;TZID=Europe/Berlin:20270313T162000
+SUMMARY:🚗 SF Budenheim II - MuRu mB
+DESCRIPTION:Auswärtsspiel gegen SF Budenheim II\nAnwurf: 14:20 Uhr\nLiga: 
+ Oberliga MÄNNLICH\nSpieltag: 18\nSpielnummer: 2627RPOLBJMA1803\nhttps://w
+ ww.handball.net/match/382769
+URL:https://www.handball.net/match/382769
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Waldsporthalle Budenheim\, Römerstraße\, 55257 Budenheim
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 SF Budenheim II - MuRu mB
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 SF Budenheim II - MuRu mB
+END:VALARM
+END:VEVENT
+END:VCALENDAR

@@ -19,21 +19,184 @@
         "minuten_nach_spiel": 30,
         "minuten_nach_training": 45,
         "_hinweis": "Grundlage fuer Verbrauch und Zeitrechnung - hier anpassen"
-      }
+      },
+      "gruppe": "Aktive"
     },
     {
       "schluessel": "herren2",
       "team_id": 80980,
       "name": "Herren II",
       "kurzname": "HSG MuRu II",
-      "datei": "herren2.ics"
+      "datei": "herren2.ics",
+      "gruppe": "Aktive"
     },
     {
       "schluessel": "damen",
       "team_id": 80999,
       "name": "Damen",
       "kurzname": "HSG MuRu",
-      "datei": "damen.ics"
+      "datei": "damen.ics",
+      "gruppe": "Aktive"
+    },
+    {
+      "schluessel": "ma",
+      "team_id": 81043,
+      "name": "mA-Jugend",
+      "kurzname": "MuRu mA",
+      "datei": "ma.ics",
+      "gruppe": "Jugend"
+    },
+    {
+      "schluessel": "wa",
+      "team_id": 81066,
+      "name": "wA-Jugend",
+      "kurzname": "MuRu wA",
+      "datei": "wa.ics",
+      "gruppe": "Jugend"
+    },
+    {
+      "schluessel": "mb",
+      "team_id": 86762,
+      "name": "mB-Jugend",
+      "kurzname": "MuRu mB",
+      "datei": "mb.ics",
+      "gruppe": "Jugend"
+    },
+    {
+      "schluessel": "mb-2",
+      "team_id": 80857,
+      "name": "mB-Jugend II",
+      "kurzname": "MuRu mB II",
+      "datei": "mb-2.ics",
+      "gruppe": "Jugend"
+    },
+    {
+      "schluessel": "wb",
+      "team_id": 86917,
+      "name": "wB-Jugend",
+      "kurzname": "MuRu wB",
+      "datei": "wb.ics",
+      "gruppe": "Jugend"
+    },
+    {
+      "schluessel": "gc",
+      "team_id": 81091,
+      "name": "gC-Jugend",
+      "kurzname": "MuRu gC",
+      "datei": "gc.ics",
+      "gruppe": "Jugend"
+    },
+    {
+      "schluessel": "gc-2",
+      "team_id": 81130,
+      "name": "gC-Jugend II",
+      "kurzname": "MuRu gC II",
+      "datei": "gc-2.ics",
+      "gruppe": "Jugend"
+    },
+    {
+      "schluessel": "wc",
+      "team_id": 86951,
+      "name": "wC-Jugend",
+      "kurzname": "MuRu wC",
+      "datei": "wc.ics",
+      "gruppe": "Jugend"
+    },
+    {
+      "schluessel": "wc-2",
+      "team_id": 81146,
+      "name": "wC-Jugend II",
+      "kurzname": "MuRu wC II",
+      "datei": "wc-2.ics",
+      "gruppe": "Jugend"
+    },
+    {
+      "schluessel": "gd",
+      "team_id": 81189,
+      "name": "gD-Jugend",
+      "kurzname": "MuRu gD",
+      "datei": "gd.ics",
+      "gruppe": "Jugend"
+    },
+    {
+      "schluessel": "wd",
+      "team_id": 81241,
+      "name": "wD-Jugend",
+      "kurzname": "MuRu wD",
+      "datei": "wd.ics",
+      "gruppe": "Jugend"
+    },
+    {
+      "schluessel": "wd-2",
+      "team_id": 81267,
+      "name": "wD-Jugend II",
+      "kurzname": "MuRu wD II",
+      "datei": "wd-2.ics",
+      "gruppe": "Jugend"
+    },
+    {
+      "schluessel": "ge",
+      "team_id": 81293,
+      "name": "gE-Jugend",
+      "kurzname": "MuRu gE",
+      "datei": "ge.ics",
+      "gruppe": "Jugend"
+    },
+    {
+      "schluessel": "ge-2",
+      "team_id": 81335,
+      "name": "gE-Jugend II",
+      "kurzname": "MuRu gE II",
+      "datei": "ge-2.ics",
+      "gruppe": "Jugend"
+    },
+    {
+      "schluessel": "ge-3",
+      "team_id": 81343,
+      "name": "gE-Jugend III",
+      "kurzname": "MuRu gE III",
+      "datei": "ge-3.ics",
+      "gruppe": "Jugend"
+    },
+    {
+      "schluessel": "gf",
+      "team_id": 81504,
+      "name": "gF-Jugend",
+      "kurzname": "MuRu gF",
+      "datei": "gf.ics",
+      "gruppe": "Jugend"
+    },
+    {
+      "schluessel": "gf-2",
+      "team_id": 81517,
+      "name": "gF-Jugend II",
+      "kurzname": "MuRu gF II",
+      "datei": "gf-2.ics",
+      "gruppe": "Jugend"
+    },
+    {
+      "schluessel": "minis",
+      "team_id": 81423,
+      "name": "Minis",
+      "kurzname": "MuRu Minis",
+      "datei": "minis.ics",
+      "gruppe": "Jugend"
+    },
+    {
+      "schluessel": "minis-2",
+      "team_id": 81424,
+      "name": "Minis II",
+      "kurzname": "MuRu Minis II",
+      "datei": "minis-2.ics",
+      "gruppe": "Jugend"
+    },
+    {
+      "schluessel": "minis-3",
+      "team_id": 81425,
+      "name": "Minis III",
+      "kurzname": "MuRu Minis III",
+      "datei": "minis-3.ics",
+      "gruppe": "Jugend"
     }
   ],
   "heimat": {

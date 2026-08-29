@@ -1,0 +1,518 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//handball-kalender//spielplan2ics//DE
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:HSG Mutterstadt/Ruchheim – gD-Jugend
+X-WR-TIMEZONE:Europe/Berlin
+X-WR-CALDESC:Spielplan HSG Mutterstadt/Ruchheim – gD-Jugend - Quelle: han
+ dball.net
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VTIMEZONE
+TZID:Europe/Berlin
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:2627RP4BKRDJGC0102@handball.net
+DTSTAMP:20260829T021221Z
+DTSTART;VALUE=DATE:20260816
+DTEND;VALUE=DATE:20260817
+SUMMARY:🚗 JSG Mundenheim/Rheingönheim III 0:22 MuRu gD
+DESCRIPTION:Endstand: 0:22 (Sieg)\nAuswärtsspiel gegen JSG Mundenheim/Rhei
+ ngönheim III\nAnwurf: noch nicht angesetzt\nLiga: Djugend-Cup\nSpieltag: 
+ 1\nSpielnummer: 2627RP4BKRDJGC0102\nhttps://www.handball.net/match/673778
+URL:https://www.handball.net/match/673778
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RP4BKRDJGC0104@handball.net
+DTSTAMP:20260829T021221Z
+DTSTART;VALUE=DATE:20260816
+DTEND;VALUE=DATE:20260817
+SUMMARY:🚗 SF Budenheim 18:10 MuRu gD
+DESCRIPTION:Endstand: 18:10 (Niederlage)\nAuswärtsspiel gegen SF Budenheim
+ \nAnwurf: noch nicht angesetzt\nLiga: Djugend-Cup\nSpieltag: 1\nSpielnumme
+ r: 2627RP4BKRDJGC0104\nhttps://www.handball.net/match/673780
+URL:https://www.handball.net/match/673780
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RP4BKRDJGC0105@handball.net
+DTSTAMP:20260829T021221Z
+DTSTART;VALUE=DATE:20260816
+DTEND;VALUE=DATE:20260817
+SUMMARY:🏠 MuRu gD 16:20 Hr Göllheim/Eisenberg/Asselheim/Kindenheim
+DESCRIPTION:Endstand: 16:20 (Niederlage)\nHeimspiel gegen Hr Göllheim/Eise
+ nberg/Asselheim/Kindenheim\nAnwurf: noch nicht angesetzt\nLiga: Djugend-Cu
+ p\nSpieltag: 1\nSpielnummer: 2627RP4BKRDJGC0105\nhttps://www.handball.net/
+ match/673781
+URL:https://www.handball.net/match/673781
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKRDJGB0102@handball.net
+DTSTAMP:20260829T021221Z
+DTSTART;TZID=Europe/Berlin:20260830T121500
+DTEND;TZID=Europe/Berlin:20260830T141500
+SUMMARY:🏠 MuRu gD - Mjsg SG Saulheim/HSV Alzey
+DESCRIPTION:Heimspiel gegen Mjsg SG Saulheim/HSV Alzey\nAnwurf: 12:15 Uhr\n
+ Liga: Bezirksliga GEMISCHT\nSpieltag: 1\nSpielnummer: 2627RPBKRDJGB0102\nh
+ ttps://www.handball.net/match/383391
+URL:https://www.handball.net/match/383391
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu gD - Mjsg SG Saulheim/HSV Alzey
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu gD - Mjsg SG Saulheim/HSV Alzey
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKRDJGB0204@handball.net
+DTSTAMP:20260829T021221Z
+DTSTART;TZID=Europe/Berlin:20260906T110000
+DTEND;TZID=Europe/Berlin:20260906T130000
+SUMMARY:🚗 Hr Göllheim/Eisenberg/Asselheim/Kindenheim - MuRu gD
+DESCRIPTION:Auswärtsspiel gegen Hr Göllheim/Eisenberg/Asselheim/Kindenhei
+ m\nAnwurf: 11:00 Uhr\nLiga: Bezirksliga GEMISCHT\nSpieltag: 2\nSpielnummer
+ : 2627RPBKRDJGB0204\nhttps://www.handball.net/match/383398
+URL:https://www.handball.net/match/383398
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:IGS-Sporthalle Grünstadt\, Asselheimer Straße 19A\, 67269 Grüns
+ tadt
+GEO:49.571707;8.164772
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 Hr Göllheim/Eisenberg/Asselheim/Kindenheim 
+ - MuRu gD
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 Hr Göllheim/Eisenberg/Asselheim/Kindenheim 
+ - MuRu gD
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKRDJGB0302@handball.net
+DTSTAMP:20260829T021221Z
+DTSTART;TZID=Europe/Berlin:20260913T114500
+DTEND;TZID=Europe/Berlin:20260913T134500
+SUMMARY:🚗 HSG Eckbachtal - MuRu gD
+DESCRIPTION:Auswärtsspiel gegen HSG Eckbachtal\nAnwurf: 11:45 Uhr\nLiga: B
+ ezirksliga GEMISCHT\nSpieltag: 3\nSpielnummer: 2627RPBKRDJGB0302\nhttps://
+ www.handball.net/match/383401
+URL:https://www.handball.net/match/383401
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Xx Sporthalle\, Bahnhofstraße 7\, 67246 Dirmstein
+GEO:49.565577;8.249173
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 HSG Eckbachtal - MuRu gD
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 HSG Eckbachtal - MuRu gD
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKRDJGB0404@handball.net
+DTSTAMP:20260829T021221Z
+DTSTART;TZID=Europe/Berlin:20260920T123000
+DTEND;TZID=Europe/Berlin:20260920T143000
+SUMMARY:🏠 MuRu gD - Hlz Friesenheim/Hochdorf II
+DESCRIPTION:Heimspiel gegen Hlz Friesenheim/Hochdorf II\nAnwurf: 12:30 Uhr\
+ nLiga: Bezirksliga GEMISCHT\nSpieltag: 4\nSpielnummer: 2627RPBKRDJGB0404\n
+ https://www.handball.net/match/383408
+URL:https://www.handball.net/match/383408
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu gD - Hlz Friesenheim/Hochdorf II
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu gD - Hlz Friesenheim/Hochdorf II
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKRDJGB0505@handball.net
+DTSTAMP:20260829T021221Z
+DTSTART;TZID=Europe/Berlin:20260927T100000
+DTEND;TZID=Europe/Berlin:20260927T120000
+SUMMARY:🚗 JSG Kaiserslauern/Dansenberg II - MuRu gD
+DESCRIPTION:Auswärtsspiel gegen JSG Kaiserslauern/Dansenberg II\nAnwurf: 1
+ 0:00 Uhr\nLiga: Bezirksliga GEMISCHT\nSpieltag: 5\nSpielnummer: 2627RPBKRD
+ JGB0505\nhttps://www.handball.net/match/383414
+URL:https://www.handball.net/match/383414
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Sporthalle Dansenberg\, Am Handballplatz 1\, 67661 Kaiserslautern-
+ Dansenberg
+GEO:49.406914;7.736269
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 JSG Kaiserslauern/Dansenberg II - MuRu gD
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 JSG Kaiserslauern/Dansenberg II - MuRu gD
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKRDJGB0703@handball.net
+DTSTAMP:20260829T021221Z
+DTSTART;TZID=Europe/Berlin:20261107T161500
+DTEND;TZID=Europe/Berlin:20261107T181500
+SUMMARY:🚗 JSG Osthofen/Worms - MuRu gD
+DESCRIPTION:Auswärtsspiel gegen JSG Osthofen/Worms\nAnwurf: 16:15 Uhr\nLig
+ a: Bezirksliga GEMISCHT\nSpieltag: 7\nSpielnummer: 2627RPBKRDJGB0703\nhttp
+ s://www.handball.net/match/383422
+URL:https://www.handball.net/match/383422
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Wonnegauhalle Osthofen\, Herrnsheimer Straße 24\, 67574 Osthofen
+GEO:49.700160;8.325410
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 JSG Osthofen/Worms - MuRu gD
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 JSG Osthofen/Worms - MuRu gD
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKRDJGB0805@handball.net
+DTSTAMP:20260829T021221Z
+DTSTART;TZID=Europe/Berlin:20261115T100000
+DTEND;TZID=Europe/Berlin:20261115T120000
+SUMMARY:🏠 MuRu gD - JSG Mundenheim/Rheingönheim II
+DESCRIPTION:Heimspiel gegen JSG Mundenheim/Rheingönheim II\nAnwurf: 10:00 
+ Uhr\nLiga: Bezirksliga GEMISCHT\nSpieltag: 8\nSpielnummer: 2627RPBKRDJGB08
+ 05\nhttps://www.handball.net/match/383429
+URL:https://www.handball.net/match/383429
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu gD - JSG Mundenheim/Rheingönheim II
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu gD - JSG Mundenheim/Rheingönheim II
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKRDJGB0905@handball.net
+DTSTAMP:20260829T021221Z
+DTSTART;TZID=Europe/Berlin:20261128T180000
+DTEND;TZID=Europe/Berlin:20261128T200000
+SUMMARY:🚗 TUS Neuhofen - MuRu gD
+DESCRIPTION:Auswärtsspiel gegen TUS Neuhofen\nAnwurf: 18:00 Uhr\nLiga: Bez
+ irksliga GEMISCHT\nSpieltag: 9\nSpielnummer: 2627RPBKRDJGB0905\nhttps://ww
+ w.handball.net/match/383434
+URL:https://www.handball.net/match/383434
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Rehbachhalle Neuhofen\, Jahnstr. 25\, 67141 Neuhofen
+GEO:49.420979;8.423410
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 TUS Neuhofen - MuRu gD
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 TUS Neuhofen - MuRu gD
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKRDJGB1002@handball.net
+DTSTAMP:20260829T021221Z
+DTSTART;TZID=Europe/Berlin:20261206T143000
+DTEND;TZID=Europe/Berlin:20261206T163000
+SUMMARY:🚗 Mjsg SG Saulheim/HSV Alzey - MuRu gD
+DESCRIPTION:Auswärtsspiel gegen Mjsg SG Saulheim/HSV Alzey\nAnwurf: 14:30 
+ Uhr\nLiga: Bezirksliga GEMISCHT\nSpieltag: 10\nSpielnummer: 2627RPBKRDJGB1
+ 002\nhttps://www.handball.net/match/383436
+URL:https://www.handball.net/match/383436
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Ritter-Hundt-Zentrum Saulheim\, Am Westring 6A\, 55291 Saulheim
+GEO:49.871298;8.146740
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 Mjsg SG Saulheim/HSV Alzey - MuRu gD
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 Mjsg SG Saulheim/HSV Alzey - MuRu gD
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKRDJGB1104@handball.net
+DTSTAMP:20260829T021221Z
+DTSTART;TZID=Europe/Berlin:20261213T113000
+DTEND;TZID=Europe/Berlin:20261213T133000
+SUMMARY:🏠 MuRu gD - Hr Göllheim/Eisenberg/Asselheim/Kindenheim
+DESCRIPTION:Heimspiel gegen Hr Göllheim/Eisenberg/Asselheim/Kindenheim\nAn
+ wurf: 11:30 Uhr\nLiga: Bezirksliga GEMISCHT\nSpieltag: 11\nSpielnummer: 26
+ 27RPBKRDJGB1104\nhttps://www.handball.net/match/383443
+URL:https://www.handball.net/match/383443
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu gD - Hr Göllheim/Eisenberg/Asselheim/K
+ indenheim
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu gD - Hr Göllheim/Eisenberg/Asselheim/K
+ indenheim
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKRDJGB1202@handball.net
+DTSTAMP:20260829T021221Z
+DTSTART;TZID=Europe/Berlin:20270124T113000
+DTEND;TZID=Europe/Berlin:20270124T133000
+SUMMARY:🏠 MuRu gD - HSG Eckbachtal
+DESCRIPTION:Heimspiel gegen HSG Eckbachtal\nAnwurf: 11:30 Uhr\nLiga: Bezirk
+ sliga GEMISCHT\nSpieltag: 12\nSpielnummer: 2627RPBKRDJGB1202\nhttps://www.
+ handball.net/match/383446
+URL:https://www.handball.net/match/383446
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu gD - HSG Eckbachtal
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu gD - HSG Eckbachtal
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKRDJGB1304@handball.net
+DTSTAMP:20260829T021221Z
+DTSTART;TZID=Europe/Berlin:20270131T114500
+DTEND;TZID=Europe/Berlin:20270131T134500
+SUMMARY:🚗 Hlz Friesenheim/Hochdorf II - MuRu gD
+DESCRIPTION:Auswärtsspiel gegen Hlz Friesenheim/Hochdorf II\nAnwurf: 11:45
+  Uhr\nLiga: Bezirksliga GEMISCHT\nSpieltag: 13\nSpielnummer: 2627RPBKRDJGB
+ 1304\nhttps://www.handball.net/match/383453
+URL:https://www.handball.net/match/383453
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Sportzentrum TV Hochdorf\, Im Einolf 2\, 67126 Hochdorf
+GEO:49.419490;8.284530
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 Hlz Friesenheim/Hochdorf II - MuRu gD
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 Hlz Friesenheim/Hochdorf II - MuRu gD
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKRDJGB1405@handball.net
+DTSTAMP:20260829T021221Z
+DTSTART;TZID=Europe/Berlin:20270213T130000
+DTEND;TZID=Europe/Berlin:20270213T150000
+SUMMARY:🏠 MuRu gD - JSG Kaiserslauern/Dansenberg II
+DESCRIPTION:Heimspiel gegen JSG Kaiserslauern/Dansenberg II\nAnwurf: 13:00 
+ Uhr\nLiga: Bezirksliga GEMISCHT\nSpieltag: 14\nSpielnummer: 2627RPBKRDJGB1
+ 405\nhttps://www.handball.net/match/383459
+URL:https://www.handball.net/match/383459
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu gD - JSG Kaiserslauern/Dansenberg II
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu gD - JSG Kaiserslauern/Dansenberg II
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKRDJGB1603@handball.net
+DTSTAMP:20260829T021221Z
+DTSTART;TZID=Europe/Berlin:20270228T100000
+DTEND;TZID=Europe/Berlin:20270228T120000
+SUMMARY:🏠 MuRu gD - JSG Osthofen/Worms
+DESCRIPTION:Heimspiel gegen JSG Osthofen/Worms\nAnwurf: 10:00 Uhr\nLiga: Be
+ zirksliga GEMISCHT\nSpieltag: 16\nSpielnummer: 2627RPBKRDJGB1603\nhttps://
+ www.handball.net/match/383467
+URL:https://www.handball.net/match/383467
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu gD - JSG Osthofen/Worms
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu gD - JSG Osthofen/Worms
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKRDJGB1705@handball.net
+DTSTAMP:20260829T021221Z
+DTSTART;TZID=Europe/Berlin:20270307T143000
+DTEND;TZID=Europe/Berlin:20270307T163000
+SUMMARY:🚗 JSG Mundenheim/Rheingönheim II - MuRu gD
+DESCRIPTION:Auswärtsspiel gegen JSG Mundenheim/Rheingönheim II\nAnwurf: 1
+ 4:30 Uhr\nLiga: Bezirksliga GEMISCHT\nSpieltag: 17\nSpielnummer: 2627RPBKR
+ DJGB1705\nhttps://www.handball.net/match/383474
+URL:https://www.handball.net/match/383474
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Halle Schulzentrum (Ot) Mundenheim\, Adlerdamm\, 67061 Ludwigshafe
+ n
+GEO:49.465065;8.434212
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 JSG Mundenheim/Rheingönheim II - MuRu gD
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 JSG Mundenheim/Rheingönheim II - MuRu gD
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKRDJGB1805@handball.net
+DTSTAMP:20260829T021221Z
+DTSTART;TZID=Europe/Berlin:20270314T113000
+DTEND;TZID=Europe/Berlin:20270314T133000
+SUMMARY:🏠 MuRu gD - TUS Neuhofen
+DESCRIPTION:Heimspiel gegen TUS Neuhofen\nAnwurf: 11:30 Uhr\nLiga: Bezirksl
+ iga GEMISCHT\nSpieltag: 18\nSpielnummer: 2627RPBKRDJGB1805\nhttps://www.ha
+ ndball.net/match/383479
+URL:https://www.handball.net/match/383479
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu gD - TUS Neuhofen
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu gD - TUS Neuhofen
+END:VALARM
+END:VEVENT
+END:VCALENDAR

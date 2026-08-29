@@ -1,0 +1,521 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//handball-kalender//spielplan2ics//DE
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:HSG Mutterstadt/Ruchheim – wA-Jugend
+X-WR-TIMEZONE:Europe/Berlin
+X-WR-CALDESC:Spielplan HSG Mutterstadt/Ruchheim – wA-Jugend - Quelle: han
+ dball.net
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VTIMEZONE
+TZID:Europe/Berlin
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:2627RPVLAJWB0103@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;TZID=Europe/Berlin:20260829T160000
+DTEND;TZID=Europe/Berlin:20260829T180000
+SUMMARY:🚗 HSG Landau/Land - MuRu wA
+DESCRIPTION:Auswärtsspiel gegen HSG Landau/Land\nAnwurf: 16:00 Uhr\nLiga: 
+ Verbandsliga WEIBLICH\nSpieltag: 1\nSpielnummer: 2627RPVLAJWB0103\nhttps:/
+ /www.handball.net/match/355273
+URL:https://www.handball.net/match/355273
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Bbs-Sporthalle Landau\, August-Croissant-Str. 27\, 76829 Landau
+GEO:49.207021;8.123181
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 HSG Landau/Land - MuRu wA
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 HSG Landau/Land - MuRu wA
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLAJWB0203@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;TZID=Europe/Berlin:20260905T133000
+DTEND;TZID=Europe/Berlin:20260905T153000
+SUMMARY:🏠 MuRu wA - HSG TSG/1.FC-Kaiserslautern
+DESCRIPTION:Heimspiel gegen HSG TSG/1.FC-Kaiserslautern\nAnwurf: 13:30 Uhr\
+ nLiga: Verbandsliga WEIBLICH\nSpieltag: 2\nSpielnummer: 2627RPVLAJWB0203\n
+ https://www.handball.net/match/355275
+URL:https://www.handball.net/match/355275
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu wA - HSG TSG/1.FC-Kaiserslautern
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu wA - HSG TSG/1.FC-Kaiserslautern
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLAJWB0302@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;TZID=Europe/Berlin:20260913T170000
+DTEND;TZID=Europe/Berlin:20260913T190000
+SUMMARY:🚗 Vsk Niederfeld - MuRu wA
+DESCRIPTION:Auswärtsspiel gegen Vsk Niederfeld\nAnwurf: 17:00 Uhr\nLiga: V
+ erbandsliga WEIBLICH\nSpieltag: 3\nSpielnummer: 2627RPVLAJWB0302\nhttps://
+ www.handball.net/match/355278
+URL:https://www.handball.net/match/355278
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Loschky-Halle Niederfeld\, Abteistraße 18\, 67059 Ludwigshafen
+GEO:49.468463;8.403079
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 Vsk Niederfeld - MuRu wA
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 Vsk Niederfeld - MuRu wA
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLAJWB0403@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;TZID=Europe/Berlin:20260920T140000
+DTEND;TZID=Europe/Berlin:20260920T160000
+SUMMARY:🏠 MuRu wA - Vorderpfälzer Luchse
+DESCRIPTION:Heimspiel gegen Vorderpfälzer Luchse\nAnwurf: 14:00 Uhr\nLiga:
+  Verbandsliga WEIBLICH\nSpieltag: 4\nSpielnummer: 2627RPVLAJWB0403\nhttps:
+ //www.handball.net/match/355281
+URL:https://www.handball.net/match/355281
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu wA - Vorderpfälzer Luchse
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu wA - Vorderpfälzer Luchse
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLAJWB0501@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;TZID=Europe/Berlin:20260927T160000
+DTEND;TZID=Europe/Berlin:20260927T180000
+SUMMARY:🚗 WSG Rheinauen - MuRu wA
+DESCRIPTION:Auswärtsspiel gegen WSG Rheinauen\nAnwurf: 16:00 Uhr\nLiga: Ve
+ rbandsliga WEIBLICH\nSpieltag: 5\nSpielnummer: 2627RPVLAJWB0501\nhttps://w
+ ww.handball.net/match/355283
+URL:https://www.handball.net/match/355283
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Rheinauenhalle 1 Waldsee\, Wörthstraße 1\, 67165 Waldsee
+GEO:49.395580;8.448379
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 WSG Rheinauen - MuRu wA
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 WSG Rheinauen - MuRu wA
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLAJWB0803@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;TZID=Europe/Berlin:20261108T164500
+DTEND;TZID=Europe/Berlin:20261108T184500
+SUMMARY:🏠 MuRu wA - HSG Landau/Land
+DESCRIPTION:Heimspiel gegen HSG Landau/Land\nAnwurf: 16:45 Uhr\nLiga: Verba
+ ndsliga WEIBLICH\nSpieltag: 8\nSpielnummer: 2627RPVLAJWB0803\nhttps://www.
+ handball.net/match/355294
+URL:https://www.handball.net/match/355294
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu wA - HSG Landau/Land
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu wA - HSG Landau/Land
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLAJWB0903@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;TZID=Europe/Berlin:20261115T130000
+DTEND;TZID=Europe/Berlin:20261115T150000
+SUMMARY:🚗 HSG TSG/1.FC-Kaiserslautern - MuRu wA
+DESCRIPTION:Auswärtsspiel gegen HSG TSG/1.FC-Kaiserslautern\nAnwurf: 13:00
+  Uhr\nLiga: Verbandsliga WEIBLICH\nSpieltag: 9\nSpielnummer: 2627RPVLAJWB0
+ 903\nhttps://www.handball.net/match/355296
+URL:https://www.handball.net/match/355296
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Schillerschule Kaiserslautern\, Julius-Küchler-Str. 1\, 67659 Kai
+ serslautern
+GEO:49.445240;7.743207
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 HSG TSG/1.FC-Kaiserslautern - MuRu wA
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 HSG TSG/1.FC-Kaiserslautern - MuRu wA
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLAJWB0604@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;TZID=Europe/Berlin:20261121T110000
+DTEND;TZID=Europe/Berlin:20261121T130000
+SUMMARY:🚗 TSV Speyer - MuRu wA
+DESCRIPTION:Auswärtsspiel gegen TSV Speyer\nAnwurf: 11:00 Uhr\nLiga: Verba
+ ndsliga WEIBLICH\nSpieltag: 6\nSpielnummer: 2627RPVLAJWB0604\nhttps://www.
+ handball.net/match/355288
+URL:https://www.handball.net/match/355288
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Sporthalle-Ost Speyer\, Fritz-Ober-Str. 3\, 67346 Speyer
+GEO:49.324592;8.438719
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 TSV Speyer - MuRu wA
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 TSV Speyer - MuRu wA
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLAJWB1002@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;TZID=Europe/Berlin:20261128T180000
+DTEND;TZID=Europe/Berlin:20261128T200000
+SUMMARY:🏠 MuRu wA - Vsk Niederfeld
+DESCRIPTION:Heimspiel gegen Vsk Niederfeld\nAnwurf: 18:00 Uhr\nLiga: Verban
+ dsliga WEIBLICH\nSpieltag: 10\nSpielnummer: 2627RPVLAJWB1002\nhttps://www.
+ handball.net/match/355299
+URL:https://www.handball.net/match/355299
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu wA - Vsk Niederfeld
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu wA - Vsk Niederfeld
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLAJWB1103@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;TZID=Europe/Berlin:20261205T150000
+DTEND;TZID=Europe/Berlin:20261205T170000
+SUMMARY:🚗 Vorderpfälzer Luchse - MuRu wA
+DESCRIPTION:Auswärtsspiel gegen Vorderpfälzer Luchse\nAnwurf: 15:00 Uhr\n
+ Liga: Verbandsliga WEIBLICH\nSpieltag: 11\nSpielnummer: 2627RPVLAJWB1103\n
+ https://www.handball.net/match/355302
+URL:https://www.handball.net/match/355302
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Wahagnieshalle Böhl-Iggelheim\, Am Schwarzweiher 1\, 67459 Böhl-
+ Iggelheim
+GEO:49.373045;8.303608
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 Vorderpfälzer Luchse - MuRu wA
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 Vorderpfälzer Luchse - MuRu wA
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLAJWB1201@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;TZID=Europe/Berlin:20261213T144500
+DTEND;TZID=Europe/Berlin:20261213T164500
+SUMMARY:🏠 MuRu wA - WSG Rheinauen
+DESCRIPTION:Heimspiel gegen WSG Rheinauen\nAnwurf: 14:45 Uhr\nLiga: Verband
+ sliga WEIBLICH\nSpieltag: 12\nSpielnummer: 2627RPVLAJWB1201\nhttps://www.h
+ andball.net/match/355304
+URL:https://www.handball.net/match/355304
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu wA - WSG Rheinauen
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu wA - WSG Rheinauen
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLAJWB1304@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;TZID=Europe/Berlin:20270124T161500
+DTEND;TZID=Europe/Berlin:20270124T181500
+SUMMARY:🏠 MuRu wA - TSV Speyer
+DESCRIPTION:Heimspiel gegen TSV Speyer\nAnwurf: 16:15 Uhr\nLiga: Verbandsli
+ ga WEIBLICH\nSpieltag: 13\nSpielnummer: 2627RPVLAJWB1304\nhttps://www.hand
+ ball.net/match/355309
+URL:https://www.handball.net/match/355309
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu wA - TSV Speyer
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu wA - TSV Speyer
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLAJWB1503@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;TZID=Europe/Berlin:20270213T180000
+DTEND;TZID=Europe/Berlin:20270213T200000
+SUMMARY:🚗 HSG Landau/Land - MuRu wA
+DESCRIPTION:Auswärtsspiel gegen HSG Landau/Land\nAnwurf: 18:00 Uhr\nLiga: 
+ Verbandsliga WEIBLICH\nSpieltag: 15\nSpielnummer: 2627RPVLAJWB1503\nhttps:
+ //www.handball.net/match/355315
+URL:https://www.handball.net/match/355315
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Sporthalle West Landau\, Prießnitzweg 12\, 76829 Landau
+GEO:49.197108;8.105074
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 HSG Landau/Land - MuRu wA
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 HSG Landau/Land - MuRu wA
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLAJWB1603@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;TZID=Europe/Berlin:20270221T164500
+DTEND;TZID=Europe/Berlin:20270221T184500
+SUMMARY:🏠 MuRu wA - HSG TSG/1.FC-Kaiserslautern
+DESCRIPTION:Heimspiel gegen HSG TSG/1.FC-Kaiserslautern\nAnwurf: 16:45 Uhr\
+ nLiga: Verbandsliga WEIBLICH\nSpieltag: 16\nSpielnummer: 2627RPVLAJWB1603\
+ nhttps://www.handball.net/match/355317
+URL:https://www.handball.net/match/355317
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu wA - HSG TSG/1.FC-Kaiserslautern
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu wA - HSG TSG/1.FC-Kaiserslautern
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLAJWB1702@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;TZID=Europe/Berlin:20270227T170000
+DTEND;TZID=Europe/Berlin:20270227T190000
+SUMMARY:🚗 Vsk Niederfeld - MuRu wA
+DESCRIPTION:Auswärtsspiel gegen Vsk Niederfeld\nAnwurf: 17:00 Uhr\nLiga: V
+ erbandsliga WEIBLICH\nSpieltag: 17\nSpielnummer: 2627RPVLAJWB1702\nhttps:/
+ /www.handball.net/match/355320
+URL:https://www.handball.net/match/355320
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Loschky-Halle Niederfeld\, Abteistraße 18\, 67059 Ludwigshafen
+GEO:49.468463;8.403079
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 Vsk Niederfeld - MuRu wA
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 Vsk Niederfeld - MuRu wA
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLAJWB1803@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;TZID=Europe/Berlin:20270306T170000
+DTEND;TZID=Europe/Berlin:20270306T190000
+SUMMARY:🏠 MuRu wA - Vorderpfälzer Luchse
+DESCRIPTION:Heimspiel gegen Vorderpfälzer Luchse\nAnwurf: 17:00 Uhr\nLiga:
+  Verbandsliga WEIBLICH\nSpieltag: 18\nSpielnummer: 2627RPVLAJWB1803\nhttps
+ ://www.handball.net/match/355323
+URL:https://www.handball.net/match/355323
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu wA - Vorderpfälzer Luchse
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu wA - Vorderpfälzer Luchse
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLAJWB1901@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;TZID=Europe/Berlin:20270313T180000
+DTEND;TZID=Europe/Berlin:20270313T200000
+SUMMARY:🚗 WSG Rheinauen - MuRu wA
+DESCRIPTION:Auswärtsspiel gegen WSG Rheinauen\nAnwurf: 18:00 Uhr\nLiga: Ve
+ rbandsliga WEIBLICH\nSpieltag: 19\nSpielnummer: 2627RPVLAJWB1901\nhttps://
+ www.handball.net/match/355325
+URL:https://www.handball.net/match/355325
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Rehbachhalle Neuhofen\, Jahnstr. 25\, 67141 Neuhofen
+GEO:49.420979;8.423410
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 WSG Rheinauen - MuRu wA
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 WSG Rheinauen - MuRu wA
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPVLAJWB2004@handball.net
+DTSTAMP:20260829T021218Z
+DTSTART;TZID=Europe/Berlin:20270410T110000
+DTEND;TZID=Europe/Berlin:20270410T130000
+SUMMARY:🚗 TSV Speyer - MuRu wA
+DESCRIPTION:Auswärtsspiel gegen TSV Speyer\nAnwurf: 11:00 Uhr\nLiga: Verba
+ ndsliga WEIBLICH\nSpieltag: 20\nSpielnummer: 2627RPVLAJWB2004\nhttps://www
+ .handball.net/match/355330
+URL:https://www.handball.net/match/355330
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Sporthalle-Ost Speyer\, Fritz-Ober-Str. 3\, 67346 Speyer
+GEO:49.324592;8.438719
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 TSV Speyer - MuRu wA
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 TSV Speyer - MuRu wA
+END:VALARM
+END:VEVENT
+END:VCALENDAR

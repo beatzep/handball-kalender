@@ -1,0 +1,525 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//handball-kalender//spielplan2ics//DE
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:HSG Mutterstadt/Ruchheim – mA-Jugend
+X-WR-TIMEZONE:Europe/Berlin
+X-WR-CALDESC:Spielplan HSG Mutterstadt/Ruchheim – mA-Jugend - Quelle: han
+ dball.net
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VTIMEZONE
+TZID:Europe/Berlin
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:2627RPOLAJMA0206@handball.net
+DTSTAMP:20260829T021217Z
+DTSTART;TZID=Europe/Berlin:20260905T174500
+DTEND;TZID=Europe/Berlin:20260905T194500
+SUMMARY:🏠 MuRu mA - Südpfalz Tiger
+DESCRIPTION:Heimspiel gegen Südpfalz Tiger\nAnwurf: 17:45 Uhr\nLiga: Oberl
+ iga MÄNNLICH\nSpieltag: 2\nSpielnummer: 2627RPOLAJMA0206\nhttps://www.han
+ dball.net/match/382561
+URL:https://www.handball.net/match/382561
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu mA - Südpfalz Tiger
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu mA - Südpfalz Tiger
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPOLAJMA0301@handball.net
+DTSTAMP:20260829T021217Z
+DTSTART;TZID=Europe/Berlin:20260913T140000
+DTEND;TZID=Europe/Berlin:20260913T160000
+SUMMARY:🏠 MuRu mA - Mjsg SG Saulheim/HSV Alzey
+DESCRIPTION:Heimspiel gegen Mjsg SG Saulheim/HSV Alzey\nAnwurf: 14:00 Uhr\n
+ Liga: Oberliga MÄNNLICH\nSpieltag: 3\nSpielnummer: 2627RPOLAJMA0301\nhttp
+ s://www.handball.net/match/382562
+URL:https://www.handball.net/match/382562
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu mA - Mjsg SG Saulheim/HSV Alzey
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu mA - Mjsg SG Saulheim/HSV Alzey
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPOLAJMA0405@handball.net
+DTSTAMP:20260829T021217Z
+DTSTART;TZID=Europe/Berlin:20260919T160000
+DTEND;TZID=Europe/Berlin:20260919T180000
+SUMMARY:🚗 TS RODALBEN mA - MuRu mA
+DESCRIPTION:Auswärtsspiel gegen TS RODALBEN mA\nAnwurf: 16:00 Uhr\nLiga: O
+ berliga MÄNNLICH\nSpieltag: 4\nSpielnummer: 2627RPOLAJMA0405\nhttps://www
+ .handball.net/match/382572
+URL:https://www.handball.net/match/382572
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Tsr-Sporthalle Rodalben\, Turnstraße 10\, 66976 Rodalben
+GEO:49.244211;7.641860
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 TS RODALBEN mA - MuRu mA
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 TS RODALBEN mA - MuRu mA
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPOLAJMA0502@handball.net
+DTSTAMP:20260829T021217Z
+DTSTART;TZID=Europe/Berlin:20260927T170000
+DTEND;TZID=Europe/Berlin:20260927T190000
+SUMMARY:🏠 MuRu mA - Mjsg Heiligenstein/Mundenheim/Rheingönheim II
+DESCRIPTION:Heimspiel gegen Mjsg Heiligenstein/Mundenheim/Rheingönheim II\
+ nAnwurf: 17:00 Uhr\nLiga: Oberliga MÄNNLICH\nSpieltag: 5\nSpielnummer: 26
+ 27RPOLAJMA0502\nhttps://www.handball.net/match/382575
+URL:https://www.handball.net/match/382575
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu mA - Mjsg Heiligenstein/Mundenheim/Rhei
+ ngönheim II
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu mA - Mjsg Heiligenstein/Mundenheim/Rhei
+ ngönheim II
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPOLAJMA0604@handball.net
+DTSTAMP:20260829T021217Z
+DTSTART;TZID=Europe/Berlin:20261031T170000
+DTEND;TZID=Europe/Berlin:20261031T190000
+SUMMARY:🚗 TV Kirrweiler - MuRu mA
+DESCRIPTION:Auswärtsspiel gegen TV Kirrweiler\nAnwurf: 17:00 Uhr\nLiga: Ob
+ erliga MÄNNLICH\nSpieltag: 6\nSpielnummer: 2627RPOLAJMA0604\nhttps://www.
+ handball.net/match/382583
+URL:https://www.handball.net/match/382583
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Reblandhalle Kirrweiler\, Unterried 6\, 67489 Kirrweiler
+GEO:49.295763;8.172631
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 TV Kirrweiler - MuRu mA
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 TV Kirrweiler - MuRu mA
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPOLAJMA0803@handball.net
+DTSTAMP:20260829T021217Z
+DTSTART;TZID=Europe/Berlin:20261108T101500
+DTEND;TZID=Europe/Berlin:20261108T121500
+SUMMARY:🚗 HSG Landau/Land - MuRu mA
+DESCRIPTION:Auswärtsspiel gegen HSG Landau/Land\nAnwurf: 10:15 Uhr\nLiga: 
+ Oberliga MÄNNLICH\nSpieltag: 8\nSpielnummer: 2627RPOLAJMA0803\nhttps://ww
+ w.handball.net/match/382594
+URL:https://www.handball.net/match/382594
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Löwensteinhalle Albersweiler\, Kanskircherstr. 24\, 76857 Albersw
+ eiler
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 HSG Landau/Land - MuRu mA
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 HSG Landau/Land - MuRu mA
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPOLAJMA0904@handball.net
+DTSTAMP:20260829T021217Z
+DTSTART;TZID=Europe/Berlin:20261114T153000
+DTEND;TZID=Europe/Berlin:20261114T173000
+SUMMARY:🏠 MuRu mA - TSV Speyer
+DESCRIPTION:Heimspiel gegen TSV Speyer\nAnwurf: 15:30 Uhr\nLiga: Oberliga M
+ ÄNNLICH\nSpieltag: 9\nSpielnummer: 2627RPOLAJMA0904\nhttps://www.handball
+ .net/match/382601
+URL:https://www.handball.net/match/382601
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu mA - TSV Speyer
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu mA - TSV Speyer
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPOLAJMA1002@handball.net
+DTSTAMP:20260829T021217Z
+DTSTART;TZID=Europe/Berlin:20261122T174500
+DTEND;TZID=Europe/Berlin:20261122T194500
+SUMMARY:🚗 MSG Wörth/Kandel - MuRu mA
+DESCRIPTION:Auswärtsspiel gegen MSG Wörth/Kandel\nAnwurf: 17:45 Uhr\nLiga
+ : Oberliga MÄNNLICH\nSpieltag: 10\nSpielnummer: 2627RPOLAJMA1002\nhttps:/
+ /www.handball.net/match/382605
+URL:https://www.handball.net/match/382605
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Kandel\, IGS Sporthalle\, Schubertstr. 7\, 76870 Kandel
+GEO:49.077655;8.193108
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 MSG Wörth/Kandel - MuRu mA
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 MSG Wörth/Kandel - MuRu mA
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPOLAJMA1105@handball.net
+DTSTAMP:20260829T021217Z
+DTSTART;TZID=Europe/Berlin:20261129T150000
+DTEND;TZID=Europe/Berlin:20261129T170000
+SUMMARY:🏠 MuRu mA - TUS Neuhofen
+DESCRIPTION:Heimspiel gegen TUS Neuhofen\nAnwurf: 15:00 Uhr\nLiga: Oberliga
+  MÄNNLICH\nSpieltag: 11\nSpielnummer: 2627RPOLAJMA1105\nhttps://www.handb
+ all.net/match/382614
+URL:https://www.handball.net/match/382614
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu mA - TUS Neuhofen
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu mA - TUS Neuhofen
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPOLAJMA1306@handball.net
+DTSTAMP:20260829T021217Z
+DTSTART;TZID=Europe/Berlin:20261213T160000
+DTEND;TZID=Europe/Berlin:20261213T180000
+SUMMARY:🚗 Südpfalz Tiger - MuRu mA
+DESCRIPTION:Auswärtsspiel gegen Südpfalz Tiger\nAnwurf: 16:00 Uhr\nLiga: 
+ Oberliga MÄNNLICH\nSpieltag: 13\nSpielnummer: 2627RPOLAJMA1306\nhttps://w
+ ww.handball.net/match/382627
+URL:https://www.handball.net/match/382627
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Spiegelbachhalle Bellheim\, Schubertstraße\, 76756 Bellheim
+GEO:49.193950;8.286214
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 Südpfalz Tiger - MuRu mA
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 Südpfalz Tiger - MuRu mA
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPOLAJMA1401@handball.net
+DTSTAMP:20260829T021217Z
+DTSTART;TZID=Europe/Berlin:20270123T160000
+DTEND;TZID=Europe/Berlin:20270123T180000
+SUMMARY:🚗 Mjsg SG Saulheim/HSV Alzey - MuRu mA
+DESCRIPTION:Auswärtsspiel gegen Mjsg SG Saulheim/HSV Alzey\nAnwurf: 16:00 
+ Uhr\nLiga: Oberliga MÄNNLICH\nSpieltag: 14\nSpielnummer: 2627RPOLAJMA1401
+ \nhttps://www.handball.net/match/382628
+URL:https://www.handball.net/match/382628
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Rundsporthalle Alzey\, Frankenstraße 17\, 55232 Alzey
+GEO:49.742290;8.118030
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 Mjsg SG Saulheim/HSV Alzey - MuRu mA
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 Mjsg SG Saulheim/HSV Alzey - MuRu mA
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPOLAJMA1505@handball.net
+DTSTAMP:20260829T021217Z
+DTSTART;TZID=Europe/Berlin:20270130T180000
+DTEND;TZID=Europe/Berlin:20270130T200000
+SUMMARY:🏠 MuRu mA - TS RODALBEN mA
+DESCRIPTION:Heimspiel gegen TS RODALBEN mA\nAnwurf: 18:00 Uhr\nLiga: Oberli
+ ga MÄNNLICH\nSpieltag: 15\nSpielnummer: 2627RPOLAJMA1505\nhttps://www.han
+ dball.net/match/382638
+URL:https://www.handball.net/match/382638
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu mA - TS RODALBEN mA
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu mA - TS RODALBEN mA
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPOLAJMA1602@handball.net
+DTSTAMP:20260829T021217Z
+DTSTART;TZID=Europe/Berlin:20270214T153000
+DTEND;TZID=Europe/Berlin:20270214T173000
+SUMMARY:🚗 Mjsg Heiligenstein/Mundenheim/Rheingönheim II - MuRu mA
+DESCRIPTION:Auswärtsspiel gegen Mjsg Heiligenstein/Mundenheim/Rheingönhei
+ m II\nAnwurf: 15:30 Uhr\nLiga: Oberliga MÄNNLICH\nSpieltag: 16\nSpielnumm
+ er: 2627RPOLAJMA1602\nhttps://www.handball.net/match/382641
+URL:https://www.handball.net/match/382641
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Heinrich-Ries-Halle Ludwigshafen\, Pettenkoferstraße\, 67063 Ludw
+ igshafen-Friesenheim
+GEO:49.486096;8.422384
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 Mjsg Heiligenstein/Mundenheim/Rheingönheim 
+ II - MuRu mA
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 Mjsg Heiligenstein/Mundenheim/Rheingönheim 
+ II - MuRu mA
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPOLAJMA1704@handball.net
+DTSTAMP:20260829T021217Z
+DTSTART;TZID=Europe/Berlin:20270306T160000
+DTEND;TZID=Europe/Berlin:20270306T180000
+SUMMARY:🏠 MuRu mA - TV Kirrweiler
+DESCRIPTION:Heimspiel gegen TV Kirrweiler\nAnwurf: 16:00 Uhr\nLiga: Oberlig
+ a MÄNNLICH\nSpieltag: 17\nSpielnummer: 2627RPOLAJMA1704\nhttps://www.hand
+ ball.net/match/382649
+URL:https://www.handball.net/match/382649
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu mA - TV Kirrweiler
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu mA - TV Kirrweiler
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPOLAJMA1903@handball.net
+DTSTAMP:20260829T021217Z
+DTSTART;TZID=Europe/Berlin:20270314T144500
+DTEND;TZID=Europe/Berlin:20270314T164500
+SUMMARY:🏠 MuRu mA - HSG Landau/Land
+DESCRIPTION:Heimspiel gegen HSG Landau/Land\nAnwurf: 14:45 Uhr\nLiga: Oberl
+ iga MÄNNLICH\nSpieltag: 19\nSpielnummer: 2627RPOLAJMA1903\nhttps://www.ha
+ ndball.net/match/382660
+URL:https://www.handball.net/match/382660
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu mA - HSG Landau/Land
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu mA - HSG Landau/Land
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPOLAJMA2004@handball.net
+DTSTAMP:20260829T021217Z
+DTSTART;TZID=Europe/Berlin:20270320T130000
+DTEND;TZID=Europe/Berlin:20270320T150000
+SUMMARY:🚗 TSV Speyer - MuRu mA
+DESCRIPTION:Auswärtsspiel gegen TSV Speyer\nAnwurf: 13:00 Uhr\nLiga: Oberl
+ iga MÄNNLICH\nSpieltag: 20\nSpielnummer: 2627RPOLAJMA2004\nhttps://www.ha
+ ndball.net/match/382667
+URL:https://www.handball.net/match/382667
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Sporthalle-Ost Speyer\, Fritz-Ober-Str. 3\, 67346 Speyer
+GEO:49.324592;8.438719
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 TSV Speyer - MuRu mA
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 TSV Speyer - MuRu mA
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPOLAJMA2102@handball.net
+DTSTAMP:20260829T021217Z
+DTSTART;TZID=Europe/Berlin:20270410T140000
+DTEND;TZID=Europe/Berlin:20270410T160000
+SUMMARY:🏠 MuRu mA - MSG Wörth/Kandel
+DESCRIPTION:Heimspiel gegen MSG Wörth/Kandel\nAnwurf: 14:00 Uhr\nLiga: Obe
+ rliga MÄNNLICH\nSpieltag: 21\nSpielnummer: 2627RPOLAJMA2102\nhttps://www.
+ handball.net/match/382671
+URL:https://www.handball.net/match/382671
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu mA - MSG Wörth/Kandel
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu mA - MSG Wörth/Kandel
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPOLAJMA2205@handball.net
+DTSTAMP:20260829T021217Z
+DTSTART;TZID=Europe/Berlin:20270418T160000
+DTEND;TZID=Europe/Berlin:20270418T180000
+SUMMARY:🚗 TUS Neuhofen - MuRu mA
+DESCRIPTION:Auswärtsspiel gegen TUS Neuhofen\nAnwurf: 16:00 Uhr\nLiga: Obe
+ rliga MÄNNLICH\nSpieltag: 22\nSpielnummer: 2627RPOLAJMA2205\nhttps://www.
+ handball.net/match/382680
+URL:https://www.handball.net/match/382680
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Rehbachhalle Neuhofen\, Jahnstr. 25\, 67141 Neuhofen
+GEO:49.420979;8.423410
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 TUS Neuhofen - MuRu mA
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 TUS Neuhofen - MuRu mA
+END:VALARM
+END:VEVENT
+END:VCALENDAR

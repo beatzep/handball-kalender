@@ -1,0 +1,193 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//handball-kalender//spielplan2ics//DE
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:HSG Mutterstadt/Ruchheim – wB-Jugend
+X-WR-TIMEZONE:Europe/Berlin
+X-WR-CALDESC:Spielplan HSG Mutterstadt/Ruchheim – wB-Jugend - Quelle: han
+ dball.net
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VTIMEZONE
+TZID:Europe/Berlin
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:2627RSWRLBJWC0102@handball.net
+DTSTAMP:20260829T021219Z
+DTSTART;TZID=Europe/Berlin:20260823T173000
+DTEND;TZID=Europe/Berlin:20260823T193000
+SUMMARY:🚗 JSG Osthofen/Worms 25:29 MuRu wB
+DESCRIPTION:Endstand: 25:29 (Sieg)\nAuswärtsspiel gegen JSG Osthofen/Worms
+ \nAnwurf: 17:30 Uhr\nLiga: Regionalliga SW B-Jugend weiblich\nSpieltag: 1\
+ nSpielnummer: 2627RSWRLBJWC0102\nhttps://www.handball.net/match/425124
+URL:https://www.handball.net/match/425124
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Nikolaus-Dörr-Halle Worms\, Mainzer Straße 51\, 67547 Worms
+GEO:49.642204;8.363049
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 JSG Osthofen/Worms 25:29 MuRu wB
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 JSG Osthofen/Worms 25:29 MuRu wB
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RSWRLBJWC0202@handball.net
+DTSTAMP:20260829T021219Z
+DTSTART;TZID=Europe/Berlin:20260830T174500
+DTEND;TZID=Europe/Berlin:20260830T194500
+SUMMARY:🏠 MuRu wB - HSG Wittlich
+DESCRIPTION:Heimspiel gegen HSG Wittlich\nAnwurf: 17:45 Uhr\nLiga: Regional
+ liga SW B-Jugend weiblich\nSpieltag: 2\nSpielnummer: 2627RSWRLBJWC0202\nht
+ tps://www.handball.net/match/425126
+URL:https://www.handball.net/match/425126
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu wB - HSG Wittlich
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu wB - HSG Wittlich
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RSWRLBJWC0301@handball.net
+DTSTAMP:20260829T021219Z
+DTSTART;TZID=Europe/Berlin:20260906T163000
+DTEND;TZID=Europe/Berlin:20260906T183000
+SUMMARY:🚗 Hf Untere Saar - MuRu wB
+DESCRIPTION:Auswärtsspiel gegen Hf Untere Saar\nAnwurf: 16:30 Uhr\nLiga: R
+ egionalliga SW B-Jugend weiblich\nSpieltag: 3\nSpielnummer: 2627RSWRLBJWC0
+ 301\nhttps://www.handball.net/match/425127
+URL:https://www.handball.net/match/425127
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Seffersbachhalle\, Ringstraße 5\, 66663 Merzig
+GEO:49.453265;6.635248
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 Hf Untere Saar - MuRu wB
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 Hf Untere Saar - MuRu wB
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RSWRLBJWC0402@handball.net
+DTSTAMP:20260829T021219Z
+DTSTART;TZID=Europe/Berlin:20260912T173000
+DTEND;TZID=Europe/Berlin:20260912T193000
+SUMMARY:🏠 MuRu wB - JSG Osthofen/Worms
+DESCRIPTION:Heimspiel gegen JSG Osthofen/Worms\nAnwurf: 17:30 Uhr\nLiga: Re
+ gionalliga SW B-Jugend weiblich\nSpieltag: 4\nSpielnummer: 2627RSWRLBJWC04
+ 02\nhttps://www.handball.net/match/425130
+URL:https://www.handball.net/match/425130
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu wB - JSG Osthofen/Worms
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu wB - JSG Osthofen/Worms
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RSWRLBJWC0502@handball.net
+DTSTAMP:20260829T021219Z
+DTSTART;TZID=Europe/Berlin:20260919T140000
+DTEND;TZID=Europe/Berlin:20260919T160000
+SUMMARY:🚗 HSG Wittlich - MuRu wB
+DESCRIPTION:Auswärtsspiel gegen HSG Wittlich\nAnwurf: 14:00 Uhr\nLiga: Reg
+ ionalliga SW B-Jugend weiblich\nSpieltag: 5\nSpielnummer: 2627RSWRLBJWC050
+ 2\nhttps://www.handball.net/match/425132
+URL:https://www.handball.net/match/425132
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Wittlich\, Bbs-Halle\, Max-Planck-Straße\, 54516 Wittlich
+GEO:49.985464;6.904631
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 HSG Wittlich - MuRu wB
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 HSG Wittlich - MuRu wB
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RSWRLBJWC0601@handball.net
+DTSTAMP:20260829T021219Z
+DTSTART;TZID=Europe/Berlin:20260926T153000
+DTEND;TZID=Europe/Berlin:20260926T173000
+SUMMARY:🏠 MuRu wB - Hf Untere Saar
+DESCRIPTION:Heimspiel gegen Hf Untere Saar\nAnwurf: 15:30 Uhr\nLiga: Region
+ alliga SW B-Jugend weiblich\nSpieltag: 6\nSpielnummer: 2627RSWRLBJWC0601\n
+ https://www.handball.net/match/425133
+URL:https://www.handball.net/match/425133
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu wB - Hf Untere Saar
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu wB - Hf Untere Saar
+END:VALARM
+END:VEVENT
+END:VCALENDAR

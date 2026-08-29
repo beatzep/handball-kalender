@@ -1,0 +1,194 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//handball-kalender//spielplan2ics//DE
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:HSG Mutterstadt/Ruchheim – wC-Jugend
+X-WR-TIMEZONE:Europe/Berlin
+X-WR-CALDESC:Spielplan HSG Mutterstadt/Ruchheim – wC-Jugend - Quelle: han
+ dball.net
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VTIMEZONE
+TZID:Europe/Berlin
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:2627RSWRLCJWA0101@handball.net
+DTSTAMP:20260829T021220Z
+DTSTART;TZID=Europe/Berlin:20260823T140000
+DTEND;TZID=Europe/Berlin:20260823T160000
+SUMMARY:🏠 MuRu wC 27:25 JSG  Mundenheim/Rheingönheim
+DESCRIPTION:Endstand: 27:25 (Sieg)\nHeimspiel gegen JSG  Mundenheim/Rheing
+ önheim\nAnwurf: 14:00 Uhr\nLiga: Regionalliga  SW C-Jugend weiblich\nSpie
+ ltag: 1\nSpielnummer: 2627RSWRLCJWA0101\nhttps://www.handball.net/match/42
+ 5701
+URL:https://www.handball.net/match/425701
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu wC 27:25 JSG  Mundenheim/Rheingönheim
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu wC 27:25 JSG  Mundenheim/Rheingönheim
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RSWRLCJWA0202@handball.net
+DTSTAMP:20260829T021220Z
+DTSTART;TZID=Europe/Berlin:20260829T140000
+DTEND;TZID=Europe/Berlin:20260829T160000
+SUMMARY:🚗 SG Zweibrücken - MuRu wC
+DESCRIPTION:Auswärtsspiel gegen SG Zweibrücken\nAnwurf: 14:00 Uhr\nLiga: 
+ Regionalliga  SW C-Jugend weiblich\nSpieltag: 2\nSpielnummer: 2627RSWRLCJW
+ A0202\nhttps://www.handball.net/match/425704
+URL:https://www.handball.net/match/425704
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Ignaz-Roth-Halle\, Landauer Str. 22\, 66482 Zweibrücken
+GEO:49.251297;7.375868
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 SG Zweibrücken - MuRu wC
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 SG Zweibrücken - MuRu wC
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RSWRLCJWA0302@handball.net
+DTSTAMP:20260829T021220Z
+DTSTART;TZID=Europe/Berlin:20260905T153000
+DTEND;TZID=Europe/Berlin:20260905T173000
+SUMMARY:🏠 MuRu wC - TV Engers
+DESCRIPTION:Heimspiel gegen TV Engers\nAnwurf: 15:30 Uhr\nLiga: Regionallig
+ a  SW C-Jugend weiblich\nSpieltag: 3\nSpielnummer: 2627RSWRLCJWA0302\nhttp
+ s://www.handball.net/match/425706
+URL:https://www.handball.net/match/425706
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu wC - TV Engers
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu wC - TV Engers
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RSWRLCJWA0401@handball.net
+DTSTAMP:20260829T021220Z
+DTSTART;TZID=Europe/Berlin:20260912T140000
+DTEND;TZID=Europe/Berlin:20260912T160000
+SUMMARY:🚗 JSG  Mundenheim/Rheingönheim - MuRu wC
+DESCRIPTION:Auswärtsspiel gegen JSG  Mundenheim/Rheingönheim\nAnwurf: 14:
+ 00 Uhr\nLiga: Regionalliga  SW C-Jugend weiblich\nSpieltag: 4\nSpielnummer
+ : 2627RSWRLCJWA0401\nhttps://www.handball.net/match/425707
+URL:https://www.handball.net/match/425707
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Halle Schulzentrum (Mt) Mundenheim\, Adlerdamm\, 67061 Ludwigshafe
+ n
+GEO:49.463664;8.436837
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 JSG  Mundenheim/Rheingönheim - MuRu wC
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 JSG  Mundenheim/Rheingönheim - MuRu wC
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RSWRLCJWA0502@handball.net
+DTSTAMP:20260829T021220Z
+DTSTART;TZID=Europe/Berlin:20260920T160000
+DTEND;TZID=Europe/Berlin:20260920T180000
+SUMMARY:🏠 MuRu wC - SG Zweibrücken
+DESCRIPTION:Heimspiel gegen SG Zweibrücken\nAnwurf: 16:00 Uhr\nLiga: Regio
+ nalliga  SW C-Jugend weiblich\nSpieltag: 5\nSpielnummer: 2627RSWRLCJWA0502
+ \nhttps://www.handball.net/match/425710
+URL:https://www.handball.net/match/425710
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu wC - SG Zweibrücken
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu wC - SG Zweibrücken
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RSWRLCJWA0602@handball.net
+DTSTAMP:20260829T021220Z
+DTSTART;TZID=Europe/Berlin:20260926T123000
+DTEND;TZID=Europe/Berlin:20260926T143000
+SUMMARY:🚗 TV Engers - MuRu wC
+DESCRIPTION:Auswärtsspiel gegen TV Engers\nAnwurf: 12:30 Uhr\nLiga: Region
+ alliga  SW C-Jugend weiblich\nSpieltag: 6\nSpielnummer: 2627RSWRLCJWA0602\
+ nhttps://www.handball.net/match/425712
+URL:https://www.handball.net/match/425712
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Engers\, Sporthalle\, Weißer Straße\, 56566 Neuwied-Engers
+GEO:50.430463;7.546241
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 TV Engers - MuRu wC
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 TV Engers - MuRu wC
+END:VALARM
+END:VEVENT
+END:VCALENDAR

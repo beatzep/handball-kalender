@@ -1,0 +1,417 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//handball-kalender//spielplan2ics//DE
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:HSG Mutterstadt/Ruchheim – gF-Jugend
+X-WR-TIMEZONE:Europe/Berlin
+X-WR-CALDESC:Spielplan HSG Mutterstadt/Ruchheim – gF-Jugend - Quelle: han
+ dball.net
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VTIMEZONE
+TZID:Europe/Berlin
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:2627RPBKROFJGG0102@handball.net
+DTSTAMP:20260829T021223Z
+DTSTART;TZID=Europe/Berlin:20260829T123000
+DTEND;TZID=Europe/Berlin:20260829T143000
+SUMMARY:🚗 JSG Mundenheim/Rheingönheim II - MuRu gF
+DESCRIPTION:Auswärtsspiel gegen JSG Mundenheim/Rheingönheim II\nAnwurf: 1
+ 2:30 Uhr\nLiga: F-Jugend GEMISCHT\nSpieltag: 1\nSpielnummer: 2627RPBKROFJG
+ G0102\nhttps://www.handball.net/match/385598
+URL:https://www.handball.net/match/385598
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Heinrich-Ries-Halle Ludwigshafen\, Pettenkoferstraße\, 67063 Ludw
+ igshafen-Friesenheim
+GEO:49.486096;8.422384
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 JSG Mundenheim/Rheingönheim II - MuRu gF
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 JSG Mundenheim/Rheingönheim II - MuRu gF
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROFJGG0202@handball.net
+DTSTAMP:20260829T021223Z
+DTSTART;TZID=Europe/Berlin:20260906T123000
+DTEND;TZID=Europe/Berlin:20260906T143000
+SUMMARY:🏠 MuRu gF - TSG Friesenheim II
+DESCRIPTION:Heimspiel gegen TSG Friesenheim II\nAnwurf: 12:30 Uhr\nLiga: F-
+ Jugend GEMISCHT\nSpieltag: 2\nSpielnummer: 2627RPBKROFJGG0202\nhttps://www
+ .handball.net/match/385602
+URL:https://www.handball.net/match/385602
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu gF - TSG Friesenheim II
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu gF - TSG Friesenheim II
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROFJGG0301@handball.net
+DTSTAMP:20260829T021223Z
+DTSTART;TZID=Europe/Berlin:20260919T120000
+DTEND;TZID=Europe/Berlin:20260919T140000
+SUMMARY:🚗 Vsk Niederfeld - MuRu gF
+DESCRIPTION:Auswärtsspiel gegen Vsk Niederfeld\nAnwurf: 12:00 Uhr\nLiga: F
+ -Jugend GEMISCHT\nSpieltag: 3\nSpielnummer: 2627RPBKROFJGG0301\nhttps://ww
+ w.handball.net/match/385605
+URL:https://www.handball.net/match/385605
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Loschky-Halle Niederfeld\, Abteistraße 18\, 67059 Ludwigshafen
+GEO:49.468463;8.403079
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 Vsk Niederfeld - MuRu gF
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 Vsk Niederfeld - MuRu gF
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROFJGG0404@handball.net
+DTSTAMP:20260829T021223Z
+DTSTART;TZID=Europe/Berlin:20260927T100000
+DTEND;TZID=Europe/Berlin:20260927T120000
+SUMMARY:🚗 JSG Kaiserslauern/Dansenberg II - MuRu gF
+DESCRIPTION:Auswärtsspiel gegen JSG Kaiserslauern/Dansenberg II\nAnwurf: 1
+ 0:00 Uhr\nLiga: F-Jugend GEMISCHT\nSpieltag: 4\nSpielnummer: 2627RPBKROFJG
+ G0404\nhttps://www.handball.net/match/385612
+URL:https://www.handball.net/match/385612
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Schillerschule Kaiserslautern\, Julius-Küchler-Str. 1\, 67659 Kai
+ serslautern
+GEO:49.445240;7.743207
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 JSG Kaiserslauern/Dansenberg II - MuRu gF
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 JSG Kaiserslauern/Dansenberg II - MuRu gF
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROFJGG0501@handball.net
+DTSTAMP:20260829T021223Z
+DTSTART;TZID=Europe/Berlin:20261025T114500
+DTEND;TZID=Europe/Berlin:20261025T134500
+SUMMARY:🏠 MuRu gF - HSG Grethen/Maxdorf II
+DESCRIPTION:Heimspiel gegen HSG Grethen/Maxdorf II\nAnwurf: 11:45 Uhr\nLiga
+ : F-Jugend GEMISCHT\nSpieltag: 5\nSpielnummer: 2627RPBKROFJGG0501\nhttps:/
+ /www.handball.net/match/385613
+URL:https://www.handball.net/match/385613
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu gF - HSG Grethen/Maxdorf II
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu gF - HSG Grethen/Maxdorf II
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROFJGG0603@handball.net
+DTSTAMP:20260829T021223Z
+DTSTART;TZID=Europe/Berlin:20261107T150000
+DTEND;TZID=Europe/Berlin:20261107T170000
+SUMMARY:🚗 TUS Neuhofen - MuRu gF
+DESCRIPTION:Auswärtsspiel gegen TUS Neuhofen\nAnwurf: 15:00 Uhr\nLiga: F-J
+ ugend GEMISCHT\nSpieltag: 6\nSpielnummer: 2627RPBKROFJGG0603\nhttps://www.
+ handball.net/match/385619
+URL:https://www.handball.net/match/385619
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Rehbachhalle Neuhofen\, Jahnstr. 25\, 67141 Neuhofen
+GEO:49.420979;8.423410
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 TUS Neuhofen - MuRu gF
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 TUS Neuhofen - MuRu gF
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROFJGG0702@handball.net
+DTSTAMP:20260829T021223Z
+DTSTART;TZID=Europe/Berlin:20261114T110000
+DTEND;TZID=Europe/Berlin:20261114T130000
+SUMMARY:🏠 MuRu gF - JSG Osthofen/Worms II
+DESCRIPTION:Heimspiel gegen JSG Osthofen/Worms II\nAnwurf: 11:00 Uhr\nLiga:
+  F-Jugend GEMISCHT\nSpieltag: 7\nSpielnummer: 2627RPBKROFJGG0702\nhttps://
+ www.handball.net/match/385622
+URL:https://www.handball.net/match/385622
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu gF - JSG Osthofen/Worms II
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu gF - JSG Osthofen/Worms II
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROFJGG0802@handball.net
+DTSTAMP:20260829T021223Z
+DTSTART;TZID=Europe/Berlin:20261128T110000
+DTEND;TZID=Europe/Berlin:20261128T130000
+SUMMARY:🏠 MuRu gF - JSG Mundenheim/Rheingönheim II
+DESCRIPTION:Heimspiel gegen JSG Mundenheim/Rheingönheim II\nAnwurf: 11:00 
+ Uhr\nLiga: F-Jugend GEMISCHT\nSpieltag: 8\nSpielnummer: 2627RPBKROFJGG0802
+ \nhttps://www.handball.net/match/385626
+URL:https://www.handball.net/match/385626
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu gF - JSG Mundenheim/Rheingönheim II
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu gF - JSG Mundenheim/Rheingönheim II
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROFJGG0902@handball.net
+DTSTAMP:20260829T021223Z
+DTSTART;TZID=Europe/Berlin:20261213T111500
+DTEND;TZID=Europe/Berlin:20261213T131500
+SUMMARY:🚗 TSG Friesenheim II - MuRu gF
+DESCRIPTION:Auswärtsspiel gegen TSG Friesenheim II\nAnwurf: 11:15 Uhr\nLig
+ a: F-Jugend GEMISCHT\nSpieltag: 9\nSpielnummer: 2627RPBKROFJGG0902\nhttps:
+ //www.handball.net/match/385630
+URL:https://www.handball.net/match/385630
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:TSG Sportzentrum Ludwigshafen-Friesenheim\, Eschenbachstraße 85\,
+  67063 Ludwigshafen
+GEO:49.502500;8.412900
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 TSG Friesenheim II - MuRu gF
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 TSG Friesenheim II - MuRu gF
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROFJGG1001@handball.net
+DTSTAMP:20260829T021223Z
+DTSTART;TZID=Europe/Berlin:20270131T100000
+DTEND;TZID=Europe/Berlin:20270131T120000
+SUMMARY:🏠 MuRu gF - Vsk Niederfeld
+DESCRIPTION:Heimspiel gegen Vsk Niederfeld\nAnwurf: 10:00 Uhr\nLiga: F-Juge
+ nd GEMISCHT\nSpieltag: 10\nSpielnummer: 2627RPBKROFJGG1001\nhttps://www.ha
+ ndball.net/match/385633
+URL:https://www.handball.net/match/385633
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu gF - Vsk Niederfeld
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu gF - Vsk Niederfeld
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROFJGG1104@handball.net
+DTSTAMP:20260829T021223Z
+DTSTART;TZID=Europe/Berlin:20270214T100000
+DTEND;TZID=Europe/Berlin:20270214T120000
+SUMMARY:🏠 MuRu gF - JSG Kaiserslauern/Dansenberg II
+DESCRIPTION:Heimspiel gegen JSG Kaiserslauern/Dansenberg II\nAnwurf: 10:00 
+ Uhr\nLiga: F-Jugend GEMISCHT\nSpieltag: 11\nSpielnummer: 2627RPBKROFJGG110
+ 4\nhttps://www.handball.net/match/385640
+URL:https://www.handball.net/match/385640
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu gF - JSG Kaiserslauern/Dansenberg II
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu gF - JSG Kaiserslauern/Dansenberg II
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROFJGG1201@handball.net
+DTSTAMP:20260829T021223Z
+DTSTART;TZID=Europe/Berlin:20270220T140000
+DTEND;TZID=Europe/Berlin:20270220T160000
+SUMMARY:🚗 HSG Grethen/Maxdorf II - MuRu gF
+DESCRIPTION:Auswärtsspiel gegen HSG Grethen/Maxdorf II\nAnwurf: 14:00 Uhr\
+ nLiga: F-Jugend GEMISCHT\nSpieltag: 12\nSpielnummer: 2627RPBKROFJGG1201\nh
+ ttps://www.handball.net/match/385641
+URL:https://www.handball.net/match/385641
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Carl-Orff-Realschule Bad Dürkheim\, Kanalstr. 23\, 67098 Bad Dür
+ kheim
+GEO:49.466768;8.187112
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 HSG Grethen/Maxdorf II - MuRu gF
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 HSG Grethen/Maxdorf II - MuRu gF
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROFJGG1303@handball.net
+DTSTAMP:20260829T021223Z
+DTSTART;TZID=Europe/Berlin:20270307T100000
+DTEND;TZID=Europe/Berlin:20270307T120000
+SUMMARY:🏠 MuRu gF - TUS Neuhofen
+DESCRIPTION:Heimspiel gegen TUS Neuhofen\nAnwurf: 10:00 Uhr\nLiga: F-Jugend
+  GEMISCHT\nSpieltag: 13\nSpielnummer: 2627RPBKROFJGG1303\nhttps://www.hand
+ ball.net/match/385647
+URL:https://www.handball.net/match/385647
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu gF - TUS Neuhofen
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu gF - TUS Neuhofen
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RPBKROFJGG1402@handball.net
+DTSTAMP:20260829T021223Z
+DTSTART;TZID=Europe/Berlin:20270314T100000
+DTEND;TZID=Europe/Berlin:20270314T120000
+SUMMARY:🚗 JSG Osthofen/Worms II - MuRu gF
+DESCRIPTION:Auswärtsspiel gegen JSG Osthofen/Worms II\nAnwurf: 10:00 Uhr\n
+ Liga: F-Jugend GEMISCHT\nSpieltag: 14\nSpielnummer: 2627RPBKROFJGG1402\nht
+ tps://www.handball.net/match/385650
+URL:https://www.handball.net/match/385650
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Wonnegauhalle Osthofen\, Herrnsheimer Straße 24\, 67574 Osthofen
+GEO:49.700160;8.325410
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 JSG Osthofen/Worms II - MuRu gF
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 JSG Osthofen/Worms II - MuRu gF
+END:VALARM
+END:VEVENT
+END:VCALENDAR
