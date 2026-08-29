@@ -91,6 +91,39 @@ pruefe("Kennung findet ihre Tipps wieder",
        Object.keys(r.daten.tipps).length === 2 && r.daten.name === "Exakt",
        JSON.stringify(r.daten));
 
+// Jede Mannschaft hat ihre eigene Wertung
+speicher.clear();
+globalThis.fetch = async () => ({ ok: true, json: async () => ({ teams: {
+  herren1: { name: "Herren I", spiele: {
+    H1SPIEL: { datum: VERGANGEN, gegner: "A", heim: true,
+               ergebnis: { heim: 30, gast: 25 } } } },
+  ma: { name: "mA-Jugend", spiele: {
+    MASPIEL: { datum: VERGANGEN, gegner: "B", heim: true,
+               ergebnis: { heim: 20, gast: 22 } } } },
+}})});
+speicher.set("tipper:nur-h1", JSON.stringify({ name: "Nur H1", tipps: { H1SPIEL: [30, 25] } }));
+speicher.set("tipper:nur-ma", JSON.stringify({ name: "Nur mA", tipps: { MASPIEL: [20, 22] } }));
+speicher.set("tipper:beide", JSON.stringify({ name: "Beide",
+  tipps: { H1SPIEL: [30, 25], MASPIEL: [40, 1] } }));
+
+r = await ruf("/tipptabelle?mannschaft=herren1");
+let namen = r.daten.tabelle.map(e => e.name).sort();
+pruefe("Herren-I-Tabelle zeigt nur deren Tipper",
+       JSON.stringify(namen) === JSON.stringify(["Beide", "Nur H1"]), JSON.stringify(namen));
+
+r = await ruf("/tipptabelle?mannschaft=ma");
+namen = r.daten.tabelle.map(e => e.name).sort();
+pruefe("mA-Tabelle zeigt nur deren Tipper",
+       JSON.stringify(namen) === JSON.stringify(["Beide", "Nur mA"]), JSON.stringify(namen));
+
+const beideInMa = r.daten.tabelle.find(e => e.name === "Beide");
+pruefe("Punkte der anderen Mannschaft zaehlen hier nicht",
+       beideInMa.punkte === 0 && beideInMa.tipps === 1, JSON.stringify(beideInMa));
+
+r = await ruf("/tipptabelle");
+pruefe("Ohne Angabe alle Mannschaften", r.daten.tabelle.length === 3,
+       String(r.daten.tabelle.length));
+
 let fehler = 0;
 for (const p of pruefungen) {
   if (!p.ok) fehler++;

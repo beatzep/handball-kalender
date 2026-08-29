@@ -233,10 +233,10 @@ window.muruGeraet = (function () {
         })
         .then(function () { sendet = false; });
     }
-    // Alle zehn Sekunden statt alle zwei: Der Speicher erlaubt im
-    // kostenlosen Tarif rund tausend Schreibvorgaenge am Tag, und die
-    // Anzeige laeuft ohnehin sofort mit - der Abgleich darf nachhinken.
-    setInterval(sende, 10000);
+    // Alle dreissig Sekunden: Der Speicher erlaubt im kostenlosen Tarif rund
+    // tausend Schreibvorgaenge am Tag. Die Anzeige laeuft sofort mit, nur der
+    // Abgleich mit dem Server hinkt nach - das faellt beim Klicken nicht auf.
+    setInterval(sende, 30000);
 
     // Beim Verlassen der Seite wird ein laufendes fetch abgebrochen -
     // sendBeacon wird vom Browser noch zu Ende gebracht.

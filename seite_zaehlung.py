@@ -59,12 +59,13 @@ ZAEHLUNG = """
 
   if (wahl) wahl.addEventListener('change', function () { merke('mannschaft', wahl.value); });
 
+  // Alles zusammen erst beim Verlassen - ein Schreibvorgang je Besuch statt
+  // zwei. Der Speicher erlaubt im kostenlosen Tarif rund tausend am Tag, und
+  // Seitenaufrufe sind der groesste Posten. sendBeacon wird vom Browser auch
+  // beim Schliessen noch zugestellt.
   window.addEventListener('pagehide', function () { sende(true); });
   document.addEventListener('visibilitychange', function () {
     if (document.visibilityState === 'hidden') sende(true);
   });
-  // Der erste Aufruf geht sofort raus, damit er auch bei einem
-  // abgebrochenen Besuch gezaehlt wird.
-  setTimeout(function () { sende(false); }, 1500);
 })();
 """

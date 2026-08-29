@@ -12,6 +12,7 @@ TIPP = """
     if (!worker) { block.hidden = true; return; }
 
     var spiel = block.getAttribute('data-tipp');
+    var mannschaft = block.getAttribute('data-mannschaft') || '';
     var heimFeld = block.querySelector('[data-tippfeld="heim"]');
     var gastFeld = block.querySelector('[data-tippfeld="gast"]');
     var nameFeld = block.querySelector('[data-tippname]');
@@ -52,7 +53,7 @@ TIPP = """
     }
 
     function ladeTabelle() {
-      fetch(worker + '/tipptabelle')
+      fetch(worker + '/tipptabelle?mannschaft=' + encodeURIComponent(mannschaft))
         .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
         .then(function (d) { zeigeTabelle(d.tabelle); })
         .catch(function () { tabelle.innerHTML = ''; });

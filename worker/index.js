@@ -91,13 +91,14 @@ async function spieldaten() {
   const roh = await antwort.json();
 
   const spiele = {};
-  for (const mannschaft of Object.values(roh.teams || {})) {
+  for (const [schluessel, mannschaft] of Object.entries(roh.teams || {})) {
     for (const [code, spiel] of Object.entries(mannschaft.spiele || {})) {
       spiele[code] = {
         datum: spiel.datum,
         gegner: spiel.gegner,
         heim: spiel.heim,
         mannschaft: mannschaft.name,
+        schluessel: schluessel,
         ergebnis: spiel.ergebnis || null,
       };
     }
@@ -334,6 +335,10 @@ export default {
 
       if (pfad === "/tipptabelle" && request.method === "GET") {
         const spiele = await spieldaten();
+        // Jede Mannschaft hat ihre eigene Wertung. Ohne Angabe waeren es
+        // alle Spiele des Vereins - wer viele Mannschaften tippt, haette
+        // dann automatisch mehr Punkte.
+        const nurMannschaft = url.searchParams.get("mannschaft") || "";
         const liste = await env.ZAEHLER.list({ prefix: "tipper:" });
 
         const eintraege = [];
@@ -346,13 +351,19 @@ export default {
           for (const [code, tipp] of Object.entries(tipper.tipps)) {
             const partie = spiele[code];
             if (!partie || !partie.ergebnis) continue;
+            if (nurMannschaft && partie.schluessel !== nurMannschaft) continue;
             const p = punkte(tipp, partie.ergebnis);
             summe += p; gewertet += 1;
             if (p === PUNKTE_EXAKT) exakt += 1;
           }
+          const eigeneTipps = Object.keys(tipper.tipps).filter(
+            (c) => !nurMannschaft
+                || (spiele[c] && spiele[c].schluessel === nurMannschaft));
+          if (nurMannschaft && !eigeneTipps.length) continue;
+
           eintraege.push({ id, name: tipper.name, punkte: summe,
                            spiele: gewertet, exakt,
-                           tipps: Object.keys(tipper.tipps).length });
+                           tipps: eigeneTipps.length });
         }
 
         eintraege.sort((a, b) => b.punkte - a.punkte || b.exakt - a.exakt

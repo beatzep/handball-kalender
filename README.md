@@ -166,13 +166,23 @@ bewusst **nicht** verwendet; sie ist zweckgebunden.
 rund 1.000 Schreibvorgänge am Tag und nur einer je Sekunde auf denselben
 Schlüssel. Daraus folgt:
 
-- Ein Besuch meldet sich zweimal – einmal beim Öffnen, einmal gebündelt beim
-  Verlassen. Ein Aufruf je Klick wäre das Tageskontingent an einem Spieltag.
+- Ein Besuch meldet sich **einmal**, gebündelt beim Verlassen. Ein Aufruf je
+  Klick wäre das Tageskontingent an einem Spieltag.
 - Die Tageszähler liegen auf zehn Schlüsseln, zufällig gewählt, und werden
   beim Auswerten wieder zusammengezählt. Sonst gingen gleichzeitige Zugriffe
   verloren.
-- Aus demselben Grund sendet der Hype-Zähler seine Klicks alle zehn statt
-  alle zwei Sekunden. Die Anzeige läuft ohnehin sofort mit.
+- Der Hype-Zähler bündelt Klicks über dreißig Sekunden. Die Anzeige läuft
+  ohnehin sofort mit, nur der Abgleich hinkt nach.
+
+Überschlag für einen großen Spieltag mit 23 Mannschaften: 300 Seitenaufrufe,
+30 Hype-Klicker, 60 Zusagen, 50 Tipps ergeben rund **440 Schreibvorgänge** –
+gut 44 % des Kontingents. Ohne die Bündelung wären es 770 gewesen.
+
+Wird das Limit doch erreicht, fällt nichts aus: Die Seite funktioniert weiter,
+Anzeigen laufen optimistisch mit, nur Zählungen gehen verloren. Sollte es
+dauerhaft eng werden, hebt der kostenpflichtige Tarif (rund 5 $ im Monat) die
+Grenze auf eine Million Schreibvorgänge – deutlich billiger, als Funktionen
+wegzunehmen.
 
 Gelesen wird nebenläufig: 30 Tage × 10 Schlüssel nacheinander brauchten
 1,3 Sekunden, parallel sind es rund 0,5.
@@ -187,6 +197,10 @@ Punkte aus. Endpunkte: `/tipp`, `/tipper`, `/tipptabelle`.
 | Exaktes Ergebnis | 10 |
 | Richtige Tordifferenz | 5 |
 | Richtige Tendenz | 3 |
+
+**Jede Mannschaft hat ihre eigene Wertung.** Die Tabelle wird mit
+`?mannschaft=<schluessel>` abgerufen; ohne Angabe wären es alle Spiele des
+Vereins, und wer viele Mannschaften tippt, hätte automatisch mehr Punkte.
 
 **Identität ohne Anmeldung.** Jedes Gerät bekommt eine zufällige Kennung im
 Browser (dieselbe wie für die Zusagen). Punkte stapeln sich serverseitig

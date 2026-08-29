@@ -256,7 +256,8 @@ def paarung_namen(spiel: dict, team: dict) -> tuple[str, str]:
 
 
 def mitmachblock(spiel_code: str, vorher_code: str | None, worker: str,
-                 heimname: str = "", gastname: str = "") -> str:
+                 heimname: str = "", gastname: str = "",
+                 schluessel: str = "") -> str:
     """Hype-Zaehler und Zusagen fuer das naechste Spiel.
 
     Ohne Worker-Adresse entfaellt der Block ersatzlos - die Seite
@@ -274,7 +275,7 @@ def mitmachblock(spiel_code: str, vorher_code: str | None, worker: str,
     <div class="bahn" data-bahn></div>
     <div class="knoepfe">{knoepfe}</div>
   </div>
-  <div class="tippspiel" data-tipp="{sicher(spiel_code)}"
+  <div class="tippspiel" data-tipp="{sicher(spiel_code)}" data-mannschaft="{sicher(schluessel)}"
        data-heimname="{sicher(heimname)}" data-gastname="{sicher(gastname)}">
     <div class="titel">Tipprunde</div>
     <div class="tippzeile">
@@ -606,7 +607,7 @@ def mannschaftsblock(schluessel: str, team: dict, basis: str, heute: datetime,
    '<p class="marker">Saison beendet</p>'}
   {hinspiel_und_gegner(kommend[0], spiele, team.get('tabelle') or {}) if kommend else ''}
   {mitmachblock(naechster_code, vorheriger_code, worker,
-                *paarung_namen(kommend[0], team)) if kommend else ''}
+                *paarung_namen(kommend[0], team), schluessel) if kommend else ''}
   {aenderungsblock(team)}
 
   <nav class="reiter" role="tablist" aria-label="Bereiche">
