@@ -141,11 +141,18 @@ def main() -> int:
             # Ergebnis
             fertig = (spiel.get("status") or {}).get("is_finished")
             r = spiel.get("result") or {}
-            if fertig and r.get("local") is not None:
+            # 0:0 bei beendetem Spiel heisst "kein Ergebnis gefuehrt", nicht
+            # "torloses Remis" - dieselbe Regel wie im Generator, sonst
+            # meldet die Pruefung ein Fehlen, das gewollt ist.
+            ohne_wertung = r.get("local") == 0 and r.get("visitor") == 0
+            if fertig and r.get("local") is not None and not ohne_wertung:
                 stand = f'{r["local"]}:{r["visitor"]}'
                 if stand not in eintrag.get("titel", ""):
                     fehler.append(f"{name} {code}: Endstand {stand} fehlt im Titel "
                                   f"'{eintrag.get('titel','')}'")
+            elif fertig and ohne_wertung and "0:0" in eintrag.get("titel", ""):
+                fehler.append(f"{name} {code}: 0:0 im Titel, obwohl der Verband "
+                              f"kein Ergebnis fuehrt")
 
         print(f"  {name:<15} {len(api_spiele):3} bei handball.net, "
               f"{len(ics):3} im Kalender")

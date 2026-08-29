@@ -306,7 +306,14 @@ def ergebnis(spiel: dict) -> tuple[int, int] | None:
     r = spiel.get("result") or {}
     if r.get("local") is None or r.get("visitor") is None:
         return None
-    return int(r["local"]), int(r["visitor"])
+    lokal, gast = int(r["local"]), int(r["visitor"])
+    # 0:0 gibt es im Handball nicht. In der F-Jugend und bei den Minis wird
+    # ohne Ergebniszaehlung gespielt - der Verband markiert die Partien
+    # trotzdem als beendet und laesst 0:0 stehen. Als Endstand im Kalender
+    # waere das ein torloses Remis, also schlicht falsch.
+    if lokal == 0 and gast == 0:
+        return None
+    return lokal, gast
 
 
 def hauptphase(spiele: list[dict]) -> dict:

@@ -139,6 +139,11 @@ Drei Eigenheiten der Verbandsdaten, die dabei zutage traten:
   Maßgeblich ist die Phase mit den **meisten** Spielen.
 - **Nicht jeder Wettbewerb wird gewertet.** Minis haben `has_standings=false`;
   die dortige Liste mit 50 Mannschaften ist eine Sammelliste, keine Tabelle.
+- **0:0 ist kein Ergebnis.** In der F-Jugend und bei den Minis wird ohne
+  Ergebniszählung gespielt; der Verband markiert die Partien trotzdem als
+  beendet (`is_finished`) und lässt `0:0` stehen. Im Kalender wäre das ein
+  torloses Remis, das es im Handball nicht gibt. Ein 0:20 (nicht angetreten)
+  bleibt dagegen ein Ergebnis.
 - **Turnierspiele haben keine Anwurfzeit** (00:00 beim Verband). Sie werden
   als ganztägige Termine geschrieben, ohne Erinnerung – ein Eintrag um
   Mitternacht wäre schlicht falsch. Betroffen sind 12 von 338 Spielen.
