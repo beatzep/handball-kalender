@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-08-29T18:01:03+00:00",
+  "aktualisiert": "2026-08-29T18:31:01+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -2507,12 +2507,70 @@
       "saison": "2026/27",
       "tabelle": {
         "runde": 1,
-        "gespielt": false,
+        "gespielt": true,
         "mannschaften": 10,
-        "verlauf": [],
+        "verlauf": [
+          {
+            "runde": 1,
+            "platz": 4,
+            "punkte": 0
+          }
+        ],
         "eintraege": [
           {
             "platz": 1,
+            "team": "Mjsg Sobernheim/Meisenheim",
+            "team_id": 80839,
+            "spiele": 1,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 35,
+            "gegentore": 25,
+            "differenz": 10
+          },
+          {
+            "platz": 2,
+            "team": "TUS Neuhofen",
+            "team_id": 80833,
+            "spiele": 1,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 31,
+            "gegentore": 22,
+            "differenz": 9
+          },
+          {
+            "platz": 3,
+            "team": "TV 03 Wörth",
+            "team_id": 80835,
+            "spiele": 1,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 22,
+            "gegentore": 31,
+            "differenz": -9
+          },
+          {
+            "platz": 4,
+            "team": "HSG Mutterstadt/Ruchheim",
+            "team_id": 86762,
+            "spiele": 1,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 25,
+            "gegentore": 35,
+            "differenz": -10
+          },
+          {
+            "platz": 5,
             "team": "TG Waldsee",
             "team_id": 80831,
             "spiele": 0,
@@ -2525,20 +2583,7 @@
             "differenz": 0
           },
           {
-            "platz": 2,
-            "team": "TUS Neuhofen",
-            "team_id": 80833,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 3,
+            "platz": 6,
             "team": "TV Kirrweiler",
             "team_id": 80834,
             "spiele": 0,
@@ -2551,20 +2596,7 @@
             "differenz": 0
           },
           {
-            "platz": 4,
-            "team": "TV 03 Wörth",
-            "team_id": 80835,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 5,
+            "platz": 7,
             "team": "SF Budenheim II",
             "team_id": 80836,
             "spiele": 0,
@@ -2577,7 +2609,7 @@
             "differenz": 0
           },
           {
-            "platz": 6,
+            "platz": 8,
             "team": "TV Nieder-Olm Mb2",
             "team_id": 80837,
             "spiele": 0,
@@ -2590,35 +2622,9 @@
             "differenz": 0
           },
           {
-            "platz": 7,
+            "platz": 9,
             "team": "JSG Osthofen/Worms",
             "team_id": 80838,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 8,
-            "team": "Mjsg Sobernheim/Meisenheim",
-            "team_id": 80839,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 9,
-            "team": "HSG Mutterstadt/Ruchheim",
-            "team_id": 86762,
             "spiele": 0,
             "punkte": 0,
             "siege": 0,
