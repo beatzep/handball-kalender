@@ -124,6 +124,53 @@ r = await ruf("/tipptabelle");
 pruefe("Ohne Angabe alle Mannschaften", r.daten.tabelle.length === 3,
        String(r.daten.tabelle.length));
 
+// Eintraege, die nicht so aussehen wie erwartet.
+// Live legte ein solcher Eintrag die komplette Tipptabelle mit HTTP 400
+// lahm - fuer alle Mannschaften, bei jedem Seitenaufruf. Die Wertung laeuft
+// jetzt je Tipper gekapselt, und was sich deuten laesst, wird gedeutet.
+speicher.set("tipper:objekt", JSON.stringify({ name: "Objektform",
+  tipps: { H1SPIEL: { heim: 30, gast: 25 } } }));
+r = await ruf("/tipptabelle?mannschaft=herren1");
+pruefe("Ein abweichend gespeicherter Tipp kippt die Tabelle nicht",
+       r.status === 200, JSON.stringify(r).slice(0, 160));
+let objekt = (r.daten.tabelle || []).find(e => e.name === "Objektform");
+pruefe("Tipp in Objektform wird gewertet statt verworfen",
+       objekt && objekt.punkte === 10, JSON.stringify(objekt));
+
+speicher.set("tipper:zahl", JSON.stringify({ name: "Zahlform", tipps: { H1SPIEL: 30 } }));
+speicher.set("tipper:leer", JSON.stringify({ name: "Ohne Tipps", tipps: null }));
+speicher.set("tipper:namelos", JSON.stringify({ name: null, tipps: { H1SPIEL: [30, 25] } }));
+speicher.set("tipper:kaputt", "{kein json");
+speicher.set("tipper:string", JSON.stringify("nur ein String"));
+speicher.set("tipper:liste", JSON.stringify([1, 2, 3]));
+r = await ruf("/tipptabelle?mannschaft=herren1");
+pruefe("Sechs unbrauchbare Eintraege gleichzeitig: Tabelle steht",
+       r.status === 200, JSON.stringify(r).slice(0, 160));
+pruefe("Die brauchbaren Eintraege sind weiterhin da",
+       (r.daten.tabelle || []).some(e => e.name === "Nur H1")
+       && (r.daten.tabelle || []).some(e => e.name === "Objektform"),
+       JSON.stringify(r.daten));
+
+// Kein Eintrag darf beim Lesen veraendert oder geloescht werden
+const vorher = new Map(speicher);
+await ruf("/tipptabelle?mannschaft=herren1");
+await ruf("/tipptabelle");
+let veraendert = [...vorher.keys()].filter(k => speicher.get(k) !== vorher.get(k));
+pruefe("Die Tabelle veraendert keinen gespeicherten Tipp",
+       veraendert.length === 0 && speicher.size === vorher.size,
+       JSON.stringify(veraendert));
+
+// Mehr Tipper als das Subrequest-Limit der Anfrage zulaesst
+for (let i = 0; i < 60; i++) {
+  speicher.set(`tipper:m${i}`, JSON.stringify({ name: `M${i}`, tipps: { H1SPIEL: [30, 25] } }));
+}
+r = await ruf("/tipptabelle?mannschaft=herren1");
+pruefe("Sehr viele Tipper: Tabelle bleibt erreichbar", r.status === 200,
+       JSON.stringify(r.daten).slice(0, 120));
+pruefe("Unvollstaendige Tabelle wird als solche gemeldet",
+       !!r.daten.unvollstaendig && r.daten.unvollstaendig.ausgelassen > 0,
+       JSON.stringify(r.daten.unvollstaendig));
+
 let fehler = 0;
 for (const p of pruefungen) {
   if (!p.ok) fehler++;

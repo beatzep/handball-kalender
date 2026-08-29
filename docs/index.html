@@ -462,6 +462,7 @@ table.tabelle tr.wir td.platz { box-shadow: inset 2px 0 0 var(--gold); }
 .anheftwink { margin: 12px 0 0; font-size: .82rem; line-height: 1.5;
   color: rgba(247,245,240,.62); max-width: 34em; }
 .anheftwink strong { color: var(--gold); font-weight: 600; }
+.tippfuss { margin: 12px 0 0; font-size: .82rem; color: var(--leise); }
 </style>
 </head>
 <body>
@@ -5860,8 +5861,21 @@ window.muruGeraet = (function () {
     function ladeTabelle() {
       fetch(worker + '/tipptabelle?mannschaft=' + encodeURIComponent(mannschaft))
         .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
-        .then(function (d) { zeigeTabelle(d.tabelle); })
-        .catch(function () { tabelle.innerHTML = ''; });
+        .then(function (d) {
+          zeigeTabelle(d.tabelle);
+          if (d.unvollstaendig && tabelle.innerHTML) {
+            var n = (d.unvollstaendig.ausgelassen || 0) + (d.unvollstaendig.unlesbar || 0);
+            tabelle.insertAdjacentHTML('beforeend',
+              '<p class="tippfuss">' + n + (n === 1 ? ' Eintrag fehlt' : ' Einträge fehlen')
+              + ' in dieser Wertung.</p>');
+          }
+        })
+        .catch(function () {
+          // Frueher wurde hier stumm geleert. Die Tabelle war dadurch
+          // monatelang kaputt, ohne dass es jemand sehen konnte.
+          tabelle.innerHTML = '<p class="tippfuss">Die Tabelle laesst sich '
+            + 'gerade nicht laden. Dein Tipp ist gespeichert.</p>';
+        });
     }
 
     // Eigener Stand: Name und ein bereits abgegebener Tipp

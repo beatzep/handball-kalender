@@ -456,4 +456,5 @@ table.tabelle tr.wir td.platz { box-shadow: inset 2px 0 0 var(--gold); }
 .anheftwink { margin: 12px 0 0; font-size: .82rem; line-height: 1.5;
   color: rgba(247,245,240,.62); max-width: 34em; }
 .anheftwink strong { color: var(--gold); font-weight: 600; }
+.tippfuss { margin: 12px 0 0; font-size: .82rem; color: var(--leise); }
 """

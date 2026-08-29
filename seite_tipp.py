@@ -55,8 +55,21 @@ TIPP = """
     function ladeTabelle() {
       fetch(worker + '/tipptabelle?mannschaft=' + encodeURIComponent(mannschaft))
         .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
-        .then(function (d) { zeigeTabelle(d.tabelle); })
-        .catch(function () { tabelle.innerHTML = ''; });
+        .then(function (d) {
+          zeigeTabelle(d.tabelle);
+          if (d.unvollstaendig && tabelle.innerHTML) {
+            var n = (d.unvollstaendig.ausgelassen || 0) + (d.unvollstaendig.unlesbar || 0);
+            tabelle.insertAdjacentHTML('beforeend',
+              '<p class="tippfuss">' + n + (n === 1 ? ' Eintrag fehlt' : ' Einträge fehlen')
+              + ' in dieser Wertung.</p>');
+          }
+        })
+        .catch(function () {
+          // Frueher wurde hier stumm geleert. Die Tabelle war dadurch
+          // monatelang kaputt, ohne dass es jemand sehen konnte.
+          tabelle.innerHTML = '<p class="tippfuss">Die Tabelle laesst sich '
+            + 'gerade nicht laden. Dein Tipp ist gespeichert.</p>';
+        });
     }
 
     // Eigener Stand: Name und ein bereits abgegebener Tipp

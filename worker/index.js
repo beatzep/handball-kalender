@@ -128,10 +128,44 @@ function angepfiffen(datum) {
   return Date.now() >= alsOrtszeit(datum);
 }
 
-function punkte(tipp, ergebnis) {
+/**
+ * Liest einen gespeicherten Tipp als [heim, gast].
+ *
+ * Erwartet wird ein Array, aber im Speicher liegen Eintraege, die anders
+ * aussehen. Ein einziger davon hat frueher die ganze Tabelle mit HTTP 400
+ * lahmgelegt, weil das Destructuring warf. Was sich deuten laesst, wird
+ * gedeutet - lieber die Punkte eines Tippers retten als ihn wegzuwerfen.
+ * Was sich nicht deuten laesst, gibt null und wird uebersprungen.
+ */
+function alsTipp(wert) {
+  const zahl = (x) => {
+    const n = typeof x === "string" ? parseInt(x, 10) : x;
+    return Number.isFinite(n) ? n : null;
+  };
+  if (Array.isArray(wert) && wert.length >= 2) {
+    const h = zahl(wert[0]), g = zahl(wert[1]);
+    return h === null || g === null ? null : [h, g];
+  }
+  if (wert && typeof wert === "object") {
+    const h = zahl(wert.heim ?? wert.h), g = zahl(wert.gast ?? wert.g);
+    return h === null || g === null ? null : [h, g];
+  }
+  if (typeof wert === "string") {
+    const teile = wert.split(/[:\-]/);
+    if (teile.length === 2) {
+      const h = zahl(teile[0]), g = zahl(teile[1]);
+      return h === null || g === null ? null : [h, g];
+    }
+  }
+  return null;
+}
+
+function punkte(rohTipp, ergebnis) {
+  const tipp = alsTipp(rohTipp);
   if (!tipp || !ergebnis) return 0;
   const [th, tg] = tipp;
   const eh = ergebnis.heim, eg = ergebnis.gast;
+  if (!Number.isFinite(eh) || !Number.isFinite(eg)) return 0;
   if (th === eh && tg === eg) return PUNKTE_EXAKT;
   if (th - tg === eh - eg) return PUNKTE_DIFFERENZ;
   const richtung = (a, b) => (a > b ? 1 : a < b ? -1 : 0);
@@ -140,11 +174,28 @@ function punkte(tipp, ergebnis) {
 }
 
 async function tipperLesen(env, id) {
-  try {
-    const wert = JSON.parse((await env.ZAEHLER.get(`tipper:${id}`)) || "null");
-    if (wert && typeof wert === "object") return { name: "", tipps: {}, ...wert };
-  } catch { /* unbrauchbar gespeichert - wie neu behandeln */ }
+  const wert = JSON.parse((await env.ZAEHLER.get(`tipper:${id}`)) || "null");
+  if (wert && typeof wert === "object" && !Array.isArray(wert)) {
+    // Die Felder werden erzwungen, nicht nur vorbelegt: ein gespeichertes
+    // name:null oder tipps:null hat den Vorgabewert sonst ueberschrieben.
+    return {
+      ...wert,
+      name: typeof wert.name === "string" ? wert.name
+            : typeof wert.name === "number" ? String(wert.name) : "",
+      tipps: wert.tipps && typeof wert.tipps === "object" && !Array.isArray(wert.tipps)
+        ? wert.tipps : {},
+    };
+  }
   return { name: "", tipps: {} };
+}
+
+/** Wie tipperLesen, aber ein unlesbarer Eintrag wirft nicht. */
+async function tipperLesenWeich(env, id) {
+  try {
+    return await tipperLesen(env, id);
+  } catch {
+    return { name: "", tipps: {}, unlesbar: true };
+  }
 }
 
 /** Datum in Deutschland, damit "heute" nicht um 1 Uhr nachts umspringt. */
@@ -330,7 +381,15 @@ export default {
         const geraet = url.searchParams.get("geraet");
         if (!gueltig(geraet)) return antwort({ fehler: "geraet fehlt" }, request, 400);
         const tipper = await tipperLesen(env, geraet);
-        return antwort({ name: tipper.name, tipps: tipper.tipps }, request);
+        // Vereinheitlicht ausliefern: die Seite liest tipps[spiel][0] und
+        // [1] und stuende sonst vor einem abweichend gespeicherten Eintrag.
+        // Geschrieben wird dabei nichts.
+        const tipps = {};
+        for (const [code, wert] of Object.entries(tipper.tipps)) {
+          const t = alsTipp(wert);
+          if (t) tipps[code] = t;
+        }
+        return antwort({ name: tipper.name, tipps }, request);
       }
 
       if (pfad === "/tipptabelle" && request.method === "GET") {
@@ -341,40 +400,65 @@ export default {
         const nurMannschaft = url.searchParams.get("mannschaft") || "";
         const liste = await env.ZAEHLER.list({ prefix: "tipper:" });
 
+        // Jeder Speicherzugriff zaehlt gegen das Subrequest-Limit der Anfrage
+        // (50 im kostenlosen Tarif), und list() sowie das Laden der Spieldaten
+        // sind schon zwei davon. Frueher lief die Schleife blind darueber
+        // hinaus: die Lesefehler wurden verschluckt und die Betroffenen
+        // fielen still aus der Tabelle. Jetzt wird die Grenze eingehalten und
+        // eine unvollstaendige Tabelle als solche gemeldet.
+        const LESE_HOECHSTENS = 45;
+        const zuLesen = liste.keys.slice(0, LESE_HOECHSTENS);
+        const ausgelassen = liste.keys.length - zuLesen.length;
+        let unlesbar = 0;
+
         const eintraege = [];
-        for (const schluessel of liste.keys) {
+        for (const schluessel of zuLesen) {
           const id = schluessel.name.slice("tipper:".length);
-          const tipper = await tipperLesen(env, id);
+          const tipper = await tipperLesenWeich(env, id);
+          if (tipper.unlesbar) { unlesbar += 1; continue; }
           if (!tipper.name) continue;          // ohne Namen nicht in der Tabelle
 
-          let summe = 0, gewertet = 0, exakt = 0;
-          for (const [code, tipp] of Object.entries(tipper.tipps)) {
-            const partie = spiele[code];
-            if (!partie || !partie.ergebnis) continue;
-            if (nurMannschaft && partie.schluessel !== nurMannschaft) continue;
-            const p = punkte(tipp, partie.ergebnis);
-            summe += p; gewertet += 1;
-            if (p === PUNKTE_EXAKT) exakt += 1;
-          }
-          const eigeneTipps = Object.keys(tipper.tipps).filter(
-            (c) => !nurMannschaft
-                || (spiele[c] && spiele[c].schluessel === nurMannschaft));
-          if (nurMannschaft && !eigeneTipps.length) continue;
+          try {
+            let summe = 0, gewertet = 0, exakt = 0;
+            for (const [code, tipp] of Object.entries(tipper.tipps)) {
+              const partie = spiele[code];
+              if (!partie || !partie.ergebnis) continue;
+              if (nurMannschaft && partie.schluessel !== nurMannschaft) continue;
+              const p = punkte(tipp, partie.ergebnis);
+              summe += p; gewertet += 1;
+              if (p === PUNKTE_EXAKT) exakt += 1;
+            }
+            const eigeneTipps = Object.keys(tipper.tipps).filter(
+              (c) => !nurMannschaft
+                  || (spiele[c] && spiele[c].schluessel === nurMannschaft));
+            if (nurMannschaft && !eigeneTipps.length) continue;
 
-          eintraege.push({ id, name: tipper.name, punkte: summe,
-                           spiele: gewertet, exakt,
-                           tipps: eigeneTipps.length });
+            eintraege.push({ id, name: tipper.name, punkte: summe,
+                             spiele: gewertet, exakt,
+                             tipps: eigeneTipps.length });
+          } catch {
+            // Ein einzelner unbrauchbarer Eintrag darf nicht die Tabelle
+            // aller anderen mitnehmen. Der Eintrag bleibt im Speicher stehen.
+            unlesbar += 1;
+          }
         }
 
         eintraege.sort((a, b) => b.punkte - a.punkte || b.exakt - a.exakt
-                                 || a.name.localeCompare(b.name));
-        return antwort({ tabelle: eintraege.map((e, i) => ({ platz: i + 1, ...e })) },
-                       request);
+                                 || String(a.name).localeCompare(String(b.name)));
+        return antwort({
+          tabelle: eintraege.map((e, i) => ({ platz: i + 1, ...e })),
+          ...(ausgelassen || unlesbar
+              ? { unvollstaendig: { ausgelassen, unlesbar } } : {}),
+        }, request);
       }
 
       return antwort({ fehler: "unbekannter Pfad" }, request, 404);
     } catch (e) {
-      return antwort({ fehler: "Anfrage fehlerhaft" }, request, 400);
+      // Frueher stand hier nur "Anfrage fehlerhaft". Ein defekter Eintrag
+      // legte damit die Tipptabelle lahm, ohne dass irgendwo stand, warum.
+      console.error("Fehler bei", pfad, e && e.stack ? e.stack : e);
+      return antwort({ fehler: "Anfrage fehlerhaft",
+                       grund: String((e && e.message) || e) }, request, 400);
     }
   },
 };
