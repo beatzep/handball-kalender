@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-08-30T14:01:10+00:00",
+  "aktualisiert": "2026-08-30T14:31:03+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -602,13 +602,26 @@
         "verlauf": [
           {
             "runde": 1,
-            "platz": 4,
+            "platz": 6,
             "punkte": 0
           }
         ],
         "eintraege": [
           {
             "platz": 1,
+            "team": "SG LaFt - Herren",
+            "team_id": 80970,
+            "spiele": 1,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 37,
+            "gegentore": 35,
+            "differenz": 2
+          },
+          {
+            "platz": 2,
             "team": "TV THALEISCHWEILER Herren",
             "team_id": 80973,
             "spiele": 1,
@@ -621,7 +634,7 @@
             "differenz": 2
           },
           {
-            "platz": 2,
+            "platz": 3,
             "team": "TSV Kandel 2",
             "team_id": 80975,
             "spiele": 1,
@@ -634,7 +647,7 @@
             "differenz": 1
           },
           {
-            "platz": 3,
+            "platz": 4,
             "team": "HSV Lingenfeld/Schwegenheim 2",
             "team_id": 80982,
             "spiele": 1,
@@ -647,7 +660,20 @@
             "differenz": -1
           },
           {
-            "platz": 4,
+            "platz": 5,
+            "team": "TUS Heiligenstein 2",
+            "team_id": 80983,
+            "spiele": 1,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 35,
+            "gegentore": 37,
+            "differenz": -2
+          },
+          {
+            "platz": 6,
             "team": "HSG Mutterstadt/Ruchheim 2",
             "team_id": 80980,
             "spiele": 1,
@@ -660,20 +686,7 @@
             "differenz": -2
           },
           {
-            "platz": 5,
-            "team": "SG LaFt - Herren",
-            "team_id": 80970,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 6,
+            "platz": 7,
             "team": "MSG Kaiserslautern/Dansenberg 2",
             "team_id": 80974,
             "spiele": 0,
@@ -686,7 +699,7 @@
             "differenz": 0
           },
           {
-            "platz": 7,
+            "platz": 8,
             "team": "TUS Neuhofen 2",
             "team_id": 80976,
             "spiele": 0,
@@ -699,7 +712,7 @@
             "differenz": 0
           },
           {
-            "platz": 8,
+            "platz": 9,
             "team": "TV Offenbach 4",
             "team_id": 80977,
             "spiele": 0,
@@ -712,7 +725,7 @@
             "differenz": 0
           },
           {
-            "platz": 9,
+            "platz": 10,
             "team": "MSG Iggelheim/Meckenheim 3",
             "team_id": 80978,
             "spiele": 0,
@@ -725,22 +738,9 @@
             "differenz": 0
           },
           {
-            "platz": 10,
+            "platz": 11,
             "team": "TV Kirrweiler 2",
             "team_id": 80979,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 11,
-            "team": "TUS Heiligenstein 2",
-            "team_id": 80983,
             "spiele": 0,
             "punkte": 0,
             "siege": 0,
