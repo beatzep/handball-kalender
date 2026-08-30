@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-08-30T13:01:07+00:00",
+  "aktualisiert": "2026-08-30T13:31:04+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -5018,13 +5018,26 @@
         "verlauf": [
           {
             "runde": 1,
-            "platz": 3,
+            "platz": 4,
             "punkte": 2
           }
         ],
         "eintraege": [
           {
             "platz": 1,
+            "team": "JSG Mundenheim/Rheingönheim 2",
+            "team_id": 81150,
+            "spiele": 1,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 33,
+            "gegentore": 15,
+            "differenz": 18
+          },
+          {
+            "platz": 2,
             "team": "Mjsg SG Saulheim/HSV Alzey 3",
             "team_id": 81152,
             "spiele": 1,
@@ -5037,7 +5050,7 @@
             "differenz": 16
           },
           {
-            "platz": 2,
+            "platz": 3,
             "team": "HSG Eckbachtal",
             "team_id": 81149,
             "spiele": 1,
@@ -5050,7 +5063,7 @@
             "differenz": 7
           },
           {
-            "platz": 3,
+            "platz": 4,
             "team": "HSG Mutterstadt/Ruchheim II",
             "team_id": 81146,
             "spiele": 1,
@@ -5063,7 +5076,33 @@
             "differenz": 5
           },
           {
-            "platz": 4,
+            "platz": 5,
+            "team": "Vsk Niederfeld",
+            "team_id": 81147,
+            "spiele": 1,
+            "punkte": 1,
+            "siege": 0,
+            "remis": 1,
+            "niederlagen": 0,
+            "tore": 18,
+            "gegentore": 18,
+            "differenz": 0
+          },
+          {
+            "platz": 6,
+            "team": "TV Edigheim II",
+            "team_id": 81153,
+            "spiele": 1,
+            "punkte": 1,
+            "siege": 0,
+            "remis": 1,
+            "niederlagen": 0,
+            "tore": 18,
+            "gegentore": 18,
+            "differenz": 0
+          },
+          {
+            "platz": 7,
             "team": "HSG Dudenhofen/Schifferstadt",
             "team_id": 81154,
             "spiele": 1,
@@ -5076,7 +5115,7 @@
             "differenz": -5
           },
           {
-            "platz": 5,
+            "platz": 8,
             "team": "WSG Rheinauen",
             "team_id": 81151,
             "spiele": 1,
@@ -5089,7 +5128,7 @@
             "differenz": -7
           },
           {
-            "platz": 6,
+            "platz": 9,
             "team": "Hr Göllheim/Eisenberg/Asselheim/Kindenheim",
             "team_id": 81145,
             "spiele": 1,
@@ -5102,56 +5141,17 @@
             "differenz": -16
           },
           {
-            "platz": 7,
-            "team": "Vsk Niederfeld",
-            "team_id": 81147,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 8,
+            "platz": 10,
             "team": "SC Bobenheim-Roxheim",
             "team_id": 81148,
-            "spiele": 0,
+            "spiele": 1,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 9,
-            "team": "JSG Mundenheim/Rheingönheim 2",
-            "team_id": 81150,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 10,
-            "team": "TV Edigheim II",
-            "team_id": 81153,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
+            "niederlagen": 1,
+            "tore": 15,
+            "gegentore": 33,
+            "differenz": -18
           }
         ]
       },
@@ -6032,6 +6032,19 @@
         "eintraege": [
           {
             "platz": 1,
+            "team": "SV Bornheim",
+            "team_id": 81237,
+            "spiele": 1,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 26,
+            "gegentore": 9,
+            "differenz": 17
+          },
+          {
+            "platz": 2,
             "team": "TV Kirrweiler",
             "team_id": 81240,
             "spiele": 1,
@@ -6039,12 +6052,12 @@
             "siege": 1,
             "remis": 0,
             "niederlagen": 0,
-            "tore": 21,
-            "gegentore": 9,
-            "differenz": 12
+            "tore": 24,
+            "gegentore": 10,
+            "differenz": 14
           },
           {
-            "platz": 2,
+            "platz": 3,
             "team": "Vorderpfälzer Luchse",
             "team_id": 81239,
             "spiele": 1,
@@ -6057,7 +6070,7 @@
             "differenz": 5
           },
           {
-            "platz": 3,
+            "platz": 4,
             "team": "Wjsg Mainz05/TV Nieder-Olm Wd1",
             "team_id": 89474,
             "spiele": 1,
@@ -6070,7 +6083,7 @@
             "differenz": 1
           },
           {
-            "platz": 4,
+            "platz": 5,
             "team": "TV 03 Wörth",
             "team_id": 81242,
             "spiele": 1,
@@ -6083,7 +6096,7 @@
             "differenz": -1
           },
           {
-            "platz": 5,
+            "platz": 6,
             "team": "JSG Kaiserslautern/Dansenberg",
             "team_id": 87386,
             "spiele": 1,
@@ -6096,7 +6109,7 @@
             "differenz": -5
           },
           {
-            "platz": 6,
+            "platz": 7,
             "team": "TV Edigheim",
             "team_id": 81238,
             "spiele": 1,
@@ -6104,40 +6117,27 @@
             "siege": 0,
             "remis": 0,
             "niederlagen": 1,
-            "tore": 9,
-            "gegentore": 21,
-            "differenz": -12
-          },
-          {
-            "platz": 7,
-            "team": "SV Bornheim",
-            "team_id": 81237,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
+            "tore": 10,
+            "gegentore": 24,
+            "differenz": -14
           },
           {
             "platz": 8,
-            "team": "HSG Mutterstadt/Ruchheim Wd Ol",
-            "team_id": 81241,
-            "spiele": 0,
+            "team": "TSG MZ-Bretzenheim",
+            "team_id": 81243,
+            "spiele": 1,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
+            "niederlagen": 1,
+            "tore": 9,
+            "gegentore": 26,
+            "differenz": -17
           },
           {
             "platz": 9,
-            "team": "TSG MZ-Bretzenheim",
-            "team_id": 81243,
+            "team": "HSG Mutterstadt/Ruchheim Wd Ol",
+            "team_id": 81241,
             "spiele": 0,
             "punkte": 0,
             "siege": 0,
@@ -6498,10 +6498,42 @@
         "runde": 1,
         "gespielt": true,
         "mannschaften": 10,
-        "verlauf": [],
+        "verlauf": [
+          {
+            "runde": 1,
+            "platz": 1,
+            "punkte": 2
+          }
+        ],
         "eintraege": [
           {
             "platz": 1,
+            "team": "HSG Mutterstadt/Ruchheim II",
+            "team_id": 81267,
+            "spiele": 1,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 25,
+            "gegentore": 11,
+            "differenz": 14
+          },
+          {
+            "platz": 2,
+            "team": "JSG Mundenheim/Rheingönheim",
+            "team_id": 81266,
+            "spiele": 1,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 25,
+            "gegentore": 12,
+            "differenz": 13
+          },
+          {
+            "platz": 3,
             "team": "Vorderpfälzer Luchse II",
             "team_id": 81264,
             "spiele": 1,
@@ -6514,7 +6546,7 @@
             "differenz": 8
           },
           {
-            "platz": 2,
+            "platz": 4,
             "team": "HSG Eckbachtal II",
             "team_id": 81263,
             "spiele": 1,
@@ -6527,7 +6559,7 @@
             "differenz": 3
           },
           {
-            "platz": 3,
+            "platz": 5,
             "team": "TV Edigheim II",
             "team_id": 81268,
             "spiele": 1,
@@ -6540,7 +6572,7 @@
             "differenz": -3
           },
           {
-            "platz": 4,
+            "platz": 6,
             "team": "WSG Rheinauen",
             "team_id": 81270,
             "spiele": 1,
@@ -6553,61 +6585,35 @@
             "differenz": -8
           },
           {
-            "platz": 5,
-            "team": "Mwsg Kandel/Hagenbach",
-            "team_id": 81261,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 6,
+            "platz": 7,
             "team": "HSG Dudenhofen/Schifferstadt",
             "team_id": 81262,
-            "spiele": 0,
+            "spiele": 1,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 7,
-            "team": "VSK Niederfeld",
-            "team_id": 81265,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
+            "niederlagen": 1,
+            "tore": 12,
+            "gegentore": 25,
+            "differenz": -13
           },
           {
             "platz": 8,
-            "team": "JSG Mundenheim/Rheingönheim",
-            "team_id": 81266,
-            "spiele": 0,
+            "team": "Mwsg Kandel/Hagenbach",
+            "team_id": 81261,
+            "spiele": 1,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
+            "niederlagen": 1,
+            "tore": 11,
+            "gegentore": 25,
+            "differenz": -14
           },
           {
             "platz": 9,
-            "team": "HSG Mutterstadt/Ruchheim II",
-            "team_id": 81267,
+            "team": "VSK Niederfeld",
+            "team_id": 81265,
             "spiele": 0,
             "punkte": 0,
             "siege": 0,
@@ -6634,7 +6640,8 @@
       },
       "form": [
         "S",
-        "N"
+        "N",
+        "S"
       ],
       "statistik": {
         "fahrten": {
@@ -6657,10 +6664,10 @@
         },
         "bilanz": {
           "gesamt": {
-            "s": 1,
+            "s": 2,
             "u": 0,
             "n": 1,
-            "spiele": 2
+            "spiele": 3
           },
           "heim": {
             "s": 0,
@@ -6669,30 +6676,30 @@
             "spiele": 1
           },
           "auswaerts": {
-            "s": 1,
+            "s": 2,
             "u": 0,
             "n": 0,
-            "spiele": 1
+            "spiele": 2
           }
         },
         "serien": {
           "ohne_niederlage": 1,
           "aktuell": 1,
-          "aktuell_art": "N"
+          "aktuell_art": "S"
         },
         "krimis": {
           "anzahl": 1,
-          "gesamt": 2,
-          "anteil": 50
+          "gesamt": 3,
+          "anteil": 33
         },
         "tore": {
-          "erzielt": 20,
-          "kassiert": 33,
-          "schnitt": 10.0,
+          "erzielt": 45,
+          "kassiert": 44,
+          "schnitt": 15.0,
           "torreichstes": {
-            "gegner": "Südpfalz Tiger",
-            "stand": "8:22",
-            "summe": 30
+            "gegner": "Mwsg Kandel/Hagenbach",
+            "stand": "25:11",
+            "summe": 36
           }
         },
         "anwurf": {
@@ -6702,9 +6709,9 @@
             "schnitt": 0
           },
           "frueh": {
-            "spiele": 2,
-            "punkte": 2,
-            "schnitt": 1.0
+            "spiele": 3,
+            "punkte": 4,
+            "schnitt": 1.33
           }
         },
         "gegner": {},
@@ -6766,7 +6773,14 @@
           "spieltag": 1,
           "heim": false,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 0,
+          "ergebnis": {
+            "heim": 11,
+            "gast": 25,
+            "eigene": 25,
+            "fremde": 11,
+            "ausgang": "S"
+          }
         },
         "2627RPBKRDJWC0201": {
           "datum": "2026-09-06T13:00:00",
