@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-08-30T17:31:09+00:00",
+  "aktualisiert": "2026-08-30T18:01:15+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -602,13 +602,26 @@
         "verlauf": [
           {
             "runde": 1,
-            "platz": 6,
+            "platz": 9,
             "punkte": 0
           }
         ],
         "eintraege": [
           {
             "platz": 1,
+            "team": "HSG Grethen/Maxdorf",
+            "team_id": 80984,
+            "spiele": 1,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 33,
+            "gegentore": 25,
+            "differenz": 8
+          },
+          {
+            "platz": 2,
             "team": "SG LaFt - Herren",
             "team_id": 80970,
             "spiele": 1,
@@ -621,7 +634,7 @@
             "differenz": 2
           },
           {
-            "platz": 2,
+            "platz": 3,
             "team": "TV THALEISCHWEILER Herren",
             "team_id": 80973,
             "spiele": 1,
@@ -634,7 +647,7 @@
             "differenz": 2
           },
           {
-            "platz": 3,
+            "platz": 4,
             "team": "TSV Kandel 2",
             "team_id": 80975,
             "spiele": 1,
@@ -647,46 +660,7 @@
             "differenz": 1
           },
           {
-            "platz": 4,
-            "team": "HSV Lingenfeld/Schwegenheim 2",
-            "team_id": 80982,
-            "spiele": 1,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 30,
-            "gegentore": 31,
-            "differenz": -1
-          },
-          {
             "platz": 5,
-            "team": "TUS Heiligenstein 2",
-            "team_id": 80983,
-            "spiele": 1,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 35,
-            "gegentore": 37,
-            "differenz": -2
-          },
-          {
-            "platz": 6,
-            "team": "HSG Mutterstadt/Ruchheim 2",
-            "team_id": 80980,
-            "spiele": 1,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 20,
-            "gegentore": 22,
-            "differenz": -2
-          },
-          {
-            "platz": 7,
             "team": "MSG Kaiserslautern/Dansenberg 2",
             "team_id": 80974,
             "spiele": 0,
@@ -699,7 +673,7 @@
             "differenz": 0
           },
           {
-            "platz": 8,
+            "platz": 6,
             "team": "TUS Neuhofen 2",
             "team_id": 80976,
             "spiele": 0,
@@ -712,7 +686,7 @@
             "differenz": 0
           },
           {
-            "platz": 9,
+            "platz": 7,
             "team": "TV Offenbach 4",
             "team_id": 80977,
             "spiele": 0,
@@ -725,20 +699,7 @@
             "differenz": 0
           },
           {
-            "platz": 10,
-            "team": "MSG Iggelheim/Meckenheim 3",
-            "team_id": 80978,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 11,
+            "platz": 8,
             "team": "TV Kirrweiler 2",
             "team_id": 80979,
             "spiele": 0,
@@ -751,17 +712,56 @@
             "differenz": 0
           },
           {
-            "platz": 12,
-            "team": "HSG Grethen/Maxdorf",
-            "team_id": 80984,
-            "spiele": 0,
+            "platz": 9,
+            "team": "HSG Mutterstadt/Ruchheim 2",
+            "team_id": 80980,
+            "spiele": 1,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
+            "niederlagen": 1,
+            "tore": 20,
+            "gegentore": 22,
+            "differenz": -2
+          },
+          {
+            "platz": 10,
+            "team": "TUS Heiligenstein 2",
+            "team_id": 80983,
+            "spiele": 1,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 35,
+            "gegentore": 37,
+            "differenz": -2
+          },
+          {
+            "platz": 11,
+            "team": "MSG Iggelheim/Meckenheim 3",
+            "team_id": 80978,
+            "spiele": 1,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 25,
+            "gegentore": 33,
+            "differenz": -8
+          },
+          {
+            "platz": 12,
+            "team": "HSV Lingenfeld/Schwegenheim 2",
+            "team_id": 80982,
+            "spiele": 1,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 30,
+            "gegentore": 31,
+            "differenz": -1
           }
         ]
       },
@@ -3606,6 +3606,11 @@
             "runde": 1,
             "platz": 2,
             "punkte": 2
+          },
+          {
+            "runde": 2,
+            "platz": 3,
+            "punkte": 2
           }
         ],
         "eintraege": [
@@ -3613,30 +3618,17 @@
             "platz": 1,
             "team": "HSG Wittlich",
             "team_id": 86911,
-            "spiele": 1,
-            "punkte": 2,
-            "siege": 1,
+            "spiele": 2,
+            "punkte": 4,
+            "siege": 2,
             "remis": 0,
             "niederlagen": 0,
-            "tore": 31,
-            "gegentore": 22,
-            "differenz": 9
+            "tore": 63,
+            "gegentore": 52,
+            "differenz": 11
           },
           {
             "platz": 2,
-            "team": "HSG Mutterstadt/Ruchheim",
-            "team_id": 86917,
-            "spiele": 1,
-            "punkte": 2,
-            "siege": 1,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 29,
-            "gegentore": 25,
-            "differenz": 4
-          },
-          {
-            "platz": 3,
             "team": "Hf Untere Saar",
             "team_id": 86921,
             "spiele": 2,
@@ -3647,6 +3639,19 @@
             "tore": 53,
             "gegentore": 48,
             "differenz": 5
+          },
+          {
+            "platz": 3,
+            "team": "HSG Mutterstadt/Ruchheim",
+            "team_id": 86917,
+            "spiele": 2,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 59,
+            "gegentore": 57,
+            "differenz": 2
           },
           {
             "platz": 4,
