@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-08-30T13:31:04+00:00",
+  "aktualisiert": "2026-08-30T14:01:10+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -1165,6 +1165,32 @@
           },
           {
             "platz": 2,
+            "team": "TV Hauenstein",
+            "team_id": 80995,
+            "spiele": 1,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 33,
+            "gegentore": 30,
+            "differenz": 3
+          },
+          {
+            "platz": 3,
+            "team": "SV Bornheim",
+            "team_id": 81001,
+            "spiele": 1,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 30,
+            "gegentore": 33,
+            "differenz": -3
+          },
+          {
+            "platz": 4,
             "team": "HSG Eckbachtal",
             "team_id": 81000,
             "spiele": 1,
@@ -1177,20 +1203,7 @@
             "differenz": -6
           },
           {
-            "platz": 3,
-            "team": "TV Hauenstein",
-            "team_id": 80995,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 4,
+            "platz": 5,
             "team": "HSV Alzey",
             "team_id": 80996,
             "spiele": 0,
@@ -1203,7 +1216,7 @@
             "differenz": 0
           },
           {
-            "platz": 5,
+            "platz": 6,
             "team": "FSG Kaiserslautern/Dansenberg",
             "team_id": 80997,
             "spiele": 0,
@@ -1216,7 +1229,7 @@
             "differenz": 0
           },
           {
-            "platz": 6,
+            "platz": 7,
             "team": "FSG Gonsenheim/Schott",
             "team_id": 80998,
             "spiele": 0,
@@ -1229,22 +1242,9 @@
             "differenz": 0
           },
           {
-            "platz": 7,
+            "platz": 8,
             "team": "HSG Mutterstadt/Ruchheim Damen",
             "team_id": 80999,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 8,
-            "team": "SV Bornheim",
-            "team_id": 81001,
             "spiele": 0,
             "punkte": 0,
             "siege": 0,
