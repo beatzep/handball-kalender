@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-08-30T14:31:03+00:00",
+  "aktualisiert": "2026-08-30T15:01:06+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -3944,7 +3944,8 @@
       },
       "form": [
         "N",
-        "N"
+        "N",
+        "S"
       ],
       "statistik": {
         "fahrten": {
@@ -3967,16 +3968,16 @@
         },
         "bilanz": {
           "gesamt": {
-            "s": 0,
+            "s": 1,
             "u": 0,
             "n": 2,
-            "spiele": 2
+            "spiele": 3
           },
           "heim": {
-            "s": 0,
+            "s": 1,
             "u": 0,
             "n": 1,
-            "spiele": 1
+            "spiele": 2
           },
           "auswaerts": {
             "s": 0,
@@ -3986,23 +3987,23 @@
           }
         },
         "serien": {
-          "ohne_niederlage": 0,
-          "aktuell": 2,
-          "aktuell_art": "N"
+          "ohne_niederlage": 1,
+          "aktuell": 1,
+          "aktuell_art": "S"
         },
         "krimis": {
           "anzahl": 1,
-          "gesamt": 2,
-          "anteil": 50
+          "gesamt": 3,
+          "anteil": 33
         },
         "tore": {
-          "erzielt": 39,
-          "kassiert": 44,
-          "schnitt": 19.5,
+          "erzielt": 85,
+          "kassiert": 65,
+          "schnitt": 28.3,
           "torreichstes": {
-            "gegner": "JSG Gonsenheim/Schott",
-            "stand": "24:28",
-            "summe": 52
+            "gegner": "JSG Mundenheim/Rheingönheim 2",
+            "stand": "46:21",
+            "summe": 67
           }
         },
         "anwurf": {
@@ -4012,9 +4013,9 @@
             "schnitt": 0
           },
           "frueh": {
-            "spiele": 2,
-            "punkte": 0,
-            "schnitt": 0.0
+            "spiele": 3,
+            "punkte": 2,
+            "schnitt": 0.67
           }
         },
         "gegner": {},
@@ -4076,7 +4077,14 @@
           "spieltag": 1,
           "heim": true,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 0,
+          "ergebnis": {
+            "heim": 46,
+            "gast": 21,
+            "eigene": 46,
+            "fremde": 21,
+            "ausgang": "S"
+          }
         },
         "2627RPVLCJGA0205": {
           "datum": "2026-09-06T10:00:00",
