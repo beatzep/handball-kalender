@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-08-30T16:22:57+00:00",
+  "aktualisiert": "2026-08-30T17:01:04+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -1152,6 +1152,19 @@
         "eintraege": [
           {
             "platz": 1,
+            "team": "FSG Gonsenheim/Schott",
+            "team_id": 80998,
+            "spiele": 1,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 32,
+            "gegentore": 26,
+            "differenz": 6
+          },
+          {
+            "platz": 2,
             "team": "TV Kirrweiler",
             "team_id": 81003,
             "spiele": 1,
@@ -1164,7 +1177,7 @@
             "differenz": 6
           },
           {
-            "platz": 2,
+            "platz": 3,
             "team": "TV Hauenstein",
             "team_id": 80995,
             "spiele": 1,
@@ -1177,7 +1190,7 @@
             "differenz": 3
           },
           {
-            "platz": 3,
+            "platz": 4,
             "team": "SV Bornheim",
             "team_id": 81001,
             "spiele": 1,
@@ -1190,7 +1203,20 @@
             "differenz": -3
           },
           {
-            "platz": 4,
+            "platz": 5,
+            "team": "FSG Selz-Wiesbach",
+            "team_id": 81002,
+            "spiele": 1,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 26,
+            "gegentore": 32,
+            "differenz": -6
+          },
+          {
+            "platz": 6,
             "team": "HSG Eckbachtal",
             "team_id": 81000,
             "spiele": 1,
@@ -1203,7 +1229,7 @@
             "differenz": -6
           },
           {
-            "platz": 5,
+            "platz": 7,
             "team": "HSV Alzey",
             "team_id": 80996,
             "spiele": 0,
@@ -1216,7 +1242,7 @@
             "differenz": 0
           },
           {
-            "platz": 6,
+            "platz": 8,
             "team": "FSG Kaiserslautern/Dansenberg",
             "team_id": 80997,
             "spiele": 0,
@@ -1229,35 +1255,9 @@
             "differenz": 0
           },
           {
-            "platz": 7,
-            "team": "FSG Gonsenheim/Schott",
-            "team_id": 80998,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 8,
+            "platz": 9,
             "team": "HSG Mutterstadt/Ruchheim Damen",
             "team_id": 80999,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 9,
-            "team": "FSG Selz-Wiesbach",
-            "team_id": 81002,
             "spiele": 0,
             "punkte": 0,
             "siege": 0,
@@ -1623,6 +1623,19 @@
         "eintraege": [
           {
             "platz": 1,
+            "team": "MSG Wörth/Kandel",
+            "team_id": 81047,
+            "spiele": 1,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 43,
+            "gegentore": 28,
+            "differenz": 15
+          },
+          {
+            "platz": 2,
             "team": "Mjsg Heiligenstein/Mundenheim/Rheingönheim 2",
             "team_id": 81048,
             "spiele": 1,
@@ -1635,7 +1648,7 @@
             "differenz": 14
           },
           {
-            "platz": 2,
+            "platz": 3,
             "team": "TUS Neuhofen",
             "team_id": 81044,
             "spiele": 1,
@@ -1648,7 +1661,7 @@
             "differenz": 12
           },
           {
-            "platz": 3,
+            "platz": 4,
             "team": "TV Kirrweiler",
             "team_id": 86753,
             "spiele": 1,
@@ -1661,7 +1674,7 @@
             "differenz": 2
           },
           {
-            "platz": 4,
+            "platz": 5,
             "team": "HSG Landau/Land",
             "team_id": 81042,
             "spiele": 1,
@@ -1674,7 +1687,7 @@
             "differenz": -2
           },
           {
-            "platz": 5,
+            "platz": 6,
             "team": "Mjsg SG Saulheim/HSV Alzey",
             "team_id": 81049,
             "spiele": 1,
@@ -1687,7 +1700,7 @@
             "differenz": -12
           },
           {
-            "platz": 6,
+            "platz": 7,
             "team": "TSV Speyer",
             "team_id": 81046,
             "spiele": 1,
@@ -1700,7 +1713,20 @@
             "differenz": -14
           },
           {
-            "platz": 7,
+            "platz": 8,
+            "team": "TS RODALBEN mA",
+            "team_id": 81045,
+            "spiele": 1,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 28,
+            "gegentore": 43,
+            "differenz": -15
+          },
+          {
+            "platz": 9,
             "team": "HSG Eckbachtal II",
             "team_id": 81041,
             "spiele": 0,
@@ -1713,35 +1739,9 @@
             "differenz": 0
           },
           {
-            "platz": 8,
+            "platz": 10,
             "team": "HSG MUTTERSTADT/RUCHHEIM mA",
             "team_id": 81043,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 9,
-            "team": "TS RODALBEN mA",
-            "team_id": 81045,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 10,
-            "team": "MSG Wörth/Kandel",
-            "team_id": 81047,
             "spiele": 0,
             "punkte": 0,
             "siege": 0,
