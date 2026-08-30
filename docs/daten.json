@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-08-30T12:01:06+00:00",
+  "aktualisiert": "2026-08-30T12:31:03+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -2560,7 +2560,7 @@
         "verlauf": [
           {
             "runde": 1,
-            "platz": 4,
+            "platz": 6,
             "punkte": 0
           }
         ],
@@ -2593,6 +2593,32 @@
           },
           {
             "platz": 3,
+            "team": "Mjsg SG Saulheim/HSV Alzey",
+            "team_id": 86763,
+            "spiele": 1,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 30,
+            "gegentore": 28,
+            "differenz": 2
+          },
+          {
+            "platz": 4,
+            "team": "JSG Osthofen/Worms",
+            "team_id": 80838,
+            "spiele": 1,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 28,
+            "gegentore": 30,
+            "differenz": -2
+          },
+          {
+            "platz": 5,
             "team": "TV 03 Wörth",
             "team_id": 80835,
             "spiele": 1,
@@ -2605,7 +2631,7 @@
             "differenz": -9
           },
           {
-            "platz": 4,
+            "platz": 6,
             "team": "HSG Mutterstadt/Ruchheim",
             "team_id": 86762,
             "spiele": 1,
@@ -2618,7 +2644,7 @@
             "differenz": -10
           },
           {
-            "platz": 5,
+            "platz": 7,
             "team": "TG Waldsee",
             "team_id": 80831,
             "spiele": 0,
@@ -2631,7 +2657,7 @@
             "differenz": 0
           },
           {
-            "platz": 6,
+            "platz": 8,
             "team": "TV Kirrweiler",
             "team_id": 80834,
             "spiele": 0,
@@ -2644,7 +2670,7 @@
             "differenz": 0
           },
           {
-            "platz": 7,
+            "platz": 9,
             "team": "SF Budenheim II",
             "team_id": 80836,
             "spiele": 0,
@@ -2657,35 +2683,9 @@
             "differenz": 0
           },
           {
-            "platz": 8,
+            "platz": 10,
             "team": "TV Nieder-Olm Mb2",
             "team_id": 80837,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 9,
-            "team": "JSG Osthofen/Worms",
-            "team_id": 80838,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 10,
-            "team": "Mjsg SG Saulheim/HSV Alzey",
-            "team_id": 86763,
             "spiele": 0,
             "punkte": 0,
             "siege": 0,
@@ -4994,13 +4994,26 @@
         "verlauf": [
           {
             "runde": 1,
-            "platz": 2,
+            "platz": 3,
             "punkte": 2
           }
         ],
         "eintraege": [
           {
             "platz": 1,
+            "team": "Mjsg SG Saulheim/HSV Alzey 3",
+            "team_id": 81152,
+            "spiele": 1,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 27,
+            "gegentore": 11,
+            "differenz": 16
+          },
+          {
+            "platz": 2,
             "team": "HSG Eckbachtal",
             "team_id": 81149,
             "spiele": 1,
@@ -5013,7 +5026,7 @@
             "differenz": 7
           },
           {
-            "platz": 2,
+            "platz": 3,
             "team": "HSG Mutterstadt/Ruchheim II",
             "team_id": 81146,
             "spiele": 1,
@@ -5026,7 +5039,7 @@
             "differenz": 5
           },
           {
-            "platz": 3,
+            "platz": 4,
             "team": "HSG Dudenhofen/Schifferstadt",
             "team_id": 81154,
             "spiele": 1,
@@ -5039,7 +5052,7 @@
             "differenz": -5
           },
           {
-            "platz": 4,
+            "platz": 5,
             "team": "WSG Rheinauen",
             "team_id": 81151,
             "spiele": 1,
@@ -5052,20 +5065,20 @@
             "differenz": -7
           },
           {
-            "platz": 5,
+            "platz": 6,
             "team": "Hr Göllheim/Eisenberg/Asselheim/Kindenheim",
             "team_id": 81145,
-            "spiele": 0,
+            "spiele": 1,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
+            "niederlagen": 1,
+            "tore": 11,
+            "gegentore": 27,
+            "differenz": -16
           },
           {
-            "platz": 6,
+            "platz": 7,
             "team": "Vsk Niederfeld",
             "team_id": 81147,
             "spiele": 0,
@@ -5078,7 +5091,7 @@
             "differenz": 0
           },
           {
-            "platz": 7,
+            "platz": 8,
             "team": "SC Bobenheim-Roxheim",
             "team_id": 81148,
             "spiele": 0,
@@ -5091,22 +5104,9 @@
             "differenz": 0
           },
           {
-            "platz": 8,
+            "platz": 9,
             "team": "JSG Mundenheim/Rheingönheim 2",
             "team_id": 81150,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 9,
-            "team": "Mjsg SG Saulheim/HSV Alzey 3",
-            "team_id": 81152,
             "spiele": 0,
             "punkte": 0,
             "siege": 0,
