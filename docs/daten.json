@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-08-30T22:33:19+00:00",
+  "aktualisiert": "2026-08-31T09:41:48+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -186,17 +186,17 @@
       ],
       "statistik": {
         "fahrten": {
-          "gesamt_km": 1539,
+          "gesamt_km": 1535,
           "fahrten": 18,
-          "stunden": 22.0,
+          "stunden": 21.9,
           "weiteste": {
-            "km": 168.8937026988312,
-            "gegner": "GW Bingen-Büdesheim",
-            "halle": "Bingen, Rundsporthalle",
+            "km": 196.4,
+            "gegner": "HSV Sobernheim H1",
+            "halle": "Bad Sobernheim, Dr. W.Dümmler Halle",
             "heim": false
           },
           "naechste": {
-            "km": 12.337724856185785,
+            "km": 11.2,
             "gegner": "HSV Sobernheim H1",
             "halle": "TVR-Sporthalle Ludwigshafen",
             "heim": true
@@ -262,8 +262,8 @@
           "spiele": 22,
           "biere": 880,
           "liter": 440,
-          "verbrauch": 28.6,
-          "stunden": 248,
+          "verbrauch": 28.7,
+          "stunden": 247,
           "tage": 10.3
         }
       },
@@ -770,17 +770,17 @@
       ],
       "statistik": {
         "fahrten": {
-          "gesamt_km": 658,
+          "gesamt_km": 735,
           "fahrten": 15,
-          "stunden": 9.4,
+          "stunden": 10.5,
           "weiteste": {
-            "km": 156.59873968407337,
+            "km": 208.8,
             "gegner": "TV THALEISCHWEILER Herren",
             "halle": "IGS-Sporthalle Thaleischweiler",
             "heim": false
           },
           "naechste": {
-            "km": 12.337724856185785,
+            "km": 11.2,
             "gegner": "TV Kirrweiler 2",
             "halle": "TVR-Sporthalle Ludwigshafen",
             "heim": true
@@ -1285,17 +1285,17 @@
       "form": [],
       "statistik": {
         "fahrten": {
-          "gesamt_km": 989,
+          "gesamt_km": 1054,
           "fahrten": 13,
-          "stunden": 14.1,
+          "stunden": 15.1,
           "weiteste": {
-            "km": 166.61511267692677,
-            "gegner": "FSG Gonsenheim/Schott",
-            "halle": "Am Großen Sand Mainz",
+            "km": 208.8,
+            "gegner": "TV Thaleischweiler",
+            "halle": "IGS-Sporthalle Thaleischweiler",
             "heim": false
           },
           "naechste": {
-            "km": 12.337724856185785,
+            "km": 11.2,
             "gegner": "TV Kirrweiler",
             "halle": "TVR-Sporthalle Ludwigshafen",
             "heim": true
@@ -1769,17 +1769,17 @@
       "form": [],
       "statistik": {
         "fahrten": {
-          "gesamt_km": 614,
+          "gesamt_km": 648,
           "fahrten": 13,
-          "stunden": 8.8,
+          "stunden": 9.3,
           "weiteste": {
-            "km": 147.05815715352173,
+            "km": 164.4,
             "gegner": "TS RODALBEN mA",
             "halle": "Tsr-Sporthalle Rodalben",
             "heim": false
           },
           "naechste": {
-            "km": 12.337724856185785,
+            "km": 11.2,
             "gegner": "Mjsg SG Saulheim/HSV Alzey",
             "halle": "TVR-Sporthalle Ludwigshafen",
             "heim": true
@@ -2209,17 +2209,17 @@
       ],
       "statistik": {
         "fahrten": {
-          "gesamt_km": 489,
+          "gesamt_km": 504,
           "fahrten": 14,
-          "stunden": 7.0,
+          "stunden": 7.2,
           "weiteste": {
-            "km": 115.84849576659772,
+            "km": 140.0,
             "gegner": "HSG TSG/1.FC-Kaiserslautern",
             "halle": "Schillerschule Kaiserslautern",
             "heim": false
           },
           "naechste": {
-            "km": 10.718651027549765,
+            "km": 10.8,
             "gegner": "Vsk Niederfeld",
             "halle": "Loschky-Halle Niederfeld",
             "heim": false
@@ -2704,17 +2704,17 @@
       ],
       "statistik": {
         "fahrten": {
-          "gesamt_km": 721,
+          "gesamt_km": 758,
           "fahrten": 13,
-          "stunden": 10.3,
+          "stunden": 10.8,
           "weiteste": {
-            "km": 162.88388018359674,
+            "km": 196.4,
             "gegner": "Mjsg Sobernheim/Meisenheim",
             "halle": "Bad Sobernheim, Dr. W.Dümmler Halle",
             "heim": false
           },
           "naechste": {
-            "km": 12.337724856185785,
+            "km": 11.2,
             "gegner": "TV Nieder-Olm Mb2",
             "halle": "TVR-Sporthalle Ludwigshafen",
             "heim": true
@@ -3231,17 +3231,17 @@
       ],
       "statistik": {
         "fahrten": {
-          "gesamt_km": 525,
+          "gesamt_km": 551,
           "fahrten": 10,
-          "stunden": 7.5,
+          "stunden": 7.9,
           "weiteste": {
-            "km": 168.8937026988312,
+            "km": 154.4,
             "gegner": "Mjsg Büdesheim/Zotzenheim/St.Johann/Sprendlingen",
             "halle": "Bingen, Rundsporthalle",
             "heim": false
           },
           "naechste": {
-            "km": 11.964081575442993,
+            "km": 11.0,
             "gegner": "Vsk Niederfeld",
             "halle": "Gesamtschule Ludwigshafen",
             "heim": false
@@ -3674,17 +3674,17 @@
       ],
       "statistik": {
         "fahrten": {
-          "gesamt_km": 720,
+          "gesamt_km": 800,
           "fahrten": 5,
-          "stunden": 10.3,
+          "stunden": 11.4,
           "weiteste": {
-            "km": 324.08922322470767,
-            "gegner": "Hf Untere Saar",
-            "halle": "Seffersbachhalle",
+            "km": 376.4,
+            "gegner": "HSG Wittlich",
+            "halle": "Wittlich, Bbs-Halle",
             "heim": false
           },
           "naechste": {
-            "km": 12.337724856185785,
+            "km": 11.2,
             "gegner": "JSG Osthofen/Worms",
             "halle": "TVR-Sporthalle Ludwigshafen",
             "heim": true
@@ -3995,17 +3995,17 @@
       ],
       "statistik": {
         "fahrten": {
-          "gesamt_km": 681,
+          "gesamt_km": 679,
           "fahrten": 12,
           "stunden": 9.7,
           "weiteste": {
-            "km": 170.00990805199086,
+            "km": 175.8,
             "gegner": "Mjsg Bodenheim/Budenheim II",
             "halle": "Budenheim, Waldsporthalle (Hv Rheinhessen)",
             "heim": false
           },
           "naechste": {
-            "km": 12.337724856185785,
+            "km": 11.2,
             "gegner": "TV Edigheim",
             "halle": "TVR-Sporthalle Ludwigshafen",
             "heim": true
@@ -4489,17 +4489,17 @@
       ],
       "statistik": {
         "fahrten": {
-          "gesamt_km": 635,
+          "gesamt_km": 685,
           "fahrten": 12,
-          "stunden": 9.1,
+          "stunden": 9.8,
           "weiteste": {
-            "km": 156.59873968407337,
+            "km": 208.8,
             "gegner": "JSG Rodalben/Thaleischweiler II",
             "halle": "IGS-Sporthalle Thaleischweiler",
             "heim": false
           },
           "naechste": {
-            "km": 10.718651027549765,
+            "km": 10.8,
             "gegner": "Vsk Niederfeld",
             "halle": "Loschky-Halle Niederfeld",
             "heim": false
@@ -4882,17 +4882,17 @@
       ],
       "statistik": {
         "fahrten": {
-          "gesamt_km": 544,
+          "gesamt_km": 579,
           "fahrten": 4,
-          "stunden": 7.8,
+          "stunden": 8.3,
           "weiteste": {
-            "km": 322.715745136505,
+            "km": 313.6,
             "gegner": "TV Engers",
             "halle": "Engers, Sporthalle",
             "heim": false
           },
           "naechste": {
-            "km": 12.337724856185785,
+            "km": 11.2,
             "gegner": "JSG  Mundenheim/Rheingönheim",
             "halle": "TVR-Sporthalle Ludwigshafen",
             "heim": true
@@ -5214,17 +5214,17 @@
       ],
       "statistik": {
         "fahrten": {
-          "gesamt_km": 361,
+          "gesamt_km": 408,
           "fahrten": 12,
-          "stunden": 5.2,
+          "stunden": 5.8,
           "weiteste": {
-            "km": 97.25464995096713,
+            "km": 97.6,
             "gegner": "Mjsg SG Saulheim/HSV Alzey 3",
             "halle": "Rundsporthalle Alzey",
             "heim": false
           },
           "naechste": {
-            "km": 12.337724856185785,
+            "km": 11.2,
             "gegner": "SC Bobenheim-Roxheim",
             "halle": "TVR-Sporthalle Ludwigshafen",
             "heim": true
@@ -5699,17 +5699,17 @@
       ],
       "statistik": {
         "fahrten": {
-          "gesamt_km": 508,
+          "gesamt_km": 539,
           "fahrten": 12,
-          "stunden": 7.3,
+          "stunden": 7.7,
           "weiteste": {
-            "km": 129.6483700520119,
-            "gegner": "Mjsg SG Saulheim/HSV Alzey",
-            "halle": "Ritter-Hundt-Zentrum Saulheim",
+            "km": 136.6,
+            "gegner": "JSG Kaiserslauern/Dansenberg II",
+            "halle": "Sporthalle Dansenberg",
             "heim": false
           },
           "naechste": {
-            "km": 12.337724856185785,
+            "km": 11.2,
             "gegner": "JSG Mundenheim/Rheingönheim 2",
             "halle": "TVR-Sporthalle Ludwigshafen",
             "heim": true
@@ -6206,17 +6206,17 @@
       "form": [],
       "statistik": {
         "fahrten": {
-          "gesamt_km": 766,
+          "gesamt_km": 774,
           "fahrten": 13,
-          "stunden": 10.9,
+          "stunden": 11.1,
           "weiteste": {
-            "km": 155.4365898031384,
+            "km": 152.0,
             "gegner": "TSG MZ-Bretzenheim",
             "halle": "IGS 1 Mainz-Bretzenheim",
             "heim": false
           },
           "naechste": {
-            "km": 12.337724856185785,
+            "km": 11.2,
             "gegner": "JSG Kaiserslautern/Dansenberg",
             "halle": "TVR-Sporthalle Ludwigshafen",
             "heim": true
@@ -6699,11 +6699,11 @@
       ],
       "statistik": {
         "fahrten": {
-          "gesamt_km": 340,
+          "gesamt_km": 361,
           "fahrten": 12,
-          "stunden": 4.9,
+          "stunden": 5.2,
           "weiteste": {
-            "km": 110.61587346708309,
+            "km": 112.4,
             "gegner": "Mwsg Kandel/Hagenbach",
             "halle": "Kandel, IGS Sporthalle",
             "heim": false
@@ -7180,17 +7180,17 @@
       ],
       "statistik": {
         "fahrten": {
-          "gesamt_km": 366,
+          "gesamt_km": 409,
           "fahrten": 15,
-          "stunden": 5.2,
+          "stunden": 5.8,
           "weiteste": {
-            "km": 117.70163684668915,
+            "km": 136.6,
             "gegner": "JSG Kaiserslautern/Dansenberg",
             "halle": "Sporthalle Dansenberg",
             "heim": false
           },
           "naechste": {
-            "km": 12.337724856185785,
+            "km": 11.2,
             "gegner": "JSG Mundenheim/Rheingönheim",
             "halle": "TVR-Sporthalle Ludwigshafen",
             "heim": true
@@ -7704,17 +7704,17 @@
       ],
       "statistik": {
         "fahrten": {
-          "gesamt_km": 193,
+          "gesamt_km": 211,
           "fahrten": 6,
-          "stunden": 2.8,
+          "stunden": 3.0,
           "weiteste": {
-            "km": 117.70163684668915,
+            "km": 136.6,
             "gegner": "JSG Kaiserslautern/Dansenberg II",
             "halle": "Sporthalle Dansenberg",
             "heim": false
           },
           "naechste": {
-            "km": 10.718651027549765,
+            "km": 10.8,
             "gegner": "Vsk Niederfeld",
             "halle": "Loschky-Halle Niederfeld",
             "heim": false
@@ -8057,17 +8057,17 @@
       ],
       "statistik": {
         "fahrten": {
-          "gesamt_km": 274,
+          "gesamt_km": 304,
           "fahrten": 7,
-          "stunden": 3.9,
+          "stunden": 4.3,
           "weiteste": {
-            "km": 115.84849576659772,
+            "km": 140.0,
             "gegner": "JSG Kaiserslautern/Dansenberg III",
             "halle": "Schillerschule Kaiserslautern",
             "heim": false
           },
           "naechste": {
-            "km": 12.337724856185785,
+            "km": 11.2,
             "gegner": "TSV Speyer II",
             "halle": "TVR-Sporthalle Ludwigshafen",
             "heim": true
@@ -8396,17 +8396,17 @@
       "form": [],
       "statistik": {
         "fahrten": {
-          "gesamt_km": 358,
+          "gesamt_km": 391,
           "fahrten": 13,
-          "stunden": 5.1,
+          "stunden": 5.6,
           "weiteste": {
-            "km": 115.84849576659772,
+            "km": 140.0,
             "gegner": "JSG Kaiserslauern/Dansenberg 2",
             "halle": "Schillerschule Kaiserslautern",
             "heim": false
           },
           "naechste": {
-            "km": 10.718651027549765,
+            "km": 10.8,
             "gegner": "Vsk Niederfeld",
             "halle": "Loschky-Halle Niederfeld",
             "heim": false
@@ -8776,17 +8776,17 @@
       "form": [],
       "statistik": {
         "fahrten": {
-          "gesamt_km": 178,
+          "gesamt_km": 187,
           "fahrten": 6,
-          "stunden": 2.5,
+          "stunden": 2.7,
           "weiteste": {
-            "km": 55.56674456003256,
+            "km": 61.2,
             "gegner": "TV Kirrweiler",
             "halle": "Reblandhalle Kirrweiler",
             "heim": false
           },
           "naechste": {
-            "km": 12.337724856185785,
+            "km": 11.2,
             "gegner": "TUS Heiligenstein 2",
             "halle": "TVR-Sporthalle Ludwigshafen",
             "heim": true
@@ -9027,17 +9027,17 @@
       "form": [],
       "statistik": {
         "fahrten": {
-          "gesamt_km": 336,
+          "gesamt_km": 339,
           "fahrten": 7,
           "stunden": 4.8,
           "weiteste": {
-            "km": 115.39923833636415,
+            "km": 111.6,
             "gegner": "TV 03 Wörth 2",
             "halle": "Bienwaldhalle Wörth",
             "heim": false
           },
           "naechste": {
-            "km": 12.337724856185785,
+            "km": 11.2,
             "gegner": "JSG Mundenheim/Rheingönheim",
             "halle": "TVR-Sporthalle Ludwigshafen",
             "heim": true
@@ -9205,17 +9205,17 @@
       "form": [],
       "statistik": {
         "fahrten": {
-          "gesamt_km": 182,
+          "gesamt_km": 180,
           "fahrten": 7,
           "stunden": 2.6,
           "weiteste": {
-            "km": 96.44196623604317,
+            "km": 98.0,
             "gegner": "HSV Alzey",
             "halle": "Gustav-Heinemann-Schule Alzey",
             "heim": false
           },
           "naechste": {
-            "km": 12.337724856185785,
+            "km": 11.2,
             "gegner": "JSG Mundenheim/Rheingönheim 2",
             "halle": "TVR-Sporthalle Ludwigshafen",
             "heim": true
@@ -9383,17 +9383,17 @@
       "form": [],
       "statistik": {
         "fahrten": {
-          "gesamt_km": 179,
+          "gesamt_km": 199,
           "fahrten": 3,
-          "stunden": 2.6,
+          "stunden": 2.8,
           "weiteste": {
-            "km": 100.3456638148598,
+            "km": 97.8,
             "gegner": "HSG Trifels 2",
             "halle": "Realschule Plus Annweiler",
             "heim": false
           },
           "naechste": {
-            "km": 13.808545798033292,
+            "km": 14.2,
             "gegner": "TUS Neuhofen 2",
             "halle": "Rehbachhalle Neuhofen",
             "heim": false
