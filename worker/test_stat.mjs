@@ -67,10 +67,25 @@ pruefe("Ohne hinterlegtes Passwort kein Zugang", rr.status === 401);
 
 // Unbekannte Felder werden verworfen
 await ruf("/zaehl", "POST", { ereignis: { unbekannt: 5, aufruf: "viele" },
-                              mannschaft: { fremdverein: 3 } });
+                              mannschaft: { "Fremd Verein!": 3, "gf-2": 2 } });
 r = await ruf("/auswertung", "POST", ANMELDUNG);
 pruefe("Unbekanntes Ereignis verworfen", !("unbekannt" in r.daten.gesamt.ereignis));
-pruefe("Unbekannte Mannschaft verworfen", !("fremdverein" in r.daten.gesamt.mannschaft));
+// Mannschaften werden nicht mehr gegen eine feste Liste geprueft, sondern
+// gegen ihre Form: die Liste kannte nur herren1, herren2 und damen, seit der
+// Erweiterung fiel damit jeder Jugend-Aufruf still aus der Zaehlung.
+pruefe("Jugendmannschaft wird gezaehlt", r.daten.gesamt.mannschaft["gf-2"] === 2,
+       JSON.stringify(r.daten.gesamt.mannschaft));
+pruefe("Kein Mannschaftsschluessel mit Sonderzeichen",
+       !("Fremd Verein!" in r.daten.gesamt.mannschaft));
+
+// Die Deckelung haelt den Speicher sauber, wenn jemand den Endpunkt findet
+const viele = {};
+for (let i = 0; i < 40; i++) viele["erfunden-" + i] = 1;
+await ruf("/zaehl", "POST", { ereignis: {}, mannschaft: viele });
+r = await ruf("/auswertung", "POST", ANMELDUNG);
+const erfunden = Object.keys(r.daten.gesamt.mannschaft)
+  .filter((k) => k.startsWith("erfunden-")).length;
+pruefe("Hoechstens acht Mannschaften je Anfrage", erfunden <= 8, String(erfunden));
 pruefe("Nichtzahl verworfen", r.daten.gesamt.ereignis.aufruf === 42,
        String(r.daten.gesamt.ereignis.aufruf));
 

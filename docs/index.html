@@ -6298,13 +6298,24 @@ window.muruGeraet = (function () {
     offen = { ereignis: {}, mannschaft: {}, bereich: {} };
     etwasOffen = false;
     // Beim Verlassen wird ein laufendes fetch abgebrochen - sendBeacon nicht.
+    //
+    // Der Inhaltstyp muss text/plain sein, obwohl JSON drinsteht: mit
+    // application/json gilt die Anfrage nicht mehr als einfach, der Browser
+    // schickt erst eine OPTIONS-Vorfrage - und die verbraucht die einzige
+    // Zustellung, die er beim Schliessen der Seite noch zusagt. Im
+    // Worker-Protokoll standen darum lauter OPTIONS ohne zugehoerigen POST,
+    // und die Zaehlung blieb tagelang bei null. Der Worker liest den Koerper
+    // ohnehin als JSON, unabhaengig vom angegebenen Typ.
     if (beimVerlassen && navigator.sendBeacon) {
-      navigator.sendBeacon(worker + '/zaehl',
-        new Blob([last], { type: 'application/json' }));
-      return;
+      var zugestellt = navigator.sendBeacon(worker + '/zaehl',
+        new Blob([last], { type: 'text/plain' }));
+      if (zugestellt) return;
+      // Nimmt der Browser den Beacon nicht an (Warteschlange voll), bleibt
+      // fetch mit keepalive - das ueberlebt das Schliessen ebenfalls.
     }
     fetch(worker + '/zaehl', {
-      method: 'POST', headers: { 'Content-Type': 'application/json' }, body: last
+      method: 'POST', headers: { 'Content-Type': 'text/plain' }, body: last,
+      keepalive: !!beimVerlassen
     }).catch(function () {});
   }
 

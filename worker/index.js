@@ -38,7 +38,12 @@ const STAT_TEILE = 10;
 // keine Adresse, keinen Zeitstempel je Besuch: nur Summen pro Tag.
 const STAT_EREIGNISSE = ["aufruf", "abo", "datei", "grafik", "tipp",
                          "hype", "dabei", "teilen"];
-const STAT_MANNSCHAFTEN = ["herren1", "herren2", "damen"];
+// Frueher eine feste Liste aus drei Namen. Seit der Verein mit allen 23
+// Mannschaften auf der Seite steht, fiel damit jeder Jugend-Aufruf still aus
+// der Zaehlung. Statt die Liste zu pflegen wird die Form geprueft; die
+// Anzahl je Anfrage ist gedeckelt, damit niemand den Speicher vollschreibt.
+const MANNSCHAFT_FORM = /^[a-z][a-z0-9-]{1,14}$/;
+const MANNSCHAFTEN_JE_ANFRAGE = 8;
 const STAT_BEREICHE = ["kalender", "spiele", "tabelle", "statistik"];
 
 function kopf(request) {
@@ -361,16 +366,21 @@ function addiere(ziel, quelle) {
 /** Nur bekannte Namen und ganze Zahlen uebernehmen. */
 function saeubere(roh) {
   const rein = leererStand();
-  const uebernimm = (gruppe, erlaubt) => {
+  const uebernimm = (gruppe, passt, hoechstens = Infinity) => {
+    let genommen = 0;
     for (const [name, wert] of Object.entries(roh[gruppe] || {})) {
-      if (!erlaubt.includes(name)) continue;
+      if (genommen >= hoechstens) break;
+      if (!passt(name)) continue;
       const n = parseInt(wert, 10);
-      if (Number.isFinite(n) && n > 0) rein[gruppe][name] = Math.min(n, 500);
+      if (Number.isFinite(n) && n > 0) {
+        rein[gruppe][name] = Math.min(n, 500);
+        genommen += 1;
+      }
     }
   };
-  uebernimm("ereignis", STAT_EREIGNISSE);
-  uebernimm("mannschaft", STAT_MANNSCHAFTEN);
-  uebernimm("bereich", STAT_BEREICHE);
+  uebernimm("ereignis", (n) => STAT_EREIGNISSE.includes(n));
+  uebernimm("mannschaft", (n) => MANNSCHAFT_FORM.test(n), MANNSCHAFTEN_JE_ANFRAGE);
+  uebernimm("bereich", (n) => STAT_BEREICHE.includes(n));
   return rein;
 }
 

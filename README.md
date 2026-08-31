@@ -285,6 +285,30 @@ wegzunehmen.
 Gelesen wird nebenläufig: 30 Tage × 10 Schlüssel nacheinander brauchten
 1,3 Sekunden, parallel sind es rund 0,5.
 
+### Warum die Zählung tagelang bei null stand
+
+Am 31.08.2026 zeigte die Auswertung null Aufrufe, obwohl die Seite mehrfach
+besucht worden war. Im Speicher stand für den Tag tatsächlich nichts.
+
+Die Zählung geht beim Verlassen der Seite raus, über `navigator.sendBeacon` –
+ein laufendes `fetch` würde beim Schließen abgebrochen. Der Beacon trug den
+Inhaltstyp `application/json`, und damit gilt die Anfrage nicht mehr als
+einfach: der Browser schickt zuerst eine OPTIONS-Vorfrage. Die verbraucht die
+einzige Zustellung, die er beim Schließen noch zusagt – der eigentliche POST
+kam nie an. Im Worker-Protokoll standen darum lauter `OPTIONS /zaehl` ohne
+zugehörigen `POST`.
+
+Nachgemessen mit zwei Beacons, die sich nur im Inhaltstyp unterschieden:
+beide meldeten `true`, nur der mit `text/plain` landete im Speicher. Der
+Worker liest den Körper ohnehin als JSON, unabhängig vom angegebenen Typ.
+
+Dabei fiel ein zweiter Fehler auf: `STAT_MANNSCHAFTEN` kannte nur `herren1`,
+`herren2` und `damen`. Seit der Verein mit allen 23 Mannschaften auf der
+Seite steht, fiel damit jeder Jugend-Aufruf still aus der Zählung. Statt eine
+Liste zu pflegen, die genau so wieder veraltet, wird jetzt die Form geprüft –
+gedeckelt auf acht Mannschaften je Anfrage, damit niemand den Speicher
+vollschreibt.
+
 ## Tipprunde
 
 Vor jedem Spiel kann getippt werden, nach dem Abpfiff rechnet der Worker die

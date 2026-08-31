@@ -518,6 +518,9 @@ table.verteilung td.pkt { text-align: right; font-weight: 600; white-space: nowr
 .tipperliste .warnung { font-size: .74rem; font-weight: 600; letter-spacing: .04em;
                        text-transform: uppercase; color: var(--niederlage); }
 .tipperliste .ohnenamen { color: var(--leise); font-style: italic; }
+.tipperliste .kennung { font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+                       font-size: .72rem; color: var(--leise); margin-top: 3px;
+                       user-select: all; }
 .hinweis { font-size: .9rem; color: var(--tinte-weich); line-height: 1.55; }
 .meldung { font-size: .9rem; color: var(--tinte-weich); }
 .meldung.schlecht { color: var(--niederlage); }
@@ -701,6 +704,11 @@ table.verteilung td.pkt { text-align: right; font-weight: 600; white-space: nowr
       return '<tr' + (t.beanstandet ? ' class="beanstandet"' : '') + '>'
         + '<td>' + name
         + (t.beanstandet ? ' <span class="warnung">beanstandet</span>' : '')
+        // Die Kennung ist der einzige Anhaltspunkt, wenn jemand wiederholt
+        // auffaellt: benennt sich dieselbe Person neu, steht der neue Name
+        // darunter. Sonst wird nichts gespeichert, was auf sie zeigt.
+        + '<div class="kennung" title="Gerätekennung">' + sicherText(t.id)
+        + '</div>'
         + '</td>'
         + '<td class="zahl">' + t.tipps + '</td>'
         + '<td class="tun">'
