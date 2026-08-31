@@ -44,23 +44,40 @@ TIPP = """
         '</td><td class="pkt">' + punkte + '</td></tr>';
     }
 
+    var ZEIGE = 10;
+
     function zeigeTabelle(zeilen) {
       zeilen = zeilen || [];
-      var reihen = zeilen.slice(0, 10).map(function (e) {
+      var reihen = zeilen.slice(0, ZEIGE).map(function (e) {
         return zeile(e.platz, e.name, e.punkte, e.id === geraet);
       });
+
+      // Wer weiter hinten steht, sah sich bisher gar nicht - die Liste
+      // brach nach zehn Zeilen ab. Den eigenen Platz anhaengen.
+      var eigene = zeilen.findIndex
+        ? zeilen.findIndex(function (e) { return e.id === geraet; })
+        : -1;
+      if (eigene >= ZEIGE) {
+        var e = zeilen[eigene];
+        reihen.push('<tr class="luecke"><td colspan="3">…</td></tr>');
+        reihen.push(zeile(e.platz, e.name, e.punkte, true));
+      }
 
       // Neu angelegte Eintraege erscheinen in der Auflistung des Speichers
       // erst mit Verzoegerung. Wer gerade getippt hat, saehe sich sonst
       // minutenlang nicht - darum vorlaeufig selbst eintragen.
-      var drin = zeilen.some(function (e) { return e.id === geraet; });
-      if (!drin && nameFeld.value.trim() && getippt) {
+      if (eigene < 0 && nameFeld.value.trim() && getippt) {
         reihen.push(zeile('–', nameFeld.value.trim(), 0, true));
       }
 
-      tabelle.innerHTML = reihen.length
-        ? '<table><tbody>' + reihen.join('') + '</tbody></table>'
-        : '';
+      if (!reihen.length) { tabelle.innerHTML = ''; return; }
+      // Zehn Zeilen sahen aus wie die ganze Runde. Bei achtzehn Mitspielern
+      // war das schlicht irrefuehrend.
+      var rest = zeilen.length - ZEIGE;
+      tabelle.innerHTML = '<table><tbody>' + reihen.join('') + '</tbody></table>'
+        + (rest > 0 ? '<p class="tippfuss">' + zeilen.length + ' machen mit'
+             + (eigene >= ZEIGE ? '' : ', ' + rest + ' weitere nicht gezeigt')
+             + '.</p>' : '');
     }
 
     function ladeTabelle() {

@@ -273,6 +273,8 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 .tipptabelle td { padding: 9px 0; border-bottom: 1px solid var(--linie-zart); }
 .tipptabelle td.pl { color: var(--leise); width: 26px; font-size: .86rem; }
 .tipptabelle td.pkt { text-align: right; font-weight: 600; }
+.tipptabelle tr.luecke td { text-align: center; color: var(--leise);
+  letter-spacing: .3em; padding: 4px 0; border-bottom: none; }
 .tipptabelle tr.ich td { background: var(--gold-schwach); font-weight: 600; }
 .tipptabelle tr.ich td.pl { box-shadow: inset 2px 0 0 var(--gold); }
 .tippspiel .nebensache { margin-top: 14px; }

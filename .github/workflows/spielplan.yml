@@ -32,6 +32,10 @@ jobs:
           python-version: "3.12"
 
       - name: Spielplaene holen und Kalender erzeugen
+        env:
+          # Fuer echte Strassenkilometer statt Luftlinien-Schaetzung, siehe
+          # strassenroute.py. Ohne den Secret laeuft alles wie bisher.
+          ORS_API_KEY: ${{ secrets.ORS_API_KEY }}
         run: |
           python3 spielplan2ics.py \
             --teams teams.json \
@@ -78,6 +82,10 @@ jobs:
       - name: Verweise zwischen den Seiten pruefen
         run: python3 pruefe_verweise.py
 
+      - name: Worker-Logik pruefen
+        run: |
+          for datei in worker/test*.mjs; do node "$datei"; done
+
       # Gleicht die fertigen Kalender noch einmal gegen handball.net ab -
       # unabhaengig vom Generator, also ein echter Abgleich statt einer
       # Selbstbestaetigung. Schlaegt er an, wird nichts committet und die
@@ -101,7 +109,7 @@ jobs:
         run: |
           git config user.name "spielplan-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/
+          git add docs/ strassen_cache.json
           if git diff --cached --quiet; then
             echo "Keine Aenderungen - nichts zu committen."
             exit 0

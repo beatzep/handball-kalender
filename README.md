@@ -306,6 +306,48 @@ Zwei Fallstricke, die dabei gelöst sind:
   minutenlang nicht in der Tabelle – deshalb trägt die Seite die eigene Zeile
   vorläufig selbst ein, mit „–" als Platz.
 
+### Namen in der Tipprunde
+
+Es gibt keine Freigabe vor der Veröffentlichung: Wer tippt, steht sofort für
+alle sichtbar in der Wertung. Am ersten Spieltag hat das prompt jemand
+ausgenutzt.
+
+Der Filter in `anstoessig()` ist bewusst grob. Er hält die übliche Ladung ab,
+nicht jeden Einfall – wer will, findet einen Weg daran vorbei. Geprüft wird
+eine Vergleichsform: Kleinschreibung, Umlaute aufgelöst, Leetspeak
+zurückübersetzt (`W1chs3r`, `@rsch`, `f.u.c.k`), Sonderzeichen entfernt und
+verdoppelte Buchstaben zusammengezogen – sonst genügt `Wichsser` oder
+`fuuuck`.
+
+Abgewogen wird zugunsten der Vereinsseite: lieber einmal zu viel abgelehnt
+als ein Schimpfwort öffentlich, zumal ein anderer Name schnell getippt ist.
+Eine Ausnahme ist `dick` – Dick, Dickmann und Dickel sind häufige deutsche
+Nachnamen, das englische Schimpfwort wäre hier selten. Umgekehrt bleiben
+`fick` und `kacke` in der Liste, obwohl es die Nachnamen Fick und Kackert
+gibt; die sind so selten, dass die Abwägung andersherum ausfällt. Diese
+Grenzfälle stehen ausdrücklich in `worker/test_namen.mjs`, damit sie eine
+Entscheidung bleiben und kein Versehen werden.
+
+Der Filter greift auch rückwirkend: Namen, die vor seiner Einführung
+gespeichert wurden, verschwinden aus der Wertung. Der Tipp bleibt gespeichert
+und gewertet, nur der Name wird nicht gezeigt.
+
+### Aufräumen im Adminbereich
+
+Weil kein Filter alles abfängt, führt `/admin` die Tipprunde auf – beanstandete
+Namen zuoberst und hervorgehoben. Zwei Stufen, die sich deutlich
+unterscheiden:
+
+- **Namen entfernen** lässt den Tipp gewertet und nimmt nur den Eintrag aus
+  der öffentlichen Tabelle. Die Person kann sich neu benennen.
+- **Löschen** entfernt den Eintrag samt Tipps endgültig und nimmt ihn aus der
+  Tipperliste.
+
+Beides verlangt dieselbe Anmeldung wie die Auswertung und fragt im Browser
+nach. `worker/test_admin.mjs` prüft, dass ohne Anmeldung nichts passiert, dass
+„Namen entfernen" den Tipp unangetastet lässt und dass eine unbekannte Art
+abgewiesen wird.
+
 ## Bilder zum Teilen
 
 `seite_grafik.py` enthält den Zeichner, der im Browser auf ein Canvas malt:

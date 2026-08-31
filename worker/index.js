@@ -57,6 +57,67 @@ function antwort(daten, request, status = 200) {
 }
 
 /** Spielnummern sehen aus wie 2627RPBKROERMA0101 - alles andere wird abgewiesen. */
+// Namen fuer die Tipptabelle
+// ---------------------------------------------------------------------
+// Es gibt keine Freigabe vor der Veroeffentlichung: wer tippt, steht sofort
+// fuer alle sichtbar in der Wertung. Am ersten Spieltag hat das prompt
+// jemand ausgenutzt.
+//
+// Der Filter ist bewusst grob. Er haelt die uebliche Ladung ab, nicht jeden
+// Einfall - wer will, findet einen Weg daran vorbei. Dafuer gibt es die
+// Loeschmoeglichkeit im Adminbereich. Umgekehrt gilt: lieber einmal zu viel
+// abgelehnt als ein Schimpfwort auf der Vereinsseite; abgelehnt wird mit
+// klarer Ansage, ein anderer Name ist schnell getippt.
+const SCHIMPFWOERTER = [
+  // deutsch
+  "arschloch", "arsch", "wichser", "wichsen", "hurensohn", "hure", "nutte",
+  "fotze", "fick", "ficken", "schlampe", "missgeburt", "spast", "spasti",
+  "behindert", "mongo", "kanake", "neger", "schwuchtel", "schwanz", "penis",
+  "muschi", "titten", "scheisse", "scheiss", "kacke", "pisser", "bastard",
+  "hodensack", "sackgesicht", "vollpfosten", "hitler", "nazi", "heilhitler",
+  // englisch
+  // "dick" fehlt bewusst: Dick, Dickmann und Dickel sind haeufige deutsche
+  // Nachnamen, das englische Schimpfwort waere hier selten. Umgekehrt sind
+  // "fick" und "kacke" drin, obwohl es die Nachnamen Fick und Kackert gibt -
+  // die sind so selten, dass die Abwaegung andersherum ausfaellt.
+  "fuck", "shit", "bitch", "cunt", "cock", "pussy", "asshole",
+  "bastard", "whore", "slut", "nigger", "nigga", "faggot", "retard",
+  "porn", "sex", "boob", "tits", "anal", "blowjob", "wank",
+];
+
+/**
+ * Vergleichsform eines Namens: Kleinschreibung, Umlaute aufgeloest,
+ * Ziffern und Zeichen zurueckuebersetzt, alles Uebrige entfernt.
+ *
+ * Ohne diesen Schritt genuegt "W1chs3r" oder "f.u.c.k", um vorbeizukommen.
+ */
+function vergleichsform(text) {
+  return String(text)
+    .toLowerCase()
+    .replace(/ä/g, "ae").replace(/ö/g, "oe").replace(/ü/g, "ue").replace(/ß/g, "ss")
+    .replace(/[013457@$!|]/g, (z) => ({
+      "0": "o", "1": "i", "3": "e", "4": "a", "5": "s", "7": "t",
+      "@": "a", "$": "s", "!": "i", "|": "i",
+    }[z]))
+    .replace(/[^a-z]/g, "")
+    // Verdoppelte Buchstaben zusammenziehen: sonst genuegt "Wichsser" oder
+    // "fuuuck". Harmlose Namen leiden nicht darunter - aus Bußer wird
+    // "buser", aus Assmann "asman".
+    .replace(/(.)\1+/g, "$1");
+}
+
+/** Faellt der Name durch, kommt der Grund zurueck - sonst null. */
+function anstoessig(name) {
+  const form = vergleichsform(name);
+  if (!form) return null;
+  for (const wort of SCHIMPFWOERTER) {
+    // Die Liste durchlaeuft dieselbe Form, sonst fiele "titten" (doppeltes t)
+    // durch das eigene Raster.
+    if (form.includes(vergleichsform(wort))) return wort;
+  }
+  return null;
+}
+
 function gueltig(spiel) {
   return typeof spiel === "string" && /^[A-Za-z0-9_-]{4,40}$/.test(spiel);
 }
@@ -425,8 +486,77 @@ export default {
           addiere(gesamt, staende[i]);
         });
         // Zaehler aus Hype, Zusagen und Tipps zum Vergleich danebenstellen
-        const schluessel = await env.ZAEHLER.list({ prefix: "tipper:" });
-        return antwort({ verlauf, gesamt, tipper: schluessel.keys.length }, request);
+        const kennungen = await tipperKennungen(env);
+        return antwort({ verlauf, gesamt, tipper: kennungen.ids.length }, request);
+      }
+
+      // Wer in der Tipprunde steht, mit Kennung - Grundlage fuers Aufraeumen.
+      if (pfad === "/tipper-liste" && request.method === "POST") {
+        const { benutzer, passwort } = await request.json();
+        if (!angemeldet(env, benutzer, passwort)) {
+          return antwort({ fehler: "Anmeldung fehlgeschlagen" }, request, 401);
+        }
+        const kennungen = await tipperKennungen(env);
+        const liste = [];
+        for (const id of kennungen.ids.slice(0, 200)) {
+          const tipper = await tipperLesenWeich(env, id);
+          if (tipper.unlesbar) {
+            liste.push({ id, name: "", tipps: 0, unlesbar: true });
+            continue;
+          }
+          liste.push({
+            id,
+            name: tipper.name,
+            tipps: Object.keys(tipper.tipps || {}).length,
+            // Was der Filter beanstandet, steht oben - auch wenn es vor
+            // seiner Einfuehrung gespeichert wurde.
+            beanstandet: tipper.name ? !!anstoessig(tipper.name) : false,
+          });
+        }
+        liste.sort((a, b) => (b.beanstandet ? 1 : 0) - (a.beanstandet ? 1 : 0)
+                          || String(a.name).localeCompare(String(b.name)));
+        return antwort({ tipper: liste, vollstaendig: !!kennungen.vollstaendig },
+                       request);
+      }
+
+      // Aufraeumen. Zwei Stufen, weil sie sich deutlich unterscheiden:
+      // "name" nimmt nur den Namen (der Tipp bleibt gewertet, der Eintrag
+      // verschwindet aus der Tabelle, die Person kann sich neu benennen),
+      // "ganz" loescht den Eintrag mitsamt Tipps.
+      if (pfad === "/tipper-entfernen" && request.method === "POST") {
+        const { benutzer, passwort, geraet, art } = await request.json();
+        if (!angemeldet(env, benutzer, passwort)) {
+          return antwort({ fehler: "Anmeldung fehlgeschlagen" }, request, 401);
+        }
+        if (!gueltig(geraet)) {
+          return antwort({ fehler: "geraet fehlt" }, request, 400);
+        }
+        if (art !== "name" && art !== "ganz") {
+          return antwort({ fehler: "art muss 'name' oder 'ganz' sein" },
+                         request, 400);
+        }
+        const vorher = await tipperLesenWeich(env, geraet);
+        // Erst merken, dann aendern: das Objekt unten ist dasselbe, sonst
+        // meldet die Antwort den leeren Namen statt des entfernten.
+        const alterName = vorher.name || "";
+        if (art === "name") {
+          const tipper = vorher.unlesbar ? { name: "", tipps: {} } : vorher;
+          delete tipper.unlesbar;
+          tipper.name = "";
+          await env.ZAEHLER.put(`tipper:${geraet}`, JSON.stringify(tipper));
+          return antwort({ erledigt: "name", geraet, war: alterName }, request);
+        }
+        await env.ZAEHLER.delete(`tipper:${geraet}`);
+        // Auch aus der Liste nehmen, sonst wird der Eintrag bei jedem Abruf
+        // vergeblich gesucht, bis sie das naechste Mal neu aufgebaut wird.
+        try {
+          const index = await indexLesen(env);
+          if (index) {
+            index.ids = index.ids.filter((x) => x !== geraet);
+            await indexSchreiben(env, index);
+          }
+        } catch { /* die Liste wird ohnehin regelmaessig erneuert */ }
+        return antwort({ erledigt: "ganz", geraet, war: alterName }, request);
       }
 
       // ---- Tippspiel ----
@@ -451,7 +581,12 @@ export default {
 
         const tipper = await tipperLesen(env, geraet);
         if (typeof name === "string" && name.trim()) {
-          tipper.name = name.trim().slice(0, 24);
+          const gewaehlt = name.trim().slice(0, 24);
+          if (anstoessig(gewaehlt)) {
+            return antwort({ fehler: "Bitte einen anderen Namen wählen." },
+                           request, 400);
+          }
+          tipper.name = gewaehlt;
         }
         tipper.tipps[spiel] = [th, tg];
         await env.ZAEHLER.put(`tipper:${geraet}`, JSON.stringify(tipper));
@@ -498,6 +633,10 @@ export default {
           const tipper = await tipperLesenWeich(env, id);
           if (tipper.unlesbar) { unlesbar += 1; continue; }
           if (!tipper.name) continue;          // ohne Namen nicht in der Tabelle
+          // Der Filter kam erst nach dem ersten Spieltag dazu. Was vorher
+          // durchgerutscht ist, verschwindet damit ebenfalls aus der Wertung -
+          // der Tipp bleibt gespeichert, nur der Name wird nicht gezeigt.
+          if (anstoessig(tipper.name)) continue;
 
           try {
             let summe = 0, gewertet = 0, exakt = 0;

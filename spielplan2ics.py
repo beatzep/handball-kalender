@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import sys
 import urllib.error
@@ -24,6 +25,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 import statistik
+import strassenroute
 
 API = "https://www.handball.net/api/new"
 SPIEL_URL = "https://www.handball.net/match/{id}"
@@ -636,6 +638,11 @@ def verarbeite_team(team: dict, cfg: argparse.Namespace, alt: dict) -> tuple[dic
 
     neuer_stand, aenderungen = vergleiche(spiele, team_id, alt.get("spiele") or {})
 
+    ziele = {(s["lat"], s["lon"]) for s in neuer_stand.values()
+             if s["lat"] is not None and s["lon"] is not None}
+    strassenroute.aktualisiere(cfg.strassen_cache, cfg.heimat, ziele, cfg.ors_key,
+                               cfg.strassen_cache_pfad)
+
     # Der Kalendername landet in der Kalender-App - dort muss der Verein
     # dranstehen, sonst heisst der Kalender bei allen nur "Herren I".
     einstellung = argparse.Namespace(**vars(cfg))
@@ -674,7 +681,8 @@ def verarbeite_team(team: dict, cfg: argparse.Namespace, alt: dict) -> tuple[dic
                     if phase.get("has_standings") else {}),
         "form": form_aus_spielen(neuer_stand),
         "statistik": statistik.alles(list(neuer_stand.values()),
-                                     cfg.heimat, team.get("alltag")),
+                                     cfg.heimat, team.get("alltag"),
+                                     strassen_cache=cfg.strassen_cache),
         "letzte_aenderungen": aenderungen,
         "spiele": neuer_stand,
     }, aenderungen
@@ -694,11 +702,20 @@ def main() -> None:
     p.add_argument("--keine-emojis", action="store_true", help="Titel ohne Heim/Auswaerts-Symbol")
     p.add_argument("--keine-schiris", action="store_true",
                    help="Schiedsrichternamen nicht in den Kalender schreiben")
+    p.add_argument("--strassen-cache", default="strassen_cache.json",
+                   help="Cache-Datei mit echten Strassenkilometern je Halle "
+                        "(OpenRouteService, siehe ORS_API_KEY)")
     cfg = p.parse_args()
 
     konfig = json.loads(Path(cfg.teams).read_text(encoding="utf-8"))
     cfg.verein = konfig.get("verein", "")
     cfg.heimat = konfig.get("heimat") or {}
+
+    # Ohne Schluessel bleibt der Cache einfach stehen - statistik.py faellt
+    # dann fuer neue Hallen auf die Luftlinien-Schaetzung zurueck.
+    cfg.ors_key = os.environ.get("ORS_API_KEY")
+    cfg.strassen_cache_pfad = Path(cfg.strassen_cache)
+    cfg.strassen_cache = strassenroute.lade_cache(cfg.strassen_cache_pfad)
 
     datenpfad = Path(cfg.daten)
     bisher = {}

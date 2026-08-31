@@ -28,11 +28,23 @@ def luftlinie(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
     return 2 * r * asin(sqrt(a))
 
 
-def entfernung(spiel: dict, heimat: dict) -> float | None:
-    """Einfache Strecke von der Heimat zur Halle, auf Strasse geschaetzt."""
+def entfernung(spiel: dict, heimat: dict, strassen_cache: dict | None = None) -> float | None:
+    """Einfache Strecke von der Heimat zur Halle.
+
+    Steht die Halle im strassen_cache (echte, von spielplan2ics.py per
+    OpenRouteService abgefragte Strassenkilometer), wird der genutzt.
+    Sonst faellt es auf die Luftlinie mal Umwegfaktor zurueck - eine
+    Schaetzung, die ohne Netzwerkzugriff auskommt."""
     try:
-        km = luftlinie(float(heimat["lat"]), float(heimat["lon"]),
-                       float(spiel["lat"]), float(spiel["lon"]))
+        lat, lon = float(spiel["lat"]), float(spiel["lon"])
+    except (TypeError, ValueError, KeyError):
+        return None
+    if strassen_cache is not None:
+        echte_km = strassen_cache.get(f"{lat:.5f},{lon:.5f}")
+        if echte_km is not None:
+            return echte_km
+    try:
+        km = luftlinie(float(heimat["lat"]), float(heimat["lon"]), lat, lon)
     except (TypeError, ValueError, KeyError):
         return None
     return km * UMWEGFAKTOR
@@ -42,12 +54,12 @@ def _gespielt(spiele: list[dict]) -> list[dict]:
     return [s for s in spiele if s.get("ergebnis")]
 
 
-def fahrten(spiele: list[dict], heimat: dict) -> dict:
+def fahrten(spiele: list[dict], heimat: dict, strassen_cache: dict | None = None) -> dict:
     """Alle Fahrten der Saison - Heimspiele in fremder Halle zaehlen mit,
     denn dorthin faehrt man genauso."""
     strecken, ohne_punkt = [], []
     for s in spiele:
-        km = entfernung(s, heimat)
+        km = entfernung(s, heimat, strassen_cache)
         if km is None:
             # Ohne Koordinaten laesst sich die Strecke nicht schaetzen. Das
             # wird ausgewiesen, damit die Gesamtzahl nicht zu klein aussieht,
@@ -203,9 +215,10 @@ def alltag(spiele: list[dict], strecken: dict, werte: dict) -> dict:
     }
 
 
-def alles(spiele: list[dict], heimat: dict, werte: dict | None = None) -> dict:
+def alles(spiele: list[dict], heimat: dict, werte: dict | None = None,
+          strassen_cache: dict | None = None) -> dict:
     """Sammelt sämtliche Kennzahlen einer Mannschaft."""
-    strecken = fahrten(spiele, heimat)
+    strecken = fahrten(spiele, heimat, strassen_cache)
     return {
         "fahrten": strecken,
         "bilanz": bilanz(spiele),

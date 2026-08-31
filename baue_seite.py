@@ -414,11 +414,13 @@ def statistikblock(st: dict) -> str:
         if f.get("weiteste"):
             felder.append(kennzahl(
                 "Weiteste Fahrt", f'{zahl(round(f["weiteste"]["km"]))}'
-                f'<span class="klein"> km</span>', sicher(f["weiteste"]["halle"])))
+                f'<span class="klein"> km</span>',
+                f'{sicher(f["weiteste"]["halle"])}, hin und zurück'))
         if f.get("naechste"):
             felder.append(kennzahl(
                 "Kürzeste Fahrt", f'{zahl(round(f["naechste"]["km"]))}'
-                f'<span class="klein"> km</span>', sicher(f["naechste"]["halle"])))
+                f'<span class="klein"> km</span>',
+                f'{sicher(f["naechste"]["halle"])}, hin und zurück'))
         teile.append('<div class="rubrik">Unterwegs</div>'
                      f'<dl class="kennzahlen">{"".join(felder)}</dl>')
         if f.get("ohne_koordinaten"):

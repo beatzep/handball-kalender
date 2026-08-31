@@ -275,6 +275,8 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 .tipptabelle td { padding: 9px 0; border-bottom: 1px solid var(--linie-zart); }
 .tipptabelle td.pl { color: var(--leise); width: 26px; font-size: .86rem; }
 .tipptabelle td.pkt { text-align: right; font-weight: 600; }
+.tipptabelle tr.luecke td { text-align: center; color: var(--leise);
+  letter-spacing: .3em; padding: 4px 0; border-bottom: none; }
 .tipptabelle tr.ich td { background: var(--gold-schwach); font-weight: 600; }
 .tipptabelle tr.ich td.pl { box-shadow: inset 2px 0 0 var(--gold); }
 .tippspiel .nebensache { margin-top: 14px; }
@@ -490,6 +492,29 @@ table.verteilung td.anteil { width: 45%; padding: 10px 14px; }
 table.verteilung td.anteil span { display: block; height: 8px; background: var(--gold);
                                   min-width: 1px; }
 table.verteilung td.pkt { text-align: right; font-weight: 600; white-space: nowrap; }
+.tipperliste { width: 100%; border-collapse: collapse; margin-top: 14px;
+              font-size: .94rem; }
+.tipperliste th { text-align: left; font-size: .74rem; letter-spacing: .06em;
+                 text-transform: uppercase; color: var(--leise); font-weight: 600;
+                 padding-bottom: 8px; border-bottom: 1px solid var(--linie); }
+.tipperliste td { padding: 10px 0; border-bottom: 1px solid var(--linie-zart);
+                 vertical-align: middle; }
+.tipperliste th.zahl, .tipperliste td.zahl { text-align: right; width: 60px;
+                                            padding-right: 14px; }
+.tipperliste td.tun { text-align: right; white-space: nowrap; }
+.tipperliste td.tun button { font: inherit; font-size: .8rem; cursor: pointer;
+                            margin-left: 6px; padding: 6px 10px;
+                            background: transparent; color: var(--tinte-weich);
+                            border: 1px solid var(--linie); }
+.tipperliste td.tun button:hover { border-color: var(--tinte-weich); }
+.tipperliste td.tun button.hart:hover { color: var(--niederlage);
+                                       border-color: var(--niederlage); }
+.tipperliste td.tun button[disabled] { opacity: .4; cursor: default; }
+.tipperliste tr.beanstandet td { background: rgba(164,68,58,.08); }
+.tipperliste .warnung { font-size: .74rem; font-weight: 600; letter-spacing: .04em;
+                       text-transform: uppercase; color: var(--niederlage); }
+.tipperliste .ohnenamen { color: var(--leise); font-style: italic; }
+.hinweis { font-size: .9rem; color: var(--tinte-weich); line-height: 1.55; }
 .meldung { font-size: .9rem; color: var(--tinte-weich); }
 .meldung.schlecht { color: var(--niederlage); }
 #abmelden { font: inherit; font-size: .84rem; background: none; border: 0; padding: 0;
@@ -524,6 +549,7 @@ table.verteilung td.pkt { text-align: right; font-weight: 600; white-space: nowr
   </form>
 
   <section id="auswertung" class="teil" hidden></section>
+  <section id="tipprunde" class="teil" hidden></section>
   <button id="abmelden" type="button" hidden>Abmelden</button>
 
   <p class="fuss">
@@ -642,12 +668,105 @@ table.verteilung td.pkt { text-align: right; font-weight: 600; white-space: nowr
           sessionStorage.setItem('muru-admin', JSON.stringify([benutzer, passwort]));
         } catch (e) {}
         zeige(d);
+        holeTipprunde(benutzer, passwort);
       })
       .catch(function (f) {
         meldung.textContent = String(f);
         meldung.className = 'meldung schlecht';
       });
   }
+
+  // Tipprunde aufraeumen
+  // -------------------------------------------------------------------
+  // Es gibt keine Freigabe vor der Veroeffentlichung - wer tippt, steht
+  // sofort in der Wertung. Der Namensfilter haelt die uebliche Ladung ab,
+  // aber nicht jeden Einfall. Was durchrutscht, laesst sich hier entfernen.
+  var tipprunde = document.getElementById('tipprunde');
+
+  function sicherText(t) {
+    return String(t == null ? '' : t).replace(/[<>&"]/g, function (z) {
+      return { '<': '&lt;', '>': '&gt;', '&': '&amp;', '"': '&quot;' }[z];
+    });
+  }
+
+  function zeigeTipprunde(daten) {
+    var liste = (daten && daten.tipper) || [];
+    var zeilen = liste.map(function (t) {
+      var name = t.name ? sicherText(t.name)
+        : '<span class="ohnenamen">ohne Namen</span>';
+      return '<tr' + (t.beanstandet ? ' class="beanstandet"' : '') + '>'
+        + '<td>' + name
+        + (t.beanstandet ? ' <span class="warnung">beanstandet</span>' : '')
+        + '</td>'
+        + '<td class="zahl">' + t.tipps + '</td>'
+        + '<td class="tun">'
+        + (t.name ? '<button type="button" data-art="name" data-geraet="'
+             + sicherText(t.id) + '">Namen entfernen</button>' : '')
+        + '<button type="button" class="hart" data-art="ganz" data-geraet="'
+             + sicherText(t.id) + '">Löschen</button>'
+        + '</td></tr>';
+    });
+    tipprunde.innerHTML = '<h2>Tipprunde</h2>'
+      + '<p class="hinweis">' + liste.length
+      + (liste.length === 1 ? ' Eintrag' : ' Einträge')
+      + (daten && daten.vollstaendig === false
+          ? ' (die Liste wird gerade neu aufgebaut, es können welche fehlen)'
+          : '')
+      + '. <strong>Namen entfernen</strong> lässt den Tipp gewertet, nimmt den '
+      + 'Eintrag aber aus der öffentlichen Tabelle; die Person kann sich neu '
+      + 'benennen. <strong>Löschen</strong> entfernt den Eintrag samt Tipps '
+      + 'endgültig.</p>'
+      + (zeilen.length
+          ? '<table class="tipperliste"><thead><tr><th>Name</th>'
+            + '<th class="zahl">Tipps</th><th></th></tr></thead><tbody>'
+            + zeilen.join('') + '</tbody></table>'
+          : '<p class="hinweis">Noch niemand hat getippt.</p>');
+    tipprunde.hidden = false;
+  }
+
+  function holeTipprunde(benutzer, passwort) {
+    fetch(worker + '/tipper-liste', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ benutzer: benutzer, passwort: passwort })
+    })
+      .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+      .then(zeigeTipprunde)
+      .catch(function () {
+        tipprunde.innerHTML = '<h2>Tipprunde</h2><p class="hinweis">'
+          + 'Die Liste lässt sich gerade nicht laden.</p>';
+        tipprunde.hidden = false;
+      });
+  }
+
+  tipprunde.addEventListener('click', function (e) {
+    var knopf = e.target.closest ? e.target.closest('button[data-geraet]') : null;
+    if (!knopf) return;
+    var art = knopf.getAttribute('data-art');
+    var zeile = knopf.closest('tr');
+    var name = zeile ? zeile.querySelector('td').textContent.trim() : '';
+    var frage = art === 'ganz'
+      ? 'Eintrag von "' + name + '" endgültig löschen? Die Tipps sind dann weg.'
+      : 'Den Namen "' + name + '" entfernen? Der Tipp bleibt gewertet.';
+    if (!window.confirm(frage)) return;
+
+    var zugang = [];
+    try { zugang = JSON.parse(sessionStorage.getItem('muru-admin') || '[]'); }
+    catch (f) {}
+    if (zugang.length !== 2) { location.reload(); return; }
+
+    knopf.disabled = true;
+    fetch(worker + '/tipper-entfernen', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ benutzer: zugang[0], passwort: zugang[1],
+                             geraet: knopf.getAttribute('data-geraet'), art: art })
+    })
+      .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+      .then(function () { holeTipprunde(zugang[0], zugang[1]); })
+      .catch(function () {
+        knopf.disabled = false;
+        window.alert('Hat nicht geklappt. Bitte noch einmal versuchen.');
+      });
+  });
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
