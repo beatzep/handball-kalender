@@ -279,6 +279,10 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 .tipptabelle td { padding: 9px 0; border-bottom: 1px solid var(--linie-zart); }
 .tipptabelle td.pl { color: var(--leise); width: 26px; font-size: .86rem; }
 .tipptabelle td.pkt { text-align: right; font-weight: 600; }
+.tipptabelle button.mehr { font: inherit; font-size: inherit; cursor: pointer;
+  background: none; border: 0; padding: 0; color: var(--gold-tief);
+  font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.tipptabelle button.mehr:hover { color: var(--tinte); }
 .tipptabelle tr.luecke td { text-align: center; color: var(--leise);
   letter-spacing: .3em; padding: 4px 0; border-bottom: none; }
 .tipptabelle tr.ich td { background: var(--gold-schwach); font-weight: 600; }
@@ -5935,10 +5939,12 @@ window.muruGeraet = (function () {
     }
 
     var ZEIGE = 10;
+    var alleZeigen = false;
 
     function zeigeTabelle(zeilen) {
       zeilen = zeilen || [];
-      var reihen = zeilen.slice(0, ZEIGE).map(function (e) {
+      var grenze = alleZeigen ? zeilen.length : ZEIGE;
+      var reihen = zeilen.slice(0, grenze).map(function (e) {
         return zeile(e.platz, e.name, e.punkte, e.id === geraet);
       });
 
@@ -5947,7 +5953,7 @@ window.muruGeraet = (function () {
       var eigene = zeilen.findIndex
         ? zeilen.findIndex(function (e) { return e.id === geraet; })
         : -1;
-      if (eigene >= ZEIGE) {
+      if (eigene >= grenze) {
         var e = zeilen[eigene];
         reihen.push('<tr class="luecke"><td colspan="3">…</td></tr>');
         reihen.push(zeile(e.platz, e.name, e.punkte, true));
@@ -5962,12 +5968,28 @@ window.muruGeraet = (function () {
 
       if (!reihen.length) { tabelle.innerHTML = ''; return; }
       // Zehn Zeilen sahen aus wie die ganze Runde. Bei achtzehn Mitspielern
-      // war das schlicht irrefuehrend.
+      // war das schlicht irrefuehrend - also die Zahl nennen und den Rest
+      // auf Wunsch zeigen.
       var rest = zeilen.length - ZEIGE;
+      var fuss = '';
+      if (rest > 0) {
+        fuss = '<p class="tippfuss">' + zeilen.length + ' machen mit. '
+          + '<button type="button" class="mehr" data-mehr>'
+          + (alleZeigen ? 'Nur die ersten ' + ZEIGE + ' zeigen'
+                        : 'Alle ' + zeilen.length + ' anzeigen')
+          + '</button></p>';
+      }
       tabelle.innerHTML = '<table><tbody>' + reihen.join('') + '</tbody></table>'
-        + (rest > 0 ? '<p class="tippfuss">' + zeilen.length + ' machen mit'
-             + (eigene >= ZEIGE ? '' : ', ' + rest + ' weitere nicht gezeigt')
-             + '.</p>' : '');
+        + fuss;
+
+      var knopf = tabelle.querySelector('[data-mehr]');
+      if (knopf) {
+        knopf.addEventListener('click', function () {
+          alleZeigen = !alleZeigen;
+          zeigeTabelle(zeilen);
+          if (!alleZeigen) tabelle.scrollIntoView({ block: 'nearest' });
+        });
+      }
     }
 
     function ladeTabelle() {

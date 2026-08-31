@@ -45,10 +45,12 @@ TIPP = """
     }
 
     var ZEIGE = 10;
+    var alleZeigen = false;
 
     function zeigeTabelle(zeilen) {
       zeilen = zeilen || [];
-      var reihen = zeilen.slice(0, ZEIGE).map(function (e) {
+      var grenze = alleZeigen ? zeilen.length : ZEIGE;
+      var reihen = zeilen.slice(0, grenze).map(function (e) {
         return zeile(e.platz, e.name, e.punkte, e.id === geraet);
       });
 
@@ -57,7 +59,7 @@ TIPP = """
       var eigene = zeilen.findIndex
         ? zeilen.findIndex(function (e) { return e.id === geraet; })
         : -1;
-      if (eigene >= ZEIGE) {
+      if (eigene >= grenze) {
         var e = zeilen[eigene];
         reihen.push('<tr class="luecke"><td colspan="3">…</td></tr>');
         reihen.push(zeile(e.platz, e.name, e.punkte, true));
@@ -72,12 +74,28 @@ TIPP = """
 
       if (!reihen.length) { tabelle.innerHTML = ''; return; }
       // Zehn Zeilen sahen aus wie die ganze Runde. Bei achtzehn Mitspielern
-      // war das schlicht irrefuehrend.
+      // war das schlicht irrefuehrend - also die Zahl nennen und den Rest
+      // auf Wunsch zeigen.
       var rest = zeilen.length - ZEIGE;
+      var fuss = '';
+      if (rest > 0) {
+        fuss = '<p class="tippfuss">' + zeilen.length + ' machen mit. '
+          + '<button type="button" class="mehr" data-mehr>'
+          + (alleZeigen ? 'Nur die ersten ' + ZEIGE + ' zeigen'
+                        : 'Alle ' + zeilen.length + ' anzeigen')
+          + '</button></p>';
+      }
       tabelle.innerHTML = '<table><tbody>' + reihen.join('') + '</tbody></table>'
-        + (rest > 0 ? '<p class="tippfuss">' + zeilen.length + ' machen mit'
-             + (eigene >= ZEIGE ? '' : ', ' + rest + ' weitere nicht gezeigt')
-             + '.</p>' : '');
+        + fuss;
+
+      var knopf = tabelle.querySelector('[data-mehr]');
+      if (knopf) {
+        knopf.addEventListener('click', function () {
+          alleZeigen = !alleZeigen;
+          zeigeTabelle(zeilen);
+          if (!alleZeigen) tabelle.scrollIntoView({ block: 'nearest' });
+        });
+      }
     }
 
     function ladeTabelle() {

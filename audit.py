@@ -177,6 +177,28 @@ def main() -> int:
     for icon in manifest["icons"]:
         pruefe((DOCS / icon["src"]).exists(), f"Manifest: {icon['src']} fehlt")
 
+    # Strassenkilometer: fehlt eine Halle im Cache, faellt sie still auf die
+    # Luftlinien-Schaetzung zurueck - die lag hier durchweg 5 bis 13 Prozent
+    # zu niedrig. Ohne Hinweis merkt das niemand.
+    try:
+        cache = json.loads(Path("strassen_cache.json").read_bytes().decode("utf-8"))
+    except (FileNotFoundError, json.JSONDecodeError):
+        cache = {}
+    hallen = {}
+    for team in daten.get("teams", {}).values():
+        for spiel in (team.get("spiele") or {}).values():
+            if spiel.get("lat") and spiel.get("lon"):
+                k = f'{float(spiel["lat"]):.5f},{float(spiel["lon"]):.5f}'
+                hallen.setdefault(k, spiel.get("halle") or "?")
+    ohne = {k: v for k, v in hallen.items() if k not in cache}
+    if not cache:
+        warnung.append("keine Strassenkilometer vorhanden - alle Entfernungen "
+                       "sind Luftlinien-Schaetzungen")
+    elif ohne:
+        namen = ", ".join(sorted(set(ohne.values()))[:4])
+        warnung.append(f"{len(ohne)} von {len(hallen)} Hallen ohne "
+                       f"Strassenkilometer ({namen}) - dort wird geschaetzt")
+
     print()
     for w in warnung:
         print(f"  HINWEIS  {w}")

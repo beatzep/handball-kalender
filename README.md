@@ -224,6 +224,26 @@ Bei weniger als zwei angehefteten Mannschaften steht unter der Auswahl ein
 Hinweis – ohne ihn findet niemand die Funktion, denn *Anheften* klingt nach
 Lesezeichen.
 
+### Kilometer: Straße statt Luftlinie
+
+`statistik.py` schätzt Entfernungen notfalls als Luftlinie mal 1,3.
+`strassenroute.py` holt stattdessen die echte Route über OpenRouteService und
+legt sie in `strassen_cache.json` ab – Hallenkoordinaten ändern sich während
+einer Saison nicht, also genügt eine Abfrage pro Halle.
+
+Der Cache war bis zum 31.08.2026 **nicht im Repository**. Der Workflow legte
+ihn bei jedem Lauf neu und leer an, fand nichts darin und rechnete still mit
+der Schätzung weiter. Aufgefallen ist es an der weitesten Fahrt: Bingen stand
+mit 84 km da, per Straße sind es 77 – und die tatsächlich weiteste Fahrt (Bad
+Sobernheim, 98 km) war dahinter versteckt. Über alle Mannschaften lag die
+Schätzung 5 bis 13 Prozent zu niedrig; der Umwegfaktor 1,3 ist für diese
+Gegend zu knapp.
+
+Damit das nicht wieder unbemerkt kippt, meldet `audit.py` jetzt, wie viele
+Hallen ohne Straßenkilometer dastehen. Fehlt der Schlüssel `ORS_API_KEY` in
+den Repository-Secrets, bleiben neue Hallen unbesetzt und fallen einzeln auf
+die Schätzung zurück – der Hinweis nennt sie beim Namen.
+
 ## Auswertung der Nutzung
 
 `docs/admin.html` zeigt Aufrufe, Aktionen und Verteilung nach Mannschaft und
