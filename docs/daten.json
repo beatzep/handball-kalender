@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-08-31T09:41:48+00:00",
+  "aktualisiert": "2026-09-01T08:37:02+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -2671,7 +2671,7 @@
           },
           {
             "platz": 9,
-            "team": "SF Budenheim II",
+            "team": "SF Budenheim 2",
             "team_id": 80836,
             "spiele": 0,
             "punkte": 0,
@@ -2784,7 +2784,7 @@
           "datum": "2026-08-22T00:00:00",
           "ort": "",
           "halle": "",
-          "gegner": "HSG Dudenhofen/Schifferstadt II",
+          "gegner": "HSG Dudenhofen/Schifferstadt 2",
           "gegner_id": 80861,
           "match_id": 675145,
           "lat": null,
@@ -2945,7 +2945,7 @@
           "datum": "2026-11-29T13:15:00",
           "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
           "halle": "TVR-Sporthalle Ludwigshafen",
-          "gegner": "SF Budenheim II",
+          "gegner": "SF Budenheim 2",
           "gegner_id": 80836,
           "match_id": 382724,
           "lat": 49.487078920701,
@@ -3071,7 +3071,7 @@
           "datum": "2027-03-13T14:20:00",
           "ort": "Waldsporthalle Budenheim, Römerstraße, 55257 Budenheim",
           "halle": "Waldsporthalle Budenheim",
-          "gegner": "SF Budenheim II",
+          "gegner": "SF Budenheim 2",
           "gegner_id": 80836,
           "match_id": 382769,
           "lat": null,
@@ -3746,7 +3746,14 @@
         "gegner": {},
         "alltag": {}
       },
-      "letzte_aenderungen": [],
+      "letzte_aenderungen": [
+        {
+          "art": "halle",
+          "code": "2627RSWRLBJWC0301",
+          "spieltag": 3,
+          "text": "Spieltag 3 gegen Hf Untere Saar: Seffersbachhalle → Brotdorf SEFFERSBACHHALLE"
+        }
+      ],
       "spiele": {
         "2627RSWRLBJWC0102": {
           "datum": "2026-08-23T17:30:00",
@@ -3792,8 +3799,8 @@
         },
         "2627RSWRLBJWC0301": {
           "datum": "2026-09-06T16:30:00",
-          "ort": "Seffersbachhalle, Ringstraße 5, 66663 Merzig",
-          "halle": "Seffersbachhalle",
+          "ort": "Brotdorf SEFFERSBACHHALLE, Ringstraße 5, 66663 Merzig",
+          "halle": "Brotdorf SEFFERSBACHHALLE",
           "gegner": "Hf Untere Saar",
           "gegner_id": 86921,
           "match_id": 425127,
@@ -3802,7 +3809,7 @@
           "spieltag": 3,
           "heim": false,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 1
         },
         "2627RSWRLBJWC0402": {
           "datum": "2026-09-12T17:30:00",
@@ -4954,7 +4961,14 @@
         "gegner": {},
         "alltag": {}
       },
-      "letzte_aenderungen": [],
+      "letzte_aenderungen": [
+        {
+          "art": "halle",
+          "code": "2627RSWRLCJWA0202",
+          "spieltag": 2,
+          "text": "Spieltag 2 gegen SG Zweibrücken: Ignaz-Roth-Halle → Zweibrücken IGNAZ-ROTH-HALLE"
+        }
+      ],
       "spiele": {
         "2627RSWRLCJWA0101": {
           "datum": "2026-08-23T14:00:00",
@@ -4979,8 +4993,8 @@
         },
         "2627RSWRLCJWA0202": {
           "datum": "2026-08-29T14:00:00",
-          "ort": "Ignaz-Roth-Halle, Landauer Str. 22, 66482 Zweibrücken",
-          "halle": "Ignaz-Roth-Halle",
+          "ort": "Zweibrücken IGNAZ-ROTH-HALLE, Landauer Str. 22, 66482 Zweibrücken",
+          "halle": "Zweibrücken IGNAZ-ROTH-HALLE",
           "gegner": "SG Zweibrücken",
           "gegner_id": 86947,
           "match_id": 425704,
@@ -4989,7 +5003,7 @@
           "spieltag": 2,
           "heim": false,
           "ohne_zeit": false,
-          "sequence": 0,
+          "sequence": 1,
           "ergebnis": {
             "heim": 27,
             "gast": 41,
@@ -7608,7 +7622,7 @@
           },
           {
             "platz": 3,
-            "team": "HSG Dudenhofen/Schifferstadt II",
+            "team": "HSG Dudenhofen/Schifferstadt 2",
             "team_id": 81339,
             "spiele": 1,
             "punkte": 2,
@@ -7859,7 +7873,7 @@
           "datum": "2026-10-25T11:30:00",
           "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
           "halle": "TVR-Sporthalle Ludwigshafen",
-          "gegner": "HSG Dudenhofen/Schifferstadt II",
+          "gegner": "HSG Dudenhofen/Schifferstadt 2",
           "gegner_id": 81339,
           "match_id": 385432,
           "lat": 49.487078920701,
@@ -8000,7 +8014,7 @@
           },
           {
             "platz": 7,
-            "team": "HSG Dudenhofen/Schifferstadt IV",
+            "team": "HSG Dudenhofen/Schifferstadt 4",
             "team_id": 81346,
             "spiele": 1,
             "punkte": 0,
@@ -8184,7 +8198,7 @@
           "datum": "2026-09-19T12:00:00",
           "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
           "halle": "TSG-Sporthalle Mutterstadt",
-          "gegner": "HSG Dudenhofen/Schifferstadt IV",
+          "gegner": "HSG Dudenhofen/Schifferstadt 4",
           "gegner_id": 81346,
           "match_id": 385466,
           "lat": 49.4445307,
