@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-01T08:37:02+00:00",
+  "aktualisiert": "2026-09-02T07:53:34+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -2778,7 +2778,14 @@
         "gegner": {},
         "alltag": {}
       },
-      "letzte_aenderungen": [],
+      "letzte_aenderungen": [
+        {
+          "art": "halle",
+          "code": "2627RPOLBJMA0403",
+          "spieltag": 4,
+          "text": "Spieltag 4 gegen TV 03 Wörth: Bienwaldhalle Wörth → WöRTH Bienwaldhalle"
+        }
+      ],
       "spiele": {
         "2627RP4BKRBJMC0101": {
           "datum": "2026-08-22T00:00:00",
@@ -2873,8 +2880,8 @@
         },
         "2627RPOLBJMA0403": {
           "datum": "2026-09-20T11:00:00",
-          "ort": "Bienwaldhalle Wörth, Am Bienwald 3, 76744 Wörth",
-          "halle": "Bienwaldhalle Wörth",
+          "ort": "WöRTH Bienwaldhalle, Am Bienwald 3, 76744 Wörth",
+          "halle": "WöRTH Bienwaldhalle",
           "gegner": "TV 03 Wörth",
           "gegner_id": 80835,
           "match_id": 382699,
@@ -2883,7 +2890,7 @@
           "spieltag": 4,
           "heim": false,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 1
         },
         "2627RPOLBJMA0503": {
           "datum": "2026-09-27T15:15:00",
@@ -3746,14 +3753,7 @@
         "gegner": {},
         "alltag": {}
       },
-      "letzte_aenderungen": [
-        {
-          "art": "halle",
-          "code": "2627RSWRLBJWC0301",
-          "spieltag": 3,
-          "text": "Spieltag 3 gegen Hf Untere Saar: Seffersbachhalle → Brotdorf SEFFERSBACHHALLE"
-        }
-      ],
+      "letzte_aenderungen": [],
       "spiele": {
         "2627RSWRLBJWC0102": {
           "datum": "2026-08-23T17:30:00",
@@ -4961,14 +4961,7 @@
         "gegner": {},
         "alltag": {}
       },
-      "letzte_aenderungen": [
-        {
-          "art": "halle",
-          "code": "2627RSWRLCJWA0202",
-          "spieltag": 2,
-          "text": "Spieltag 2 gegen SG Zweibrücken: Ignaz-Roth-Halle → Zweibrücken IGNAZ-ROTH-HALLE"
-        }
-      ],
+      "letzte_aenderungen": [],
       "spiele": {
         "2627RSWRLCJWA0101": {
           "datum": "2026-08-23T14:00:00",
@@ -6283,7 +6276,14 @@
         "gegner": {},
         "alltag": {}
       },
-      "letzte_aenderungen": [],
+      "letzte_aenderungen": [
+        {
+          "art": "halle",
+          "code": "2627RPBKRODJWA0502",
+          "spieltag": 5,
+          "text": "Spieltag 5 gegen TV 03 Wörth: Bienwaldhalle Wörth → WöRTH Bienwaldhalle"
+        }
+      ],
       "spiele": {
         "2627RPBKRODJWA0202": {
           "datum": "2026-09-05T12:00:00",
@@ -6371,8 +6371,8 @@
         },
         "2627RPBKRODJWA0502": {
           "datum": "2026-09-27T10:00:00",
-          "ort": "Bienwaldhalle Wörth, Am Bienwald 3, 76744 Wörth",
-          "halle": "Bienwaldhalle Wörth",
+          "ort": "WöRTH Bienwaldhalle, Am Bienwald 3, 76744 Wörth",
+          "halle": "WöRTH Bienwaldhalle",
           "gegner": "TV 03 Wörth",
           "gegner_id": 81242,
           "match_id": 385073,
@@ -6381,7 +6381,7 @@
           "spieltag": 5,
           "heim": false,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 1
         },
         "2627RPBKRODJWA0601": {
           "datum": "2026-10-24T17:30:00",
@@ -9047,7 +9047,7 @@
           "weiteste": {
             "km": 111.6,
             "gegner": "TV 03 Wörth 2",
-            "halle": "Bienwaldhalle Wörth",
+            "halle": "WöRTH Bienwaldhalle",
             "heim": false
           },
           "naechste": {
@@ -9104,7 +9104,14 @@
         "gegner": {},
         "alltag": {}
       },
-      "letzte_aenderungen": [],
+      "letzte_aenderungen": [
+        {
+          "art": "halle",
+          "code": "2627RPBKROMIGA0331",
+          "spieltag": 3,
+          "text": "Spieltag 3 gegen TV 03 Wörth 2: Bienwaldhalle Wörth → WöRTH Bienwaldhalle"
+        }
+      ],
       "spiele": {
         "2627RPBKROMIGA0118": {
           "datum": "2026-08-30T10:00:00",
@@ -9136,8 +9143,8 @@
         },
         "2627RPBKROMIGA0331": {
           "datum": "2026-11-14T11:00:00",
-          "ort": "Bienwaldhalle Wörth, Am Bienwald 3, 76744 Wörth",
-          "halle": "Bienwaldhalle Wörth",
+          "ort": "WöRTH Bienwaldhalle, Am Bienwald 3, 76744 Wörth",
+          "halle": "WöRTH Bienwaldhalle",
           "gegner": "TV 03 Wörth 2",
           "gegner_id": 81439,
           "match_id": 479248,
@@ -9146,7 +9153,7 @@
           "spieltag": 3,
           "heim": false,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 1
         },
         "2627RPBKROMIGA0413": {
           "datum": "2027-01-17T10:00:00",
