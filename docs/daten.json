@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-02T07:53:34+00:00",
+  "aktualisiert": "2026-09-03T08:01:08+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -18,26 +18,13 @@
         "verlauf": [
           {
             "runde": 1,
-            "platz": 1,
+            "platz": 4,
             "punkte": 2
           }
         ],
         "eintraege": [
           {
             "platz": 1,
-            "team": "HSG Mutterstadt/Ruchheim",
-            "team_id": 80924,
-            "spiele": 1,
-            "punkte": 2,
-            "siege": 1,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 31,
-            "gegentore": 23,
-            "differenz": 8
-          },
-          {
-            "platz": 2,
             "team": "SG Saulheim 2",
             "team_id": 80921,
             "spiele": 1,
@@ -50,7 +37,7 @@
             "differenz": 4
           },
           {
-            "platz": 3,
+            "platz": 2,
             "team": "HSG Worms",
             "team_id": 80913,
             "spiele": 1,
@@ -63,7 +50,7 @@
             "differenz": 3
           },
           {
-            "platz": 4,
+            "platz": 3,
             "team": "HSG Rhein-Nahe Bingen 2",
             "team_id": 80915,
             "spiele": 1,
@@ -76,85 +63,33 @@
             "differenz": 1
           },
           {
-            "platz": 5,
-            "team": "GW Bingen-Büdesheim",
-            "team_id": 80916,
+            "platz": 4,
+            "team": "HSG Mutterstadt/Ruchheim",
+            "team_id": 80924,
             "spiele": 1,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 31,
+            "gegentore": 23,
+            "differenz": 8
+          },
+          {
+            "platz": 5,
+            "team": "HSC Ingelheim",
+            "team_id": 80918,
+            "spiele": 0,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 1,
-            "tore": 25,
-            "gegentore": 26,
-            "differenz": -1
+            "niederlagen": 0,
+            "tore": 0,
+            "gegentore": 0,
+            "differenz": 0
           },
           {
             "platz": 6,
-            "team": "HSG Zotzenheim/St.Johann/Sprendlingen",
-            "team_id": 80922,
-            "spiele": 1,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 29,
-            "gegentore": 32,
-            "differenz": -3
-          },
-          {
-            "platz": 7,
-            "team": "TG Osthofen 2",
-            "team_id": 80920,
-            "spiele": 1,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 28,
-            "gegentore": 32,
-            "differenz": -4
-          },
-          {
-            "platz": 8,
-            "team": "TSG MZ-Bretzenheim 2",
-            "team_id": 80919,
-            "spiele": 1,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 23,
-            "gegentore": 31,
-            "differenz": -8
-          },
-          {
-            "platz": 9,
-            "team": "HSV Sobernheim H1",
-            "team_id": 80912,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 10,
-            "team": "HSV Alzey",
-            "team_id": 80914,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 11,
             "team": "TV Nieder-Olm 2",
             "team_id": 80917,
             "spiele": 0,
@@ -167,9 +102,9 @@
             "differenz": 0
           },
           {
-            "platz": 12,
-            "team": "HSC Ingelheim",
-            "team_id": 80918,
+            "platz": 7,
+            "team": "HSV Alzey",
+            "team_id": 80914,
             "spiele": 0,
             "punkte": 0,
             "siege": 0,
@@ -178,6 +113,71 @@
             "tore": 0,
             "gegentore": 0,
             "differenz": 0
+          },
+          {
+            "platz": 8,
+            "team": "HSV Sobernheim H1",
+            "team_id": 80912,
+            "spiele": 0,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 0,
+            "gegentore": 0,
+            "differenz": 0
+          },
+          {
+            "platz": 9,
+            "team": "GW Bingen-Büdesheim",
+            "team_id": 80916,
+            "spiele": 1,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 25,
+            "gegentore": 26,
+            "differenz": -1
+          },
+          {
+            "platz": 10,
+            "team": "HSG Zotzenheim/St.Johann/Sprendlingen",
+            "team_id": 80922,
+            "spiele": 1,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 29,
+            "gegentore": 32,
+            "differenz": -3
+          },
+          {
+            "platz": 11,
+            "team": "TG Osthofen 2",
+            "team_id": 80920,
+            "spiele": 1,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 28,
+            "gegentore": 32,
+            "differenz": -4
+          },
+          {
+            "platz": 12,
+            "team": "TSG MZ-Bretzenheim 2",
+            "team_id": 80919,
+            "spiele": 1,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 23,
+            "gegentore": 31,
+            "differenz": -8
           }
         ]
       },
@@ -2778,14 +2778,7 @@
         "gegner": {},
         "alltag": {}
       },
-      "letzte_aenderungen": [
-        {
-          "art": "halle",
-          "code": "2627RPOLBJMA0403",
-          "spieltag": 4,
-          "text": "Spieltag 4 gegen TV 03 Wörth: Bienwaldhalle Wörth → WöRTH Bienwaldhalle"
-        }
-      ],
+      "letzte_aenderungen": [],
       "spiele": {
         "2627RP4BKRBJMC0101": {
           "datum": "2026-08-22T00:00:00",
@@ -6276,14 +6269,7 @@
         "gegner": {},
         "alltag": {}
       },
-      "letzte_aenderungen": [
-        {
-          "art": "halle",
-          "code": "2627RPBKRODJWA0502",
-          "spieltag": 5,
-          "text": "Spieltag 5 gegen TV 03 Wörth: Bienwaldhalle Wörth → WöRTH Bienwaldhalle"
-        }
-      ],
+      "letzte_aenderungen": [],
       "spiele": {
         "2627RPBKRODJWA0202": {
           "datum": "2026-09-05T12:00:00",
@@ -9104,14 +9090,7 @@
         "gegner": {},
         "alltag": {}
       },
-      "letzte_aenderungen": [
-        {
-          "art": "halle",
-          "code": "2627RPBKROMIGA0331",
-          "spieltag": 3,
-          "text": "Spieltag 3 gegen TV 03 Wörth 2: Bienwaldhalle Wörth → WöRTH Bienwaldhalle"
-        }
-      ],
+      "letzte_aenderungen": [],
       "spiele": {
         "2627RPBKROMIGA0118": {
           "datum": "2026-08-30T10:00:00",
@@ -9467,7 +9446,14 @@
         "gegner": {},
         "alltag": {}
       },
-      "letzte_aenderungen": [],
+      "letzte_aenderungen": [
+        {
+          "art": "verlegt",
+          "code": "2627RPBKROMIGA0220",
+          "spieltag": 2,
+          "text": "Spieltag 2 gegen TUS Neuhofen 2: Sa 19.09. 14:00 → So 01.11. 11:30"
+        }
+      ],
       "spiele": {
         "2627RPBKROMIGA0113": {
           "datum": "2026-09-19T11:00:00",
@@ -9484,7 +9470,7 @@
           "sequence": 0
         },
         "2627RPBKROMIGA0220": {
-          "datum": "2026-09-19T14:00:00",
+          "datum": "2026-11-01T11:30:00",
           "ort": "Rehbachhalle Neuhofen, Jahnstr. 25, 67141 Neuhofen",
           "halle": "Rehbachhalle Neuhofen",
           "gegner": "TUS Neuhofen 2",
@@ -9495,7 +9481,7 @@
           "spieltag": 2,
           "heim": false,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 1
         },
         "2627RPBKROMIGA0321": {
           "datum": "2026-11-15T10:00:00",
