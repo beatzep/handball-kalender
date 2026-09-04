@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-03T08:01:08+00:00",
+  "aktualisiert": "2026-09-04T07:57:16+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -6138,6 +6138,19 @@
           },
           {
             "platz": 5,
+            "team": "HSG Mutterstadt/Ruchheim Wd Ol",
+            "team_id": 81241,
+            "spiele": 0,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 0,
+            "gegentore": 0,
+            "differenz": 0
+          },
+          {
+            "platz": 6,
             "team": "TV 03 Wörth",
             "team_id": 81242,
             "spiele": 1,
@@ -6150,7 +6163,7 @@
             "differenz": -1
           },
           {
-            "platz": 6,
+            "platz": 7,
             "team": "JSG Kaiserslautern/Dansenberg",
             "team_id": 87386,
             "spiele": 1,
@@ -6163,7 +6176,7 @@
             "differenz": -5
           },
           {
-            "platz": 7,
+            "platz": 8,
             "team": "TV Edigheim",
             "team_id": 81238,
             "spiele": 1,
@@ -6176,7 +6189,7 @@
             "differenz": -14
           },
           {
-            "platz": 8,
+            "platz": 9,
             "team": "TSG MZ-Bretzenheim",
             "team_id": 81243,
             "spiele": 1,
@@ -6187,19 +6200,6 @@
             "tore": 9,
             "gegentore": 26,
             "differenz": -17
-          },
-          {
-            "platz": 9,
-            "team": "HSG Mutterstadt/Ruchheim Wd Ol",
-            "team_id": 81241,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
           }
         ]
       },
@@ -6771,7 +6771,14 @@
         "gegner": {},
         "alltag": {}
       },
-      "letzte_aenderungen": [],
+      "letzte_aenderungen": [
+        {
+          "art": "verlegt",
+          "code": "2627RPBKRDJWC0201",
+          "spieltag": 2,
+          "text": "Spieltag 2 gegen HSG Eckbachtal II: So 06.09. 13:00 → So 22.11. 11:00"
+        }
+      ],
       "spiele": {
         "2627RP4BKRDJWL0101": {
           "datum": "2026-08-15T00:00:00",
@@ -6835,20 +6842,6 @@
             "fremde": 11,
             "ausgang": "S"
           }
-        },
-        "2627RPBKRDJWC0201": {
-          "datum": "2026-09-06T13:00:00",
-          "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
-          "halle": "TSG-Sporthalle Mutterstadt",
-          "gegner": "HSG Eckbachtal II",
-          "gegner_id": 81263,
-          "match_id": 361096,
-          "lat": 49.4445307,
-          "lon": 8.3595174,
-          "spieltag": 2,
-          "heim": true,
-          "ohne_zeit": false,
-          "sequence": 0
         },
         "2627RPBKRDJWC0303": {
           "datum": "2026-09-12T14:15:00",
@@ -6919,6 +6912,20 @@
           "heim": false,
           "ohne_zeit": false,
           "sequence": 0
+        },
+        "2627RPBKRDJWC0201": {
+          "datum": "2026-11-22T11:00:00",
+          "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
+          "halle": "TSG-Sporthalle Mutterstadt",
+          "gegner": "HSG Eckbachtal II",
+          "gegner_id": 81263,
+          "match_id": 361096,
+          "lat": 49.4445307,
+          "lon": 8.3595174,
+          "spieltag": 2,
+          "heim": true,
+          "ohne_zeit": false,
+          "sequence": 1
         },
         "2627RPBKRDJWC0903": {
           "datum": "2026-11-28T12:30:00",
@@ -9446,14 +9453,7 @@
         "gegner": {},
         "alltag": {}
       },
-      "letzte_aenderungen": [
-        {
-          "art": "verlegt",
-          "code": "2627RPBKROMIGA0220",
-          "spieltag": 2,
-          "text": "Spieltag 2 gegen TUS Neuhofen 2: Sa 19.09. 14:00 → So 01.11. 11:30"
-        }
-      ],
+      "letzte_aenderungen": [],
       "spiele": {
         "2627RPBKROMIGA0113": {
           "datum": "2026-09-19T11:00:00",
