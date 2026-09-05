@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-05T17:14:04+00:00",
+  "aktualisiert": "2026-09-05T17:46:06+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -1766,7 +1766,9 @@
           }
         ]
       },
-      "form": [],
+      "form": [
+        "S"
+      ],
       "statistik": {
         "fahrten": {
           "gesamt_km": 648,
@@ -1790,16 +1792,16 @@
         },
         "bilanz": {
           "gesamt": {
-            "s": 0,
+            "s": 1,
             "u": 0,
             "n": 0,
-            "spiele": 0
+            "spiele": 1
           },
           "heim": {
-            "s": 0,
+            "s": 1,
             "u": 0,
             "n": 0,
-            "spiele": 0
+            "spiele": 1
           },
           "auswaerts": {
             "s": 0,
@@ -1809,16 +1811,25 @@
           }
         },
         "serien": {
-          "ohne_niederlage": 0,
-          "aktuell": 0,
-          "aktuell_art": null
+          "ohne_niederlage": 1,
+          "aktuell": 1,
+          "aktuell_art": "S"
         },
         "krimis": {
           "anzahl": 0,
-          "anteil": 0,
-          "gesamt": 0
+          "gesamt": 1,
+          "anteil": 0
         },
-        "tore": {},
+        "tore": {
+          "erzielt": 37,
+          "kassiert": 30,
+          "schnitt": 37.0,
+          "torreichstes": {
+            "gegner": "Südpfalz Tiger",
+            "stand": "37:30",
+            "summe": 67
+          }
+        },
         "anwurf": {
           "spaet": {
             "spiele": 0,
@@ -1826,9 +1837,9 @@
             "schnitt": 0
           },
           "frueh": {
-            "spiele": 0,
-            "punkte": 0,
-            "schnitt": 0
+            "spiele": 1,
+            "punkte": 2,
+            "schnitt": 2.0
           }
         },
         "gegner": {},
@@ -1848,7 +1859,14 @@
           "spieltag": 2,
           "heim": true,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 0,
+          "ergebnis": {
+            "heim": 37,
+            "gast": 30,
+            "eigene": 37,
+            "fremde": 30,
+            "ausgang": "S"
+          }
         },
         "2627RPOLAJMA0301": {
           "datum": "2026-09-13T14:00:00",
