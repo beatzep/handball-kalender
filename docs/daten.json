@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-05T12:31:09+00:00",
+  "aktualisiert": "2026-09-05T13:01:04+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -2205,6 +2205,7 @@
         ]
       },
       "form": [
+        "S",
         "S"
       ],
       "statistik": {
@@ -2228,16 +2229,16 @@
         },
         "bilanz": {
           "gesamt": {
+            "s": 2,
+            "u": 0,
+            "n": 0,
+            "spiele": 2
+          },
+          "heim": {
             "s": 1,
             "u": 0,
             "n": 0,
             "spiele": 1
-          },
-          "heim": {
-            "s": 0,
-            "u": 0,
-            "n": 0,
-            "spiele": 0
           },
           "auswaerts": {
             "s": 1,
@@ -2247,18 +2248,18 @@
           }
         },
         "serien": {
-          "ohne_niederlage": 1,
-          "aktuell": 1,
+          "ohne_niederlage": 2,
+          "aktuell": 2,
           "aktuell_art": "S"
         },
         "krimis": {
           "anzahl": 0,
-          "gesamt": 1,
+          "gesamt": 2,
           "anteil": 0
         },
         "tore": {
-          "erzielt": 41,
-          "kassiert": 25,
+          "erzielt": 82,
+          "kassiert": 43,
           "schnitt": 41.0,
           "torreichstes": {
             "gegner": "HSG Landau/Land",
@@ -2273,8 +2274,8 @@
             "schnitt": 0
           },
           "frueh": {
-            "spiele": 1,
-            "punkte": 2,
+            "spiele": 2,
+            "punkte": 4,
             "schnitt": 2.0
           }
         },
@@ -2316,7 +2317,14 @@
           "spieltag": 2,
           "heim": true,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 0,
+          "ergebnis": {
+            "heim": 41,
+            "gast": 18,
+            "eigene": 41,
+            "fremde": 18,
+            "ausgang": "S"
+          }
         },
         "2627RPVLAJWB0302": {
           "datum": "2026-09-13T17:00:00",
