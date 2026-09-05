@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-05T18:46:11+00:00",
+  "aktualisiert": "2026-09-05T19:16:07+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -182,6 +182,7 @@
         ]
       },
       "form": [
+        "S",
         "S"
       ],
       "statistik": {
@@ -205,16 +206,16 @@
         },
         "bilanz": {
           "gesamt": {
+            "s": 2,
+            "u": 0,
+            "n": 0,
+            "spiele": 2
+          },
+          "heim": {
             "s": 1,
             "u": 0,
             "n": 0,
             "spiele": 1
-          },
-          "heim": {
-            "s": 0,
-            "u": 0,
-            "n": 0,
-            "spiele": 0
           },
           "auswaerts": {
             "s": 1,
@@ -224,29 +225,29 @@
           }
         },
         "serien": {
-          "ohne_niederlage": 1,
-          "aktuell": 1,
+          "ohne_niederlage": 2,
+          "aktuell": 2,
           "aktuell_art": "S"
         },
         "krimis": {
           "anzahl": 0,
-          "gesamt": 1,
+          "gesamt": 2,
           "anteil": 0
         },
         "tore": {
-          "erzielt": 31,
-          "kassiert": 23,
-          "schnitt": 31.0,
+          "erzielt": 72,
+          "kassiert": 47,
+          "schnitt": 36.0,
           "torreichstes": {
-            "gegner": "TSG MZ-Bretzenheim 2",
-            "stand": "31:23",
-            "summe": 54
+            "gegner": "HSG Worms",
+            "stand": "41:24",
+            "summe": 65
           }
         },
         "anwurf": {
           "spaet": {
-            "spiele": 1,
-            "punkte": 2,
+            "spiele": 2,
+            "punkte": 4,
             "schnitt": 2.0
           },
           "frueh": {
@@ -302,7 +303,14 @@
           "spieltag": 2,
           "heim": true,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 0,
+          "ergebnis": {
+            "heim": 41,
+            "gast": 24,
+            "eigene": 41,
+            "fremde": 24,
+            "ausgang": "S"
+          }
         },
         "2627RPBKROERMA0301": {
           "datum": "2026-09-13T18:00:00",
