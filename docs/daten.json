@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-05T14:31:07+00:00",
+  "aktualisiert": "2026-09-05T14:53:21+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -4886,6 +4886,7 @@
       },
       "form": [
         "S",
+        "S",
         "S"
       ],
       "statistik": {
@@ -4909,16 +4910,16 @@
         },
         "bilanz": {
           "gesamt": {
+            "s": 3,
+            "u": 0,
+            "n": 0,
+            "spiele": 3
+          },
+          "heim": {
             "s": 2,
             "u": 0,
             "n": 0,
             "spiele": 2
-          },
-          "heim": {
-            "s": 1,
-            "u": 0,
-            "n": 0,
-            "spiele": 1
           },
           "auswaerts": {
             "s": 1,
@@ -4928,19 +4929,19 @@
           }
         },
         "serien": {
-          "ohne_niederlage": 2,
-          "aktuell": 2,
+          "ohne_niederlage": 3,
+          "aktuell": 3,
           "aktuell_art": "S"
         },
         "krimis": {
           "anzahl": 1,
-          "gesamt": 2,
-          "anteil": 50
+          "gesamt": 3,
+          "anteil": 33
         },
         "tore": {
-          "erzielt": 68,
-          "kassiert": 52,
-          "schnitt": 34.0,
+          "erzielt": 101,
+          "kassiert": 80,
+          "schnitt": 33.7,
           "torreichstes": {
             "gegner": "SG Zweibrücken",
             "stand": "41:27",
@@ -4954,8 +4955,8 @@
             "schnitt": 0
           },
           "frueh": {
-            "spiele": 2,
-            "punkte": 4,
+            "spiele": 3,
+            "punkte": 6,
             "schnitt": 2.0
           }
         },
@@ -5018,7 +5019,14 @@
           "spieltag": 3,
           "heim": true,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 0,
+          "ergebnis": {
+            "heim": 33,
+            "gast": 28,
+            "eigene": 33,
+            "fremde": 28,
+            "ausgang": "S"
+          }
         },
         "2627RSWRLCJWA0401": {
           "datum": "2026-09-12T14:00:00",
