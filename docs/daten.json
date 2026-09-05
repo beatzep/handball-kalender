@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-05T07:38:44+00:00",
+  "aktualisiert": "2026-09-05T12:01:05+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -6203,7 +6203,9 @@
           }
         ]
       },
-      "form": [],
+      "form": [
+        "S"
+      ],
       "statistik": {
         "fahrten": {
           "gesamt_km": 774,
@@ -6225,16 +6227,16 @@
         },
         "bilanz": {
           "gesamt": {
-            "s": 0,
+            "s": 1,
             "u": 0,
             "n": 0,
-            "spiele": 0
+            "spiele": 1
           },
           "heim": {
-            "s": 0,
+            "s": 1,
             "u": 0,
             "n": 0,
-            "spiele": 0
+            "spiele": 1
           },
           "auswaerts": {
             "s": 0,
@@ -6244,16 +6246,25 @@
           }
         },
         "serien": {
-          "ohne_niederlage": 0,
-          "aktuell": 0,
-          "aktuell_art": null
+          "ohne_niederlage": 1,
+          "aktuell": 1,
+          "aktuell_art": "S"
         },
         "krimis": {
           "anzahl": 0,
-          "anteil": 0,
-          "gesamt": 0
+          "gesamt": 1,
+          "anteil": 0
         },
-        "tore": {},
+        "tore": {
+          "erzielt": 22,
+          "kassiert": 17,
+          "schnitt": 22.0,
+          "torreichstes": {
+            "gegner": "Wjsg Mainz05/TV Nieder-Olm Wd1",
+            "stand": "22:17",
+            "summe": 39
+          }
+        },
         "anwurf": {
           "spaet": {
             "spiele": 0,
@@ -6261,9 +6272,9 @@
             "schnitt": 0
           },
           "frueh": {
-            "spiele": 0,
-            "punkte": 0,
-            "schnitt": 0
+            "spiele": 1,
+            "punkte": 2,
+            "schnitt": 2.0
           }
         },
         "gegner": {},
@@ -6283,7 +6294,14 @@
           "spieltag": 2,
           "heim": true,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 0,
+          "ergebnis": {
+            "heim": 22,
+            "gast": 17,
+            "eigene": 22,
+            "fremde": 17,
+            "ausgang": "S"
+          }
         },
         "2627RP4BKRDJWE0101": {
           "datum": "2026-09-13T13:45:00",
