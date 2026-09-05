@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-04T07:57:16+00:00",
+  "aktualisiert": "2026-09-05T07:38:44+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -12,7 +12,7 @@
       "liga": "Männer Bezirksoberliga",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 1,
+        "runde": 2,
         "gespielt": true,
         "mannschaften": 12,
         "verlauf": [
@@ -27,14 +27,14 @@
             "platz": 1,
             "team": "SG Saulheim 2",
             "team_id": 80921,
-            "spiele": 1,
-            "punkte": 2,
-            "siege": 1,
+            "spiele": 2,
+            "punkte": 4,
+            "siege": 2,
             "remis": 0,
             "niederlagen": 0,
-            "tore": 32,
+            "tore": 33,
             "gegentore": 28,
-            "differenz": 4
+            "differenz": 5
           },
           {
             "platz": 2,
@@ -90,19 +90,6 @@
           },
           {
             "platz": 6,
-            "team": "TV Nieder-Olm 2",
-            "team_id": 80917,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 7,
             "team": "HSV Alzey",
             "team_id": 80914,
             "spiele": 0,
@@ -115,7 +102,7 @@
             "differenz": 0
           },
           {
-            "platz": 8,
+            "platz": 7,
             "team": "HSV Sobernheim H1",
             "team_id": 80912,
             "spiele": 0,
@@ -128,7 +115,7 @@
             "differenz": 0
           },
           {
-            "platz": 9,
+            "platz": 8,
             "team": "GW Bingen-Büdesheim",
             "team_id": 80916,
             "spiele": 1,
@@ -141,7 +128,7 @@
             "differenz": -1
           },
           {
-            "platz": 10,
+            "platz": 9,
             "team": "HSG Zotzenheim/St.Johann/Sprendlingen",
             "team_id": 80922,
             "spiele": 1,
@@ -154,7 +141,7 @@
             "differenz": -3
           },
           {
-            "platz": 11,
+            "platz": 10,
             "team": "TG Osthofen 2",
             "team_id": 80920,
             "spiele": 1,
@@ -165,6 +152,19 @@
             "tore": 28,
             "gegentore": 32,
             "differenz": -4
+          },
+          {
+            "platz": 11,
+            "team": "TV Nieder-Olm 2",
+            "team_id": 80917,
+            "spiele": 1,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 0,
+            "gegentore": 1,
+            "differenz": -1
           },
           {
             "platz": 12,
@@ -6771,14 +6771,7 @@
         "gegner": {},
         "alltag": {}
       },
-      "letzte_aenderungen": [
-        {
-          "art": "verlegt",
-          "code": "2627RPBKRDJWC0201",
-          "spieltag": 2,
-          "text": "Spieltag 2 gegen HSG Eckbachtal II: So 06.09. 13:00 → So 22.11. 11:00"
-        }
-      ],
+      "letzte_aenderungen": [],
       "spiele": {
         "2627RP4BKRDJWL0101": {
           "datum": "2026-08-15T00:00:00",
