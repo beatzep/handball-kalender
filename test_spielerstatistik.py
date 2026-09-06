@@ -127,6 +127,47 @@ pruefe("Ohne Berichte keine Schuetzen", leer["schuetzen"] == [], str(leer["schue
 pruefe("Ohne Berichte wird das gemeldet", leer["quelle"]["offen"] == 3,
        str(leer["quelle"]))
 
+# --- Die Anzeige darf nichts Falsches ueber die Quelle behaupten ---------
+sys.path.insert(0, ".")
+import baue_seite as bs
+
+# Nichts abgerufen (derzeit die Jugend): gar kein Block, kein Hinweis
+kein_abruf = {"quelle": {"spiele_gelaufen": 3, "mit_bericht": 0,
+                         "ohne_bericht": 0, "offen": 3}, "schuetzen": []}
+pruefe("Ohne Abruf gar kein Spielerblock", bs.spielerblock(kein_abruf) == "",
+       bs.spielerblock(kein_abruf)[:80])
+
+# Abgerufen, aber die Quelle liefert nichts: das gehoert benannt
+nichts_da = {"quelle": {"spiele_gelaufen": 2, "mit_bericht": 0,
+                        "ohne_bericht": 2, "offen": 0}, "schuetzen": []}
+text = bs.spielerblock(nichts_da)
+pruefe("Liga ohne Bericht wird erklaert",
+       "kein Spielbericht geführt" in text, text[:120])
+pruefe("Kein 'Aus 0 Spielen'", "Aus 0 Spielen" not in text, text[:120])
+
+# Teilweise vorhanden: "weitere" ist dann richtig
+teils = {"quelle": {"spiele_gelaufen": 3, "mit_bericht": 2,
+                    "ohne_bericht": 0, "offen": 1},
+         "schuetzen": [{"id": "a", "name": "Anna Adler", "tore": 3, "spiele": 2,
+                        "tore_je_spiel": 1.5, "siebenmeter_tore": 0,
+                        "siebenmeter_wuerfe": 0, "siebenmeter_quote": None}],
+         "verteilung": {}, "strafen": {}}
+text = bs.spielerblock(teils)
+pruefe("Teilweise vorhanden: 'Aus 2 Spielen von 3'",
+       "Aus 2 Spielen von 3" in text, text[-260:])
+pruefe("Ein fehlendes Spiel heisst 'ein weiteres'",
+       "ein weiteres Spiel" in text, text[-260:])
+pruefe("Die Schuld liegt sichtbar bei der Quelle",
+       "handball.net" in text, text[-260:])
+
+# Nichts fehlt: dann auch kein Hinweis auf Fehlendes
+vollstaendig = dict(teils)
+vollstaendig["quelle"] = {"spiele_gelaufen": 2, "mit_bericht": 2,
+                          "ohne_bericht": 0, "offen": 0}
+text = bs.spielerblock(vollstaendig)
+pruefe("Ohne Luecke kein Hinweis auf handball.net",
+       "handball.net" not in text and "Aus 2 Spielen." in text, text[-160:])
+
 fehler = 0
 for name, ok, info in pruefungen:
     if not ok:

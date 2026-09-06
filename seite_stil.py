@@ -325,6 +325,22 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 .verbrauch .pointe { margin: 8px 0 0; font-size: .86rem; color: var(--leise);
                      font-style: italic; }
 
+/* Torschuetzen. Bewusst wie die Ligatabelle aufgebaut - die Seite hat schon
+   eine Tabellenform, eine zweite waere nur Unruhe. */
+.schuetzen { width: 100%; border-collapse: collapse; font-size: .94rem; }
+.schuetzen th { text-align: left; font-size: .72rem; font-weight: 600;
+  letter-spacing: .05em; text-transform: uppercase; color: var(--leise);
+  padding-bottom: 9px; border-bottom: 1px solid var(--linie); }
+.schuetzen td { padding: 10px 0; border-bottom: 1px solid var(--linie-zart); }
+.schuetzen th.pl, .schuetzen td.pl { width: 26px; color: var(--leise);
+  font-size: .86rem; }
+.schuetzen th.zahl, .schuetzen td.zahl { text-align: right; width: 52px;
+  padding-right: 14px; color: var(--tinte-weich); }
+.schuetzen th:last-child, .schuetzen td.pkt { text-align: right; width: 46px;
+  font-weight: 600; }
+.schuetzen .klein { font-size: .82rem; color: var(--leise); font-weight: 400; }
+.schuetzen .leer { color: var(--linie); }
+.schuetzen tbody tr:first-child td.pkt { color: var(--gold-tief); }
 .statfuss { margin: 18px 0 0; font-size: .8rem; color: var(--leise); line-height: 1.45; }
 
 /* ---------- Countdown, Hinspiel, Gegner ---------- */

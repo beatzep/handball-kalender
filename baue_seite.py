@@ -394,6 +394,111 @@ def kennzahl(titel: str, wert: str, zusatz: str = "", breit: bool = False) -> st
             f'<dd>{wert}{z}</dd></div>')
 
 
+def quellenhinweis(quelle: dict) -> str:
+    """Sagt, worauf die Zahlen beruhen - und was bei der Quelle noch fehlt.
+
+    Eine Luecke soll nie so aussehen, als waere diese Seite unfertig. Der
+    Verband veroeffentlicht Spielberichte mit Verzoegerung, und manche Ligen
+    fuehren gar keine; beides ist erklaerbar, wenn man es benennt.
+    """
+    gelaufen = quelle.get("spiele_gelaufen") or 0
+    mit = quelle.get("mit_bericht") or 0
+    ohne = quelle.get("ohne_bericht") or 0
+    offen = quelle.get("offen") or 0
+    if not gelaufen:
+        return ""
+    teile = []
+    if mit:
+        teile.append(f'Aus {spiel_wort(mit, "dativ")}'
+                     + (f" von {gelaufen}" if mit != gelaufen else "") + ".")
+    # "weitere" nur, wenn es tatsaechlich weitere sind - liegt gar nichts vor,
+    # geht es um alle Spiele. Im Singular heisst es "weiteres".
+    if offen == 1:
+        teile.append(f"Für ein{' weiteres' if mit else ''} Spiel hat "
+                     f"handball.net den Spielbericht noch nicht veröffentlicht. "
+                     f"Er wird nachgetragen, sobald er dort steht.")
+    elif offen > 1:
+        teile.append(f"Für {offen}{' weitere' if mit else ''} Spiele hat "
+                     f"handball.net die Spielberichte noch nicht veröffentlicht. "
+                     f"Sie werden nachgetragen, sobald sie dort stehen.")
+    if ohne:
+        teile.append("In dieser Liga wird zu manchen Spielen kein Spielbericht "
+                     "geführt, dort gibt es keine Einzelwerte.")
+    if not teile:
+        return ""
+    return f'<p class="statfuss">{" ".join(teile)}</p>'
+
+
+def spielerblock(sp: dict) -> str:
+    """Torschuetzen, Verteilung und Zeitstrafen aus den Spielberichten."""
+    if not sp:
+        return ""
+    quelle = sp.get("quelle") or {}
+    schuetzen = sp.get("schuetzen") or []
+    gelaufen = quelle.get("spiele_gelaufen") or 0
+
+    if not gelaufen:
+        return ""
+    # Fuer Mannschaften, deren Berichte gar nicht abgerufen werden (derzeit
+    # die Jugend), gibt es keinen Block. Ein Hinweis, handball.net habe nichts
+    # veroeffentlicht, waere schlicht falsch - wir haben nicht gefragt.
+    abgerufen = (quelle.get("mit_bericht") or 0) + (quelle.get("ohne_bericht") or 0)
+    if not abgerufen:
+        return ""
+    if not schuetzen:
+        # Abgerufen, aber ohne Einzelwerte - das gehoert erklaert.
+        return ('<div class="rubrik">Wer trifft</div>'
+                + (quellenhinweis(quelle)
+                   or '<p class="statfuss">Zu diesen Spielen führt handball.net '
+                      'keine Einzelwerte.</p>'))
+
+    zeilen = []
+    for i, e in enumerate(schuetzen, 1):
+        # Die Siebenmeter stehen hinter dem Namen statt in einer eigenen
+        # Spalte: die waere auf dem Handy weggefallen, und dort schaut die
+        # Mehrheit. Genannt wird sie nur, wo jemand ueberhaupt geworfen hat.
+        beiwerk = [spiel_wort(e["spiele"], "nominativ")]
+        if e.get("siebenmeter_wuerfe"):
+            beiwerk.append(f'7m {e["siebenmeter_tore"]}/{e["siebenmeter_wuerfe"]}')
+        zeilen.append(
+            f'<tr><td class="pl">{i}</td>'
+            f'<td>{sicher(e["name"])}'
+            f'<span class="klein"> · {" · ".join(beiwerk)}</span></td>'
+            f'<td class="zahl">{str(e["tore_je_spiel"]).replace(".", ",")}</td>'
+            f'<td class="pkt">{e["tore"]}</td></tr>')
+
+    v = sp.get("verteilung") or {}
+    kennzahlen = []
+    if v.get("eigene_tore"):
+        kennzahlen.append(kennzahl(
+            "Torschützen", str(v["eigene_schuetzen"]),
+            f'für {v["eigene_tore"]} eigene Tore. Der Gegner brauchte dafür '
+            f'{v["fremde_schuetzen"]}, bei {v["fremde_tore"]} Toren'))
+        if v.get("groesster_anteil") is not None:
+            kennzahlen.append(kennzahl(
+                "Stärkster Anteil", f'{v["groesster_anteil"]}'
+                '<span class="klein"> %</span>',
+                "der eigenen Tore vom besten Schützen"))
+    strafen = sp.get("strafen") or {}
+    if strafen.get("gesamt"):
+        ab = strafen.get("abschnitte") or {}
+        spaet = ab.get("45-60", 0)
+        kennzahlen.append(kennzahl(
+            "Zeitstrafen", str(strafen["gesamt"]),
+            f'davon {spaet} in der Schlussviertelstunde' if spaet
+            else "keine in der Schlussviertelstunde"))
+
+    return (
+        '<div class="rubrik">Wer trifft</div>'
+        '<div class="tabellenhuelle"><table class="schuetzen">'
+        '<thead><tr><th class="pl">Pl</th><th>Spieler</th>'
+        '<th class="zahl">/Sp</th><th>Tore</th></tr></thead>'
+        f'<tbody>{"".join(zeilen)}</tbody></table></div>'
+        + (f'<dl class="kennzahlen">{"".join(kennzahlen)}</dl>' if kennzahlen else "")
+        + quellenhinweis(quelle)
+    )
+
+
 def statistikblock(st: dict) -> str:
     """Kennzahlen, die handball.net so nicht ausweist.
 
@@ -689,6 +794,7 @@ def mannschaftsblock(schluessel: str, team: dict, basis: str, heute: datetime,
   </div>
   <div class="teil" data-ansicht="statistik" hidden>
     {statistikblock(team.get('statistik') or {})}
+    {spielerblock(team.get('spieler') or {})}
   </div>
 </section>"""
 
