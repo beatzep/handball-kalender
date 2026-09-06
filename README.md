@@ -145,6 +145,21 @@ Drei Eigenheiten der Verbandsdaten, die dabei zutage traten:
   Spieltag bei „Stand nach Spieltag 18" und zeichnet einen Platzverlauf über
   eine halbe Saison, die nie stattgefunden hat. Maßgeblich ist deshalb die
   Zahl der tatsächlich absolvierten Spiele (`played`), nicht der Rundenindex.
+- **Die Tabelle hinkt den Ergebnissen hinterher.** Ergebnis und Tabellenstand
+  werden getrennt gepflegt: das Ergebnis steht sofort beim Spiel, in der
+  Tabelle erscheint es einen bis zwei Tage später. Am 06.09.2026 betraf das
+  fünf Mannschaften, alle mit ihrem Spiel vom Vortag. Die Tabelle bleibt,
+  wie die Quelle sie liefert – erfunden wird nichts –, aber darunter steht,
+  was noch fehlt: „Der Sieg vom 05.09. gegen HSG Worms (41:24) ist hier noch
+  nicht eingerechnet."
+
+  Der Vergleich darf dabei **nur Spiele desselben Wettbewerbs** zählen. Die
+  gD-Jugend hatte am 16.08. drei Spiele eines Qualifikationsturniers, die in
+  der Bezirksliga-Tabelle nichts zu suchen haben; ein Vergleich über alle
+  Spiele meldete dort einen Rückstand von drei, den es nicht gab. Deshalb
+  steht seit dieser Änderung `phase_id` an jedem Spiel und an der Tabelle.
+  Fehlt sie (Daten von vorher), wird gar nichts gemeldet – lieber kein
+  Hinweis als ein falscher. `pruefe_tabelle.py` rechnet das im Workflow nach.
 - **0:0 ist kein Ergebnis.** In der F-Jugend und bei den Minis wird ohne
   Ergebniszählung gespielt; der Verband markiert die Partien trotzdem als
   beendet (`is_finished`) und lässt `0:0` stehen. Im Kalender wäre das ein

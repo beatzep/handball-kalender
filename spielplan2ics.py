@@ -84,6 +84,41 @@ def hole_spiele(team_id: int) -> list[dict]:
     return sorted(spiele, key=lambda s: s["date"])
 
 
+def tabelle_hinkt(tabelle: dict, spiele: dict, team_id: int | None) -> list[dict]:
+    """Welche eigenen Ergebnisse stehen noch nicht in der Tabelle?
+
+    Der Verband pflegt Ergebnisse und Tabellenstand getrennt: das Ergebnis
+    steht sofort beim Spiel, in der Tabelle taucht es teils Tage spaeter auf.
+    Am 06.09.2026 betraf das zwoelf von zwanzig Mannschaften, bei der
+    gD-Jugend fehlten drei von vier Spielen.
+
+    Erfunden wird hier nichts - die Tabelle bleibt, wie die Quelle sie
+    liefert. Zurueck kommt nur die Liste der Spiele, die darin fehlen,
+    damit die Seite es dazuschreiben kann. Angenommen wird, dass die
+    juengsten Spiele fehlen; nachgetragen wird der Reihe nach.
+    """
+    eintraege = tabelle.get("eintraege") or []
+    if not eintraege or not team_id:
+        return []
+    eigene = next((e for e in eintraege if e.get("team_id") == team_id), None)
+    if not eigene:
+        return []
+    # Nur Spiele des Wettbewerbs, den die Tabelle abbildet. Steht der
+    # Wettbewerb noch nicht in den Daten (Stand vor dieser Aenderung), wird
+    # lieber gar nichts gemeldet als etwas Falsches.
+    phase = tabelle.get("phase_id")
+    if not phase:
+        return []
+    mit_ergebnis = sorted((s for s in spiele.values()
+                           if s.get("ergebnis") and s.get("phase_id") == phase),
+                          key=lambda s: s["datum"])
+    zuviel = len(mit_ergebnis) - int(eigene.get("spiele") or 0)
+    if zuviel <= 0:
+        return []
+    return [{"datum": s["datum"], "gegner": s.get("gegner", ""),
+             "ergebnis": s["ergebnis"]} for s in mit_ergebnis[-zuviel:]]
+
+
 def hole_tabelle(phase_id: int | None, team_id: int | None = None) -> dict:
     """Holt den Tabellenstand der Liga.
 
@@ -138,6 +173,7 @@ def hole_tabelle(phase_id: int | None, team_id: int | None = None) -> dict:
 
     return {
         "runde": runde,
+        "phase_id": phase_id,
         "gespielt": bool(mit_spielen),
         "mannschaften": len(eintraege),
         "verlauf": verlauf,
@@ -416,6 +452,11 @@ def vergleiche(spiele: list[dict], team_id: int, alt: dict) -> tuple[dict, list[
             "lat": (koordinaten(spiel) or (None, None))[0],
             "lon": (koordinaten(spiel) or (None, None))[1],
             "spieltag": spiel.get("round"),
+            # Ohne den Wettbewerb laesst sich ein Ligaspiel nicht von einem
+            # Pokal- oder Qualifikationsspiel unterscheiden. Die Tabelle
+            # zaehlt nur die Liga; ein Vergleich ueber alle Spiele meldet
+            # sonst einen Rueckstand, den es gar nicht gibt.
+            "phase_id": (spiel.get("phase") or {}).get("id"),
             "heim": ist_heimspiel(spiel, team_id),
             "ohne_zeit": ohne_uhrzeit(beginn),
             "sequence": (vorher or {}).get("sequence", 0),
@@ -677,8 +718,9 @@ def verarbeite_team(team: dict, cfg: argparse.Namespace, alt: dict) -> tuple[dic
         "saison": f"20{saison_id[:2]}/{saison_id[2:]}" if len(saison_id) == 4 else "",
         # Ohne Wertung (Minis etwa) gibt es keine Tabelle - die Sammelliste
         # aller gemeldeten Mannschaften waere keine.
-        "tabelle": (hole_tabelle(phase.get("id"), team_id)
-                    if phase.get("has_standings") else {}),
+        "tabelle": tabelle_mit_hinweis(
+            hole_tabelle(phase.get("id"), team_id) if phase.get("has_standings") else {},
+            neuer_stand, team_id),
         "form": form_aus_spielen(neuer_stand),
         "statistik": statistik.alles(list(neuer_stand.values()),
                                      cfg.heimat, team.get("alltag"),
@@ -686,6 +728,16 @@ def verarbeite_team(team: dict, cfg: argparse.Namespace, alt: dict) -> tuple[dic
         "letzte_aenderungen": aenderungen,
         "spiele": neuer_stand,
     }, aenderungen
+
+
+def tabelle_mit_hinweis(tabelle: dict, spiele: dict, team_id: int | None) -> dict:
+    """Ergaenzt die Tabelle um die Spiele, die noch nicht darin stehen."""
+    if not tabelle:
+        return tabelle
+    fehlend = tabelle_hinkt(tabelle, spiele, team_id)
+    if fehlend:
+        tabelle["fehlend"] = fehlend
+    return tabelle
 
 
 def main() -> None:

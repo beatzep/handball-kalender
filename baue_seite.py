@@ -532,6 +532,25 @@ def tabellenblock(tabelle: dict, eigenes_team: int | None) -> str:
     fuss = (f'Stand nach Spieltag {tabelle["runde"]}.' if tabelle.get("gespielt")
             else "Die Saison hat noch nicht begonnen.")
 
+    # Der Verband traegt Ergebnisse und Tabelle getrennt nach: das Ergebnis
+    # steht sofort beim Spiel, in der Tabelle erscheint es teils Tage spaeter.
+    # Ohne diesen Zusatz sieht es aus, als haetten wir den Sieg verschlafen.
+    fehlend = tabelle.get("fehlend") or []
+    if fehlend:
+        if len(fehlend) == 1:
+            f = fehlend[0]
+            erg = f["ergebnis"]
+            wort = {"S": "Sieg", "N": "Niederlage", "U": "Unentschieden"}.get(
+                erg.get("ausgang"), "Ergebnis")
+            tag = datetime.fromisoformat(f["datum"]).strftime("%d.%m.")
+            fuss += (f' Der {wort} vom {tag} gegen {sicher(f["gegner"])} '
+                     f'({erg["eigene"]}:{erg["fremde"]}) ist hier noch nicht '
+                     f'eingerechnet.')
+        else:
+            fuss += (f' Die letzten {len(fehlend)} Spiele sind hier noch nicht '
+                     f'eingerechnet.')
+        fuss += " Der Verband trägt die Tabelle später nach."
+
     return f"""<div class="tabellenhuelle">
 <table class="tabelle">
 <thead><tr>

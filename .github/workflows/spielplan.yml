@@ -82,6 +82,11 @@ jobs:
       - name: Verweise zwischen den Seiten pruefen
         run: python3 pruefe_verweise.py
 
+      # Der Verband traegt Ergebnisse und Tabelle getrennt nach. Der Hinweis
+      # darauf darf nur stehen, wo er stimmt - und nur fuer Ligaspiele.
+      - name: Tabellenstand pruefen
+        run: python3 pruefe_tabelle.py
+
       - name: Worker-Logik pruefen
         run: |
           for datei in worker/test*.mjs; do node "$datei"; done
