@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-06T13:16:08+00:00",
+  "aktualisiert": "2026-09-06T14:01:10+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -280,353 +280,6 @@
           "verbrauch": 28.7,
           "stunden": 247,
           "tage": 10.3
-        }
-      },
-      "letzte_aenderungen": [],
-      "spiele": {
-        "2627RPBKROERMA0101": {
-          "datum": "2026-08-29T20:00:00",
-          "ort": "IGS 1 Mainz-Bretzenheim, Hans-Böckler-Straße 2, 55128 Mainz",
-          "halle": "IGS 1 Mainz-Bretzenheim",
-          "gegner": "TSG MZ-Bretzenheim 2",
-          "gegner_id": 80919,
-          "match_id": 351626,
-          "lat": 49.97727,
-          "lon": 8.24746,
-          "spieltag": 1,
-          "phase_id": 12482,
-          "heim": false,
-          "ohne_zeit": false,
-          "sequence": 0,
-          "ergebnis": {
-            "heim": 23,
-            "gast": 31,
-            "eigene": 31,
-            "fremde": 23,
-            "ausgang": "S"
-          }
-        },
-        "2627RPBKROERMA0206": {
-          "datum": "2026-09-05T19:45:00",
-          "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
-          "halle": "TSG-Sporthalle Mutterstadt",
-          "gegner": "HSG Worms",
-          "gegner_id": 80913,
-          "match_id": 351637,
-          "lat": 49.4445307,
-          "lon": 8.3595174,
-          "spieltag": 2,
-          "phase_id": 12482,
-          "heim": true,
-          "ohne_zeit": false,
-          "sequence": 0,
-          "ergebnis": {
-            "heim": 41,
-            "gast": 24,
-            "eigene": 41,
-            "fremde": 24,
-            "ausgang": "S"
-          }
-        },
-        "2627RPBKROERMA0301": {
-          "datum": "2026-09-13T18:00:00",
-          "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
-          "halle": "TVR-Sporthalle Ludwigshafen",
-          "gegner": "HSV Sobernheim H1",
-          "gegner_id": 80912,
-          "match_id": 351638,
-          "lat": 49.487078920701,
-          "lon": 8.3645870295515,
-          "spieltag": 3,
-          "phase_id": 12482,
-          "heim": true,
-          "ohne_zeit": false,
-          "sequence": 0
-        },
-        "2627RPBKROERMA0405": {
-          "datum": "2026-09-19T18:00:00",
-          "ort": "Bingen, Rundsporthalle, Nuits-St.Georges-Straße, 55411 Bingen",
-          "halle": "Bingen, Rundsporthalle",
-          "gegner": "GW Bingen-Büdesheim",
-          "gegner_id": 80916,
-          "match_id": 351648,
-          "lat": 49.9518305,
-          "lon": 7.9116193,
-          "spieltag": 4,
-          "phase_id": 12482,
-          "heim": false,
-          "ohne_zeit": false,
-          "sequence": 0
-        },
-        "2627RPBKROERMA0502": {
-          "datum": "2026-09-26T20:00:00",
-          "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
-          "halle": "TVR-Sporthalle Ludwigshafen",
-          "gegner": "TG Osthofen 2",
-          "gegner_id": 80920,
-          "match_id": 351651,
-          "lat": 49.487078920701,
-          "lon": 8.3645870295515,
-          "spieltag": 5,
-          "phase_id": 12482,
-          "heim": true,
-          "ohne_zeit": false,
-          "sequence": 0
-        },
-        "2627RPBKROERMA0604": {
-          "datum": "2026-10-03T20:00:00",
-          "ort": "Sporthalle der IGS Nieder-Olm, Karl-Sieben-Straße, 55268 Nieder-Olm",
-          "halle": "Sporthalle der IGS Nieder-Olm",
-          "gegner": "TV Nieder-Olm 2",
-          "gegner_id": 80917,
-          "match_id": 351659,
-          "lat": 49.9031611,
-          "lon": 8.1976354,
-          "spieltag": 6,
-          "phase_id": 12482,
-          "heim": false,
-          "ohne_zeit": false,
-          "sequence": 0
-        },
-        "2627RPBKROERMA0703": {
-          "datum": "2026-10-24T19:30:00",
-          "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
-          "halle": "TSG-Sporthalle Mutterstadt",
-          "gegner": "HSG Zotzenheim/St.Johann/Sprendlingen",
-          "gegner_id": 80922,
-          "match_id": 351664,
-          "lat": 49.4445307,
-          "lon": 8.3595174,
-          "spieltag": 7,
-          "phase_id": 12482,
-          "heim": true,
-          "ohne_zeit": false,
-          "sequence": 0
-        },
-        "2627RPBKROERMA0803": {
-          "datum": "2026-11-08T17:15:00",
-          "ort": "NH Alzey, Frankenstraße 17, 55232 Alzey",
-          "halle": "NH Alzey",
-          "gegner": "HSV Alzey",
-          "gegner_id": 80914,
-          "match_id": 351670,
-          "lat": 49.74229,
-          "lon": 8.11803,
-          "spieltag": 8,
-          "phase_id": 12482,
-          "heim": false,
-          "ohne_zeit": false,
-          "sequence": 0
-        },
-        "2627RPBKROERMA0904": {
-          "datum": "2026-11-15T18:45:00",
-          "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
-          "halle": "TVR-Sporthalle Ludwigshafen",
-          "gegner": "SG Saulheim 2",
-          "gegner_id": 80921,
-          "match_id": 351677,
-          "lat": 49.487078920701,
-          "lon": 8.3645870295515,
-          "spieltag": 9,
-          "phase_id": 12482,
-          "heim": true,
-          "ohne_zeit": false,
-          "sequence": 0
-        },
-        "2627RPBKROERMA1002": {
-          "datum": "2026-11-21T16:00:00",
-          "ort": "Bingen, Rundsporthalle, Nuits-St.Georges-Straße, 55411 Bingen",
-          "halle": "Bingen, Rundsporthalle",
-          "gegner": "HSG Rhein-Nahe Bingen 2",
-          "gegner_id": 80915,
-          "match_id": 351681,
-          "lat": 49.9518305,
-          "lon": 7.9116193,
-          "spieltag": 10,
-          "phase_id": 12482,
-          "heim": false,
-          "ohne_zeit": false,
-          "sequence": 0
-        },
-        "2627RPBKROERMA1105": {
-          "datum": "2026-11-29T17:00:00",
-          "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
-          "halle": "TVR-Sporthalle Ludwigshafen",
-          "gegner": "HSC Ingelheim",
-          "gegner_id": 80918,
-          "match_id": 351690,
-          "lat": 49.487078920701,
-          "lon": 8.3645870295515,
-          "spieltag": 11,
-          "phase_id": 12482,
-          "heim": true,
-          "ohne_zeit": false,
-          "sequence": 0
-        },
-        "2627RPBKROERMA1201": {
-          "datum": "2026-12-06T18:00:00",
-          "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
-          "halle": "TSG-Sporthalle Mutterstadt",
-          "gegner": "TSG MZ-Bretzenheim 2",
-          "gegner_id": 80919,
-          "match_id": 351692,
-          "lat": 49.4445307,
-          "lon": 8.3595174,
-          "spieltag": 12,
-          "phase_id": 12482,
-          "heim": true,
-          "ohne_zeit": false,
-          "sequence": 0
-        },
-        "2627RPBKROERMA1306": {
-          "datum": "2026-12-13T18:00:00",
-          "ort": "Nikolaus-Dörr-Halle Worms, Mainzer Straße 51, 67547 Worms",
-          "halle": "Nikolaus-Dörr-Halle Worms",
-          "gegner": "HSG Worms",
-          "gegner_id": 80913,
-          "match_id": 351703,
-          "lat": 49.6422044,
-          "lon": 8.3630492,
-          "spieltag": 13,
-          "phase_id": 12482,
-          "heim": false,
-          "ohne_zeit": false,
-          "sequence": 0
-        },
-        "2627RPBKROERMA1401": {
-          "datum": "2027-01-24T16:00:00",
-          "ort": "Bad Sobernheim, Dr. W.Dümmler Halle, Staudernheimer Straße, 55566 Bad Sobernheim",
-          "halle": "Bad Sobernheim, Dr. W.Dümmler Halle",
-          "gegner": "HSV Sobernheim H1",
-          "gegner_id": 80912,
-          "match_id": 351704,
-          "lat": 49.7836159,
-          "lon": 7.6650867,
-          "spieltag": 14,
-          "phase_id": 12482,
-          "heim": false,
-          "ohne_zeit": false,
-          "sequence": 0
-        },
-        "2627RPBKROERMA1505": {
-          "datum": "2027-01-30T16:00:00",
-          "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
-          "halle": "TVR-Sporthalle Ludwigshafen",
-          "gegner": "GW Bingen-Büdesheim",
-          "gegner_id": 80916,
-          "match_id": 351714,
-          "lat": 49.487078920701,
-          "lon": 8.3645870295515,
-          "spieltag": 15,
-          "phase_id": 12482,
-          "heim": true,
-          "ohne_zeit": false,
-          "sequence": 0
-        },
-        "2627RPBKROERMA1602": {
-          "datum": "2027-02-14T14:00:00",
-          "ort": "Wonnegauhalle Osthofen, Herrnsheimer Straße 24, 67574 Osthofen",
-          "halle": "Wonnegauhalle Osthofen",
-          "gegner": "TG Osthofen 2",
-          "gegner_id": 80920,
-          "match_id": 351717,
-          "lat": 49.70016,
-          "lon": 8.32541,
-          "spieltag": 16,
-          "phase_id": 12482,
-          "heim": false,
-          "ohne_zeit": false,
-          "sequence": 0
-        },
-        "2627RPBKROERMA1704": {
-          "datum": "2027-02-20T20:00:00",
-          "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
-          "halle": "TVR-Sporthalle Ludwigshafen",
-          "gegner": "TV Nieder-Olm 2",
-          "gegner_id": 80917,
-          "match_id": 351725,
-          "lat": 49.487078920701,
-          "lon": 8.3645870295515,
-          "spieltag": 17,
-          "phase_id": 12482,
-          "heim": true,
-          "ohne_zeit": false,
-          "sequence": 0
-        },
-        "2627RPBKROERMA1803": {
-          "datum": "2027-02-28T17:00:00",
-          "ort": "IGS Sprendlingen, Ober-Hilbersheimer Straße, 55576 Sprendlingen",
-          "halle": "IGS Sprendlingen",
-          "gegner": "HSG Zotzenheim/St.Johann/Sprendlingen",
-          "gegner_id": 80922,
-          "match_id": 351730,
-          "lat": 49.8622308,
-          "lon": 7.9918304,
-          "spieltag": 18,
-          "phase_id": 12482,
-          "heim": false,
-          "ohne_zeit": false,
-          "sequence": 0
-        },
-        "2627RPBKROERMA1903": {
-          "datum": "2027-03-13T20:00:00",
-          "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
-          "halle": "TSG-Sporthalle Mutterstadt",
-          "gegner": "HSV Alzey",
-          "gegner_id": 80914,
-          "match_id": 351736,
-          "lat": 49.4445307,
-          "lon": 8.3595174,
-          "spieltag": 19,
-          "phase_id": 12482,
-          "heim": true,
-          "ohne_zeit": false,
-          "sequence": 0
-        },
-        "2627RPBKROERMA2004": {
-          "datum": "2027-03-20T17:00:00",
-          "ort": "Ritter-Hundt-Zentrum Saulheim, Am Westring 6A, 55291 Saulheim",
-          "halle": "Ritter-Hundt-Zentrum Saulheim",
-          "gegner": "SG Saulheim 2",
-          "gegner_id": 80921,
-          "match_id": 351743,
-          "lat": 49.8712983,
-          "lon": 8.1467399,
-          "spieltag": 20,
-          "phase_id": 12482,
-          "heim": false,
-          "ohne_zeit": false,
-          "sequence": 0
-        },
-        "2627RPBKROERMA2102": {
-          "datum": "2027-04-10T18:00:00",
-          "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
-          "halle": "TVR-Sporthalle Ludwigshafen",
-          "gegner": "HSG Rhein-Nahe Bingen 2",
-          "gegner_id": 80915,
-          "match_id": 351747,
-          "lat": 49.487078920701,
-          "lon": 8.3645870295515,
-          "spieltag": 21,
-          "phase_id": 12482,
-          "heim": true,
-          "ohne_zeit": false,
-          "sequence": 0
-        },
-        "2627RPBKROERMA2205": {
-          "datum": "2027-04-18T15:00:00",
-          "ort": "Sebastian-Münster-Gymnasium Ingelheim, Hans-Fluck-Straße, 55218 Ingelheim",
-          "halle": "Sebastian-Münster-Gymnasium Ingelheim",
-          "gegner": "HSC Ingelheim",
-          "gegner_id": 80918,
-          "match_id": 351756,
-          "lat": 49.9721176,
-          "lon": 8.0531121,
-          "spieltag": 22,
-          "phase_id": 12482,
-          "heim": false,
-          "ohne_zeit": false,
-          "sequence": 0
         }
       },
       "spieler": {
@@ -1433,6 +1086,353 @@
             }
           }
         ]
+      },
+      "letzte_aenderungen": [],
+      "spiele": {
+        "2627RPBKROERMA0101": {
+          "datum": "2026-08-29T20:00:00",
+          "ort": "IGS 1 Mainz-Bretzenheim, Hans-Böckler-Straße 2, 55128 Mainz",
+          "halle": "IGS 1 Mainz-Bretzenheim",
+          "gegner": "TSG MZ-Bretzenheim 2",
+          "gegner_id": 80919,
+          "match_id": 351626,
+          "lat": 49.97727,
+          "lon": 8.24746,
+          "spieltag": 1,
+          "phase_id": 12482,
+          "heim": false,
+          "ohne_zeit": false,
+          "sequence": 0,
+          "ergebnis": {
+            "heim": 23,
+            "gast": 31,
+            "eigene": 31,
+            "fremde": 23,
+            "ausgang": "S"
+          }
+        },
+        "2627RPBKROERMA0206": {
+          "datum": "2026-09-05T19:45:00",
+          "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
+          "halle": "TSG-Sporthalle Mutterstadt",
+          "gegner": "HSG Worms",
+          "gegner_id": 80913,
+          "match_id": 351637,
+          "lat": 49.4445307,
+          "lon": 8.3595174,
+          "spieltag": 2,
+          "phase_id": 12482,
+          "heim": true,
+          "ohne_zeit": false,
+          "sequence": 0,
+          "ergebnis": {
+            "heim": 41,
+            "gast": 24,
+            "eigene": 41,
+            "fremde": 24,
+            "ausgang": "S"
+          }
+        },
+        "2627RPBKROERMA0301": {
+          "datum": "2026-09-13T18:00:00",
+          "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
+          "halle": "TVR-Sporthalle Ludwigshafen",
+          "gegner": "HSV Sobernheim H1",
+          "gegner_id": 80912,
+          "match_id": 351638,
+          "lat": 49.487078920701,
+          "lon": 8.3645870295515,
+          "spieltag": 3,
+          "phase_id": 12482,
+          "heim": true,
+          "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RPBKROERMA0405": {
+          "datum": "2026-09-19T18:00:00",
+          "ort": "Bingen, Rundsporthalle, Nuits-St.Georges-Straße, 55411 Bingen",
+          "halle": "Bingen, Rundsporthalle",
+          "gegner": "GW Bingen-Büdesheim",
+          "gegner_id": 80916,
+          "match_id": 351648,
+          "lat": 49.9518305,
+          "lon": 7.9116193,
+          "spieltag": 4,
+          "phase_id": 12482,
+          "heim": false,
+          "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RPBKROERMA0502": {
+          "datum": "2026-09-26T20:00:00",
+          "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
+          "halle": "TVR-Sporthalle Ludwigshafen",
+          "gegner": "TG Osthofen 2",
+          "gegner_id": 80920,
+          "match_id": 351651,
+          "lat": 49.487078920701,
+          "lon": 8.3645870295515,
+          "spieltag": 5,
+          "phase_id": 12482,
+          "heim": true,
+          "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RPBKROERMA0604": {
+          "datum": "2026-10-03T20:00:00",
+          "ort": "Sporthalle der IGS Nieder-Olm, Karl-Sieben-Straße, 55268 Nieder-Olm",
+          "halle": "Sporthalle der IGS Nieder-Olm",
+          "gegner": "TV Nieder-Olm 2",
+          "gegner_id": 80917,
+          "match_id": 351659,
+          "lat": 49.9031611,
+          "lon": 8.1976354,
+          "spieltag": 6,
+          "phase_id": 12482,
+          "heim": false,
+          "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RPBKROERMA0703": {
+          "datum": "2026-10-24T19:30:00",
+          "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
+          "halle": "TSG-Sporthalle Mutterstadt",
+          "gegner": "HSG Zotzenheim/St.Johann/Sprendlingen",
+          "gegner_id": 80922,
+          "match_id": 351664,
+          "lat": 49.4445307,
+          "lon": 8.3595174,
+          "spieltag": 7,
+          "phase_id": 12482,
+          "heim": true,
+          "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RPBKROERMA0803": {
+          "datum": "2026-11-08T17:15:00",
+          "ort": "NH Alzey, Frankenstraße 17, 55232 Alzey",
+          "halle": "NH Alzey",
+          "gegner": "HSV Alzey",
+          "gegner_id": 80914,
+          "match_id": 351670,
+          "lat": 49.74229,
+          "lon": 8.11803,
+          "spieltag": 8,
+          "phase_id": 12482,
+          "heim": false,
+          "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RPBKROERMA0904": {
+          "datum": "2026-11-15T18:45:00",
+          "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
+          "halle": "TVR-Sporthalle Ludwigshafen",
+          "gegner": "SG Saulheim 2",
+          "gegner_id": 80921,
+          "match_id": 351677,
+          "lat": 49.487078920701,
+          "lon": 8.3645870295515,
+          "spieltag": 9,
+          "phase_id": 12482,
+          "heim": true,
+          "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RPBKROERMA1002": {
+          "datum": "2026-11-21T16:00:00",
+          "ort": "Bingen, Rundsporthalle, Nuits-St.Georges-Straße, 55411 Bingen",
+          "halle": "Bingen, Rundsporthalle",
+          "gegner": "HSG Rhein-Nahe Bingen 2",
+          "gegner_id": 80915,
+          "match_id": 351681,
+          "lat": 49.9518305,
+          "lon": 7.9116193,
+          "spieltag": 10,
+          "phase_id": 12482,
+          "heim": false,
+          "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RPBKROERMA1105": {
+          "datum": "2026-11-29T17:00:00",
+          "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
+          "halle": "TVR-Sporthalle Ludwigshafen",
+          "gegner": "HSC Ingelheim",
+          "gegner_id": 80918,
+          "match_id": 351690,
+          "lat": 49.487078920701,
+          "lon": 8.3645870295515,
+          "spieltag": 11,
+          "phase_id": 12482,
+          "heim": true,
+          "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RPBKROERMA1201": {
+          "datum": "2026-12-06T18:00:00",
+          "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
+          "halle": "TSG-Sporthalle Mutterstadt",
+          "gegner": "TSG MZ-Bretzenheim 2",
+          "gegner_id": 80919,
+          "match_id": 351692,
+          "lat": 49.4445307,
+          "lon": 8.3595174,
+          "spieltag": 12,
+          "phase_id": 12482,
+          "heim": true,
+          "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RPBKROERMA1306": {
+          "datum": "2026-12-13T18:00:00",
+          "ort": "Nikolaus-Dörr-Halle Worms, Mainzer Straße 51, 67547 Worms",
+          "halle": "Nikolaus-Dörr-Halle Worms",
+          "gegner": "HSG Worms",
+          "gegner_id": 80913,
+          "match_id": 351703,
+          "lat": 49.6422044,
+          "lon": 8.3630492,
+          "spieltag": 13,
+          "phase_id": 12482,
+          "heim": false,
+          "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RPBKROERMA1401": {
+          "datum": "2027-01-24T16:00:00",
+          "ort": "Bad Sobernheim, Dr. W.Dümmler Halle, Staudernheimer Straße, 55566 Bad Sobernheim",
+          "halle": "Bad Sobernheim, Dr. W.Dümmler Halle",
+          "gegner": "HSV Sobernheim H1",
+          "gegner_id": 80912,
+          "match_id": 351704,
+          "lat": 49.7836159,
+          "lon": 7.6650867,
+          "spieltag": 14,
+          "phase_id": 12482,
+          "heim": false,
+          "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RPBKROERMA1505": {
+          "datum": "2027-01-30T16:00:00",
+          "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
+          "halle": "TVR-Sporthalle Ludwigshafen",
+          "gegner": "GW Bingen-Büdesheim",
+          "gegner_id": 80916,
+          "match_id": 351714,
+          "lat": 49.487078920701,
+          "lon": 8.3645870295515,
+          "spieltag": 15,
+          "phase_id": 12482,
+          "heim": true,
+          "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RPBKROERMA1602": {
+          "datum": "2027-02-14T14:00:00",
+          "ort": "Wonnegauhalle Osthofen, Herrnsheimer Straße 24, 67574 Osthofen",
+          "halle": "Wonnegauhalle Osthofen",
+          "gegner": "TG Osthofen 2",
+          "gegner_id": 80920,
+          "match_id": 351717,
+          "lat": 49.70016,
+          "lon": 8.32541,
+          "spieltag": 16,
+          "phase_id": 12482,
+          "heim": false,
+          "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RPBKROERMA1704": {
+          "datum": "2027-02-20T20:00:00",
+          "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
+          "halle": "TVR-Sporthalle Ludwigshafen",
+          "gegner": "TV Nieder-Olm 2",
+          "gegner_id": 80917,
+          "match_id": 351725,
+          "lat": 49.487078920701,
+          "lon": 8.3645870295515,
+          "spieltag": 17,
+          "phase_id": 12482,
+          "heim": true,
+          "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RPBKROERMA1803": {
+          "datum": "2027-02-28T17:00:00",
+          "ort": "IGS Sprendlingen, Ober-Hilbersheimer Straße, 55576 Sprendlingen",
+          "halle": "IGS Sprendlingen",
+          "gegner": "HSG Zotzenheim/St.Johann/Sprendlingen",
+          "gegner_id": 80922,
+          "match_id": 351730,
+          "lat": 49.8622308,
+          "lon": 7.9918304,
+          "spieltag": 18,
+          "phase_id": 12482,
+          "heim": false,
+          "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RPBKROERMA1903": {
+          "datum": "2027-03-13T20:00:00",
+          "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
+          "halle": "TSG-Sporthalle Mutterstadt",
+          "gegner": "HSV Alzey",
+          "gegner_id": 80914,
+          "match_id": 351736,
+          "lat": 49.4445307,
+          "lon": 8.3595174,
+          "spieltag": 19,
+          "phase_id": 12482,
+          "heim": true,
+          "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RPBKROERMA2004": {
+          "datum": "2027-03-20T17:00:00",
+          "ort": "Ritter-Hundt-Zentrum Saulheim, Am Westring 6A, 55291 Saulheim",
+          "halle": "Ritter-Hundt-Zentrum Saulheim",
+          "gegner": "SG Saulheim 2",
+          "gegner_id": 80921,
+          "match_id": 351743,
+          "lat": 49.8712983,
+          "lon": 8.1467399,
+          "spieltag": 20,
+          "phase_id": 12482,
+          "heim": false,
+          "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RPBKROERMA2102": {
+          "datum": "2027-04-10T18:00:00",
+          "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
+          "halle": "TVR-Sporthalle Ludwigshafen",
+          "gegner": "HSG Rhein-Nahe Bingen 2",
+          "gegner_id": 80915,
+          "match_id": 351747,
+          "lat": 49.487078920701,
+          "lon": 8.3645870295515,
+          "spieltag": 21,
+          "phase_id": 12482,
+          "heim": true,
+          "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RPBKROERMA2205": {
+          "datum": "2027-04-18T15:00:00",
+          "ort": "Sebastian-Münster-Gymnasium Ingelheim, Hans-Fluck-Straße, 55218 Ingelheim",
+          "halle": "Sebastian-Münster-Gymnasium Ingelheim",
+          "gegner": "HSC Ingelheim",
+          "gegner_id": 80918,
+          "match_id": 351756,
+          "lat": 49.9721176,
+          "lon": 8.0531121,
+          "spieltag": 22,
+          "phase_id": 12482,
+          "heim": false,
+          "ohne_zeit": false,
+          "sequence": 0
+        }
       }
     },
     "herren2": {
@@ -1693,316 +1693,6 @@
         },
         "gegner": {},
         "alltag": {}
-      },
-      "letzte_aenderungen": [],
-      "spiele": {
-        "2627RPBKRKERMB0101": {
-          "datum": "2026-08-29T19:00:00",
-          "ort": "IGS-Sporthalle Thaleischweiler, Schulstr. 2, 66987 Thaleischweiler",
-          "halle": "IGS-Sporthalle Thaleischweiler",
-          "gegner": "TV THALEISCHWEILER Herren",
-          "gegner_id": 80973,
-          "match_id": 352286,
-          "lat": 49.2573806,
-          "lon": 7.5792125043203,
-          "spieltag": 1,
-          "phase_id": 12583,
-          "heim": false,
-          "ohne_zeit": false,
-          "sequence": 0,
-          "ergebnis": {
-            "heim": 22,
-            "gast": 20,
-            "eigene": 20,
-            "fremde": 22,
-            "ausgang": "N"
-          }
-        },
-        "2627RPBKRKERMB0206": {
-          "datum": "2026-09-06T20:00:00",
-          "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
-          "halle": "TSG-Sporthalle Mutterstadt",
-          "gegner": "HSG Grethen/Maxdorf",
-          "gegner_id": 80984,
-          "match_id": 352297,
-          "lat": 49.4445307,
-          "lon": 8.3595174,
-          "spieltag": 2,
-          "phase_id": 12583,
-          "heim": true,
-          "ohne_zeit": false,
-          "sequence": 0
-        },
-        "2627RPBKRKERMB0301": {
-          "datum": "2026-09-13T16:00:00",
-          "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
-          "halle": "TVR-Sporthalle Ludwigshafen",
-          "gegner": "TV Kirrweiler 2",
-          "gegner_id": 80979,
-          "match_id": 352298,
-          "lat": 49.487078920701,
-          "lon": 8.3645870295515,
-          "spieltag": 3,
-          "phase_id": 12583,
-          "heim": true,
-          "ohne_zeit": false,
-          "sequence": 0
-        },
-        "2627RPBKRKERMB0502": {
-          "datum": "2026-09-26T18:00:00",
-          "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
-          "halle": "TVR-Sporthalle Ludwigshafen",
-          "gegner": "TSV Kandel 2",
-          "gegner_id": 80975,
-          "match_id": 352311,
-          "lat": 49.487078920701,
-          "lon": 8.3645870295515,
-          "spieltag": 5,
-          "phase_id": 12583,
-          "heim": true,
-          "ohne_zeit": false,
-          "sequence": 0
-        },
-        "2627RPBKRKERMB0604": {
-          "datum": "2026-10-03T20:00:00",
-          "ort": "Rhein-Pfalz-Halle Römerberg-Heiligenstein, Viehtriftstraße 106, 67354 Römerberg-Heiligenstein",
-          "halle": "Rhein-Pfalz-Halle Römerberg-Heiligenstein",
-          "gegner": "TUS Heiligenstein 2",
-          "gegner_id": 80983,
-          "match_id": 352319,
-          "lat": 49.2793152,
-          "lon": 8.4049777624909,
-          "spieltag": 6,
-          "phase_id": 12583,
-          "heim": false,
-          "ohne_zeit": false,
-          "sequence": 0
-        },
-        "2627RPBKRKERMB0703": {
-          "datum": "2026-10-24T17:30:00",
-          "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
-          "halle": "TSG-Sporthalle Mutterstadt",
-          "gegner": "MSG Iggelheim/Meckenheim 3",
-          "gegner_id": 80978,
-          "match_id": 352324,
-          "lat": 49.4445307,
-          "lon": 8.3595174,
-          "spieltag": 7,
-          "phase_id": 12583,
-          "heim": true,
-          "ohne_zeit": false,
-          "sequence": 0
-        },
-        "2627RPBKRKERMB0803": {
-          "datum": "2026-11-08T15:00:00",
-          "ort": "Andreas-Albert-Schule, Petergartenweg 9, 67227 Frankenthal",
-          "halle": "Andreas-Albert-Schule",
-          "gegner": "SG LaFt - Herren",
-          "gegner_id": 80970,
-          "match_id": 352330,
-          "lat": 49.5316795,
-          "lon": 8.3460540351322,
-          "spieltag": 8,
-          "phase_id": 12583,
-          "heim": false,
-          "ohne_zeit": false,
-          "sequence": 0
-        },
-        "2627RPBKRKERMB0904": {
-          "datum": "2026-11-15T16:45:00",
-          "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
-          "halle": "TVR-Sporthalle Ludwigshafen",
-          "gegner": "HSV Lingenfeld/Schwegenheim 2",
-          "gegner_id": 80982,
-          "match_id": 352337,
-          "lat": 49.487078920701,
-          "lon": 8.3645870295515,
-          "spieltag": 9,
-          "phase_id": 12583,
-          "heim": true,
-          "ohne_zeit": false,
-          "sequence": 0
-        },
-        "2627RPBKRKERMB1002": {
-          "datum": "2026-11-22T18:00:00",
-          "ort": "Sporthalle Dansenberg, Am Handballplatz 1, 67661 Kaiserslautern-Dansenberg",
-          "halle": "Sporthalle Dansenberg",
-          "gegner": "MSG Kaiserslautern/Dansenberg 2",
-          "gegner_id": 80974,
-          "match_id": 352341,
-          "lat": 49.406914,
-          "lon": 7.736269,
-          "spieltag": 10,
-          "phase_id": 12583,
-          "heim": false,
-          "ohne_zeit": false,
-          "sequence": 0
-        },
-        "2627RPBKRKERMB1105": {
-          "datum": "2026-11-29T19:00:00",
-          "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
-          "halle": "TVR-Sporthalle Ludwigshafen",
-          "gegner": "TUS Neuhofen 2",
-          "gegner_id": 80976,
-          "match_id": 352350,
-          "lat": 49.487078920701,
-          "lon": 8.3645870295515,
-          "spieltag": 11,
-          "phase_id": 12583,
-          "heim": true,
-          "ohne_zeit": false,
-          "sequence": 0
-        },
-        "2627RPBKRKERMB1201": {
-          "datum": "2026-12-06T16:00:00",
-          "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
-          "halle": "TSG-Sporthalle Mutterstadt",
-          "gegner": "TV THALEISCHWEILER Herren",
-          "gegner_id": 80973,
-          "match_id": 352352,
-          "lat": 49.4445307,
-          "lon": 8.3595174,
-          "spieltag": 12,
-          "phase_id": 12583,
-          "heim": true,
-          "ohne_zeit": false,
-          "sequence": 0
-        },
-        "2627RPBKRKERMB1306": {
-          "datum": "2026-12-12T18:00:00",
-          "ort": "Carl-Orff-Realschule Bad Dürkheim, Kanalstr. 23, 67098 Bad Dürkheim",
-          "halle": "Carl-Orff-Realschule Bad Dürkheim",
-          "gegner": "HSG Grethen/Maxdorf",
-          "gegner_id": 80984,
-          "match_id": 352363,
-          "lat": 49.466768,
-          "lon": 8.187112,
-          "spieltag": 13,
-          "phase_id": 12583,
-          "heim": false,
-          "ohne_zeit": false,
-          "sequence": 0
-        },
-        "2627RPBKRKERMB1401": {
-          "datum": "2027-01-24T19:30:00",
-          "ort": "Reblandhalle Kirrweiler, Unterried 6, 67489 Kirrweiler",
-          "halle": "Reblandhalle Kirrweiler",
-          "gegner": "TV Kirrweiler 2",
-          "gegner_id": 80979,
-          "match_id": 352364,
-          "lat": 49.2957629,
-          "lon": 8.1726313657868,
-          "spieltag": 14,
-          "phase_id": 12583,
-          "heim": false,
-          "ohne_zeit": false,
-          "sequence": 0
-        },
-        "2627RPBKRKERMB1602": {
-          "datum": "2027-02-13T19:30:00",
-          "ort": "Kandel, IGS Sporthalle, Schubertstr. 7, 76870 Kandel",
-          "halle": "Kandel, IGS Sporthalle",
-          "gegner": "TSV Kandel 2",
-          "gegner_id": 80975,
-          "match_id": 352377,
-          "lat": 49.0776545,
-          "lon": 8.193107699999999,
-          "spieltag": 16,
-          "phase_id": 12583,
-          "heim": false,
-          "ohne_zeit": false,
-          "sequence": 0
-        },
-        "2627RPBKRKERMB1704": {
-          "datum": "2027-02-21T18:45:00",
-          "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
-          "halle": "TVR-Sporthalle Ludwigshafen",
-          "gegner": "TUS Heiligenstein 2",
-          "gegner_id": 80983,
-          "match_id": 352385,
-          "lat": 49.487078920701,
-          "lon": 8.3645870295515,
-          "spieltag": 17,
-          "phase_id": 12583,
-          "heim": true,
-          "ohne_zeit": false,
-          "sequence": 0
-        },
-        "2627RPBKRKERMB1803": {
-          "datum": "2027-02-28T14:00:00",
-          "ort": "Wahagnieshalle Böhl-Iggelheim, Am Schwarzweiher 1, 67459 Böhl-Iggelheim",
-          "halle": "Wahagnieshalle Böhl-Iggelheim",
-          "gegner": "MSG Iggelheim/Meckenheim 3",
-          "gegner_id": 80978,
-          "match_id": 352390,
-          "lat": 49.3730454,
-          "lon": 8.303607598627,
-          "spieltag": 18,
-          "phase_id": 12583,
-          "heim": false,
-          "ohne_zeit": false,
-          "sequence": 0
-        },
-        "2627RPBKRKERMB1903": {
-          "datum": "2027-03-13T18:00:00",
-          "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
-          "halle": "TSG-Sporthalle Mutterstadt",
-          "gegner": "SG LaFt - Herren",
-          "gegner_id": 80970,
-          "match_id": 352396,
-          "lat": 49.4445307,
-          "lon": 8.3595174,
-          "spieltag": 19,
-          "phase_id": 12583,
-          "heim": true,
-          "ohne_zeit": false,
-          "sequence": 0
-        },
-        "2627RPBKRKERMB2004": {
-          "datum": "2027-03-20T16:00:00",
-          "ort": "Sporthalle Schwegenheim, Schulstr. 20, 67365 Schwegenheim",
-          "halle": "Sporthalle Schwegenheim",
-          "gegner": "HSV Lingenfeld/Schwegenheim 2",
-          "gegner_id": 80982,
-          "match_id": 352403,
-          "lat": null,
-          "lon": null,
-          "spieltag": 20,
-          "phase_id": 12583,
-          "heim": false,
-          "ohne_zeit": false,
-          "sequence": 0
-        },
-        "2627RPBKRKERMB2102": {
-          "datum": "2027-04-10T16:00:00",
-          "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
-          "halle": "TVR-Sporthalle Ludwigshafen",
-          "gegner": "MSG Kaiserslautern/Dansenberg 2",
-          "gegner_id": 80974,
-          "match_id": 352407,
-          "lat": 49.487078920701,
-          "lon": 8.3645870295515,
-          "spieltag": 21,
-          "phase_id": 12583,
-          "heim": true,
-          "ohne_zeit": false,
-          "sequence": 0
-        },
-        "2627RPBKRKERMB2205": {
-          "datum": "2027-04-18T20:00:00",
-          "ort": "Rehbachhalle Neuhofen, Jahnstr. 25, 67141 Neuhofen",
-          "halle": "Rehbachhalle Neuhofen",
-          "gegner": "TUS Neuhofen 2",
-          "gegner_id": 80976,
-          "match_id": 352416,
-          "lat": 49.420979,
-          "lon": 8.4234100661005,
-          "spieltag": 22,
-          "phase_id": 12583,
-          "heim": false,
-          "ohne_zeit": false,
-          "sequence": 0
-        }
       },
       "spieler": {
         "quelle": {
@@ -2356,6 +2046,316 @@
             }
           }
         ]
+      },
+      "letzte_aenderungen": [],
+      "spiele": {
+        "2627RPBKRKERMB0101": {
+          "datum": "2026-08-29T19:00:00",
+          "ort": "IGS-Sporthalle Thaleischweiler, Schulstr. 2, 66987 Thaleischweiler",
+          "halle": "IGS-Sporthalle Thaleischweiler",
+          "gegner": "TV THALEISCHWEILER Herren",
+          "gegner_id": 80973,
+          "match_id": 352286,
+          "lat": 49.2573806,
+          "lon": 7.5792125043203,
+          "spieltag": 1,
+          "phase_id": 12583,
+          "heim": false,
+          "ohne_zeit": false,
+          "sequence": 0,
+          "ergebnis": {
+            "heim": 22,
+            "gast": 20,
+            "eigene": 20,
+            "fremde": 22,
+            "ausgang": "N"
+          }
+        },
+        "2627RPBKRKERMB0206": {
+          "datum": "2026-09-06T20:00:00",
+          "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
+          "halle": "TSG-Sporthalle Mutterstadt",
+          "gegner": "HSG Grethen/Maxdorf",
+          "gegner_id": 80984,
+          "match_id": 352297,
+          "lat": 49.4445307,
+          "lon": 8.3595174,
+          "spieltag": 2,
+          "phase_id": 12583,
+          "heim": true,
+          "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RPBKRKERMB0301": {
+          "datum": "2026-09-13T16:00:00",
+          "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
+          "halle": "TVR-Sporthalle Ludwigshafen",
+          "gegner": "TV Kirrweiler 2",
+          "gegner_id": 80979,
+          "match_id": 352298,
+          "lat": 49.487078920701,
+          "lon": 8.3645870295515,
+          "spieltag": 3,
+          "phase_id": 12583,
+          "heim": true,
+          "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RPBKRKERMB0502": {
+          "datum": "2026-09-26T18:00:00",
+          "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
+          "halle": "TVR-Sporthalle Ludwigshafen",
+          "gegner": "TSV Kandel 2",
+          "gegner_id": 80975,
+          "match_id": 352311,
+          "lat": 49.487078920701,
+          "lon": 8.3645870295515,
+          "spieltag": 5,
+          "phase_id": 12583,
+          "heim": true,
+          "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RPBKRKERMB0604": {
+          "datum": "2026-10-03T20:00:00",
+          "ort": "Rhein-Pfalz-Halle Römerberg-Heiligenstein, Viehtriftstraße 106, 67354 Römerberg-Heiligenstein",
+          "halle": "Rhein-Pfalz-Halle Römerberg-Heiligenstein",
+          "gegner": "TUS Heiligenstein 2",
+          "gegner_id": 80983,
+          "match_id": 352319,
+          "lat": 49.2793152,
+          "lon": 8.4049777624909,
+          "spieltag": 6,
+          "phase_id": 12583,
+          "heim": false,
+          "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RPBKRKERMB0703": {
+          "datum": "2026-10-24T17:30:00",
+          "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
+          "halle": "TSG-Sporthalle Mutterstadt",
+          "gegner": "MSG Iggelheim/Meckenheim 3",
+          "gegner_id": 80978,
+          "match_id": 352324,
+          "lat": 49.4445307,
+          "lon": 8.3595174,
+          "spieltag": 7,
+          "phase_id": 12583,
+          "heim": true,
+          "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RPBKRKERMB0803": {
+          "datum": "2026-11-08T15:00:00",
+          "ort": "Andreas-Albert-Schule, Petergartenweg 9, 67227 Frankenthal",
+          "halle": "Andreas-Albert-Schule",
+          "gegner": "SG LaFt - Herren",
+          "gegner_id": 80970,
+          "match_id": 352330,
+          "lat": 49.5316795,
+          "lon": 8.3460540351322,
+          "spieltag": 8,
+          "phase_id": 12583,
+          "heim": false,
+          "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RPBKRKERMB0904": {
+          "datum": "2026-11-15T16:45:00",
+          "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
+          "halle": "TVR-Sporthalle Ludwigshafen",
+          "gegner": "HSV Lingenfeld/Schwegenheim 2",
+          "gegner_id": 80982,
+          "match_id": 352337,
+          "lat": 49.487078920701,
+          "lon": 8.3645870295515,
+          "spieltag": 9,
+          "phase_id": 12583,
+          "heim": true,
+          "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RPBKRKERMB1002": {
+          "datum": "2026-11-22T18:00:00",
+          "ort": "Sporthalle Dansenberg, Am Handballplatz 1, 67661 Kaiserslautern-Dansenberg",
+          "halle": "Sporthalle Dansenberg",
+          "gegner": "MSG Kaiserslautern/Dansenberg 2",
+          "gegner_id": 80974,
+          "match_id": 352341,
+          "lat": 49.406914,
+          "lon": 7.736269,
+          "spieltag": 10,
+          "phase_id": 12583,
+          "heim": false,
+          "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RPBKRKERMB1105": {
+          "datum": "2026-11-29T19:00:00",
+          "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
+          "halle": "TVR-Sporthalle Ludwigshafen",
+          "gegner": "TUS Neuhofen 2",
+          "gegner_id": 80976,
+          "match_id": 352350,
+          "lat": 49.487078920701,
+          "lon": 8.3645870295515,
+          "spieltag": 11,
+          "phase_id": 12583,
+          "heim": true,
+          "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RPBKRKERMB1201": {
+          "datum": "2026-12-06T16:00:00",
+          "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
+          "halle": "TSG-Sporthalle Mutterstadt",
+          "gegner": "TV THALEISCHWEILER Herren",
+          "gegner_id": 80973,
+          "match_id": 352352,
+          "lat": 49.4445307,
+          "lon": 8.3595174,
+          "spieltag": 12,
+          "phase_id": 12583,
+          "heim": true,
+          "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RPBKRKERMB1306": {
+          "datum": "2026-12-12T18:00:00",
+          "ort": "Carl-Orff-Realschule Bad Dürkheim, Kanalstr. 23, 67098 Bad Dürkheim",
+          "halle": "Carl-Orff-Realschule Bad Dürkheim",
+          "gegner": "HSG Grethen/Maxdorf",
+          "gegner_id": 80984,
+          "match_id": 352363,
+          "lat": 49.466768,
+          "lon": 8.187112,
+          "spieltag": 13,
+          "phase_id": 12583,
+          "heim": false,
+          "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RPBKRKERMB1401": {
+          "datum": "2027-01-24T19:30:00",
+          "ort": "Reblandhalle Kirrweiler, Unterried 6, 67489 Kirrweiler",
+          "halle": "Reblandhalle Kirrweiler",
+          "gegner": "TV Kirrweiler 2",
+          "gegner_id": 80979,
+          "match_id": 352364,
+          "lat": 49.2957629,
+          "lon": 8.1726313657868,
+          "spieltag": 14,
+          "phase_id": 12583,
+          "heim": false,
+          "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RPBKRKERMB1602": {
+          "datum": "2027-02-13T19:30:00",
+          "ort": "Kandel, IGS Sporthalle, Schubertstr. 7, 76870 Kandel",
+          "halle": "Kandel, IGS Sporthalle",
+          "gegner": "TSV Kandel 2",
+          "gegner_id": 80975,
+          "match_id": 352377,
+          "lat": 49.0776545,
+          "lon": 8.193107699999999,
+          "spieltag": 16,
+          "phase_id": 12583,
+          "heim": false,
+          "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RPBKRKERMB1704": {
+          "datum": "2027-02-21T18:45:00",
+          "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
+          "halle": "TVR-Sporthalle Ludwigshafen",
+          "gegner": "TUS Heiligenstein 2",
+          "gegner_id": 80983,
+          "match_id": 352385,
+          "lat": 49.487078920701,
+          "lon": 8.3645870295515,
+          "spieltag": 17,
+          "phase_id": 12583,
+          "heim": true,
+          "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RPBKRKERMB1803": {
+          "datum": "2027-02-28T14:00:00",
+          "ort": "Wahagnieshalle Böhl-Iggelheim, Am Schwarzweiher 1, 67459 Böhl-Iggelheim",
+          "halle": "Wahagnieshalle Böhl-Iggelheim",
+          "gegner": "MSG Iggelheim/Meckenheim 3",
+          "gegner_id": 80978,
+          "match_id": 352390,
+          "lat": 49.3730454,
+          "lon": 8.303607598627,
+          "spieltag": 18,
+          "phase_id": 12583,
+          "heim": false,
+          "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RPBKRKERMB1903": {
+          "datum": "2027-03-13T18:00:00",
+          "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
+          "halle": "TSG-Sporthalle Mutterstadt",
+          "gegner": "SG LaFt - Herren",
+          "gegner_id": 80970,
+          "match_id": 352396,
+          "lat": 49.4445307,
+          "lon": 8.3595174,
+          "spieltag": 19,
+          "phase_id": 12583,
+          "heim": true,
+          "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RPBKRKERMB2004": {
+          "datum": "2027-03-20T16:00:00",
+          "ort": "Sporthalle Schwegenheim, Schulstr. 20, 67365 Schwegenheim",
+          "halle": "Sporthalle Schwegenheim",
+          "gegner": "HSV Lingenfeld/Schwegenheim 2",
+          "gegner_id": 80982,
+          "match_id": 352403,
+          "lat": null,
+          "lon": null,
+          "spieltag": 20,
+          "phase_id": 12583,
+          "heim": false,
+          "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RPBKRKERMB2102": {
+          "datum": "2027-04-10T16:00:00",
+          "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
+          "halle": "TVR-Sporthalle Ludwigshafen",
+          "gegner": "MSG Kaiserslautern/Dansenberg 2",
+          "gegner_id": 80974,
+          "match_id": 352407,
+          "lat": 49.487078920701,
+          "lon": 8.3645870295515,
+          "spieltag": 21,
+          "phase_id": 12583,
+          "heim": true,
+          "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RPBKRKERMB2205": {
+          "datum": "2027-04-18T20:00:00",
+          "ort": "Rehbachhalle Neuhofen, Jahnstr. 25, 67141 Neuhofen",
+          "halle": "Rehbachhalle Neuhofen",
+          "gegner": "TUS Neuhofen 2",
+          "gegner_id": 80976,
+          "match_id": 352416,
+          "lat": 49.420979,
+          "lon": 8.4234100661005,
+          "spieltag": 22,
+          "phase_id": 12583,
+          "heim": false,
+          "ohne_zeit": false,
+          "sequence": 0
+        }
       }
     },
     "damen": {
@@ -2573,6 +2573,32 @@
         },
         "gegner": {},
         "alltag": {}
+      },
+      "spieler": {
+        "quelle": {
+          "spiele_gelaufen": 0,
+          "mit_bericht": 0,
+          "ohne_bericht": 0,
+          "offen": 0
+        },
+        "schuetzen": [],
+        "verteilung": {
+          "eigene_schuetzen": 0,
+          "fremde_schuetzen": 0,
+          "eigene_tore": 0,
+          "fremde_tore": 0,
+          "groesster_anteil": null
+        },
+        "strafen": {
+          "gesamt": 0,
+          "abschnitte": {
+            "0-15": 0,
+            "15-30": 0,
+            "30-45": 0,
+            "45-60": 0
+          }
+        },
+        "spiele": []
       },
       "letzte_aenderungen": [],
       "spiele": {
@@ -2846,32 +2872,6 @@
           "ohne_zeit": false,
           "sequence": 0
         }
-      },
-      "spieler": {
-        "quelle": {
-          "spiele_gelaufen": 0,
-          "mit_bericht": 0,
-          "ohne_bericht": 0,
-          "offen": 0
-        },
-        "schuetzen": [],
-        "verteilung": {
-          "eigene_schuetzen": 0,
-          "fremde_schuetzen": 0,
-          "eigene_tore": 0,
-          "fremde_tore": 0,
-          "groesster_anteil": null
-        },
-        "strafen": {
-          "gesamt": 0,
-          "abschnitte": {
-            "0-15": 0,
-            "15-30": 0,
-            "30-45": 0,
-            "45-60": 0
-          }
-        },
-        "spiele": []
       }
     },
     "ma": {
@@ -3126,6 +3126,32 @@
         },
         "gegner": {},
         "alltag": {}
+      },
+      "spieler": {
+        "quelle": {
+          "spiele_gelaufen": 1,
+          "mit_bericht": 0,
+          "ohne_bericht": 0,
+          "offen": 1
+        },
+        "schuetzen": [],
+        "verteilung": {
+          "eigene_schuetzen": 0,
+          "fremde_schuetzen": 0,
+          "eigene_tore": 0,
+          "fremde_tore": 0,
+          "groesster_anteil": null
+        },
+        "strafen": {
+          "gesamt": 0,
+          "abschnitte": {
+            "0-15": 0,
+            "15-30": 0,
+            "30-45": 0,
+            "45-60": 0
+          }
+        },
+        "spiele": []
       },
       "letzte_aenderungen": [],
       "spiele": {
@@ -3406,32 +3432,6 @@
           "ohne_zeit": false,
           "sequence": 0
         }
-      },
-      "spieler": {
-        "quelle": {
-          "spiele_gelaufen": 1,
-          "mit_bericht": 0,
-          "ohne_bericht": 0,
-          "offen": 1
-        },
-        "schuetzen": [],
-        "verteilung": {
-          "eigene_schuetzen": 0,
-          "fremde_schuetzen": 0,
-          "eigene_tore": 0,
-          "fremde_tore": 0,
-          "groesster_anteil": null
-        },
-        "strafen": {
-          "gesamt": 0,
-          "abschnitte": {
-            "0-15": 0,
-            "15-30": 0,
-            "30-45": 0,
-            "45-60": 0
-          }
-        },
-        "spiele": []
       }
     },
     "wa": {
@@ -3639,6 +3639,32 @@
         },
         "gegner": {},
         "alltag": {}
+      },
+      "spieler": {
+        "quelle": {
+          "spiele_gelaufen": 2,
+          "mit_bericht": 0,
+          "ohne_bericht": 0,
+          "offen": 2
+        },
+        "schuetzen": [],
+        "verteilung": {
+          "eigene_schuetzen": 0,
+          "fremde_schuetzen": 0,
+          "eigene_tore": 0,
+          "fremde_tore": 0,
+          "groesster_anteil": null
+        },
+        "strafen": {
+          "gesamt": 0,
+          "abschnitte": {
+            "0-15": 0,
+            "15-30": 0,
+            "30-45": 0,
+            "45-60": 0
+          }
+        },
+        "spiele": []
       },
       "letzte_aenderungen": [],
       "spiele": {
@@ -3926,32 +3952,6 @@
           "ohne_zeit": false,
           "sequence": 0
         }
-      },
-      "spieler": {
-        "quelle": {
-          "spiele_gelaufen": 2,
-          "mit_bericht": 0,
-          "ohne_bericht": 0,
-          "offen": 2
-        },
-        "schuetzen": [],
-        "verteilung": {
-          "eigene_schuetzen": 0,
-          "fremde_schuetzen": 0,
-          "eigene_tore": 0,
-          "fremde_tore": 0,
-          "groesster_anteil": null
-        },
-        "strafen": {
-          "gesamt": 0,
-          "abschnitte": {
-            "0-15": 0,
-            "15-30": 0,
-            "30-45": 0,
-            "45-60": 0
-          }
-        },
-        "spiele": []
       }
     },
     "mb": {
@@ -4188,6 +4188,32 @@
         },
         "gegner": {},
         "alltag": {}
+      },
+      "spieler": {
+        "quelle": {
+          "spiele_gelaufen": 3,
+          "mit_bericht": 0,
+          "ohne_bericht": 0,
+          "offen": 3
+        },
+        "schuetzen": [],
+        "verteilung": {
+          "eigene_schuetzen": 0,
+          "fremde_schuetzen": 0,
+          "eigene_tore": 0,
+          "fremde_tore": 0,
+          "groesster_anteil": null
+        },
+        "strafen": {
+          "gesamt": 0,
+          "abschnitte": {
+            "0-15": 0,
+            "15-30": 0,
+            "30-45": 0,
+            "45-60": 0
+          }
+        },
+        "spiele": []
       },
       "letzte_aenderungen": [],
       "spiele": {
@@ -4512,32 +4538,6 @@
           "ohne_zeit": false,
           "sequence": 0
         }
-      },
-      "spieler": {
-        "quelle": {
-          "spiele_gelaufen": 3,
-          "mit_bericht": 0,
-          "ohne_bericht": 0,
-          "offen": 3
-        },
-        "schuetzen": [],
-        "verteilung": {
-          "eigene_schuetzen": 0,
-          "fremde_schuetzen": 0,
-          "eigene_tore": 0,
-          "fremde_tore": 0,
-          "groesster_anteil": null
-        },
-        "strafen": {
-          "gesamt": 0,
-          "abschnitte": {
-            "0-15": 0,
-            "15-30": 0,
-            "30-45": 0,
-            "45-60": 0
-          }
-        },
-        "spiele": []
       }
     },
     "mb-2": {
@@ -4775,6 +4775,32 @@
           }
         },
         "alltag": {}
+      },
+      "spieler": {
+        "quelle": {
+          "spiele_gelaufen": 4,
+          "mit_bericht": 0,
+          "ohne_bericht": 0,
+          "offen": 4
+        },
+        "schuetzen": [],
+        "verteilung": {
+          "eigene_schuetzen": 0,
+          "fremde_schuetzen": 0,
+          "eigene_tore": 0,
+          "fremde_tore": 0,
+          "groesster_anteil": null
+        },
+        "strafen": {
+          "gesamt": 0,
+          "abschnitte": {
+            "0-15": 0,
+            "15-30": 0,
+            "30-45": 0,
+            "45-60": 0
+          }
+        },
+        "spiele": []
       },
       "letzte_aenderungen": [],
       "spiele": {
@@ -5061,32 +5087,6 @@
           "ohne_zeit": false,
           "sequence": 0
         }
-      },
-      "spieler": {
-        "quelle": {
-          "spiele_gelaufen": 4,
-          "mit_bericht": 0,
-          "ohne_bericht": 0,
-          "offen": 4
-        },
-        "schuetzen": [],
-        "verteilung": {
-          "eigene_schuetzen": 0,
-          "fremde_schuetzen": 0,
-          "eigene_tore": 0,
-          "fremde_tore": 0,
-          "groesster_anteil": null
-        },
-        "strafen": {
-          "gesamt": 0,
-          "abschnitte": {
-            "0-15": 0,
-            "15-30": 0,
-            "30-45": 0,
-            "45-60": 0
-          }
-        },
-        "spiele": []
       }
     },
     "wb": {
@@ -5248,6 +5248,32 @@
         "gegner": {},
         "alltag": {}
       },
+      "spieler": {
+        "quelle": {
+          "spiele_gelaufen": 2,
+          "mit_bericht": 0,
+          "ohne_bericht": 0,
+          "offen": 2
+        },
+        "schuetzen": [],
+        "verteilung": {
+          "eigene_schuetzen": 0,
+          "fremde_schuetzen": 0,
+          "eigene_tore": 0,
+          "fremde_tore": 0,
+          "groesster_anteil": null
+        },
+        "strafen": {
+          "gesamt": 0,
+          "abschnitte": {
+            "0-15": 0,
+            "15-30": 0,
+            "30-45": 0,
+            "45-60": 0
+          }
+        },
+        "spiele": []
+      },
       "letzte_aenderungen": [],
       "spiele": {
         "2627RSWRLBJWC0102": {
@@ -5354,32 +5380,6 @@
           "ohne_zeit": false,
           "sequence": 0
         }
-      },
-      "spieler": {
-        "quelle": {
-          "spiele_gelaufen": 2,
-          "mit_bericht": 0,
-          "ohne_bericht": 0,
-          "offen": 2
-        },
-        "schuetzen": [],
-        "verteilung": {
-          "eigene_schuetzen": 0,
-          "fremde_schuetzen": 0,
-          "eigene_tore": 0,
-          "fremde_tore": 0,
-          "groesster_anteil": null
-        },
-        "strafen": {
-          "gesamt": 0,
-          "abschnitte": {
-            "0-15": 0,
-            "15-30": 0,
-            "30-45": 0,
-            "45-60": 0
-          }
-        },
-        "spiele": []
       }
     },
     "gc": {
@@ -5615,6 +5615,32 @@
         },
         "gegner": {},
         "alltag": {}
+      },
+      "spieler": {
+        "quelle": {
+          "spiele_gelaufen": 4,
+          "mit_bericht": 0,
+          "ohne_bericht": 0,
+          "offen": 4
+        },
+        "schuetzen": [],
+        "verteilung": {
+          "eigene_schuetzen": 0,
+          "fremde_schuetzen": 0,
+          "eigene_tore": 0,
+          "fremde_tore": 0,
+          "groesster_anteil": null
+        },
+        "strafen": {
+          "gesamt": 0,
+          "abschnitte": {
+            "0-15": 0,
+            "15-30": 0,
+            "30-45": 0,
+            "45-60": 0
+          }
+        },
+        "spiele": []
       },
       "letzte_aenderungen": [],
       "spiele": {
@@ -5916,32 +5942,6 @@
           "ohne_zeit": false,
           "sequence": 0
         }
-      },
-      "spieler": {
-        "quelle": {
-          "spiele_gelaufen": 4,
-          "mit_bericht": 0,
-          "ohne_bericht": 0,
-          "offen": 4
-        },
-        "schuetzen": [],
-        "verteilung": {
-          "eigene_schuetzen": 0,
-          "fremde_schuetzen": 0,
-          "eigene_tore": 0,
-          "fremde_tore": 0,
-          "groesster_anteil": null
-        },
-        "strafen": {
-          "gesamt": 0,
-          "abschnitte": {
-            "0-15": 0,
-            "15-30": 0,
-            "30-45": 0,
-            "45-60": 0
-          }
-        },
-        "spiele": []
       }
     },
     "gc-2": {
@@ -6175,6 +6175,32 @@
         },
         "gegner": {},
         "alltag": {}
+      },
+      "spieler": {
+        "quelle": {
+          "spiele_gelaufen": 2,
+          "mit_bericht": 0,
+          "ohne_bericht": 0,
+          "offen": 2
+        },
+        "schuetzen": [],
+        "verteilung": {
+          "eigene_schuetzen": 0,
+          "fremde_schuetzen": 0,
+          "eigene_tore": 0,
+          "fremde_tore": 0,
+          "groesster_anteil": null
+        },
+        "strafen": {
+          "gesamt": 0,
+          "abschnitte": {
+            "0-15": 0,
+            "15-30": 0,
+            "30-45": 0,
+            "45-60": 0
+          }
+        },
+        "spiele": []
       },
       "letzte_aenderungen": [],
       "spiele": {
@@ -6432,32 +6458,6 @@
           "ohne_zeit": false,
           "sequence": 0
         }
-      },
-      "spieler": {
-        "quelle": {
-          "spiele_gelaufen": 2,
-          "mit_bericht": 0,
-          "ohne_bericht": 0,
-          "offen": 2
-        },
-        "schuetzen": [],
-        "verteilung": {
-          "eigene_schuetzen": 0,
-          "fremde_schuetzen": 0,
-          "eigene_tore": 0,
-          "fremde_tore": 0,
-          "groesster_anteil": null
-        },
-        "strafen": {
-          "gesamt": 0,
-          "abschnitte": {
-            "0-15": 0,
-            "15-30": 0,
-            "30-45": 0,
-            "45-60": 0
-          }
-        },
-        "spiele": []
       }
     },
     "wc": {
@@ -6633,6 +6633,32 @@
         "gegner": {},
         "alltag": {}
       },
+      "spieler": {
+        "quelle": {
+          "spiele_gelaufen": 3,
+          "mit_bericht": 0,
+          "ohne_bericht": 0,
+          "offen": 3
+        },
+        "schuetzen": [],
+        "verteilung": {
+          "eigene_schuetzen": 0,
+          "fremde_schuetzen": 0,
+          "eigene_tore": 0,
+          "fremde_tore": 0,
+          "groesster_anteil": null
+        },
+        "strafen": {
+          "gesamt": 0,
+          "abschnitte": {
+            "0-15": 0,
+            "15-30": 0,
+            "30-45": 0,
+            "45-60": 0
+          }
+        },
+        "spiele": []
+      },
       "letzte_aenderungen": [],
       "spiele": {
         "2627RSWRLCJWA0101": {
@@ -6746,32 +6772,6 @@
           "ohne_zeit": false,
           "sequence": 0
         }
-      },
-      "spieler": {
-        "quelle": {
-          "spiele_gelaufen": 3,
-          "mit_bericht": 0,
-          "ohne_bericht": 0,
-          "offen": 3
-        },
-        "schuetzen": [],
-        "verteilung": {
-          "eigene_schuetzen": 0,
-          "fremde_schuetzen": 0,
-          "eigene_tore": 0,
-          "fremde_tore": 0,
-          "groesster_anteil": null
-        },
-        "strafen": {
-          "gesamt": 0,
-          "abschnitte": {
-            "0-15": 0,
-            "15-30": 0,
-            "30-45": 0,
-            "45-60": 0
-          }
-        },
-        "spiele": []
       }
     },
     "wc-2": {
@@ -7020,6 +7020,32 @@
         },
         "gegner": {},
         "alltag": {}
+      },
+      "spieler": {
+        "quelle": {
+          "spiele_gelaufen": 2,
+          "mit_bericht": 0,
+          "ohne_bericht": 0,
+          "offen": 2
+        },
+        "schuetzen": [],
+        "verteilung": {
+          "eigene_schuetzen": 0,
+          "fremde_schuetzen": 0,
+          "eigene_tore": 0,
+          "fremde_tore": 0,
+          "groesster_anteil": null
+        },
+        "strafen": {
+          "gesamt": 0,
+          "abschnitte": {
+            "0-15": 0,
+            "15-30": 0,
+            "30-45": 0,
+            "45-60": 0
+          }
+        },
+        "spiele": []
       },
       "letzte_aenderungen": [],
       "spiele": {
@@ -7307,32 +7333,6 @@
           "ohne_zeit": false,
           "sequence": 0
         }
-      },
-      "spieler": {
-        "quelle": {
-          "spiele_gelaufen": 2,
-          "mit_bericht": 0,
-          "ohne_bericht": 0,
-          "offen": 2
-        },
-        "schuetzen": [],
-        "verteilung": {
-          "eigene_schuetzen": 0,
-          "fremde_schuetzen": 0,
-          "eigene_tore": 0,
-          "fremde_tore": 0,
-          "groesster_anteil": null
-        },
-        "strafen": {
-          "gesamt": 0,
-          "abschnitte": {
-            "0-15": 0,
-            "15-30": 0,
-            "30-45": 0,
-            "45-60": 0
-          }
-        },
-        "spiele": []
       }
     },
     "gd": {
@@ -7582,6 +7582,32 @@
           }
         },
         "alltag": {}
+      },
+      "spieler": {
+        "quelle": {
+          "spiele_gelaufen": 5,
+          "mit_bericht": 0,
+          "ohne_bericht": 0,
+          "offen": 5
+        },
+        "schuetzen": [],
+        "verteilung": {
+          "eigene_schuetzen": 0,
+          "fremde_schuetzen": 0,
+          "eigene_tore": 0,
+          "fremde_tore": 0,
+          "groesster_anteil": null
+        },
+        "strafen": {
+          "gesamt": 0,
+          "abschnitte": {
+            "0-15": 0,
+            "15-30": 0,
+            "30-45": 0,
+            "45-60": 0
+          }
+        },
+        "spiele": []
       },
       "letzte_aenderungen": [],
       "spiele": {
@@ -7905,32 +7931,6 @@
           "ohne_zeit": false,
           "sequence": 0
         }
-      },
-      "spieler": {
-        "quelle": {
-          "spiele_gelaufen": 5,
-          "mit_bericht": 0,
-          "ohne_bericht": 0,
-          "offen": 5
-        },
-        "schuetzen": [],
-        "verteilung": {
-          "eigene_schuetzen": 0,
-          "fremde_schuetzen": 0,
-          "eigene_tore": 0,
-          "fremde_tore": 0,
-          "groesster_anteil": null
-        },
-        "strafen": {
-          "gesamt": 0,
-          "abschnitte": {
-            "0-15": 0,
-            "15-30": 0,
-            "30-45": 0,
-            "45-60": 0
-          }
-        },
-        "spiele": []
       }
     },
     "wd": {
@@ -8157,6 +8157,32 @@
         },
         "gegner": {},
         "alltag": {}
+      },
+      "spieler": {
+        "quelle": {
+          "spiele_gelaufen": 1,
+          "mit_bericht": 0,
+          "ohne_bericht": 0,
+          "offen": 1
+        },
+        "schuetzen": [],
+        "verteilung": {
+          "eigene_schuetzen": 0,
+          "fremde_schuetzen": 0,
+          "eigene_tore": 0,
+          "fremde_tore": 0,
+          "groesster_anteil": null
+        },
+        "strafen": {
+          "gesamt": 0,
+          "abschnitte": {
+            "0-15": 0,
+            "15-30": 0,
+            "30-45": 0,
+            "45-60": 0
+          }
+        },
+        "spiele": []
       },
       "letzte_aenderungen": [],
       "spiele": {
@@ -8452,32 +8478,6 @@
           "ohne_zeit": false,
           "sequence": 0
         }
-      },
-      "spieler": {
-        "quelle": {
-          "spiele_gelaufen": 1,
-          "mit_bericht": 0,
-          "ohne_bericht": 0,
-          "offen": 1
-        },
-        "schuetzen": [],
-        "verteilung": {
-          "eigene_schuetzen": 0,
-          "fremde_schuetzen": 0,
-          "eigene_tore": 0,
-          "fremde_tore": 0,
-          "groesster_anteil": null
-        },
-        "strafen": {
-          "gesamt": 0,
-          "abschnitte": {
-            "0-15": 0,
-            "15-30": 0,
-            "30-45": 0,
-            "45-60": 0
-          }
-        },
-        "spiele": []
       }
     },
     "wd-2": {
@@ -8712,6 +8712,32 @@
         },
         "gegner": {},
         "alltag": {}
+      },
+      "spieler": {
+        "quelle": {
+          "spiele_gelaufen": 3,
+          "mit_bericht": 0,
+          "ohne_bericht": 0,
+          "offen": 3
+        },
+        "schuetzen": [],
+        "verteilung": {
+          "eigene_schuetzen": 0,
+          "fremde_schuetzen": 0,
+          "eigene_tore": 0,
+          "fremde_tore": 0,
+          "groesster_anteil": null
+        },
+        "strafen": {
+          "gesamt": 0,
+          "abschnitte": {
+            "0-15": 0,
+            "15-30": 0,
+            "30-45": 0,
+            "45-60": 0
+          }
+        },
+        "spiele": []
       },
       "letzte_aenderungen": [],
       "spiele": {
@@ -9006,32 +9032,6 @@
           "ohne_zeit": false,
           "sequence": 0
         }
-      },
-      "spieler": {
-        "quelle": {
-          "spiele_gelaufen": 3,
-          "mit_bericht": 0,
-          "ohne_bericht": 0,
-          "offen": 3
-        },
-        "schuetzen": [],
-        "verteilung": {
-          "eigene_schuetzen": 0,
-          "fremde_schuetzen": 0,
-          "eigene_tore": 0,
-          "fremde_tore": 0,
-          "groesster_anteil": null
-        },
-        "strafen": {
-          "gesamt": 0,
-          "abschnitte": {
-            "0-15": 0,
-            "15-30": 0,
-            "30-45": 0,
-            "45-60": 0
-          }
-        },
-        "spiele": []
       }
     },
     "ge": {
@@ -9254,6 +9254,32 @@
         },
         "gegner": {},
         "alltag": {}
+      },
+      "spieler": {
+        "quelle": {
+          "spiele_gelaufen": 2,
+          "mit_bericht": 0,
+          "ohne_bericht": 0,
+          "offen": 2
+        },
+        "schuetzen": [],
+        "verteilung": {
+          "eigene_schuetzen": 0,
+          "fremde_schuetzen": 0,
+          "eigene_tore": 0,
+          "fremde_tore": 0,
+          "groesster_anteil": null
+        },
+        "strafen": {
+          "gesamt": 0,
+          "abschnitte": {
+            "0-15": 0,
+            "15-30": 0,
+            "30-45": 0,
+            "45-60": 0
+          }
+        },
+        "spiele": []
       },
       "letzte_aenderungen": [],
       "spiele": {
@@ -9586,32 +9612,6 @@
           "ohne_zeit": false,
           "sequence": 0
         }
-      },
-      "spieler": {
-        "quelle": {
-          "spiele_gelaufen": 2,
-          "mit_bericht": 0,
-          "ohne_bericht": 0,
-          "offen": 2
-        },
-        "schuetzen": [],
-        "verteilung": {
-          "eigene_schuetzen": 0,
-          "fremde_schuetzen": 0,
-          "eigene_tore": 0,
-          "fremde_tore": 0,
-          "groesster_anteil": null
-        },
-        "strafen": {
-          "gesamt": 0,
-          "abschnitte": {
-            "0-15": 0,
-            "15-30": 0,
-            "30-45": 0,
-            "45-60": 0
-          }
-        },
-        "spiele": []
       }
     },
     "ge-2": {
@@ -9832,6 +9832,32 @@
         "gegner": {},
         "alltag": {}
       },
+      "spieler": {
+        "quelle": {
+          "spiele_gelaufen": 1,
+          "mit_bericht": 0,
+          "ohne_bericht": 0,
+          "offen": 1
+        },
+        "schuetzen": [],
+        "verteilung": {
+          "eigene_schuetzen": 0,
+          "fremde_schuetzen": 0,
+          "eigene_tore": 0,
+          "fremde_tore": 0,
+          "groesster_anteil": null
+        },
+        "strafen": {
+          "gesamt": 0,
+          "abschnitte": {
+            "0-15": 0,
+            "15-30": 0,
+            "30-45": 0,
+            "45-60": 0
+          }
+        },
+        "spiele": []
+      },
       "letzte_aenderungen": [],
       "spiele": {
         "2627RPBKRKEJGE0102": {
@@ -9961,32 +9987,6 @@
           "ohne_zeit": false,
           "sequence": 0
         }
-      },
-      "spieler": {
-        "quelle": {
-          "spiele_gelaufen": 1,
-          "mit_bericht": 0,
-          "ohne_bericht": 0,
-          "offen": 1
-        },
-        "schuetzen": [],
-        "verteilung": {
-          "eigene_schuetzen": 0,
-          "fremde_schuetzen": 0,
-          "eigene_tore": 0,
-          "fremde_tore": 0,
-          "groesster_anteil": null
-        },
-        "strafen": {
-          "gesamt": 0,
-          "abschnitte": {
-            "0-15": 0,
-            "15-30": 0,
-            "30-45": 0,
-            "45-60": 0
-          }
-        },
-        "spiele": []
       }
     },
     "ge-3": {
@@ -10234,6 +10234,32 @@
         "gegner": {},
         "alltag": {}
       },
+      "spieler": {
+        "quelle": {
+          "spiele_gelaufen": 2,
+          "mit_bericht": 0,
+          "ohne_bericht": 0,
+          "offen": 2
+        },
+        "schuetzen": [],
+        "verteilung": {
+          "eigene_schuetzen": 0,
+          "fremde_schuetzen": 0,
+          "eigene_tore": 0,
+          "fremde_tore": 0,
+          "groesster_anteil": null
+        },
+        "strafen": {
+          "gesamt": 0,
+          "abschnitte": {
+            "0-15": 0,
+            "15-30": 0,
+            "30-45": 0,
+            "45-60": 0
+          }
+        },
+        "spiele": []
+      },
       "letzte_aenderungen": [],
       "spiele": {
         "2627RPBKRKEJGD0103": {
@@ -10385,32 +10411,6 @@
           "ohne_zeit": false,
           "sequence": 0
         }
-      },
-      "spieler": {
-        "quelle": {
-          "spiele_gelaufen": 2,
-          "mit_bericht": 0,
-          "ohne_bericht": 0,
-          "offen": 2
-        },
-        "schuetzen": [],
-        "verteilung": {
-          "eigene_schuetzen": 0,
-          "fremde_schuetzen": 0,
-          "eigene_tore": 0,
-          "fremde_tore": 0,
-          "groesster_anteil": null
-        },
-        "strafen": {
-          "gesamt": 0,
-          "abschnitte": {
-            "0-15": 0,
-            "15-30": 0,
-            "30-45": 0,
-            "45-60": 0
-          }
-        },
-        "spiele": []
       }
     },
     "gf": {
@@ -10606,6 +10606,32 @@
         },
         "gegner": {},
         "alltag": {}
+      },
+      "spieler": {
+        "quelle": {
+          "spiele_gelaufen": 0,
+          "mit_bericht": 0,
+          "ohne_bericht": 0,
+          "offen": 0
+        },
+        "schuetzen": [],
+        "verteilung": {
+          "eigene_schuetzen": 0,
+          "fremde_schuetzen": 0,
+          "eigene_tore": 0,
+          "fremde_tore": 0,
+          "groesster_anteil": null
+        },
+        "strafen": {
+          "gesamt": 0,
+          "abschnitte": {
+            "0-15": 0,
+            "15-30": 0,
+            "30-45": 0,
+            "45-60": 0
+          }
+        },
+        "spiele": []
       },
       "letzte_aenderungen": [],
       "spiele": {
@@ -10819,32 +10845,6 @@
           "ohne_zeit": false,
           "sequence": 0
         }
-      },
-      "spieler": {
-        "quelle": {
-          "spiele_gelaufen": 0,
-          "mit_bericht": 0,
-          "ohne_bericht": 0,
-          "offen": 0
-        },
-        "schuetzen": [],
-        "verteilung": {
-          "eigene_schuetzen": 0,
-          "fremde_schuetzen": 0,
-          "eigene_tore": 0,
-          "fremde_tore": 0,
-          "groesster_anteil": null
-        },
-        "strafen": {
-          "gesamt": 0,
-          "abschnitte": {
-            "0-15": 0,
-            "15-30": 0,
-            "30-45": 0,
-            "45-60": 0
-          }
-        },
-        "spiele": []
       }
     },
     "gf-2": {
@@ -11031,6 +11031,32 @@
         "gegner": {},
         "alltag": {}
       },
+      "spieler": {
+        "quelle": {
+          "spiele_gelaufen": 0,
+          "mit_bericht": 0,
+          "ohne_bericht": 0,
+          "offen": 0
+        },
+        "schuetzen": [],
+        "verteilung": {
+          "eigene_schuetzen": 0,
+          "fremde_schuetzen": 0,
+          "eigene_tore": 0,
+          "fremde_tore": 0,
+          "groesster_anteil": null
+        },
+        "strafen": {
+          "gesamt": 0,
+          "abschnitte": {
+            "0-15": 0,
+            "15-30": 0,
+            "30-45": 0,
+            "45-60": 0
+          }
+        },
+        "spiele": []
+      },
       "letzte_aenderungen": [],
       "spiele": {
         "2627RPBKROFJGI0103": {
@@ -11213,32 +11239,6 @@
           "ohne_zeit": false,
           "sequence": 0
         }
-      },
-      "spieler": {
-        "quelle": {
-          "spiele_gelaufen": 0,
-          "mit_bericht": 0,
-          "ohne_bericht": 0,
-          "offen": 0
-        },
-        "schuetzen": [],
-        "verteilung": {
-          "eigene_schuetzen": 0,
-          "fremde_schuetzen": 0,
-          "eigene_tore": 0,
-          "fremde_tore": 0,
-          "groesster_anteil": null
-        },
-        "strafen": {
-          "gesamt": 0,
-          "abschnitte": {
-            "0-15": 0,
-            "15-30": 0,
-            "30-45": 0,
-            "45-60": 0
-          }
-        },
-        "spiele": []
       }
     },
     "minis": {
@@ -11316,6 +11316,32 @@
         },
         "gegner": {},
         "alltag": {}
+      },
+      "spieler": {
+        "quelle": {
+          "spiele_gelaufen": 0,
+          "mit_bericht": 0,
+          "ohne_bericht": 0,
+          "offen": 0
+        },
+        "schuetzen": [],
+        "verteilung": {
+          "eigene_schuetzen": 0,
+          "fremde_schuetzen": 0,
+          "eigene_tore": 0,
+          "fremde_tore": 0,
+          "groesster_anteil": null
+        },
+        "strafen": {
+          "gesamt": 0,
+          "abschnitte": {
+            "0-15": 0,
+            "15-30": 0,
+            "30-45": 0,
+            "45-60": 0
+          }
+        },
+        "spiele": []
       },
       "letzte_aenderungen": [],
       "spiele": {
@@ -11424,32 +11450,6 @@
           "ohne_zeit": false,
           "sequence": 0
         }
-      },
-      "spieler": {
-        "quelle": {
-          "spiele_gelaufen": 0,
-          "mit_bericht": 0,
-          "ohne_bericht": 0,
-          "offen": 0
-        },
-        "schuetzen": [],
-        "verteilung": {
-          "eigene_schuetzen": 0,
-          "fremde_schuetzen": 0,
-          "eigene_tore": 0,
-          "fremde_tore": 0,
-          "groesster_anteil": null
-        },
-        "strafen": {
-          "gesamt": 0,
-          "abschnitte": {
-            "0-15": 0,
-            "15-30": 0,
-            "30-45": 0,
-            "45-60": 0
-          }
-        },
-        "spiele": []
       }
     },
     "minis-2": {
@@ -11527,6 +11527,32 @@
         },
         "gegner": {},
         "alltag": {}
+      },
+      "spieler": {
+        "quelle": {
+          "spiele_gelaufen": 0,
+          "mit_bericht": 0,
+          "ohne_bericht": 0,
+          "offen": 0
+        },
+        "schuetzen": [],
+        "verteilung": {
+          "eigene_schuetzen": 0,
+          "fremde_schuetzen": 0,
+          "eigene_tore": 0,
+          "fremde_tore": 0,
+          "groesster_anteil": null
+        },
+        "strafen": {
+          "gesamt": 0,
+          "abschnitte": {
+            "0-15": 0,
+            "15-30": 0,
+            "30-45": 0,
+            "45-60": 0
+          }
+        },
+        "spiele": []
       },
       "letzte_aenderungen": [],
       "spiele": {
@@ -11635,32 +11661,6 @@
           "ohne_zeit": false,
           "sequence": 0
         }
-      },
-      "spieler": {
-        "quelle": {
-          "spiele_gelaufen": 0,
-          "mit_bericht": 0,
-          "ohne_bericht": 0,
-          "offen": 0
-        },
-        "schuetzen": [],
-        "verteilung": {
-          "eigene_schuetzen": 0,
-          "fremde_schuetzen": 0,
-          "eigene_tore": 0,
-          "fremde_tore": 0,
-          "groesster_anteil": null
-        },
-        "strafen": {
-          "gesamt": 0,
-          "abschnitte": {
-            "0-15": 0,
-            "15-30": 0,
-            "30-45": 0,
-            "45-60": 0
-          }
-        },
-        "spiele": []
       }
     },
     "minis-3": {
@@ -11738,6 +11738,32 @@
         },
         "gegner": {},
         "alltag": {}
+      },
+      "spieler": {
+        "quelle": {
+          "spiele_gelaufen": 0,
+          "mit_bericht": 0,
+          "ohne_bericht": 0,
+          "offen": 0
+        },
+        "schuetzen": [],
+        "verteilung": {
+          "eigene_schuetzen": 0,
+          "fremde_schuetzen": 0,
+          "eigene_tore": 0,
+          "fremde_tore": 0,
+          "groesster_anteil": null
+        },
+        "strafen": {
+          "gesamt": 0,
+          "abschnitte": {
+            "0-15": 0,
+            "15-30": 0,
+            "30-45": 0,
+            "45-60": 0
+          }
+        },
+        "spiele": []
       },
       "letzte_aenderungen": [],
       "spiele": {
@@ -11846,32 +11872,6 @@
           "ohne_zeit": false,
           "sequence": 0
         }
-      },
-      "spieler": {
-        "quelle": {
-          "spiele_gelaufen": 0,
-          "mit_bericht": 0,
-          "ohne_bericht": 0,
-          "offen": 0
-        },
-        "schuetzen": [],
-        "verteilung": {
-          "eigene_schuetzen": 0,
-          "fremde_schuetzen": 0,
-          "eigene_tore": 0,
-          "fremde_tore": 0,
-          "groesster_anteil": null
-        },
-        "strafen": {
-          "gesamt": 0,
-          "abschnitte": {
-            "0-15": 0,
-            "15-30": 0,
-            "30-45": 0,
-            "45-60": 0
-          }
-        },
-        "spiele": []
       }
     }
   }

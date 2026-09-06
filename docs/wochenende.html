@@ -233,6 +233,27 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 .form b.N { color: var(--niederlage); border-color: var(--niederlage); }
 .form b.U { color: var(--leise); border-color: var(--linie); }
 
+/* Spielfilm: eine Kurve je Spiel, Fuehrung ueber der Mittellinie. */
+.filme { display: grid; gap: 26px; margin-bottom: 6px; }
+/* Nicht .kopf nennen: die Klasse traegt im Seitenkopf einen schwarzen
+   Grund, der hier mitten im Text landen wuerde. */
+.filmkopf { display: flex; align-items: baseline; gap: 8px;
+  font-size: .86rem; margin-bottom: 6px; }
+.filmkopf .wann { color: var(--leise); font-variant-numeric: tabular-nums; }
+.filmkopf .gegen { flex: 1; min-width: 0; overflow: hidden;
+  text-overflow: ellipsis; white-space: nowrap; }
+.filmkopf .stand { font-weight: 600; font-variant-numeric: tabular-nums; }
+.spielfilm svg { width: 100%; height: auto; display: block; overflow: visible; }
+.spielfilm .gitter { stroke: var(--linie-zart); stroke-width: 1; }
+/* Die Nulllinie traegt die ganze Aussage: darueber gefuehrt, darunter nicht. */
+.spielfilm .gitter.null { stroke: var(--linie); }
+.spielfilm .linie { fill: none; stroke: var(--gold); stroke-width: 2;
+  stroke-linejoin: round; stroke-linecap: round; }
+.spielfilm text { fill: var(--leise); font-size: 11px; font-family: inherit;
+  font-variant-numeric: tabular-nums; }
+.spielfilm .jetzt { fill: var(--tinte); font-weight: 700; }
+.laufhinweis { margin: 6px 0 0; font-size: .84rem; color: var(--tinte-weich); }
+
 .verlauf { margin: 0 0 30px; }
 .verlauf .titel { font-size: .74rem; font-weight: 600; letter-spacing: .06em;
                   text-transform: uppercase; color: var(--leise);
@@ -329,6 +350,22 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 .verbrauch .pointe { margin: 8px 0 0; font-size: .86rem; color: var(--leise);
                      font-style: italic; }
 
+/* Torschuetzen. Bewusst wie die Ligatabelle aufgebaut - die Seite hat schon
+   eine Tabellenform, eine zweite waere nur Unruhe. */
+.schuetzen { width: 100%; border-collapse: collapse; font-size: .94rem; }
+.schuetzen th { text-align: left; font-size: .72rem; font-weight: 600;
+  letter-spacing: .05em; text-transform: uppercase; color: var(--leise);
+  padding-bottom: 9px; border-bottom: 1px solid var(--linie); }
+.schuetzen td { padding: 10px 0; border-bottom: 1px solid var(--linie-zart); }
+.schuetzen th.pl, .schuetzen td.pl { width: 26px; color: var(--leise);
+  font-size: .86rem; }
+.schuetzen th.zahl, .schuetzen td.zahl { text-align: right; width: 52px;
+  padding-right: 14px; color: var(--tinte-weich); }
+.schuetzen th:last-child, .schuetzen td.pkt { text-align: right; width: 46px;
+  font-weight: 600; }
+.schuetzen .klein { font-size: .82rem; color: var(--leise); font-weight: 400; }
+.schuetzen .leer { color: var(--linie); }
+.schuetzen tbody tr:first-child td.pkt { color: var(--gold-tief); }
 .statfuss { margin: 18px 0 0; font-size: .8rem; color: var(--leise); line-height: 1.45; }
 
 /* ---------- Countdown, Hinspiel, Gegner ---------- */
@@ -1058,7 +1095,7 @@ table.tabelle tr.wir td.platz { box-shadow: inset 2px 0 0 var(--gold); }
 </div></div>
 
   <p class="fuss">
-    Stand: 06.09.2026, 15:16 Uhr. Wird täglich mit
+    Stand: 06.09.2026, 16:01 Uhr. Wird täglich mit
     <a href="https://www.handball.net" target="_blank" rel="noopener">handball.net</a>
     abgeglichen. <a href="./">Spielplan abonnieren</a>
   </p>
