@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-06T15:46:09+00:00",
+  "aktualisiert": "2026-09-06T16:16:05+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -5557,10 +5557,24 @@
             "gegentore": 60,
             "differenz": -18
           }
+        ],
+        "fehlend": [
+          {
+            "datum": "2026-09-06T16:30:00",
+            "gegner": "Hf Untere Saar",
+            "ergebnis": {
+              "heim": 31,
+              "gast": 27,
+              "eigene": 27,
+              "fremde": 31,
+              "ausgang": "N"
+            }
+          }
         ]
       },
       "form": [
         "S",
+        "N",
         "N"
       ],
       "statistik": {
@@ -5586,8 +5600,8 @@
           "gesamt": {
             "s": 1,
             "u": 0,
-            "n": 1,
-            "spiele": 2
+            "n": 2,
+            "spiele": 3
           },
           "heim": {
             "s": 0,
@@ -5598,24 +5612,24 @@
           "auswaerts": {
             "s": 1,
             "u": 0,
-            "n": 0,
-            "spiele": 1
+            "n": 1,
+            "spiele": 2
           }
         },
         "serien": {
           "ohne_niederlage": 1,
-          "aktuell": 1,
+          "aktuell": 2,
           "aktuell_art": "N"
         },
         "krimis": {
           "anzahl": 1,
-          "gesamt": 2,
-          "anteil": 50
+          "gesamt": 3,
+          "anteil": 33
         },
         "tore": {
-          "erzielt": 59,
-          "kassiert": 57,
-          "schnitt": 29.5,
+          "erzielt": 86,
+          "kassiert": 88,
+          "schnitt": 28.7,
           "torreichstes": {
             "gegner": "HSG Wittlich",
             "stand": "30:32",
@@ -5629,9 +5643,9 @@
             "schnitt": 0
           },
           "frueh": {
-            "spiele": 2,
+            "spiele": 3,
             "punkte": 2,
-            "schnitt": 1.0
+            "schnitt": 0.67
           }
         },
         "gegner": {},
@@ -5639,10 +5653,10 @@
       },
       "spieler": {
         "quelle": {
-          "spiele_gelaufen": 2,
+          "spiele_gelaufen": 3,
           "mit_bericht": 0,
           "ohne_bericht": 0,
-          "offen": 2
+          "offen": 3
         },
         "schuetzen": [],
         "verteilung": {
@@ -5727,7 +5741,14 @@
           "phase_id": 13258,
           "heim": false,
           "ohne_zeit": false,
-          "sequence": 1
+          "sequence": 1,
+          "ergebnis": {
+            "heim": 31,
+            "gast": 27,
+            "eigene": 27,
+            "fremde": 31,
+            "ausgang": "N"
+          }
         },
         "2627RSWRLBJWC0402": {
           "datum": "2026-09-12T17:30:00",

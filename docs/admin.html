@@ -124,6 +124,7 @@ a { color: inherit; }
 #anheften[aria-pressed="true"]::before { content: "★  "; }
 #anheften:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 .uebersichtlink { margin: 14px 0 0; font-size: .9rem; }
+.uebersichtlink { display: flex; flex-wrap: wrap; gap: 6px 20px; }
 .uebersichtlink a { color: var(--gold); text-decoration: none; font-weight: 600; }
 .uebersichtlink a:hover { color: var(--auf-schwarz); }
 
@@ -255,6 +256,27 @@ details.spiel.mitbericht .klappinhalt { padding: 6px 0 18px; }
 details.spiel.vorbei { opacity: 1; }
 details.spiel.vorbei > summary { opacity: .55; }
 details.spiel.vorbei[open] > summary { opacity: 1; }
+
+/* Blockbilanz: sechs Saeulen, Nulllinie in der Mitte. */
+.bloecke { display: grid; grid-template-columns: repeat(6, 1fr); gap: 4px;
+  margin: 20px 0 4px; }
+.bloecke .block { display: flex; flex-direction: column; align-items: center; }
+.bloecke .saeule { height: 100px; width: 100%; display: flex;
+  align-items: center; justify-content: center; position: relative; }
+.bloecke .saeule::before { content: ""; position: absolute; left: 0; right: 0;
+  top: 50%; border-top: 1px solid var(--linie); }
+.bloecke .saeule span { width: 60%; max-width: 22px; position: absolute;
+  border-radius: 1px; }
+.bloecke .saeule.plus span { bottom: 50%; background: var(--gold); }
+.bloecke .saeule.minus span { top: 50%; background: var(--niederlage); }
+.bloecke .saeule.null span { top: calc(50% - 1px); height: 2px;
+  background: var(--linie); }
+.bloecke .wert { font-size: .78rem; font-weight: 600; margin-top: 6px;
+  font-variant-numeric: tabular-nums; }
+.bloecke .zeit { font-size: .7rem; color: var(--leise); margin-top: 2px;
+  font-variant-numeric: tabular-nums; }
+.deutung { margin: 16px 0 0; font-size: .92rem; line-height: 1.55;
+  color: var(--tinte-weich); }
 
 /* Aufklappbare Abschnitte. <details> bringt die Mechanik mit, hier steht
    nur, wie es aussieht - samt Dreieck, das sich beim Oeffnen dreht. */
