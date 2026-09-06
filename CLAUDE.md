@@ -46,6 +46,22 @@ python3 baue_admin.py --worker-url "$W" --out docs/admin.html
 geht — der Workflow macht das ohnehin. **Rücksicht auf die Quelle:** ein Lauf
 sind rund 23 Abfragen.
 
+## Spielberichte
+
+`spielberichte.py` holt zu jedem gelaufenen Spiel der Aktiven den Verlauf
+(`/matches/<id>/events`) und legt ihn in `berichte_cache.json` ab. **Ein
+Bericht ändert sich nach dem Spiel nicht mehr**, wird also genau einmal
+geholt. Nicht jede Liga führt einen: bei mB und gD kommt eine leere Antwort,
+das wird vermerkt und nicht erneut versucht.
+
+Grundregel für alles, was daraus entsteht: **Fehlt etwas, liegt es an der
+Quelle, und das gehört auch so dagesagt.** Nie eine Lücke zeigen, die
+aussieht, als wäre die Seite unfertig — sondern benennen, dass handball.net
+für dieses Spiel noch nichts veröffentlicht hat.
+
+Spielernamen erscheinen voll nur bei den Aktiven. Bei der Jugend nur Vorname
+und erster Buchstabe des Nachnamens (`Lisa M.`).
+
 ## Vor jedem Commit
 
 ```bash
@@ -53,6 +69,7 @@ python3 audit.py              # Daten und Seite
 python3 pruefe_konflikte.py   # Datenblock von "Meine Mannschaften"
 python3 pruefe_verweise.py    # Verweise zwischen den Seiten
 python3 pruefe_tabelle.py     # Rückstand der Verbandstabelle
+python3 pruefe_berichte.py    # Spielberichte gegen die Endstände
 python3 pruefe_streng.py      # RFC-Prüfung der .ics-Dateien
 for d in worker/test*.mjs; do node "$d"; done
 ```

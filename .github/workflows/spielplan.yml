@@ -43,6 +43,16 @@ jobs:
             --daten docs/daten.json \
             --keine-schiris | tee "$RUNNER_TEMP/lauf.log"
 
+      # Spielberichte der Aktiven: jedes Tor mit Minute und Schuetze. Ein
+      # Bericht aendert sich nach dem Spiel nicht mehr, wird also genau einmal
+      # geholt - das sind rund zwei Abfragen je Spieltag.
+      - name: Spielberichte holen
+        run: |
+          python3 spielberichte.py \
+            --daten docs/daten.json \
+            --cache berichte_cache.json \
+            --nur herren1,herren2,damen
+
       - name: Kalenderdateien pruefen
         run: |
           for datei in docs/*.ics; do
@@ -87,6 +97,12 @@ jobs:
       - name: Tabellenstand pruefen
         run: python3 pruefe_tabelle.py
 
+      # Zaehlt der Bericht andere Tore als der Endstand, ist eine der beiden
+      # Quellen unbrauchbar. Das muss auffallen, bevor Zahlen daraus auf der
+      # Seite stehen.
+      - name: Spielberichte pruefen
+        run: python3 pruefe_berichte.py
+
       - name: Worker-Logik pruefen
         run: |
           for datei in worker/test*.mjs; do node "$datei"; done
@@ -114,7 +130,7 @@ jobs:
         run: |
           git config user.name "spielplan-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/ strassen_cache.json
+          git add docs/ strassen_cache.json berichte_cache.json
           if git diff --cached --quiet; then
             echo "Keine Aenderungen - nichts zu committen."
             exit 0
