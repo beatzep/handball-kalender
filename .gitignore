@@ -3,6 +3,9 @@ __pycache__/
 .DS_Store
 docs/_vorschau.html
 /*.ics
-.claude/
+# Die eigenen Berechtigungen bleiben lokal, die Skills gehoeren zum Projekt:
+# sie beschreiben Ablaeufe, die sonst jedes Mal neu hergeleitet werden.
+.claude/*
+!.claude/skills/
 docs/_test.html
 .wrangler/
