@@ -463,6 +463,14 @@ details.spiel.vorbei[open] > summary { opacity: 1; }
               box-shadow: inset 0 -1px 0 var(--gold); }
 .hinspiel a:hover { color: var(--tinte); }
 
+.gegnerschuetzen { margin-top: 20px; }
+.gegnerschuetzen .rubrik.klein { border-top: 0; padding-top: 0; margin-bottom: 10px;
+  font-size: .72rem; }
+.gegnerschuetzen ul { list-style: none; margin: 0; padding: 0; }
+.gegnerschuetzen li { padding: 7px 0; border-bottom: 1px solid var(--linie-zart);
+  font-size: .95rem; }
+.gegnerschuetzen li:last-child { border-bottom: 0; }
+.gegnerschuetzen .klein { font-size: .82rem; color: var(--leise); }
 .gegnerdaten { display: flex; gap: 24px; flex-wrap: wrap; margin: 0; }
 .gegnerdaten div { margin: 0; }
 .gegnerdaten dt { font-size: .74rem; color: var(--leise); letter-spacing: .04em;

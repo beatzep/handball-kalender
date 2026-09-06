@@ -51,7 +51,8 @@ jobs:
           python3 spielberichte.py \
             --daten docs/daten.json \
             --cache berichte_cache.json \
-            --nur herren1,herren2,damen
+            --nur herren1,herren2,damen \
+            --gegner
 
       - name: Kalenderdateien pruefen
         run: |

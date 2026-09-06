@@ -281,6 +281,25 @@ Nur die Aktiven. Torschützenlisten von Jugendlichen mit vollem Namen auf
 einer öffentlichen Vereinsseite sind etwas anderes, auch wenn handball.net
 sie führt.
 
+## Gegnervorschau
+
+Vor jedem Spiel steht unter den Tabellenwerten des Gegners, wer bei ihm
+trifft: die fünf besten Schützen mit Toren und Siebenmetern, dazu wie sich
+seine Tore verteilen. Beim TV Kirrweiler etwa fielen 48 Prozent der Tore auf
+eine Spielerin, die zudem 7 von 7 Siebenmetern verwandelte – das ist vor
+einem Spiel eine brauchbare Information.
+
+Bewusst nur Zahlen. „48 Prozent der Tore von einer Spielerin" ist eine
+Beobachtung; „die sind leicht auszurechnen" wäre geraten und meistens falsch.
+
+`spielberichte.py --gegner` holt dafür die bisherigen Spiele des jeweils
+**nächsten** Gegners – eine Spielplanabfrage je Mannschaft plus die noch
+fehlenden Berichte. Ausgewertet wird aus demselben Cache: gesucht werden
+alle Berichte, in denen die fremde Mannschaft vorkommt, auch die von
+Spielen ohne eigene Beteiligung.
+
+Nur für die Aktiven, wie überall bei den Einzelzahlen.
+
 ## Auswertung der Nutzung
 
 `docs/admin.html` zeigt Aufrufe, Aktionen und Verteilung nach Mannschaft und

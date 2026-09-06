@@ -322,6 +322,35 @@ def muster(spiele: list[dict], berichte: list[dict], team_id: int) -> dict:
     }
 
 
+def gegneruebersicht(cache: dict, gegner_id: int, hoechstens: int = 5) -> dict:
+    """Was sich ueber den naechsten Gegner sagen laesst.
+
+    Die Berichte liegen ohnehin im Cache - auch die von Spielen, an denen
+    wir nicht beteiligt waren. Gesucht werden alle, in denen die fremde
+    Mannschaft vorkommt.
+
+    Bewusst nur Zahlen, keine Einschaetzung. "Deren Torgefahr laeuft zu 40
+    Prozent ueber einen Mann" ist eine Beobachtung; "die sind schwach in der
+    Abwehr" waere geraten.
+    """
+    berichte = [b for b in cache.values()
+                if any(e.get("team_id") == gegner_id
+                       for e in b.get("ereignisse") or [])]
+    if not berichte:
+        return {"spiele": 0}
+    liste = schuetzen(berichte, gegner_id, jugend=False)
+    v = verteilung(berichte, gegner_id)
+    return {
+        "spiele": len(berichte),
+        "schuetzen": liste[:hoechstens],
+        "weitere": max(0, len(liste) - hoechstens),
+        "tore": v["eigene_tore"],
+        "torschuetzen": v["eigene_schuetzen"],
+        "groesster_anteil": v["groesster_anteil"],
+        "strafen": strafen_nach_abschnitt(berichte, gegner_id)["gesamt"],
+    }
+
+
 def alles(spiele: dict, cache: dict, team_id: int, jugend: bool) -> dict:
     """Sammelt die Auswertung einer Mannschaft.
 

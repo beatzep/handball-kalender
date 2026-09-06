@@ -732,6 +732,14 @@ def verarbeite_team(team: dict, cfg: argparse.Namespace, alt: dict) -> tuple[dic
         "spieler": spielerstatistik.alles(
             neuer_stand, cfg.berichte_cache, team_id,
             jugend=(team.get("gruppe") != "Aktive")),
+        # Zahlen zum naechsten Gegner, sofern von ihm Berichte vorliegen.
+        # Nur bei den Aktiven: fuer die Jugend werden keine geholt.
+        "gegnervorschau": (
+            spielerstatistik.gegneruebersicht(
+                cfg.berichte_cache,
+                spielberichte.naechster_gegner(neuer_stand))
+            if team.get("gruppe") == "Aktive"
+            and spielberichte.naechster_gegner(neuer_stand) else {}),
         "letzte_aenderungen": aenderungen,
         "spiele": neuer_stand,
     }, aenderungen

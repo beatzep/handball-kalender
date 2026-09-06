@@ -160,7 +160,38 @@ def teilenblock(team: dict, naechstes: dict | None, letztes: dict | None) -> str
 </div>"""
 
 
-def hinspiel_und_gegner(naechstes: dict, alle: list[dict], tabelle: dict) -> str:
+def gegnerzahlen(vorschau: dict) -> str:
+    """Was die Spielberichte ueber den naechsten Gegner hergeben.
+
+    Nur Zahlen, keine Einschaetzung: "48 Prozent der Tore von einer
+    Spielerin" ist eine Beobachtung, "die sind leicht auszurechnen" waere
+    geraten - und meistens falsch.
+    """
+    if not vorschau or not vorschau.get("spiele"):
+        return ""
+    zeilen = "".join(
+        f'<li>{sicher(e["name"])} <span class="klein">{e["tore"]} Tore'
+        + (f', 7m {e["siebenmeter_tore"]}/{e["siebenmeter_wuerfe"]}'
+           if e.get("siebenmeter_wuerfe") else "")
+        + "</span></li>"
+        for e in vorschau.get("schuetzen") or [])
+    if not zeilen:
+        return ""
+
+    anteil = vorschau.get("groesster_anteil")
+    satz = (f'{vorschau["tore"]} Tore von {vorschau["torschuetzen"]} Schützen'
+            + (f', {anteil} % davon vom stärksten' if anteil else "")
+            + f'. Aus {spiel_wort(vorschau["spiele"], "dativ")} mit Bericht.')
+    return (f'<div class="gegnerschuetzen">'
+            f'<div class="rubrik klein">Wer bei ihnen trifft</div>'
+            f'<ul>{zeilen}</ul>'
+            + (f'<p class="statfuss">und {vorschau["weitere"]} weitere. {satz}</p>'
+               if vorschau.get("weitere") else f'<p class="statfuss">{satz}</p>')
+            + "</div>")
+
+
+def hinspiel_und_gegner(naechstes: dict, alle: list[dict], tabelle: dict,
+                        vorschau: dict | None = None) -> str:
     """Was es ueber den naechsten Gegner an Fakten gibt: das frühere
     Aufeinandertreffen dieser Saison und seine Tabellenwerte.
 
@@ -197,7 +228,8 @@ def hinspiel_und_gegner(naechstes: dict, alle: list[dict], tabelle: dict) -> str
             f'<div><dt>Tordifferenz</dt><dd>{zeile["differenz"]:+d}</dd></div>'
             f'</dl>')
 
-    if not teile:
+    teile.append(gegnerzahlen(vorschau or {}))
+    if not any(t.strip() for t in teile):
         return ""
     return (f'<div class="vorschau"><h3>Gegen {sicher(naechstes.get("gegner"))}</h3>'
             + "".join(teile) + "</div>")
@@ -1083,7 +1115,8 @@ def mannschaftsblock(schluessel: str, team: dict, basis: str, heute: datetime,
   <p class="liga">{kopf}</p>
   {hero(kommend[0], team['kurzname'], heute) if kommend else
    '<p class="marker">Saison beendet</p>'}
-  {hinspiel_und_gegner(kommend[0], spiele, team.get('tabelle') or {}) if kommend else ''}
+  {hinspiel_und_gegner(kommend[0], spiele, team.get('tabelle') or {},
+                       team.get('gegnervorschau') or {}) if kommend else ''}
   {mitmachblock(naechster_code, vorheriger_code, worker,
                 *paarung_namen(kommend[0], team), schluessel) if kommend else ''}
   {aenderungsblock(team)}

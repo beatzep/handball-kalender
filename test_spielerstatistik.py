@@ -340,6 +340,40 @@ pruefe("Vor der Schwelle steht, wie viele Spiele fehlen",
 pruefe("Ohne jedes Spiel gar kein Musterblock",
        bs.musterblock({"muster": st.muster([], [], WIR)}) == "")
 
+# --- Gegnervorschau -----------------------------------------------------
+fremd = {"1": {"ereignisse": [
+    tor(5, SIE, "x", "Olga", "Roth", 0, 1),
+    tor(9, SIE, "x", "Olga", "Roth", 0, 2),
+    tor(14, SIE, "y", "Lea", "Hammer", 0, 3),
+    {"spielminute": 20, "minute": "20:00", "art": "Siebenmeter Tor",
+     "ist_tor": True, "ist_strafe": False, "team_id": SIE,
+     "spieler": {"id": "x", "vorname": "Olga", "nachname": "Roth"},
+     "stand": [0, 4]},
+    tor(25, WIR, "a", "Anna", "Adler", 1, 4),
+]}}
+g = st.gegneruebersicht(fremd, SIE)
+pruefe("Gegner wird aus fremden Berichten erkannt", g["spiele"] == 1, str(g))
+pruefe("Nur seine Spieler zaehlen",
+       [e["name"] for e in g["schuetzen"]] == ["Olga Roth", "Lea Hammer"],
+       str([e["name"] for e in g["schuetzen"]]))
+pruefe("Seine Siebenmeter werden erfasst",
+       g["schuetzen"][0]["siebenmeter_wuerfe"] == 1, str(g["schuetzen"][0]))
+pruefe("Torverteilung des Gegners", g["tore"] == 4 and g["torschuetzen"] == 2,
+       str(g))
+pruefe("Groesster Anteil in Prozent", g["groesster_anteil"] == 75, str(g))
+pruefe("Ohne Berichte des Gegners kein Ergebnis",
+       st.gegneruebersicht({}, SIE)["spiele"] == 0)
+pruefe("Eine unbekannte Mannschaft liefert nichts",
+       st.gegneruebersicht(fremd, 999)["spiele"] == 0)
+
+# Die Anzeige darf ohne Daten nichts behaupten
+pruefe("Ohne Vorschau kein Block", bs.gegnerzahlen({}) == "")
+pruefe("Mit Vorschau stehen Zahlen da",
+       "Olga Roth" in bs.gegnerzahlen(g) and "75 %" in bs.gegnerzahlen(g),
+       bs.gegnerzahlen(g)[:160])
+pruefe("Und worauf sie beruhen", "Aus 1 Spiel mit Bericht" in bs.gegnerzahlen(g),
+       bs.gegnerzahlen(g)[-120:])
+
 fehler = 0
 for name, ok, info in pruefungen:
     if not ok:

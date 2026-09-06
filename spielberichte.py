@@ -152,6 +152,42 @@ def aktualisiere(cache: dict, spiele: list[dict], pfad: Path | None = None,
     return cache
 
 
+def naechster_gegner(spiele: dict, jetzt=None) -> int | None:
+    """Die Kennung der Mannschaft, gegen die als Naechstes gespielt wird."""
+    from datetime import datetime
+    jetzt = jetzt or datetime.now()
+    kommend = sorted(
+        (s for s in spiele.values()
+         if not s.get("ergebnis") and s.get("gegner_id")
+         and datetime.fromisoformat(s["datum"]) >= jetzt),
+        key=lambda s: s["datum"])
+    return kommend[0]["gegner_id"] if kommend else None
+
+
+def gegnerspiele(team_id: int, hole=None) -> list[dict]:
+    """Die gelaufenen Spiele einer fremden Mannschaft.
+
+    Dieselbe Abfrage wie fuer die eigenen, nur mit fremder Kennung. Der
+    Umweg ueber spielplan2ics waere hier zu viel: gebraucht werden nur
+    match_id und Datum.
+    """
+    import spielplan2ics
+    hole = hole or spielplan2ics.hole_spiele
+    fertig = []
+    for spiel in hole(team_id):
+        status = spiel.get("status") or {}
+        if not status.get("is_finished"):
+            continue
+        r = spiel.get("result") or {}
+        if r.get("local") == 0 and r.get("visitor") == 0:
+            continue          # keine Wertung, siehe spielplan2ics.ergebnis
+        fertig.append({
+            "match_id": spiel.get("id"),
+            "datum": str(spiel.get("date") or "")[:19],
+        })
+    return fertig
+
+
 def main() -> int:
     import argparse
 
@@ -163,6 +199,8 @@ def main() -> int:
                    help="wie viele Berichte dieser Lauf hoechstens holt")
     p.add_argument("--nur", default="",
                    help="Mannschaften, durch Komma getrennt; leer = alle mit Kader")
+    p.add_argument("--gegner", action="store_true",
+                   help="auch die Spiele des jeweils naechsten Gegners holen")
     cfg = p.parse_args()
 
     daten = json.loads(Path(cfg.daten).read_bytes().decode("utf-8"))
@@ -177,6 +215,30 @@ def main() -> int:
         for spiel in (team.get("spiele") or {}).values():
             if spiel.get("ergebnis"):
                 spiele.append(spiel)
+
+    # Fuer die Vorschau: die bisherigen Spiele des naechsten Gegners. Das
+    # kostet je Mannschaft eine Spielplanabfrage plus die neuen Berichte -
+    # deshalb nur auf Wunsch und nur fuer den einen kommenden Gegner.
+    if cfg.gegner:
+        import time as _zeit
+        for schluessel, team in (daten.get("teams") or {}).items():
+            if gewuenscht and schluessel not in gewuenscht:
+                continue
+            gid = naechster_gegner(team.get("spiele") or {})
+            if not gid:
+                continue
+            try:
+                weitere = gegnerspiele(gid)
+            except Exception as fehler:      # eine Vorschau ist kein Grund
+                print(f"Gegnerspiele zu {gid} nicht abrufbar: {fehler}",
+                      file=sys.stderr)       # den ganzen Lauf abzubrechen
+                continue
+            neu = [s for s in weitere if str(s["match_id"]) not in cache]
+            if neu:
+                print(f"  {team.get('name', schluessel)}: naechster Gegner "
+                      f"{gid}, {len(neu)} Berichte fehlen noch")
+            spiele.extend(weitere)
+            _zeit.sleep(PAUSE_SEKUNDEN)
 
     vorher = len(cache)
     aktualisiere(cache, spiele, pfad, cfg.hoechstens)
