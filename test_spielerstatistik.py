@@ -247,6 +247,99 @@ pruefe("Ohne Verlauf keine Detailansicht",
        bs.spieldetails({"verlauf": [], "heim": True,
                         "datum": "2026-09-05T20:00:00", "gegner": "X"}) == "")
 
+# --- Muster ueber mehrere Spiele ----------------------------------------
+def spiel_mit(verlauf, heim=True):
+    return {"verlauf": verlauf, "heim": heim}
+
+# Drei Spiele, in denen der letzte Block jeweils schwach ist
+drei = [
+    spiel_mit([[0, 0, 0], [10, 3, 1], [50, 12, 7], [60, 13, 11]]),
+    spiel_mit([[0, 0, 0], [10, 2, 1], [50, 10, 6], [60, 11, 10]]),
+    spiel_mit([[0, 0, 0], [10, 4, 1], [50, 14, 8], [60, 15, 12]]),
+]
+m = st.muster(drei, [], WIR)
+pruefe("Ab drei Spielen gibt es Muster", m["genug"] is True, str(m.get("genug")))
+pruefe("Zwei Spiele reichen nicht", st.muster(drei[:2], [], WIR)["genug"] is False)
+pruefe("Und es steht dabei, ab wann", st.muster(drei[:2], [], WIR)["ab"] == 3)
+
+bloecke = {b["von"]: b for b in m["bloecke"]}
+pruefe("Sechs Bloecke ueber 60 Minuten", len(m["bloecke"]) == 6, str(len(m["bloecke"])))
+pruefe("Starker Anfang wird erkannt", bloecke[0]["schnitt"] > 0, str(bloecke[0]))
+pruefe("Schwache Schlussphase wird erkannt", bloecke[50]["schnitt"] < 0,
+       str(bloecke[50]))
+pruefe("Verlorene Bloecke werden gezaehlt", bloecke[50]["verloren"] == 3,
+       str(bloecke[50]))
+
+# Auswaerts dreht sich die Sicht auch hier
+auswaerts = [spiel_mit([[0, 0, 0], [60, 20, 10]], heim=False)] * 3
+ma = st.muster(auswaerts, [], WIR)
+pruefe("Auswaerts wird 20:10 fuer die Heimmannschaft zum Minus",
+       all(b["schnitt"] <= 0 for b in ma["bloecke"]),
+       str([b["schnitt"] for b in ma["bloecke"]]))
+
+# Antwort auf einen gegnerischen Lauf
+def t(minute, team):
+    return {"spielminute": minute, "ist_tor": True, "team_id": team,
+            "art": "Tor", "spieler": {"id": "x", "vorname": "A", "nachname": "B"}}
+lauf = {"ereignisse": [
+    t(1, WIR), t(2, SIE), t(3, SIE), t(4, SIE),   # Gegner trifft dreimal
+    t(6, WIR), t(7, WIR), t(8, WIR), t(9, WIR),   # wir antworten viermal
+]}
+a = st.antwort_auf_laeufe([lauf], WIR)
+pruefe("Gegnerischer Lauf wird erkannt", a and a["faelle"] == 1, str(a))
+pruefe("Die Antwort wird gezaehlt", a["schnitt"] == 4.0, str(a))
+pruefe("Und als Drehung vermerkt", a["gedreht"] == 1, str(a))
+pruefe("Zwei Gegentore sind noch kein Lauf",
+       st.antwort_auf_laeufe([{"ereignisse": [t(1, SIE), t(2, SIE), t(5, WIR)]}],
+                             WIR) is None)
+
+# Enge Schlussphasen
+eng = [
+    spiel_mit([[0, 0, 0], [50, 10, 9], [60, 14, 12]]),   # eng, gewonnen
+    spiel_mit([[0, 0, 0], [50, 8, 9], [60, 10, 13]]),    # eng, verloren
+    spiel_mit([[0, 0, 0], [50, 20, 5], [60, 25, 8]]),    # nie eng
+]
+e = st.enge_schlussphasen(eng)
+pruefe("Nur wirklich enge Spiele zaehlen", e["spiele"] == 2, str(e))
+pruefe("Ausgang wird unterschieden", e["gewonnen"] == 1 and e["verloren"] == 1,
+       str(e))
+
+# --- Die Deutung in Worten ----------------------------------------------
+import re as _re2
+
+def deutung(spiele, berichte=None):
+    return _re2.sub(r"<[^>]+>", "", bs.musterdeutung(
+        st.muster(spiele, berichte or [], WIR))).strip()
+
+stark_schwach = [spiel_mit([[0, 0, 0], [10, 6, 1], [60, 15, 12]]),
+                 spiel_mit([[0, 0, 0], [10, 5, 1], [60, 14, 11]]),
+                 spiel_mit([[0, 0, 0], [10, 7, 2], [60, 16, 13]])]
+t = deutung(stark_schwach)
+pruefe("Staerkste Phase wird benannt", "stärkste Phase" in t, t)
+pruefe("Schwaechste Phase ebenfalls", "gebt ihr im Schnitt" in t, t)
+pruefe("Kommazahlen mit Komma", "4,7" in t, t)
+pruefe("Und der Satzpunkt bleibt ein Punkt", t.rstrip().endswith("."), t[-40:])
+
+# Ein Unentschieden ist keine Niederlage
+unentschieden = [spiel_mit([[0, 0, 0], [50, 10, 10], [60, 12, 12]])] * 3
+t = deutung(unentschieden)
+pruefe("Unentschieden wird als solches benannt", "unentschieden" in t, t)
+pruefe("Und nicht als 'null gewonnen' abgetan", "0 gewonnen" not in t, t)
+
+# Wo nichts heraussticht, wird nichts behauptet
+gleichmaessig = [spiel_mit([[0, 0, 0], [10, 2, 1], [20, 4, 2], [30, 6, 3],
+                            [40, 8, 4], [50, 10, 5], [60, 12, 6]])] * 3
+t = deutung(gleichmaessig)
+pruefe("Ohne Auffaelligkeit keine erfundene Aussage",
+       "hebt sich kein Abschnitt" in t or "stärkste Phase" in t, t)
+
+# Der Hinweis vor der Schwelle nennt, was noch fehlt
+vor = bs.musterblock({"muster": st.muster(stark_schwach[:2], [], WIR)})
+pruefe("Vor der Schwelle steht, wie viele Spiele fehlen",
+       "fehlt noch ein Spiel" in vor, _re2.sub(r"<[^>]+>", "", vor)[-90:])
+pruefe("Ohne jedes Spiel gar kein Musterblock",
+       bs.musterblock({"muster": st.muster([], [], WIR)}) == "")
+
 fehler = 0
 for name, ok, info in pruefungen:
     if not ok:

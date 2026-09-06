@@ -204,6 +204,124 @@ def strafen_nach_abschnitt(berichte: list[dict], team_id: int) -> dict:
     return {"gesamt": gesamt, "abschnitte": faecher}
 
 
+# Ab so vielen Spielen lohnt es, von einem Muster zu sprechen. Darunter ist
+# jede Aussage ein Zufall mit Zahlen dran.
+MUSTER_AB = 3
+BLOCK_MINUTEN = 10
+
+
+def abstand_bei(verlauf: list[list[int]], minute: int, heim: bool) -> int:
+    """Torabstand aus eigener Sicht zu einer Spielminute."""
+    letzter = 0
+    for m, h, g in verlauf:
+        if m > minute:
+            break
+        letzter = (h - g) if heim else (g - h)
+    return letzter
+
+
+def blockbilanz(spiele: list[dict]) -> list[dict]:
+    """Was in jedem Zehnminutenblock passiert, ueber alle Spiele.
+
+    Nicht der Spielstand, sondern seine Veraenderung: In welchen zehn
+    Minuten gewinnen wir Boden, in welchen verlieren wir welchen? Genau das
+    beantwortet die Frage nach dem Durchhaenger.
+    """
+    bloecke = []
+    for i in range(6):
+        von, bis = i * BLOCK_MINUTEN, (i + 1) * BLOCK_MINUTEN
+        werte = []
+        for spiel in spiele:
+            v = spiel.get("verlauf") or []
+            if not v:
+                continue
+            heim = bool(spiel.get("heim"))
+            werte.append(abstand_bei(v, bis, heim) - abstand_bei(v, von, heim))
+        if not werte:
+            continue
+        bloecke.append({
+            "von": von, "bis": bis,
+            "schnitt": round(sum(werte) / len(werte), 1),
+            "spiele": len(werte),
+            # Wie oft war dieser Block negativ? Ein Schnitt von -0,2 aus
+            # "einmal -3, viermal +0,5" ist etwas anderes als aus fuenfmal -0,2.
+            "verloren": sum(1 for w in werte if w < 0),
+            "gewonnen": sum(1 for w in werte if w > 0),
+        })
+    return bloecke
+
+
+def antwort_auf_laeufe(berichte: list[dict], team_id: int) -> dict | None:
+    """Wie reagieren wir, wenn der Gegner mehrfach in Folge trifft?
+
+    Gesucht wird jede Stelle, an der die andere Seite drei- oder mehrmals
+    hintereinander trifft. Danach zaehlen die naechsten zehn Minuten: kommt
+    eine Antwort, oder reisst es weiter ab?
+    """
+    faelle = []
+    for bericht in berichte:
+        tore = [e for e in bericht.get("ereignisse") or [] if e.get("ist_tor")]
+        reihe, ende = 0, None
+        for i, e in enumerate(tore):
+            if e.get("team_id") != team_id:
+                reihe += 1
+                ende = e.get("spielminute")
+            else:
+                if reihe >= LAUF_AB and ende is not None:
+                    danach = [t for t in tore[i:]
+                              if (t.get("spielminute") or 0) <= ende + 10]
+                    eigen = sum(1 for t in danach if t.get("team_id") == team_id)
+                    fremd = len(danach) - eigen
+                    faelle.append(eigen - fremd)
+                reihe = 0
+    if not faelle:
+        return None
+    return {
+        "faelle": len(faelle),
+        "schnitt": round(sum(faelle) / len(faelle), 1),
+        "gedreht": sum(1 for f in faelle if f > 0),
+    }
+
+
+def enge_schlussphasen(spiele: list[dict]) -> dict | None:
+    """Spiele, die ab Minute 50 auf zwei Tore oder weniger standen."""
+    eng = []
+    for spiel in spiele:
+        v = spiel.get("verlauf") or []
+        if not v:
+            continue
+        heim = bool(spiel.get("heim"))
+        bei50 = abstand_bei(v, 50, heim)
+        if abs(bei50) > 2:
+            continue
+        eng.append(abstand_bei(v, 60, heim))
+    if not eng:
+        return None
+    return {
+        "spiele": len(eng),
+        "gewonnen": sum(1 for e in eng if e > 0),
+        "verloren": sum(1 for e in eng if e < 0),
+        "unentschieden": sum(1 for e in eng if e == 0),
+    }
+
+
+def muster(spiele: list[dict], berichte: list[dict], team_id: int) -> dict:
+    """Wiederkehrendes ueber mehrere Spiele.
+
+    Unterhalb von MUSTER_AB Spielen wird nichts gezeigt: aus zwei Spielen
+    laesst sich alles und nichts herauslesen.
+    """
+    if len(spiele) < MUSTER_AB:
+        return {"genug": False, "spiele": len(spiele), "ab": MUSTER_AB}
+    return {
+        "genug": True,
+        "spiele": len(spiele),
+        "bloecke": blockbilanz(spiele),
+        "antwort": antwort_auf_laeufe(berichte, team_id),
+        "eng": enge_schlussphasen(spiele),
+    }
+
+
 def alles(spiele: dict, cache: dict, team_id: int, jugend: bool) -> dict:
     """Sammelt die Auswertung einer Mannschaft.
 
@@ -246,5 +364,6 @@ def alles(spiele: dict, cache: dict, team_id: int, jugend: bool) -> dict:
         "schuetzen": schuetzen(berichte, team_id, jugend),
         "verteilung": verteilung(berichte, team_id),
         "strafen": strafen_nach_abschnitt(berichte, team_id),
+        "muster": muster(je_spiel, berichte, team_id),
         "spiele": je_spiel,
     }

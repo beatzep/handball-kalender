@@ -583,6 +583,119 @@ def spielfilmblock(sp: dict, spiele: dict) -> str:
                  kennung="verlaeufe")
 
 
+def komma(wert: float, mit_zeichen: bool = False) -> str:
+    """Eine Zahl mit Komma statt Punkt.
+
+    Nicht am fertigen Satz ersetzen: dort traefe es auch den Schlusspunkt.
+    """
+    text = f"{wert:+.1f}" if mit_zeichen else f"{wert:.1f}"
+    return text.replace(".", ",")
+
+
+def musterdeutung(m: dict) -> str:
+    """Ein Satz, der das Auffaelligste benennt.
+
+    Balken allein liest niemand richtig. Der Satz nennt genau eine Sache -
+    die deutlichste - und sagt dazu, worauf sie beruht. Bei vier Spielen ist
+    "immer" schnell gesagt und selten wahr.
+    """
+    bloecke = [b for b in (m.get("bloecke") or []) if b.get("spiele")]
+    if not bloecke:
+        return ""
+    saetze = []
+    schwaechster = min(bloecke, key=lambda b: b["schnitt"])
+    staerkster = max(bloecke, key=lambda b: b["schnitt"])
+
+    # Nur benennen, was sich vom Rest abhebt. Ein Block, der sich um 0,3 Tore
+    # von den anderen unterscheidet, ist Rauschen.
+    # Beide nennen, wenn beide deutlich sind: eine starke Phase erklaert oft
+    # erst, warum ein Durchhaenger nicht mehr weh tut.
+    if staerkster["schnitt"] >= 1.5:
+        saetze.append(
+            f'Eure stärkste Phase liegt zwischen Minute {staerkster["von"]} '
+            f'und {staerkster["bis"]}: im Schnitt '
+            f'{komma(staerkster["schnitt"])} Tore Vorsprung dazu.')
+    if schwaechster["schnitt"] <= -0.5:
+        saetze.append(
+            f'Zwischen Minute {schwaechster["von"]} und {schwaechster["bis"]} '
+            f'gebt ihr im Schnitt {komma(abs(schwaechster["schnitt"]))} Tore ab'
+            + (f' – in {schwaechster["verloren"]} von {schwaechster["spiele"]} '
+               f'Spielen' if schwaechster["verloren"] else "") + ".")
+
+    a = m.get("antwort")
+    if a and a["faelle"] >= 2:
+        if a["schnitt"] > 0.5:
+            saetze.append(
+                f'Nach einem gegnerischen Lauf kommt bei euch eine Antwort: in '
+                f'den zehn Minuten danach im Schnitt {komma(a["schnitt"])} Tore '
+                f'mehr als der Gegner ({a["faelle"]} Fälle).')
+        elif a["schnitt"] < -0.5:
+            saetze.append(
+                f'Gerät der Gegner in einen Lauf, reißt es weiter ab: in den '
+                f'zehn Minuten danach im Schnitt {komma(abs(a["schnitt"]))} '
+                f'Tore weniger ({a["faelle"]} Fälle).')
+
+    e = m.get("eng")
+    if e and e["spiele"] >= 2:
+        ausgang = []
+        if e["gewonnen"]:
+            ausgang.append(f'{e["gewonnen"]} gewonnen')
+        if e["unentschieden"]:
+            ausgang.append(f'{e["unentschieden"]} unentschieden')
+        if e["verloren"]:
+            ausgang.append(f'{e["verloren"]} verloren')
+        saetze.append(
+            f'{e["spiele"]} Spiele standen ab Minute 50 auf zwei Tore oder '
+            f'weniger: ' + ", ".join(ausgang) + ".")
+
+    if not saetze:
+        return ('<p class="deutung">Bisher hebt sich kein Abschnitt deutlich '
+                'ab.</p>')
+    return '<p class="deutung">' + " ".join(saetze) + "</p>"
+
+
+def musterblock(sp: dict) -> str:
+    """Wiederkehrende Muster als Balkenreihe ueber die Spielzeit."""
+    m = sp.get("muster") or {}
+    if not m.get("genug"):
+        fehlen = (m.get("ab") or 3) - (m.get("spiele") or 0)
+        if (m.get("spiele") or 0) == 0:
+            return ""
+        return klapp(
+            "Wiederkehrende Muster", "",
+            f'<p class="statfuss">Ab {m.get("ab", 3)} Spielen mit Bericht steht '
+            f'hier, in welchen Spielabschnitten ihr stark seid und wo es '
+            f'regelmäßig eng wird. Aus {spiel_wort(m.get("spiele", 0), "dativ")} '
+            f'ließe sich alles und nichts herauslesen; es '
+            f'{"fehlt noch ein Spiel" if fehlen == 1 else f"fehlen noch {fehlen} Spiele"}.</p>',
+            kennung="muster")
+
+    bloecke = m.get("bloecke") or []
+    if not bloecke:
+        return ""
+    groesste = max(1.0, max(abs(b["schnitt"]) for b in bloecke))
+
+    balken = []
+    for b in bloecke:
+        anteil = abs(b["schnitt"]) / groesste
+        hoehe = round(anteil * 46)
+        richtung = "plus" if b["schnitt"] > 0 else ("minus" if b["schnitt"] < 0 else "null")
+        wert = komma(b["schnitt"], mit_zeichen=True)
+        balken.append(
+            f'<div class="block"><div class="saeule {richtung}">'
+            f'<span style="height:{max(hoehe, 2)}px"></span></div>'
+            f'<div class="wert">{wert}</div>'
+            f'<div class="zeit">{b["von"]}–{b["bis"]}</div></div>')
+
+    return klapp(
+        "Wiederkehrende Muster", spiel_wort(m["spiele"], "nominativ"),
+        f'<p class="statfuss">Wie sich der Abstand in jedem Zehnminutenblock '
+        f'verändert, gemittelt über {spiel_wort(m["spiele"], "akkusativ")}.</p>'
+        f'<div class="bloecke">{"".join(balken)}</div>'
+        + musterdeutung(m),
+        kennung="muster")
+
+
 def quellenhinweis(quelle: dict) -> str:
     """Sagt, worauf die Zahlen beruhen - und was bei der Quelle noch fehlt.
 
@@ -999,6 +1112,7 @@ def mannschaftsblock(schluessel: str, team: dict, basis: str, heute: datetime,
     </div>
     {spielerblock(team.get('spieler') or {})}
     {spielfilmblock(team.get('spieler') or {}, team.get('spiele') or {})}
+    {musterblock(team.get('spieler') or {})}
     {statistikblock(team.get('statistik') or {})}
   </div>
 </section>"""

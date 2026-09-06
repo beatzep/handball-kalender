@@ -451,6 +451,11 @@
             "45-60": 3
           }
         },
+        "muster": {
+          "genug": false,
+          "spiele": 2,
+          "ab": 3
+        },
         "spiele": [
           {
             "match_id": 351626,
@@ -2049,6 +2054,11 @@
             "45-60": 0
           }
         },
+        "muster": {
+          "genug": false,
+          "spiele": 1,
+          "ab": 3
+        },
         "spiele": [
           {
             "match_id": 352286,
@@ -2931,6 +2941,11 @@
             "45-60": 0
           }
         },
+        "muster": {
+          "genug": false,
+          "spiele": 0,
+          "ab": 3
+        },
         "spiele": []
       },
       "letzte_aenderungen": [],
@@ -3484,6 +3499,11 @@
             "45-60": 0
           }
         },
+        "muster": {
+          "genug": false,
+          "spiele": 0,
+          "ab": 3
+        },
         "spiele": []
       },
       "letzte_aenderungen": [],
@@ -3996,6 +4016,11 @@
             "30-45": 0,
             "45-60": 0
           }
+        },
+        "muster": {
+          "genug": false,
+          "spiele": 0,
+          "ab": 3
         },
         "spiele": []
       },
@@ -4559,6 +4584,11 @@
             "30-45": 0,
             "45-60": 0
           }
+        },
+        "muster": {
+          "genug": false,
+          "spiele": 0,
+          "ab": 3
         },
         "spiele": []
       },
@@ -5154,6 +5184,11 @@
             "45-60": 0
           }
         },
+        "muster": {
+          "genug": false,
+          "spiele": 0,
+          "ab": 3
+        },
         "spiele": []
       },
       "letzte_aenderungen": [],
@@ -5626,6 +5661,11 @@
             "45-60": 0
           }
         },
+        "muster": {
+          "genug": false,
+          "spiele": 0,
+          "ab": 3
+        },
         "spiele": []
       },
       "letzte_aenderungen": [],
@@ -5993,6 +6033,11 @@
             "30-45": 0,
             "45-60": 0
           }
+        },
+        "muster": {
+          "genug": false,
+          "spiele": 0,
+          "ab": 3
         },
         "spiele": []
       },
@@ -6554,6 +6599,11 @@
             "45-60": 0
           }
         },
+        "muster": {
+          "genug": false,
+          "spiele": 0,
+          "ab": 3
+        },
         "spiele": []
       },
       "letzte_aenderungen": [],
@@ -7011,6 +7061,11 @@
             "45-60": 0
           }
         },
+        "muster": {
+          "genug": false,
+          "spiele": 0,
+          "ab": 3
+        },
         "spiele": []
       },
       "letzte_aenderungen": [],
@@ -7398,6 +7453,11 @@
             "30-45": 0,
             "45-60": 0
           }
+        },
+        "muster": {
+          "genug": false,
+          "spiele": 0,
+          "ab": 3
         },
         "spiele": []
       },
@@ -7960,6 +8020,11 @@
             "30-45": 0,
             "45-60": 0
           }
+        },
+        "muster": {
+          "genug": false,
+          "spiele": 0,
+          "ab": 3
         },
         "spiele": []
       },
@@ -8536,6 +8601,11 @@
             "45-60": 0
           }
         },
+        "muster": {
+          "genug": false,
+          "spiele": 0,
+          "ab": 3
+        },
         "spiele": []
       },
       "letzte_aenderungen": [],
@@ -9091,6 +9161,11 @@
             "45-60": 0
           }
         },
+        "muster": {
+          "genug": false,
+          "spiele": 0,
+          "ab": 3
+        },
         "spiele": []
       },
       "letzte_aenderungen": [],
@@ -9632,6 +9707,11 @@
             "30-45": 0,
             "45-60": 0
           }
+        },
+        "muster": {
+          "genug": false,
+          "spiele": 0,
+          "ab": 3
         },
         "spiele": []
       },
@@ -10210,6 +10290,11 @@
             "45-60": 0
           }
         },
+        "muster": {
+          "genug": false,
+          "spiele": 0,
+          "ab": 3
+        },
         "spiele": []
       },
       "letzte_aenderungen": [],
@@ -10612,6 +10697,11 @@
             "45-60": 0
           }
         },
+        "muster": {
+          "genug": false,
+          "spiele": 0,
+          "ab": 3
+        },
         "spiele": []
       },
       "letzte_aenderungen": [],
@@ -10984,6 +11074,11 @@
             "30-45": 0,
             "45-60": 0
           }
+        },
+        "muster": {
+          "genug": false,
+          "spiele": 0,
+          "ab": 3
         },
         "spiele": []
       },
@@ -11409,6 +11504,11 @@
             "45-60": 0
           }
         },
+        "muster": {
+          "genug": false,
+          "spiele": 0,
+          "ab": 3
+        },
         "spiele": []
       },
       "letzte_aenderungen": [],
@@ -11695,6 +11795,11 @@
             "45-60": 0
           }
         },
+        "muster": {
+          "genug": false,
+          "spiele": 0,
+          "ab": 3
+        },
         "spiele": []
       },
       "letzte_aenderungen": [],
@@ -11906,6 +12011,11 @@
             "45-60": 0
           }
         },
+        "muster": {
+          "genug": false,
+          "spiele": 0,
+          "ab": 3
+        },
         "spiele": []
       },
       "letzte_aenderungen": [],
@@ -12116,6 +12226,11 @@
             "30-45": 0,
             "45-60": 0
           }
+        },
+        "muster": {
+          "genug": false,
+          "spiele": 0,
+          "ab": 3
         },
         "spiele": []
       },
