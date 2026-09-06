@@ -9012,5 +9012,1839 @@
     "team_id": null
    }
   ]
+ },
+ "365815": {
+  "ereignisse": [
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Spieler aufgestellt",
+    "art_id": 40,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": false,
+    "minute": "00:00",
+    "spieler": {
+     "id": "1bv6o8f",
+     "nachname": "Gräf",
+     "vorname": "Jennifer"
+    },
+    "spielminute": 0,
+    "stand": [
+     0,
+     0
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Spieler aufgestellt",
+    "art_id": 40,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": false,
+    "minute": "00:00",
+    "spieler": {
+     "id": "0ygu648",
+     "nachname": "Brenner",
+     "vorname": "Jana"
+    },
+    "spielminute": 0,
+    "stand": [
+     0,
+     0
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Spieler aufgestellt",
+    "art_id": 40,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": false,
+    "minute": "00:00",
+    "spieler": {
+     "id": "1j0jpcn",
+     "nachname": "Dörr",
+     "vorname": "Sara"
+    },
+    "spielminute": 0,
+    "stand": [
+     0,
+     0
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Spieler aufgestellt",
+    "art_id": 40,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": false,
+    "minute": "00:00",
+    "spieler": {
+     "id": "0g9lwm6",
+     "nachname": "Hemmers",
+     "vorname": "Celine-Sofie"
+    },
+    "spielminute": 0,
+    "stand": [
+     0,
+     0
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Spieler aufgestellt",
+    "art_id": 40,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": false,
+    "minute": "00:00",
+    "spieler": {
+     "id": "0ngqg51",
+     "nachname": "Jakob",
+     "vorname": "Nathalie"
+    },
+    "spielminute": 0,
+    "stand": [
+     0,
+     0
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Spieler aufgestellt",
+    "art_id": 40,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": false,
+    "minute": "00:00",
+    "spieler": {
+     "id": "0dqh5jq",
+     "nachname": "Modzinski",
+     "vorname": "Veronica"
+    },
+    "spielminute": 0,
+    "stand": [
+     0,
+     0
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Spieler aufgestellt",
+    "art_id": 40,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": false,
+    "minute": "00:00",
+    "spieler": {
+     "id": "10o4ym5",
+     "nachname": "Reuther",
+     "vorname": "Christine"
+    },
+    "spielminute": 0,
+    "stand": [
+     0,
+     0
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Spieler aufgestellt",
+    "art_id": 40,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": false,
+    "minute": "00:00",
+    "spieler": {
+     "id": "1xxa5mk",
+     "nachname": "Sagolla",
+     "vorname": "Selina"
+    },
+    "spielminute": 0,
+    "stand": [
+     0,
+     0
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Spieler aufgestellt",
+    "art_id": 40,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": false,
+    "minute": "00:00",
+    "spieler": {
+     "id": "0t3x2mu",
+     "nachname": "Volz",
+     "vorname": "Lena"
+    },
+    "spielminute": 0,
+    "stand": [
+     0,
+     0
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Spieler aufgestellt",
+    "art_id": 40,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": false,
+    "minute": "00:00",
+    "spieler": {
+     "id": "1cskeap",
+     "nachname": "Weiß",
+     "vorname": "Sarah"
+    },
+    "spielminute": 0,
+    "stand": [
+     0,
+     0
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Schnelle Anmeldung",
+    "art_id": 38,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": false,
+    "minute": "00:00",
+    "spieler": {
+     "id": "0umq4sz",
+     "nachname": "Bürger",
+     "vorname": "Alfred"
+    },
+    "spielminute": 0,
+    "stand": [
+     0,
+     0
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Spieler aufgestellt",
+    "art_id": 40,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": false,
+    "minute": "00:00",
+    "spieler": {
+     "id": "0umq4sz",
+     "nachname": "Bürger",
+     "vorname": "Alfred"
+    },
+    "spielminute": 0,
+    "stand": [
+     0,
+     0
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Spieler aufgestellt",
+    "art_id": 40,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": false,
+    "minute": "00:00",
+    "spieler": {
+     "id": "17vtql4",
+     "nachname": "Schneider",
+     "vorname": "Andreas"
+    },
+    "spielminute": 0,
+    "stand": [
+     0,
+     0
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Startseite Teil",
+    "art_id": 10000,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": false,
+    "minute": "00:00",
+    "spielminute": 0,
+    "stand": [
+     0,
+     0
+    ],
+    "team_id": null
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "00:57",
+    "spieler": {
+     "id": "0g9lwm6",
+     "nachname": "Hemmers",
+     "vorname": "Celine-Sofie"
+    },
+    "spielminute": 0,
+    "stand": [
+     1,
+     0
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "02:32",
+    "spieler": {
+     "id": "0zl2ufm",
+     "nachname": "Dautermann",
+     "vorname": "Luisa"
+    },
+    "spielminute": 2,
+    "stand": [
+     1,
+     1
+    ],
+    "team_id": 81002
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "02:45",
+    "spieler": {
+     "id": "0g9lwm6",
+     "nachname": "Hemmers",
+     "vorname": "Celine-Sofie"
+    },
+    "spielminute": 2,
+    "stand": [
+     2,
+     1
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "03:09",
+    "spieler": {
+     "id": "10o4ym5",
+     "nachname": "Reuther",
+     "vorname": "Christine"
+    },
+    "spielminute": 3,
+    "stand": [
+     3,
+     1
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "04:24",
+    "spieler": {
+     "id": "10o4ym5",
+     "nachname": "Reuther",
+     "vorname": "Christine"
+    },
+    "spielminute": 4,
+    "stand": [
+     4,
+     1
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "05:00",
+    "spieler": {
+     "id": "0zl2ufm",
+     "nachname": "Dautermann",
+     "vorname": "Luisa"
+    },
+    "spielminute": 5,
+    "stand": [
+     4,
+     2
+    ],
+    "team_id": 81002
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "05:09",
+    "spieler": {
+     "id": "1cskeap",
+     "nachname": "Weiß",
+     "vorname": "Sarah"
+    },
+    "spielminute": 5,
+    "stand": [
+     5,
+     2
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "06:24",
+    "spieler": {
+     "id": "0vfe3lc",
+     "nachname": "Müller",
+     "vorname": "Wibke"
+    },
+    "spielminute": 6,
+    "stand": [
+     5,
+     3
+    ],
+    "team_id": 81002
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Siebenmeter Tor",
+    "art_id": 39,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "07:45",
+    "spieler": {
+     "id": "1cskeap",
+     "nachname": "Weiß",
+     "vorname": "Sarah"
+    },
+    "spielminute": 7,
+    "stand": [
+     6,
+     3
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Siebenmeter Tor",
+    "art_id": 39,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "09:26",
+    "spieler": {
+     "id": "0vfe3lc",
+     "nachname": "Müller",
+     "vorname": "Wibke"
+    },
+    "spielminute": 9,
+    "stand": [
+     6,
+     4
+    ],
+    "team_id": 81002
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "11:14",
+    "spieler": {
+     "id": "10o4ym5",
+     "nachname": "Reuther",
+     "vorname": "Christine"
+    },
+    "spielminute": 11,
+    "stand": [
+     7,
+     4
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "11:27",
+    "spieler": {
+     "id": "1wfketu",
+     "nachname": "Overbeck",
+     "vorname": "Leonie"
+    },
+    "spielminute": 11,
+    "stand": [
+     7,
+     5
+    ],
+    "team_id": 81002
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "11:48",
+    "spieler": {
+     "id": "0ngqg51",
+     "nachname": "Jakob",
+     "vorname": "Nathalie"
+    },
+    "spielminute": 11,
+    "stand": [
+     8,
+     5
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "12:11",
+    "spieler": {
+     "id": "1cskeap",
+     "nachname": "Weiß",
+     "vorname": "Sarah"
+    },
+    "spielminute": 12,
+    "stand": [
+     9,
+     5
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "12:51",
+    "spieler": {
+     "id": "0vfe3lc",
+     "nachname": "Müller",
+     "vorname": "Wibke"
+    },
+    "spielminute": 12,
+    "stand": [
+     9,
+     6
+    ],
+    "team_id": 81002
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "13:16",
+    "spieler": {
+     "id": "1xxa5mk",
+     "nachname": "Sagolla",
+     "vorname": "Selina"
+    },
+    "spielminute": 13,
+    "stand": [
+     10,
+     6
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "13:50",
+    "spieler": {
+     "id": "0vfe3lc",
+     "nachname": "Müller",
+     "vorname": "Wibke"
+    },
+    "spielminute": 13,
+    "stand": [
+     10,
+     7
+    ],
+    "team_id": 81002
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "13:54",
+    "spieler": {
+     "id": "1xxa5mk",
+     "nachname": "Sagolla",
+     "vorname": "Selina"
+    },
+    "spielminute": 13,
+    "stand": [
+     11,
+     7
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "14:33",
+    "spieler": {
+     "id": "0ssz2et",
+     "nachname": "Sehrig",
+     "vorname": "Jasmin-Nicole"
+    },
+    "spielminute": 14,
+    "stand": [
+     11,
+     8
+    ],
+    "team_id": 81002
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "14:57",
+    "spieler": {
+     "id": "1xxa5mk",
+     "nachname": "Sagolla",
+     "vorname": "Selina"
+    },
+    "spielminute": 14,
+    "stand": [
+     12,
+     8
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "16:32",
+    "spieler": {
+     "id": "1xxa5mk",
+     "nachname": "Sagolla",
+     "vorname": "Selina"
+    },
+    "spielminute": 16,
+    "stand": [
+     13,
+     8
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Auszeit",
+    "art_id": 30,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": false,
+    "minute": "16:36",
+    "spielminute": 16,
+    "stand": [
+     13,
+     8
+    ],
+    "team_id": 81002
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Siebenmeter Tor",
+    "art_id": 39,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "17:10",
+    "spieler": {
+     "id": "1cskeap",
+     "nachname": "Weiß",
+     "vorname": "Sarah"
+    },
+    "spielminute": 17,
+    "stand": [
+     14,
+     8
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "17:34",
+    "spieler": {
+     "id": "1wfketu",
+     "nachname": "Overbeck",
+     "vorname": "Leonie"
+    },
+    "spielminute": 17,
+    "stand": [
+     14,
+     9
+    ],
+    "team_id": 81002
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "17:41",
+    "spieler": {
+     "id": "1cskeap",
+     "nachname": "Weiß",
+     "vorname": "Sarah"
+    },
+    "spielminute": 17,
+    "stand": [
+     15,
+     9
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "18:37",
+    "spieler": {
+     "id": "1vws7hm",
+     "nachname": "Lukas",
+     "vorname": "Anna-Lena"
+    },
+    "spielminute": 18,
+    "stand": [
+     15,
+     10
+    ],
+    "team_id": 81002
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Siebenmeter Tor",
+    "art_id": 39,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "21:44",
+    "spieler": {
+     "id": "1cskeap",
+     "nachname": "Weiß",
+     "vorname": "Sarah"
+    },
+    "spielminute": 21,
+    "stand": [
+     16,
+     10
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "22:49",
+    "spieler": {
+     "id": "0ngqg51",
+     "nachname": "Jakob",
+     "vorname": "Nathalie"
+    },
+    "spielminute": 22,
+    "stand": [
+     17,
+     10
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "23:37",
+    "spieler": {
+     "id": "1bbovhq",
+     "nachname": "Westhöfer",
+     "vorname": "Sarina"
+    },
+    "spielminute": 23,
+    "stand": [
+     17,
+     11
+    ],
+    "team_id": 81002
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "24:19",
+    "spieler": {
+     "id": "0ygu648",
+     "nachname": "Brenner",
+     "vorname": "Jana"
+    },
+    "spielminute": 24,
+    "stand": [
+     18,
+     11
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "26:41",
+    "spieler": {
+     "id": "1xxa5mk",
+     "nachname": "Sagolla",
+     "vorname": "Selina"
+    },
+    "spielminute": 26,
+    "stand": [
+     19,
+     11
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "28:13",
+    "spieler": {
+     "id": "10o4ym5",
+     "nachname": "Reuther",
+     "vorname": "Christine"
+    },
+    "spielminute": 28,
+    "stand": [
+     20,
+     11
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "28:32",
+    "spieler": {
+     "id": "1bdcp3t",
+     "nachname": "Elter",
+     "vorname": "Janina"
+    },
+    "spielminute": 28,
+    "stand": [
+     20,
+     12
+    ],
+    "team_id": 81002
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Startseite Teil",
+    "art_id": 10000,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": false,
+    "minute": "00:00",
+    "spielminute": 30,
+    "stand": [
+     20,
+     12
+    ],
+    "team_id": null
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "01:08",
+    "spieler": {
+     "id": "0g9lwm6",
+     "nachname": "Hemmers",
+     "vorname": "Celine-Sofie"
+    },
+    "spielminute": 31,
+    "stand": [
+     21,
+     12
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "01:16",
+    "spieler": {
+     "id": "1y2e4aa",
+     "nachname": "Weinmann",
+     "vorname": "Johanna"
+    },
+    "spielminute": 31,
+    "stand": [
+     21,
+     13
+    ],
+    "team_id": 81002
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "03:42",
+    "spieler": {
+     "id": "1cskeap",
+     "nachname": "Weiß",
+     "vorname": "Sarah"
+    },
+    "spielminute": 33,
+    "stand": [
+     22,
+     13
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "05:00",
+    "spieler": {
+     "id": "0g9lwm6",
+     "nachname": "Hemmers",
+     "vorname": "Celine-Sofie"
+    },
+    "spielminute": 35,
+    "stand": [
+     23,
+     13
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "05:34",
+    "spieler": {
+     "id": "1bv6o8f",
+     "nachname": "Gräf",
+     "vorname": "Jennifer"
+    },
+    "spielminute": 35,
+    "stand": [
+     24,
+     13
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "06:06",
+    "spieler": {
+     "id": "1cskeap",
+     "nachname": "Weiß",
+     "vorname": "Sarah"
+    },
+    "spielminute": 36,
+    "stand": [
+     25,
+     13
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "06:59",
+    "spieler": {
+     "id": "1cskeap",
+     "nachname": "Weiß",
+     "vorname": "Sarah"
+    },
+    "spielminute": 36,
+    "stand": [
+     26,
+     13
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "07:42",
+    "spieler": {
+     "id": "0mg8c04",
+     "nachname": "Kruse",
+     "vorname": "Maike"
+    },
+    "spielminute": 37,
+    "stand": [
+     26,
+     14
+    ],
+    "team_id": 81002
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "08:41",
+    "spieler": {
+     "id": "0ngqg51",
+     "nachname": "Jakob",
+     "vorname": "Nathalie"
+    },
+    "spielminute": 38,
+    "stand": [
+     27,
+     14
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "09:28",
+    "spieler": {
+     "id": "0ngqg51",
+     "nachname": "Jakob",
+     "vorname": "Nathalie"
+    },
+    "spielminute": 39,
+    "stand": [
+     28,
+     14
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "10:02",
+    "spieler": {
+     "id": "1y2e4aa",
+     "nachname": "Weinmann",
+     "vorname": "Johanna"
+    },
+    "spielminute": 40,
+    "stand": [
+     28,
+     15
+    ],
+    "team_id": 81002
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "10:14",
+    "spieler": {
+     "id": "0t3x2mu",
+     "nachname": "Volz",
+     "vorname": "Lena"
+    },
+    "spielminute": 40,
+    "stand": [
+     29,
+     15
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "11:24",
+    "spieler": {
+     "id": "1j0jpcn",
+     "nachname": "Dörr",
+     "vorname": "Sara"
+    },
+    "spielminute": 41,
+    "stand": [
+     30,
+     15
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "11:54",
+    "spieler": {
+     "id": "1bbovhq",
+     "nachname": "Westhöfer",
+     "vorname": "Sarina"
+    },
+    "spielminute": 41,
+    "stand": [
+     30,
+     16
+    ],
+    "team_id": 81002
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Zwei Minuten",
+    "art_id": 13,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": false,
+    "minute": "12:12",
+    "spieler": {
+     "id": "0zl2ufm",
+     "nachname": "Dautermann",
+     "vorname": "Luisa"
+    },
+    "spielminute": 42,
+    "stand": [
+     30,
+     16
+    ],
+    "team_id": 81002
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "12:15",
+    "spieler": {
+     "id": "1cskeap",
+     "nachname": "Weiß",
+     "vorname": "Sarah"
+    },
+    "spielminute": 42,
+    "stand": [
+     31,
+     16
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "13:13",
+    "spieler": {
+     "id": "1bbovhq",
+     "nachname": "Westhöfer",
+     "vorname": "Sarina"
+    },
+    "spielminute": 43,
+    "stand": [
+     31,
+     17
+    ],
+    "team_id": 81002
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "13:28",
+    "spieler": {
+     "id": "0ngqg51",
+     "nachname": "Jakob",
+     "vorname": "Nathalie"
+    },
+    "spielminute": 43,
+    "stand": [
+     32,
+     17
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "13:46",
+    "spieler": {
+     "id": "1bbovhq",
+     "nachname": "Westhöfer",
+     "vorname": "Sarina"
+    },
+    "spielminute": 43,
+    "stand": [
+     32,
+     18
+    ],
+    "team_id": 81002
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Zwei Minuten",
+    "art_id": 13,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": false,
+    "minute": "15:18",
+    "spieler": {
+     "id": "1j0jpcn",
+     "nachname": "Dörr",
+     "vorname": "Sara"
+    },
+    "spielminute": 45,
+    "stand": [
+     32,
+     18
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Siebenmeter Tor",
+    "art_id": 39,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "15:22",
+    "spieler": {
+     "id": "0vfe3lc",
+     "nachname": "Müller",
+     "vorname": "Wibke"
+    },
+    "spielminute": 45,
+    "stand": [
+     32,
+     19
+    ],
+    "team_id": 81002
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "15:50",
+    "spieler": {
+     "id": "1bbovhq",
+     "nachname": "Westhöfer",
+     "vorname": "Sarina"
+    },
+    "spielminute": 45,
+    "stand": [
+     32,
+     20
+    ],
+    "team_id": 81002
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "16:17",
+    "spieler": {
+     "id": "1vws7hm",
+     "nachname": "Lukas",
+     "vorname": "Anna-Lena"
+    },
+    "spielminute": 46,
+    "stand": [
+     32,
+     21
+    ],
+    "team_id": 81002
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Auszeit",
+    "art_id": 30,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": false,
+    "minute": "16:25",
+    "spielminute": 46,
+    "stand": [
+     32,
+     21
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "16:39",
+    "spieler": {
+     "id": "1rmtkeu",
+     "nachname": "Elter",
+     "vorname": "Alea"
+    },
+    "spielminute": 46,
+    "stand": [
+     32,
+     22
+    ],
+    "team_id": 81002
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "16:49",
+    "spieler": {
+     "id": "0g9lwm6",
+     "nachname": "Hemmers",
+     "vorname": "Celine-Sofie"
+    },
+    "spielminute": 46,
+    "stand": [
+     33,
+     22
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "17:37",
+    "spieler": {
+     "id": "1cskeap",
+     "nachname": "Weiß",
+     "vorname": "Sarah"
+    },
+    "spielminute": 47,
+    "stand": [
+     34,
+     22
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Zwei Minuten",
+    "art_id": 13,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": false,
+    "minute": "18:39",
+    "spieler": {
+     "id": "1bdcp3t",
+     "nachname": "Elter",
+     "vorname": "Janina"
+    },
+    "spielminute": 48,
+    "stand": [
+     34,
+     22
+    ],
+    "team_id": 81002
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "19:09",
+    "spieler": {
+     "id": "1bbovhq",
+     "nachname": "Westhöfer",
+     "vorname": "Sarina"
+    },
+    "spielminute": 49,
+    "stand": [
+     34,
+     23
+    ],
+    "team_id": 81002
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Siebenmeter Tor",
+    "art_id": 39,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "19:55",
+    "spieler": {
+     "id": "0vfe3lc",
+     "nachname": "Müller",
+     "vorname": "Wibke"
+    },
+    "spielminute": 49,
+    "stand": [
+     34,
+     24
+    ],
+    "team_id": 81002
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "20:08",
+    "spieler": {
+     "id": "1xxa5mk",
+     "nachname": "Sagolla",
+     "vorname": "Selina"
+    },
+    "spielminute": 50,
+    "stand": [
+     35,
+     24
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "20:59",
+    "spieler": {
+     "id": "0g9lwm6",
+     "nachname": "Hemmers",
+     "vorname": "Celine-Sofie"
+    },
+    "spielminute": 50,
+    "stand": [
+     36,
+     24
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "22:08",
+    "spieler": {
+     "id": "0ssz2et",
+     "nachname": "Sehrig",
+     "vorname": "Jasmin-Nicole"
+    },
+    "spielminute": 52,
+    "stand": [
+     36,
+     25
+    ],
+    "team_id": 81002
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "22:52",
+    "spieler": {
+     "id": "1vws7hm",
+     "nachname": "Lukas",
+     "vorname": "Anna-Lena"
+    },
+    "spielminute": 52,
+    "stand": [
+     36,
+     26
+    ],
+    "team_id": 81002
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Auszeit",
+    "art_id": 30,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": false,
+    "minute": "23:27",
+    "spielminute": 53,
+    "stand": [
+     36,
+     26
+    ],
+    "team_id": 81002
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Siebenmeter Tor",
+    "art_id": 39,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "24:02",
+    "spieler": {
+     "id": "0vfe3lc",
+     "nachname": "Müller",
+     "vorname": "Wibke"
+    },
+    "spielminute": 54,
+    "stand": [
+     36,
+     27
+    ],
+    "team_id": 81002
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Siebenmeter Fehlwurf",
+    "art_id": 1004,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": false,
+    "minute": "24:53",
+    "spieler": {
+     "id": "1cskeap",
+     "nachname": "Weiß",
+     "vorname": "Sarah"
+    },
+    "spielminute": 54,
+    "stand": [
+     36,
+     27
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "25:51",
+    "spieler": {
+     "id": "1cskeap",
+     "nachname": "Weiß",
+     "vorname": "Sarah"
+    },
+    "spielminute": 55,
+    "stand": [
+     37,
+     27
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Siebenmeter Tor",
+    "art_id": 39,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "26:47",
+    "spieler": {
+     "id": "1cskeap",
+     "nachname": "Weiß",
+     "vorname": "Sarah"
+    },
+    "spielminute": 56,
+    "stand": [
+     38,
+     27
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "27:43",
+    "spieler": {
+     "id": "0ygu648",
+     "nachname": "Brenner",
+     "vorname": "Jana"
+    },
+    "spielminute": 57,
+    "stand": [
+     39,
+     27
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "28:15",
+    "spieler": {
+     "id": "1cskeap",
+     "nachname": "Weiß",
+     "vorname": "Sarah"
+    },
+    "spielminute": 58,
+    "stand": [
+     40,
+     27
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "28:46",
+    "spieler": {
+     "id": "0x7v8n4",
+     "nachname": "Müller",
+     "vorname": "Maren"
+    },
+    "spielminute": 58,
+    "stand": [
+     40,
+     28
+    ],
+    "team_id": 81002
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Siebenmeter Tor",
+    "art_id": 39,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "29:03",
+    "spieler": {
+     "id": "1cskeap",
+     "nachname": "Weiß",
+     "vorname": "Sarah"
+    },
+    "spielminute": 59,
+    "stand": [
+     41,
+     28
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "29:53",
+    "spieler": {
+     "id": "0ygu648",
+     "nachname": "Brenner",
+     "vorname": "Jana"
+    },
+    "spielminute": 59,
+    "stand": [
+     42,
+     28
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Spielende",
+    "art_id": 10001,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": false,
+    "minute": "30:00",
+    "spielminute": 60,
+    "stand": [
+     42,
+     28
+    ],
+    "team_id": null
+   }
+  ]
  }
 }

@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-06T17:16:06+00:00",
+  "aktualisiert": "2026-09-06T17:46:08+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -2920,9 +2920,24 @@
             "gegentore": 0,
             "differenz": 0
           }
+        ],
+        "fehlend": [
+          {
+            "datum": "2026-09-06T18:00:00",
+            "gegner": "FSG Selz-Wiesbach",
+            "ergebnis": {
+              "heim": 42,
+              "gast": 28,
+              "eigene": 42,
+              "fremde": 28,
+              "ausgang": "S"
+            }
+          }
         ]
       },
-      "form": [],
+      "form": [
+        "S"
+      ],
       "statistik": {
         "fahrten": {
           "gesamt_km": 1054,
@@ -2946,16 +2961,16 @@
         },
         "bilanz": {
           "gesamt": {
-            "s": 0,
+            "s": 1,
             "u": 0,
             "n": 0,
-            "spiele": 0
+            "spiele": 1
           },
           "heim": {
-            "s": 0,
+            "s": 1,
             "u": 0,
             "n": 0,
-            "spiele": 0
+            "spiele": 1
           },
           "auswaerts": {
             "s": 0,
@@ -2965,16 +2980,25 @@
           }
         },
         "serien": {
-          "ohne_niederlage": 0,
-          "aktuell": 0,
-          "aktuell_art": null
+          "ohne_niederlage": 1,
+          "aktuell": 1,
+          "aktuell_art": "S"
         },
         "krimis": {
           "anzahl": 0,
-          "anteil": 0,
-          "gesamt": 0
+          "gesamt": 1,
+          "anteil": 0
         },
-        "tore": {},
+        "tore": {
+          "erzielt": 42,
+          "kassiert": 28,
+          "schnitt": 42.0,
+          "torreichstes": {
+            "gegner": "FSG Selz-Wiesbach",
+            "stand": "42:28",
+            "summe": 70
+          }
+        },
         "anwurf": {
           "spaet": {
             "spiele": 0,
@@ -2982,9 +3006,9 @@
             "schnitt": 0
           },
           "frueh": {
-            "spiele": 0,
-            "punkte": 0,
-            "schnitt": 0
+            "spiele": 1,
+            "punkte": 2,
+            "schnitt": 2.0
           }
         },
         "gegner": {},
@@ -2992,10 +3016,10 @@
       },
       "spieler": {
         "quelle": {
-          "spiele_gelaufen": 0,
+          "spiele_gelaufen": 1,
           "mit_bericht": 0,
           "ohne_bericht": 0,
-          "offen": 0
+          "offen": 1
         },
         "schuetzen": [],
         "verteilung": {
@@ -3025,71 +3049,71 @@
         "spiele": 1,
         "schuetzen": [
           {
-            "id": "1bdcp3t",
-            "name": "Janina Elter",
-            "tore": 4,
+            "id": "0f3jgbw",
+            "name": "Olga Roth",
+            "tore": 14,
+            "siebenmeter_tore": 7,
+            "siebenmeter_wuerfe": 7,
+            "zwei_minuten": 0,
+            "verwarnungen": 1,
+            "spiele": 1,
+            "tore_je_spiel": 14.0,
+            "siebenmeter_quote": 100
+          },
+          {
+            "id": "1j3viua",
+            "name": "Caroline Glas",
+            "tore": 5,
             "siebenmeter_tore": 0,
             "siebenmeter_wuerfe": 0,
             "zwei_minuten": 0,
-            "verwarnungen": 0,
+            "verwarnungen": 1,
             "spiele": 1,
-            "tore_je_spiel": 4.0,
+            "tore_je_spiel": 5.0,
             "siebenmeter_quote": null
           },
           {
-            "id": "1wfketu",
-            "name": "Leonie Overbeck",
-            "tore": 4,
+            "id": "1wktxak",
+            "name": "Lilly Anton",
+            "tore": 3,
             "siebenmeter_tore": 0,
             "siebenmeter_wuerfe": 0,
             "zwei_minuten": 1,
             "verwarnungen": 1,
             "spiele": 1,
-            "tore_je_spiel": 4.0,
-            "siebenmeter_quote": null
-          },
-          {
-            "id": "1bbovhq",
-            "name": "Sarina Westhöfer",
-            "tore": 4,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 0,
-            "verwarnungen": 0,
-            "spiele": 1,
-            "tore_je_spiel": 4.0,
-            "siebenmeter_quote": null
-          },
-          {
-            "id": "0vfe3lc",
-            "name": "Wibke Müller",
-            "tore": 4,
-            "siebenmeter_tore": 2,
-            "siebenmeter_wuerfe": 2,
-            "zwei_minuten": 0,
-            "verwarnungen": 0,
-            "spiele": 1,
-            "tore_je_spiel": 4.0,
-            "siebenmeter_quote": 100
-          },
-          {
-            "id": "0o8ng1h",
-            "name": "Julia Stumpf",
-            "tore": 3,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 0,
-            "verwarnungen": 0,
-            "spiele": 1,
             "tore_je_spiel": 3.0,
+            "siebenmeter_quote": null
+          },
+          {
+            "id": "01vemo5",
+            "name": "Emma-Lilly Krauß",
+            "tore": 2,
+            "siebenmeter_tore": 0,
+            "siebenmeter_wuerfe": 0,
+            "zwei_minuten": 0,
+            "verwarnungen": 0,
+            "spiele": 1,
+            "tore_je_spiel": 2.0,
+            "siebenmeter_quote": null
+          },
+          {
+            "id": "0f1k9wt",
+            "name": "Lea Hammer",
+            "tore": 2,
+            "siebenmeter_tore": 0,
+            "siebenmeter_wuerfe": 0,
+            "zwei_minuten": 0,
+            "verwarnungen": 0,
+            "spiele": 1,
+            "tore_je_spiel": 2.0,
             "siebenmeter_quote": null
           }
         ],
-        "weitere": 4,
-        "tore": 26,
-        "torschuetzen": 9,
-        "groesster_anteil": 15,
-        "strafen": 3
+        "weitere": 2,
+        "tore": 29,
+        "torschuetzen": 7,
+        "groesster_anteil": 48,
+        "strafen": 1
       },
       "letzte_aenderungen": [],
       "spiele": {
@@ -3106,7 +3130,14 @@
           "phase_id": 12481,
           "heim": true,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 0,
+          "ergebnis": {
+            "heim": 42,
+            "gast": 28,
+            "eigene": 42,
+            "fremde": 28,
+            "ausgang": "S"
+          }
         },
         "2627RPVLERWA0301": {
           "datum": "2026-09-12T20:00:00",
