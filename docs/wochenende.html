@@ -233,6 +233,63 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 .form b.N { color: var(--niederlage); border-color: var(--niederlage); }
 .form b.U { color: var(--leise); border-color: var(--linie); }
 
+/* Ein Spiel mit Bericht ist aufklappbar. Die Zeile bleibt im Aussehen, wie
+   sie war - nur der Zeiger und ein Dreieck kommen dazu. */
+details.spiel.mitbericht { display: block; }
+details.spiel.mitbericht > summary { display: grid;
+  grid-template-columns: 58px 1fr auto; gap: 0 14px; align-items: start;
+  cursor: pointer; list-style: none; padding: 0; }
+details.spiel.mitbericht > summary::-webkit-details-marker { display: none; }
+details.spiel.mitbericht > summary::after { content: ""; grid-column: 3;
+  justify-self: end; align-self: center; width: 6px; height: 6px;
+  margin-top: 6px; border-right: 1.5px solid var(--leise);
+  border-bottom: 1.5px solid var(--leise);
+  transform: rotate(-45deg); transition: transform .15s; }
+details.spiel.mitbericht[open] > summary::after { transform: rotate(45deg); }
+details.spiel.mitbericht > summary:focus-visible { outline: 2px solid var(--gold);
+  outline-offset: 2px; }
+/* Der Hallenlink liegt im summary und soll weiter zur Karte fuehren,
+   nicht die Zeile aufklappen. */
+details.spiel.mitbericht summary .halle a { position: relative; z-index: 1; }
+details.spiel.mitbericht .klappinhalt { padding: 6px 0 18px; }
+/* Vergangene Spiele sind gedaempft - das gilt fuer die Zeile, nicht fuer
+   den aufgeklappten Bericht. Der soll gelesen werden. */
+details.spiel.vorbei { opacity: 1; }
+details.spiel.vorbei > summary { opacity: .55; }
+details.spiel.vorbei[open] > summary { opacity: 1; }
+
+/* Aufklappbare Abschnitte. <details> bringt die Mechanik mit, hier steht
+   nur, wie es aussieht - samt Dreieck, das sich beim Oeffnen dreht. */
+.klapp { border-top: 1px solid var(--linie); }
+.klapp > summary { display: flex; align-items: baseline; gap: 10px;
+  padding: 15px 0; cursor: pointer; list-style: none;
+  font-size: .88rem; font-weight: 600; letter-spacing: .04em;
+  text-transform: uppercase; color: var(--tinte); }
+.klapp > summary::-webkit-details-marker { display: none; }
+.klapp > summary::after { content: ""; margin-left: auto; width: 7px; height: 7px;
+  border-right: 1.5px solid var(--leise); border-bottom: 1.5px solid var(--leise);
+  transform: rotate(-45deg) translate(-2px, -1px); transition: transform .15s; }
+.klapp[open] > summary::after { transform: rotate(45deg) translate(-2px, -2px); }
+.klapp > summary:hover { color: var(--gold-tief); }
+.klapp > summary:focus-visible { outline: 2px solid var(--gold);
+  outline-offset: 2px; }
+.klapp .nebenbei { font-size: .82rem; font-weight: 400; letter-spacing: 0;
+  text-transform: none; color: var(--leise); }
+.klappinhalt { padding-bottom: 26px; }
+.klappleiste { display: flex; justify-content: flex-end; margin: 10px 0 0; }
+.klappleiste.innen { margin: 0 0 16px; }
+.klappleiste button { font: inherit; font-size: .82rem; font-weight: 600;
+  cursor: pointer; background: none; border: 0; padding: 4px 0;
+  color: var(--gold-tief); text-decoration: underline;
+  text-underline-offset: 3px; }
+.klappleiste button:hover { color: var(--tinte); }
+/* Ein Spiel im Verlaufsblock: die Kopfzeile ist hier die Zusammenfassung. */
+.klapp.spielfilm { border-top: 1px solid var(--linie-zart); }
+.klapp.spielfilm > summary { padding: 12px 0; text-transform: none;
+  letter-spacing: 0; font-weight: 400; }
+.spielschuetzen { margin: 10px 0 0; font-size: .86rem; line-height: 1.5;
+  color: var(--tinte-weich); }
+
 /* Spielfilm: eine Kurve je Spiel, Fuehrung ueber der Mittellinie. */
 .filme { display: grid; gap: 26px; margin-bottom: 6px; }
 /* Nicht .kopf nennen: die Klasse traegt im Seitenkopf einen schwarzen
@@ -1095,7 +1152,7 @@ table.tabelle tr.wir td.platz { box-shadow: inset 2px 0 0 var(--gold); }
 </div></div>
 
   <p class="fuss">
-    Stand: 06.09.2026, 16:01 Uhr. Wird täglich mit
+    Stand: 06.09.2026, 16:31 Uhr. Wird täglich mit
     <a href="https://www.handball.net" target="_blank" rel="noopener">handball.net</a>
     abgeglichen. <a href="./">Spielplan abonnieren</a>
   </p>
