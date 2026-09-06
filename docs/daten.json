@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-06T19:16:06+00:00",
+  "aktualisiert": "2026-09-06T19:46:08+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -1855,9 +1855,23 @@
             "gegentore": 0,
             "differenz": 0
           }
+        ],
+        "fehlend": [
+          {
+            "datum": "2026-09-06T20:00:00",
+            "gegner": "HSG Grethen/Maxdorf",
+            "ergebnis": {
+              "heim": 26,
+              "gast": 27,
+              "eigene": 26,
+              "fremde": 27,
+              "ausgang": "N"
+            }
+          }
         ]
       },
       "form": [
+        "N",
         "N"
       ],
       "statistik": {
@@ -1885,14 +1899,14 @@
           "gesamt": {
             "s": 0,
             "u": 0,
-            "n": 1,
-            "spiele": 1
+            "n": 2,
+            "spiele": 2
           },
           "heim": {
             "s": 0,
             "u": 0,
-            "n": 0,
-            "spiele": 0
+            "n": 1,
+            "spiele": 1
           },
           "auswaerts": {
             "s": 0,
@@ -1903,27 +1917,27 @@
         },
         "serien": {
           "ohne_niederlage": 0,
-          "aktuell": 1,
+          "aktuell": 2,
           "aktuell_art": "N"
         },
         "krimis": {
-          "anzahl": 1,
-          "gesamt": 1,
+          "anzahl": 2,
+          "gesamt": 2,
           "anteil": 100
         },
         "tore": {
-          "erzielt": 20,
-          "kassiert": 22,
-          "schnitt": 20.0,
+          "erzielt": 46,
+          "kassiert": 49,
+          "schnitt": 23.0,
           "torreichstes": {
-            "gegner": "TV THALEISCHWEILER Herren",
-            "stand": "20:22",
-            "summe": 42
+            "gegner": "HSG Grethen/Maxdorf",
+            "stand": "26:27",
+            "summe": 53
           }
         },
         "anwurf": {
           "spaet": {
-            "spiele": 1,
+            "spiele": 2,
             "punkte": 0,
             "schnitt": 0.0
           },
@@ -1938,10 +1952,10 @@
       },
       "spieler": {
         "quelle": {
-          "spiele_gelaufen": 1,
+          "spiele_gelaufen": 2,
           "mit_bericht": 1,
           "ohne_bericht": 0,
-          "offen": 0
+          "offen": 1
         },
         "schuetzen": [
           {
@@ -2394,74 +2408,7 @@
         ]
       },
       "gegnervorschau": {
-        "spiele": 1,
-        "schuetzen": [
-          {
-            "id": "10zpwdx",
-            "name": "Dominic Jochum",
-            "tore": 7,
-            "siebenmeter_tore": 1,
-            "siebenmeter_wuerfe": 1,
-            "zwei_minuten": 1,
-            "verwarnungen": 0,
-            "spiele": 1,
-            "tore_je_spiel": 7.0,
-            "siebenmeter_quote": 100
-          },
-          {
-            "id": "1pxbqya",
-            "name": "Johannes Aupperle",
-            "tore": 6,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 0,
-            "verwarnungen": 0,
-            "spiele": 1,
-            "tore_je_spiel": 6.0,
-            "siebenmeter_quote": null
-          },
-          {
-            "id": "1uor82j",
-            "name": "Kai Riegel",
-            "tore": 5,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 0,
-            "verwarnungen": 0,
-            "spiele": 1,
-            "tore_je_spiel": 5.0,
-            "siebenmeter_quote": null
-          },
-          {
-            "id": "08gpjsu",
-            "name": "Michael Gramzow",
-            "tore": 5,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 1,
-            "zwei_minuten": 1,
-            "verwarnungen": 0,
-            "spiele": 1,
-            "tore_je_spiel": 5.0,
-            "siebenmeter_quote": 0
-          },
-          {
-            "id": "13vvo3h",
-            "name": "Alexander Schmitt",
-            "tore": 3,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 0,
-            "verwarnungen": 0,
-            "spiele": 1,
-            "tore_je_spiel": 3.0,
-            "siebenmeter_quote": null
-          }
-        ],
-        "weitere": 5,
-        "tore": 33,
-        "torschuetzen": 10,
-        "groesster_anteil": 21,
-        "strafen": 6
+        "spiele": 0
       },
       "letzte_aenderungen": [],
       "spiele": {
@@ -2500,7 +2447,14 @@
           "phase_id": 12583,
           "heim": true,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 0,
+          "ergebnis": {
+            "heim": 26,
+            "gast": 27,
+            "eigene": 26,
+            "fremde": 27,
+            "ausgang": "N"
+          }
         },
         "2627RPBKRKERMB0301": {
           "datum": "2026-09-13T16:00:00",
