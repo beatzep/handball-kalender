@@ -72,6 +72,9 @@ jobs:
           python3 baue_wochenende.py \
             --daten docs/daten.json \
             --out docs/wochenende.html
+          python3 baue_torjaeger.py \
+            --daten docs/daten.json \
+            --out docs/torjaeger.html
           python3 baue_admin.py \
             --worker-url "https://muru-zaehler.edis-herrmann.workers.dev" \
             --out docs/admin.html

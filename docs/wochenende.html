@@ -126,6 +126,7 @@ a { color: inherit; }
 #anheften[aria-pressed="true"]::before { content: "★  "; }
 #anheften:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 .uebersichtlink { margin: 14px 0 0; font-size: .9rem; }
+.uebersichtlink { display: flex; flex-wrap: wrap; gap: 6px 20px; }
 .uebersichtlink a { color: var(--gold); text-decoration: none; font-weight: 600; }
 .uebersichtlink a:hover { color: var(--auf-schwarz); }
 
@@ -656,7 +657,8 @@ table.tabelle tr.wir td.platz { box-shadow: inset 2px 0 0 var(--gold); }
     <h1>Wer spielt<br>wann</h1>
     <p class="saison" id="umfang">72 Spiele in den nächsten zwei Wochen,
        davon 35 zu Hause</p>
-    <p class="uebersichtlink"><a href="./">Zum Spielplan einer Mannschaft &rsaquo;</a></p>
+    <p class="uebersichtlink"><a href="./">Zum Spielplan einer Mannschaft &rsaquo;</a>
+       <a href="torjaeger.html">Wer trifft &rsaquo;</a></p>
   </div>
 </header>
 
@@ -1173,7 +1175,7 @@ table.tabelle tr.wir td.platz { box-shadow: inset 2px 0 0 var(--gold); }
 </div></div>
 
   <p class="fuss">
-    Stand: 06.09.2026, 18:02 Uhr. Wird täglich mit
+    Stand: 06.09.2026, 18:10 Uhr. Wird täglich mit
     <a href="https://www.handball.net" target="_blank" rel="noopener">handball.net</a>
     abgeglichen. <a href="./">Spielplan abonnieren</a>
   </p>

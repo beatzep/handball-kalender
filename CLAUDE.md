@@ -38,6 +38,7 @@ python3 baue_seite.py --daten docs/daten.json \
   --basis-url "https://beatzep.github.io/handball-kalender" \
   --worker-url "$W" --out docs/index.html
 python3 baue_wochenende.py --daten docs/daten.json --out docs/wochenende.html
+python3 baue_torjaeger.py --daten docs/daten.json --out docs/torjaeger.html
 python3 baue_admin.py --worker-url "$W" --out docs/admin.html
 ```
 

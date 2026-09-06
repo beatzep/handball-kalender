@@ -164,7 +164,8 @@ Mutterstadt/Ruchheim in den nächsten zwei Wochen.">
     <h1>Wer spielt<br>wann</h1>
     <p class="saison" id="umfang">{len(spiele)} Spiele in den nächsten zwei Wochen,
        davon {heimspiele} zu Hause</p>
-    <p class="uebersichtlink"><a href="./">Zum Spielplan einer Mannschaft &rsaquo;</a></p>
+    <p class="uebersichtlink"><a href="./">Zum Spielplan einer Mannschaft &rsaquo;</a>
+       <a href="torjaeger.html">Wer trifft &rsaquo;</a></p>
   </div>
 </header>
 

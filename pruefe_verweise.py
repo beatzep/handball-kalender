@@ -57,6 +57,21 @@ def main() -> int:
     # Die Ruecktueren muessen ebenfalls stehen
     if 'href="wochenende.html"' not in seite:
         fehler.append("index.html hat keinen Weg zurueck zur Wochenend-Uebersicht")
+    if 'href="torjaeger.html"' not in seite:
+        fehler.append("index.html verweist nicht auf die Torjaegerliste")
+
+    # Die Torjaegerliste selbst: gibt es sie, und fuehrt sie zurueck?
+    try:
+        jaeger = lies("docs/torjaeger.html")
+    except FileNotFoundError:
+        fehler.append("docs/torjaeger.html fehlt")
+        jaeger = ""
+    if jaeger:
+        if 'href="./"' not in jaeger:
+            fehler.append("torjaeger.html hat keinen Weg zurueck zum Spielplan")
+        if 'class="jaeger"' not in jaeger and "Schützen" not in jaeger:
+            fehler.append("torjaeger.html enthaelt weder Schuetzen noch einen "
+                          "Hinweis, warum nicht")
     if 'id="zumeinen"' not in seite:
         fehler.append("index.html hat keinen Knopf zurueck zum eigenen Blick")
     # Auf den Aufruf pruefen, nicht auf den blossen Namen: ein Tippfehler

@@ -128,6 +128,7 @@ a { color: inherit; }
 #anheften[aria-pressed="true"]::before { content: "★  "; }
 #anheften:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 .uebersichtlink { margin: 14px 0 0; font-size: .9rem; }
+.uebersichtlink { display: flex; flex-wrap: wrap; gap: 6px 20px; }
 .uebersichtlink a { color: var(--gold); text-decoration: none; font-weight: 600; }
 .uebersichtlink a:hover { color: var(--auf-schwarz); }
 
@@ -635,7 +636,8 @@ table.tabelle tr.wir td.platz { box-shadow: inset 2px 0 0 var(--gold); }
         <button id="zumeinen" type="button" hidden></button>
       </div>
       <p class="anheftwink" id="anheftwink" hidden></p>
-      <p class="uebersichtlink"><a href="wochenende.html">Alle Spiele am Wochenende &rsaquo;</a></p>
+      <p class="uebersichtlink"><a href="wochenende.html">Alle Spiele am Wochenende &rsaquo;</a>
+         <a href="torjaeger.html">Wer trifft &rsaquo;</a></p>
     </div>
   </div>
 </header>

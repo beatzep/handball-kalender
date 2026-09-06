@@ -259,6 +259,28 @@ Hallen ohne Straßenkilometer dastehen. Fehlt der Schlüssel `ORS_API_KEY` in
 den Repository-Secrets, bleiben neue Hallen unbesetzt und fallen einzeln auf
 die Schätzung zurück – der Hinweis nennt sie beim Namen.
 
+## Torjägerliste
+
+`baue_torjaeger.py` erzeugt `docs/torjaeger.html`: alle Schützen der Aktiven
+an einem Ort, über die Mannschaften hinweg zusammengefasst. Bei handball.net
+muss man jede Mannschaft einzeln aufrufen und bekommt dort nur die ersten
+zehn – am 06.09.2026 fehlten so zwei Spieler mit je einem Tor, und die
+Summe stimmte um zwei Tore nicht.
+
+Zusammengeführt wird über die Spieler-Kennung der Quelle, **nicht über den
+Namen**: In dieser Runde gibt es bereits zwei Leute, die gleich heißen. Wer
+in Herren I und II spielt, taucht einmal auf, mit beiden Mannschaften
+daneben; in seiner Bilanz steht dann bei jedem Spiel, für welche er
+aufgelaufen ist.
+
+Sortierbar nach Toren oder nach Toren je Spiel. Jede Zeile lässt sich zur
+persönlichen Bilanz aufklappen: welche Spiele, wie viele Tore, wie viele
+Siebenmeter.
+
+Nur die Aktiven. Torschützenlisten von Jugendlichen mit vollem Namen auf
+einer öffentlichen Vereinsseite sind etwas anderes, auch wenn handball.net
+sie führt.
+
 ## Auswertung der Nutzung
 
 `docs/admin.html` zeigt Aufrufe, Aktionen und Verteilung nach Mannschaft und
