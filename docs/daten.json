@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-06T16:16:05+00:00",
+  "aktualisiert": "2026-09-06T16:46:07+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -1326,6 +1326,9 @@
           }
         ]
       },
+      "gegnervorschau": {
+        "spiele": 0
+      },
       "letzte_aenderungen": [],
       "spiele": {
         "2627RPBKROERMA0101": {
@@ -1672,9 +1675,6 @@
           "ohne_zeit": false,
           "sequence": 0
         }
-      },
-      "gegnervorschau": {
-        "spiele": 0
       }
     },
     "herren2": {
@@ -2393,6 +2393,76 @@
           }
         ]
       },
+      "gegnervorschau": {
+        "spiele": 1,
+        "schuetzen": [
+          {
+            "id": "10zpwdx",
+            "name": "Dominic Jochum",
+            "tore": 7,
+            "siebenmeter_tore": 1,
+            "siebenmeter_wuerfe": 1,
+            "zwei_minuten": 1,
+            "verwarnungen": 0,
+            "spiele": 1,
+            "tore_je_spiel": 7.0,
+            "siebenmeter_quote": 100
+          },
+          {
+            "id": "1pxbqya",
+            "name": "Johannes Aupperle",
+            "tore": 6,
+            "siebenmeter_tore": 0,
+            "siebenmeter_wuerfe": 0,
+            "zwei_minuten": 0,
+            "verwarnungen": 0,
+            "spiele": 1,
+            "tore_je_spiel": 6.0,
+            "siebenmeter_quote": null
+          },
+          {
+            "id": "1uor82j",
+            "name": "Kai Riegel",
+            "tore": 5,
+            "siebenmeter_tore": 0,
+            "siebenmeter_wuerfe": 0,
+            "zwei_minuten": 0,
+            "verwarnungen": 0,
+            "spiele": 1,
+            "tore_je_spiel": 5.0,
+            "siebenmeter_quote": null
+          },
+          {
+            "id": "08gpjsu",
+            "name": "Michael Gramzow",
+            "tore": 5,
+            "siebenmeter_tore": 0,
+            "siebenmeter_wuerfe": 1,
+            "zwei_minuten": 1,
+            "verwarnungen": 0,
+            "spiele": 1,
+            "tore_je_spiel": 5.0,
+            "siebenmeter_quote": 0
+          },
+          {
+            "id": "13vvo3h",
+            "name": "Alexander Schmitt",
+            "tore": 3,
+            "siebenmeter_tore": 0,
+            "siebenmeter_wuerfe": 0,
+            "zwei_minuten": 0,
+            "verwarnungen": 0,
+            "spiele": 1,
+            "tore_je_spiel": 3.0,
+            "siebenmeter_quote": null
+          }
+        ],
+        "weitere": 5,
+        "tore": 33,
+        "torschuetzen": 10,
+        "groesster_anteil": 21,
+        "strafen": 6
+      },
       "letzte_aenderungen": [],
       "spiele": {
         "2627RPBKRKERMB0101": {
@@ -2702,76 +2772,6 @@
           "ohne_zeit": false,
           "sequence": 0
         }
-      },
-      "gegnervorschau": {
-        "spiele": 1,
-        "schuetzen": [
-          {
-            "id": "10zpwdx",
-            "name": "Dominic Jochum",
-            "tore": 7,
-            "siebenmeter_tore": 1,
-            "siebenmeter_wuerfe": 1,
-            "zwei_minuten": 1,
-            "verwarnungen": 0,
-            "spiele": 1,
-            "tore_je_spiel": 7.0,
-            "siebenmeter_quote": 100
-          },
-          {
-            "id": "1pxbqya",
-            "name": "Johannes Aupperle",
-            "tore": 6,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 0,
-            "verwarnungen": 0,
-            "spiele": 1,
-            "tore_je_spiel": 6.0,
-            "siebenmeter_quote": null
-          },
-          {
-            "id": "1uor82j",
-            "name": "Kai Riegel",
-            "tore": 5,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 0,
-            "verwarnungen": 0,
-            "spiele": 1,
-            "tore_je_spiel": 5.0,
-            "siebenmeter_quote": null
-          },
-          {
-            "id": "08gpjsu",
-            "name": "Michael Gramzow",
-            "tore": 5,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 1,
-            "zwei_minuten": 1,
-            "verwarnungen": 0,
-            "spiele": 1,
-            "tore_je_spiel": 5.0,
-            "siebenmeter_quote": 0
-          },
-          {
-            "id": "13vvo3h",
-            "name": "Alexander Schmitt",
-            "tore": 3,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 0,
-            "verwarnungen": 0,
-            "spiele": 1,
-            "tore_je_spiel": 3.0,
-            "siebenmeter_quote": null
-          }
-        ],
-        "weitere": 5,
-        "tore": 33,
-        "torschuetzen": 10,
-        "groesster_anteil": 21,
-        "strafen": 6
       }
     },
     "damen": {
@@ -3020,6 +3020,9 @@
           "ab": 3
         },
         "spiele": []
+      },
+      "gegnervorschau": {
+        "spiele": 0
       },
       "letzte_aenderungen": [],
       "spiele": {
@@ -3293,76 +3296,6 @@
           "ohne_zeit": false,
           "sequence": 0
         }
-      },
-      "gegnervorschau": {
-        "spiele": 1,
-        "schuetzen": [
-          {
-            "id": "0f3jgbw",
-            "name": "Olga Roth",
-            "tore": 14,
-            "siebenmeter_tore": 7,
-            "siebenmeter_wuerfe": 7,
-            "zwei_minuten": 0,
-            "verwarnungen": 1,
-            "spiele": 1,
-            "tore_je_spiel": 14.0,
-            "siebenmeter_quote": 100
-          },
-          {
-            "id": "1j3viua",
-            "name": "Caroline Glas",
-            "tore": 5,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 0,
-            "verwarnungen": 1,
-            "spiele": 1,
-            "tore_je_spiel": 5.0,
-            "siebenmeter_quote": null
-          },
-          {
-            "id": "1wktxak",
-            "name": "Lilly Anton",
-            "tore": 3,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 1,
-            "verwarnungen": 1,
-            "spiele": 1,
-            "tore_je_spiel": 3.0,
-            "siebenmeter_quote": null
-          },
-          {
-            "id": "01vemo5",
-            "name": "Emma-Lilly Krauß",
-            "tore": 2,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 0,
-            "verwarnungen": 0,
-            "spiele": 1,
-            "tore_je_spiel": 2.0,
-            "siebenmeter_quote": null
-          },
-          {
-            "id": "0f1k9wt",
-            "name": "Lea Hammer",
-            "tore": 2,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 0,
-            "verwarnungen": 0,
-            "spiele": 1,
-            "tore_je_spiel": 2.0,
-            "siebenmeter_quote": null
-          }
-        ],
-        "weitere": 2,
-        "tore": 29,
-        "torschuetzen": 7,
-        "groesster_anteil": 48,
-        "strafen": 1
       }
     },
     "ma": {
@@ -3649,6 +3582,7 @@
         },
         "spiele": []
       },
+      "gegnervorschau": {},
       "letzte_aenderungen": [],
       "spiele": {
         "2627RPOLAJMA0206": {
@@ -4167,6 +4101,7 @@
         },
         "spiele": []
       },
+      "gegnervorschau": {},
       "letzte_aenderungen": [],
       "spiele": {
         "2627RPVLAJWB0103": {
@@ -4735,6 +4670,7 @@
         },
         "spiele": []
       },
+      "gegnervorschau": {},
       "letzte_aenderungen": [],
       "spiele": {
         "2627RP4BKRBJMC0101": {
@@ -5334,6 +5270,7 @@
         },
         "spiele": []
       },
+      "gegnervorschau": {},
       "letzte_aenderungen": [],
       "spiele": {
         "2627RP4BKRBJML0102": {
@@ -5825,6 +5762,7 @@
         },
         "spiele": []
       },
+      "gegnervorschau": {},
       "letzte_aenderungen": [],
       "spiele": {
         "2627RSWRLBJWC0102": {
@@ -6205,6 +6143,7 @@
         },
         "spiele": []
       },
+      "gegnervorschau": {},
       "letzte_aenderungen": [],
       "spiele": {
         "2627RP4BKRCJGD0102": {
@@ -6770,6 +6709,7 @@
         },
         "spiele": []
       },
+      "gegnervorschau": {},
       "letzte_aenderungen": [],
       "spiele": {
         "2627RPBKROCJGC0105": {
@@ -7232,6 +7172,7 @@
         },
         "spiele": []
       },
+      "gegnervorschau": {},
       "letzte_aenderungen": [],
       "spiele": {
         "2627RSWRLCJWA0101": {
@@ -7625,6 +7566,7 @@
         },
         "spiele": []
       },
+      "gegnervorschau": {},
       "letzte_aenderungen": [],
       "spiele": {
         "2627RPVLCJWC0104": {
@@ -8192,6 +8134,7 @@
         },
         "spiele": []
       },
+      "gegnervorschau": {},
       "letzte_aenderungen": [],
       "spiele": {
         "2627RP4BKRDJGC0102": {
@@ -8772,6 +8715,7 @@
         },
         "spiele": []
       },
+      "gegnervorschau": {},
       "letzte_aenderungen": [],
       "spiele": {
         "2627RPBKRODJWA0202": {
@@ -9332,6 +9276,7 @@
         },
         "spiele": []
       },
+      "gegnervorschau": {},
       "letzte_aenderungen": [],
       "spiele": {
         "2627RP4BKRDJWL0101": {
@@ -9879,6 +9824,7 @@
         },
         "spiele": []
       },
+      "gegnervorschau": {},
       "letzte_aenderungen": [],
       "spiele": {
         "2627RPBKROEJGC0103": {
@@ -10461,6 +10407,7 @@
         },
         "spiele": []
       },
+      "gegnervorschau": {},
       "letzte_aenderungen": [],
       "spiele": {
         "2627RPBKRKEJGE0102": {
@@ -10868,6 +10815,7 @@
         },
         "spiele": []
       },
+      "gegnervorschau": {},
       "letzte_aenderungen": [],
       "spiele": {
         "2627RPBKRKEJGD0103": {
@@ -11246,6 +11194,7 @@
         },
         "spiele": []
       },
+      "gegnervorschau": {},
       "letzte_aenderungen": [],
       "spiele": {
         "2627RPBKROFJGG0102": {
@@ -11675,6 +11624,7 @@
         },
         "spiele": []
       },
+      "gegnervorschau": {},
       "letzte_aenderungen": [],
       "spiele": {
         "2627RPBKROFJGI0103": {
@@ -11966,6 +11916,7 @@
         },
         "spiele": []
       },
+      "gegnervorschau": {},
       "letzte_aenderungen": [],
       "spiele": {
         "2627RPBKROMIGA0118": {
@@ -12182,6 +12133,7 @@
         },
         "spiele": []
       },
+      "gegnervorschau": {},
       "letzte_aenderungen": [],
       "spiele": {
         "2627RPBKROMIGA0119": {
@@ -12398,6 +12350,7 @@
         },
         "spiele": []
       },
+      "gegnervorschau": {},
       "letzte_aenderungen": [],
       "spiele": {
         "2627RPBKROMIGA0113": {
