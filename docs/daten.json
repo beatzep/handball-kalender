@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-06T15:13:15+00:00",
+  "aktualisiert": "2026-09-06T15:46:09+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -4439,12 +4439,26 @@
             "gegentore": 0,
             "differenz": 0
           }
+        ],
+        "fehlend": [
+          {
+            "datum": "2026-09-06T16:15:00",
+            "gegner": "TV Kirrweiler",
+            "ergebnis": {
+              "heim": 38,
+              "gast": 36,
+              "eigene": 38,
+              "fremde": 36,
+              "ausgang": "S"
+            }
+          }
         ]
       },
       "form": [
         "S",
         "S",
-        "N"
+        "N",
+        "S"
       ],
       "statistik": {
         "fahrten": {
@@ -4469,16 +4483,16 @@
         },
         "bilanz": {
           "gesamt": {
-            "s": 2,
+            "s": 3,
             "u": 0,
             "n": 1,
-            "spiele": 3
+            "spiele": 4
           },
           "heim": {
-            "s": 1,
+            "s": 2,
             "u": 0,
             "n": 0,
-            "spiele": 1
+            "spiele": 2
           },
           "auswaerts": {
             "s": 1,
@@ -4490,21 +4504,21 @@
         "serien": {
           "ohne_niederlage": 2,
           "aktuell": 1,
-          "aktuell_art": "N"
+          "aktuell_art": "S"
         },
         "krimis": {
-          "anzahl": 0,
-          "gesamt": 3,
-          "anteil": 0
+          "anzahl": 1,
+          "gesamt": 4,
+          "anteil": 25
         },
         "tore": {
-          "erzielt": 63,
-          "kassiert": 61,
-          "schnitt": 21.0,
+          "erzielt": 101,
+          "kassiert": 97,
+          "schnitt": 25.2,
           "torreichstes": {
-            "gegner": "Mjsg Sobernheim/Meisenheim",
-            "stand": "25:35",
-            "summe": 60
+            "gegner": "TV Kirrweiler",
+            "stand": "38:36",
+            "summe": 74
           }
         },
         "anwurf": {
@@ -4514,9 +4528,9 @@
             "schnitt": 0
           },
           "frueh": {
-            "spiele": 3,
-            "punkte": 4,
-            "schnitt": 1.33
+            "spiele": 4,
+            "punkte": 6,
+            "schnitt": 1.5
           }
         },
         "gegner": {},
@@ -4524,10 +4538,10 @@
       },
       "spieler": {
         "quelle": {
-          "spiele_gelaufen": 3,
+          "spiele_gelaufen": 4,
           "mit_bericht": 0,
           "ohne_bericht": 0,
-          "offen": 3
+          "offen": 4
         },
         "schuetzen": [],
         "verteilung": {
@@ -4629,7 +4643,14 @@
           "phase_id": 12616,
           "heim": true,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 0,
+          "ergebnis": {
+            "heim": 38,
+            "gast": 36,
+            "eigene": 38,
+            "fremde": 36,
+            "ausgang": "S"
+          }
         },
         "2627RPOLBJMA0303": {
           "datum": "2026-09-13T12:15:00",
