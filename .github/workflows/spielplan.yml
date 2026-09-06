@@ -103,6 +103,9 @@ jobs:
       - name: Spielberichte pruefen
         run: python3 pruefe_berichte.py
 
+      - name: Auswertung der Spielberichte pruefen
+        run: python3 test_spielerstatistik.py
+
       - name: Worker-Logik pruefen
         run: |
           for datei in worker/test*.mjs; do node "$datei"; done

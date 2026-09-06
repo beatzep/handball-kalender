@@ -25,6 +25,8 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 import statistik
+import spielberichte
+import spielerstatistik
 import strassenroute
 
 API = "https://www.handball.net/api/new"
@@ -725,6 +727,11 @@ def verarbeite_team(team: dict, cfg: argparse.Namespace, alt: dict) -> tuple[dic
         "statistik": statistik.alles(list(neuer_stand.values()),
                                      cfg.heimat, team.get("alltag"),
                                      strassen_cache=cfg.strassen_cache),
+        # Einzelzahlen aus den Spielberichten. Nur wo Berichte vorliegen -
+        # was fehlt, steht unter "quelle" und wird auf der Seite benannt.
+        "spieler": spielerstatistik.alles(
+            neuer_stand, cfg.berichte_cache, team_id,
+            jugend=(team.get("gruppe") != "Aktive")),
         "letzte_aenderungen": aenderungen,
         "spiele": neuer_stand,
     }, aenderungen
@@ -754,6 +761,8 @@ def main() -> None:
     p.add_argument("--keine-emojis", action="store_true", help="Titel ohne Heim/Auswaerts-Symbol")
     p.add_argument("--keine-schiris", action="store_true",
                    help="Schiedsrichternamen nicht in den Kalender schreiben")
+    p.add_argument("--berichte-cache", default="berichte_cache.json",
+                   help="Spielberichte fuer die Einzelstatistik")
     p.add_argument("--strassen-cache", default="strassen_cache.json",
                    help="Cache-Datei mit echten Strassenkilometern je Halle "
                         "(OpenRouteService, siehe ORS_API_KEY)")
@@ -768,6 +777,7 @@ def main() -> None:
     cfg.ors_key = os.environ.get("ORS_API_KEY")
     cfg.strassen_cache_pfad = Path(cfg.strassen_cache)
     cfg.strassen_cache = strassenroute.lade_cache(cfg.strassen_cache_pfad)
+    cfg.berichte_cache = spielberichte.lade_cache(Path(cfg.berichte_cache))
 
     datenpfad = Path(cfg.daten)
     bisher = {}

@@ -62,6 +62,11 @@ für dieses Spiel noch nichts veröffentlicht hat.
 Spielernamen erscheinen voll nur bei den Aktiven. Bei der Jugend nur Vorname
 und erster Buchstabe des Nachnamens (`Lisa M.`).
 
+`spielerstatistik.py` rechnet daraus Schützen, Siebenmeter-Quoten, Torverlauf,
+Läufe, Verteilung und Zeitstrafen. Das Ergebnis steht in `daten.json` unter
+`spieler`, samt `quelle` — dort steht, auf wie vielen Berichten die Zahlen
+beruhen und wie viele Spiele fehlen.
+
 ## Vor jedem Commit
 
 ```bash
@@ -70,6 +75,7 @@ python3 pruefe_konflikte.py   # Datenblock von "Meine Mannschaften"
 python3 pruefe_verweise.py    # Verweise zwischen den Seiten
 python3 pruefe_tabelle.py     # Rückstand der Verbandstabelle
 python3 pruefe_berichte.py    # Spielberichte gegen die Endstände
+python3 test_spielerstatistik.py  # Auswertung der Berichte
 python3 pruefe_streng.py      # RFC-Prüfung der .ics-Dateien
 for d in worker/test*.mjs; do node "$d"; done
 ```
