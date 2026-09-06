@@ -229,6 +229,27 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 .form b.N { color: var(--niederlage); border-color: var(--niederlage); }
 .form b.U { color: var(--leise); border-color: var(--linie); }
 
+/* Spielfilm: eine Kurve je Spiel, Fuehrung ueber der Mittellinie. */
+.filme { display: grid; gap: 26px; margin-bottom: 6px; }
+/* Nicht .kopf nennen: die Klasse traegt im Seitenkopf einen schwarzen
+   Grund, der hier mitten im Text landen wuerde. */
+.filmkopf { display: flex; align-items: baseline; gap: 8px;
+  font-size: .86rem; margin-bottom: 6px; }
+.filmkopf .wann { color: var(--leise); font-variant-numeric: tabular-nums; }
+.filmkopf .gegen { flex: 1; min-width: 0; overflow: hidden;
+  text-overflow: ellipsis; white-space: nowrap; }
+.filmkopf .stand { font-weight: 600; font-variant-numeric: tabular-nums; }
+.spielfilm svg { width: 100%; height: auto; display: block; overflow: visible; }
+.spielfilm .gitter { stroke: var(--linie-zart); stroke-width: 1; }
+/* Die Nulllinie traegt die ganze Aussage: darueber gefuehrt, darunter nicht. */
+.spielfilm .gitter.null { stroke: var(--linie); }
+.spielfilm .linie { fill: none; stroke: var(--gold); stroke-width: 2;
+  stroke-linejoin: round; stroke-linecap: round; }
+.spielfilm text { fill: var(--leise); font-size: 11px; font-family: inherit;
+  font-variant-numeric: tabular-nums; }
+.spielfilm .jetzt { fill: var(--tinte); font-weight: 700; }
+.laufhinweis { margin: 6px 0 0; font-size: .84rem; color: var(--tinte-weich); }
+
 .verlauf { margin: 0 0 30px; }
 .verlauf .titel { font-size: .74rem; font-weight: 600; letter-spacing: .06em;
                   text-transform: uppercase; color: var(--leise);

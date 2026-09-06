@@ -168,6 +168,62 @@ text = bs.spielerblock(vollstaendig)
 pruefe("Ohne Luecke kein Hinweis auf handball.net",
        "handball.net" not in text and "Aus 2 Spielen." in text, text[-160:])
 
+# --- Spielfilm ----------------------------------------------------------
+import re as _re
+
+def zeichne(verlauf, heim=True, ergebnis=None, laeufe=None):
+    return bs.spielfilm({"verlauf": verlauf, "heim": heim,
+                         "datum": "2026-09-05T20:00:00", "gegner": "HSG Worms",
+                         "ergebnis": ergebnis or {"eigene": 5, "fremde": 2},
+                         "laeufe": laeufe or {}})
+
+def punkte_aus(svg):
+    m = _re.search(r'class="linie" points="([^"]+)"', svg)
+    return [tuple(float(z) for z in p.split(",")) for p in m.group(1).split()]
+
+# Ein Spiel, in dem wir durchgehend fuehren
+svg = zeichne([[0, 0, 0], [5, 1, 0], [20, 4, 1], [40, 8, 3], [58, 12, 5]])
+ys = [y for _, y in punkte_aus(svg)]
+pruefe("Kurve bleibt im Bild", all(0 <= y <= 96 for y in ys), str(ys))
+pruefe("Fuehrung liegt oben", ys[-1] < ys[0], f"Start {ys[0]}, Ende {ys[-1]}")
+pruefe("Nulllinie ist beschriftet", ">0<" in svg, svg[:200])
+pruefe("Endstand steht an der Kurve", "+7" in svg, svg[-300:])
+
+# Auswaerts dreht sich die Sicht: der Verlauf steht als [Heim, Gast] da,
+# gezeichnet wird der eigene Abstand.
+svg = zeichne([[0, 0, 0], [30, 6, 2]], heim=False)   # Heim 6, wir 2
+ys = [y for _, y in punkte_aus(svg)]
+pruefe("Auswaerts ist 6:2 fuer die Heimmannschaft ein Rueckstand",
+       ys[-1] > ys[0], f"Start {ys[0]}, Ende {ys[-1]}")
+svg = zeichne([[0, 0, 0], [30, 2, 6]], heim=False)   # wir 6, Heim 2
+ys = [y for _, y in punkte_aus(svg)]
+pruefe("und 2:6 als Gast eine Fuehrung", ys[-1] < ys[0],
+       f"Start {ys[0]}, Ende {ys[-1]}")
+
+# Ein Spiel ohne Fuehrungswechsel darf die Hoehe nicht verschenken
+svg = zeichne([[0, 0, 0], [58, 20, 3]])
+pruefe("Skala richtet sich nach dem Verlauf, nicht symmetrisch",
+       "+17" in svg and "-17" not in svg, svg[:400])
+
+# Zu wenig Daten: lieber nichts zeichnen als eine leere Flaeche
+pruefe("Ohne Verlauf keine Grafik", zeichne([]) == "", zeichne([])[:60])
+pruefe("Ein einzelner Punkt ergibt keine Kurve", zeichne([[0, 0, 0]]) == "")
+
+# Der Lauf gehoert unter die Kurve
+svg = zeichne([[0, 0, 0], [40, 7, 0]],
+              laeufe={"eigene": 7, "eigene_ab": 33, "fremde": 0, "fremde_ab": None})
+pruefe("Lauf wird benannt", "7 Tore in Folge ab Minute 33" in svg, svg[-200:])
+svg = zeichne([[0, 0, 0], [40, 0, 7]],
+              laeufe={"eigene": 0, "eigene_ab": None, "fremde": 5, "fremde_ab": 12})
+pruefe("Auch ein gegnerischer Lauf wird benannt",
+       "Gegner traf 5-mal in Folge ab Minute 12" in svg, svg[-200:])
+
+# Klassennamen, die es im Projekt schon gibt, duerfen nicht wiederverwendet
+# werden - .kopf traegt im Seitenkopf einen schwarzen Grund.
+pruefe("Kein kollidierender Klassenname 'kopf'",
+       'class="kopf"' not in zeichne([[0, 0, 0], [30, 3, 1]]),
+       zeichne([[0, 0, 0], [30, 3, 1]])[:120])
+
 fehler = 0
 for name, ok, info in pruefungen:
     if not ok:

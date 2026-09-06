@@ -394,6 +394,114 @@ def kennzahl(titel: str, wert: str, zusatz: str = "", breit: bool = False) -> st
             f'<dd>{wert}{z}</dd></div>')
 
 
+def spielfilm(spiel: dict) -> str:
+    """Der Spielverlauf als Kurve der Tordifferenz.
+
+    Gezeichnet wird nicht der Spielstand beider Mannschaften, sondern der
+    Abstand aus eigener Sicht: ueber der Mittellinie Fuehrung, darunter
+    Rueckstand. Das liest sich auf einem Handydisplay in einer Sekunde,
+    waehrend zwei nebeneinanderlaufende Kurven erst verglichen werden
+    muessen. Ein Lauf ist als steiler Anstieg zu sehen.
+    """
+    punkte = spiel.get("verlauf") or []
+    if len(punkte) < 2:
+        return ""
+    heim = bool(spiel.get("heim"))
+
+    # Aus [Minute, Heim, Gast] wird [Minute, Abstand aus eigener Sicht]
+    reihe = [(m, (h - g) if heim else (g - h)) for m, h, g in punkte]
+    dauer = max(60, max(m for m, _ in reihe))
+    # Nicht symmetrisch skalieren: wer nie zurueckliegt, verschenkt sonst die
+    # halbe Hoehe und die Kurve wird flachgedrueckt. Die Nulllinie bleibt
+    # trotzdem im Bild - sie traegt die Aussage.
+    hoch = max(2, max(d for _, d in reihe))
+    tief = min(-1, min(d for _, d in reihe))
+
+    breite, hoehe = 320, 96
+    links, rechts, oben, unten = 24, 8, 10, 16
+    flaeche_b = breite - links - rechts
+    flaeche_h = hoehe - oben - unten
+
+    def x(minute: int) -> float:
+        return links + flaeche_b * min(minute, dauer) / dauer
+
+    def y(abstand: int) -> float:
+        # Fuehrung nach oben; die Null sitzt dort, wo sie im Bereich liegt
+        anteil = (hoch - abstand) / (hoch - tief)
+        return oben + flaeche_h * anteil
+
+    linie = " ".join(f"{x(m):.1f},{y(d):.1f}" for m, d in reihe)
+    # Bis zum Spielende weiterziehen, sonst endet die Kurve beim letzten Tor
+    if reihe[-1][0] < dauer:
+        linie += f" {x(dauer):.1f},{y(reihe[-1][1]):.1f}"
+
+    mitte = y(0)
+    gitter = (f'<line class="gitter null" x1="{links}" y1="{mitte:.1f}" '
+              f'x2="{breite - rechts}" y2="{mitte:.1f}"/>'
+              f'<line class="gitter" x1="{x(dauer // 2):.1f}" y1="{oben}" '
+              f'x2="{x(dauer // 2):.1f}" y2="{hoehe - unten}"/>'
+              f'<text x="{x(dauer // 2):.1f}" y="{hoehe - 3}" '
+              f'text-anchor="middle">Halbzeit</text>')
+
+    endstand = spiel.get("ergebnis") or {}
+    schluss = reihe[-1][1]
+    beschriftung = (
+        f'<text x="0" y="{y(hoch) + 8:.1f}">+{hoch}</text>'
+        f'<text x="0" y="{y(0) + 4:.1f}">0</text>'
+        f'<text class="jetzt" x="{breite - rechts}" y="{y(schluss) - 8:.1f}" '
+        f'text-anchor="end">{"+" if schluss > 0 else ""}{schluss}</text>')
+
+    l = spiel.get("laeufe") or {}
+    lauftext = ""
+    if l.get("eigene") and l.get("eigene_ab") is not None:
+        lauftext = (f'<p class="laufhinweis">{l["eigene"]} Tore in Folge '
+                    f'ab Minute {l["eigene_ab"]}.</p>')
+    elif l.get("fremde") and l.get("fremde_ab") is not None:
+        lauftext = (f'<p class="laufhinweis">Der Gegner traf {l["fremde"]}-mal '
+                    f'in Folge ab Minute {l["fremde_ab"]}.</p>')
+
+    wann = datetime.fromisoformat(spiel["datum"]).strftime("%d.%m.")
+    gegen = sicher(spiel.get("gegner") or "")
+    stand = (f'{endstand.get("eigene")}:{endstand.get("fremde")}'
+             if endstand else "")
+
+    return f"""<div class="spielfilm">
+<div class="filmkopf"><span class="wann">{wann}</span>
+<span class="gegen">{"gegen" if heim else "bei"} {gegen}</span>
+<span class="stand">{stand}</span></div>
+<svg viewBox="0 0 {breite} {hoehe}" role="img"
+     aria-label="Spielverlauf {wann} {"gegen" if heim else "bei"} {gegen},
+     Endstand {stand}">
+{gitter}
+<polyline class="linie" points="{linie}"/>
+{beschriftung}
+</svg>
+{lauftext}
+</div>"""
+
+
+def spielfilmblock(sp: dict, spiele: dict) -> str:
+    """Die letzten Spiele als Verlaufskurven."""
+    verlaeufe = sp.get("spiele") or []
+    if not verlaeufe:
+        return ""
+    # Hoechstens sechs, die juengsten zuerst - alles darueber waere eine
+    # Bilderwand, durch die niemand scrollt.
+    letzte = list(reversed(verlaeufe))[:6]
+    for v in letzte:
+        passend = spiele.get(str(v.get("match_id"))) or next(
+            (s for s in spiele.values() if s.get("match_id") == v.get("match_id")), {})
+        v["ergebnis"] = passend.get("ergebnis")
+    filme = "".join(spielfilm(v) for v in letzte)
+    if not filme.strip():
+        return ""
+    mehr = len(verlaeufe) - len(letzte)
+    fuss = (f'<p class="statfuss">Die {len(letzte)} jüngsten von '
+            f'{len(verlaeufe)} Spielen mit Bericht.</p>' if mehr > 0 else "")
+    return (f'<div class="rubrik">Wie die Spiele liefen</div>'
+            f'<div class="filme">{filme}</div>{fuss}')
+
+
 def quellenhinweis(quelle: dict) -> str:
     """Sagt, worauf die Zahlen beruhen - und was bei der Quelle noch fehlt.
 
@@ -794,6 +902,7 @@ def mannschaftsblock(schluessel: str, team: dict, basis: str, heute: datetime,
   </div>
   <div class="teil" data-ansicht="statistik" hidden>
     {spielerblock(team.get('spieler') or {})}
+    {spielfilmblock(team.get('spieler') or {}, team.get('spiele') or {})}
     {statistikblock(team.get('statistik') or {})}
   </div>
 </section>"""

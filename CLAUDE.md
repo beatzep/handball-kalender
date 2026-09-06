@@ -98,6 +98,10 @@ macht Edis selbst.
 - **Python 3.12 im Workflow**, lokal ist 3.14 installiert. Nichts benutzen,
   was neuer ist (`Path.read_text(newline=)` etwa gibt es erst ab 3.13).
   Zum Prüfen: `/opt/homebrew/bin/python3.12`.
+- **Klassennamen, die es schon gibt.** `.kopf` trägt im Seitenkopf einen
+  schwarzen Grund, `.knoepfe` gehört zum Hype-Block. Beide sind mir schon
+  mitten im Text begegnet. Vor einem neuen Namen kurz in `seite_stil.py`
+  suchen.
 - **CSS-Escapes in Python-Strings.** `content: "\2039"` liest Python als
   Oktalzahl. Sonderzeichen direkt schreiben: `‹`, `☆`, `★`.
 - **Teilstring-Prüfungen.** `if "hashchange" not in seite` trifft auch auf
