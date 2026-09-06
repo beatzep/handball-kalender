@@ -67,6 +67,20 @@ Läufe, Verteilung und Zeitstrafen. Das Ergebnis steht in `daten.json` unter
 `spieler`, samt `quelle` — dort steht, auf wie vielen Berichten die Zahlen
 beruhen und wie viele Spiele fehlen.
 
+## Aufklappbare Abschnitte
+
+Der Statistik-Reiter und die Spieleliste arbeiten mit `<details>`. Die
+Mechanik bringt HTML mit; `seite_klapp.py` ergänzt nur, was fehlt: den
+gemerkten Zustand (`muru-klapp` im Browser) und den Schalter für alle auf
+einmal. Jeder Abschnitt braucht ein `data-klapp` mit eindeutigem Namen,
+Spiele heißen `spiel-<match_id>`.
+
+Zwei Fallen, beide schon zugeschnappt: Wer den Inhalt eines `<details>`
+woanders einsetzt, muss den **Träger mit der Klasse mitnehmen** — sonst
+fehlen die Farben und die Kurve wird schwarz auf schwarz. Und `opacity` auf
+dem `<details>` schlägt auf den aufgeklappten Inhalt durch; sie gehört auf
+das `<summary>`.
+
 ## Vor jedem Commit
 
 ```bash

@@ -17,6 +17,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 from seite_ansicht import ANSICHT
+from seite_klapp import KLAPP
 from seite_meine import MEINE
 from seite_grafik import GRAFIK
 from seite_skript import SKRIPT
@@ -202,7 +203,32 @@ def hinspiel_und_gegner(naechstes: dict, alle: list[dict], tabelle: dict) -> str
             + "".join(teile) + "</div>")
 
 
-def spielzeile(spiel: dict, heute: datetime, naechster: bool) -> str:
+def spieldetails(bericht: dict | None) -> str:
+    """Kurve und Schuetzen zu einem einzelnen Spiel, fuer die Spieleliste.
+
+    Dieselben Daten wie im Statistik-Reiter, nur dort, wo man ohnehin
+    hinschaut: beim Spiel im Spielplan.
+    """
+    if not bericht:
+        return ""
+    kurve = spielfilm(bericht)
+    if not kurve:
+        return ""
+    # spielfilm() liefert ein eigenes <details>; hier wird nur der Inhalt
+    # gebraucht, die Zeile ist schon aufklappbar.
+    anfang = kurve.find('<div class="klappinhalt">')
+    ende = kurve.rfind("</div>\n</details>")
+    if anfang < 0 or ende < 0:
+        return ""
+    # In einen Traeger mit der Klasse .spielfilm packen: daran haengen die
+    # Farben der Kurve. Ohne ihn zeichnet der Browser schwarz auf schwarz.
+    return ('<div class="spielfilm">'
+            + kurve[anfang + len('<div class="klappinhalt">'):ende]
+            + '</div>')
+
+
+def spielzeile(spiel: dict, heute: datetime, naechster: bool,
+               bericht: dict | None = None) -> str:
     wann = zeit(spiel)
     heim = spiel.get("heim")
     erg = spiel.get("ergebnis")
@@ -225,15 +251,26 @@ def spielzeile(spiel: dict, heute: datetime, naechster: bool) -> str:
         rechts += (f'<div class="stand {erg["ausgang"]}">'
                    f'{erg["eigene"]}:{erg["fremde"]}</div>')
 
-    return f"""<div class="{klassen}">
-<div class="datum">{KURZTAGE[wann.weekday()]} {wann:%d.%m.}<span>{wann:%H:%M}</span></div>
-<div><div class="gegner">{sicher(spiel.get('gegner'))}</div>
-<div class="halle">{ort}</div></div>
-<div class="rechts">{rechts}</div>
-</div>"""
+    zeile = (f'<div class="datum">{KURZTAGE[wann.weekday()]} {wann:%d.%m.}'
+             f'<span>{wann:%H:%M}</span></div>'
+             f'<div><div class="gegner">{sicher(spiel.get("gegner"))}</div>'
+             f'<div class="halle">{ort}</div></div>'
+             f'<div class="rechts">{rechts}</div>')
+
+    details = spieldetails(bericht)
+    if not details:
+        return f'<div class="{klassen}">{zeile}</div>'
+    # Mit Spielbericht wird die Zeile aufklappbar. Der Hallenlink liegt im
+    # summary und muss weiter einzeln anklickbar bleiben - dafuer sorgt der
+    # Stil, nicht das Markup.
+    return (f'<details class="{klassen} mitbericht" '
+            f'data-klapp="spiel-{spiel.get("match_id")}">'
+            f'<summary>{zeile}</summary>'
+            f'<div class="klappinhalt">{details}</div></details>')
 
 
-def spielliste(spiele: list[dict], heute: datetime) -> str:
+def spielliste(spiele: list[dict], heute: datetime,
+               berichte: dict | None = None) -> str:
     kommend = [s for s in spiele if zeit(s) >= heute and not s.get("ergebnis")]
     naechstes = kommend[0]["datum"] if kommend else None
     zeilen, letzter_monat = [], None
@@ -243,7 +280,8 @@ def spielliste(spiele: list[dict], heute: datetime) -> str:
         if monat != letzter_monat:
             zeilen.append(f'<div class="monat">{MONATE[wann.month - 1]} {wann.year}</div>')
             letzter_monat = monat
-        zeilen.append(spielzeile(spiel, heute, spiel["datum"] == naechstes))
+        zeilen.append(spielzeile(spiel, heute, spiel["datum"] == naechstes,
+                                 (berichte or {}).get(spiel.get("match_id"))))
     return "".join(zeilen)
 
 
@@ -394,6 +432,25 @@ def kennzahl(titel: str, wert: str, zusatz: str = "", breit: bool = False) -> st
             f'<dd>{wert}{z}</dd></div>')
 
 
+def klapp(titel: str, nebenbei: str, inhalt: str, offen: bool = False,
+          kennung: str = "") -> str:
+    """Ein aufklappbarer Abschnitt.
+
+    <details> statt selbstgebauter Umschaltlogik: das funktioniert ohne
+    JavaScript, ist mit der Tastatur bedienbar und wird von Vorlesesoftware
+    richtig angesagt. Der Zusatz neben dem Titel steht auch im
+    zugeklappten Zustand da, damit die Seite nicht zur reinen Titelliste
+    wird - eine Zahl sieht man dann immer.
+    """
+    if not inhalt.strip():
+        return ""
+    zusatz = f'<span class="nebenbei">{nebenbei}</span>' if nebenbei else ""
+    merkmal = f' data-klapp="{sicher(kennung)}"' if kennung else ""
+    return (f'<details class="klapp"{" open" if offen else ""}{merkmal}>'
+            f'<summary><span class="titel">{titel}</span>{zusatz}</summary>'
+            f'<div class="klappinhalt">{inhalt}</div></details>')
+
+
 def spielfilm(spiel: dict) -> str:
     """Der Spielverlauf als Kurve der Tordifferenz.
 
@@ -460,15 +517,32 @@ def spielfilm(spiel: dict) -> str:
         lauftext = (f'<p class="laufhinweis">Der Gegner traf {l["fremde"]}-mal '
                     f'in Folge ab Minute {l["fremde_ab"]}.</p>')
 
+    # Wer in genau diesem Spiel getroffen hat - kompakt, die ausfuehrliche
+    # Liste steht weiter oben ueber die ganze Saison.
+    schuetzenliste = ""
+    einzeln = spiel.get("schuetzen") or []
+    if einzeln:
+        namen = ", ".join(
+            f'{sicher(e["name"])} {e["tore"]}'
+            + (f' ({e["siebenmeter_tore"]}/{e["siebenmeter_wuerfe"]} 7m)'
+               if e.get("siebenmeter_wuerfe") else "")
+            for e in einzeln)
+        strafen = spiel.get("strafen") or 0
+        schuetzenliste = (f'<p class="spielschuetzen">{namen}.'
+                          + (f' {strafen} Zeitstrafen.' if strafen else "")
+                          + '</p>')
+
     wann = datetime.fromisoformat(spiel["datum"]).strftime("%d.%m.")
     gegen = sicher(spiel.get("gegner") or "")
     stand = (f'{endstand.get("eigene")}:{endstand.get("fremde")}'
              if endstand else "")
 
-    return f"""<div class="spielfilm">
-<div class="filmkopf"><span class="wann">{wann}</span>
-<span class="gegen">{"gegen" if heim else "bei"} {gegen}</span>
-<span class="stand">{stand}</span></div>
+    kopf = (f'<span class="wann">{wann}</span>'
+            f'<span class="gegen">{"gegen" if heim else "bei"} {gegen}</span>'
+            f'<span class="stand">{stand}</span>')
+    return f"""<details class="klapp spielfilm" data-klapp="spiel-{spiel.get('match_id')}">
+<summary><span class="filmkopf">{kopf}</span></summary>
+<div class="klappinhalt">
 <svg viewBox="0 0 {breite} {hoehe}" role="img"
      aria-label="Spielverlauf {wann} {"gegen" if heim else "bei"} {gegen},
      Endstand {stand}">
@@ -477,7 +551,9 @@ def spielfilm(spiel: dict) -> str:
 {beschriftung}
 </svg>
 {lauftext}
-</div>"""
+{schuetzenliste}
+</div>
+</details>"""
 
 
 def spielfilmblock(sp: dict, spiele: dict) -> str:
@@ -498,8 +574,13 @@ def spielfilmblock(sp: dict, spiele: dict) -> str:
     mehr = len(verlaeufe) - len(letzte)
     fuss = (f'<p class="statfuss">Die {len(letzte)} jüngsten von '
             f'{len(verlaeufe)} Spielen mit Bericht.</p>' if mehr > 0 else "")
-    return (f'<div class="rubrik">Wie die Spiele liefen</div>'
-            f'<div class="filme">{filme}</div>{fuss}')
+    leiste = ('<div class="klappleiste innen">'
+              '<button type="button" data-alleklapp="spiele">'
+              'Alle aufklappen</button></div>') if len(letzte) > 1 else ""
+    return klapp("Wie die Spiele liefen",
+                 spiel_wort(len(letzte), "nominativ"),
+                 f'{leiste}<div class="filme">{filme}</div>{fuss}',
+                 kennung="verlaeufe")
 
 
 def quellenhinweis(quelle: dict) -> str:
@@ -555,10 +636,11 @@ def spielerblock(sp: dict) -> str:
         return ""
     if not schuetzen:
         # Abgerufen, aber ohne Einzelwerte - das gehoert erklaert.
-        return ('<div class="rubrik">Wer trifft</div>'
-                + (quellenhinweis(quelle)
-                   or '<p class="statfuss">Zu diesen Spielen führt handball.net '
-                      'keine Einzelwerte.</p>'))
+        return klapp("Wer trifft", "",
+                     quellenhinweis(quelle)
+                     or '<p class="statfuss">Zu diesen Spielen führt '
+                        'handball.net keine Einzelwerte.</p>',
+                     kennung="schuetzen")
 
     zeilen = []
     for i, e in enumerate(schuetzen, 1):
@@ -596,8 +678,7 @@ def spielerblock(sp: dict) -> str:
             f'davon {spaet} in der Schlussviertelstunde' if spaet
             else "keine in der Schlussviertelstunde"))
 
-    return (
-        '<div class="rubrik">Wer trifft</div>'
+    inhalt = (
         '<div class="tabellenhuelle"><table class="schuetzen">'
         '<thead><tr><th class="pl">Pl</th><th>Spieler</th>'
         '<th class="zahl">/Sp</th><th>Tore</th></tr></thead>'
@@ -605,6 +686,9 @@ def spielerblock(sp: dict) -> str:
         + (f'<dl class="kennzahlen">{"".join(kennzahlen)}</dl>' if kennzahlen else "")
         + quellenhinweis(quelle)
     )
+    return klapp("Wer trifft",
+                 f'{len(schuetzen)} Schützen', inhalt, offen=True,
+                 kennung="schuetzen")
 
 
 def statistikblock(st: dict) -> str:
@@ -634,13 +718,15 @@ def statistikblock(st: dict) -> str:
                 "Kürzeste Fahrt", f'{zahl(round(f["naechste"]["km"]))}'
                 f'<span class="klein"> km</span>',
                 f'{sicher(f["naechste"]["halle"])}, hin und zurück'))
-        teile.append('<div class="rubrik">Unterwegs</div>'
-                     f'<dl class="kennzahlen">{"".join(felder)}</dl>')
+        inhalt = f'<dl class="kennzahlen">{"".join(felder)}</dl>'
         if f.get("ohne_koordinaten"):
-            teile.append(
-                '<p class="statfuss">Bei diesen Hallen fehlt beim Verband die '
-                'Adresse, die Kilometer fehlen also in der Summe: '
-                + ", ".join(sicher(h) for h in f["ohne_koordinaten"]) + ".</p>")
+            inhalt += ('<p class="statfuss">Bei diesen Hallen fehlt beim '
+                       'Verband die Adresse, die Kilometer fehlen also in der '
+                       'Summe: '
+                       + ", ".join(sicher(h) for h in f["ohne_koordinaten"])
+                       + ".</p>")
+        teile.append(klapp("Unterwegs", f'{zahl(f["gesamt_km"])} km', inhalt,
+                           kennung="unterwegs"))
 
     a = st.get("alltag") or {}
     if a.get("verbrauch"):
@@ -690,8 +776,7 @@ geteilt durch {zahl(f.get("gesamt_km", 0))} gefahrene Kilometer.</p>
                                    f'{se["ohne_niederlage"]}<span class="klein">'
                                    f'{" Spiel" if se["ohne_niederlage"] == 1 else " Spiele"}</span>',
                                    "ohne Niederlage"))
-        teile.append('<div class="rubrik">Bilanz</div>'
-                     f'<dl class="kennzahlen">{"".join(felder)}</dl>')
+        bilanz_felder = felder
 
         anw = st.get("anwurf") or {}
         geg = st.get("gegner") or {}
@@ -714,9 +799,15 @@ geteilt durch {zahl(f.get("gesamt_km", 0))} gefahrene Kilometer.</p>
             weitere.append(kennzahl("Torreichstes Spiel", sicher(t["stand"]),
                                     f'gegen {sicher(t["gegner"])}, {t["summe"]} Tore',
                                     breit=True))
+        g = ((st.get("bilanz") or {}).get("gesamt") or {})
+        teile.append(klapp(
+            "Bilanz", f'{g.get("s", 0)}S {g.get("u", 0)}U {g.get("n", 0)}N',
+            f'<dl class="kennzahlen">{"".join(bilanz_felder)}</dl>',
+            kennung="bilanz"))
         if weitere:
-            teile.append('<div class="rubrik">Rekorde</div>'
-                         f'<dl class="kennzahlen">{"".join(weitere)}</dl>')
+            teile.append(klapp(
+                "Rekorde", "", f'<dl class="kennzahlen">{"".join(weitere)}</dl>',
+                kennung="rekorde"))
     else:
         teile.append('<p class="statfuss">Sobald gespielt wird, kommen hier '
                      'Bilanz, Serien und Rekorde dazu.</p>')
@@ -894,13 +985,18 @@ def mannschaftsblock(schluessel: str, team: dict, basis: str, heute: datetime,
   <div class="teil" data-ansicht="kalender">{abo_block(team, basis)}
     {teilenblock(team, kommend[0] if kommend else None,
                  letztes_ergebnis(spiele))}</div>
-  <div class="teil" data-ansicht="spiele" hidden>{spielliste(spiele, heute)}</div>
+  <div class="teil" data-ansicht="spiele" hidden>{spielliste(
+      spiele, heute,
+      {v.get('match_id'): v for v in ((team.get('spieler') or {}).get('spiele') or [])})}</div>
   <div class="teil" data-ansicht="tabelle" hidden>
     {formblock(team.get('form') or [])}
     {verlaufsblock(team.get('tabelle') or {})}
     {tabellenblock(team.get('tabelle') or {}, team.get('team_id'))}
   </div>
   <div class="teil" data-ansicht="statistik" hidden>
+    <div class="klappleiste">
+      <button type="button" data-alleklapp="abschnitte">Alle aufklappen</button>
+    </div>
     {spielerblock(team.get('spieler') or {})}
     {spielfilmblock(team.get('spieler') or {}, team.get('spiele') or {})}
     {statistikblock(team.get('statistik') or {})}
@@ -1013,7 +1109,7 @@ automatisch im Handykalender, Verlegungen inklusive.">
 
 <script id="spieldaten" type="application/json">{spieldaten_kompakt(teams)}</script>
 <script>{ANSICHT}
-{SKRIPT}{MEINE}
+{SKRIPT}{MEINE}{KLAPP}
 {TIPP}
 {GRAFIK}
 {ZAEHLUNG}</script>

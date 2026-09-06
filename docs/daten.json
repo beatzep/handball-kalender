@@ -739,7 +739,118 @@
               "fremde": 3,
               "eigene_ab": 6,
               "fremde_ab": 44
-            }
+            },
+            "schuetzen": [
+              {
+                "id": "0tdoh1i",
+                "name": "Pascal Liebermann",
+                "tore": 8,
+                "siebenmeter_tore": 1,
+                "siebenmeter_wuerfe": 1,
+                "zwei_minuten": 0,
+                "verwarnungen": 0,
+                "spiele": 1,
+                "tore_je_spiel": 8.0,
+                "siebenmeter_quote": 100
+              },
+              {
+                "id": "12eq2mk",
+                "name": "Jan Bußer",
+                "tore": 6,
+                "siebenmeter_tore": 1,
+                "siebenmeter_wuerfe": 2,
+                "zwei_minuten": 1,
+                "verwarnungen": 0,
+                "spiele": 1,
+                "tore_je_spiel": 6.0,
+                "siebenmeter_quote": 50
+              },
+              {
+                "id": "1psfc4d",
+                "name": "Jan Herrmann",
+                "tore": 5,
+                "siebenmeter_tore": 0,
+                "siebenmeter_wuerfe": 0,
+                "zwei_minuten": 0,
+                "verwarnungen": 0,
+                "spiele": 1,
+                "tore_je_spiel": 5.0,
+                "siebenmeter_quote": null
+              },
+              {
+                "id": "09ymfdm",
+                "name": "Ben Hofmann",
+                "tore": 4,
+                "siebenmeter_tore": 0,
+                "siebenmeter_wuerfe": 0,
+                "zwei_minuten": 1,
+                "verwarnungen": 1,
+                "spiele": 1,
+                "tore_je_spiel": 4.0,
+                "siebenmeter_quote": null
+              },
+              {
+                "id": "0umyfdd",
+                "name": "Tom Buschsieper",
+                "tore": 3,
+                "siebenmeter_tore": 0,
+                "siebenmeter_wuerfe": 0,
+                "zwei_minuten": 0,
+                "verwarnungen": 0,
+                "spiele": 1,
+                "tore_je_spiel": 3.0,
+                "siebenmeter_quote": null
+              },
+              {
+                "id": "0njro1p",
+                "name": "Alexander Radevic",
+                "tore": 2,
+                "siebenmeter_tore": 0,
+                "siebenmeter_wuerfe": 0,
+                "zwei_minuten": 0,
+                "verwarnungen": 0,
+                "spiele": 1,
+                "tore_je_spiel": 2.0,
+                "siebenmeter_quote": null
+              },
+              {
+                "id": "1icb2ry",
+                "name": "Daniel Schunke",
+                "tore": 1,
+                "siebenmeter_tore": 0,
+                "siebenmeter_wuerfe": 0,
+                "zwei_minuten": 0,
+                "verwarnungen": 0,
+                "spiele": 1,
+                "tore_je_spiel": 1.0,
+                "siebenmeter_quote": null
+              },
+              {
+                "id": "087orlx",
+                "name": "Dominik Doell",
+                "tore": 1,
+                "siebenmeter_tore": 0,
+                "siebenmeter_wuerfe": 0,
+                "zwei_minuten": 0,
+                "verwarnungen": 0,
+                "spiele": 1,
+                "tore_je_spiel": 1.0,
+                "siebenmeter_quote": null
+              },
+              {
+                "id": "0lutjly",
+                "name": "Edis Herrmann",
+                "tore": 1,
+                "siebenmeter_tore": 0,
+                "siebenmeter_wuerfe": 0,
+                "zwei_minuten": 0,
+                "verwarnungen": 0,
+                "spiele": 1,
+                "tore_je_spiel": 1.0,
+                "siebenmeter_quote": null
+              }
+            ],
+            "strafen": 2
           },
           {
             "match_id": 351637,
@@ -1083,7 +1194,130 @@
               "fremde": 3,
               "eigene_ab": 33,
               "fremde_ab": 52
-            }
+            },
+            "schuetzen": [
+              {
+                "id": "1psfc4d",
+                "name": "Jan Herrmann",
+                "tore": 12,
+                "siebenmeter_tore": 0,
+                "siebenmeter_wuerfe": 0,
+                "zwei_minuten": 0,
+                "verwarnungen": 0,
+                "spiele": 1,
+                "tore_je_spiel": 12.0,
+                "siebenmeter_quote": null
+              },
+              {
+                "id": "0tdoh1i",
+                "name": "Pascal Liebermann",
+                "tore": 7,
+                "siebenmeter_tore": 0,
+                "siebenmeter_wuerfe": 0,
+                "zwei_minuten": 1,
+                "verwarnungen": 0,
+                "spiele": 1,
+                "tore_je_spiel": 7.0,
+                "siebenmeter_quote": null
+              },
+              {
+                "id": "153cnef",
+                "name": "Nicolas Koob",
+                "tore": 6,
+                "siebenmeter_tore": 4,
+                "siebenmeter_wuerfe": 4,
+                "zwei_minuten": 0,
+                "verwarnungen": 0,
+                "spiele": 1,
+                "tore_je_spiel": 6.0,
+                "siebenmeter_quote": 100
+              },
+              {
+                "id": "087orlx",
+                "name": "Dominik Doell",
+                "tore": 5,
+                "siebenmeter_tore": 0,
+                "siebenmeter_wuerfe": 0,
+                "zwei_minuten": 0,
+                "verwarnungen": 0,
+                "spiele": 1,
+                "tore_je_spiel": 5.0,
+                "siebenmeter_quote": null
+              },
+              {
+                "id": "0njro1p",
+                "name": "Alexander Radevic",
+                "tore": 3,
+                "siebenmeter_tore": 0,
+                "siebenmeter_wuerfe": 0,
+                "zwei_minuten": 0,
+                "verwarnungen": 0,
+                "spiele": 1,
+                "tore_je_spiel": 3.0,
+                "siebenmeter_quote": null
+              },
+              {
+                "id": "12eq2mk",
+                "name": "Jan Bußer",
+                "tore": 3,
+                "siebenmeter_tore": 0,
+                "siebenmeter_wuerfe": 0,
+                "zwei_minuten": 1,
+                "verwarnungen": 0,
+                "spiele": 1,
+                "tore_je_spiel": 3.0,
+                "siebenmeter_quote": null
+              },
+              {
+                "id": "09ymfdm",
+                "name": "Ben Hofmann",
+                "tore": 2,
+                "siebenmeter_tore": 0,
+                "siebenmeter_wuerfe": 0,
+                "zwei_minuten": 0,
+                "verwarnungen": 0,
+                "spiele": 1,
+                "tore_je_spiel": 2.0,
+                "siebenmeter_quote": null
+              },
+              {
+                "id": "0p43qit",
+                "name": "Frank Salmen",
+                "tore": 1,
+                "siebenmeter_tore": 0,
+                "siebenmeter_wuerfe": 0,
+                "zwei_minuten": 0,
+                "verwarnungen": 0,
+                "spiele": 1,
+                "tore_je_spiel": 1.0,
+                "siebenmeter_quote": null
+              },
+              {
+                "id": "1bynv1g",
+                "name": "Ivan Vojinović",
+                "tore": 1,
+                "siebenmeter_tore": 0,
+                "siebenmeter_wuerfe": 1,
+                "zwei_minuten": 1,
+                "verwarnungen": 0,
+                "spiele": 1,
+                "tore_je_spiel": 1.0,
+                "siebenmeter_quote": 0
+              },
+              {
+                "id": "0umyfdd",
+                "name": "Tom Buschsieper",
+                "tore": 1,
+                "siebenmeter_tore": 0,
+                "siebenmeter_wuerfe": 0,
+                "zwei_minuten": 0,
+                "verwarnungen": 1,
+                "spiele": 1,
+                "tore_je_spiel": 1.0,
+                "siebenmeter_quote": null
+              }
+            ],
+            "strafen": 4
           }
         ]
       },
@@ -2043,7 +2277,106 @@
               "fremde": 3,
               "eigene_ab": 29,
               "fremde_ab": 38
-            }
+            },
+            "schuetzen": [
+              {
+                "id": "1wpwq2o",
+                "name": "Simon Leonhardt",
+                "tore": 5,
+                "siebenmeter_tore": 0,
+                "siebenmeter_wuerfe": 0,
+                "zwei_minuten": 1,
+                "verwarnungen": 1,
+                "spiele": 1,
+                "tore_je_spiel": 5.0,
+                "siebenmeter_quote": null
+              },
+              {
+                "id": "11h43mp",
+                "name": "Oliver Staffort",
+                "tore": 4,
+                "siebenmeter_tore": 1,
+                "siebenmeter_wuerfe": 2,
+                "zwei_minuten": 1,
+                "verwarnungen": 0,
+                "spiele": 1,
+                "tore_je_spiel": 4.0,
+                "siebenmeter_quote": 50
+              },
+              {
+                "id": "0ly5yiw",
+                "name": "Matthias Johannes",
+                "tore": 3,
+                "siebenmeter_tore": 0,
+                "siebenmeter_wuerfe": 0,
+                "zwei_minuten": 0,
+                "verwarnungen": 0,
+                "spiele": 1,
+                "tore_je_spiel": 3.0,
+                "siebenmeter_quote": null
+              },
+              {
+                "id": "0dfzqfv",
+                "name": "Fynn-Lennart Kelleter",
+                "tore": 2,
+                "siebenmeter_tore": 0,
+                "siebenmeter_wuerfe": 0,
+                "zwei_minuten": 0,
+                "verwarnungen": 0,
+                "spiele": 1,
+                "tore_je_spiel": 2.0,
+                "siebenmeter_quote": null
+              },
+              {
+                "id": "0cbvc0c",
+                "name": "Jannik Dörr",
+                "tore": 2,
+                "siebenmeter_tore": 0,
+                "siebenmeter_wuerfe": 0,
+                "zwei_minuten": 1,
+                "verwarnungen": 0,
+                "spiele": 1,
+                "tore_je_spiel": 2.0,
+                "siebenmeter_quote": null
+              },
+              {
+                "id": "1seyb59",
+                "name": "Oliver Knapp",
+                "tore": 2,
+                "siebenmeter_tore": 0,
+                "siebenmeter_wuerfe": 1,
+                "zwei_minuten": 0,
+                "verwarnungen": 0,
+                "spiele": 1,
+                "tore_je_spiel": 2.0,
+                "siebenmeter_quote": 0
+              },
+              {
+                "id": "1ubi0qe",
+                "name": "Felix Schmitt",
+                "tore": 1,
+                "siebenmeter_tore": 0,
+                "siebenmeter_wuerfe": 0,
+                "zwei_minuten": 1,
+                "verwarnungen": 0,
+                "spiele": 1,
+                "tore_je_spiel": 1.0,
+                "siebenmeter_quote": null
+              },
+              {
+                "id": "14n947k",
+                "name": "Niko Benkler",
+                "tore": 1,
+                "siebenmeter_tore": 0,
+                "siebenmeter_wuerfe": 0,
+                "zwei_minuten": 0,
+                "verwarnungen": 0,
+                "spiele": 1,
+                "tore_je_spiel": 1.0,
+                "siebenmeter_quote": null
+              }
+            ],
+            "strafen": 4
           }
         ]
       },

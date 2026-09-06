@@ -224,6 +224,29 @@ pruefe("Kein kollidierender Klassenname 'kopf'",
        'class="kopf"' not in zeichne([[0, 0, 0], [30, 3, 1]]),
        zeichne([[0, 0, 0], [30, 3, 1]])[:120])
 
+# --- Detailansicht in der Spieleliste -----------------------------------
+bericht = {"verlauf": [[0, 0, 0], [30, 8, 4], [58, 15, 9]], "heim": True,
+           "datum": "2026-09-05T20:00:00", "gegner": "HSG Worms",
+           "ergebnis": {"eigene": 15, "fremde": 9},
+           "laeufe": {"eigene": 4, "eigene_ab": 12, "fremde": 0, "fremde_ab": None},
+           "schuetzen": [{"id": "a", "name": "Anna Adler", "tore": 6, "spiele": 1,
+                          "tore_je_spiel": 6.0, "siebenmeter_tore": 2,
+                          "siebenmeter_wuerfe": 3, "siebenmeter_quote": 67}],
+           "strafen": 2}
+d = bs.spieldetails(bericht)
+pruefe("Detailansicht traegt die Klasse fuer die Farben",
+       'class="spielfilm"' in d, d[:100])
+pruefe("Detailansicht enthaelt die Kurve", "<svg" in d and "polyline" in d, d[:100])
+pruefe("Detailansicht nennt die Schuetzen dieses Spiels",
+       "Anna Adler 6" in d and "(2/3 7m)" in d, d[-200:])
+pruefe("Zeitstrafen des Spiels stehen dabei", "2 Zeitstrafen" in d, d[-160:])
+pruefe("Kein verschachteltes details in der Detailansicht",
+       "<details" not in d, d[:120])
+pruefe("Ohne Bericht keine Detailansicht", bs.spieldetails(None) == "")
+pruefe("Ohne Verlauf keine Detailansicht",
+       bs.spieldetails({"verlauf": [], "heim": True,
+                        "datum": "2026-09-05T20:00:00", "gegner": "X"}) == "")
+
 fehler = 0
 for name, ok, info in pruefungen:
     if not ok:

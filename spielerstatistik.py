@@ -230,6 +230,10 @@ def alles(spiele: dict, cache: dict, team_id: int, jugend: bool) -> dict:
             "heim": bool(spiel.get("heim")),
             "verlauf": verlauf(eintrag),
             "laeufe": laeufe(eintrag, team_id),
+            # Dieselbe Rechnung wie ueber die Saison, nur auf ein Spiel
+            # angewandt - fuer die Detailansicht in der Spieleliste.
+            "schuetzen": schuetzen([eintrag], team_id, jugend),
+            "strafen": strafen_nach_abschnitt([eintrag], team_id)["gesamt"],
         })
 
     return {
