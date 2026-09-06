@@ -792,6 +792,7 @@ automatisch im Handykalender, Verlegungen inklusive.">
     Zuletzt abgeglichen am {stand_text}. Die Spielpläne werden täglich automatisch
     mit <a href="https://www.handball.net" target="_blank" rel="noopener">handball.net</a>
     abgeglichen; Änderungen erscheinen hier und in abonnierten Kalendern.
+    An Spieltagen aktualisiert der Spielplan stündlich.
   </p>
 </main>
 
