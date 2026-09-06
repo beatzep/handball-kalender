@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-06T17:46:08+00:00",
+  "aktualisiert": "2026-09-06T18:09:02+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -3017,33 +3017,623 @@
       "spieler": {
         "quelle": {
           "spiele_gelaufen": 1,
-          "mit_bericht": 0,
+          "mit_bericht": 1,
           "ohne_bericht": 0,
-          "offen": 1
+          "offen": 0
         },
-        "schuetzen": [],
+        "schuetzen": [
+          {
+            "id": "1cskeap",
+            "name": "Sarah Weiß",
+            "tore": 15,
+            "siebenmeter_tore": 5,
+            "siebenmeter_wuerfe": 6,
+            "zwei_minuten": 0,
+            "verwarnungen": 0,
+            "spiele": 1,
+            "tore_je_spiel": 15.0,
+            "siebenmeter_quote": 83
+          },
+          {
+            "id": "0g9lwm6",
+            "name": "Celine-Sofie Hemmers",
+            "tore": 6,
+            "siebenmeter_tore": 0,
+            "siebenmeter_wuerfe": 0,
+            "zwei_minuten": 0,
+            "verwarnungen": 0,
+            "spiele": 1,
+            "tore_je_spiel": 6.0,
+            "siebenmeter_quote": null
+          },
+          {
+            "id": "1xxa5mk",
+            "name": "Selina Sagolla",
+            "tore": 6,
+            "siebenmeter_tore": 0,
+            "siebenmeter_wuerfe": 0,
+            "zwei_minuten": 0,
+            "verwarnungen": 0,
+            "spiele": 1,
+            "tore_je_spiel": 6.0,
+            "siebenmeter_quote": null
+          },
+          {
+            "id": "0ngqg51",
+            "name": "Nathalie Jakob",
+            "tore": 5,
+            "siebenmeter_tore": 0,
+            "siebenmeter_wuerfe": 0,
+            "zwei_minuten": 0,
+            "verwarnungen": 0,
+            "spiele": 1,
+            "tore_je_spiel": 5.0,
+            "siebenmeter_quote": null
+          },
+          {
+            "id": "10o4ym5",
+            "name": "Christine Reuther",
+            "tore": 4,
+            "siebenmeter_tore": 0,
+            "siebenmeter_wuerfe": 0,
+            "zwei_minuten": 0,
+            "verwarnungen": 0,
+            "spiele": 1,
+            "tore_je_spiel": 4.0,
+            "siebenmeter_quote": null
+          },
+          {
+            "id": "0ygu648",
+            "name": "Jana Brenner",
+            "tore": 3,
+            "siebenmeter_tore": 0,
+            "siebenmeter_wuerfe": 0,
+            "zwei_minuten": 0,
+            "verwarnungen": 0,
+            "spiele": 1,
+            "tore_je_spiel": 3.0,
+            "siebenmeter_quote": null
+          },
+          {
+            "id": "1bv6o8f",
+            "name": "Jennifer Gräf",
+            "tore": 1,
+            "siebenmeter_tore": 0,
+            "siebenmeter_wuerfe": 0,
+            "zwei_minuten": 0,
+            "verwarnungen": 0,
+            "spiele": 1,
+            "tore_je_spiel": 1.0,
+            "siebenmeter_quote": null
+          },
+          {
+            "id": "0t3x2mu",
+            "name": "Lena Volz",
+            "tore": 1,
+            "siebenmeter_tore": 0,
+            "siebenmeter_wuerfe": 0,
+            "zwei_minuten": 0,
+            "verwarnungen": 0,
+            "spiele": 1,
+            "tore_je_spiel": 1.0,
+            "siebenmeter_quote": null
+          },
+          {
+            "id": "1j0jpcn",
+            "name": "Sara Dörr",
+            "tore": 1,
+            "siebenmeter_tore": 0,
+            "siebenmeter_wuerfe": 0,
+            "zwei_minuten": 1,
+            "verwarnungen": 0,
+            "spiele": 1,
+            "tore_je_spiel": 1.0,
+            "siebenmeter_quote": null
+          }
+        ],
         "verteilung": {
-          "eigene_schuetzen": 0,
-          "fremde_schuetzen": 0,
-          "eigene_tore": 0,
-          "fremde_tore": 0,
-          "groesster_anteil": null
+          "eigene_schuetzen": 9,
+          "fremde_schuetzen": 11,
+          "eigene_tore": 42,
+          "fremde_tore": 28,
+          "groesster_anteil": 36
         },
         "strafen": {
-          "gesamt": 0,
+          "gesamt": 1,
           "abschnitte": {
             "0-15": 0,
             "15-30": 0,
             "30-45": 0,
-            "45-60": 0
+            "45-60": 1
           }
         },
         "muster": {
           "genug": false,
-          "spiele": 0,
+          "spiele": 1,
           "ab": 3
         },
-        "spiele": []
+        "spiele": [
+          {
+            "match_id": 365815,
+            "datum": "2026-09-06T18:00:00",
+            "gegner": "FSG Selz-Wiesbach",
+            "heim": true,
+            "verlauf": [
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                2,
+                1,
+                1
+              ],
+              [
+                2,
+                2,
+                1
+              ],
+              [
+                3,
+                3,
+                1
+              ],
+              [
+                4,
+                4,
+                1
+              ],
+              [
+                5,
+                4,
+                2
+              ],
+              [
+                5,
+                5,
+                2
+              ],
+              [
+                6,
+                5,
+                3
+              ],
+              [
+                7,
+                6,
+                3
+              ],
+              [
+                9,
+                6,
+                4
+              ],
+              [
+                11,
+                7,
+                4
+              ],
+              [
+                11,
+                7,
+                5
+              ],
+              [
+                11,
+                8,
+                5
+              ],
+              [
+                12,
+                9,
+                5
+              ],
+              [
+                12,
+                9,
+                6
+              ],
+              [
+                13,
+                10,
+                6
+              ],
+              [
+                13,
+                10,
+                7
+              ],
+              [
+                13,
+                11,
+                7
+              ],
+              [
+                14,
+                11,
+                8
+              ],
+              [
+                14,
+                12,
+                8
+              ],
+              [
+                16,
+                13,
+                8
+              ],
+              [
+                17,
+                14,
+                8
+              ],
+              [
+                17,
+                14,
+                9
+              ],
+              [
+                17,
+                15,
+                9
+              ],
+              [
+                18,
+                15,
+                10
+              ],
+              [
+                21,
+                16,
+                10
+              ],
+              [
+                22,
+                17,
+                10
+              ],
+              [
+                23,
+                17,
+                11
+              ],
+              [
+                24,
+                18,
+                11
+              ],
+              [
+                26,
+                19,
+                11
+              ],
+              [
+                28,
+                20,
+                11
+              ],
+              [
+                28,
+                20,
+                12
+              ],
+              [
+                31,
+                21,
+                12
+              ],
+              [
+                31,
+                21,
+                13
+              ],
+              [
+                33,
+                22,
+                13
+              ],
+              [
+                35,
+                23,
+                13
+              ],
+              [
+                35,
+                24,
+                13
+              ],
+              [
+                36,
+                25,
+                13
+              ],
+              [
+                36,
+                26,
+                13
+              ],
+              [
+                37,
+                26,
+                14
+              ],
+              [
+                38,
+                27,
+                14
+              ],
+              [
+                39,
+                28,
+                14
+              ],
+              [
+                40,
+                28,
+                15
+              ],
+              [
+                40,
+                29,
+                15
+              ],
+              [
+                41,
+                30,
+                15
+              ],
+              [
+                41,
+                30,
+                16
+              ],
+              [
+                42,
+                31,
+                16
+              ],
+              [
+                43,
+                31,
+                17
+              ],
+              [
+                43,
+                32,
+                17
+              ],
+              [
+                43,
+                32,
+                18
+              ],
+              [
+                45,
+                32,
+                19
+              ],
+              [
+                45,
+                32,
+                20
+              ],
+              [
+                46,
+                32,
+                21
+              ],
+              [
+                46,
+                32,
+                22
+              ],
+              [
+                46,
+                33,
+                22
+              ],
+              [
+                47,
+                34,
+                22
+              ],
+              [
+                49,
+                34,
+                23
+              ],
+              [
+                49,
+                34,
+                24
+              ],
+              [
+                50,
+                35,
+                24
+              ],
+              [
+                50,
+                36,
+                24
+              ],
+              [
+                52,
+                36,
+                25
+              ],
+              [
+                52,
+                36,
+                26
+              ],
+              [
+                54,
+                36,
+                27
+              ],
+              [
+                55,
+                37,
+                27
+              ],
+              [
+                56,
+                38,
+                27
+              ],
+              [
+                57,
+                39,
+                27
+              ],
+              [
+                58,
+                40,
+                27
+              ],
+              [
+                58,
+                40,
+                28
+              ],
+              [
+                59,
+                41,
+                28
+              ],
+              [
+                59,
+                42,
+                28
+              ]
+            ],
+            "laeufe": {
+              "eigene": 5,
+              "fremde": 5,
+              "eigene_ab": 33,
+              "fremde_ab": 43
+            },
+            "schuetzen": [
+              {
+                "id": "1cskeap",
+                "name": "Sarah Weiß",
+                "tore": 15,
+                "siebenmeter_tore": 5,
+                "siebenmeter_wuerfe": 6,
+                "zwei_minuten": 0,
+                "verwarnungen": 0,
+                "spiele": 1,
+                "tore_je_spiel": 15.0,
+                "siebenmeter_quote": 83
+              },
+              {
+                "id": "0g9lwm6",
+                "name": "Celine-Sofie Hemmers",
+                "tore": 6,
+                "siebenmeter_tore": 0,
+                "siebenmeter_wuerfe": 0,
+                "zwei_minuten": 0,
+                "verwarnungen": 0,
+                "spiele": 1,
+                "tore_je_spiel": 6.0,
+                "siebenmeter_quote": null
+              },
+              {
+                "id": "1xxa5mk",
+                "name": "Selina Sagolla",
+                "tore": 6,
+                "siebenmeter_tore": 0,
+                "siebenmeter_wuerfe": 0,
+                "zwei_minuten": 0,
+                "verwarnungen": 0,
+                "spiele": 1,
+                "tore_je_spiel": 6.0,
+                "siebenmeter_quote": null
+              },
+              {
+                "id": "0ngqg51",
+                "name": "Nathalie Jakob",
+                "tore": 5,
+                "siebenmeter_tore": 0,
+                "siebenmeter_wuerfe": 0,
+                "zwei_minuten": 0,
+                "verwarnungen": 0,
+                "spiele": 1,
+                "tore_je_spiel": 5.0,
+                "siebenmeter_quote": null
+              },
+              {
+                "id": "10o4ym5",
+                "name": "Christine Reuther",
+                "tore": 4,
+                "siebenmeter_tore": 0,
+                "siebenmeter_wuerfe": 0,
+                "zwei_minuten": 0,
+                "verwarnungen": 0,
+                "spiele": 1,
+                "tore_je_spiel": 4.0,
+                "siebenmeter_quote": null
+              },
+              {
+                "id": "0ygu648",
+                "name": "Jana Brenner",
+                "tore": 3,
+                "siebenmeter_tore": 0,
+                "siebenmeter_wuerfe": 0,
+                "zwei_minuten": 0,
+                "verwarnungen": 0,
+                "spiele": 1,
+                "tore_je_spiel": 3.0,
+                "siebenmeter_quote": null
+              },
+              {
+                "id": "1bv6o8f",
+                "name": "Jennifer Gräf",
+                "tore": 1,
+                "siebenmeter_tore": 0,
+                "siebenmeter_wuerfe": 0,
+                "zwei_minuten": 0,
+                "verwarnungen": 0,
+                "spiele": 1,
+                "tore_je_spiel": 1.0,
+                "siebenmeter_quote": null
+              },
+              {
+                "id": "0t3x2mu",
+                "name": "Lena Volz",
+                "tore": 1,
+                "siebenmeter_tore": 0,
+                "siebenmeter_wuerfe": 0,
+                "zwei_minuten": 0,
+                "verwarnungen": 0,
+                "spiele": 1,
+                "tore_je_spiel": 1.0,
+                "siebenmeter_quote": null
+              },
+              {
+                "id": "1j0jpcn",
+                "name": "Sara Dörr",
+                "tore": 1,
+                "siebenmeter_tore": 0,
+                "siebenmeter_wuerfe": 0,
+                "zwei_minuten": 1,
+                "verwarnungen": 0,
+                "spiele": 1,
+                "tore_je_spiel": 1.0,
+                "siebenmeter_quote": null
+              }
+            ],
+            "strafen": 1
+          }
+        ]
       },
       "gegnervorschau": {
         "spiele": 1,
