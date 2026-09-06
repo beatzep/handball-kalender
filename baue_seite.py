@@ -793,8 +793,8 @@ def mannschaftsblock(schluessel: str, team: dict, basis: str, heute: datetime,
     {tabellenblock(team.get('tabelle') or {}, team.get('team_id'))}
   </div>
   <div class="teil" data-ansicht="statistik" hidden>
-    {statistikblock(team.get('statistik') or {})}
     {spielerblock(team.get('spieler') or {})}
+    {statistikblock(team.get('statistik') or {})}
   </div>
 </section>"""
 
