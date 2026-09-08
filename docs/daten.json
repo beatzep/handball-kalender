@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-07T08:15:25+00:00",
+  "aktualisiert": "2026-09-08T08:02:49+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -1687,14 +1687,14 @@
       "liga": "Männer Bezirksklasse",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 1,
+        "runde": 2,
         "phase_id": 12583,
         "gespielt": true,
         "mannschaften": 12,
         "verlauf": [
           {
             "runde": 1,
-            "platz": 8,
+            "platz": 9,
             "punkte": 0
           }
         ],
@@ -1714,16 +1714,16 @@
           },
           {
             "platz": 2,
-            "team": "TV Kirrweiler 2",
-            "team_id": 80979,
-            "spiele": 1,
+            "team": "TUS Heiligenstein 2",
+            "team_id": 80983,
+            "spiele": 2,
             "punkte": 2,
             "siege": 1,
             "remis": 0,
-            "niederlagen": 0,
-            "tore": 35,
-            "gegentore": 28,
-            "differenz": 7
+            "niederlagen": 1,
+            "tore": 67,
+            "gegentore": 63,
+            "differenz": 4
           },
           {
             "platz": 3,
@@ -1766,71 +1766,19 @@
           },
           {
             "platz": 6,
-            "team": "HSV Lingenfeld/Schwegenheim 2",
-            "team_id": 80982,
-            "spiele": 1,
+            "team": "TV Offenbach 4",
+            "team_id": 80977,
+            "spiele": 0,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 1,
-            "tore": 30,
-            "gegentore": 31,
-            "differenz": -1
+            "niederlagen": 0,
+            "tore": 0,
+            "gegentore": 0,
+            "differenz": 0
           },
           {
             "platz": 7,
-            "team": "TUS Heiligenstein 2",
-            "team_id": 80983,
-            "spiele": 1,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 35,
-            "gegentore": 37,
-            "differenz": -2
-          },
-          {
-            "platz": 8,
-            "team": "HSG Mutterstadt/Ruchheim 2",
-            "team_id": 80980,
-            "spiele": 1,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 20,
-            "gegentore": 22,
-            "differenz": -2
-          },
-          {
-            "platz": 9,
-            "team": "TUS Neuhofen 2",
-            "team_id": 80976,
-            "spiele": 1,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 28,
-            "gegentore": 35,
-            "differenz": -7
-          },
-          {
-            "platz": 10,
-            "team": "MSG Iggelheim/Meckenheim 3",
-            "team_id": 80978,
-            "spiele": 1,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 25,
-            "gegentore": 33,
-            "differenz": -8
-          },
-          {
-            "platz": 11,
             "team": "MSG Kaiserslautern/Dansenberg 2",
             "team_id": 80974,
             "spiele": 0,
@@ -1843,17 +1791,69 @@
             "differenz": 0
           },
           {
-            "platz": 12,
-            "team": "TV Offenbach 4",
-            "team_id": 80977,
-            "spiele": 0,
+            "platz": 8,
+            "team": "TV Kirrweiler 2",
+            "team_id": 80979,
+            "spiele": 1,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 35,
+            "gegentore": 28,
+            "differenz": 7
+          },
+          {
+            "platz": 9,
+            "team": "HSG Mutterstadt/Ruchheim 2",
+            "team_id": 80980,
+            "spiele": 1,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
+            "niederlagen": 1,
+            "tore": 20,
+            "gegentore": 22,
+            "differenz": -2
+          },
+          {
+            "platz": 10,
+            "team": "TUS Neuhofen 2",
+            "team_id": 80976,
+            "spiele": 1,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 28,
+            "gegentore": 35,
+            "differenz": -7
+          },
+          {
+            "platz": 11,
+            "team": "HSV Lingenfeld/Schwegenheim 2",
+            "team_id": 80982,
+            "spiele": 2,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 2,
+            "tore": 56,
+            "gegentore": 63,
+            "differenz": -7
+          },
+          {
+            "platz": 12,
+            "team": "MSG Iggelheim/Meckenheim 3",
+            "team_id": 80978,
+            "spiele": 1,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 25,
+            "gegentore": 33,
+            "differenz": -8
           }
         ],
         "fehlend": [
