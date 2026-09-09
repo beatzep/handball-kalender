@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-08T08:02:49+00:00",
+  "aktualisiert": "2026-09-09T08:06:51+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -4529,19 +4529,6 @@
           },
           {
             "platz": 2,
-            "team": "Mjsg Heiligenstein/Mundenheim/Rheingönheim 2",
-            "team_id": 81048,
-            "spiele": 1,
-            "punkte": 2,
-            "siege": 1,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 40,
-            "gegentore": 26,
-            "differenz": 14
-          },
-          {
-            "platz": 3,
             "team": "TUS Neuhofen",
             "team_id": 81044,
             "spiele": 1,
@@ -4554,7 +4541,7 @@
             "differenz": 12
           },
           {
-            "platz": 4,
+            "platz": 3,
             "team": "TV Kirrweiler",
             "team_id": 86753,
             "spiele": 1,
@@ -4567,72 +4554,7 @@
             "differenz": 2
           },
           {
-            "platz": 5,
-            "team": "HSG Landau/Land",
-            "team_id": 81042,
-            "spiele": 1,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 35,
-            "gegentore": 37,
-            "differenz": -2
-          },
-          {
-            "platz": 6,
-            "team": "Mjsg SG Saulheim/HSV Alzey",
-            "team_id": 81049,
-            "spiele": 1,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 22,
-            "gegentore": 34,
-            "differenz": -12
-          },
-          {
-            "platz": 7,
-            "team": "TSV Speyer",
-            "team_id": 81046,
-            "spiele": 1,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 26,
-            "gegentore": 40,
-            "differenz": -14
-          },
-          {
-            "platz": 8,
-            "team": "TS RODALBEN mA",
-            "team_id": 81045,
-            "spiele": 1,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 28,
-            "gegentore": 43,
-            "differenz": -15
-          },
-          {
-            "platz": 9,
-            "team": "HSG Eckbachtal II",
-            "team_id": 81041,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 10,
+            "platz": 4,
             "team": "HSG MUTTERSTADT/RUCHHEIM mA",
             "team_id": 81043,
             "spiele": 0,
@@ -4645,9 +4567,22 @@
             "differenz": 0
           },
           {
-            "platz": 11,
-            "team": "Südpfalz Tiger",
-            "team_id": 81050,
+            "platz": 5,
+            "team": "Mjsg Heiligenstein/Mundenheim/Rheingönheim 2",
+            "team_id": 81048,
+            "spiele": 1,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 40,
+            "gegentore": 26,
+            "differenz": 14
+          },
+          {
+            "platz": 6,
+            "team": "HSG Eckbachtal II",
+            "team_id": 81041,
             "spiele": 0,
             "punkte": 0,
             "siege": 0,
@@ -4656,6 +4591,71 @@
             "tore": 0,
             "gegentore": 0,
             "differenz": 0
+          },
+          {
+            "platz": 7,
+            "team": "Südpfalz Tiger",
+            "team_id": 81050,
+            "spiele": 1,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 30,
+            "gegentore": 37,
+            "differenz": -7
+          },
+          {
+            "platz": 8,
+            "team": "Mjsg SG Saulheim/HSV Alzey",
+            "team_id": 81049,
+            "spiele": 1,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 22,
+            "gegentore": 34,
+            "differenz": -12
+          },
+          {
+            "platz": 9,
+            "team": "HSG Landau/Land",
+            "team_id": 81042,
+            "spiele": 1,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 35,
+            "gegentore": 37,
+            "differenz": -2
+          },
+          {
+            "platz": 10,
+            "team": "TSV Speyer",
+            "team_id": 81046,
+            "spiele": 1,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 26,
+            "gegentore": 40,
+            "differenz": -14
+          },
+          {
+            "platz": 11,
+            "team": "TS RODALBEN mA",
+            "team_id": 81045,
+            "spiele": 1,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 28,
+            "gegentore": 43,
+            "differenz": -15
           }
         ],
         "fehlend": [
@@ -5101,6 +5101,19 @@
           },
           {
             "platz": 2,
+            "team": "Vsk Niederfeld",
+            "team_id": 81069,
+            "spiele": 2,
+            "punkte": 4,
+            "siege": 2,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 73,
+            "gegentore": 60,
+            "differenz": 13
+          },
+          {
+            "platz": 3,
             "team": "TSV Speyer",
             "team_id": 81071,
             "spiele": 0,
@@ -5113,7 +5126,7 @@
             "differenz": 0
           },
           {
-            "platz": 3,
+            "platz": 4,
             "team": "WSG Rheinauen",
             "team_id": 81072,
             "spiele": 2,
@@ -5126,33 +5139,7 @@
             "differenz": 7
           },
           {
-            "platz": 4,
-            "team": "Vsk Niederfeld",
-            "team_id": 81069,
-            "spiele": 2,
-            "punkte": 2,
-            "siege": 1,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 68,
-            "gegentore": 65,
-            "differenz": 3
-          },
-          {
             "platz": 5,
-            "team": "Vorderpfälzer Luchse",
-            "team_id": 81067,
-            "spiele": 1,
-            "punkte": 2,
-            "siege": 1,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 35,
-            "gegentore": 34,
-            "differenz": 1
-          },
-          {
-            "platz": 6,
             "team": "HSG TSG/1.FC-Kaiserslautern",
             "team_id": 81068,
             "spiele": 1,
@@ -5165,7 +5152,7 @@
             "differenz": -11
           },
           {
-            "platz": 7,
+            "platz": 6,
             "team": "HSG Landau/Land",
             "team_id": 81073,
             "spiele": 1,
@@ -5176,6 +5163,19 @@
             "tore": 25,
             "gegentore": 41,
             "differenz": -16
+          },
+          {
+            "platz": 7,
+            "team": "Vorderpfälzer Luchse",
+            "team_id": 81067,
+            "spiele": 2,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 2,
+            "tore": 44,
+            "gegentore": 70,
+            "differenz": -26
           }
         ],
         "fehlend": [
@@ -8498,14 +8498,14 @@
       "liga": "Verbandsliga WEIBLICH",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 1,
+        "runde": 2,
         "phase_id": 12593,
         "gespielt": true,
         "mannschaften": 10,
         "verlauf": [
           {
             "runde": 1,
-            "platz": 4,
+            "platz": 2,
             "punkte": 2
           }
         ],
@@ -8525,32 +8525,6 @@
           },
           {
             "platz": 2,
-            "team": "Mjsg SG Saulheim/HSV Alzey 3",
-            "team_id": 81152,
-            "spiele": 1,
-            "punkte": 2,
-            "siege": 1,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 27,
-            "gegentore": 11,
-            "differenz": 16
-          },
-          {
-            "platz": 3,
-            "team": "HSG Eckbachtal",
-            "team_id": 81149,
-            "spiele": 1,
-            "punkte": 2,
-            "siege": 1,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 26,
-            "gegentore": 19,
-            "differenz": 7
-          },
-          {
-            "platz": 4,
             "team": "HSG Mutterstadt/Ruchheim II",
             "team_id": 81146,
             "spiele": 1,
@@ -8563,7 +8537,7 @@
             "differenz": 5
           },
           {
-            "platz": 5,
+            "platz": 3,
             "team": "Vsk Niederfeld",
             "team_id": 81147,
             "spiele": 1,
@@ -8574,6 +8548,32 @@
             "tore": 18,
             "gegentore": 18,
             "differenz": 0
+          },
+          {
+            "platz": 4,
+            "team": "SC Bobenheim-Roxheim",
+            "team_id": 81148,
+            "spiele": 1,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 15,
+            "gegentore": 33,
+            "differenz": -18
+          },
+          {
+            "platz": 5,
+            "team": "HSG Eckbachtal",
+            "team_id": 81149,
+            "spiele": 1,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 26,
+            "gegentore": 19,
+            "differenz": 7
           },
           {
             "platz": 6,
@@ -8590,6 +8590,32 @@
           },
           {
             "platz": 7,
+            "team": "WSG Rheinauen",
+            "team_id": 81151,
+            "spiele": 2,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 43,
+            "gegentore": 45,
+            "differenz": -2
+          },
+          {
+            "platz": 8,
+            "team": "Mjsg SG Saulheim/HSV Alzey 3",
+            "team_id": 81152,
+            "spiele": 2,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 45,
+            "gegentore": 50,
+            "differenz": -5
+          },
+          {
+            "platz": 9,
             "team": "HSG Dudenhofen/Schifferstadt",
             "team_id": 81154,
             "spiele": 1,
@@ -8602,20 +8628,7 @@
             "differenz": -5
           },
           {
-            "platz": 8,
-            "team": "WSG Rheinauen",
-            "team_id": 81151,
-            "spiele": 1,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 19,
-            "gegentore": 26,
-            "differenz": -7
-          },
-          {
-            "platz": 9,
+            "platz": 10,
             "team": "Hr Göllheim/Eisenberg/Asselheim/Kindenheim",
             "team_id": 81145,
             "spiele": 1,
@@ -8626,19 +8639,6 @@
             "tore": 11,
             "gegentore": 27,
             "differenz": -16
-          },
-          {
-            "platz": 10,
-            "team": "SC Bobenheim-Roxheim",
-            "team_id": 81148,
-            "spiele": 1,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 15,
-            "gegentore": 33,
-            "differenz": -18
           }
         ],
         "fehlend": [
