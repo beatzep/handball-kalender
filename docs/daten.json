@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-09T08:06:51+00:00",
+  "aktualisiert": "2026-09-11T03:17:38+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -21,6 +21,11 @@
             "runde": 1,
             "platz": 1,
             "punkte": 2
+          },
+          {
+            "runde": 2,
+            "platz": 1,
+            "punkte": 4
           }
         ],
         "eintraege": [
@@ -28,14 +33,14 @@
             "platz": 1,
             "team": "HSG Mutterstadt/Ruchheim",
             "team_id": 80924,
-            "spiele": 1,
-            "punkte": 2,
-            "siege": 1,
+            "spiele": 2,
+            "punkte": 4,
+            "siege": 2,
             "remis": 0,
             "niederlagen": 0,
-            "tore": 31,
-            "gegentore": 23,
-            "differenz": 8
+            "tore": 72,
+            "gegentore": 47,
+            "differenz": 25
           },
           {
             "platz": 2,
@@ -52,32 +57,6 @@
           },
           {
             "platz": 3,
-            "team": "HSG Worms",
-            "team_id": 80913,
-            "spiele": 1,
-            "punkte": 2,
-            "siege": 1,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 32,
-            "gegentore": 29,
-            "differenz": 3
-          },
-          {
-            "platz": 4,
-            "team": "HSG Rhein-Nahe Bingen 2",
-            "team_id": 80915,
-            "spiele": 1,
-            "punkte": 2,
-            "siege": 1,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 26,
-            "gegentore": 25,
-            "differenz": 1
-          },
-          {
-            "platz": 5,
             "team": "GW Bingen-Büdesheim",
             "team_id": 80916,
             "spiele": 2,
@@ -90,7 +69,46 @@
             "differenz": 1
           },
           {
+            "platz": 4,
+            "team": "HSG Rhein-Nahe Bingen 2",
+            "team_id": 80915,
+            "spiele": 2,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 60,
+            "gegentore": 61,
+            "differenz": -1
+          },
+          {
+            "platz": 5,
+            "team": "TG Osthofen 2",
+            "team_id": 80920,
+            "spiele": 2,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 64,
+            "gegentore": 66,
+            "differenz": -2
+          },
+          {
             "platz": 6,
+            "team": "HSG Worms",
+            "team_id": 80913,
+            "spiele": 2,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 56,
+            "gegentore": 70,
+            "differenz": -14
+          },
+          {
+            "platz": 7,
             "team": "HSV Alzey",
             "team_id": 80914,
             "spiele": 0,
@@ -103,7 +121,7 @@
             "differenz": 0
           },
           {
-            "platz": 7,
+            "platz": 8,
             "team": "HSV Sobernheim H1",
             "team_id": 80912,
             "spiele": 0,
@@ -116,7 +134,20 @@
             "differenz": 0
           },
           {
-            "platz": 8,
+            "platz": 9,
+            "team": "TV Nieder-Olm 2",
+            "team_id": 80917,
+            "spiele": 1,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 0,
+            "gegentore": 1,
+            "differenz": -1
+          },
+          {
+            "platz": 10,
             "team": "HSC Ingelheim",
             "team_id": 80918,
             "spiele": 1,
@@ -129,7 +160,7 @@
             "differenz": -2
           },
           {
-            "platz": 9,
+            "platz": 11,
             "team": "HSG Zotzenheim/St.Johann/Sprendlingen",
             "team_id": 80922,
             "spiele": 1,
@@ -140,32 +171,6 @@
             "tore": 29,
             "gegentore": 32,
             "differenz": -3
-          },
-          {
-            "platz": 10,
-            "team": "TG Osthofen 2",
-            "team_id": 80920,
-            "spiele": 1,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 28,
-            "gegentore": 32,
-            "differenz": -4
-          },
-          {
-            "platz": 11,
-            "team": "TV Nieder-Olm 2",
-            "team_id": 80917,
-            "spiele": 1,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 0,
-            "gegentore": 1,
-            "differenz": -1
           },
           {
             "platz": 12,
@@ -179,19 +184,6 @@
             "tore": 23,
             "gegentore": 31,
             "differenz": -8
-          }
-        ],
-        "fehlend": [
-          {
-            "datum": "2026-09-05T19:45:00",
-            "gegner": "HSG Worms",
-            "ergebnis": {
-              "heim": 41,
-              "gast": 24,
-              "eigene": 41,
-              "fremde": 24,
-              "ausgang": "S"
-            }
           }
         ]
       },
@@ -1696,24 +1688,68 @@
             "runde": 1,
             "platz": 9,
             "punkte": 0
+          },
+          {
+            "runde": 2,
+            "platz": 8,
+            "punkte": 0
           }
         ],
         "eintraege": [
           {
             "platz": 1,
-            "team": "HSG Grethen/Maxdorf",
-            "team_id": 80984,
-            "spiele": 1,
-            "punkte": 2,
-            "siege": 1,
+            "team": "SG LaFt - Herren",
+            "team_id": 80970,
+            "spiele": 2,
+            "punkte": 4,
+            "siege": 2,
             "remis": 0,
             "niederlagen": 0,
-            "tore": 33,
-            "gegentore": 25,
-            "differenz": 8
+            "tore": 74,
+            "gegentore": 62,
+            "differenz": 12
           },
           {
             "platz": 2,
+            "team": "TSV Kandel 2",
+            "team_id": 80975,
+            "spiele": 2,
+            "punkte": 4,
+            "siege": 2,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 66,
+            "gegentore": 55,
+            "differenz": 11
+          },
+          {
+            "platz": 3,
+            "team": "HSG Grethen/Maxdorf",
+            "team_id": 80984,
+            "spiele": 2,
+            "punkte": 4,
+            "siege": 2,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 60,
+            "gegentore": 51,
+            "differenz": 9
+          },
+          {
+            "platz": 4,
+            "team": "TV THALEISCHWEILER Herren",
+            "team_id": 80973,
+            "spiele": 2,
+            "punkte": 4,
+            "siege": 2,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 56,
+            "gegentore": 47,
+            "differenz": 9
+          },
+          {
+            "platz": 5,
             "team": "TUS Heiligenstein 2",
             "team_id": 80983,
             "spiele": 2,
@@ -1726,46 +1762,20 @@
             "differenz": 4
           },
           {
-            "platz": 3,
-            "team": "SG LaFt - Herren",
-            "team_id": 80970,
-            "spiele": 1,
-            "punkte": 2,
-            "siege": 1,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 37,
-            "gegentore": 35,
-            "differenz": 2
-          },
-          {
-            "platz": 4,
-            "team": "TV THALEISCHWEILER Herren",
-            "team_id": 80973,
-            "spiele": 1,
-            "punkte": 2,
-            "siege": 1,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 22,
-            "gegentore": 20,
-            "differenz": 2
-          },
-          {
-            "platz": 5,
-            "team": "TSV Kandel 2",
-            "team_id": 80975,
-            "spiele": 1,
-            "punkte": 2,
-            "siege": 1,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 31,
-            "gegentore": 30,
-            "differenz": 1
-          },
-          {
             "platz": 6,
+            "team": "TV Kirrweiler 2",
+            "team_id": 80979,
+            "spiele": 2,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 62,
+            "gegentore": 62,
+            "differenz": 0
+          },
+          {
+            "platz": 7,
             "team": "TV Offenbach 4",
             "team_id": 80977,
             "spiele": 0,
@@ -1778,46 +1788,20 @@
             "differenz": 0
           },
           {
-            "platz": 7,
-            "team": "MSG Kaiserslautern/Dansenberg 2",
-            "team_id": 80974,
-            "spiele": 0,
+            "platz": 8,
+            "team": "HSG Mutterstadt/Ruchheim 2",
+            "team_id": 80980,
+            "spiele": 2,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 8,
-            "team": "TV Kirrweiler 2",
-            "team_id": 80979,
-            "spiele": 1,
-            "punkte": 2,
-            "siege": 1,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 35,
-            "gegentore": 28,
-            "differenz": 7
+            "niederlagen": 2,
+            "tore": 46,
+            "gegentore": 49,
+            "differenz": -3
           },
           {
             "platz": 9,
-            "team": "HSG Mutterstadt/Ruchheim 2",
-            "team_id": 80980,
-            "spiele": 1,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 20,
-            "gegentore": 22,
-            "differenz": -2
-          },
-          {
-            "platz": 10,
             "team": "TUS Neuhofen 2",
             "team_id": 80976,
             "spiele": 1,
@@ -1830,7 +1814,7 @@
             "differenz": -7
           },
           {
-            "platz": 11,
+            "platz": 10,
             "team": "HSV Lingenfeld/Schwegenheim 2",
             "team_id": 80982,
             "spiele": 2,
@@ -1843,30 +1827,30 @@
             "differenz": -7
           },
           {
-            "platz": 12,
-            "team": "MSG Iggelheim/Meckenheim 3",
-            "team_id": 80978,
+            "platz": 11,
+            "team": "MSG Kaiserslautern/Dansenberg 2",
+            "team_id": 80974,
             "spiele": 1,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
             "niederlagen": 1,
             "tore": 25,
-            "gegentore": 33,
-            "differenz": -8
-          }
-        ],
-        "fehlend": [
+            "gegentore": 35,
+            "differenz": -10
+          },
           {
-            "datum": "2026-09-06T20:00:00",
-            "gegner": "HSG Grethen/Maxdorf",
-            "ergebnis": {
-              "heim": 26,
-              "gast": 27,
-              "eigene": 26,
-              "fremde": 27,
-              "ausgang": "N"
-            }
+            "platz": 12,
+            "team": "MSG Iggelheim/Meckenheim 3",
+            "team_id": 80978,
+            "spiele": 2,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 2,
+            "tore": 52,
+            "gegentore": 70,
+            "differenz": -18
           }
         ]
       },
@@ -4508,76 +4492,82 @@
       "liga": "Oberliga MÄNNLICH",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 1,
+        "runde": 2,
         "phase_id": 12614,
         "gespielt": true,
         "mannschaften": 11,
-        "verlauf": [],
+        "verlauf": [
+          {
+            "runde": 1,
+            "platz": 5,
+            "punkte": 2
+          }
+        ],
         "eintraege": [
           {
             "platz": 1,
-            "team": "MSG Wörth/Kandel",
-            "team_id": 81047,
-            "spiele": 1,
-            "punkte": 2,
-            "siege": 1,
+            "team": "TUS Neuhofen",
+            "team_id": 81044,
+            "spiele": 2,
+            "punkte": 4,
+            "siege": 2,
             "remis": 0,
             "niederlagen": 0,
-            "tore": 43,
-            "gegentore": 28,
-            "differenz": 15
+            "tore": 79,
+            "gegentore": 54,
+            "differenz": 25
           },
           {
             "platz": 2,
-            "team": "TUS Neuhofen",
-            "team_id": 81044,
-            "spiele": 1,
-            "punkte": 2,
-            "siege": 1,
+            "team": "TV Kirrweiler",
+            "team_id": 86753,
+            "spiele": 2,
+            "punkte": 4,
+            "siege": 2,
             "remis": 0,
             "niederlagen": 0,
-            "tore": 34,
-            "gegentore": 22,
-            "differenz": 12
+            "tore": 87,
+            "gegentore": 70,
+            "differenz": 17
           },
           {
             "platz": 3,
-            "team": "TV Kirrweiler",
-            "team_id": 86753,
+            "team": "MSG Wörth/Kandel",
+            "team_id": 81047,
+            "spiele": 2,
+            "punkte": 3,
+            "siege": 1,
+            "remis": 1,
+            "niederlagen": 0,
+            "tore": 78,
+            "gegentore": 63,
+            "differenz": 15
+          },
+          {
+            "platz": 4,
+            "team": "Mjsg Heiligenstein/Mundenheim/Rheingönheim 2",
+            "team_id": 81048,
+            "spiele": 2,
+            "punkte": 3,
+            "siege": 1,
+            "remis": 1,
+            "niederlagen": 0,
+            "tore": 75,
+            "gegentore": 61,
+            "differenz": 14
+          },
+          {
+            "platz": 5,
+            "team": "HSG MUTTERSTADT/RUCHHEIM mA",
+            "team_id": 81043,
             "spiele": 1,
             "punkte": 2,
             "siege": 1,
             "remis": 0,
             "niederlagen": 0,
             "tore": 37,
-            "gegentore": 35,
-            "differenz": 2
-          },
-          {
-            "platz": 4,
-            "team": "HSG MUTTERSTADT/RUCHHEIM mA",
-            "team_id": 81043,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 5,
-            "team": "Mjsg Heiligenstein/Mundenheim/Rheingönheim 2",
-            "team_id": 81048,
-            "spiele": 1,
-            "punkte": 2,
-            "siege": 1,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 40,
-            "gegentore": 26,
-            "differenz": 14
+            "gegentore": 30,
+            "differenz": 7
           },
           {
             "platz": 6,
@@ -4594,32 +4584,6 @@
           },
           {
             "platz": 7,
-            "team": "Südpfalz Tiger",
-            "team_id": 81050,
-            "spiele": 1,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 30,
-            "gegentore": 37,
-            "differenz": -7
-          },
-          {
-            "platz": 8,
-            "team": "Mjsg SG Saulheim/HSV Alzey",
-            "team_id": 81049,
-            "spiele": 1,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 22,
-            "gegentore": 34,
-            "differenz": -12
-          },
-          {
-            "platz": 9,
             "team": "HSG Landau/Land",
             "team_id": 81042,
             "spiele": 1,
@@ -4632,43 +4596,56 @@
             "differenz": -2
           },
           {
-            "platz": 10,
-            "team": "TSV Speyer",
-            "team_id": 81046,
+            "platz": 8,
+            "team": "Südpfalz Tiger",
+            "team_id": 81050,
             "spiele": 1,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
             "niederlagen": 1,
-            "tore": 26,
-            "gegentore": 40,
-            "differenz": -14
+            "tore": 30,
+            "gegentore": 37,
+            "differenz": -7
+          },
+          {
+            "platz": 9,
+            "team": "Mjsg SG Saulheim/HSV Alzey",
+            "team_id": 81049,
+            "spiele": 1,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 22,
+            "gegentore": 34,
+            "differenz": -12
+          },
+          {
+            "platz": 10,
+            "team": "TS RODALBEN mA",
+            "team_id": 81045,
+            "spiele": 2,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 2,
+            "tore": 60,
+            "gegentore": 88,
+            "differenz": -28
           },
           {
             "platz": 11,
-            "team": "TS RODALBEN mA",
-            "team_id": 81045,
-            "spiele": 1,
+            "team": "TSV Speyer",
+            "team_id": 81046,
+            "spiele": 2,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 1,
-            "tore": 28,
-            "gegentore": 43,
-            "differenz": -15
-          }
-        ],
-        "fehlend": [
-          {
-            "datum": "2026-09-05T17:45:00",
-            "gegner": "Südpfalz Tiger",
-            "ergebnis": {
-              "heim": 37,
-              "gast": 30,
-              "eigene": 37,
-              "fremde": 30,
-              "ausgang": "S"
-            }
+            "niederlagen": 2,
+            "tore": 61,
+            "gegentore": 90,
+            "differenz": -29
           }
         ]
       },
@@ -4783,8 +4760,36 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [],
+      "letzte_aenderungen": [
+        {
+          "art": "neu",
+          "code": "2627RPOLAJMA0101",
+          "spieltag": 1,
+          "text": "Neues Spiel gegen Platzhalter 1: Sa 29.08. 00:00 in unbekannt"
+        },
+        {
+          "art": "neu",
+          "code": "2627RPOLAJMA1201",
+          "spieltag": 12,
+          "text": "Neues Spiel gegen Platzhalter 1: Sa 05.12. 00:00 in unbekannt"
+        }
+      ],
       "spiele": {
+        "2627RPOLAJMA0101": {
+          "datum": "2026-08-29T00:00:00",
+          "ort": "",
+          "halle": "",
+          "gegner": "Platzhalter 1",
+          "gegner_id": 0,
+          "match_id": 382550,
+          "lat": null,
+          "lon": null,
+          "spieltag": 1,
+          "phase_id": 12614,
+          "heim": false,
+          "ohne_zeit": true,
+          "sequence": 0
+        },
         "2627RPOLAJMA0206": {
           "datum": "2026-09-05T17:45:00",
           "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
@@ -4925,6 +4930,21 @@
           "phase_id": 12614,
           "heim": true,
           "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RPOLAJMA1201": {
+          "datum": "2026-12-05T00:00:00",
+          "ort": "",
+          "halle": "",
+          "gegner": "Platzhalter 1",
+          "gegner_id": 0,
+          "match_id": 382616,
+          "lat": null,
+          "lon": null,
+          "spieltag": 12,
+          "phase_id": 12614,
+          "heim": true,
+          "ohne_zeit": true,
           "sequence": 0
         },
         "2627RPOLAJMA1306": {
@@ -5083,6 +5103,11 @@
             "runde": 1,
             "platz": 1,
             "punkte": 2
+          },
+          {
+            "runde": 2,
+            "platz": 1,
+            "punkte": 4
           }
         ],
         "eintraege": [
@@ -5090,14 +5115,14 @@
             "platz": 1,
             "team": "HSG Mutterstadt/Ruchheim Wa",
             "team_id": 81066,
-            "spiele": 1,
-            "punkte": 2,
-            "siege": 1,
+            "spiele": 2,
+            "punkte": 4,
+            "siege": 2,
             "remis": 0,
             "niederlagen": 0,
-            "tore": 41,
-            "gegentore": 25,
-            "differenz": 16
+            "tore": 82,
+            "gegentore": 43,
+            "differenz": 39
           },
           {
             "platz": 2,
@@ -5116,14 +5141,14 @@
             "platz": 3,
             "team": "TSV Speyer",
             "team_id": 81071,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
+            "spiele": 1,
+            "punkte": 2,
+            "siege": 1,
             "remis": 0,
             "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
+            "tore": 31,
+            "gegentore": 14,
+            "differenz": 17
           },
           {
             "platz": 4,
@@ -5140,19 +5165,6 @@
           },
           {
             "platz": 5,
-            "team": "HSG TSG/1.FC-Kaiserslautern",
-            "team_id": 81068,
-            "spiele": 1,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 16,
-            "gegentore": 27,
-            "differenz": -11
-          },
-          {
-            "platz": 6,
             "team": "HSG Landau/Land",
             "team_id": 81073,
             "spiele": 1,
@@ -5165,7 +5177,7 @@
             "differenz": -16
           },
           {
-            "platz": 7,
+            "platz": 6,
             "team": "Vorderpfälzer Luchse",
             "team_id": 81067,
             "spiele": 2,
@@ -5176,19 +5188,19 @@
             "tore": 44,
             "gegentore": 70,
             "differenz": -26
-          }
-        ],
-        "fehlend": [
+          },
           {
-            "datum": "2026-09-05T13:30:00",
-            "gegner": "HSG TSG/1.FC-Kaiserslautern",
-            "ergebnis": {
-              "heim": 41,
-              "gast": 18,
-              "eigene": 41,
-              "fremde": 18,
-              "ausgang": "S"
-            }
+            "platz": 7,
+            "team": "HSG TSG/1.FC-Kaiserslautern",
+            "team_id": 81068,
+            "spiele": 2,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 2,
+            "tore": 34,
+            "gegentore": 68,
+            "differenz": -34
           }
         ]
       },
@@ -6471,7 +6483,20 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [],
+      "letzte_aenderungen": [
+        {
+          "art": "neu",
+          "code": "2627RPVLBJMC0303",
+          "spieltag": 3,
+          "text": "Neues Spiel gegen Platzhalter 10: Sa 12.09. 00:00 in unbekannt"
+        },
+        {
+          "art": "neu",
+          "code": "2627RPVLBJMC1203",
+          "spieltag": 12,
+          "text": "Neues Spiel gegen Platzhalter 10: Sa 23.01. 00:00 in unbekannt"
+        }
+      ],
       "spiele": {
         "2627RP4BKRBJML0102": {
           "datum": "2026-08-22T00:00:00",
@@ -6560,6 +6585,21 @@
             "fremde": 44,
             "ausgang": "N"
           }
+        },
+        "2627RPVLBJMC0303": {
+          "datum": "2026-09-12T00:00:00",
+          "ort": "",
+          "halle": "",
+          "gegner": "Platzhalter 10",
+          "gegner_id": 0,
+          "match_id": 557388,
+          "lat": null,
+          "lon": null,
+          "spieltag": 3,
+          "phase_id": 12619,
+          "heim": true,
+          "ohne_zeit": true,
+          "sequence": 0
         },
         "2627RPVLBJMC0403": {
           "datum": "2026-09-19T14:00:00",
@@ -6664,6 +6704,21 @@
           "phase_id": 12619,
           "heim": true,
           "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RPVLBJMC1203": {
+          "datum": "2027-01-23T00:00:00",
+          "ort": "",
+          "halle": "",
+          "gegner": "Platzhalter 10",
+          "gegner_id": 0,
+          "match_id": 557433,
+          "lat": null,
+          "lon": null,
+          "spieltag": 12,
+          "phase_id": 12619,
+          "heim": false,
+          "ohne_zeit": true,
           "sequence": 0
         },
         "2627RPVLBJMC1303": {
@@ -7910,7 +7965,20 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [],
+      "letzte_aenderungen": [
+        {
+          "art": "neu",
+          "code": "2627RPBKROCJGC0505",
+          "spieltag": 5,
+          "text": "Neues Spiel gegen Platzhalter 3: Sa 26.09. 00:00 in unbekannt"
+        },
+        {
+          "art": "neu",
+          "code": "2627RPBKROCJGC1405",
+          "spieltag": 14,
+          "text": "Neues Spiel gegen Platzhalter 3: Sa 13.02. 00:00 in unbekannt"
+        }
+      ],
       "spiele": {
         "2627RPBKROCJGC0105": {
           "datum": "2026-08-30T13:45:00",
@@ -7984,6 +8052,21 @@
           "phase_id": 12625,
           "heim": false,
           "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RPBKROCJGC0505": {
+          "datum": "2026-09-26T00:00:00",
+          "ort": "",
+          "halle": "",
+          "gegner": "Platzhalter 3",
+          "gegner_id": 0,
+          "match_id": 381893,
+          "lat": null,
+          "lon": null,
+          "spieltag": 5,
+          "phase_id": 12625,
+          "heim": true,
+          "ohne_zeit": true,
           "sequence": 0
         },
         "2627RPBKROCJGC0603": {
@@ -8104,6 +8187,21 @@
           "phase_id": 12625,
           "heim": true,
           "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RPBKROCJGC1405": {
+          "datum": "2027-02-13T00:00:00",
+          "ort": "",
+          "halle": "",
+          "gegner": "Platzhalter 3",
+          "gegner_id": 0,
+          "match_id": 381938,
+          "lat": null,
+          "lon": null,
+          "spieltag": 14,
+          "phase_id": 12625,
+          "heim": false,
+          "ohne_zeit": true,
           "sequence": 0
         },
         "2627RPBKROCJGC1503": {
@@ -8505,65 +8603,57 @@
         "verlauf": [
           {
             "runde": 1,
-            "platz": 2,
+            "platz": 4,
             "punkte": 2
+          },
+          {
+            "runde": 2,
+            "platz": 1,
+            "punkte": 4
           }
         ],
         "eintraege": [
           {
             "platz": 1,
-            "team": "JSG Mundenheim/Rheingönheim 2",
-            "team_id": 81150,
-            "spiele": 1,
-            "punkte": 2,
-            "siege": 1,
+            "team": "HSG Mutterstadt/Ruchheim II",
+            "team_id": 81146,
+            "spiele": 2,
+            "punkte": 4,
+            "siege": 2,
             "remis": 0,
             "niederlagen": 0,
-            "tore": 33,
-            "gegentore": 15,
-            "differenz": 18
+            "tore": 62,
+            "gegentore": 36,
+            "differenz": 26
           },
           {
             "platz": 2,
-            "team": "HSG Mutterstadt/Ruchheim II",
-            "team_id": 81146,
-            "spiele": 1,
-            "punkte": 2,
+            "team": "Vsk Niederfeld",
+            "team_id": 81147,
+            "spiele": 2,
+            "punkte": 3,
             "siege": 1,
-            "remis": 0,
+            "remis": 1,
             "niederlagen": 0,
-            "tore": 23,
-            "gegentore": 18,
-            "differenz": 5
+            "tore": 42,
+            "gegentore": 39,
+            "differenz": 3
           },
           {
             "platz": 3,
-            "team": "Vsk Niederfeld",
-            "team_id": 81147,
-            "spiele": 1,
-            "punkte": 1,
-            "siege": 0,
-            "remis": 1,
-            "niederlagen": 0,
-            "tore": 18,
-            "gegentore": 18,
-            "differenz": 0
+            "team": "JSG Mundenheim/Rheingönheim 2",
+            "team_id": 81150,
+            "spiele": 2,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 54,
+            "gegentore": 39,
+            "differenz": 15
           },
           {
             "platz": 4,
-            "team": "SC Bobenheim-Roxheim",
-            "team_id": 81148,
-            "spiele": 1,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 15,
-            "gegentore": 33,
-            "differenz": -18
-          },
-          {
-            "platz": 5,
             "team": "HSG Eckbachtal",
             "team_id": 81149,
             "spiele": 1,
@@ -8576,20 +8666,20 @@
             "differenz": 7
           },
           {
-            "platz": 6,
-            "team": "TV Edigheim II",
-            "team_id": 81153,
-            "spiele": 1,
-            "punkte": 1,
-            "siege": 0,
-            "remis": 1,
-            "niederlagen": 0,
-            "tore": 18,
-            "gegentore": 18,
-            "differenz": 0
+            "platz": 5,
+            "team": "SC Bobenheim-Roxheim",
+            "team_id": 81148,
+            "spiele": 2,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 48,
+            "gegentore": 47,
+            "differenz": 1
           },
           {
-            "platz": 7,
+            "platz": 6,
             "team": "WSG Rheinauen",
             "team_id": 81151,
             "spiele": 2,
@@ -8602,7 +8692,7 @@
             "differenz": -2
           },
           {
-            "platz": 8,
+            "platz": 7,
             "team": "Mjsg SG Saulheim/HSV Alzey 3",
             "team_id": 81152,
             "spiele": 2,
@@ -8615,43 +8705,43 @@
             "differenz": -5
           },
           {
+            "platz": 8,
+            "team": "TV Edigheim II",
+            "team_id": 81153,
+            "spiele": 1,
+            "punkte": 1,
+            "siege": 0,
+            "remis": 1,
+            "niederlagen": 0,
+            "tore": 18,
+            "gegentore": 18,
+            "differenz": 0
+          },
+          {
             "platz": 9,
             "team": "HSG Dudenhofen/Schifferstadt",
             "team_id": 81154,
-            "spiele": 1,
+            "spiele": 2,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 1,
-            "tore": 18,
-            "gegentore": 23,
-            "differenz": -5
+            "niederlagen": 2,
+            "tore": 37,
+            "gegentore": 47,
+            "differenz": -10
           },
           {
             "platz": 10,
             "team": "Hr Göllheim/Eisenberg/Asselheim/Kindenheim",
             "team_id": 81145,
-            "spiele": 1,
+            "spiele": 2,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 1,
-            "tore": 11,
-            "gegentore": 27,
-            "differenz": -16
-          }
-        ],
-        "fehlend": [
-          {
-            "datum": "2026-09-06T12:00:00",
-            "gegner": "Mjsg SG Saulheim/HSV Alzey 3",
-            "ergebnis": {
-              "heim": 18,
-              "gast": 39,
-              "eigene": 39,
-              "fremde": 18,
-              "ausgang": "S"
-            }
+            "niederlagen": 2,
+            "tore": 25,
+            "gegentore": 60,
+            "differenz": -35
           }
         ]
       },
@@ -9335,7 +9425,20 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [],
+      "letzte_aenderungen": [
+        {
+          "art": "neu",
+          "code": "2627RPBKRDJGB0602",
+          "spieltag": 6,
+          "text": "Neues Spiel gegen Platzhalter 1: Sa 24.10. 00:00 in unbekannt"
+        },
+        {
+          "art": "neu",
+          "code": "2627RPBKRDJGB1502",
+          "spieltag": 15,
+          "text": "Neues Spiel gegen Platzhalter 1: Sa 20.02. 00:00 in unbekannt"
+        }
+      ],
       "spiele": {
         "2627RP4BKRDJGC0102": {
           "datum": "2026-08-16T00:00:00",
@@ -9492,6 +9595,21 @@
           "ohne_zeit": false,
           "sequence": 0
         },
+        "2627RPBKRDJGB0602": {
+          "datum": "2026-10-24T00:00:00",
+          "ort": "",
+          "halle": "",
+          "gegner": "Platzhalter 1",
+          "gegner_id": 0,
+          "match_id": 383416,
+          "lat": null,
+          "lon": null,
+          "spieltag": 6,
+          "phase_id": 12629,
+          "heim": true,
+          "ohne_zeit": true,
+          "sequence": 0
+        },
         "2627RPBKRDJGB0703": {
           "datum": "2026-11-07T16:15:00",
           "ort": "Wonnegauhalle Osthofen, Herrnsheimer Straße 24, 67574 Osthofen",
@@ -9610,6 +9728,21 @@
           "phase_id": 12629,
           "heim": true,
           "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RPBKRDJGB1502": {
+          "datum": "2027-02-20T00:00:00",
+          "ort": "",
+          "halle": "",
+          "gegner": "Platzhalter 1",
+          "gegner_id": 0,
+          "match_id": 383461,
+          "lat": null,
+          "lon": null,
+          "spieltag": 15,
+          "phase_id": 12629,
+          "heim": false,
+          "ohne_zeit": true,
           "sequence": 0
         },
         "2627RPBKRDJGB1603": {
@@ -9916,8 +10049,36 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [],
+      "letzte_aenderungen": [
+        {
+          "art": "neu",
+          "code": "2627RPBKRODJWA0104",
+          "spieltag": 1,
+          "text": "Neues Spiel gegen Platzhalter 7: Sa 29.08. 00:00 in unbekannt"
+        },
+        {
+          "art": "neu",
+          "code": "2627RPBKRODJWA1004",
+          "spieltag": 10,
+          "text": "Neues Spiel gegen Platzhalter 7: Sa 05.12. 00:00 in unbekannt"
+        }
+      ],
       "spiele": {
+        "2627RPBKRODJWA0104": {
+          "datum": "2026-08-29T00:00:00",
+          "ort": "",
+          "halle": "",
+          "gegner": "Platzhalter 7",
+          "gegner_id": 0,
+          "match_id": 385055,
+          "lat": null,
+          "lon": null,
+          "spieltag": 1,
+          "phase_id": 12594,
+          "heim": false,
+          "ohne_zeit": true,
+          "sequence": 0
+        },
         "2627RPBKRODJWA0202": {
           "datum": "2026-09-05T12:00:00",
           "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
@@ -10088,6 +10249,21 @@
           "phase_id": 12594,
           "heim": true,
           "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RPBKRODJWA1004": {
+          "datum": "2026-12-05T00:00:00",
+          "ort": "",
+          "halle": "",
+          "gegner": "Platzhalter 7",
+          "gegner_id": 0,
+          "match_id": 385100,
+          "lat": null,
+          "lon": null,
+          "spieltag": 10,
+          "phase_id": 12594,
+          "heim": true,
+          "ohne_zeit": true,
           "sequence": 0
         },
         "2627RPBKRODJWA1102": {
@@ -11608,7 +11784,14 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [],
+      "letzte_aenderungen": [
+        {
+          "art": "neu",
+          "code": "2627RPBKRKEJGE0905",
+          "spieltag": 9,
+          "text": "Neues Spiel gegen Platzhalter 8: Sa 28.11. 00:00 in unbekannt"
+        }
+      ],
       "spiele": {
         "2627RPBKRKEJGE0102": {
           "datum": "2026-08-29T15:30:00",
@@ -11736,6 +11919,21 @@
           "heim": true,
           "ohne_zeit": false,
           "sequence": 0
+        },
+        "2627RPBKRKEJGE0905": {
+          "datum": "2026-11-28T00:00:00",
+          "ort": "",
+          "halle": "",
+          "gegner": "Platzhalter 8",
+          "gegner_id": 0,
+          "match_id": 385450,
+          "lat": null,
+          "lon": null,
+          "spieltag": 9,
+          "phase_id": 12641,
+          "heim": false,
+          "ohne_zeit": true,
+          "sequence": 0
         }
       }
     },
@@ -11749,7 +11947,7 @@
       "liga": "Bezirksklasse GEMISCHT",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 1,
+        "runde": 2,
         "phase_id": 12640,
         "gespielt": true,
         "mannschaften": 10,
@@ -11758,6 +11956,11 @@
             "runde": 1,
             "platz": 5,
             "punkte": 2
+          },
+          {
+            "runde": 2,
+            "platz": 6,
+            "punkte": 2
           }
         ],
         "eintraege": [
@@ -11765,144 +11968,131 @@
             "platz": 1,
             "team": "TUS Heiligenstein",
             "team_id": 81347,
-            "spiele": 1,
-            "punkte": 2,
-            "siege": 1,
+            "spiele": 2,
+            "punkte": 4,
+            "siege": 2,
             "remis": 0,
             "niederlagen": 0,
-            "tore": 29,
-            "gegentore": 8,
-            "differenz": 21
+            "tore": 58,
+            "gegentore": 10,
+            "differenz": 48
           },
           {
             "platz": 2,
             "team": "TSV Speyer II",
             "team_id": 81348,
-            "spiele": 1,
-            "punkte": 2,
-            "siege": 1,
+            "spiele": 2,
+            "punkte": 4,
+            "siege": 2,
             "remis": 0,
             "niederlagen": 0,
-            "tore": 30,
-            "gegentore": 10,
-            "differenz": 20
+            "tore": 59,
+            "gegentore": 16,
+            "differenz": 43
           },
           {
             "platz": 3,
             "team": "Hlz Friesenheim/Hochdorf 3",
             "team_id": 81350,
-            "spiele": 1,
-            "punkte": 2,
-            "siege": 1,
+            "spiele": 2,
+            "punkte": 4,
+            "siege": 2,
             "remis": 0,
             "niederlagen": 0,
-            "tore": 20,
-            "gegentore": 7,
-            "differenz": 13
+            "tore": 50,
+            "gegentore": 12,
+            "differenz": 38
           },
           {
             "platz": 4,
             "team": "JSG Kaiserslautern/Dansenberg III",
             "team_id": 87383,
-            "spiele": 1,
-            "punkte": 2,
-            "siege": 1,
+            "spiele": 2,
+            "punkte": 4,
+            "siege": 2,
             "remis": 0,
             "niederlagen": 0,
-            "tore": 21,
-            "gegentore": 14,
-            "differenz": 7
+            "tore": 40,
+            "gegentore": 27,
+            "differenz": 13
           },
           {
             "platz": 5,
-            "team": "HSG Mutterstadt/Ruchheim III",
-            "team_id": 81343,
-            "spiele": 1,
+            "team": "JSG Mundenheim/Rheingönheim 3",
+            "team_id": 81342,
+            "spiele": 2,
             "punkte": 2,
             "siege": 1,
             "remis": 0,
-            "niederlagen": 0,
-            "tore": 15,
-            "gegentore": 12,
-            "differenz": 3
+            "niederlagen": 1,
+            "tore": 25,
+            "gegentore": 34,
+            "differenz": -9
           },
           {
             "platz": 6,
-            "team": "TV Offenbach 4",
-            "team_id": 81344,
-            "spiele": 1,
-            "punkte": 0,
-            "siege": 0,
+            "team": "HSG Mutterstadt/Ruchheim III",
+            "team_id": 81343,
+            "spiele": 2,
+            "punkte": 2,
+            "siege": 1,
             "remis": 0,
             "niederlagen": 1,
-            "tore": 12,
-            "gegentore": 15,
-            "differenz": -3
+            "tore": 17,
+            "gegentore": 41,
+            "differenz": -24
           },
           {
             "platz": 7,
-            "team": "HSG Dudenhofen/Schifferstadt 4",
-            "team_id": 81346,
-            "spiele": 1,
+            "team": "HSG Grethen/Maxdorf II",
+            "team_id": 81345,
+            "spiele": 2,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 1,
-            "tore": 14,
-            "gegentore": 21,
-            "differenz": -7
+            "niederlagen": 2,
+            "tore": 22,
+            "gegentore": 47,
+            "differenz": -25
           },
           {
             "platz": 8,
-            "team": "JSG Mundenheim/Rheingönheim 3",
-            "team_id": 81342,
-            "spiele": 1,
+            "team": "TV Offenbach 4",
+            "team_id": 81344,
+            "spiele": 2,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 1,
-            "tore": 7,
-            "gegentore": 20,
-            "differenz": -13
+            "niederlagen": 2,
+            "tore": 18,
+            "gegentore": 44,
+            "differenz": -26
           },
           {
             "platz": 9,
             "team": "TG Waldsee II",
             "team_id": 81349,
-            "spiele": 1,
+            "spiele": 2,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 1,
-            "tore": 10,
-            "gegentore": 30,
-            "differenz": -20
+            "niederlagen": 2,
+            "tore": 23,
+            "gegentore": 49,
+            "differenz": -26
           },
           {
             "platz": 10,
-            "team": "HSG Grethen/Maxdorf II",
-            "team_id": 81345,
-            "spiele": 1,
+            "team": "HSG Dudenhofen/Schifferstadt 4",
+            "team_id": 81346,
+            "spiele": 2,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 1,
-            "tore": 8,
-            "gegentore": 29,
-            "differenz": -21
-          }
-        ],
-        "fehlend": [
-          {
-            "datum": "2026-09-06T10:00:00",
-            "gegner": "TUS Heiligenstein",
-            "ergebnis": {
-              "heim": 2,
-              "gast": 29,
-              "eigene": 2,
-              "fremde": 29,
-              "ausgang": "N"
-            }
+            "niederlagen": 2,
+            "tore": 19,
+            "gegentore": 51,
+            "differenz": -32
           }
         ]
       },
@@ -12825,7 +13015,20 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [],
+      "letzte_aenderungen": [
+        {
+          "art": "neu",
+          "code": "2627RPBKROFJGI0201",
+          "spieltag": 2,
+          "text": "Neues Spiel gegen Platzhalter 8: Sa 05.09. 00:00 in unbekannt"
+        },
+        {
+          "art": "neu",
+          "code": "2627RPBKROFJGI0901",
+          "spieltag": 9,
+          "text": "Neues Spiel gegen Platzhalter 8: Sa 12.12. 00:00 in unbekannt"
+        }
+      ],
       "spiele": {
         "2627RPBKROFJGI0103": {
           "datum": "2026-08-29T14:00:00",
@@ -12840,6 +13043,21 @@
           "phase_id": 12612,
           "heim": true,
           "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RPBKROFJGI0201": {
+          "datum": "2026-09-05T00:00:00",
+          "ort": "",
+          "halle": "",
+          "gegner": "Platzhalter 8",
+          "gegner_id": 0,
+          "match_id": 362406,
+          "lat": null,
+          "lon": null,
+          "spieltag": 2,
+          "phase_id": 12612,
+          "heim": false,
+          "ohne_zeit": true,
           "sequence": 0
         },
         "2627RPBKROFJGI0304": {
@@ -12930,6 +13148,21 @@
           "phase_id": 12612,
           "heim": false,
           "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RPBKROFJGI0901": {
+          "datum": "2026-12-12T00:00:00",
+          "ort": "",
+          "halle": "",
+          "gegner": "Platzhalter 8",
+          "gegner_id": 0,
+          "match_id": 362434,
+          "lat": null,
+          "lon": null,
+          "spieltag": 9,
+          "phase_id": 12612,
+          "heim": true,
+          "ohne_zeit": true,
           "sequence": 0
         },
         "2627RPBKROFJGI1004": {
