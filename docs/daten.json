@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-11T03:17:38+00:00",
+  "aktualisiert": "2026-09-11T08:01:10+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -4760,20 +4760,7 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [
-        {
-          "art": "neu",
-          "code": "2627RPOLAJMA0101",
-          "spieltag": 1,
-          "text": "Neues Spiel gegen Platzhalter 1: Sa 29.08. 00:00 in unbekannt"
-        },
-        {
-          "art": "neu",
-          "code": "2627RPOLAJMA1201",
-          "spieltag": 12,
-          "text": "Neues Spiel gegen Platzhalter 1: Sa 05.12. 00:00 in unbekannt"
-        }
-      ],
+      "letzte_aenderungen": [],
       "spiele": {
         "2627RPOLAJMA0101": {
           "datum": "2026-08-29T00:00:00",
@@ -6483,20 +6470,7 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [
-        {
-          "art": "neu",
-          "code": "2627RPVLBJMC0303",
-          "spieltag": 3,
-          "text": "Neues Spiel gegen Platzhalter 10: Sa 12.09. 00:00 in unbekannt"
-        },
-        {
-          "art": "neu",
-          "code": "2627RPVLBJMC1203",
-          "spieltag": 12,
-          "text": "Neues Spiel gegen Platzhalter 10: Sa 23.01. 00:00 in unbekannt"
-        }
-      ],
+      "letzte_aenderungen": [],
       "spiele": {
         "2627RP4BKRBJML0102": {
           "datum": "2026-08-22T00:00:00",
@@ -7965,20 +7939,7 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [
-        {
-          "art": "neu",
-          "code": "2627RPBKROCJGC0505",
-          "spieltag": 5,
-          "text": "Neues Spiel gegen Platzhalter 3: Sa 26.09. 00:00 in unbekannt"
-        },
-        {
-          "art": "neu",
-          "code": "2627RPBKROCJGC1405",
-          "spieltag": 14,
-          "text": "Neues Spiel gegen Platzhalter 3: Sa 13.02. 00:00 in unbekannt"
-        }
-      ],
+      "letzte_aenderungen": [],
       "spiele": {
         "2627RPBKROCJGC0105": {
           "datum": "2026-08-30T13:45:00",
@@ -9425,20 +9386,7 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [
-        {
-          "art": "neu",
-          "code": "2627RPBKRDJGB0602",
-          "spieltag": 6,
-          "text": "Neues Spiel gegen Platzhalter 1: Sa 24.10. 00:00 in unbekannt"
-        },
-        {
-          "art": "neu",
-          "code": "2627RPBKRDJGB1502",
-          "spieltag": 15,
-          "text": "Neues Spiel gegen Platzhalter 1: Sa 20.02. 00:00 in unbekannt"
-        }
-      ],
+      "letzte_aenderungen": [],
       "spiele": {
         "2627RP4BKRDJGC0102": {
           "datum": "2026-08-16T00:00:00",
@@ -10049,20 +9997,7 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [
-        {
-          "art": "neu",
-          "code": "2627RPBKRODJWA0104",
-          "spieltag": 1,
-          "text": "Neues Spiel gegen Platzhalter 7: Sa 29.08. 00:00 in unbekannt"
-        },
-        {
-          "art": "neu",
-          "code": "2627RPBKRODJWA1004",
-          "spieltag": 10,
-          "text": "Neues Spiel gegen Platzhalter 7: Sa 05.12. 00:00 in unbekannt"
-        }
-      ],
+      "letzte_aenderungen": [],
       "spiele": {
         "2627RPBKRODJWA0104": {
           "datum": "2026-08-29T00:00:00",
@@ -11784,14 +11719,7 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [
-        {
-          "art": "neu",
-          "code": "2627RPBKRKEJGE0905",
-          "spieltag": 9,
-          "text": "Neues Spiel gegen Platzhalter 8: Sa 28.11. 00:00 in unbekannt"
-        }
-      ],
+      "letzte_aenderungen": [],
       "spiele": {
         "2627RPBKRKEJGE0102": {
           "datum": "2026-08-29T15:30:00",
@@ -13015,20 +12943,7 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [
-        {
-          "art": "neu",
-          "code": "2627RPBKROFJGI0201",
-          "spieltag": 2,
-          "text": "Neues Spiel gegen Platzhalter 8: Sa 05.09. 00:00 in unbekannt"
-        },
-        {
-          "art": "neu",
-          "code": "2627RPBKROFJGI0901",
-          "spieltag": 9,
-          "text": "Neues Spiel gegen Platzhalter 8: Sa 12.12. 00:00 in unbekannt"
-        }
-      ],
+      "letzte_aenderungen": [],
       "spiele": {
         "2627RPBKROFJGI0103": {
           "datum": "2026-08-29T14:00:00",
