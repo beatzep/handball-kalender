@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-12T20:16:23+00:00",
+  "aktualisiert": "2026-09-12T20:46:36+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -3274,13 +3274,31 @@
         "verlauf": [
           {
             "runde": 1,
-            "platz": 4,
+            "platz": 2,
             "punkte": 2
+          },
+          {
+            "runde": 2,
+            "platz": 1,
+            "punkte": 4
           }
         ],
         "eintraege": [
           {
             "platz": 1,
+            "team": "HSG Mutterstadt/Ruchheim Damen",
+            "team_id": 80999,
+            "spiele": 2,
+            "punkte": 4,
+            "siege": 2,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 71,
+            "gegentore": 54,
+            "differenz": 17
+          },
+          {
+            "platz": 2,
             "team": "SV Bornheim",
             "team_id": 81001,
             "spiele": 3,
@@ -3293,7 +3311,7 @@
             "differenz": 11
           },
           {
-            "platz": 2,
+            "platz": 3,
             "team": "FSG Gonsenheim/Schott",
             "team_id": 80998,
             "spiele": 3,
@@ -3301,12 +3319,12 @@
             "siege": 2,
             "remis": 0,
             "niederlagen": 1,
-            "tore": 78,
-            "gegentore": 83,
-            "differenz": -5
+            "tore": 83,
+            "gegentore": 91,
+            "differenz": -8
           },
           {
-            "platz": 3,
+            "platz": 4,
             "team": "FSG Kaiserslautern/Dansenberg",
             "team_id": 80997,
             "spiele": 1,
@@ -3314,38 +3332,12 @@
             "siege": 1,
             "remis": 0,
             "niederlagen": 0,
-            "tore": 32,
-            "gegentore": 15,
-            "differenz": 17
-          },
-          {
-            "platz": 4,
-            "team": "HSG Mutterstadt/Ruchheim Damen",
-            "team_id": 80999,
-            "spiele": 1,
-            "punkte": 2,
-            "siege": 1,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 42,
-            "gegentore": 28,
-            "differenz": 14
+            "tore": 40,
+            "gegentore": 20,
+            "differenz": 20
           },
           {
             "platz": 5,
-            "team": "TV Kirrweiler",
-            "team_id": 81003,
-            "spiele": 1,
-            "punkte": 2,
-            "siege": 1,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 29,
-            "gegentore": 23,
-            "differenz": 6
-          },
-          {
-            "platz": 6,
             "team": "TV Hauenstein",
             "team_id": 80995,
             "spiele": 1,
@@ -3355,6 +3347,19 @@
             "niederlagen": 0,
             "tore": 33,
             "gegentore": 30,
+            "differenz": 3
+          },
+          {
+            "platz": 6,
+            "team": "TV Kirrweiler",
+            "team_id": 81003,
+            "spiele": 2,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 55,
+            "gegentore": 52,
             "differenz": 3
           },
           {
@@ -3408,19 +3413,6 @@
             "tore": 54,
             "gegentore": 74,
             "differenz": -20
-          }
-        ],
-        "fehlend": [
-          {
-            "datum": "2026-09-12T20:00:00",
-            "gegner": "TV Kirrweiler",
-            "ergebnis": {
-              "heim": 29,
-              "gast": 26,
-              "eigene": 29,
-              "fremde": 26,
-              "ausgang": "S"
-            }
           }
         ]
       },
