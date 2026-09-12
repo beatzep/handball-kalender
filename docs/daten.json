@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-12T17:16:26+00:00",
+  "aktualisiert": "2026-09-12T17:46:25+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -3280,33 +3280,59 @@
       "liga": "Frauen Verbandsliga",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 2,
+        "runde": 3,
         "phase_id": 12481,
         "gespielt": true,
         "mannschaften": 10,
         "verlauf": [
           {
             "runde": 1,
-            "platz": 2,
+            "platz": 4,
             "punkte": 2
           }
         ],
         "eintraege": [
           {
             "platz": 1,
-            "team": "FSG Gonsenheim/Schott",
-            "team_id": 80998,
-            "spiele": 2,
+            "team": "SV Bornheim",
+            "team_id": 81001,
+            "spiele": 3,
             "punkte": 4,
             "siege": 2,
             "remis": 0,
-            "niederlagen": 0,
-            "tore": 63,
-            "gegentore": 51,
-            "differenz": 12
+            "niederlagen": 1,
+            "tore": 98,
+            "gegentore": 87,
+            "differenz": 11
           },
           {
             "platz": 2,
+            "team": "FSG Gonsenheim/Schott",
+            "team_id": 80998,
+            "spiele": 3,
+            "punkte": 4,
+            "siege": 2,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 78,
+            "gegentore": 83,
+            "differenz": -5
+          },
+          {
+            "platz": 3,
+            "team": "FSG Kaiserslautern/Dansenberg",
+            "team_id": 80997,
+            "spiele": 1,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 32,
+            "gegentore": 15,
+            "differenz": 17
+          },
+          {
+            "platz": 4,
             "team": "HSG Mutterstadt/Ruchheim Damen",
             "team_id": 80999,
             "spiele": 1,
@@ -3319,20 +3345,7 @@
             "differenz": 14
           },
           {
-            "platz": 3,
-            "team": "SV Bornheim",
-            "team_id": 81001,
-            "spiele": 2,
-            "punkte": 2,
-            "siege": 1,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 63,
-            "gegentore": 55,
-            "differenz": 8
-          },
-          {
-            "platz": 4,
+            "platz": 5,
             "team": "TV Kirrweiler",
             "team_id": 81003,
             "spiele": 1,
@@ -3345,7 +3358,7 @@
             "differenz": 6
           },
           {
-            "platz": 5,
+            "platz": 6,
             "team": "TV Hauenstein",
             "team_id": 80995,
             "spiele": 1,
@@ -3358,30 +3371,17 @@
             "differenz": 3
           },
           {
-            "platz": 6,
-            "team": "FSG Kaiserslautern/Dansenberg",
-            "team_id": 80997,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
             "platz": 7,
             "team": "TV Thaleischweiler",
             "team_id": 81004,
-            "spiele": 0,
+            "spiele": 1,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
+            "niederlagen": 1,
+            "tore": 32,
+            "gegentore": 35,
+            "differenz": -3
           },
           {
             "platz": 8,
