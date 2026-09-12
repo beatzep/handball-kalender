@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-12T19:16:31+00:00",
+  "aktualisiert": "2026-09-12T19:46:28+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -3409,9 +3409,23 @@
             "gegentore": 74,
             "differenz": -20
           }
+        ],
+        "fehlend": [
+          {
+            "datum": "2026-09-12T20:00:00",
+            "gegner": "TV Kirrweiler",
+            "ergebnis": {
+              "heim": 29,
+              "gast": 26,
+              "eigene": 29,
+              "fremde": 26,
+              "ausgang": "S"
+            }
+          }
         ]
       },
       "form": [
+        "S",
         "S"
       ],
       "statistik": {
@@ -3437,16 +3451,16 @@
         },
         "bilanz": {
           "gesamt": {
-            "s": 1,
+            "s": 2,
             "u": 0,
             "n": 0,
-            "spiele": 1
+            "spiele": 2
           },
           "heim": {
-            "s": 1,
+            "s": 2,
             "u": 0,
             "n": 0,
-            "spiele": 1
+            "spiele": 2
           },
           "auswaerts": {
             "s": 0,
@@ -3456,19 +3470,19 @@
           }
         },
         "serien": {
-          "ohne_niederlage": 1,
-          "aktuell": 1,
+          "ohne_niederlage": 2,
+          "aktuell": 2,
           "aktuell_art": "S"
         },
         "krimis": {
           "anzahl": 0,
-          "gesamt": 1,
+          "gesamt": 2,
           "anteil": 0
         },
         "tore": {
-          "erzielt": 42,
-          "kassiert": 28,
-          "schnitt": 42.0,
+          "erzielt": 71,
+          "kassiert": 54,
+          "schnitt": 35.5,
           "torreichstes": {
             "gegner": "FSG Selz-Wiesbach",
             "stand": "42:28",
@@ -3477,9 +3491,9 @@
         },
         "anwurf": {
           "spaet": {
-            "spiele": 0,
-            "punkte": 0,
-            "schnitt": 0
+            "spiele": 1,
+            "punkte": 2,
+            "schnitt": 2.0
           },
           "frueh": {
             "spiele": 1,
@@ -3492,10 +3506,10 @@
       },
       "spieler": {
         "quelle": {
-          "spiele_gelaufen": 1,
+          "spiele_gelaufen": 2,
           "mit_bericht": 1,
           "ohne_bericht": 0,
-          "offen": 0
+          "offen": 1
         },
         "schuetzen": [
           {
@@ -4112,74 +4126,7 @@
         ]
       },
       "gegnervorschau": {
-        "spiele": 1,
-        "schuetzen": [
-          {
-            "id": "0f3jgbw",
-            "name": "Olga Roth",
-            "tore": 14,
-            "siebenmeter_tore": 7,
-            "siebenmeter_wuerfe": 7,
-            "zwei_minuten": 0,
-            "verwarnungen": 1,
-            "spiele": 1,
-            "tore_je_spiel": 14.0,
-            "siebenmeter_quote": 100
-          },
-          {
-            "id": "1j3viua",
-            "name": "Caroline Glas",
-            "tore": 5,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 0,
-            "verwarnungen": 1,
-            "spiele": 1,
-            "tore_je_spiel": 5.0,
-            "siebenmeter_quote": null
-          },
-          {
-            "id": "1wktxak",
-            "name": "Lilly Anton",
-            "tore": 3,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 1,
-            "verwarnungen": 1,
-            "spiele": 1,
-            "tore_je_spiel": 3.0,
-            "siebenmeter_quote": null
-          },
-          {
-            "id": "01vemo5",
-            "name": "Emma-Lilly Krauß",
-            "tore": 2,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 0,
-            "verwarnungen": 0,
-            "spiele": 1,
-            "tore_je_spiel": 2.0,
-            "siebenmeter_quote": null
-          },
-          {
-            "id": "0f1k9wt",
-            "name": "Lea Hammer",
-            "tore": 2,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 0,
-            "verwarnungen": 0,
-            "spiele": 1,
-            "tore_je_spiel": 2.0,
-            "siebenmeter_quote": null
-          }
-        ],
-        "weitere": 2,
-        "tore": 29,
-        "torschuetzen": 7,
-        "groesster_anteil": 48,
-        "strafen": 1
+        "spiele": 0
       },
       "letzte_aenderungen": [],
       "spiele": {
@@ -4218,7 +4165,14 @@
           "phase_id": 12481,
           "heim": true,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 0,
+          "ergebnis": {
+            "heim": 29,
+            "gast": 26,
+            "eigene": 29,
+            "fremde": 26,
+            "ausgang": "S"
+          }
         },
         "2627RPVLERWA0403": {
           "datum": "2026-09-19T17:00:00",
