@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-12T12:32:05+00:00",
+  "aktualisiert": "2026-09-12T13:01:59+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -6197,7 +6197,7 @@
       "liga": "Verbandsliga MÄNNLICH",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 2,
+        "runde": 3,
         "phase_id": 12619,
         "gespielt": true,
         "mannschaften": 8,
@@ -6211,6 +6211,19 @@
         "eintraege": [
           {
             "platz": 1,
+            "team": "Mjsg Büdesheim/Zotzenheim/St.Johann/Sprendlingen",
+            "team_id": 80843,
+            "spiele": 3,
+            "punkte": 5,
+            "siege": 2,
+            "remis": 1,
+            "niederlagen": 0,
+            "tore": 87,
+            "gegentore": 66,
+            "differenz": 21
+          },
+          {
+            "platz": 2,
             "team": "JSG Mundenheim/Rheingönheim",
             "team_id": 80855,
             "spiele": 2,
@@ -6221,19 +6234,6 @@
             "tore": 71,
             "gegentore": 36,
             "differenz": 35
-          },
-          {
-            "platz": 2,
-            "team": "Mjsg Büdesheim/Zotzenheim/St.Johann/Sprendlingen",
-            "team_id": 80843,
-            "spiele": 2,
-            "punkte": 3,
-            "siege": 1,
-            "remis": 1,
-            "niederlagen": 0,
-            "tore": 50,
-            "gegentore": 41,
-            "differenz": 9
           },
           {
             "platz": 3,
@@ -6252,14 +6252,14 @@
             "platz": 4,
             "team": "Hr Göllheim/Eisenberg/Kindenheim/Asselheim",
             "team_id": 86765,
-            "spiele": 1,
+            "spiele": 2,
             "punkte": 2,
             "siege": 1,
             "remis": 0,
-            "niederlagen": 0,
-            "tore": 44,
-            "gegentore": 33,
-            "differenz": 11
+            "niederlagen": 1,
+            "tore": 69,
+            "gegentore": 70,
+            "differenz": -1
           },
           {
             "platz": 5,
