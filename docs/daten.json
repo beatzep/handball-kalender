@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-12T18:14:06+00:00",
+  "aktualisiert": "2026-09-12T18:46:29+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -5578,13 +5578,26 @@
           },
           {
             "runde": 2,
-            "platz": 7,
+            "platz": 6,
             "punkte": 2
           }
         ],
         "eintraege": [
           {
             "platz": 1,
+            "team": "Mjsg Sobernheim/Meisenheim",
+            "team_id": 80839,
+            "spiele": 3,
+            "punkte": 6,
+            "siege": 3,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 100,
+            "gegentore": 84,
+            "differenz": 16
+          },
+          {
+            "platz": 2,
             "team": "TV Kirrweiler",
             "team_id": 80834,
             "spiele": 3,
@@ -5595,19 +5608,6 @@
             "tore": 132,
             "gegentore": 108,
             "differenz": 24
-          },
-          {
-            "platz": 2,
-            "team": "Mjsg Sobernheim/Meisenheim",
-            "team_id": 80839,
-            "spiele": 2,
-            "punkte": 4,
-            "siege": 2,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 65,
-            "gegentore": 53,
-            "differenz": 12
           },
           {
             "platz": 3,
@@ -5637,19 +5637,6 @@
           },
           {
             "platz": 5,
-            "team": "TV 03 Wörth",
-            "team_id": 80835,
-            "spiele": 2,
-            "punkte": 2,
-            "siege": 1,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 50,
-            "gegentore": 56,
-            "differenz": -6
-          },
-          {
-            "platz": 6,
             "team": "TG Waldsee",
             "team_id": 80831,
             "spiele": 2,
@@ -5662,7 +5649,7 @@
             "differenz": -7
           },
           {
-            "platz": 7,
+            "platz": 6,
             "team": "HSG Mutterstadt/Ruchheim",
             "team_id": 86762,
             "spiele": 2,
@@ -5673,6 +5660,19 @@
             "tore": 63,
             "gegentore": 71,
             "differenz": -8
+          },
+          {
+            "platz": 7,
+            "team": "TV 03 Wörth",
+            "team_id": 80835,
+            "spiele": 3,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 2,
+            "tore": 81,
+            "gegentore": 91,
+            "differenz": -10
           },
           {
             "platz": 8,
@@ -6743,7 +6743,7 @@
       "liga": "Regionalliga SW B-Jugend weiblich",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 3,
+        "runde": 4,
         "phase_id": 13258,
         "gespielt": true,
         "mannschaften": 4,
@@ -6762,6 +6762,11 @@
             "runde": 3,
             "platz": 3,
             "punkte": 2
+          },
+          {
+            "runde": 4,
+            "platz": 3,
+            "punkte": 3
           }
         ],
         "eintraege": [
@@ -6795,10 +6800,10 @@
             "platz": 3,
             "team": "HSG Mutterstadt/Ruchheim",
             "team_id": 86917,
-            "spiele": 3,
-            "punkte": 2,
+            "spiele": 4,
+            "punkte": 3,
             "siege": 1,
-            "remis": 0,
+            "remis": 1,
             "niederlagen": 2,
             "tore": 86,
             "gegentore": 88,
@@ -6808,10 +6813,10 @@
             "platz": 4,
             "team": "JSG Osthofen/Worms",
             "team_id": 86920,
-            "spiele": 3,
-            "punkte": 0,
+            "spiele": 4,
+            "punkte": 1,
             "siege": 0,
-            "remis": 0,
+            "remis": 1,
             "niederlagen": 3,
             "tore": 61,
             "gegentore": 99,
