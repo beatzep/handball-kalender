@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-12T12:02:00+00:00",
+  "aktualisiert": "2026-09-12T12:32:05+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -7775,11 +7775,25 @@
             "gegentore": 95,
             "differenz": -46
           }
+        ],
+        "fehlend": [
+          {
+            "datum": "2026-09-12T13:15:00",
+            "gegner": "JSG Rodalben/Thaleischweiler II",
+            "ergebnis": {
+              "heim": 28,
+              "gast": 35,
+              "eigene": 35,
+              "fremde": 28,
+              "ausgang": "S"
+            }
+          }
         ]
       },
       "form": [
         "N",
-        "N"
+        "N",
+        "S"
       ],
       "statistik": {
         "fahrten": {
@@ -7802,10 +7816,10 @@
         },
         "bilanz": {
           "gesamt": {
-            "s": 0,
+            "s": 1,
             "u": 0,
             "n": 2,
-            "spiele": 2
+            "spiele": 3
           },
           "heim": {
             "s": 0,
@@ -7814,26 +7828,26 @@
             "spiele": 1
           },
           "auswaerts": {
-            "s": 0,
+            "s": 1,
             "u": 0,
             "n": 1,
-            "spiele": 1
+            "spiele": 2
           }
         },
         "serien": {
-          "ohne_niederlage": 0,
-          "aktuell": 2,
-          "aktuell_art": "N"
+          "ohne_niederlage": 1,
+          "aktuell": 1,
+          "aktuell_art": "S"
         },
         "krimis": {
           "anzahl": 0,
-          "gesamt": 2,
+          "gesamt": 3,
           "anteil": 0
         },
         "tore": {
-          "erzielt": 49,
-          "kassiert": 95,
-          "schnitt": 24.5,
+          "erzielt": 84,
+          "kassiert": 123,
+          "schnitt": 28.0,
           "torreichstes": {
             "gegner": "HSG Dudenhofen/Schifferstadt",
             "stand": "24:52",
@@ -7847,9 +7861,9 @@
             "schnitt": 0
           },
           "frueh": {
-            "spiele": 2,
-            "punkte": 0,
-            "schnitt": 0.0
+            "spiele": 3,
+            "punkte": 2,
+            "schnitt": 0.67
           }
         },
         "gegner": {},
@@ -7857,10 +7871,10 @@
       },
       "spieler": {
         "quelle": {
-          "spiele_gelaufen": 2,
+          "spiele_gelaufen": 3,
           "mit_bericht": 0,
           "ohne_bericht": 0,
-          "offen": 2
+          "offen": 3
         },
         "schuetzen": [],
         "verteilung": {
@@ -7946,7 +7960,14 @@
           "phase_id": 12625,
           "heim": false,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 0,
+          "ergebnis": {
+            "heim": 28,
+            "gast": 35,
+            "eigene": 35,
+            "fremde": 28,
+            "ausgang": "S"
+          }
         },
         "2627RPBKROCJGC0401": {
           "datum": "2026-09-20T14:15:00",
@@ -9682,7 +9703,7 @@
       "liga": "Bezirksoberliga WEIBLICH",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 2,
+        "runde": 3,
         "phase_id": 12594,
         "gespielt": true,
         "mannschaften": 9,
@@ -9748,6 +9769,19 @@
           },
           {
             "platz": 5,
+            "team": "TV 03 Wörth",
+            "team_id": 81242,
+            "spiele": 2,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 44,
+            "gegentore": 41,
+            "differenz": 3
+          },
+          {
+            "platz": 6,
             "team": "Wjsg Mainz05/TV Nieder-Olm Wd1",
             "team_id": 89474,
             "spiele": 2,
@@ -9758,19 +9792,6 @@
             "tore": 41,
             "gegentore": 45,
             "differenz": -4
-          },
-          {
-            "platz": 6,
-            "team": "TV 03 Wörth",
-            "team_id": 81242,
-            "spiele": 1,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 23,
-            "gegentore": 24,
-            "differenz": -1
           },
           {
             "platz": 7,
@@ -9802,14 +9823,14 @@
             "platz": 9,
             "team": "TSG MZ-Bretzenheim",
             "team_id": 81243,
-            "spiele": 2,
+            "spiele": 3,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 2,
-            "tore": 24,
-            "gegentore": 55,
-            "differenz": -31
+            "niederlagen": 3,
+            "tore": 41,
+            "gegentore": 76,
+            "differenz": -35
           }
         ]
       },
