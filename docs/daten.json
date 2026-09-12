@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-12T14:31:46+00:00",
+  "aktualisiert": "2026-09-12T15:02:03+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -8692,6 +8692,7 @@
       },
       "form": [
         "S",
+        "S",
         "S"
       ],
       "statistik": {
@@ -8717,16 +8718,16 @@
         },
         "bilanz": {
           "gesamt": {
+            "s": 3,
+            "u": 0,
+            "n": 0,
+            "spiele": 3
+          },
+          "heim": {
             "s": 2,
             "u": 0,
             "n": 0,
             "spiele": 2
-          },
-          "heim": {
-            "s": 1,
-            "u": 0,
-            "n": 0,
-            "spiele": 1
           },
           "auswaerts": {
             "s": 1,
@@ -8736,19 +8737,19 @@
           }
         },
         "serien": {
-          "ohne_niederlage": 2,
-          "aktuell": 2,
+          "ohne_niederlage": 3,
+          "aktuell": 3,
           "aktuell_art": "S"
         },
         "krimis": {
           "anzahl": 0,
-          "gesamt": 2,
+          "gesamt": 3,
           "anteil": 0
         },
         "tore": {
-          "erzielt": 62,
-          "kassiert": 36,
-          "schnitt": 31.0,
+          "erzielt": 96,
+          "kassiert": 47,
+          "schnitt": 32.0,
           "torreichstes": {
             "gegner": "Mjsg SG Saulheim/HSV Alzey 3",
             "stand": "39:18",
@@ -8762,8 +8763,8 @@
             "schnitt": 0
           },
           "frueh": {
-            "spiele": 2,
-            "punkte": 4,
+            "spiele": 3,
+            "punkte": 6,
             "schnitt": 2.0
           }
         },
@@ -8772,10 +8773,10 @@
       },
       "spieler": {
         "quelle": {
-          "spiele_gelaufen": 2,
+          "spiele_gelaufen": 3,
           "mit_bericht": 0,
           "ohne_bericht": 0,
-          "offen": 2
+          "offen": 3
         },
         "schuetzen": [],
         "verteilung": {
@@ -8861,7 +8862,14 @@
           "phase_id": 12593,
           "heim": true,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 0,
+          "ergebnis": {
+            "heim": 34,
+            "gast": 11,
+            "eigene": 34,
+            "fremde": 11,
+            "ausgang": "S"
+          }
         },
         "2627RPVLCJWC0404": {
           "datum": "2026-09-20T12:45:00",
