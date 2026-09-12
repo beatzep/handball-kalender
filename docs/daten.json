@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-12T15:02:03+00:00",
+  "aktualisiert": "2026-09-12T15:18:04+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -4488,7 +4488,7 @@
         "runde": 2,
         "phase_id": 12614,
         "gespielt": true,
-        "mannschaften": 11,
+        "mannschaften": 10,
         "verlauf": [
           {
             "runde": 1,
@@ -4564,45 +4564,32 @@
           },
           {
             "platz": 6,
-            "team": "HSG Eckbachtal II",
-            "team_id": 81041,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
+            "team": "Südpfalz Tiger",
+            "team_id": 81050,
+            "spiele": 2,
+            "punkte": 2,
+            "siege": 1,
             "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
+            "niederlagen": 1,
+            "tore": 64,
+            "gegentore": 69,
+            "differenz": -5
           },
           {
             "platz": 7,
             "team": "HSG Landau/Land",
             "team_id": 81042,
-            "spiele": 1,
+            "spiele": 2,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 1,
-            "tore": 35,
-            "gegentore": 37,
-            "differenz": -2
+            "niederlagen": 2,
+            "tore": 67,
+            "gegentore": 71,
+            "differenz": -4
           },
           {
             "platz": 8,
-            "team": "Südpfalz Tiger",
-            "team_id": 81050,
-            "spiele": 1,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 30,
-            "gegentore": 37,
-            "differenz": -7
-          },
-          {
-            "platz": 9,
             "team": "Mjsg SG Saulheim/HSV Alzey",
             "team_id": 81049,
             "spiele": 1,
@@ -4615,7 +4602,7 @@
             "differenz": -12
           },
           {
-            "platz": 10,
+            "platz": 9,
             "team": "TS RODALBEN mA",
             "team_id": 81045,
             "spiele": 2,
@@ -4628,7 +4615,7 @@
             "differenz": -28
           },
           {
-            "platz": 11,
+            "platz": 10,
             "team": "TSV Speyer",
             "team_id": 81046,
             "spiele": 2,
