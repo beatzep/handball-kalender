@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-12T07:53:52+00:00",
+  "aktualisiert": "2026-09-12T12:02:00+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -5592,7 +5592,7 @@
       "liga": "Oberliga MÄNNLICH",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 2,
+        "runde": 3,
         "phase_id": 12616,
         "gespielt": true,
         "mannschaften": 10,
@@ -5611,6 +5611,19 @@
         "eintraege": [
           {
             "platz": 1,
+            "team": "TV Kirrweiler",
+            "team_id": 80834,
+            "spiele": 3,
+            "punkte": 4,
+            "siege": 2,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 132,
+            "gegentore": 108,
+            "differenz": 24
+          },
+          {
+            "platz": 2,
             "team": "Mjsg Sobernheim/Meisenheim",
             "team_id": 80839,
             "spiele": 2,
@@ -5623,7 +5636,7 @@
             "differenz": 12
           },
           {
-            "platz": 2,
+            "platz": 3,
             "team": "TUS Neuhofen",
             "team_id": 80833,
             "spiele": 2,
@@ -5634,19 +5647,6 @@
             "tore": 55,
             "gegentore": 45,
             "differenz": 10
-          },
-          {
-            "platz": 3,
-            "team": "TV Kirrweiler",
-            "team_id": 80834,
-            "spiele": 2,
-            "punkte": 2,
-            "siege": 1,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 86,
-            "gegentore": 75,
-            "differenz": 11
           },
           {
             "platz": 4,
@@ -5730,14 +5730,14 @@
             "platz": 10,
             "team": "JSG Osthofen/Worms",
             "team_id": 80838,
-            "spiele": 2,
+            "spiele": 3,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 2,
-            "tore": 53,
-            "gegentore": 61,
-            "differenz": -8
+            "niederlagen": 3,
+            "tore": 86,
+            "gegentore": 107,
+            "differenz": -21
           }
         ]
       },
@@ -10805,7 +10805,7 @@
       "liga": "Bezirksoberliga GEMISCHT",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 2,
+        "runde": 3,
         "phase_id": 12645,
         "gespielt": true,
         "mannschaften": 8,
@@ -10837,29 +10837,29 @@
           },
           {
             "platz": 2,
-            "team": "JSG Mundenheim/Rheingönheim",
-            "team_id": 81292,
+            "team": "TUS Neuhofen",
+            "team_id": 81294,
             "spiele": 2,
             "punkte": 4,
             "siege": 2,
             "remis": 0,
             "niederlagen": 0,
-            "tore": 62,
-            "gegentore": 49,
-            "differenz": 13
+            "tore": 58,
+            "gegentore": 42,
+            "differenz": 16
           },
           {
             "platz": 3,
-            "team": "TUS Neuhofen",
-            "team_id": 81294,
-            "spiele": 1,
-            "punkte": 2,
-            "siege": 1,
+            "team": "JSG Mundenheim/Rheingönheim",
+            "team_id": 81292,
+            "spiele": 3,
+            "punkte": 4,
+            "siege": 2,
             "remis": 0,
-            "niederlagen": 0,
-            "tore": 23,
-            "gegentore": 13,
-            "differenz": 10
+            "niederlagen": 1,
+            "tore": 91,
+            "gegentore": 84,
+            "differenz": 7
           },
           {
             "platz": 4,
@@ -11383,7 +11383,7 @@
       "liga": "Bezirksklasse GEMISCHT",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 2,
+        "runde": 3,
         "phase_id": 12641,
         "gespielt": true,
         "mannschaften": 9,
@@ -11397,6 +11397,19 @@
         "eintraege": [
           {
             "platz": 1,
+            "team": "HSG Grethen/Maxdorf",
+            "team_id": 81338,
+            "spiele": 3,
+            "punkte": 4,
+            "siege": 2,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 61,
+            "gegentore": 51,
+            "differenz": 10
+          },
+          {
+            "platz": 2,
             "team": "HSG Dudenhofen/Schifferstadt 2",
             "team_id": 81339,
             "spiele": 2,
@@ -11409,7 +11422,7 @@
             "differenz": 8
           },
           {
-            "platz": 2,
+            "platz": 3,
             "team": "JSG Kaiserslautern/Dansenberg II",
             "team_id": 87382,
             "spiele": 2,
@@ -11422,7 +11435,7 @@
             "differenz": 16
           },
           {
-            "platz": 3,
+            "platz": 4,
             "team": "Hlz Friesenheim/Hochdorf 2",
             "team_id": 81336,
             "spiele": 1,
@@ -11435,7 +11448,7 @@
             "differenz": 7
           },
           {
-            "platz": 4,
+            "platz": 5,
             "team": "TUS Neuhofen II",
             "team_id": 81341,
             "spiele": 1,
@@ -11448,7 +11461,7 @@
             "differenz": 6
           },
           {
-            "platz": 5,
+            "platz": 6,
             "team": "JSG Mundenheim/Rheingönheim 2",
             "team_id": 81334,
             "spiele": 2,
@@ -11459,19 +11472,6 @@
             "tore": 31,
             "gegentore": 26,
             "differenz": 5
-          },
-          {
-            "platz": 6,
-            "team": "HSG Grethen/Maxdorf",
-            "team_id": 81338,
-            "spiele": 2,
-            "punkte": 2,
-            "siege": 1,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 47,
-            "gegentore": 43,
-            "differenz": 4
           },
           {
             "platz": 7,
@@ -11490,14 +11490,14 @@
             "platz": 8,
             "team": "Vsk Niederfeld",
             "team_id": 81337,
-            "spiele": 1,
+            "spiele": 2,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 1,
-            "tore": 7,
-            "gegentore": 17,
-            "differenz": -10
+            "niederlagen": 2,
+            "tore": 15,
+            "gegentore": 31,
+            "differenz": -16
           },
           {
             "platz": 9,
@@ -11779,7 +11779,7 @@
       "liga": "Bezirksklasse GEMISCHT",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 2,
+        "runde": 3,
         "phase_id": 12640,
         "gespielt": true,
         "mannschaften": 10,
@@ -11791,7 +11791,7 @@
           },
           {
             "runde": 2,
-            "platz": 6,
+            "platz": 7,
             "punkte": 2
           }
         ],
@@ -11863,6 +11863,19 @@
           },
           {
             "platz": 6,
+            "team": "HSG Grethen/Maxdorf II",
+            "team_id": 81345,
+            "spiele": 3,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 2,
+            "tore": 39,
+            "gegentore": 60,
+            "differenz": -21
+          },
+          {
+            "platz": 7,
             "team": "HSG Mutterstadt/Ruchheim III",
             "team_id": 81343,
             "spiele": 2,
@@ -11873,19 +11886,6 @@
             "tore": 17,
             "gegentore": 41,
             "differenz": -24
-          },
-          {
-            "platz": 7,
-            "team": "HSG Grethen/Maxdorf II",
-            "team_id": 81345,
-            "spiele": 2,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 2,
-            "tore": 22,
-            "gegentore": 47,
-            "differenz": -25
           },
           {
             "platz": 8,
@@ -11917,14 +11917,14 @@
             "platz": 10,
             "team": "HSG Dudenhofen/Schifferstadt 4",
             "team_id": 81346,
-            "spiele": 2,
+            "spiele": 3,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 2,
-            "tore": 19,
-            "gegentore": 51,
-            "differenz": -32
+            "niederlagen": 3,
+            "tore": 32,
+            "gegentore": 68,
+            "differenz": -36
           }
         ]
       },
