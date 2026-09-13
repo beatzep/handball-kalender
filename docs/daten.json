@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-13T14:02:16+00:00",
+  "aktualisiert": "2026-09-13T14:46:26+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -6034,6 +6034,19 @@
           },
           {
             "platz": 2,
+            "team": "TUS Neuhofen",
+            "team_id": 80833,
+            "spiele": 3,
+            "punkte": 5,
+            "siege": 2,
+            "remis": 1,
+            "niederlagen": 0,
+            "tore": 80,
+            "gegentore": 70,
+            "differenz": 10
+          },
+          {
+            "platz": 3,
             "team": "TV Kirrweiler",
             "team_id": 80834,
             "spiele": 3,
@@ -6046,20 +6059,20 @@
             "differenz": 24
           },
           {
-            "platz": 3,
-            "team": "TUS Neuhofen",
-            "team_id": 80833,
-            "spiele": 2,
-            "punkte": 4,
-            "siege": 2,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 55,
-            "gegentore": 45,
-            "differenz": 10
+            "platz": 4,
+            "team": "TG Waldsee",
+            "team_id": 80831,
+            "spiele": 3,
+            "punkte": 3,
+            "siege": 1,
+            "remis": 1,
+            "niederlagen": 1,
+            "tore": 93,
+            "gegentore": 100,
+            "differenz": -7
           },
           {
-            "platz": 4,
+            "platz": 5,
             "team": "SF Budenheim 2",
             "team_id": 80836,
             "spiele": 2,
@@ -6072,7 +6085,7 @@
             "differenz": 7
           },
           {
-            "platz": 5,
+            "platz": 6,
             "team": "TV Nieder-Olm Mb2",
             "team_id": 80837,
             "spiele": 2,
@@ -6080,22 +6093,9 @@
             "siege": 1,
             "remis": 0,
             "niederlagen": 1,
-            "tore": 43,
-            "gegentore": 43,
+            "tore": 55,
+            "gegentore": 55,
             "differenz": 0
-          },
-          {
-            "platz": 6,
-            "team": "TG Waldsee",
-            "team_id": 80831,
-            "spiele": 2,
-            "punkte": 2,
-            "siege": 1,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 68,
-            "gegentore": 75,
-            "differenz": -7
           },
           {
             "platz": 7,
@@ -6119,8 +6119,8 @@
             "siege": 1,
             "remis": 0,
             "niederlagen": 2,
-            "tore": 76,
-            "gegentore": 86,
+            "tore": 88,
+            "gegentore": 98,
             "differenz": -10
           },
           {
@@ -7218,27 +7218,27 @@
             "platz": 1,
             "team": "HSG Wittlich",
             "team_id": 86911,
-            "spiele": 3,
+            "spiele": 4,
             "punkte": 6,
             "siege": 3,
             "remis": 0,
-            "niederlagen": 0,
-            "tore": 102,
-            "gegentore": 71,
-            "differenz": 31
+            "niederlagen": 1,
+            "tore": 127,
+            "gegentore": 102,
+            "differenz": 25
           },
           {
             "platz": 2,
             "team": "Hf Untere Saar",
             "team_id": 86921,
-            "spiele": 3,
-            "punkte": 4,
-            "siege": 2,
+            "spiele": 4,
+            "punkte": 6,
+            "siege": 3,
             "remis": 0,
             "niederlagen": 1,
-            "tore": 84,
-            "gegentore": 75,
-            "differenz": 9
+            "tore": 115,
+            "gegentore": 100,
+            "differenz": 15
           },
           {
             "platz": 3,
@@ -10315,6 +10315,7 @@
       },
       "form": [
         "S",
+        "S",
         "S"
       ],
       "statistik": {
@@ -10338,16 +10339,16 @@
         },
         "bilanz": {
           "gesamt": {
+            "s": 3,
+            "u": 0,
+            "n": 0,
+            "spiele": 3
+          },
+          "heim": {
             "s": 2,
             "u": 0,
             "n": 0,
             "spiele": 2
-          },
-          "heim": {
-            "s": 1,
-            "u": 0,
-            "n": 0,
-            "spiele": 1
           },
           "auswaerts": {
             "s": 1,
@@ -10357,19 +10358,19 @@
           }
         },
         "serien": {
-          "ohne_niederlage": 2,
-          "aktuell": 2,
+          "ohne_niederlage": 3,
+          "aktuell": 3,
           "aktuell_art": "S"
         },
         "krimis": {
           "anzahl": 0,
-          "gesamt": 2,
+          "gesamt": 3,
           "anteil": 0
         },
         "tore": {
-          "erzielt": 36,
-          "kassiert": 21,
-          "schnitt": 18.0,
+          "erzielt": 51,
+          "kassiert": 27,
+          "schnitt": 17.0,
           "torreichstes": {
             "gegner": "Wjsg Mainz05/TV Nieder-Olm Wd1",
             "stand": "22:17",
@@ -10383,8 +10384,8 @@
             "schnitt": 0
           },
           "frueh": {
-            "spiele": 2,
-            "punkte": 4,
+            "spiele": 3,
+            "punkte": 6,
             "schnitt": 2.0
           }
         },
@@ -10393,10 +10394,10 @@
       },
       "spieler": {
         "quelle": {
-          "spiele_gelaufen": 2,
+          "spiele_gelaufen": 3,
           "mit_bericht": 0,
           "ohne_bericht": 0,
-          "offen": 2
+          "offen": 3
         },
         "schuetzen": [],
         "verteilung": {
@@ -10497,7 +10498,14 @@
           "phase_id": 13688,
           "heim": true,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 0,
+          "ergebnis": {
+            "heim": 15,
+            "gast": 6,
+            "eigene": 15,
+            "fremde": 6,
+            "ausgang": "S"
+          }
         },
         "2627RP4BKRDJWE0106": {
           "datum": "2026-09-13T17:30:00",
