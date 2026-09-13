@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-13T12:16:37+00:00",
+  "aktualisiert": "2026-09-13T12:31:47+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -10301,6 +10301,7 @@
         ]
       },
       "form": [
+        "S",
         "S"
       ],
       "statistik": {
@@ -10324,10 +10325,10 @@
         },
         "bilanz": {
           "gesamt": {
-            "s": 1,
+            "s": 2,
             "u": 0,
             "n": 0,
-            "spiele": 1
+            "spiele": 2
           },
           "heim": {
             "s": 1,
@@ -10336,26 +10337,26 @@
             "spiele": 1
           },
           "auswaerts": {
-            "s": 0,
+            "s": 1,
             "u": 0,
             "n": 0,
-            "spiele": 0
+            "spiele": 1
           }
         },
         "serien": {
-          "ohne_niederlage": 1,
-          "aktuell": 1,
+          "ohne_niederlage": 2,
+          "aktuell": 2,
           "aktuell_art": "S"
         },
         "krimis": {
           "anzahl": 0,
-          "gesamt": 1,
+          "gesamt": 2,
           "anteil": 0
         },
         "tore": {
-          "erzielt": 22,
-          "kassiert": 17,
-          "schnitt": 22.0,
+          "erzielt": 36,
+          "kassiert": 21,
+          "schnitt": 18.0,
           "torreichstes": {
             "gegner": "Wjsg Mainz05/TV Nieder-Olm Wd1",
             "stand": "22:17",
@@ -10369,8 +10370,8 @@
             "schnitt": 0
           },
           "frueh": {
-            "spiele": 1,
-            "punkte": 2,
+            "spiele": 2,
+            "punkte": 4,
             "schnitt": 2.0
           }
         },
@@ -10379,10 +10380,10 @@
       },
       "spieler": {
         "quelle": {
-          "spiele_gelaufen": 1,
+          "spiele_gelaufen": 2,
           "mit_bericht": 0,
           "ohne_bericht": 0,
-          "offen": 1
+          "offen": 2
         },
         "schuetzen": [],
         "verteilung": {
@@ -10461,7 +10462,14 @@
           "phase_id": 13688,
           "heim": false,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 0,
+          "ergebnis": {
+            "heim": 4,
+            "gast": 14,
+            "eigene": 14,
+            "fremde": 4,
+            "ausgang": "S"
+          }
         },
         "2627RP4BKRDJWE0104": {
           "datum": "2026-09-13T16:00:00",
@@ -11319,6 +11327,11 @@
             "runde": 2,
             "platz": 8,
             "punkte": 0
+          },
+          {
+            "runde": 3,
+            "platz": 8,
+            "punkte": 0
           }
         ],
         "eintraege": [
@@ -11350,6 +11363,19 @@
           },
           {
             "platz": 3,
+            "team": "JSG Kaiserslautern/Dansenberg",
+            "team_id": 87381,
+            "spiele": 3,
+            "punkte": 4,
+            "siege": 2,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 61,
+            "gegentore": 53,
+            "differenz": 8
+          },
+          {
+            "platz": 4,
             "team": "JSG Mundenheim/Rheingönheim",
             "team_id": 81292,
             "spiele": 3,
@@ -11362,20 +11388,20 @@
             "differenz": 7
           },
           {
-            "platz": 4,
-            "team": "JSG Kaiserslautern/Dansenberg",
-            "team_id": 87381,
-            "spiele": 2,
+            "platz": 5,
+            "team": "HSG Eckbachtal",
+            "team_id": 81289,
+            "spiele": 3,
             "punkte": 2,
             "siege": 1,
             "remis": 0,
-            "niederlagen": 1,
-            "tore": 58,
-            "gegentore": 51,
-            "differenz": 7
+            "niederlagen": 2,
+            "tore": 71,
+            "gegentore": 72,
+            "differenz": -1
           },
           {
-            "platz": 5,
+            "platz": 6,
             "team": "TV Edigheim",
             "team_id": 81290,
             "spiele": 2,
@@ -11388,56 +11414,30 @@
             "differenz": -9
           },
           {
-            "platz": 6,
+            "platz": 7,
             "team": "TG Waldsee",
             "team_id": 81295,
-            "spiele": 2,
+            "spiele": 3,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 2,
-            "tore": 38,
-            "gegentore": 51,
-            "differenz": -13
-          },
-          {
-            "platz": 7,
-            "team": "HSG Eckbachtal",
-            "team_id": 81289,
-            "spiele": 2,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 2,
-            "tore": 38,
-            "gegentore": 53,
-            "differenz": -15
+            "niederlagen": 3,
+            "tore": 40,
+            "gegentore": 54,
+            "differenz": -14
           },
           {
             "platz": 8,
             "team": "HSG Mutterstadt/Ruchheim E1",
             "team_id": 81293,
-            "spiele": 2,
+            "spiele": 3,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 2,
-            "tore": 44,
-            "gegentore": 65,
-            "differenz": -21
-          }
-        ],
-        "fehlend": [
-          {
-            "datum": "2026-09-13T13:15:00",
-            "gegner": "HSG Eckbachtal",
-            "ergebnis": {
-              "heim": 34,
-              "gast": 19,
-              "eigene": 19,
-              "fremde": 34,
-              "ausgang": "N"
-            }
+            "niederlagen": 3,
+            "tore": 63,
+            "gegentore": 98,
+            "differenz": -35
           }
         ]
       },
