@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-13T20:16:28+00:00",
+  "aktualisiert": "2026-09-13T20:46:19+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -2179,12 +2179,12 @@
         "verlauf": [
           {
             "runde": 1,
-            "platz": 10,
+            "platz": 8,
             "punkte": 0
           },
           {
             "runde": 2,
-            "platz": 10,
+            "platz": 7,
             "punkte": 0
           },
           {
@@ -2198,27 +2198,27 @@
             "platz": 1,
             "team": "SG LaFt - Herren",
             "team_id": 80970,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
+            "spiele": 3,
+            "punkte": 6,
+            "siege": 3,
             "remis": 0,
             "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
+            "tore": 111,
+            "gegentore": 85,
+            "differenz": 26
           },
           {
             "platz": 2,
             "team": "TSV Kandel 2",
             "team_id": 80975,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
+            "spiele": 3,
+            "punkte": 5,
+            "siege": 2,
+            "remis": 1,
             "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
+            "tore": 89,
+            "gegentore": 78,
+            "differenz": 11
           },
           {
             "platz": 3,
@@ -2237,27 +2237,27 @@
             "platz": 4,
             "team": "HSG Grethen/Maxdorf",
             "team_id": 80984,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
+            "spiele": 3,
+            "punkte": 4,
+            "siege": 2,
             "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
+            "niederlagen": 1,
+            "tore": 83,
+            "gegentore": 88,
+            "differenz": -5
           },
           {
             "platz": 5,
             "team": "TUS Heiligenstein 2",
             "team_id": 80983,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
+            "spiele": 3,
+            "punkte": 3,
+            "siege": 1,
+            "remis": 1,
+            "niederlagen": 1,
+            "tore": 91,
+            "gegentore": 87,
+            "differenz": 4
           },
           {
             "platz": 6,
@@ -2302,40 +2302,40 @@
             "platz": 9,
             "team": "MSG Kaiserslautern/Dansenberg 2",
             "team_id": 80974,
-            "spiele": 0,
-            "punkte": 0,
+            "spiele": 2,
+            "punkte": 1,
             "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
+            "remis": 1,
+            "niederlagen": 1,
+            "tore": 49,
+            "gegentore": 59,
+            "differenz": -10
           },
           {
             "platz": 10,
             "team": "HSV Lingenfeld/Schwegenheim 2",
             "team_id": 80982,
-            "spiele": 0,
+            "spiele": 2,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
+            "niederlagen": 2,
+            "tore": 56,
+            "gegentore": 63,
+            "differenz": -7
           },
           {
             "platz": 11,
             "team": "MSG Iggelheim/Meckenheim 3",
             "team_id": 80978,
-            "spiele": 0,
+            "spiele": 2,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
+            "niederlagen": 2,
+            "tore": 52,
+            "gegentore": 70,
+            "differenz": -18
           }
         ]
       },
