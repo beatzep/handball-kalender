@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-13T13:02:25+00:00",
+  "aktualisiert": "2026-09-13T13:32:06+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -12033,9 +12033,23 @@
             "gegentore": 31,
             "differenz": -16
           }
+        ],
+        "fehlend": [
+          {
+            "datum": "2026-09-13T14:30:00",
+            "gegner": "JSG Kaiserslautern/Dansenberg II",
+            "ergebnis": {
+              "heim": 40,
+              "gast": 8,
+              "eigene": 8,
+              "fremde": 40,
+              "ausgang": "N"
+            }
+          }
         ]
       },
       "form": [
+        "N",
         "N"
       ],
       "statistik": {
@@ -12061,8 +12075,8 @@
           "gesamt": {
             "s": 0,
             "u": 0,
-            "n": 1,
-            "spiele": 1
+            "n": 2,
+            "spiele": 2
           },
           "heim": {
             "s": 0,
@@ -12073,28 +12087,28 @@
           "auswaerts": {
             "s": 0,
             "u": 0,
-            "n": 0,
-            "spiele": 0
+            "n": 1,
+            "spiele": 1
           }
         },
         "serien": {
           "ohne_niederlage": 0,
-          "aktuell": 1,
+          "aktuell": 2,
           "aktuell_art": "N"
         },
         "krimis": {
           "anzahl": 0,
-          "gesamt": 1,
+          "gesamt": 2,
           "anteil": 0
         },
         "tore": {
-          "erzielt": 15,
-          "kassiert": 25,
-          "schnitt": 15.0,
+          "erzielt": 23,
+          "kassiert": 65,
+          "schnitt": 11.5,
           "torreichstes": {
-            "gegner": "HSG Grethen/Maxdorf",
-            "stand": "15:25",
-            "summe": 40
+            "gegner": "JSG Kaiserslautern/Dansenberg II",
+            "stand": "8:40",
+            "summe": 48
           }
         },
         "anwurf": {
@@ -12104,7 +12118,7 @@
             "schnitt": 0
           },
           "frueh": {
-            "spiele": 1,
+            "spiele": 2,
             "punkte": 0,
             "schnitt": 0.0
           }
@@ -12114,10 +12128,10 @@
       },
       "spieler": {
         "quelle": {
-          "spiele_gelaufen": 1,
+          "spiele_gelaufen": 2,
           "mit_bericht": 0,
           "ohne_bericht": 0,
-          "offen": 1
+          "offen": 2
         },
         "schuetzen": [],
         "verteilung": {
@@ -12196,7 +12210,14 @@
           "phase_id": 12641,
           "heim": false,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 0,
+          "ergebnis": {
+            "heim": 40,
+            "gast": 8,
+            "eigene": 8,
+            "fremde": 40,
+            "ausgang": "N"
+          }
         },
         "2627RPBKRKEJGE0404": {
           "datum": "2026-09-19T13:30:00",
