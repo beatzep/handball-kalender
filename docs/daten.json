@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-13T16:31:48+00:00",
+  "aktualisiert": "2026-09-13T17:02:15+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -6105,11 +6105,25 @@
             "gegentore": 68,
             "differenz": -34
           }
+        ],
+        "fehlend": [
+          {
+            "datum": "2026-09-13T17:00:00",
+            "gegner": "Vsk Niederfeld",
+            "ergebnis": {
+              "heim": 35,
+              "gast": 29,
+              "eigene": 29,
+              "fremde": 35,
+              "ausgang": "N"
+            }
+          }
         ]
       },
       "form": [
         "S",
-        "S"
+        "S",
+        "N"
       ],
       "statistik": {
         "fahrten": {
@@ -6134,8 +6148,8 @@
           "gesamt": {
             "s": 2,
             "u": 0,
-            "n": 0,
-            "spiele": 2
+            "n": 1,
+            "spiele": 3
           },
           "heim": {
             "s": 1,
@@ -6146,24 +6160,24 @@
           "auswaerts": {
             "s": 1,
             "u": 0,
-            "n": 0,
-            "spiele": 1
+            "n": 1,
+            "spiele": 2
           }
         },
         "serien": {
           "ohne_niederlage": 2,
-          "aktuell": 2,
-          "aktuell_art": "S"
+          "aktuell": 1,
+          "aktuell_art": "N"
         },
         "krimis": {
           "anzahl": 0,
-          "gesamt": 2,
+          "gesamt": 3,
           "anteil": 0
         },
         "tore": {
-          "erzielt": 82,
-          "kassiert": 43,
-          "schnitt": 41.0,
+          "erzielt": 111,
+          "kassiert": 78,
+          "schnitt": 37.0,
           "torreichstes": {
             "gegner": "HSG Landau/Land",
             "stand": "41:25",
@@ -6177,9 +6191,9 @@
             "schnitt": 0
           },
           "frueh": {
-            "spiele": 2,
+            "spiele": 3,
             "punkte": 4,
-            "schnitt": 2.0
+            "schnitt": 1.33
           }
         },
         "gegner": {},
@@ -6187,10 +6201,10 @@
       },
       "spieler": {
         "quelle": {
-          "spiele_gelaufen": 2,
+          "spiele_gelaufen": 3,
           "mit_bericht": 0,
           "ohne_bericht": 0,
-          "offen": 2
+          "offen": 3
         },
         "schuetzen": [],
         "verteilung": {
@@ -6276,7 +6290,14 @@
           "phase_id": 12587,
           "heim": false,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 0,
+          "ergebnis": {
+            "heim": 35,
+            "gast": 29,
+            "eigene": 29,
+            "fremde": 35,
+            "ausgang": "N"
+          }
         },
         "2627RPVLAJWB0403": {
           "datum": "2026-09-20T14:00:00",
