@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-13T15:16:34+00:00",
+  "aktualisiert": "2026-09-13T15:46:44+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -1839,11 +1839,25 @@
             "gegentore": 70,
             "differenz": -18
           }
+        ],
+        "fehlend": [
+          {
+            "datum": "2026-09-13T16:00:00",
+            "gegner": "TV Kirrweiler 2",
+            "ergebnis": {
+              "heim": 34,
+              "gast": 18,
+              "eigene": 34,
+              "fremde": 18,
+              "ausgang": "S"
+            }
+          }
         ]
       },
       "form": [
         "N",
-        "N"
+        "N",
+        "S"
       ],
       "statistik": {
         "fahrten": {
@@ -1868,16 +1882,16 @@
         },
         "bilanz": {
           "gesamt": {
-            "s": 0,
+            "s": 1,
             "u": 0,
             "n": 2,
-            "spiele": 2
+            "spiele": 3
           },
           "heim": {
-            "s": 0,
+            "s": 1,
             "u": 0,
             "n": 1,
-            "spiele": 1
+            "spiele": 2
           },
           "auswaerts": {
             "s": 0,
@@ -1887,19 +1901,19 @@
           }
         },
         "serien": {
-          "ohne_niederlage": 0,
-          "aktuell": 2,
-          "aktuell_art": "N"
+          "ohne_niederlage": 1,
+          "aktuell": 1,
+          "aktuell_art": "S"
         },
         "krimis": {
           "anzahl": 2,
-          "gesamt": 2,
-          "anteil": 100
+          "gesamt": 3,
+          "anteil": 67
         },
         "tore": {
-          "erzielt": 46,
-          "kassiert": 49,
-          "schnitt": 23.0,
+          "erzielt": 80,
+          "kassiert": 67,
+          "schnitt": 26.7,
           "torreichstes": {
             "gegner": "HSG Grethen/Maxdorf",
             "stand": "26:27",
@@ -1913,9 +1927,9 @@
             "schnitt": 0.0
           },
           "frueh": {
-            "spiele": 0,
-            "punkte": 0,
-            "schnitt": 0
+            "spiele": 1,
+            "punkte": 2,
+            "schnitt": 2.0
           }
         },
         "gegner": {},
@@ -1923,10 +1937,10 @@
       },
       "spieler": {
         "quelle": {
-          "spiele_gelaufen": 2,
+          "spiele_gelaufen": 3,
           "mit_bericht": 2,
           "ohne_bericht": 0,
-          "offen": 0
+          "offen": 1
         },
         "schuetzen": [
           {
@@ -2870,74 +2884,7 @@
         ]
       },
       "gegnervorschau": {
-        "spiele": 2,
-        "schuetzen": [
-          {
-            "id": "0tvyibp",
-            "name": "Felix Hartard",
-            "tore": 18,
-            "siebenmeter_tore": 6,
-            "siebenmeter_wuerfe": 6,
-            "zwei_minuten": 0,
-            "verwarnungen": 0,
-            "spiele": 2,
-            "tore_je_spiel": 9.0,
-            "siebenmeter_quote": 100
-          },
-          {
-            "id": "197pqy7",
-            "name": "Luis Gutting",
-            "tore": 15,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 3,
-            "verwarnungen": 0,
-            "spiele": 2,
-            "tore_je_spiel": 7.5,
-            "siebenmeter_quote": null
-          },
-          {
-            "id": "0ylk4i1",
-            "name": "Joscha Braun",
-            "tore": 7,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 0,
-            "verwarnungen": 0,
-            "spiele": 2,
-            "tore_je_spiel": 3.5,
-            "siebenmeter_quote": null
-          },
-          {
-            "id": "0vhz5kg",
-            "name": "Alexander Gries",
-            "tore": 5,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 0,
-            "verwarnungen": 0,
-            "spiele": 1,
-            "tore_je_spiel": 5.0,
-            "siebenmeter_quote": null
-          },
-          {
-            "id": "1rhg46e",
-            "name": "Janis Gutting",
-            "tore": 4,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 1,
-            "verwarnungen": 0,
-            "spiele": 2,
-            "tore_je_spiel": 2.0,
-            "siebenmeter_quote": null
-          }
-        ],
-        "weitere": 6,
-        "tore": 62,
-        "torschuetzen": 11,
-        "groesster_anteil": 29,
-        "strafen": 5
+        "spiele": 0
       },
       "letzte_aenderungen": [],
       "spiele": {
@@ -2998,7 +2945,14 @@
           "phase_id": 12583,
           "heim": true,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 0,
+          "ergebnis": {
+            "heim": 34,
+            "gast": 18,
+            "eigene": 34,
+            "fremde": 18,
+            "ausgang": "S"
+          }
         },
         "2627RPBKRKERMB0502": {
           "datum": "2026-09-26T18:00:00",
@@ -6629,6 +6583,19 @@
         "eintraege": [
           {
             "platz": 1,
+            "team": "JSG Mundenheim/Rheingönheim",
+            "team_id": 80855,
+            "spiele": 3,
+            "punkte": 5,
+            "siege": 2,
+            "remis": 1,
+            "niederlagen": 0,
+            "tore": 99,
+            "gegentore": 53,
+            "differenz": 46
+          },
+          {
+            "platz": 2,
             "team": "Mjsg Büdesheim/Zotzenheim/St.Johann/Sprendlingen",
             "team_id": 80843,
             "spiele": 3,
@@ -6639,19 +6606,6 @@
             "tore": 87,
             "gegentore": 66,
             "differenz": 21
-          },
-          {
-            "platz": 2,
-            "team": "JSG Mundenheim/Rheingönheim",
-            "team_id": 80855,
-            "spiele": 2,
-            "punkte": 3,
-            "siege": 1,
-            "remis": 1,
-            "niederlagen": 0,
-            "tore": 71,
-            "gegentore": 36,
-            "differenz": 35
           },
           {
             "platz": 3,
@@ -6668,6 +6622,19 @@
           },
           {
             "platz": 4,
+            "team": "Vsk Niederfeld",
+            "team_id": 80854,
+            "spiele": 2,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 51,
+            "gegentore": 36,
+            "differenz": 15
+          },
+          {
+            "platz": 5,
             "team": "Hr Göllheim/Eisenberg/Kindenheim/Asselheim",
             "team_id": 86765,
             "spiele": 2,
@@ -6680,30 +6647,17 @@
             "differenz": -1
           },
           {
-            "platz": 5,
+            "platz": 6,
             "team": "TUS KL-Dansenberg II",
             "team_id": 80853,
-            "spiele": 0,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 6,
-            "team": "Vsk Niederfeld",
-            "team_id": 80854,
             "spiele": 1,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
             "niederlagen": 1,
-            "tore": 13,
-            "gegentore": 22,
-            "differenz": -9
+            "tore": 17,
+            "gegentore": 28,
+            "differenz": -11
           },
           {
             "platz": 7,
@@ -6722,14 +6676,14 @@
             "platz": 8,
             "team": "Mjsg SG Saulheim/HSV Alzey 3",
             "team_id": 80851,
-            "spiele": 2,
+            "spiele": 3,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 2,
-            "tore": 24,
-            "gegentore": 88,
-            "differenz": -64
+            "niederlagen": 3,
+            "tore": 38,
+            "gegentore": 126,
+            "differenz": -88
           }
         ]
       },
