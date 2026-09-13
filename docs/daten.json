@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-13T17:31:52+00:00",
+  "aktualisiert": "2026-09-13T18:02:27+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -185,9 +185,23 @@
             "gegentore": 60,
             "differenz": -6
           }
+        ],
+        "fehlend": [
+          {
+            "datum": "2026-09-13T18:00:00",
+            "gegner": "HSV Sobernheim H1",
+            "ergebnis": {
+              "heim": 25,
+              "gast": 23,
+              "eigene": 25,
+              "fremde": 23,
+              "ausgang": "S"
+            }
+          }
         ]
       },
       "form": [
+        "S",
         "S",
         "S"
       ],
@@ -212,16 +226,16 @@
         },
         "bilanz": {
           "gesamt": {
+            "s": 3,
+            "u": 0,
+            "n": 0,
+            "spiele": 3
+          },
+          "heim": {
             "s": 2,
             "u": 0,
             "n": 0,
             "spiele": 2
-          },
-          "heim": {
-            "s": 1,
-            "u": 0,
-            "n": 0,
-            "spiele": 1
           },
           "auswaerts": {
             "s": 1,
@@ -231,19 +245,19 @@
           }
         },
         "serien": {
-          "ohne_niederlage": 2,
-          "aktuell": 2,
+          "ohne_niederlage": 3,
+          "aktuell": 3,
           "aktuell_art": "S"
         },
         "krimis": {
-          "anzahl": 0,
-          "gesamt": 2,
-          "anteil": 0
+          "anzahl": 1,
+          "gesamt": 3,
+          "anteil": 33
         },
         "tore": {
-          "erzielt": 72,
-          "kassiert": 47,
-          "schnitt": 36.0,
+          "erzielt": 97,
+          "kassiert": 70,
+          "schnitt": 32.3,
           "torreichstes": {
             "gegner": "HSG Worms",
             "stand": "41:24",
@@ -257,9 +271,9 @@
             "schnitt": 2.0
           },
           "frueh": {
-            "spiele": 0,
-            "punkte": 0,
-            "schnitt": 0
+            "spiele": 1,
+            "punkte": 2,
+            "schnitt": 2.0
           }
         },
         "gegner": {},
@@ -276,10 +290,10 @@
       },
       "spieler": {
         "quelle": {
-          "spiele_gelaufen": 2,
+          "spiele_gelaufen": 3,
           "mit_bericht": 2,
           "ohne_bericht": 0,
-          "offen": 0
+          "offen": 1
         },
         "schuetzen": [
           {
@@ -1380,7 +1394,14 @@
           "phase_id": 12482,
           "heim": true,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 0,
+          "ergebnis": {
+            "heim": 25,
+            "gast": 23,
+            "eigene": 25,
+            "fremde": 23,
+            "ausgang": "S"
+          }
         },
         "2627RPBKROERMA0405": {
           "datum": "2026-09-19T18:00:00",
