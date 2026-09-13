@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-13T12:31:47+00:00",
+  "aktualisiert": "2026-09-13T12:46:36+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -8678,27 +8678,27 @@
             "platz": 3,
             "team": "TV Engers",
             "team_id": 86941,
-            "spiele": 3,
+            "spiele": 4,
             "punkte": 2,
             "siege": 1,
             "remis": 0,
-            "niederlagen": 2,
-            "tore": 84,
-            "gegentore": 84,
-            "differenz": 0
+            "niederlagen": 3,
+            "tore": 88,
+            "gegentore": 90,
+            "differenz": -2
           },
           {
             "platz": 4,
             "team": "SG Zweibrücken",
             "team_id": 86947,
-            "spiele": 3,
-            "punkte": 0,
-            "siege": 0,
+            "spiele": 4,
+            "punkte": 2,
+            "siege": 1,
             "remis": 0,
             "niederlagen": 3,
-            "tore": 66,
-            "gegentore": 103,
-            "differenz": -37
+            "tore": 72,
+            "gegentore": 107,
+            "differenz": -35
           }
         ]
       },
@@ -11911,7 +11911,7 @@
         "verlauf": [
           {
             "runde": 1,
-            "platz": 7,
+            "platz": 8,
             "punkte": 0
           }
         ],
@@ -11972,17 +11972,30 @@
             "platz": 5,
             "team": "JSG Mundenheim/Rheingönheim 2",
             "team_id": 81334,
-            "spiele": 2,
+            "spiele": 3,
             "punkte": 2,
             "siege": 1,
             "remis": 0,
-            "niederlagen": 1,
-            "tore": 31,
-            "gegentore": 26,
-            "differenz": 5
+            "niederlagen": 2,
+            "tore": 47,
+            "gegentore": 46,
+            "differenz": 1
           },
           {
             "platz": 6,
+            "team": "Vorderpfälzer Luchse II",
+            "team_id": 81340,
+            "spiele": 3,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 2,
+            "tore": 45,
+            "gegentore": 67,
+            "differenz": -22
+          },
+          {
+            "platz": 7,
             "team": "TUS Neuhofen II",
             "team_id": 81341,
             "spiele": 2,
@@ -11995,7 +12008,7 @@
             "differenz": -24
           },
           {
-            "platz": 7,
+            "platz": 8,
             "team": "HSG Mutterstadt/Ruchheim II",
             "team_id": 81335,
             "spiele": 1,
@@ -12008,7 +12021,7 @@
             "differenz": -10
           },
           {
-            "platz": 8,
+            "platz": 9,
             "team": "Vsk Niederfeld",
             "team_id": 81337,
             "spiele": 2,
@@ -12019,19 +12032,6 @@
             "tore": 15,
             "gegentore": 31,
             "differenz": -16
-          },
-          {
-            "platz": 9,
-            "team": "Vorderpfälzer Luchse II",
-            "team_id": 81340,
-            "spiele": 2,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 2,
-            "tore": 25,
-            "gegentore": 51,
-            "differenz": -26
           }
         ]
       },
