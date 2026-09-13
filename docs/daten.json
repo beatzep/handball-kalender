@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-13T19:46:28+00:00",
+  "aktualisiert": "2026-09-13T20:16:28+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -3874,31 +3874,31 @@
         ]
       },
       "gegnervorschau": {
-        "spiele": 2,
+        "spiele": 3,
         "schuetzen": [
           {
             "id": "0bp95y8",
             "name": "Alexander Schmidt",
-            "tore": 14,
-            "siebenmeter_tore": 3,
-            "siebenmeter_wuerfe": 3,
+            "tore": 22,
+            "siebenmeter_tore": 6,
+            "siebenmeter_wuerfe": 7,
             "zwei_minuten": 0,
             "verwarnungen": 0,
-            "spiele": 2,
-            "tore_je_spiel": 7.0,
-            "siebenmeter_quote": 100
+            "spiele": 3,
+            "tore_je_spiel": 7.3,
+            "siebenmeter_quote": 86
           },
           {
             "id": "1h0snls",
             "name": "Moritz Sebastian Frank",
-            "tore": 11,
+            "tore": 17,
             "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 0,
+            "siebenmeter_wuerfe": 1,
             "zwei_minuten": 0,
             "verwarnungen": 1,
-            "spiele": 2,
-            "tore_je_spiel": 5.5,
-            "siebenmeter_quote": null
+            "spiele": 3,
+            "tore_je_spiel": 5.7,
+            "siebenmeter_quote": 0
           },
           {
             "id": "1r1mkdm",
@@ -3913,35 +3913,35 @@
             "siebenmeter_quote": null
           },
           {
+            "id": "004veto",
+            "name": "Linus Weilemann",
+            "tore": 10,
+            "siebenmeter_tore": 0,
+            "siebenmeter_wuerfe": 0,
+            "zwei_minuten": 0,
+            "verwarnungen": 0,
+            "spiele": 3,
+            "tore_je_spiel": 3.3,
+            "siebenmeter_quote": null
+          },
+          {
             "id": "0w22ff7",
             "name": "Felix Kaufmann",
             "tore": 7,
             "siebenmeter_tore": 0,
             "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 1,
-            "verwarnungen": 0,
-            "spiele": 2,
-            "tore_je_spiel": 3.5,
-            "siebenmeter_quote": null
-          },
-          {
-            "id": "0ew65mc",
-            "name": "Nils Unger",
-            "tore": 6,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 0,
-            "verwarnungen": 0,
-            "spiele": 1,
-            "tore_je_spiel": 6.0,
+            "zwei_minuten": 2,
+            "verwarnungen": 1,
+            "spiele": 3,
+            "tore_je_spiel": 2.3,
             "siebenmeter_quote": null
           }
         ],
-        "weitere": 7,
-        "tore": 66,
-        "torschuetzen": 12,
-        "groesster_anteil": 21,
-        "strafen": 3
+        "weitere": 8,
+        "tore": 89,
+        "torschuetzen": 13,
+        "groesster_anteil": 25,
+        "strafen": 7
       },
       "letzte_aenderungen": [],
       "spiele": {
