@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-13T12:02:23+00:00",
+  "aktualisiert": "2026-09-13T12:16:37+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -4592,14 +4592,7 @@
         "groesster_anteil": 31,
         "strafen": 2
       },
-      "letzte_aenderungen": [
-        {
-          "art": "verlegt",
-          "code": "2627RPVLERWA0403",
-          "spieltag": 4,
-          "text": "Spieltag 4 gegen SV Bornheim: Sa 19.09. 17:00 → So 20.12. 17:00"
-        }
-      ],
+      "letzte_aenderungen": [],
       "spiele": {
         "2627RPVLERWA0204": {
           "datum": "2026-09-06T18:00:00",
@@ -11433,9 +11426,23 @@
             "gegentore": 65,
             "differenz": -21
           }
+        ],
+        "fehlend": [
+          {
+            "datum": "2026-09-13T13:15:00",
+            "gegner": "HSG Eckbachtal",
+            "ergebnis": {
+              "heim": 34,
+              "gast": 19,
+              "eigene": 19,
+              "fremde": 34,
+              "ausgang": "N"
+            }
+          }
         ]
       },
       "form": [
+        "N",
         "N",
         "N"
       ],
@@ -11464,8 +11471,8 @@
           "gesamt": {
             "s": 0,
             "u": 0,
-            "n": 2,
-            "spiele": 2
+            "n": 3,
+            "spiele": 3
           },
           "heim": {
             "s": 0,
@@ -11476,24 +11483,24 @@
           "auswaerts": {
             "s": 0,
             "u": 0,
-            "n": 1,
-            "spiele": 1
+            "n": 2,
+            "spiele": 2
           }
         },
         "serien": {
           "ohne_niederlage": 0,
-          "aktuell": 2,
+          "aktuell": 3,
           "aktuell_art": "N"
         },
         "krimis": {
           "anzahl": 0,
-          "gesamt": 2,
+          "gesamt": 3,
           "anteil": 0
         },
         "tore": {
-          "erzielt": 44,
-          "kassiert": 65,
-          "schnitt": 22.0,
+          "erzielt": 63,
+          "kassiert": 99,
+          "schnitt": 21.0,
           "torreichstes": {
             "gegner": "JSG Mundenheim/Rheingönheim",
             "stand": "24:34",
@@ -11507,7 +11514,7 @@
             "schnitt": 0
           },
           "frueh": {
-            "spiele": 2,
+            "spiele": 3,
             "punkte": 0,
             "schnitt": 0.0
           }
@@ -11517,10 +11524,10 @@
       },
       "spieler": {
         "quelle": {
-          "spiele_gelaufen": 2,
+          "spiele_gelaufen": 3,
           "mit_bericht": 0,
           "ohne_bericht": 0,
-          "offen": 2
+          "offen": 3
         },
         "schuetzen": [],
         "verteilung": {
@@ -11606,7 +11613,14 @@
           "phase_id": 12645,
           "heim": false,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 0,
+          "ergebnis": {
+            "heim": 34,
+            "gast": 19,
+            "eigene": 19,
+            "fremde": 34,
+            "ausgang": "N"
+          }
         },
         "2627RPBKROEJGC0403": {
           "datum": "2026-09-19T15:00:00",
