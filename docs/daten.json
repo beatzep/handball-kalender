@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-15T08:38:49+00:00",
+  "aktualisiert": "2026-09-16T08:33:18+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -7884,7 +7884,14 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [],
+      "letzte_aenderungen": [
+        {
+          "art": "verlegt",
+          "code": "2627RPVLBJMC0403",
+          "spieltag": 4,
+          "text": "Spieltag 4 gegen Mjsg Büdesheim/Zotzenheim/St.Johann/Sprendlingen: Sa 19.09. 14:00 → Di 22.09. 19:00"
+        }
+      ],
       "spiele": {
         "2627RP4BKRBJML0102": {
           "datum": "2026-08-22T00:00:00",
@@ -7990,7 +7997,7 @@
           "sequence": 0
         },
         "2627RPVLBJMC0403": {
-          "datum": "2026-09-19T14:00:00",
+          "datum": "2026-09-22T19:00:00",
           "ort": "Bingen, Rundsporthalle, Nuits-St.Georges-Straße, 55411 Bingen",
           "halle": "Bingen, Rundsporthalle",
           "gegner": "Mjsg Büdesheim/Zotzenheim/St.Johann/Sprendlingen",
@@ -8002,7 +8009,7 @@
           "phase_id": 12619,
           "heim": false,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 1
         },
         "2627RPVLBJMC0503": {
           "datum": "2026-09-27T13:30:00",
@@ -11470,14 +11477,7 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [
-        {
-          "art": "verlegt",
-          "code": "2627RPBKRODJWA0301",
-          "spieltag": 3,
-          "text": "Spieltag 3 gegen SV Bornheim: Mi 16.09. 18:00 → Mi 04.11. 17:45"
-        }
-      ],
+      "letzte_aenderungen": [],
       "spiele": {
         "2627RPBKRODJWA0104": {
           "datum": "2026-08-29T00:00:00",
