@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-17T08:37:20+00:00",
+  "aktualisiert": "2026-09-18T08:12:53+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -5913,7 +5913,7 @@
           },
           {
             "runde": 2,
-            "platz": 5,
+            "platz": 3,
             "punkte": 4
           }
         ],
@@ -5923,55 +5923,29 @@
             "team": "TUS Neuhofen",
             "team_id": 81044,
             "spiele": 3,
-            "punkte": 5,
-            "siege": 2,
-            "remis": 1,
+            "punkte": 6,
+            "siege": 3,
+            "remis": 0,
             "niederlagen": 0,
-            "tore": 79,
-            "gegentore": 54,
-            "differenz": 25
+            "tore": 112,
+            "gegentore": 77,
+            "differenz": 35
           },
           {
             "platz": 2,
             "team": "TV Kirrweiler",
             "team_id": 86753,
             "spiele": 3,
-            "punkte": 5,
-            "siege": 2,
-            "remis": 1,
+            "punkte": 6,
+            "siege": 3,
+            "remis": 0,
             "niederlagen": 0,
-            "tore": 87,
-            "gegentore": 70,
-            "differenz": 17
+            "tore": 128,
+            "gegentore": 98,
+            "differenz": 30
           },
           {
             "platz": 3,
-            "team": "MSG Wörth/Kandel",
-            "team_id": 81047,
-            "spiele": 3,
-            "punkte": 4,
-            "siege": 1,
-            "remis": 2,
-            "niederlagen": 0,
-            "tore": 78,
-            "gegentore": 63,
-            "differenz": 15
-          },
-          {
-            "platz": 4,
-            "team": "Mjsg Heiligenstein/Mundenheim/Rheingönheim 2",
-            "team_id": 81048,
-            "spiele": 3,
-            "punkte": 4,
-            "siege": 1,
-            "remis": 2,
-            "niederlagen": 0,
-            "tore": 75,
-            "gegentore": 61,
-            "differenz": 14
-          },
-          {
-            "platz": 5,
             "team": "HSG MUTTERSTADT/RUCHHEIM mA",
             "team_id": 81043,
             "spiele": 2,
@@ -5982,6 +5956,32 @@
             "tore": 68,
             "gegentore": 54,
             "differenz": 14
+          },
+          {
+            "platz": 4,
+            "team": "Mjsg Heiligenstein/Mundenheim/Rheingönheim 2",
+            "team_id": 81048,
+            "spiele": 3,
+            "punkte": 3,
+            "siege": 1,
+            "remis": 1,
+            "niederlagen": 1,
+            "tore": 98,
+            "gegentore": 94,
+            "differenz": 4
+          },
+          {
+            "platz": 5,
+            "team": "MSG Wörth/Kandel",
+            "team_id": 81047,
+            "spiele": 3,
+            "punkte": 3,
+            "siege": 1,
+            "remis": 1,
+            "niederlagen": 1,
+            "tore": 106,
+            "gegentore": 104,
+            "differenz": 2
           },
           {
             "platz": 6,
@@ -13406,6 +13406,19 @@
         "eintraege": [
           {
             "platz": 1,
+            "team": "TSV Speyer II",
+            "team_id": 81348,
+            "spiele": 3,
+            "punkte": 6,
+            "siege": 3,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 84,
+            "gegentore": 29,
+            "differenz": 55
+          },
+          {
+            "platz": 2,
             "team": "TUS Heiligenstein",
             "team_id": 81347,
             "spiele": 3,
@@ -13418,7 +13431,7 @@
             "differenz": 54
           },
           {
-            "platz": 2,
+            "platz": 3,
             "team": "Hlz Friesenheim/Hochdorf 3",
             "team_id": 81350,
             "spiele": 3,
@@ -13431,19 +13444,6 @@
             "differenz": 50
           },
           {
-            "platz": 3,
-            "team": "TSV Speyer II",
-            "team_id": 81348,
-            "spiele": 3,
-            "punkte": 6,
-            "siege": 3,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 68,
-            "gegentore": 24,
-            "differenz": 44
-          },
-          {
             "platz": 4,
             "team": "JSG Kaiserslautern/Dansenberg III",
             "team_id": 87383,
@@ -13452,9 +13452,9 @@
             "siege": 2,
             "remis": 0,
             "niederlagen": 1,
-            "tore": 48,
-            "gegentore": 36,
-            "differenz": 12
+            "tore": 53,
+            "gegentore": 52,
+            "differenz": 1
           },
           {
             "platz": 5,
