@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-19T16:16:49+00:00",
+  "aktualisiert": "2026-09-19T16:46:26+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -11278,7 +11278,7 @@
       "liga": "Bezirksoberliga WEIBLICH",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 3,
+        "runde": 4,
         "phase_id": 12594,
         "gespielt": true,
         "mannschaften": 9,
@@ -11287,6 +11287,11 @@
             "runde": 1,
             "platz": 4,
             "punkte": 2
+          },
+          {
+            "runde": 2,
+            "platz": 2,
+            "punkte": 4
           }
         ],
         "eintraege": [
@@ -11305,6 +11310,19 @@
           },
           {
             "platz": 2,
+            "team": "HSG Mutterstadt/Ruchheim",
+            "team_id": 81241,
+            "spiele": 2,
+            "punkte": 4,
+            "siege": 2,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 45,
+            "gegentore": 26,
+            "differenz": 19
+          },
+          {
+            "platz": 3,
             "team": "Vorderpfälzer Luchse",
             "team_id": 81239,
             "spiele": 2,
@@ -11317,7 +11335,7 @@
             "differenz": 13
           },
           {
-            "platz": 3,
+            "platz": 4,
             "team": "SV Bornheim",
             "team_id": 81237,
             "spiele": 1,
@@ -11328,19 +11346,6 @@
             "tore": 26,
             "gegentore": 9,
             "differenz": 17
-          },
-          {
-            "platz": 4,
-            "team": "HSG Mutterstadt/Ruchheim",
-            "team_id": 81241,
-            "spiele": 1,
-            "punkte": 2,
-            "siege": 1,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 22,
-            "gegentore": 17,
-            "differenz": 5
           },
           {
             "platz": 5,
@@ -11398,27 +11403,14 @@
             "platz": 9,
             "team": "TSG MZ-Bretzenheim",
             "team_id": 81243,
-            "spiele": 3,
+            "spiele": 4,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 3,
-            "tore": 41,
-            "gegentore": 76,
-            "differenz": -35
-          }
-        ],
-        "fehlend": [
-          {
-            "datum": "2026-09-19T16:30:00",
-            "gegner": "TSG MZ-Bretzenheim",
-            "ergebnis": {
-              "heim": 23,
-              "gast": 9,
-              "eigene": 23,
-              "fremde": 9,
-              "ausgang": "S"
-            }
+            "niederlagen": 4,
+            "tore": 50,
+            "gegentore": 99,
+            "differenz": -49
           }
         ]
       },
