@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-19T13:01:17+00:00",
+  "aktualisiert": "2026-09-19T13:31:15+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -8290,10 +8290,24 @@
             "gegentore": 126,
             "differenz": -28
           }
+        ],
+        "fehlend": [
+          {
+            "datum": "2026-09-19T14:00:00",
+            "gegner": "HSG Wittlich",
+            "ergebnis": {
+              "heim": 37,
+              "gast": 25,
+              "eigene": 25,
+              "fremde": 37,
+              "ausgang": "N"
+            }
+          }
         ]
       },
       "form": [
         "S",
+        "N",
         "N",
         "N",
         "N"
@@ -8321,8 +8335,8 @@
           "gesamt": {
             "s": 1,
             "u": 0,
-            "n": 3,
-            "spiele": 4
+            "n": 4,
+            "spiele": 5
           },
           "heim": {
             "s": 0,
@@ -8333,24 +8347,24 @@
           "auswaerts": {
             "s": 1,
             "u": 0,
-            "n": 1,
-            "spiele": 2
+            "n": 2,
+            "spiele": 3
           }
         },
         "serien": {
           "ohne_niederlage": 1,
-          "aktuell": 3,
+          "aktuell": 4,
           "aktuell_art": "N"
         },
         "krimis": {
           "anzahl": 1,
-          "gesamt": 4,
-          "anteil": 25
+          "gesamt": 5,
+          "anteil": 20
         },
         "tore": {
-          "erzielt": 113,
-          "kassiert": 125,
-          "schnitt": 28.2,
+          "erzielt": 138,
+          "kassiert": 162,
+          "schnitt": 27.6,
           "torreichstes": {
             "gegner": "JSG Osthofen/Worms",
             "stand": "27:37",
@@ -8364,17 +8378,17 @@
             "schnitt": 0
           },
           "frueh": {
-            "spiele": 4,
+            "spiele": 5,
             "punkte": 2,
-            "schnitt": 0.5
+            "schnitt": 0.4
           }
         },
         "gegner": {
           "schwerster": {
-            "gegner": "JSG Osthofen/Worms",
+            "gegner": "HSG Wittlich",
             "spiele": 2,
-            "punkte": 2,
-            "differenz": -6
+            "punkte": 0,
+            "differenz": -14
           },
           "liebster": {
             "gegner": "JSG Osthofen/Worms",
@@ -8387,10 +8401,10 @@
       },
       "spieler": {
         "quelle": {
-          "spiele_gelaufen": 4,
+          "spiele_gelaufen": 5,
           "mit_bericht": 0,
           "ohne_bericht": 0,
-          "offen": 4
+          "offen": 5
         },
         "schuetzen": [],
         "verteilung": {
@@ -8520,7 +8534,14 @@
           "phase_id": 13258,
           "heim": false,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 0,
+          "ergebnis": {
+            "heim": 37,
+            "gast": 25,
+            "eigene": 25,
+            "fremde": 37,
+            "ausgang": "N"
+          }
         },
         "2627RSWRLBJWC0601": {
           "datum": "2026-09-26T15:30:00",
@@ -11827,7 +11848,7 @@
       "liga": "Bezirksliga WEIBLICH",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 3,
+        "runde": 4,
         "phase_id": 12597,
         "gespielt": true,
         "mannschaften": 9,
@@ -11848,14 +11869,14 @@
             "platz": 1,
             "team": "JSG Mundenheim/Rheingönheim",
             "team_id": 81266,
-            "spiele": 3,
-            "punkte": 5,
-            "siege": 2,
+            "spiele": 4,
+            "punkte": 7,
+            "siege": 3,
             "remis": 1,
             "niederlagen": 0,
-            "tore": 74,
-            "gegentore": 49,
-            "differenz": 25
+            "tore": 102,
+            "gegentore": 56,
+            "differenz": 46
           },
           {
             "platz": 2,
@@ -11913,14 +11934,14 @@
             "platz": 6,
             "team": "HSG Eckbachtal II",
             "team_id": 81263,
-            "spiele": 2,
+            "spiele": 3,
             "punkte": 2,
             "siege": 1,
             "remis": 0,
-            "niederlagen": 1,
-            "tore": 38,
-            "gegentore": 47,
-            "differenz": -9
+            "niederlagen": 2,
+            "tore": 45,
+            "gegentore": 75,
+            "differenz": -30
           },
           {
             "platz": 7,
@@ -13112,9 +13133,23 @@
             "gegentore": 65,
             "differenz": -42
           }
+        ],
+        "fehlend": [
+          {
+            "datum": "2026-09-19T13:30:00",
+            "gegner": "TUS Neuhofen II",
+            "ergebnis": {
+              "heim": 12,
+              "gast": 20,
+              "eigene": 12,
+              "fremde": 20,
+              "ausgang": "N"
+            }
+          }
         ]
       },
       "form": [
+        "N",
         "N",
         "N"
       ],
@@ -13141,14 +13176,14 @@
           "gesamt": {
             "s": 0,
             "u": 0,
-            "n": 2,
-            "spiele": 2
+            "n": 3,
+            "spiele": 3
           },
           "heim": {
             "s": 0,
             "u": 0,
-            "n": 1,
-            "spiele": 1
+            "n": 2,
+            "spiele": 2
           },
           "auswaerts": {
             "s": 0,
@@ -13159,18 +13194,18 @@
         },
         "serien": {
           "ohne_niederlage": 0,
-          "aktuell": 2,
+          "aktuell": 3,
           "aktuell_art": "N"
         },
         "krimis": {
           "anzahl": 0,
-          "gesamt": 2,
+          "gesamt": 3,
           "anteil": 0
         },
         "tore": {
-          "erzielt": 23,
-          "kassiert": 65,
-          "schnitt": 11.5,
+          "erzielt": 35,
+          "kassiert": 85,
+          "schnitt": 11.7,
           "torreichstes": {
             "gegner": "JSG Kaiserslautern/Dansenberg II",
             "stand": "8:40",
@@ -13184,7 +13219,7 @@
             "schnitt": 0
           },
           "frueh": {
-            "spiele": 2,
+            "spiele": 3,
             "punkte": 0,
             "schnitt": 0.0
           }
@@ -13194,10 +13229,10 @@
       },
       "spieler": {
         "quelle": {
-          "spiele_gelaufen": 2,
+          "spiele_gelaufen": 3,
           "mit_bericht": 0,
           "ohne_bericht": 0,
-          "offen": 2
+          "offen": 3
         },
         "schuetzen": [],
         "verteilung": {
@@ -13298,7 +13333,14 @@
           "phase_id": 12641,
           "heim": true,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 0,
+          "ergebnis": {
+            "heim": 12,
+            "gast": 20,
+            "eigene": 12,
+            "fremde": 20,
+            "ausgang": "N"
+          }
         },
         "2627RPBKRKEJGE0505": {
           "datum": "2026-09-26T11:00:00",
@@ -13387,7 +13429,7 @@
       "liga": "Bezirksklasse GEMISCHT",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 3,
+        "runde": 4,
         "phase_id": 12640,
         "gespielt": true,
         "mannschaften": 10,
@@ -13399,7 +13441,7 @@
           },
           {
             "runde": 2,
-            "platz": 7,
+            "platz": 10,
             "punkte": 2
           }
         ],
@@ -13408,17 +13450,30 @@
             "platz": 1,
             "team": "TSV Speyer II",
             "team_id": 81348,
-            "spiele": 3,
-            "punkte": 6,
+            "spiele": 4,
+            "punkte": 7,
             "siege": 3,
-            "remis": 0,
+            "remis": 1,
             "niederlagen": 0,
-            "tore": 84,
-            "gegentore": 29,
+            "tore": 98,
+            "gegentore": 43,
             "differenz": 55
           },
           {
             "platz": 2,
+            "team": "Hlz Friesenheim/Hochdorf 3",
+            "team_id": 81350,
+            "spiele": 4,
+            "punkte": 7,
+            "siege": 3,
+            "remis": 1,
+            "niederlagen": 0,
+            "tore": 85,
+            "gegentore": 35,
+            "differenz": 50
+          },
+          {
+            "platz": 3,
             "team": "TUS Heiligenstein",
             "team_id": 81347,
             "spiele": 3,
@@ -13429,19 +13484,6 @@
             "tore": 79,
             "gegentore": 25,
             "differenz": 54
-          },
-          {
-            "platz": 3,
-            "team": "Hlz Friesenheim/Hochdorf 3",
-            "team_id": 81350,
-            "spiele": 3,
-            "punkte": 6,
-            "siege": 3,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 71,
-            "gegentore": 21,
-            "differenz": 50
           },
           {
             "platz": 4,
@@ -13484,19 +13526,6 @@
           },
           {
             "platz": 7,
-            "team": "HSG Mutterstadt/Ruchheim III",
-            "team_id": 81343,
-            "spiele": 2,
-            "punkte": 2,
-            "siege": 1,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 17,
-            "gegentore": 41,
-            "differenz": -24
-          },
-          {
-            "platz": 8,
             "team": "TV Offenbach 4",
             "team_id": 81344,
             "spiele": 3,
@@ -13509,7 +13538,7 @@
             "differenz": -32
           },
           {
-            "platz": 9,
+            "platz": 8,
             "team": "HSG Dudenhofen/Schifferstadt 4",
             "team_id": 81346,
             "spiele": 3,
@@ -13522,7 +13551,7 @@
             "differenz": -36
           },
           {
-            "platz": 10,
+            "platz": 9,
             "team": "TG Waldsee II",
             "team_id": 81349,
             "spiele": 3,
@@ -13533,6 +13562,19 @@
             "tore": 32,
             "gegentore": 70,
             "differenz": -38
+          },
+          {
+            "platz": 10,
+            "team": "HSG Mutterstadt/Ruchheim III",
+            "team_id": 81343,
+            "spiele": 2,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 17,
+            "gegentore": 41,
+            "differenz": -24
           }
         ]
       },
