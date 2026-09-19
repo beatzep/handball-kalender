@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-19T17:16:37+00:00",
+  "aktualisiert": "2026-09-19T17:46:36+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -12,7 +12,7 @@
       "liga": "Männer Bezirksoberliga",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 3,
+        "runde": 4,
         "phase_id": 12482,
         "gespielt": true,
         "mannschaften": 12,
@@ -31,6 +31,11 @@
             "runde": 3,
             "platz": 1,
             "punkte": 6
+          },
+          {
+            "runde": 4,
+            "platz": 1,
+            "punkte": 6
           }
         ],
         "eintraege": [
@@ -38,56 +43,17 @@
             "platz": 1,
             "team": "HSG Mutterstadt/Ruchheim",
             "team_id": 80924,
-            "spiele": 3,
+            "spiele": 4,
             "punkte": 6,
             "siege": 3,
             "remis": 0,
-            "niederlagen": 0,
-            "tore": 97,
-            "gegentore": 70,
-            "differenz": 27
+            "niederlagen": 1,
+            "tore": 126,
+            "gegentore": 102,
+            "differenz": 24
           },
           {
             "platz": 2,
-            "team": "SG Saulheim 2",
-            "team_id": 80921,
-            "spiele": 2,
-            "punkte": 4,
-            "siege": 2,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 33,
-            "gegentore": 28,
-            "differenz": 5
-          },
-          {
-            "platz": 3,
-            "team": "HSG Rhein-Nahe Bingen 2",
-            "team_id": 80915,
-            "spiele": 3,
-            "punkte": 4,
-            "siege": 2,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 93,
-            "gegentore": 89,
-            "differenz": 4
-          },
-          {
-            "platz": 4,
-            "team": "TG Osthofen 2",
-            "team_id": 80920,
-            "spiele": 3,
-            "punkte": 4,
-            "siege": 2,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 96,
-            "gegentore": 94,
-            "differenz": 2
-          },
-          {
-            "platz": 5,
             "team": "HSG Worms",
             "team_id": 80913,
             "spiele": 3,
@@ -100,7 +66,59 @@
             "differenz": -12
           },
           {
+            "platz": 3,
+            "team": "SG Saulheim 2",
+            "team_id": 80921,
+            "spiele": 2,
+            "punkte": 4,
+            "siege": 2,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 33,
+            "gegentore": 28,
+            "differenz": 5
+          },
+          {
+            "platz": 4,
+            "team": "HSG Rhein-Nahe Bingen 2",
+            "team_id": 80915,
+            "spiele": 3,
+            "punkte": 4,
+            "siege": 2,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 93,
+            "gegentore": 89,
+            "differenz": 4
+          },
+          {
+            "platz": 5,
+            "team": "TG Osthofen 2",
+            "team_id": 80920,
+            "spiele": 3,
+            "punkte": 4,
+            "siege": 2,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 96,
+            "gegentore": 94,
+            "differenz": 2
+          },
+          {
             "platz": 6,
+            "team": "GW Bingen-Büdesheim",
+            "team_id": 80916,
+            "spiele": 4,
+            "punkte": 4,
+            "siege": 2,
+            "remis": 0,
+            "niederlagen": 2,
+            "tore": 111,
+            "gegentore": 114,
+            "differenz": -3
+          },
+          {
+            "platz": 7,
             "team": "TSG MZ-Bretzenheim 2",
             "team_id": 80919,
             "spiele": 2,
@@ -113,33 +131,7 @@
             "differenz": -1
           },
           {
-            "platz": 7,
-            "team": "GW Bingen-Büdesheim",
-            "team_id": 80916,
-            "spiele": 3,
-            "punkte": 2,
-            "siege": 1,
-            "remis": 0,
-            "niederlagen": 2,
-            "tore": 79,
-            "gegentore": 85,
-            "differenz": -6
-          },
-          {
             "platz": 8,
-            "team": "HSV Alzey",
-            "team_id": 80914,
-            "spiele": 1,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 17,
-            "gegentore": 19,
-            "differenz": -2
-          },
-          {
-            "platz": 9,
             "team": "HSV Sobernheim H1",
             "team_id": 80912,
             "spiele": 1,
@@ -149,6 +141,19 @@
             "niederlagen": 1,
             "tore": 23,
             "gegentore": 25,
+            "differenz": -2
+          },
+          {
+            "platz": 9,
+            "team": "HSV Alzey",
+            "team_id": 80914,
+            "spiele": 1,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 17,
+            "gegentore": 19,
             "differenz": -2
           },
           {
@@ -195,7 +200,8 @@
       "form": [
         "S",
         "S",
-        "S"
+        "S",
+        "N"
       ],
       "statistik": {
         "fahrten": {
@@ -220,8 +226,8 @@
           "gesamt": {
             "s": 3,
             "u": 0,
-            "n": 0,
-            "spiele": 3
+            "n": 1,
+            "spiele": 4
           },
           "heim": {
             "s": 2,
@@ -232,24 +238,24 @@
           "auswaerts": {
             "s": 1,
             "u": 0,
-            "n": 0,
-            "spiele": 1
+            "n": 1,
+            "spiele": 2
           }
         },
         "serien": {
           "ohne_niederlage": 3,
-          "aktuell": 3,
-          "aktuell_art": "S"
+          "aktuell": 1,
+          "aktuell_art": "N"
         },
         "krimis": {
           "anzahl": 1,
-          "gesamt": 3,
-          "anteil": 33
+          "gesamt": 4,
+          "anteil": 25
         },
         "tore": {
-          "erzielt": 97,
-          "kassiert": 70,
-          "schnitt": 32.3,
+          "erzielt": 126,
+          "kassiert": 102,
+          "schnitt": 31.5,
           "torreichstes": {
             "gegner": "HSG Worms",
             "stand": "41:24",
@@ -263,9 +269,9 @@
             "schnitt": 2.0
           },
           "frueh": {
-            "spiele": 1,
+            "spiele": 2,
             "punkte": 2,
-            "schnitt": 2.0
+            "schnitt": 1.0
           }
         },
         "gegner": {},
@@ -282,10 +288,10 @@
       },
       "spieler": {
         "quelle": {
-          "spiele_gelaufen": 3,
+          "spiele_gelaufen": 4,
           "mit_bericht": 3,
           "ohne_bericht": 0,
-          "offen": 0
+          "offen": 1
         },
         "schuetzen": [
           {
@@ -1738,74 +1744,7 @@
         ]
       },
       "gegnervorschau": {
-        "spiele": 2,
-        "schuetzen": [
-          {
-            "id": "1kihkbi",
-            "name": "Philipp Göttel",
-            "tore": 13,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 0,
-            "verwarnungen": 0,
-            "spiele": 2,
-            "tore_je_spiel": 6.5,
-            "siebenmeter_quote": null
-          },
-          {
-            "id": "03scsue",
-            "name": "Valentin Primec",
-            "tore": 7,
-            "siebenmeter_tore": 4,
-            "siebenmeter_wuerfe": 9,
-            "zwei_minuten": 0,
-            "verwarnungen": 0,
-            "spiele": 2,
-            "tore_je_spiel": 3.5,
-            "siebenmeter_quote": 44
-          },
-          {
-            "id": "1pzlajw",
-            "name": "Ben Weberskirch",
-            "tore": 6,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 0,
-            "verwarnungen": 0,
-            "spiele": 2,
-            "tore_je_spiel": 3.0,
-            "siebenmeter_quote": null
-          },
-          {
-            "id": "1cbfcfp",
-            "name": "Leon Förster",
-            "tore": 5,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 0,
-            "verwarnungen": 0,
-            "spiele": 1,
-            "tore_je_spiel": 5.0,
-            "siebenmeter_quote": null
-          },
-          {
-            "id": "1ald3ag",
-            "name": "Jan-Christoph Wustmann",
-            "tore": 4,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 0,
-            "verwarnungen": 0,
-            "spiele": 2,
-            "tore_je_spiel": 2.0,
-            "siebenmeter_quote": null
-          }
-        ],
-        "weitere": 8,
-        "tore": 51,
-        "torschuetzen": 13,
-        "groesster_anteil": 25,
-        "strafen": 5
+        "spiele": 0
       },
       "letzte_aenderungen": [],
       "spiele": {
@@ -1888,7 +1827,14 @@
           "phase_id": 12482,
           "heim": false,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 0,
+          "ergebnis": {
+            "heim": 32,
+            "gast": 29,
+            "eigene": 29,
+            "fremde": 32,
+            "ausgang": "N"
+          }
         },
         "2627RPBKROERMA0502": {
           "datum": "2026-09-26T20:00:00",
@@ -4351,14 +4297,14 @@
             "platz": 5,
             "team": "TV Kirrweiler",
             "team_id": 81003,
-            "spiele": 2,
-            "punkte": 2,
-            "siege": 1,
+            "spiele": 3,
+            "punkte": 4,
+            "siege": 2,
             "remis": 0,
             "niederlagen": 1,
-            "tore": 55,
-            "gegentore": 52,
-            "differenz": 3
+            "tore": 82,
+            "gegentore": 77,
+            "differenz": 5
           },
           {
             "platz": 6,
@@ -4375,19 +4321,6 @@
           },
           {
             "platz": 7,
-            "team": "FSG Selz-Wiesbach",
-            "team_id": 81002,
-            "spiele": 2,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 2,
-            "tore": 54,
-            "gegentore": 74,
-            "differenz": -20
-          },
-          {
-            "platz": 8,
             "team": "TV Thaleischweiler",
             "team_id": 81004,
             "spiele": 1,
@@ -4400,7 +4333,7 @@
             "differenz": -3
           },
           {
-            "platz": 9,
+            "platz": 8,
             "team": "HSV Alzey",
             "team_id": 80996,
             "spiele": 2,
@@ -4413,7 +4346,7 @@
             "differenz": -14
           },
           {
-            "platz": 10,
+            "platz": 9,
             "team": "HSG Eckbachtal",
             "team_id": 81000,
             "spiele": 2,
@@ -4424,6 +4357,19 @@
             "tore": 45,
             "gegentore": 62,
             "differenz": -17
+          },
+          {
+            "platz": 10,
+            "team": "FSG Selz-Wiesbach",
+            "team_id": 81002,
+            "spiele": 3,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 3,
+            "tore": 79,
+            "gegentore": 101,
+            "differenz": -22
           }
         ]
       },
@@ -10718,14 +10664,14 @@
             "platz": 5,
             "team": "JSG Osthofen/Worms",
             "team_id": 81183,
-            "spiele": 1,
+            "spiele": 2,
             "punkte": 2,
             "siege": 1,
             "remis": 0,
-            "niederlagen": 0,
-            "tore": 23,
-            "gegentore": 22,
-            "differenz": 1
+            "niederlagen": 1,
+            "tore": 38,
+            "gegentore": 41,
+            "differenz": -3
           },
           {
             "platz": 6,
@@ -10742,6 +10688,19 @@
           },
           {
             "platz": 7,
+            "team": "TUS Neuhofen",
+            "team_id": 81190,
+            "spiele": 3,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 2,
+            "tore": 62,
+            "gegentore": 71,
+            "differenz": -9
+          },
+          {
+            "platz": 8,
             "team": "JSG Mundenheim/Rheingönheim 2",
             "team_id": 81188,
             "spiele": 1,
@@ -10752,19 +10711,6 @@
             "tore": 11,
             "gegentore": 19,
             "differenz": -8
-          },
-          {
-            "platz": 8,
-            "team": "TUS Neuhofen",
-            "team_id": 81190,
-            "spiele": 2,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 2,
-            "tore": 43,
-            "gegentore": 56,
-            "differenz": -13
           },
           {
             "platz": 9,
