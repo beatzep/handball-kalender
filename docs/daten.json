@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-19T13:31:15+00:00",
+  "aktualisiert": "2026-09-19T14:01:24+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -8211,7 +8211,7 @@
       "liga": "Regionalliga SW B-Jugend weiblich",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 4,
+        "runde": 5,
         "phase_id": 13258,
         "gespielt": true,
         "mannschaften": 4,
@@ -8235,6 +8235,11 @@
             "runde": 4,
             "platz": 3,
             "punkte": 2
+          },
+          {
+            "runde": 5,
+            "platz": 3,
+            "punkte": 2
           }
         ],
         "eintraege": [
@@ -8242,14 +8247,14 @@
             "platz": 1,
             "team": "HSG Wittlich",
             "team_id": 86911,
-            "spiele": 4,
-            "punkte": 6,
-            "siege": 3,
+            "spiele": 5,
+            "punkte": 8,
+            "siege": 4,
             "remis": 0,
             "niederlagen": 1,
-            "tore": 127,
-            "gegentore": 102,
-            "differenz": 25
+            "tore": 164,
+            "gegentore": 127,
+            "differenz": 37
           },
           {
             "platz": 2,
@@ -8268,14 +8273,14 @@
             "platz": 3,
             "team": "HSG Mutterstadt/Ruchheim",
             "team_id": 86917,
-            "spiele": 4,
+            "spiele": 5,
             "punkte": 2,
             "siege": 1,
             "remis": 0,
-            "niederlagen": 3,
-            "tore": 113,
-            "gegentore": 125,
-            "differenz": -12
+            "niederlagen": 4,
+            "tore": 138,
+            "gegentore": 162,
+            "differenz": -24
           },
           {
             "platz": 4,
@@ -8289,19 +8294,6 @@
             "tore": 98,
             "gegentore": 126,
             "differenz": -28
-          }
-        ],
-        "fehlend": [
-          {
-            "datum": "2026-09-19T14:00:00",
-            "gegner": "HSG Wittlich",
-            "ergebnis": {
-              "heim": 37,
-              "gast": 25,
-              "eigene": 25,
-              "fremde": 37,
-              "ausgang": "N"
-            }
           }
         ]
       },
