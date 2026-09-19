@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-19T15:40:20+00:00",
+  "aktualisiert": "2026-09-19T16:16:49+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -5915,6 +5915,11 @@
             "runde": 2,
             "platz": 3,
             "punkte": 4
+          },
+          {
+            "runde": 3,
+            "platz": 3,
+            "punkte": 6
           }
         ],
         "eintraege": [
@@ -5948,14 +5953,14 @@
             "platz": 3,
             "team": "HSG MUTTERSTADT/RUCHHEIM mA",
             "team_id": 81043,
-            "spiele": 2,
-            "punkte": 4,
-            "siege": 2,
+            "spiele": 3,
+            "punkte": 6,
+            "siege": 3,
             "remis": 0,
             "niederlagen": 0,
-            "tore": 68,
-            "gegentore": 54,
-            "differenz": 14
+            "tore": 107,
+            "gegentore": 92,
+            "differenz": 15
           },
           {
             "platz": 4,
@@ -6024,19 +6029,6 @@
           },
           {
             "platz": 9,
-            "team": "TS RODALBEN mA",
-            "team_id": 81045,
-            "spiele": 2,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 2,
-            "tore": 60,
-            "gegentore": 88,
-            "differenz": -28
-          },
-          {
-            "platz": 10,
             "team": "TSV Speyer",
             "team_id": 81046,
             "spiele": 2,
@@ -6047,19 +6039,19 @@
             "tore": 61,
             "gegentore": 90,
             "differenz": -29
-          }
-        ],
-        "fehlend": [
+          },
           {
-            "datum": "2026-09-19T16:00:00",
-            "gegner": "TS RODALBEN mA",
-            "ergebnis": {
-              "heim": 38,
-              "gast": 39,
-              "eigene": 39,
-              "fremde": 38,
-              "ausgang": "S"
-            }
+            "platz": 10,
+            "team": "TS RODALBEN mA",
+            "team_id": 81045,
+            "spiele": 3,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 3,
+            "tore": 98,
+            "gegentore": 127,
+            "differenz": -29
           }
         ]
       },
@@ -7715,14 +7707,14 @@
             "platz": 4,
             "team": "Vsk Niederfeld",
             "team_id": 80854,
-            "spiele": 2,
+            "spiele": 3,
             "punkte": 2,
             "siege": 1,
             "remis": 0,
-            "niederlagen": 1,
-            "tore": 51,
-            "gegentore": 36,
-            "differenz": 15
+            "niederlagen": 2,
+            "tore": 82,
+            "gegentore": 71,
+            "differenz": 11
           },
           {
             "platz": 5,
@@ -7741,14 +7733,14 @@
             "platz": 6,
             "team": "TUS KL-Dansenberg II",
             "team_id": 80853,
-            "spiele": 1,
-            "punkte": 0,
-            "siege": 0,
+            "spiele": 2,
+            "punkte": 2,
+            "siege": 1,
             "remis": 0,
             "niederlagen": 1,
-            "tore": 17,
-            "gegentore": 28,
-            "differenz": -11
+            "tore": 52,
+            "gegentore": 59,
+            "differenz": -7
           },
           {
             "platz": 7,
@@ -8583,7 +8575,7 @@
       "liga": "Verbandsliga GEMISCHT",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 3,
+        "runde": 4,
         "phase_id": 12621,
         "gespielt": true,
         "mannschaften": 9,
@@ -8601,6 +8593,11 @@
           {
             "runde": 3,
             "platz": 4,
+            "punkte": 2
+          },
+          {
+            "runde": 4,
+            "platz": 6,
             "punkte": 2
           }
         ],
@@ -8646,19 +8643,6 @@
           },
           {
             "platz": 4,
-            "team": "HSG Mutterstadt/Ruchheim Mc",
-            "team_id": 81091,
-            "spiele": 3,
-            "punkte": 2,
-            "siege": 1,
-            "remis": 0,
-            "niederlagen": 2,
-            "tore": 102,
-            "gegentore": 97,
-            "differenz": 5
-          },
-          {
-            "platz": 5,
             "team": "Mjsg Bodenheim/Budenheim II",
             "team_id": 81087,
             "spiele": 3,
@@ -8671,7 +8655,33 @@
             "differenz": 3
           },
           {
+            "platz": 5,
+            "team": "JSG Osthofen/Worms",
+            "team_id": 81088,
+            "spiele": 3,
+            "punkte": 3,
+            "siege": 1,
+            "remis": 1,
+            "niederlagen": 1,
+            "tore": 94,
+            "gegentore": 91,
+            "differenz": 3
+          },
+          {
             "platz": 6,
+            "team": "HSG Mutterstadt/Ruchheim Mc",
+            "team_id": 81091,
+            "spiele": 4,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 3,
+            "tore": 134,
+            "gegentore": 133,
+            "differenz": 1
+          },
+          {
+            "platz": 7,
             "team": "TV Nieder-Olm Mc2",
             "team_id": 81086,
             "spiele": 3,
@@ -8682,19 +8692,6 @@
             "tore": 90,
             "gegentore": 94,
             "differenz": -4
-          },
-          {
-            "platz": 7,
-            "team": "JSG Osthofen/Worms",
-            "team_id": 81088,
-            "spiele": 2,
-            "punkte": 1,
-            "siege": 0,
-            "remis": 1,
-            "niederlagen": 1,
-            "tore": 58,
-            "gegentore": 59,
-            "differenz": -1
           },
           {
             "platz": 8,
@@ -8721,19 +8718,6 @@
             "tore": 80,
             "gegentore": 134,
             "differenz": -54
-          }
-        ],
-        "fehlend": [
-          {
-            "datum": "2026-09-19T16:00:00",
-            "gegner": "JSG Osthofen/Worms",
-            "ergebnis": {
-              "heim": 36,
-              "gast": 32,
-              "eigene": 32,
-              "fremde": 36,
-              "ausgang": "N"
-            }
           }
         ]
       },
