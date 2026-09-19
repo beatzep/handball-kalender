@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-19T19:01:18+00:00",
+  "aktualisiert": "2026-09-19T19:31:31+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -4339,19 +4339,19 @@
         ]
       },
       "gegnervorschau": {
-        "spiele": 3,
+        "spiele": 4,
         "schuetzen": [
           {
             "id": "0bp95y8",
             "name": "Alexander Schmidt",
-            "tore": 22,
+            "tore": 27,
             "siebenmeter_tore": 6,
-            "siebenmeter_wuerfe": 7,
+            "siebenmeter_wuerfe": 8,
             "zwei_minuten": 0,
             "verwarnungen": 0,
-            "spiele": 3,
-            "tore_je_spiel": 7.3,
-            "siebenmeter_quote": 86
+            "spiele": 4,
+            "tore_je_spiel": 6.8,
+            "siebenmeter_quote": 75
           },
           {
             "id": "1h0snls",
@@ -4392,21 +4392,21 @@
           {
             "id": "0w22ff7",
             "name": "Felix Kaufmann",
-            "tore": 7,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 2,
+            "tore": 9,
+            "siebenmeter_tore": 1,
+            "siebenmeter_wuerfe": 1,
+            "zwei_minuten": 4,
             "verwarnungen": 1,
-            "spiele": 3,
-            "tore_je_spiel": 2.3,
-            "siebenmeter_quote": null
+            "spiele": 4,
+            "tore_je_spiel": 2.2,
+            "siebenmeter_quote": 100
           }
         ],
-        "weitere": 8,
-        "tore": 89,
-        "torschuetzen": 13,
+        "weitere": 11,
+        "tore": 106,
+        "torschuetzen": 16,
         "groesster_anteil": 25,
-        "strafen": 7
+        "strafen": 9
       },
       "letzte_aenderungen": [],
       "spiele": {
