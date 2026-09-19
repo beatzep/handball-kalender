@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-19T15:31:19+00:00",
+  "aktualisiert": "2026-09-19T15:40:20+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -4278,7 +4278,7 @@
       "liga": "Frauen Verbandsliga",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 3,
+        "runde": 4,
         "phase_id": 12481,
         "gespielt": true,
         "mannschaften": 10,
@@ -4290,13 +4290,39 @@
           },
           {
             "runde": 2,
-            "platz": 1,
+            "platz": 3,
             "punkte": 4
           }
         ],
         "eintraege": [
           {
             "platz": 1,
+            "team": "FSG Gonsenheim/Schott",
+            "team_id": 80998,
+            "spiele": 4,
+            "punkte": 6,
+            "siege": 3,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 121,
+            "gegentore": 126,
+            "differenz": -5
+          },
+          {
+            "platz": 2,
+            "team": "FSG Kaiserslautern/Dansenberg",
+            "team_id": 80997,
+            "spiele": 2,
+            "punkte": 4,
+            "siege": 2,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 69,
+            "gegentore": 41,
+            "differenz": 28
+          },
+          {
+            "platz": 3,
             "team": "HSG Mutterstadt/Ruchheim Damen",
             "team_id": 80999,
             "spiele": 2,
@@ -4309,7 +4335,7 @@
             "differenz": 17
           },
           {
-            "platz": 2,
+            "platz": 4,
             "team": "SV Bornheim",
             "team_id": 81001,
             "spiele": 3,
@@ -4322,46 +4348,7 @@
             "differenz": 11
           },
           {
-            "platz": 3,
-            "team": "FSG Gonsenheim/Schott",
-            "team_id": 80998,
-            "spiele": 3,
-            "punkte": 4,
-            "siege": 2,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 83,
-            "gegentore": 91,
-            "differenz": -8
-          },
-          {
-            "platz": 4,
-            "team": "FSG Kaiserslautern/Dansenberg",
-            "team_id": 80997,
-            "spiele": 1,
-            "punkte": 2,
-            "siege": 1,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 40,
-            "gegentore": 20,
-            "differenz": 20
-          },
-          {
             "platz": 5,
-            "team": "TV Hauenstein",
-            "team_id": 80995,
-            "spiele": 1,
-            "punkte": 2,
-            "siege": 1,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 33,
-            "gegentore": 30,
-            "differenz": 3
-          },
-          {
-            "platz": 6,
             "team": "TV Kirrweiler",
             "team_id": 81003,
             "spiele": 2,
@@ -4374,7 +4361,33 @@
             "differenz": 3
           },
           {
+            "platz": 6,
+            "team": "TV Hauenstein",
+            "team_id": 80995,
+            "spiele": 2,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 68,
+            "gegentore": 68,
+            "differenz": 0
+          },
+          {
             "platz": 7,
+            "team": "FSG Selz-Wiesbach",
+            "team_id": 81002,
+            "spiele": 2,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 2,
+            "tore": 54,
+            "gegentore": 74,
+            "differenz": -20
+          },
+          {
+            "platz": 8,
             "team": "TV Thaleischweiler",
             "team_id": 81004,
             "spiele": 1,
@@ -4387,20 +4400,20 @@
             "differenz": -3
           },
           {
-            "platz": 8,
+            "platz": 9,
             "team": "HSV Alzey",
             "team_id": 80996,
-            "spiele": 1,
+            "spiele": 2,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 1,
-            "tore": 25,
-            "gegentore": 31,
-            "differenz": -6
+            "niederlagen": 2,
+            "tore": 46,
+            "gegentore": 60,
+            "differenz": -14
           },
           {
-            "platz": 9,
+            "platz": 10,
             "team": "HSG Eckbachtal",
             "team_id": 81000,
             "spiele": 2,
@@ -4411,19 +4424,6 @@
             "tore": 45,
             "gegentore": 62,
             "differenz": -17
-          },
-          {
-            "platz": 10,
-            "team": "FSG Selz-Wiesbach",
-            "team_id": 81002,
-            "spiele": 2,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 2,
-            "tore": 54,
-            "gegentore": 74,
-            "differenz": -20
           }
         ]
       },
@@ -11929,6 +11929,11 @@
             "runde": 2,
             "platz": 3,
             "punkte": 3
+          },
+          {
+            "runde": 3,
+            "platz": 2,
+            "punkte": 5
           }
         ],
         "eintraege": [
@@ -11947,6 +11952,19 @@
           },
           {
             "platz": 2,
+            "team": "HSG Mutterstadt/Ruchheim II",
+            "team_id": 81267,
+            "spiele": 3,
+            "punkte": 5,
+            "siege": 2,
+            "remis": 1,
+            "niederlagen": 0,
+            "tore": 56,
+            "gegentore": 41,
+            "differenz": 15
+          },
+          {
+            "platz": 3,
             "team": "Vorderpfälzer Luchse II",
             "team_id": 81264,
             "spiele": 2,
@@ -11957,19 +11975,6 @@
             "tore": 54,
             "gegentore": 24,
             "differenz": 30
-          },
-          {
-            "platz": 3,
-            "team": "HSG Mutterstadt/Ruchheim II",
-            "team_id": 81267,
-            "spiele": 2,
-            "punkte": 3,
-            "siege": 1,
-            "remis": 1,
-            "niederlagen": 0,
-            "tore": 40,
-            "gegentore": 26,
-            "differenz": 14
           },
           {
             "platz": 4,
@@ -11988,14 +11993,14 @@
             "platz": 5,
             "team": "WSG Rheinauen",
             "team_id": 81270,
-            "spiele": 2,
+            "spiele": 3,
             "punkte": 2,
             "siege": 1,
             "remis": 0,
-            "niederlagen": 1,
-            "tore": 39,
-            "gegentore": 29,
-            "differenz": 10
+            "niederlagen": 2,
+            "tore": 54,
+            "gegentore": 45,
+            "differenz": 9
           },
           {
             "platz": 6,
@@ -12048,19 +12053,6 @@
             "tore": 22,
             "gegentore": 53,
             "differenz": -31
-          }
-        ],
-        "fehlend": [
-          {
-            "datum": "2026-09-19T16:30:00",
-            "gegner": "WSG Rheinauen",
-            "ergebnis": {
-              "heim": 15,
-              "gast": 16,
-              "eigene": 16,
-              "fremde": 15,
-              "ausgang": "S"
-            }
           }
         ]
       },
