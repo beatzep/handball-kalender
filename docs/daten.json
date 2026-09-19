@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-18T08:12:53+00:00",
+  "aktualisiert": "2026-09-19T08:00:59+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -9737,26 +9737,26 @@
             "team": "TV Engers",
             "team_id": 86941,
             "spiele": 4,
-            "punkte": 2,
-            "siege": 1,
+            "punkte": 4,
+            "siege": 2,
             "remis": 0,
-            "niederlagen": 3,
-            "tore": 88,
-            "gegentore": 90,
-            "differenz": -2
+            "niederlagen": 2,
+            "tore": 110,
+            "gegentore": 106,
+            "differenz": 4
           },
           {
             "platz": 4,
             "team": "SG Zweibrücken",
             "team_id": 86947,
             "spiele": 4,
-            "punkte": 2,
-            "siege": 1,
+            "punkte": 0,
+            "siege": 0,
             "remis": 0,
-            "niederlagen": 3,
-            "tore": 72,
-            "gegentore": 107,
-            "differenz": -35
+            "niederlagen": 4,
+            "tore": 88,
+            "gegentore": 129,
+            "differenz": -41
           }
         ]
       },
@@ -12444,9 +12444,9 @@
             "siege": 2,
             "remis": 0,
             "niederlagen": 1,
-            "tore": 61,
-            "gegentore": 53,
-            "differenz": 8
+            "tore": 88,
+            "gegentore": 73,
+            "differenz": 15
           },
           {
             "platz": 4,
@@ -12496,9 +12496,9 @@
             "siege": 0,
             "remis": 0,
             "niederlagen": 3,
-            "tore": 40,
-            "gegentore": 54,
-            "differenz": -14
+            "tore": 60,
+            "gegentore": 81,
+            "differenz": -21
           },
           {
             "platz": 8,
