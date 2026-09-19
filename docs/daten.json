@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-19T14:31:18+00:00",
+  "aktualisiert": "2026-09-19T14:46:35+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -8612,16 +8612,16 @@
           },
           {
             "platz": 3,
-            "team": "Mjsg Bodenheim/Budenheim II",
-            "team_id": 81087,
-            "spiele": 3,
-            "punkte": 3,
-            "siege": 1,
-            "remis": 1,
-            "niederlagen": 1,
-            "tore": 88,
-            "gegentore": 85,
-            "differenz": 3
+            "team": "DJK GW Büdesheim",
+            "team_id": 81085,
+            "spiele": 2,
+            "punkte": 4,
+            "siege": 2,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 67,
+            "gegentore": 53,
+            "differenz": 14
           },
           {
             "platz": 4,
@@ -8638,16 +8638,16 @@
           },
           {
             "platz": 5,
-            "team": "DJK GW Büdesheim",
-            "team_id": 81085,
-            "spiele": 1,
-            "punkte": 2,
+            "team": "Mjsg Bodenheim/Budenheim II",
+            "team_id": 81087,
+            "spiele": 3,
+            "punkte": 3,
             "siege": 1,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 33,
-            "gegentore": 29,
-            "differenz": 4
+            "remis": 1,
+            "niederlagen": 1,
+            "tore": 88,
+            "gegentore": 85,
+            "differenz": 3
           },
           {
             "platz": 6,
@@ -8692,14 +8692,14 @@
             "platz": 9,
             "team": "JSG Mundenheim/Rheingönheim 2",
             "team_id": 81090,
-            "spiele": 2,
+            "spiele": 3,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 2,
-            "tore": 56,
-            "gegentore": 100,
-            "differenz": -44
+            "niederlagen": 3,
+            "tore": 80,
+            "gegentore": 134,
+            "differenz": -54
           }
         ]
       },
