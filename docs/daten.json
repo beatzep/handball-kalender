@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-19T12:31:57+00:00",
+  "aktualisiert": "2026-09-19T13:01:17+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -9679,7 +9679,7 @@
       "liga": "Regionalliga  SW C-Jugend weiblich",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 4,
+        "runde": 5,
         "phase_id": 13264,
         "gespielt": true,
         "mannschaften": 4,
@@ -9710,14 +9710,14 @@
             "platz": 1,
             "team": "JSG  Mundenheim/Rheingönheim",
             "team_id": 86950,
-            "spiele": 4,
-            "punkte": 6,
-            "siege": 3,
+            "spiele": 5,
+            "punkte": 8,
+            "siege": 4,
             "remis": 0,
             "niederlagen": 1,
-            "tore": 109,
-            "gegentore": 88,
-            "differenz": 21
+            "tore": 137,
+            "gegentore": 110,
+            "differenz": 27
           },
           {
             "platz": 2,
@@ -9736,14 +9736,14 @@
             "platz": 3,
             "team": "TV Engers",
             "team_id": 86941,
-            "spiele": 4,
+            "spiele": 5,
             "punkte": 4,
             "siege": 2,
             "remis": 0,
-            "niederlagen": 2,
-            "tore": 110,
-            "gegentore": 106,
-            "differenz": 4
+            "niederlagen": 3,
+            "tore": 132,
+            "gegentore": 134,
+            "differenz": -2
           },
           {
             "platz": 4,
