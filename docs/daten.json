@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-20T16:46:20+00:00",
+  "aktualisiert": "2026-09-20T17:16:16+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -67,19 +67,6 @@
           },
           {
             "platz": 3,
-            "team": "HSG Rhein-Nahe Bingen 2",
-            "team_id": 80915,
-            "spiele": 3,
-            "punkte": 4,
-            "siege": 2,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 93,
-            "gegentore": 89,
-            "differenz": 4
-          },
-          {
-            "platz": 4,
             "team": "TG Osthofen 2",
             "team_id": 80920,
             "spiele": 4,
@@ -90,6 +77,19 @@
             "tore": 138,
             "gegentore": 135,
             "differenz": 3
+          },
+          {
+            "platz": 4,
+            "team": "HSG Rhein-Nahe Bingen 2",
+            "team_id": 80915,
+            "spiele": 4,
+            "punkte": 4,
+            "siege": 2,
+            "remis": 0,
+            "niederlagen": 2,
+            "tore": 121,
+            "gegentore": 119,
+            "differenz": 2
           },
           {
             "platz": 5,
@@ -119,6 +119,19 @@
           },
           {
             "platz": 7,
+            "team": "HSG Zotzenheim/St.Johann/Sprendlingen",
+            "team_id": 80922,
+            "spiele": 2,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 59,
+            "gegentore": 60,
+            "differenz": -1
+          },
+          {
+            "platz": 8,
             "team": "HSV Sobernheim H1",
             "team_id": 80912,
             "spiele": 2,
@@ -131,7 +144,7 @@
             "differenz": -1
           },
           {
-            "platz": 8,
+            "platz": 9,
             "team": "TSG MZ-Bretzenheim 2",
             "team_id": 80919,
             "spiele": 3,
@@ -144,7 +157,7 @@
             "differenz": -2
           },
           {
-            "platz": 9,
+            "platz": 10,
             "team": "TV Nieder-Olm 2",
             "team_id": 80917,
             "spiele": 3,
@@ -157,7 +170,7 @@
             "differenz": -6
           },
           {
-            "platz": 10,
+            "platz": 11,
             "team": "HSC Ingelheim",
             "team_id": 80918,
             "spiele": 3,
@@ -168,19 +181,6 @@
             "tore": 80,
             "gegentore": 86,
             "differenz": -6
-          },
-          {
-            "platz": 11,
-            "team": "HSG Zotzenheim/St.Johann/Sprendlingen",
-            "team_id": 80922,
-            "spiele": 1,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 29,
-            "gegentore": 32,
-            "differenz": -3
           },
           {
             "platz": 12,
