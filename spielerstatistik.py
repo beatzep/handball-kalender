@@ -322,6 +322,60 @@ def muster(spiele: list[dict], berichte: list[dict], team_id: int) -> dict:
     }
 
 
+def gegner_verlaeufe(berichte: list[dict], gegner_id: int) -> list[dict]:
+    """Spielverlauf je Bericht, aus Sicht des Gegners.
+
+    Anders als bei der eigenen Mannschaft wechselt "heim" hier von Spiel zu
+    Spiel - der Gegner ist nicht in jeder Partie zu Hause. Das steht schon
+    in den Ereignissen und wird hier einmal herausgezogen, statt es an
+    jeder Auswertungsstelle neu zu suchen."""
+    ausgabe = []
+    for bericht in berichte:
+        v = verlauf(bericht)
+        if len(v) < 2:
+            continue
+        heim = next((e.get("heim") for e in bericht.get("ereignisse") or []
+                    if e.get("team_id") == gegner_id), None)
+        if heim is None:
+            continue
+        ausgabe.append({"verlauf": v, "heim": heim})
+    return ausgabe
+
+
+def krimis_gegner(spiele: list[dict]) -> dict | None:
+    """Endstaende mit hoechstens zwei Toren Unterschied - wie in statistik.py,
+    nur aus dem Spielverlauf gerechnet statt aus dem Endergebnis, weil es
+    fuer den Gegner keine daten.json mit fertigen Ergebnissen gibt."""
+    if len(spiele) < MUSTER_AB:
+        return None
+    diffs = [abstand_bei(s["verlauf"], s["verlauf"][-1][0], s["heim"]) for s in spiele]
+    eng = [d for d in diffs if abs(d) <= 2]
+    if not eng:
+        return {"anzahl": 0, "gesamt": len(diffs)}
+    return {"anzahl": len(eng), "gesamt": len(diffs),
+            "gewonnen": sum(1 for d in eng if d > 0),
+            "verloren": sum(1 for d in eng if d < 0)}
+
+
+def halbzeit_trend(spiele: list[dict]) -> dict | None:
+    """Erste gegen zweite Halbzeit im Schnitt - legt frueh los oder kommt
+    erst nach der Pause? abstand_bei() sagt das schon aus eigener Sicht,
+    hier nur auf zwei Haelften statt sechs Zehnminutenbloecke verdichtet."""
+    brauchbar = [s for s in spiele if s["verlauf"][-1][0] >= 30]
+    if len(brauchbar) < MUSTER_AB:
+        return None
+    erste = zweite = 0.0
+    for s in brauchbar:
+        bei0 = abstand_bei(s["verlauf"], 0, s["heim"])
+        bei30 = abstand_bei(s["verlauf"], 30, s["heim"])
+        beiende = abstand_bei(s["verlauf"], s["verlauf"][-1][0], s["heim"])
+        erste += bei30 - bei0
+        zweite += beiende - bei30
+    n = len(brauchbar)
+    return {"erste_halbzeit": round(erste / n, 1), "zweite_halbzeit": round(zweite / n, 1),
+            "spiele": n}
+
+
 def gegneruebersicht(cache: dict, gegner_id: int, hoechstens: int = 5) -> dict:
     """Was sich ueber den naechsten Gegner sagen laesst.
 
@@ -340,6 +394,8 @@ def gegneruebersicht(cache: dict, gegner_id: int, hoechstens: int = 5) -> dict:
         return {"spiele": 0}
     liste = schuetzen(berichte, gegner_id, jugend=False)
     v = verteilung(berichte, gegner_id)
+    strafen = strafen_nach_abschnitt(berichte, gegner_id)
+    verlaeufe = gegner_verlaeufe(berichte, gegner_id)
     return {
         "spiele": len(berichte),
         "schuetzen": liste[:hoechstens],
@@ -347,7 +403,10 @@ def gegneruebersicht(cache: dict, gegner_id: int, hoechstens: int = 5) -> dict:
         "tore": v["eigene_tore"],
         "torschuetzen": v["eigene_schuetzen"],
         "groesster_anteil": v["groesster_anteil"],
-        "strafen": strafen_nach_abschnitt(berichte, gegner_id)["gesamt"],
+        "strafen": strafen["gesamt"],
+        "strafen_abschnitte": strafen["abschnitte"],
+        "krimis": krimis_gegner(verlaeufe),
+        "halbzeiten": halbzeit_trend(verlaeufe),
     }
 
 

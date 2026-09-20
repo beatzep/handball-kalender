@@ -374,6 +374,57 @@ pruefe("Mit Vorschau stehen Zahlen da",
 pruefe("Und worauf sie beruhen", "Aus 1 Spiel mit Bericht" in bs.gegnerzahlen(g),
        bs.gegnerzahlen(g)[-120:])
 
+# --- Gegnervorschau: Krimis, Halbzeit-Trend, Zeitstrafen-Muster ---------
+# Drei erfundene Spiele des Gegners (SIE), mit denen wir nichts zu tun
+# haben - genau der Fall, den gegneruebersicht() eigentlich abdeckt.
+def gegner_ereignis(minute: int, heim_stand: int, gast_stand: int,
+                    gegner_heim: bool) -> dict:
+    return {"spielminute": minute, "minute": f"{minute:02}:00", "art": "Tor",
+            "ist_tor": True, "ist_strafe": False, "team_id": SIE,
+            "heim": gegner_heim,
+            "spieler": {"id": "z", "vorname": "Nina", "nachname": "Stark"},
+            "stand": [heim_stand, gast_stand]}
+
+# A: SIE zuhause, knapp gewonnen (20:19 aus ihrer Sicht +1)
+spiel_a = [gegner_ereignis(30, 10, 9, True), gegner_ereignis(60, 20, 19, True)]
+# B: SIE auswaerts, knapp verloren (25:23, aus ihrer Sicht -2)
+spiel_b = [gegner_ereignis(30, 12, 11, False), gegner_ereignis(60, 25, 23, False)]
+# C: SIE zuhause, deutlich gewonnen (30:15, kein Krimi)
+spiel_c = [gegner_ereignis(30, 15, 7, True), gegner_ereignis(60, 30, 15, True)]
+# Zeitstrafen gehaeuft in der Schlussphase
+spiel_c += [strafe(m, SIE, "z") for m in (46, 50, 58)] + [strafe(10, SIE, "z")]
+
+fremd2 = {"a": {"ereignisse": spiel_a}, "b": {"ereignisse": spiel_b},
+          "c": {"ereignisse": spiel_c}}
+g2 = st.gegneruebersicht(fremd2, SIE)
+
+pruefe("Krimis: knappe Endstaende erkannt",
+       g2["krimis"]["anzahl"] == 2 and g2["krimis"]["gesamt"] == 3,
+       str(g2["krimis"]))
+pruefe("Krimis: gewonnen/verloren getrennt",
+       g2["krimis"]["gewonnen"] == 1 and g2["krimis"]["verloren"] == 1,
+       str(g2["krimis"]))
+pruefe("Halbzeit-Trend: Durchschnitt ueber drei Spiele",
+       g2["halbzeiten"]["erste_halbzeit"] == 2.7
+       and g2["halbzeiten"]["zweite_halbzeit"] == 2.0,
+       str(g2["halbzeiten"]))
+pruefe("Zeitstrafen-Abschnitte kommen mit",
+       g2["strafen_abschnitte"]["45-60"] == 3 and g2["strafen"] == 4,
+       str(g2["strafen_abschnitte"]))
+
+text = bs.gegnerzahlen(g2)
+pruefe("Anzeige nennt die Krimis",
+       "2 von 3 Spielen" in text and "1 gewonnen, 1 verloren" in text, text)
+pruefe("Anzeige nennt den Halbzeit-Trend",
+       "+2.7" in text and "+2.0" in text, text)
+pruefe("Anzeige nennt die Zeitstrafen-Phase",
+       "Minute 45 und 60" in text and "3 von 4" in text, text)
+
+# Unter der Schwelle (MUSTER_AB) wird nichts behauptet
+wenig = st.gegneruebersicht({"a": {"ereignisse": spiel_a}}, SIE)
+pruefe("Zu wenige Spiele: kein Krimi-Urteil", wenig["krimis"] is None)
+pruefe("Zu wenige Spiele: kein Halbzeit-Trend", wenig["halbzeiten"] is None)
+
 fehler = 0
 for name, ok, info in pruefungen:
     if not ok:

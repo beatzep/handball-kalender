@@ -5076,9 +5076,17 @@ window.muruGeraet = (function () {
 
     // Was zuletzt getippt war, neben den Punkten - sonst sieht man hier nie
     // wieder, was man sich beim letzten Spiel gedacht hat, nur die Summe.
+    //
+    // Gespeichert ist der Tipp als Heim:Gast, nicht als Wir:Gegner - bei
+    // einem Auswaertsspiel stuende die gegnerische Zahl dann zuerst und das
+    // liest sich wie ein Tipp gegen die eigene Mannschaft. Hier wird darum
+    // auf "wir zuerst" gedreht, mit letztesSpiel.heim aus dem umgebenden
+    // Abschluss (siehe ladeTabelle).
     function letzterTippZeile(lt) {
-      if (!lt || !lt.tipp) return '';
-      return '<div class="letzter">zuletzt ' + lt.tipp[0] + ':' + lt.tipp[1]
+      if (!lt || !lt.tipp || !letztesSpiel) return '';
+      var wir = letztesSpiel.heim ? lt.tipp[0] : lt.tipp[1];
+      var gegner = letztesSpiel.heim ? lt.tipp[1] : lt.tipp[0];
+      return '<div class="letzter">zuletzt ' + wir + ':' + gegner
         + ' getippt <span class="' + (lt.punkte ? 'gut' : 'schlecht') + '">(+'
         + lt.punkte + ')</span></div>';
     }
@@ -5134,8 +5142,12 @@ window.muruGeraet = (function () {
       var kopf = '';
       if (letztesSpiel && letztesSpiel.ergebnis) {
         var gegen = String(letztesSpiel.gegner || '').replace(/[<>&]/g, '');
+        // ergebnis ist Heim:Gast gespeichert - auf Wir:Gegner gedreht wie im
+        // eigenen Tipp darunter, sonst passen beide Zeilen nicht zusammen.
+        var eigenesTor = letztesSpiel.heim ? letztesSpiel.ergebnis[0] : letztesSpiel.ergebnis[1];
+        var gegnerTor = letztesSpiel.heim ? letztesSpiel.ergebnis[1] : letztesSpiel.ergebnis[0];
         kopf = '<p class="tippfuss">Letztes Spiel, ' + (letztesSpiel.heim ? 'gegen ' : 'bei ')
-          + gegen + ': ' + letztesSpiel.ergebnis[0] + ':' + letztesSpiel.ergebnis[1] + '</p>';
+          + gegen + ': ' + eigenesTor + ':' + gegnerTor + '</p>';
       }
       tabelle.innerHTML = kopf + '<table><tbody>' + reihen.join('') + '</tbody></table>'
         + fuss;

@@ -182,11 +182,38 @@ def gegnerzahlen(vorschau: dict) -> str:
     satz = (f'{vorschau["tore"]} Tore von {vorschau["torschuetzen"]} Schützen'
             + (f', {anteil} % davon vom stärksten' if anteil else "")
             + f'. Aus {spiel_wort(vorschau["spiele"], "dativ")} mit Bericht.')
+
+    # Drei weitere Beobachtungen aus denselben Berichten - erst ab
+    # MUSTER_AB Spielen (siehe spielerstatistik.py), sonst waeren es
+    # Zufallszahlen mit Anspruch.
+    zusatz = []
+    krimis = vorschau.get("krimis")
+    if krimis and krimis.get("anzahl"):
+        zusatz.append(
+            f'{krimis["anzahl"]} von {krimis["gesamt"]} Spielen gingen mit '
+            f'höchstens zwei Toren Unterschied aus ({krimis["gewonnen"]} '
+            f'gewonnen, {krimis["verloren"]} verloren).')
+    halbzeiten = vorschau.get("halbzeiten")
+    if halbzeiten:
+        zusatz.append(
+            f'Im Schnitt {halbzeiten["erste_halbzeit"]:+.1f} Tore erste, '
+            f'{halbzeiten["zweite_halbzeit"]:+.1f} zweite Halbzeit '
+            f'(aus {spiel_wort(halbzeiten["spiele"], "dativ")}).')
+    strafen_abschnitte = vorschau.get("strafen_abschnitte")
+    if strafen_abschnitte and vorschau.get("strafen", 0) >= 3:
+        meiste = max(strafen_abschnitte, key=strafen_abschnitte.get)
+        if strafen_abschnitte[meiste] > 0:
+            von, bis = meiste.split("-")
+            zusatz.append(
+                f'Zeitstrafen meist zwischen Minute {von} und {bis} '
+                f'({strafen_abschnitte[meiste]} von {vorschau["strafen"]}).')
+
     return (f'<div class="gegnerschuetzen">'
             f'<div class="rubrik klein">Wer bei ihnen trifft</div>'
             f'<ul>{zeilen}</ul>'
             + (f'<p class="statfuss">und {vorschau["weitere"]} weitere. {satz}</p>'
                if vorschau.get("weitere") else f'<p class="statfuss">{satz}</p>')
+            + "".join(f'<p class="statfuss">{z}</p>' for z in zusatz)
             + "</div>")
 
 
