@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-20T13:31:16+00:00",
+  "aktualisiert": "2026-09-20T14:01:12+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -10673,32 +10673,19 @@
           },
           {
             "platz": 5,
-            "team": "WSG Rheinauen",
-            "team_id": 81151,
-            "spiele": 2,
-            "punkte": 2,
-            "siege": 1,
+            "team": "SC Bobenheim-Roxheim",
+            "team_id": 81148,
+            "spiele": 4,
+            "punkte": 4,
+            "siege": 2,
             "remis": 0,
-            "niederlagen": 1,
-            "tore": 43,
-            "gegentore": 45,
-            "differenz": -2
+            "niederlagen": 2,
+            "tore": 95,
+            "gegentore": 106,
+            "differenz": -11
           },
           {
             "platz": 6,
-            "team": "SC Bobenheim-Roxheim",
-            "team_id": 81148,
-            "spiele": 3,
-            "punkte": 2,
-            "siege": 1,
-            "remis": 0,
-            "niederlagen": 2,
-            "tore": 59,
-            "gegentore": 81,
-            "differenz": -22
-          },
-          {
-            "platz": 7,
             "team": "JSG Mundenheim/Rheingönheim 2",
             "team_id": 81150,
             "spiele": 3,
@@ -10709,6 +10696,19 @@
             "tore": 75,
             "gegentore": 66,
             "differenz": 9
+          },
+          {
+            "platz": 7,
+            "team": "WSG Rheinauen",
+            "team_id": 81151,
+            "spiele": 3,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 2,
+            "tore": 68,
+            "gegentore": 81,
+            "differenz": -13
           },
           {
             "platz": 8,
