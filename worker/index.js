@@ -569,6 +569,47 @@ export default {
         return antwort({ erledigt: "ganz", geraet, war: alterName }, request);
       }
 
+      // Dieselbe Person mit zwei Geraeten (Handy und Tablet, oder nach dem
+      // Loeschen der Website-Daten neu angelegt) landet sonst zweimal in
+      // der Tabelle - einmal mit wenigen, einmal mit den meisten Tipps.
+      // "ziel" bleibt bestehen, "quelle" wird hineingemischt und verschwindet.
+      // Tippt man dasselbe Spiel auf beiden Geraeten unterschiedlich, gilt
+      // der Tipp von "ziel" - eine Entscheidung muss her, und wer als Ziel
+      // gewaehlt wird, bestimmt die Admin-Person bewusst.
+      if (pfad === "/tipper-zusammenfuehren" && request.method === "POST") {
+        const { benutzer, passwort, ziel, quelle } = await request.json();
+        if (!angemeldet(env, benutzer, passwort)) {
+          return antwort({ fehler: "Anmeldung fehlgeschlagen" }, request, 401);
+        }
+        if (!gueltig(ziel) || !gueltig(quelle)) {
+          return antwort({ fehler: "ziel oder quelle fehlt" }, request, 400);
+        }
+        if (ziel === quelle) {
+          return antwort({ fehler: "ziel und quelle sind gleich" }, request, 400);
+        }
+        const [zielTipper, quellTipper] = await Promise.all([
+          tipperLesenWeich(env, ziel), tipperLesenWeich(env, quelle),
+        ]);
+        const zusammengefuehrt = {
+          name: zielTipper.name || quellTipper.name || "",
+          tipps: { ...quellTipper.tipps, ...zielTipper.tipps },
+        };
+        await env.ZAEHLER.put(`tipper:${ziel}`, JSON.stringify(zusammengefuehrt));
+        await env.ZAEHLER.delete(`tipper:${quelle}`);
+        try {
+          const index = await indexLesen(env);
+          if (index) {
+            index.ids = index.ids.filter((x) => x !== quelle);
+            if (!index.ids.includes(ziel)) index.ids.push(ziel);
+            await indexSchreiben(env, index);
+          }
+        } catch { /* die Liste wird ohnehin regelmaessig erneuert */ }
+        return antwort({
+          erledigt: true, ziel, quelle, name: zusammengefuehrt.name,
+          tipps: Object.keys(zusammengefuehrt.tipps).length,
+        }, request);
+      }
+
       // ---- Tippspiel ----
       if (pfad === "/tipp" && request.method === "POST") {
         const { geraet, spiel, heim, gast, name } = await request.json();
@@ -627,6 +668,18 @@ export default {
         const nurMannschaft = url.searchParams.get("mannschaft") || "";
         const kennungen = await tipperKennungen(env);
 
+        // Das zuletzt entschiedene Spiel dieser Mannschaft - Grundlage fuer
+        // die Anzeige "was hast du zuletzt getippt". Das Datum ist ISO
+        // ("2026-09-19T18:00:00"), ein Textvergleich reicht darum.
+        let letztesSpiel = null;
+        for (const [code, partie] of Object.entries(spiele)) {
+          if (!partie.ergebnis) continue;
+          if (nurMannschaft && partie.schluessel !== nurMannschaft) continue;
+          if (!letztesSpiel || partie.datum > letztesSpiel.datum) {
+            letztesSpiel = { code, ...partie };
+          }
+        }
+
         // Jeder Speicherzugriff zaehlt gegen das Subrequest-Limit der Anfrage
         // (50 im kostenlosen Tarif), und list() sowie das Laden der Spieldaten
         // sind schon zwei davon. Frueher lief die Schleife blind darueber
@@ -663,9 +716,20 @@ export default {
                   || (spiele[c] && spiele[c].schluessel === nurMannschaft));
             if (nurMannschaft && !eigeneTipps.length) continue;
 
+            // Nur fuers zuletzt entschiedene Spiel: der eigene Tipp und was
+            // er dafuer eingebracht hat. Ohne eigenen Tipp bleibt es weg,
+            // nicht als "0:0" o.ae. geraten.
+            let letzterTipp = null;
+            if (letztesSpiel) {
+              const roh = tipper.tipps[letztesSpiel.code];
+              const t = alsTipp(roh);
+              if (t) letzterTipp = { tipp: t, punkte: punkte(roh, letztesSpiel.ergebnis) };
+            }
+
             eintraege.push({ id, name: tipper.name, punkte: summe,
                              spiele: gewertet, exakt,
-                             tipps: eigeneTipps.length });
+                             tipps: eigeneTipps.length,
+                             ...(letzterTipp ? { letzterTipp } : {}) });
           } catch {
             // Ein einzelner unbrauchbarer Eintrag darf nicht die Tabelle
             // aller anderen mitnehmen. Der Eintrag bleibt im Speicher stehen.
@@ -677,6 +741,11 @@ export default {
                                  || String(a.name).localeCompare(String(b.name)));
         return antwort({
           tabelle: eintraege.map((e, i) => ({ platz: i + 1, ...e })),
+          ...(letztesSpiel
+              ? { letztesSpiel: { gegner: letztesSpiel.gegner, heim: letztesSpiel.heim,
+                                  ergebnis: [letztesSpiel.ergebnis.heim,
+                                             letztesSpiel.ergebnis.gast] } }
+              : {}),
           ...(ausgelassen || unlesbar || !kennungen.vollstaendig
               ? { unvollstaendig: { ausgelassen, unlesbar,
                                     ...(kennungen.vollstaendig ? {} : { imAufbau: true }) } }

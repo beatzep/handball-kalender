@@ -301,10 +301,8 @@ def spielzeile(spiel: dict, heute: datetime, naechster: bool,
             f'<div class="klappinhalt">{details}</div></details>')
 
 
-def spielliste(spiele: list[dict], heute: datetime,
-               berichte: dict | None = None) -> str:
-    kommend = [s for s in spiele if zeit(s) >= heute and not s.get("ergebnis")]
-    naechstes = kommend[0]["datum"] if kommend else None
+def spielzeilen(spiele: list[dict], heute: datetime, naechstes: str | None,
+                berichte: dict) -> str:
     zeilen, letzter_monat = [], None
     for spiel in spiele:
         wann = zeit(spiel)
@@ -313,8 +311,32 @@ def spielliste(spiele: list[dict], heute: datetime,
             zeilen.append(f'<div class="monat">{MONATE[wann.month - 1]} {wann.year}</div>')
             letzter_monat = monat
         zeilen.append(spielzeile(spiel, heute, spiel["datum"] == naechstes,
-                                 (berichte or {}).get(spiel.get("match_id"))))
+                                 berichte.get(spiel.get("match_id"))))
     return "".join(zeilen)
+
+
+def spielliste(spiele: list[dict], heute: datetime,
+               berichte: dict | None = None) -> str:
+    """Die Spiele der Saison - mit dem Ergebnis vom letzten Spieltag oben,
+    nicht mit dem ersten Spiel im August.
+
+    Bei 22 Spielen war die Liste sonst immer beim Saisonstart aufgeklappt;
+    was gerade zaehlt - das letzte Ergebnis, das naechste Spiel - stand erst
+    nach viel Scrollen. Nur das letzte gespielte Spiel bleibt darum stehen,
+    alles Aeltere wandert zugeklappt nach oben."""
+    berichte = berichte or {}
+    vergangen = [s for s in spiele if zeit(s) < heute]
+    kommend_alle = [s for s in spiele if zeit(s) >= heute]
+    kommend = [s for s in kommend_alle if not s.get("ergebnis")]
+    naechstes = kommend[0]["datum"] if kommend else None
+
+    fruehere, rest = vergangen[:-1], vergangen[-1:] + kommend_alle
+    teile = []
+    if fruehere:
+        teile.append(klapp("Frühere Spiele", spiel_wort(len(fruehere)),
+                           spielzeilen(fruehere, heute, naechstes, berichte)))
+    teile.append(spielzeilen(rest, heute, naechstes, berichte))
+    return "".join(teile)
 
 
 EMOJIS = ["\U0001F98A", "\U0001F525", "\U0001F389", "\U0001F37B"]
@@ -347,9 +369,14 @@ def mitmachblock(spiel_code: str, vorher_code: str | None, worker: str,
     <div class="bahn" data-bahn></div>
     <div class="knoepfe">{knoepfe}</div>
   </div>
-  <div class="tippspiel" data-tipp="{sicher(spiel_code)}" data-mannschaft="{sicher(schluessel)}"
+  <!-- Bewusst ohne data-klapp: das sitzt im selben [data-team], "Alle
+       aufklappen" im Statistik-Reiter (seite_klapp.py) wuerde die Tipprunde
+       sonst mit einsammeln, obwohl sie in keinem Reiter liegt. Zugeklappt
+       startet sie so oder so, weil <details> ohne "open" das von allein tut. -->
+  <details class="klapp tippspiel" data-tipp="{sicher(spiel_code)}" data-mannschaft="{sicher(schluessel)}"
        data-heimname="{sicher(heimname)}" data-gastname="{sicher(gastname)}">
-    <div class="titel">Tipprunde</div>
+    <summary class="titel">Tipprunde</summary>
+    <div class="klappinhalt">
     <div class="tippzeile">
       <div><label for="tipp-heim-{sicher(spiel_code)}">{sicher(heimname)}</label>
         <input id="tipp-heim-{sicher(spiel_code)}" data-tippfeld="heim" type="number"
@@ -367,7 +394,8 @@ def mitmachblock(spiel_code: str, vorher_code: str | None, worker: str,
     <p class="nebensache">
       <button type="button" data-tippumzug>Auf anderem Gerät weitertippen</button>
     </p>
-  </div>
+    </div>
+  </details>
 
   <div class="dabei">
     <div class="titel">Bist du dabei?</div>
@@ -1122,16 +1150,13 @@ def mannschaftsblock(schluessel: str, team: dict, basis: str, heute: datetime,
   {aenderungsblock(team)}
 
   <nav class="reiter" role="tablist" aria-label="Bereiche">
-    <button type="button" role="tab" data-ziel="kalender" aria-selected="true">Kalender</button>
-    <button type="button" role="tab" data-ziel="spiele" aria-selected="false">Spiele</button>
+    <button type="button" role="tab" data-ziel="spiele" aria-selected="true">Spiele</button>
     <button type="button" role="tab" data-ziel="tabelle" aria-selected="false">Tabelle</button>
     <button type="button" role="tab" data-ziel="statistik" aria-selected="false">Statistik</button>
+    <button type="button" role="tab" data-ziel="kalender" aria-selected="false">Kalender</button>
   </nav>
 
-  <div class="teil" data-ansicht="kalender">{abo_block(team, basis)}
-    {teilenblock(team, kommend[0] if kommend else None,
-                 letztes_ergebnis(spiele))}</div>
-  <div class="teil" data-ansicht="spiele" hidden>{spielliste(
+  <div class="teil" data-ansicht="spiele">{spielliste(
       spiele, heute,
       {v.get('match_id'): v for v in ((team.get('spieler') or {}).get('spiele') or [])})}</div>
   <div class="teil" data-ansicht="tabelle" hidden>
@@ -1148,6 +1173,9 @@ def mannschaftsblock(schluessel: str, team: dict, basis: str, heute: datetime,
     {musterblock(team.get('spieler') or {})}
     {statistikblock(team.get('statistik') or {})}
   </div>
+  <div class="teil" data-ansicht="kalender" hidden>{abo_block(team, basis)}
+    {teilenblock(team, kommend[0] if kommend else None,
+                 letztes_ergebnis(spiele))}</div>
 </section>"""
 
 

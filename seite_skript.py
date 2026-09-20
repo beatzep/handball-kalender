@@ -78,7 +78,7 @@ window.muruGeraet = (function () {
   var mannschaften = [].slice.call(document.querySelectorAll('[data-team]'));
   if (!wahl || !mannschaften.length) return;
 
-  var ANSICHTEN = ['kalender', 'spiele', 'tabelle', 'statistik'];
+  var ANSICHTEN = ['spiele', 'tabelle', 'statistik', 'kalender'];
   var SPEICHER = 'muru-mannschaft';
 
   function zeigeMannschaft(schluessel) {
@@ -108,11 +108,11 @@ window.muruGeraet = (function () {
 
   function ausAdresse() {
     var teile = (location.hash || '').replace(/^#/, '').split('/');
-    return { team: teile[0] || '', ansicht: ANSICHTEN.indexOf(teile[1]) >= 0 ? teile[1] : 'kalender' };
+    return { team: teile[0] || '', ansicht: ANSICHTEN.indexOf(teile[1]) >= 0 ? teile[1] : 'spiele' };
   }
 
   function setzeAdresse(schluessel, ansicht) {
-    var neu = '#' + schluessel + (ansicht !== 'kalender' ? '/' + ansicht : '');
+    var neu = '#' + schluessel + (ansicht !== 'spiele' ? '/' + ansicht : '');
     if (location.hash !== neu) history.replaceState(null, '', neu);
   }
 
@@ -155,7 +155,7 @@ window.muruGeraet = (function () {
   }
   ANSICHTEN.forEach(function () {});
   mannschaften.forEach(function (m) {
-    zeigeAnsicht(m.getAttribute('data-team'), 'kalender');
+    zeigeAnsicht(m.getAttribute('data-team'), 'spiele');
   });
   zeigeAnsicht(aktiv, start.ansicht);
   setzeAdresse(aktiv, start.ansicht);
@@ -179,8 +179,8 @@ window.muruGeraet = (function () {
   wahl.addEventListener('change', function () {
     aktiv = wahl.value;
     zeigeMannschaft(aktiv);
-    zeigeAnsicht(aktiv, 'kalender');
-    setzeAdresse(aktiv, 'kalender');
+    zeigeAnsicht(aktiv, 'spiele');
+    setzeAdresse(aktiv, 'spiele');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 

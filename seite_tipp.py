@@ -38,20 +38,30 @@ TIPP = """
       meldung.className = 'meldung' + (art ? ' ' + art : '');
     }
 
-    function zeile(platz, name, punkte, ich) {
+    // Was zuletzt getippt war, neben den Punkten - sonst sieht man hier nie
+    // wieder, was man sich beim letzten Spiel gedacht hat, nur die Summe.
+    function letzterTippZeile(lt) {
+      if (!lt || !lt.tipp) return '';
+      return '<div class="letzter">zuletzt ' + lt.tipp[0] + ':' + lt.tipp[1]
+        + ' getippt <span class="' + (lt.punkte ? 'gut' : 'schlecht') + '">(+'
+        + lt.punkte + ')</span></div>';
+    }
+
+    function zeile(platz, name, punkte, ich, letzterTipp) {
       return '<tr' + (ich ? ' class="ich"' : '') + '><td class="pl">' + platz +
-        '</td><td>' + String(name).replace(/[<>&]/g, '') +
+        '</td><td>' + String(name).replace(/[<>&]/g, '') + letzterTippZeile(letzterTipp) +
         '</td><td class="pkt">' + punkte + '</td></tr>';
     }
 
     var ZEIGE = 10;
     var alleZeigen = false;
+    var letztesSpiel = null;   // fuer den erneuten Aufbau durchs "Alle anzeigen"
 
     function zeigeTabelle(zeilen) {
       zeilen = zeilen || [];
       var grenze = alleZeigen ? zeilen.length : ZEIGE;
       var reihen = zeilen.slice(0, grenze).map(function (e) {
-        return zeile(e.platz, e.name, e.punkte, e.id === geraet);
+        return zeile(e.platz, e.name, e.punkte, e.id === geraet, e.letzterTipp);
       });
 
       // Wer weiter hinten steht, sah sich bisher gar nicht - die Liste
@@ -62,7 +72,7 @@ TIPP = """
       if (eigene >= grenze) {
         var e = zeilen[eigene];
         reihen.push('<tr class="luecke"><td colspan="3">…</td></tr>');
-        reihen.push(zeile(e.platz, e.name, e.punkte, true));
+        reihen.push(zeile(e.platz, e.name, e.punkte, true, e.letzterTipp));
       }
 
       // Neu angelegte Eintraege erscheinen in der Auflistung des Speichers
@@ -85,7 +95,13 @@ TIPP = """
                         : 'Alle ' + zeilen.length + ' anzeigen')
           + '</button></p>';
       }
-      tabelle.innerHTML = '<table><tbody>' + reihen.join('') + '</tbody></table>'
+      var kopf = '';
+      if (letztesSpiel && letztesSpiel.ergebnis) {
+        var gegen = String(letztesSpiel.gegner || '').replace(/[<>&]/g, '');
+        kopf = '<p class="tippfuss">Letztes Spiel, ' + (letztesSpiel.heim ? 'gegen ' : 'bei ')
+          + gegen + ': ' + letztesSpiel.ergebnis[0] + ':' + letztesSpiel.ergebnis[1] + '</p>';
+      }
+      tabelle.innerHTML = kopf + '<table><tbody>' + reihen.join('') + '</tbody></table>'
         + fuss;
 
       var knopf = tabelle.querySelector('[data-mehr]');
@@ -102,6 +118,7 @@ TIPP = """
       fetch(worker + '/tipptabelle?mannschaft=' + encodeURIComponent(mannschaft))
         .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
         .then(function (d) {
+          letztesSpiel = d.letztesSpiel || null;
           zeigeTabelle(d.tabelle);
           if (d.unvollstaendig && tabelle.innerHTML) {
             var u = d.unvollstaendig;

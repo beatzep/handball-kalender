@@ -375,6 +375,9 @@ details.spiel.vorbei[open] > summary { opacity: 1; }
 .tipptabelle td { padding: 9px 0; border-bottom: 1px solid var(--linie-zart); }
 .tipptabelle td.pl { color: var(--leise); width: 26px; font-size: .86rem; }
 .tipptabelle td.pkt { text-align: right; font-weight: 600; }
+.tipptabelle .letzter { font-size: .8rem; color: var(--leise); margin-top: 2px; }
+.tipptabelle .letzter .gut { color: var(--sieg); }
+.tipptabelle .letzter .schlecht { color: var(--leise); }
 .tipptabelle button.mehr { font: inherit; font-size: inherit; cursor: pointer;
   background: none; border: 0; padding: 0; color: var(--gold-tief);
   font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
@@ -622,6 +625,8 @@ table.verteilung td.anteil span { display: block; height: 8px; background: var(-
 table.verteilung td.pkt { text-align: right; font-weight: 600; white-space: nowrap; }
 .tipperliste { width: 100%; border-collapse: collapse; margin-top: 14px;
               font-size: .94rem; }
+.tipperliste th.wahl, .tipperliste td.wahl { width: 26px; padding-right: 6px; }
+.tipperliste td.wahl input { width: 16px; height: 16px; }
 .tipperliste th { text-align: left; font-size: .74rem; letter-spacing: .06em;
                  text-transform: uppercase; color: var(--leise); font-weight: 600;
                  padding-bottom: 8px; border-bottom: 1px solid var(--linie); }
@@ -645,6 +650,15 @@ table.verteilung td.pkt { text-align: right; font-weight: 600; white-space: nowr
 .tipperliste .kennung { font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
                        font-size: .72rem; color: var(--leise); margin-top: 3px;
                        user-select: all; }
+.mergepanel { margin-top: 18px; padding: 16px; border: 1px solid var(--gold); }
+.mergewahl { display: block; margin: 10px 0; cursor: pointer; }
+.mergewahl input { margin-right: 8px; }
+.mergewahl .kennung { font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+                     font-size: .78rem; color: var(--leise); }
+.mergetun { margin-top: 14px; display: flex; gap: 10px; }
+.mergetun button { font: inherit; font-size: .84rem; cursor: pointer; padding: 8px 14px; }
+#mergeabbrechen { background: transparent; color: var(--tinte-weich);
+                  border: 1px solid var(--linie); }
 .hinweis { font-size: .9rem; color: var(--tinte-weich); line-height: 1.55; }
 .meldung { font-size: .9rem; color: var(--tinte-weich); }
 .meldung.schlecht { color: var(--niederlage); }
@@ -820,13 +834,57 @@ table.verteilung td.pkt { text-align: right; font-weight: 600; white-space: nowr
     });
   }
 
+  // Wer zusammengefuehrt werden soll - hoechstens zwei Kennungen zugleich.
+  // Ein simples Set statt Checkbox-DOM-Abfrage, damit es die Auswahl auch
+  // ueberlebt, wenn zeigeTipprunde() nach einer Aktion neu zeichnet.
+  var mergeAuswahl = [];
+  var letzteTipprunde = null;   // fuer ein Neuzeichnen ohne erneuten Abruf
+
+  function mergePanel(liste) {
+    if (mergeAuswahl.length !== 2) return '';
+    var a = liste.filter(function (t) { return t.id === mergeAuswahl[0]; })[0];
+    var b = liste.filter(function (t) { return t.id === mergeAuswahl[1]; })[0];
+    if (!a || !b) return '';
+    // Vorschlag: wer mehr getippt hat, bleibt bestehen - weniger geht beim
+    // Zusammenfuehren verloren, wenn beide dasselbe Spiel unterschiedlich
+    // getippt haben. Die Person am Bildschirm kann das trotzdem umdrehen.
+    var vorschlag = a.tipps >= b.tipps ? a.id : b.id;
+    function radio(t) {
+      var name = t.name ? sicherText(t.name) : 'ohne Namen';
+      return '<label class="mergewahl"><input type="radio" name="mergeziel" value="'
+        + sicherText(t.id) + '"' + (t.id === vorschlag ? ' checked' : '') + '> '
+        + name + ' <span class="kennung">' + sicherText(t.id) + '</span> · '
+        + t.tipps + (t.tipps === 1 ? ' Tipp' : ' Tipps') + '</label>';
+    }
+    return '<div class="mergepanel">'
+      + '<p class="hinweis">Zwei Einträge ausgewählt. Wer bleibt bestehen? '
+      + 'Der andere Eintrag verschwindet, seine Tipps wandern in den '
+      + 'verbleibenden - nur wenn beide dasselbe Spiel unterschiedlich '
+      + 'getippt haben, zählt danach nur noch der Tipp der bleibenden Person.</p>'
+      + radio(a) + radio(b)
+      + '<div class="mergetun">'
+      + '<button type="button" id="mergeausfuehren" class="knopf">Zusammenführen</button>'
+      + '<button type="button" id="mergeabbrechen">Abbrechen</button>'
+      + '</div></div>';
+  }
+
   function zeigeTipprunde(daten) {
+    letzteTipprunde = daten;
     var liste = (daten && daten.tipper) || [];
+    // Kennungen, die es nicht mehr gibt (geloescht, gerade zusammengefuehrt),
+    // faellen aus der Auswahl - sonst haengt das Panel an Geistern.
+    mergeAuswahl = mergeAuswahl.filter(function (id) {
+      return liste.some(function (t) { return t.id === id; });
+    });
     var zeilen = liste.map(function (t) {
       var name = t.name ? sicherText(t.name)
         : '<span class="ohnenamen">ohne Namen</span>';
       return '<tr' + (t.beanstandet ? ' class="beanstandet"' : '') + '>'
-        + '<td>' + name
+        + '<td class="wahl"><input type="checkbox" data-merge="' + sicherText(t.id) + '"'
+        + (mergeAuswahl.indexOf(t.id) >= 0 ? ' checked' : '')
+        + (mergeAuswahl.length >= 2 && mergeAuswahl.indexOf(t.id) < 0 ? ' disabled' : '')
+        + ' aria-label="Für Zusammenführen auswählen"></td>'
+        + '<td class="name">' + name
         + (t.beanstandet ? ' <span class="warnung">beanstandet</span>' : '')
         // Die Kennung ist der einzige Anhaltspunkt, wenn jemand wiederholt
         // auffaellt: benennt sich dieselbe Person neu, steht der neue Name
@@ -851,12 +909,14 @@ table.verteilung td.pkt { text-align: right; font-weight: 600; white-space: nowr
       + '. <strong>Namen entfernen</strong> lässt den Tipp gewertet, nimmt den '
       + 'Eintrag aber aus der öffentlichen Tabelle; die Person kann sich neu '
       + 'benennen. <strong>Löschen</strong> entfernt den Eintrag samt Tipps '
-      + 'endgültig.</p>'
+      + 'endgültig. Zwei Kästchen anhaken, um dieselbe Person mit zwei '
+      + 'Geräten zusammenzuführen.</p>'
       + (zeilen.length
-          ? '<table class="tipperliste"><thead><tr><th>Name</th>'
+          ? '<table class="tipperliste"><thead><tr><th></th><th>Name</th>'
             + '<th class="zahl">Tipps</th><th></th></tr></thead><tbody>'
             + zeilen.join('') + '</tbody></table>'
-          : '<p class="hinweis">Noch niemand hat getippt.</p>');
+          : '<p class="hinweis">Noch niemand hat getippt.</p>')
+      + mergePanel(liste);
     tipprunde.hidden = false;
   }
 
@@ -874,21 +934,69 @@ table.verteilung td.pkt { text-align: right; font-weight: 600; white-space: nowr
       });
   }
 
+  function zugangHolen() {
+    var zugang = [];
+    try { zugang = JSON.parse(sessionStorage.getItem('muru-admin') || '[]'); }
+    catch (f) {}
+    return zugang.length === 2 ? zugang : null;
+  }
+
+  tipprunde.addEventListener('change', function (e) {
+    var kasten = e.target.closest ? e.target.closest('input[data-merge]') : null;
+    if (!kasten) return;
+    var id = kasten.getAttribute('data-merge');
+    if (kasten.checked) {
+      if (mergeAuswahl.length < 2) mergeAuswahl.push(id);
+    } else {
+      mergeAuswahl = mergeAuswahl.filter(function (x) { return x !== id; });
+    }
+    zeigeTipprunde(letzteTipprunde);
+  });
+
   tipprunde.addEventListener('click', function (e) {
+    if (e.target.id === 'mergeabbrechen') {
+      mergeAuswahl = [];
+      zeigeTipprunde(letzteTipprunde);
+      return;
+    }
+    if (e.target.id === 'mergeausfuehren') {
+      var gewaehlt = tipprunde.querySelector('input[name="mergeziel"]:checked');
+      if (!gewaehlt || mergeAuswahl.length !== 2) return;
+      var ziel = gewaehlt.value;
+      var quelle = mergeAuswahl.filter(function (x) { return x !== ziel; })[0];
+      var zugang = zugangHolen();
+      if (!zugang) { location.reload(); return; }
+
+      e.target.disabled = true;
+      fetch(worker + '/tipper-zusammenfuehren', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ benutzer: zugang[0], passwort: zugang[1],
+                               ziel: ziel, quelle: quelle })
+      })
+        .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+        .then(function () {
+          mergeAuswahl = [];
+          holeTipprunde(zugang[0], zugang[1]);
+        })
+        .catch(function () {
+          e.target.disabled = false;
+          window.alert('Hat nicht geklappt. Bitte noch einmal versuchen.');
+        });
+      return;
+    }
+
     var knopf = e.target.closest ? e.target.closest('button[data-geraet]') : null;
     if (!knopf) return;
     var art = knopf.getAttribute('data-art');
     var zeile = knopf.closest('tr');
-    var name = zeile ? zeile.querySelector('td').textContent.trim() : '';
+    var name = zeile ? zeile.querySelector('td.name').textContent.trim() : '';
     var frage = art === 'ganz'
       ? 'Eintrag von "' + name + '" endgültig löschen? Die Tipps sind dann weg.'
       : 'Den Namen "' + name + '" entfernen? Der Tipp bleibt gewertet.';
     if (!window.confirm(frage)) return;
 
-    var zugang = [];
-    try { zugang = JSON.parse(sessionStorage.getItem('muru-admin') || '[]'); }
-    catch (f) {}
-    if (zugang.length !== 2) { location.reload(); return; }
+    var zugang = zugangHolen();
+    if (!zugang) { location.reload(); return; }
 
     knopf.disabled = true;
     fetch(worker + '/tipper-entfernen', {

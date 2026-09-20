@@ -77,6 +77,30 @@ pruefe("Tabelle absteigend sortiert",
        r.daten.tabelle[0].name === "Exakt" && r.daten.tabelle[0].platz === 1,
        JSON.stringify(r.daten.tabelle.map(e => e.name + ":" + e.punkte)));
 
+// Was jede und jeder beim zuletzt entschiedenen Spiel getippt hat, steht
+// mit dabei - Grundlage fuer die Anzeige auf der Seite selbst.
+pruefe("Zuletzt entschiedenes Spiel wird gemeldet",
+       r.daten.letztesSpiel && r.daten.letztesSpiel.gegner === "B"
+       && r.daten.letztesSpiel.ergebnis.join(":") === "30:25",
+       JSON.stringify(r.daten.letztesSpiel));
+const exaktEintrag = r.daten.tabelle.find(e => e.name === "Exakt");
+pruefe("Eigener Tipp fuers letzte Spiel steht dabei",
+       exaktEintrag.letzterTipp && exaktEintrag.letzterTipp.tipp.join(":") === "30:25"
+       && exaktEintrag.letzterTipp.punkte === 10,
+       JSON.stringify(exaktEintrag.letzterTipp));
+const falschEintrag = r.daten.tabelle.find(e => e.name === "Daneben");
+pruefe("Punkte des letzten Tipps koennen 0 sein",
+       falschEintrag.letzterTipp && falschEintrag.letzterTipp.punkte === 0,
+       JSON.stringify(falschEintrag.letzterTipp));
+
+await ruf("/tipp", "POST",
+  { geraet: "keinletzter", spiel: "KOMMEND", heim: 1, gast: 1, name: "OhneLetztenTipp" });
+r = await ruf("/tipptabelle");
+const keinLetzter = r.daten.tabelle.find(e => e.name === "OhneLetztenTipp");
+pruefe("Ohne Tipp fuers letzte Spiel bleibt letzterTipp weg",
+       keinLetzter && keinLetzter.letzterTipp === undefined,
+       JSON.stringify(keinLetzter));
+
 // Punkte stapeln sich ueber Spiele hinweg: ein zusaetzlicher Tipp auf ein
 // noch nicht gespieltes Spiel darf den Punktestand nicht veraendern.
 await ruf("/tipp", "POST", { geraet: "exakt", spiel: "KOMMEND", heim: 1, gast: 1 });

@@ -79,6 +79,40 @@ pruefe("Nach dem Aufraeumen bleiben zwei Eintraege",
 pruefe("und keiner davon ist beanstandet",
        !r.daten.tipper.some(t => t.beanstandet));
 
+// Zusammenfuehren: dieselbe Person mit zwei Geraeten
+speicher.set("tipper:dddd", JSON.stringify({ name: "", tipps: { S2: [10, 12] } }));
+
+r = await ruf("/tipper-zusammenfuehren", { ziel: "aaaa", quelle: "dddd" });
+pruefe("Ohne Anmeldung kein Zusammenfuehren", r.status === 401);
+
+r = await ruf("/tipper-zusammenfuehren", { ...anmeldung, ziel: "aaaa", quelle: "aaaa" });
+pruefe("Ziel gleich Quelle wird abgewiesen", r.status === 400, JSON.stringify(r.daten));
+
+r = await ruf("/tipper-zusammenfuehren", { ...anmeldung, ziel: "aaaa" });
+pruefe("Ohne Quelle wird abgewiesen", r.status === 400);
+
+r = await ruf("/tipper-zusammenfuehren", { ...anmeldung, ziel: "aaaa", quelle: "dddd" });
+pruefe("Zusammenfuehren meldet den neuen Stand",
+       r.status === 200 && r.daten.name === "Edis" && r.daten.tipps === 2,
+       JSON.stringify(r.daten));
+pruefe("Die Quelle ist weg", !speicher.has("tipper:dddd"));
+const zusammen = JSON.parse(speicher.get("tipper:aaaa"));
+pruefe("Beide Tipps stehen jetzt beim Ziel",
+       zusammen.tipps.S1 && zusammen.tipps.S1.join(":") === "30:25"
+       && zusammen.tipps.S2 && zusammen.tipps.S2.join(":") === "10:12",
+       JSON.stringify(zusammen.tipps));
+const indexNachMerge = JSON.parse(speicher.get("tipper-index") || '{"ids":[]}');
+pruefe("Quelle raus aus der Liste, Ziel drin",
+       !indexNachMerge.ids.includes("dddd") && indexNachMerge.ids.includes("aaaa"),
+       JSON.stringify(indexNachMerge.ids));
+
+// Tippen beide dasselbe Spiel unterschiedlich, gilt der Tipp des Ziels
+speicher.set("tipper:eeee", JSON.stringify({ name: "Edis Zweitgeraet", tipps: { S1: [1, 1] } }));
+r = await ruf("/tipper-zusammenfuehren", { ...anmeldung, ziel: "aaaa", quelle: "eeee" });
+pruefe("Ueberschneidung: der Tipp des Ziels bleibt bestehen",
+       JSON.parse(speicher.get("tipper:aaaa")).tipps.S1[0] === 30,
+       JSON.stringify(JSON.parse(speicher.get("tipper:aaaa")).tipps));
+
 let fehler = 0;
 for (const p of pruefungen) {
   if (!p.ok) fehler++;

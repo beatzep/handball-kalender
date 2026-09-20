@@ -373,6 +373,9 @@ details.spiel.vorbei[open] > summary { opacity: 1; }
 .tipptabelle td { padding: 9px 0; border-bottom: 1px solid var(--linie-zart); }
 .tipptabelle td.pl { color: var(--leise); width: 26px; font-size: .86rem; }
 .tipptabelle td.pkt { text-align: right; font-weight: 600; }
+.tipptabelle .letzter { font-size: .8rem; color: var(--leise); margin-top: 2px; }
+.tipptabelle .letzter .gut { color: var(--sieg); }
+.tipptabelle .letzter .schlecht { color: var(--leise); }
 .tipptabelle button.mehr { font: inherit; font-size: inherit; cursor: pointer;
   background: none; border: 0; padding: 0; color: var(--gold-tief);
   font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
