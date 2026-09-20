@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-20T14:54:39+00:00",
+  "aktualisiert": "2026-09-20T15:31:23+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -2680,14 +2680,14 @@
             "platz": 1,
             "team": "SG LaFt - Herren",
             "team_id": 80970,
-            "spiele": 3,
-            "punkte": 6,
-            "siege": 3,
+            "spiele": 4,
+            "punkte": 8,
+            "siege": 4,
             "remis": 0,
             "niederlagen": 0,
-            "tore": 111,
-            "gegentore": 85,
-            "differenz": 26
+            "tore": 142,
+            "gegentore": 112,
+            "differenz": 30
           },
           {
             "platz": 2,
@@ -2810,14 +2810,14 @@
             "platz": 11,
             "team": "HSV Lingenfeld/Schwegenheim 2",
             "team_id": 80982,
-            "spiele": 2,
+            "spiele": 3,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 2,
-            "tore": 56,
-            "gegentore": 63,
-            "differenz": -7
+            "niederlagen": 3,
+            "tore": 83,
+            "gegentore": 94,
+            "differenz": -11
           }
         ]
       },
@@ -6408,7 +6408,7 @@
       "liga": "Oberliga MÄNNLICH",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 3,
+        "runde": 4,
         "phase_id": 12614,
         "gespielt": true,
         "mannschaften": 10,
@@ -6434,27 +6434,27 @@
             "platz": 1,
             "team": "TV Kirrweiler",
             "team_id": 86753,
-            "spiele": 3,
-            "punkte": 6,
-            "siege": 3,
+            "spiele": 4,
+            "punkte": 8,
+            "siege": 4,
             "remis": 0,
             "niederlagen": 0,
-            "tore": 128,
-            "gegentore": 98,
-            "differenz": 30
+            "tore": 159,
+            "gegentore": 128,
+            "differenz": 31
           },
           {
             "platz": 2,
             "team": "TUS Neuhofen",
             "team_id": 81044,
-            "spiele": 3,
+            "spiele": 4,
             "punkte": 6,
             "siege": 3,
             "remis": 0,
-            "niederlagen": 0,
-            "tore": 112,
-            "gegentore": 77,
-            "differenz": 35
+            "niederlagen": 1,
+            "tore": 142,
+            "gegentore": 108,
+            "differenz": 34
           },
           {
             "platz": 3,
@@ -9162,6 +9162,19 @@
           },
           {
             "platz": 2,
+            "team": "Mjsg Bodenheim/Budenheim II",
+            "team_id": 81087,
+            "spiele": 4,
+            "punkte": 5,
+            "siege": 2,
+            "remis": 1,
+            "niederlagen": 1,
+            "tore": 136,
+            "gegentore": 114,
+            "differenz": 22
+          },
+          {
+            "platz": 3,
             "team": "DJK GW Büdesheim",
             "team_id": 81085,
             "spiele": 2,
@@ -9174,7 +9187,7 @@
             "differenz": 14
           },
           {
-            "platz": 3,
+            "platz": 4,
             "team": "TV Edigheim",
             "team_id": 81089,
             "spiele": 3,
@@ -9185,19 +9198,6 @@
             "tore": 90,
             "gegentore": 91,
             "differenz": -1
-          },
-          {
-            "platz": 4,
-            "team": "Mjsg Bodenheim/Budenheim II",
-            "team_id": 81087,
-            "spiele": 3,
-            "punkte": 3,
-            "siege": 1,
-            "remis": 1,
-            "niederlagen": 1,
-            "tore": 88,
-            "gegentore": 85,
-            "differenz": 3
           },
           {
             "platz": 5,
@@ -9242,14 +9242,14 @@
             "platz": 8,
             "team": "TG Waldsee II",
             "team_id": 81093,
-            "spiele": 0,
+            "spiele": 1,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
+            "niederlagen": 1,
+            "tore": 29,
+            "gegentore": 48,
+            "differenz": -19
           },
           {
             "platz": 9,
@@ -10367,13 +10367,27 @@
             "gegentore": 129,
             "differenz": -41
           }
+        ],
+        "fehlend": [
+          {
+            "datum": "2026-09-20T16:00:00",
+            "gegner": "SG Zweibrücken",
+            "ergebnis": {
+              "heim": 27,
+              "gast": 24,
+              "eigene": 27,
+              "fremde": 24,
+              "ausgang": "S"
+            }
+          }
         ]
       },
       "form": [
         "S",
         "S",
         "S",
-        "N"
+        "N",
+        "S"
       ],
       "statistik": {
         "fahrten": {
@@ -10396,16 +10410,16 @@
         },
         "bilanz": {
           "gesamt": {
-            "s": 3,
+            "s": 4,
             "u": 0,
             "n": 1,
-            "spiele": 4
+            "spiele": 5
           },
           "heim": {
-            "s": 2,
+            "s": 3,
             "u": 0,
             "n": 0,
-            "spiele": 2
+            "spiele": 3
           },
           "auswaerts": {
             "s": 1,
@@ -10417,17 +10431,17 @@
         "serien": {
           "ohne_niederlage": 3,
           "aktuell": 1,
-          "aktuell_art": "N"
+          "aktuell_art": "S"
         },
         "krimis": {
           "anzahl": 1,
-          "gesamt": 4,
-          "anteil": 25
+          "gesamt": 5,
+          "anteil": 20
         },
         "tore": {
-          "erzielt": 121,
-          "kassiert": 105,
-          "schnitt": 30.2,
+          "erzielt": 148,
+          "kassiert": 129,
+          "schnitt": 29.6,
           "torreichstes": {
             "gegner": "SG Zweibrücken",
             "stand": "41:27",
@@ -10441,9 +10455,9 @@
             "schnitt": 0
           },
           "frueh": {
-            "spiele": 4,
-            "punkte": 6,
-            "schnitt": 1.5
+            "spiele": 5,
+            "punkte": 8,
+            "schnitt": 1.6
           }
         },
         "gegner": {
@@ -10454,20 +10468,20 @@
             "differenz": -3
           },
           "liebster": {
-            "gegner": "JSG  Mundenheim/Rheingönheim",
+            "gegner": "SG Zweibrücken",
             "spiele": 2,
-            "punkte": 2,
-            "differenz": -3
+            "punkte": 4,
+            "differenz": 17
           }
         },
         "alltag": {}
       },
       "spieler": {
         "quelle": {
-          "spiele_gelaufen": 4,
+          "spiele_gelaufen": 5,
           "mit_bericht": 0,
           "ohne_bericht": 0,
-          "offen": 4
+          "offen": 5
         },
         "schuetzen": [],
         "verteilung": {
@@ -10597,7 +10611,14 @@
           "phase_id": 13264,
           "heim": true,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 0,
+          "ergebnis": {
+            "heim": 27,
+            "gast": 24,
+            "eigene": 27,
+            "fremde": 24,
+            "ausgang": "S"
+          }
         },
         "2627RSWRLCJWA0602": {
           "datum": "2026-09-26T12:30:00",
