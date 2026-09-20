@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-20T13:01:30+00:00",
+  "aktualisiert": "2026-09-20T13:31:16+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -6968,7 +6968,7 @@
       "liga": "Verbandsliga WEIBLICH",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 3,
+        "runde": 4,
         "phase_id": 12587,
         "gespielt": true,
         "mannschaften": 7,
@@ -6987,11 +6987,29 @@
             "runde": 3,
             "platz": 2,
             "punkte": 4
+          },
+          {
+            "runde": 4,
+            "platz": 1,
+            "punkte": 6
           }
         ],
         "eintraege": [
           {
             "platz": 1,
+            "team": "HSG Mutterstadt/Ruchheim Wa",
+            "team_id": 81066,
+            "spiele": 4,
+            "punkte": 6,
+            "siege": 3,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 140,
+            "gegentore": 96,
+            "differenz": 44
+          },
+          {
+            "platz": 2,
             "team": "Vsk Niederfeld",
             "team_id": 81069,
             "spiele": 3,
@@ -7002,19 +7020,6 @@
             "tore": 108,
             "gegentore": 89,
             "differenz": 19
-          },
-          {
-            "platz": 2,
-            "team": "HSG Mutterstadt/Ruchheim Wa",
-            "team_id": 81066,
-            "spiele": 3,
-            "punkte": 4,
-            "siege": 2,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 111,
-            "gegentore": 78,
-            "differenz": 33
           },
           {
             "platz": 3,
@@ -7072,21 +7077,22 @@
             "platz": 7,
             "team": "Vorderpfälzer Luchse",
             "team_id": 81067,
-            "spiele": 3,
+            "spiele": 4,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 3,
-            "tore": 63,
-            "gegentore": 105,
-            "differenz": -42
+            "niederlagen": 4,
+            "tore": 81,
+            "gegentore": 134,
+            "differenz": -53
           }
         ]
       },
       "form": [
         "S",
         "S",
-        "N"
+        "N",
+        "S"
       ],
       "statistik": {
         "fahrten": {
@@ -7109,16 +7115,16 @@
         },
         "bilanz": {
           "gesamt": {
-            "s": 2,
+            "s": 3,
             "u": 0,
             "n": 1,
-            "spiele": 3
+            "spiele": 4
           },
           "heim": {
-            "s": 1,
+            "s": 2,
             "u": 0,
             "n": 0,
-            "spiele": 1
+            "spiele": 2
           },
           "auswaerts": {
             "s": 1,
@@ -7130,17 +7136,17 @@
         "serien": {
           "ohne_niederlage": 2,
           "aktuell": 1,
-          "aktuell_art": "N"
+          "aktuell_art": "S"
         },
         "krimis": {
           "anzahl": 0,
-          "gesamt": 3,
+          "gesamt": 4,
           "anteil": 0
         },
         "tore": {
-          "erzielt": 111,
-          "kassiert": 78,
-          "schnitt": 37.0,
+          "erzielt": 140,
+          "kassiert": 96,
+          "schnitt": 35.0,
           "torreichstes": {
             "gegner": "HSG Landau/Land",
             "stand": "41:25",
@@ -7154,9 +7160,9 @@
             "schnitt": 0
           },
           "frueh": {
-            "spiele": 3,
-            "punkte": 4,
-            "schnitt": 1.33
+            "spiele": 4,
+            "punkte": 6,
+            "schnitt": 1.5
           }
         },
         "gegner": {},
@@ -7164,10 +7170,10 @@
       },
       "spieler": {
         "quelle": {
-          "spiele_gelaufen": 3,
+          "spiele_gelaufen": 4,
           "mit_bericht": 0,
           "ohne_bericht": 0,
-          "offen": 3
+          "offen": 4
         },
         "schuetzen": [],
         "verteilung": {
@@ -7275,7 +7281,14 @@
           "phase_id": 12587,
           "heim": true,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 0,
+          "ergebnis": {
+            "heim": 29,
+            "gast": 18,
+            "eigene": 29,
+            "fremde": 18,
+            "ausgang": "S"
+          }
         },
         "2627RPVLAJWB0501": {
           "datum": "2026-09-27T16:00:00",
@@ -8142,7 +8155,7 @@
       "liga": "Verbandsliga MÄNNLICH",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 3,
+        "runde": 4,
         "phase_id": 12619,
         "gespielt": true,
         "mannschaften": 8,
@@ -8182,6 +8195,19 @@
           },
           {
             "platz": 3,
+            "team": "Hr Göllheim/Eisenberg/Kindenheim/Asselheim",
+            "team_id": 86765,
+            "spiele": 3,
+            "punkte": 4,
+            "siege": 2,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 117,
+            "gegentore": 98,
+            "differenz": 19
+          },
+          {
+            "platz": 4,
             "team": "HSG Eckbachtal II",
             "team_id": 80852,
             "spiele": 1,
@@ -8194,7 +8220,7 @@
             "differenz": 29
           },
           {
-            "platz": 4,
+            "platz": 5,
             "team": "Vsk Niederfeld",
             "team_id": 80854,
             "spiele": 3,
@@ -8205,19 +8231,6 @@
             "tore": 82,
             "gegentore": 71,
             "differenz": 11
-          },
-          {
-            "platz": 5,
-            "team": "Hr Göllheim/Eisenberg/Kindenheim/Asselheim",
-            "team_id": 86765,
-            "spiele": 2,
-            "punkte": 2,
-            "siege": 1,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 69,
-            "gegentore": 70,
-            "differenz": -1
           },
           {
             "platz": 6,
@@ -8249,14 +8262,14 @@
             "platz": 8,
             "team": "Mjsg SG Saulheim/HSV Alzey 3",
             "team_id": 80851,
-            "spiele": 3,
+            "spiele": 4,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 3,
-            "tore": 38,
-            "gegentore": 126,
-            "differenz": -88
+            "niederlagen": 4,
+            "tore": 66,
+            "gegentore": 174,
+            "differenz": -108
           }
         ]
       },
@@ -9802,12 +9815,26 @@
             "gegentore": 151,
             "differenz": -58
           }
+        ],
+        "fehlend": [
+          {
+            "datum": "2026-09-20T14:15:00",
+            "gegner": "Mwsg Kandel/Hagenbach II",
+            "ergebnis": {
+              "heim": 29,
+              "gast": 22,
+              "eigene": 22,
+              "fremde": 29,
+              "ausgang": "N"
+            }
+          }
         ]
       },
       "form": [
         "N",
         "N",
-        "S"
+        "S",
+        "N"
       ],
       "statistik": {
         "fahrten": {
@@ -9832,8 +9859,8 @@
           "gesamt": {
             "s": 1,
             "u": 0,
-            "n": 2,
-            "spiele": 3
+            "n": 3,
+            "spiele": 4
           },
           "heim": {
             "s": 0,
@@ -9844,24 +9871,24 @@
           "auswaerts": {
             "s": 1,
             "u": 0,
-            "n": 1,
-            "spiele": 2
+            "n": 2,
+            "spiele": 3
           }
         },
         "serien": {
           "ohne_niederlage": 1,
           "aktuell": 1,
-          "aktuell_art": "S"
+          "aktuell_art": "N"
         },
         "krimis": {
           "anzahl": 0,
-          "gesamt": 3,
+          "gesamt": 4,
           "anteil": 0
         },
         "tore": {
-          "erzielt": 84,
-          "kassiert": 123,
-          "schnitt": 28.0,
+          "erzielt": 106,
+          "kassiert": 152,
+          "schnitt": 26.5,
           "torreichstes": {
             "gegner": "HSG Dudenhofen/Schifferstadt",
             "stand": "24:52",
@@ -9875,9 +9902,9 @@
             "schnitt": 0
           },
           "frueh": {
-            "spiele": 3,
+            "spiele": 4,
             "punkte": 2,
-            "schnitt": 0.67
+            "schnitt": 0.5
           }
         },
         "gegner": {},
@@ -9885,10 +9912,10 @@
       },
       "spieler": {
         "quelle": {
-          "spiele_gelaufen": 3,
+          "spiele_gelaufen": 4,
           "mit_bericht": 0,
           "ohne_bericht": 0,
-          "offen": 3
+          "offen": 4
         },
         "schuetzen": [],
         "verteilung": {
@@ -9996,7 +10023,14 @@
           "phase_id": 12625,
           "heim": false,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 0,
+          "ergebnis": {
+            "heim": 29,
+            "gast": 22,
+            "eigene": 22,
+            "fremde": 29,
+            "ausgang": "N"
+          }
         },
         "2627RPBKROCJGC0505": {
           "datum": "2026-09-26T00:00:00",
@@ -11879,27 +11913,27 @@
             "platz": 6,
             "team": "SV Bornheim",
             "team_id": 81237,
-            "spiele": 1,
+            "spiele": 2,
             "punkte": 2,
             "siege": 1,
             "remis": 0,
-            "niederlagen": 0,
-            "tore": 26,
-            "gegentore": 9,
-            "differenz": 17
+            "niederlagen": 1,
+            "tore": 42,
+            "gegentore": 32,
+            "differenz": 10
           },
           {
             "platz": 7,
             "team": "JSG Kaiserslautern/Dansenberg",
             "team_id": 87386,
-            "spiele": 1,
-            "punkte": 0,
-            "siege": 0,
+            "spiele": 2,
+            "punkte": 2,
+            "siege": 1,
             "remis": 0,
             "niederlagen": 1,
-            "tore": 14,
-            "gegentore": 19,
-            "differenz": -5
+            "tore": 37,
+            "gegentore": 35,
+            "differenz": 2
           },
           {
             "platz": 8,
