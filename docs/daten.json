@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-20T15:45:40+00:00",
+  "aktualisiert": "2026-09-20T16:16:23+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -82,14 +82,14 @@
             "platz": 4,
             "team": "TG Osthofen 2",
             "team_id": 80920,
-            "spiele": 3,
-            "punkte": 4,
-            "siege": 2,
+            "spiele": 4,
+            "punkte": 6,
+            "siege": 3,
             "remis": 0,
             "niederlagen": 1,
-            "tore": 96,
-            "gegentore": 94,
-            "differenz": 2
+            "tore": 138,
+            "gegentore": 135,
+            "differenz": 3
           },
           {
             "platz": 5,
@@ -119,19 +119,6 @@
           },
           {
             "platz": 7,
-            "team": "TSG MZ-Bretzenheim 2",
-            "team_id": 80919,
-            "spiele": 2,
-            "punkte": 2,
-            "siege": 1,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 56,
-            "gegentore": 57,
-            "differenz": -1
-          },
-          {
-            "platz": 8,
             "team": "HSV Sobernheim H1",
             "team_id": 80912,
             "spiele": 2,
@@ -142,6 +129,19 @@
             "tore": 54,
             "gegentore": 55,
             "differenz": -1
+          },
+          {
+            "platz": 8,
+            "team": "TSG MZ-Bretzenheim 2",
+            "team_id": 80919,
+            "spiele": 3,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 2,
+            "tore": 97,
+            "gegentore": 99,
+            "differenz": -2
           },
           {
             "platz": 9,
