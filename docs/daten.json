@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-20T14:31:30+00:00",
+  "aktualisiert": "2026-09-20T14:52:07+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -2263,7 +2263,24 @@
         "tore": 96,
         "torschuetzen": 13,
         "groesster_anteil": 26,
-        "strafen": 2
+        "strafen": 2,
+        "strafen_abschnitte": {
+          "0-15": 0,
+          "15-30": 0,
+          "30-45": 2,
+          "45-60": 0
+        },
+        "krimis": {
+          "anzahl": 1,
+          "gesamt": 3,
+          "gewonnen": 1,
+          "verloren": 0
+        },
+        "halbzeiten": {
+          "erste_halbzeit": 1.7,
+          "zweite_halbzeit": -1.7,
+          "spiele": 3
+        }
       },
       "letzte_aenderungen": [],
       "spiele": {
@@ -4406,7 +4423,24 @@
         "tore": 106,
         "torschuetzen": 16,
         "groesster_anteil": 25,
-        "strafen": 9
+        "strafen": 9,
+        "strafen_abschnitte": {
+          "0-15": 1,
+          "15-30": 3,
+          "30-45": 3,
+          "45-60": 2
+        },
+        "krimis": {
+          "anzahl": 2,
+          "gesamt": 4,
+          "gewonnen": 1,
+          "verloren": 0
+        },
+        "halbzeiten": {
+          "erste_halbzeit": -1.8,
+          "zweite_halbzeit": 0.5,
+          "spiele": 4
+        }
       },
       "letzte_aenderungen": [],
       "spiele": {
@@ -6066,7 +6100,15 @@
         "tore": 32,
         "torschuetzen": 8,
         "groesster_anteil": 31,
-        "strafen": 2
+        "strafen": 2,
+        "strafen_abschnitte": {
+          "0-15": 0,
+          "15-30": 0,
+          "30-45": 0,
+          "45-60": 2
+        },
+        "krimis": null,
+        "halbzeiten": null
       },
       "letzte_aenderungen": [],
       "spiele": {
