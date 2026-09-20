@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-20T17:16:16+00:00",
+  "aktualisiert": "2026-09-20T17:46:18+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -13091,14 +13091,14 @@
             "platz": 1,
             "team": "Hlz Friesenheim/Hochdorf",
             "team_id": 81291,
-            "spiele": 3,
-            "punkte": 6,
-            "siege": 3,
+            "spiele": 4,
+            "punkte": 8,
+            "siege": 4,
             "remis": 0,
             "niederlagen": 0,
-            "tore": 91,
-            "gegentore": 63,
-            "differenz": 28
+            "tore": 119,
+            "gegentore": 89,
+            "differenz": 30
           },
           {
             "platz": 2,
@@ -13117,14 +13117,14 @@
             "platz": 3,
             "team": "TUS Neuhofen",
             "team_id": 81294,
-            "spiele": 2,
+            "spiele": 3,
             "punkte": 4,
             "siege": 2,
             "remis": 0,
-            "niederlagen": 0,
-            "tore": 58,
-            "gegentore": 42,
-            "differenz": 16
+            "niederlagen": 1,
+            "tore": 84,
+            "gegentore": 70,
+            "differenz": 14
           },
           {
             "platz": 4,
