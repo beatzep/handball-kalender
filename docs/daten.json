@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-19T23:58:09+00:00",
+  "aktualisiert": "2026-09-20T08:33:13+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -13559,14 +13559,14 @@
             "platz": 1,
             "team": "JSG Kaiserslautern/Dansenberg II",
             "team_id": 87382,
-            "spiele": 3,
-            "punkte": 4,
-            "siege": 2,
+            "spiele": 4,
+            "punkte": 6,
+            "siege": 3,
             "remis": 0,
             "niederlagen": 1,
-            "tore": 87,
-            "gegentore": 39,
-            "differenz": 48
+            "tore": 115,
+            "gegentore": 53,
+            "differenz": 62
           },
           {
             "platz": 2,
@@ -13624,14 +13624,14 @@
             "platz": 6,
             "team": "JSG Mundenheim/Rheingönheim 2",
             "team_id": 81334,
-            "spiele": 3,
+            "spiele": 4,
             "punkte": 2,
             "siege": 1,
             "remis": 0,
-            "niederlagen": 2,
-            "tore": 47,
-            "gegentore": 46,
-            "differenz": 1
+            "niederlagen": 3,
+            "tore": 61,
+            "gegentore": 74,
+            "differenz": -13
           },
           {
             "platz": 7,
