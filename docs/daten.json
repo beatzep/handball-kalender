@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-20T15:31:23+00:00",
+  "aktualisiert": "2026-09-20T15:45:40+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -2196,19 +2196,19 @@
         ]
       },
       "gegnervorschau": {
-        "spiele": 3,
+        "spiele": 4,
         "schuetzen": [
           {
             "id": "0c5ccyf",
             "name": "Tim Kratz",
-            "tore": 25,
-            "siebenmeter_tore": 3,
-            "siebenmeter_wuerfe": 4,
+            "tore": 37,
+            "siebenmeter_tore": 4,
+            "siebenmeter_wuerfe": 6,
             "zwei_minuten": 0,
             "verwarnungen": 0,
-            "spiele": 3,
-            "tore_je_spiel": 8.3,
-            "siebenmeter_quote": 75
+            "spiele": 4,
+            "tore_je_spiel": 9.2,
+            "siebenmeter_quote": 67
           },
           {
             "id": "18gg8f3",
@@ -2225,61 +2225,61 @@
           {
             "id": "1mv78t3",
             "name": "Marco Miess",
-            "tore": 11,
+            "tore": 16,
             "siebenmeter_tore": 0,
             "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 1,
-            "verwarnungen": 1,
-            "spiele": 2,
-            "tore_je_spiel": 5.5,
+            "zwei_minuten": 2,
+            "verwarnungen": 2,
+            "spiele": 3,
+            "tore_je_spiel": 5.3,
             "siebenmeter_quote": null
           },
           {
             "id": "0wiheki",
             "name": "Nico Boch",
-            "tore": 9,
+            "tore": 11,
             "siebenmeter_tore": 0,
             "siebenmeter_wuerfe": 0,
             "zwei_minuten": 0,
             "verwarnungen": 0,
-            "spiele": 3,
-            "tore_je_spiel": 3.0,
+            "spiele": 4,
+            "tore_je_spiel": 2.8,
             "siebenmeter_quote": null
           },
           {
             "id": "0zjklnl",
             "name": "Christian Zapf",
-            "tore": 8,
+            "tore": 9,
             "siebenmeter_tore": 0,
             "siebenmeter_wuerfe": 1,
             "zwei_minuten": 0,
             "verwarnungen": 1,
-            "spiele": 2,
-            "tore_je_spiel": 4.0,
+            "spiele": 3,
+            "tore_je_spiel": 3.0,
             "siebenmeter_quote": 0
           }
         ],
-        "weitere": 8,
-        "tore": 96,
-        "torschuetzen": 13,
-        "groesster_anteil": 26,
-        "strafen": 2,
+        "weitere": 10,
+        "tore": 138,
+        "torschuetzen": 15,
+        "groesster_anteil": 27,
+        "strafen": 8,
         "strafen_abschnitte": {
           "0-15": 0,
-          "15-30": 0,
-          "30-45": 2,
-          "45-60": 0
+          "15-30": 1,
+          "30-45": 5,
+          "45-60": 2
         },
         "krimis": {
-          "anzahl": 1,
-          "gesamt": 3,
-          "gewonnen": 1,
+          "anzahl": 2,
+          "gesamt": 4,
+          "gewonnen": 2,
           "verloren": 0
         },
         "halbzeiten": {
-          "erste_halbzeit": 1.7,
-          "zweite_halbzeit": -1.7,
-          "spiele": 3
+          "erste_halbzeit": 2.2,
+          "zweite_halbzeit": -1.8,
+          "spiele": 4
         }
       },
       "letzte_aenderungen": [],
@@ -7093,27 +7093,27 @@
             "platz": 5,
             "team": "HSG Landau/Land",
             "team_id": 81073,
-            "spiele": 1,
-            "punkte": 0,
-            "siege": 0,
+            "spiele": 2,
+            "punkte": 2,
+            "siege": 1,
             "remis": 0,
             "niederlagen": 1,
-            "tore": 25,
-            "gegentore": 41,
-            "differenz": -16
+            "tore": 53,
+            "gegentore": 66,
+            "differenz": -13
           },
           {
             "platz": 6,
             "team": "HSG TSG/1.FC-Kaiserslautern",
             "team_id": 81068,
-            "spiele": 2,
+            "spiele": 3,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 2,
-            "tore": 34,
-            "gegentore": 68,
-            "differenz": -34
+            "niederlagen": 3,
+            "tore": 59,
+            "gegentore": 96,
+            "differenz": -37
           },
           {
             "platz": 7,
@@ -10312,6 +10312,11 @@
             "runde": 4,
             "platz": 2,
             "punkte": 6
+          },
+          {
+            "runde": 5,
+            "platz": 2,
+            "punkte": 8
           }
         ],
         "eintraege": [
@@ -10332,14 +10337,14 @@
             "platz": 2,
             "team": "HSG Mutterstadt/Ruchheim",
             "team_id": 86951,
-            "spiele": 4,
-            "punkte": 6,
-            "siege": 3,
+            "spiele": 5,
+            "punkte": 8,
+            "siege": 4,
             "remis": 0,
             "niederlagen": 1,
-            "tore": 121,
-            "gegentore": 105,
-            "differenz": 16
+            "tore": 148,
+            "gegentore": 129,
+            "differenz": 19
           },
           {
             "platz": 3,
@@ -10358,27 +10363,14 @@
             "platz": 4,
             "team": "SG Zweibrücken",
             "team_id": 86947,
-            "spiele": 4,
+            "spiele": 5,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 4,
-            "tore": 88,
-            "gegentore": 129,
-            "differenz": -41
-          }
-        ],
-        "fehlend": [
-          {
-            "datum": "2026-09-20T16:00:00",
-            "gegner": "SG Zweibrücken",
-            "ergebnis": {
-              "heim": 27,
-              "gast": 24,
-              "eigene": 27,
-              "fremde": 24,
-              "ausgang": "S"
-            }
+            "niederlagen": 5,
+            "tore": 112,
+            "gegentore": 156,
+            "differenz": -44
           }
         ]
       },
