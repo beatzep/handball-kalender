@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-20T14:01:12+00:00",
+  "aktualisiert": "2026-09-20T14:31:30+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -2687,6 +2687,19 @@
           },
           {
             "platz": 3,
+            "team": "TUS Heiligenstein 2",
+            "team_id": 80983,
+            "spiele": 4,
+            "punkte": 5,
+            "siege": 2,
+            "remis": 1,
+            "niederlagen": 1,
+            "tore": 118,
+            "gegentore": 107,
+            "differenz": 11
+          },
+          {
+            "platz": 4,
             "team": "TSV Kandel 2",
             "team_id": 80975,
             "spiele": 4,
@@ -2699,7 +2712,7 @@
             "differenz": -5
           },
           {
-            "platz": 4,
+            "platz": 5,
             "team": "HSG Grethen/Maxdorf",
             "team_id": 80984,
             "spiele": 3,
@@ -2710,19 +2723,6 @@
             "tore": 83,
             "gegentore": 88,
             "differenz": -5
-          },
-          {
-            "platz": 5,
-            "team": "TUS Heiligenstein 2",
-            "team_id": 80983,
-            "spiele": 3,
-            "punkte": 3,
-            "siege": 1,
-            "remis": 1,
-            "niederlagen": 1,
-            "tore": 91,
-            "gegentore": 87,
-            "differenz": 4
           },
           {
             "platz": 6,
@@ -2767,14 +2767,14 @@
             "platz": 9,
             "team": "TUS Neuhofen 2",
             "team_id": 80976,
-            "spiele": 2,
+            "spiele": 3,
             "punkte": 1,
             "siege": 0,
             "remis": 1,
-            "niederlagen": 1,
-            "tore": 51,
-            "gegentore": 58,
-            "differenz": -7
+            "niederlagen": 2,
+            "tore": 71,
+            "gegentore": 85,
+            "differenz": -14
           },
           {
             "platz": 10,
@@ -6390,19 +6390,6 @@
         "eintraege": [
           {
             "platz": 1,
-            "team": "TUS Neuhofen",
-            "team_id": 81044,
-            "spiele": 3,
-            "punkte": 6,
-            "siege": 3,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 112,
-            "gegentore": 77,
-            "differenz": 35
-          },
-          {
-            "platz": 2,
             "team": "TV Kirrweiler",
             "team_id": 86753,
             "spiele": 3,
@@ -6413,6 +6400,19 @@
             "tore": 128,
             "gegentore": 98,
             "differenz": 30
+          },
+          {
+            "platz": 2,
+            "team": "TUS Neuhofen",
+            "team_id": 81044,
+            "spiele": 3,
+            "punkte": 6,
+            "siege": 3,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 112,
+            "gegentore": 77,
+            "differenz": 35
           },
           {
             "platz": 3,
@@ -6455,6 +6455,19 @@
           },
           {
             "platz": 6,
+            "team": "HSG Landau/Land",
+            "team_id": 81042,
+            "spiele": 3,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 2,
+            "tore": 111,
+            "gegentore": 102,
+            "differenz": 9
+          },
+          {
+            "platz": 7,
             "team": "Südpfalz Tiger",
             "team_id": 81050,
             "spiele": 2,
@@ -6465,19 +6478,6 @@
             "tore": 64,
             "gegentore": 69,
             "differenz": -5
-          },
-          {
-            "platz": 7,
-            "team": "HSG Landau/Land",
-            "team_id": 81042,
-            "spiele": 2,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 2,
-            "tore": 67,
-            "gegentore": 71,
-            "differenz": -4
           },
           {
             "platz": 8,
@@ -6494,19 +6494,6 @@
           },
           {
             "platz": 9,
-            "team": "TSV Speyer",
-            "team_id": 81046,
-            "spiele": 2,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 2,
-            "tore": 61,
-            "gegentore": 90,
-            "differenz": -29
-          },
-          {
-            "platz": 10,
             "team": "TS RODALBEN mA",
             "team_id": 81045,
             "spiele": 3,
@@ -6517,6 +6504,19 @@
             "tore": 98,
             "gegentore": 127,
             "differenz": -29
+          },
+          {
+            "platz": 10,
+            "team": "TSV Speyer",
+            "team_id": 81046,
+            "spiele": 3,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 3,
+            "tore": 92,
+            "gegentore": 134,
+            "differenz": -42
           }
         ]
       },
@@ -7534,7 +7534,7 @@
           },
           {
             "runde": 4,
-            "platz": 4,
+            "platz": 5,
             "punkte": 4
           }
         ],
@@ -7580,6 +7580,19 @@
           },
           {
             "platz": 4,
+            "team": "SF Budenheim 2",
+            "team_id": 80836,
+            "spiele": 3,
+            "punkte": 4,
+            "siege": 2,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 91,
+            "gegentore": 81,
+            "differenz": 10
+          },
+          {
+            "platz": 5,
             "team": "HSG Mutterstadt/Ruchheim",
             "team_id": 86762,
             "spiele": 4,
@@ -7592,30 +7605,17 @@
             "differenz": -7
           },
           {
-            "platz": 5,
+            "platz": 6,
             "team": "TG Waldsee",
             "team_id": 80831,
-            "spiele": 3,
+            "spiele": 4,
             "punkte": 3,
             "siege": 1,
             "remis": 1,
-            "niederlagen": 1,
-            "tore": 93,
-            "gegentore": 100,
-            "differenz": -7
-          },
-          {
-            "platz": 6,
-            "team": "SF Budenheim 2",
-            "team_id": 80836,
-            "spiele": 2,
-            "punkte": 2,
-            "siege": 1,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 54,
-            "gegentore": 47,
-            "differenz": 7
+            "niederlagen": 2,
+            "tore": 127,
+            "gegentore": 137,
+            "differenz": -10
           },
           {
             "platz": 7,
@@ -8171,14 +8171,14 @@
             "platz": 1,
             "team": "JSG Mundenheim/Rheingönheim",
             "team_id": 80855,
-            "spiele": 3,
-            "punkte": 5,
-            "siege": 2,
+            "spiele": 4,
+            "punkte": 7,
+            "siege": 3,
             "remis": 1,
             "niederlagen": 0,
-            "tore": 99,
-            "gegentore": 53,
-            "differenz": 46
+            "tore": 137,
+            "gegentore": 88,
+            "differenz": 49
           },
           {
             "platz": 2,
@@ -8210,14 +8210,14 @@
             "platz": 4,
             "team": "HSG Eckbachtal II",
             "team_id": 80852,
-            "spiele": 1,
+            "spiele": 2,
             "punkte": 2,
             "siege": 1,
             "remis": 0,
-            "niederlagen": 0,
-            "tore": 45,
-            "gegentore": 16,
-            "differenz": 29
+            "niederlagen": 1,
+            "tore": 80,
+            "gegentore": 54,
+            "differenz": 26
           },
           {
             "platz": 5,
@@ -8776,14 +8776,14 @@
             "platz": 2,
             "team": "Hf Untere Saar",
             "team_id": 86921,
-            "spiele": 4,
-            "punkte": 6,
-            "siege": 3,
+            "spiele": 5,
+            "punkte": 8,
+            "siege": 4,
             "remis": 0,
             "niederlagen": 1,
-            "tore": 115,
-            "gegentore": 100,
-            "differenz": 15
+            "tore": 143,
+            "gegentore": 120,
+            "differenz": 23
           },
           {
             "platz": 3,
@@ -8802,14 +8802,14 @@
             "platz": 4,
             "team": "JSG Osthofen/Worms",
             "team_id": 86920,
-            "spiele": 4,
+            "spiele": 5,
             "punkte": 2,
             "siege": 1,
             "remis": 0,
-            "niederlagen": 3,
-            "tore": 98,
-            "gegentore": 126,
-            "differenz": -28
+            "niederlagen": 4,
+            "tore": 118,
+            "gegentore": 154,
+            "differenz": -36
           }
         ]
       },
@@ -9693,7 +9693,12 @@
           },
           {
             "runde": 3,
-            "platz": 5,
+            "platz": 7,
+            "punkte": 2
+          },
+          {
+            "runde": 4,
+            "platz": 7,
             "punkte": 2
           }
         ],
@@ -9728,14 +9733,14 @@
             "platz": 3,
             "team": "Mwsg Kandel/Hagenbach II",
             "team_id": 81124,
-            "spiele": 2,
-            "punkte": 4,
-            "siege": 2,
+            "spiele": 3,
+            "punkte": 6,
+            "siege": 3,
             "remis": 0,
             "niederlagen": 0,
-            "tore": 68,
-            "gegentore": 59,
-            "differenz": 9
+            "tore": 97,
+            "gegentore": 81,
+            "differenz": 16
           },
           {
             "platz": 4,
@@ -9752,19 +9757,6 @@
           },
           {
             "platz": 5,
-            "team": "HSG Mutterstadt/Ruchheim II",
-            "team_id": 81130,
-            "spiele": 3,
-            "punkte": 2,
-            "siege": 1,
-            "remis": 0,
-            "niederlagen": 2,
-            "tore": 84,
-            "gegentore": 123,
-            "differenz": -39
-          },
-          {
-            "platz": 6,
             "team": "Vsk Niederfeld",
             "team_id": 81116,
             "spiele": 3,
@@ -9777,7 +9769,7 @@
             "differenz": 9
           },
           {
-            "platz": 7,
+            "platz": 6,
             "team": "JSG Rodalben/Thaleischweiler II",
             "team_id": 81123,
             "spiele": 3,
@@ -9788,6 +9780,19 @@
             "tore": 89,
             "gegentore": 103,
             "differenz": -14
+          },
+          {
+            "platz": 7,
+            "team": "HSG Mutterstadt/Ruchheim II",
+            "team_id": 81130,
+            "spiele": 4,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 3,
+            "tore": 106,
+            "gegentore": 152,
+            "differenz": -46
           },
           {
             "platz": 8,
@@ -9814,19 +9819,6 @@
             "tore": 93,
             "gegentore": 151,
             "differenz": -58
-          }
-        ],
-        "fehlend": [
-          {
-            "datum": "2026-09-20T14:15:00",
-            "gegner": "Mwsg Kandel/Hagenbach II",
-            "ergebnis": {
-              "heim": 29,
-              "gast": 22,
-              "eigene": 22,
-              "fremde": 29,
-              "ausgang": "N"
-            }
           }
         ]
       },
