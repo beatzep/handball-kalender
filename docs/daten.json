@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-21T08:53:43+00:00",
+  "aktualisiert": "2026-09-22T08:30:25+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -10788,13 +10788,13 @@
             "team": "Mjsg SG Saulheim/HSV Alzey 3",
             "team_id": 81152,
             "spiele": 2,
-            "punkte": 2,
-            "siege": 1,
+            "punkte": 0,
+            "siege": 0,
             "remis": 0,
-            "niederlagen": 1,
-            "tore": 45,
-            "gegentore": 50,
-            "differenz": -5
+            "niederlagen": 0,
+            "tore": 0,
+            "gegentore": 0,
+            "differenz": 0
           }
         ]
       },
