@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-22T08:30:25+00:00",
+  "aktualisiert": "2026-09-23T08:32:23+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -8206,6 +8206,11 @@
             "runde": 1,
             "platz": 7,
             "punkte": 0
+          },
+          {
+            "runde": 2,
+            "platz": 7,
+            "punkte": 0
           }
         ],
         "eintraege": [
@@ -8226,14 +8231,14 @@
             "platz": 2,
             "team": "Mjsg Büdesheim/Zotzenheim/St.Johann/Sprendlingen",
             "team_id": 80843,
-            "spiele": 3,
-            "punkte": 5,
-            "siege": 2,
+            "spiele": 4,
+            "punkte": 7,
+            "siege": 3,
             "remis": 1,
             "niederlagen": 0,
-            "tore": 87,
-            "gegentore": 66,
-            "differenz": 21
+            "tore": 130,
+            "gegentore": 93,
+            "differenz": 37
           },
           {
             "platz": 3,
@@ -8291,14 +8296,14 @@
             "platz": 7,
             "team": "HSG Mutterstadt/Ruchheim II",
             "team_id": 80857,
-            "spiele": 1,
+            "spiele": 2,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 1,
-            "tore": 33,
-            "gegentore": 44,
-            "differenz": -11
+            "niederlagen": 2,
+            "tore": 60,
+            "gegentore": 87,
+            "differenz": -27
           },
           {
             "platz": 8,
@@ -8316,6 +8321,7 @@
         ]
       },
       "form": [
+        "N",
         "N",
         "N",
         "N",
@@ -8346,8 +8352,8 @@
           "gesamt": {
             "s": 0,
             "u": 0,
-            "n": 4,
-            "spiele": 4
+            "n": 5,
+            "spiele": 5
           },
           "heim": {
             "s": 0,
@@ -8358,24 +8364,24 @@
           "auswaerts": {
             "s": 0,
             "u": 0,
-            "n": 2,
-            "spiele": 2
+            "n": 3,
+            "spiele": 3
           }
         },
         "serien": {
           "ohne_niederlage": 0,
-          "aktuell": 4,
+          "aktuell": 5,
           "aktuell_art": "N"
         },
         "krimis": {
           "anzahl": 0,
-          "gesamt": 4,
+          "gesamt": 5,
           "anteil": 0
         },
         "tore": {
-          "erzielt": 75,
-          "kassiert": 127,
-          "schnitt": 18.8,
+          "erzielt": 102,
+          "kassiert": 170,
+          "schnitt": 20.4,
           "torreichstes": {
             "gegner": "Hr Göllheim/Eisenberg/Kindenheim/Asselheim",
             "stand": "33:44",
@@ -8384,9 +8390,9 @@
         },
         "anwurf": {
           "spaet": {
-            "spiele": 0,
+            "spiele": 1,
             "punkte": 0,
-            "schnitt": 0
+            "schnitt": 0.0
           },
           "frueh": {
             "spiele": 4,
@@ -8412,10 +8418,10 @@
       },
       "spieler": {
         "quelle": {
-          "spiele_gelaufen": 4,
+          "spiele_gelaufen": 5,
           "mit_bericht": 0,
           "ohne_bericht": 0,
-          "offen": 4
+          "offen": 5
         },
         "schuetzen": [],
         "verteilung": {
@@ -8560,7 +8566,14 @@
           "phase_id": 12619,
           "heim": false,
           "ohne_zeit": false,
-          "sequence": 1
+          "sequence": 1,
+          "ergebnis": {
+            "heim": 43,
+            "gast": 27,
+            "eigene": 27,
+            "fremde": 43,
+            "ausgang": "N"
+          }
         },
         "2627RPVLBJMC0503": {
           "datum": "2026-09-27T13:30:00",
