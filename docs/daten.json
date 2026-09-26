@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-26T15:30:49+00:00",
+  "aktualisiert": "2026-09-26T16:00:55+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -4791,13 +4791,26 @@
           },
           {
             "runde": 2,
-            "platz": 3,
+            "platz": 5,
             "punkte": 4
           }
         ],
         "eintraege": [
           {
             "platz": 1,
+            "team": "FSG Kaiserslautern/Dansenberg",
+            "team_id": 80997,
+            "spiele": 3,
+            "punkte": 6,
+            "siege": 3,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 106,
+            "gegentore": 69,
+            "differenz": 37
+          },
+          {
+            "platz": 2,
             "team": "FSG Gonsenheim/Schott",
             "team_id": 80998,
             "spiele": 4,
@@ -4810,33 +4823,7 @@
             "differenz": -5
           },
           {
-            "platz": 2,
-            "team": "FSG Kaiserslautern/Dansenberg",
-            "team_id": 80997,
-            "spiele": 2,
-            "punkte": 4,
-            "siege": 2,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 69,
-            "gegentore": 41,
-            "differenz": 28
-          },
-          {
             "platz": 3,
-            "team": "HSG Mutterstadt/Ruchheim Damen",
-            "team_id": 80999,
-            "spiele": 2,
-            "punkte": 4,
-            "siege": 2,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 71,
-            "gegentore": 54,
-            "differenz": 17
-          },
-          {
-            "platz": 4,
             "team": "SV Bornheim",
             "team_id": 81001,
             "spiele": 3,
@@ -4849,7 +4836,7 @@
             "differenz": 11
           },
           {
-            "platz": 5,
+            "platz": 4,
             "team": "TV Kirrweiler",
             "team_id": 81003,
             "spiele": 3,
@@ -4860,6 +4847,19 @@
             "tore": 82,
             "gegentore": 77,
             "differenz": 5
+          },
+          {
+            "platz": 5,
+            "team": "HSG Mutterstadt/Ruchheim Damen",
+            "team_id": 80999,
+            "spiele": 2,
+            "punkte": 4,
+            "siege": 2,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 71,
+            "gegentore": 54,
+            "differenz": 17
           },
           {
             "platz": 6,
@@ -4917,14 +4917,14 @@
             "platz": 10,
             "team": "FSG Selz-Wiesbach",
             "team_id": 81002,
-            "spiele": 3,
+            "spiele": 4,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 3,
-            "tore": 79,
-            "gegentore": 101,
-            "differenz": -22
+            "niederlagen": 4,
+            "tore": 107,
+            "gegentore": 138,
+            "differenz": -31
           }
         ]
       },
@@ -8729,7 +8729,7 @@
       "liga": "Regionalliga SW B-Jugend weiblich",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 5,
+        "runde": 6,
         "phase_id": 13258,
         "gespielt": true,
         "mannschaften": 4,
@@ -8758,6 +8758,11 @@
             "runde": 5,
             "platz": 3,
             "punkte": 2
+          },
+          {
+            "runde": 6,
+            "platz": 3,
+            "punkte": 4
           }
         ],
         "eintraege": [
@@ -8778,27 +8783,27 @@
             "platz": 2,
             "team": "Hf Untere Saar",
             "team_id": 86921,
-            "spiele": 5,
+            "spiele": 6,
             "punkte": 8,
             "siege": 4,
             "remis": 0,
-            "niederlagen": 1,
-            "tore": 143,
-            "gegentore": 120,
-            "differenz": 23
+            "niederlagen": 2,
+            "tore": 172,
+            "gegentore": 152,
+            "differenz": 20
           },
           {
             "platz": 3,
             "team": "HSG Mutterstadt/Ruchheim",
             "team_id": 86917,
-            "spiele": 5,
-            "punkte": 2,
-            "siege": 1,
+            "spiele": 6,
+            "punkte": 4,
+            "siege": 2,
             "remis": 0,
             "niederlagen": 4,
-            "tore": 138,
-            "gegentore": 162,
-            "differenz": -24
+            "tore": 170,
+            "gegentore": 191,
+            "differenz": -21
           },
           {
             "platz": 4,
@@ -8812,19 +8817,6 @@
             "tore": 118,
             "gegentore": 154,
             "differenz": -36
-          }
-        ],
-        "fehlend": [
-          {
-            "datum": "2026-09-26T15:30:00",
-            "gegner": "Hf Untere Saar",
-            "ergebnis": {
-              "heim": 32,
-              "gast": 29,
-              "eigene": 32,
-              "fremde": 29,
-              "ausgang": "S"
-            }
           }
         ]
       },
@@ -9171,14 +9163,14 @@
             "platz": 4,
             "team": "TV Edigheim",
             "team_id": 81089,
-            "spiele": 3,
+            "spiele": 4,
             "punkte": 4,
             "siege": 2,
             "remis": 0,
-            "niederlagen": 1,
-            "tore": 90,
-            "gegentore": 91,
-            "differenz": -1
+            "niederlagen": 2,
+            "tore": 133,
+            "gegentore": 135,
+            "differenz": -2
           },
           {
             "platz": 5,
@@ -9223,14 +9215,14 @@
             "platz": 8,
             "team": "TG Waldsee II",
             "team_id": 81093,
-            "spiele": 1,
-            "punkte": 0,
-            "siege": 0,
+            "spiele": 2,
+            "punkte": 2,
+            "siege": 1,
             "remis": 0,
             "niederlagen": 1,
-            "tore": 29,
-            "gegentore": 48,
-            "differenz": -19
+            "tore": 73,
+            "gegentore": 91,
+            "differenz": -18
           },
           {
             "platz": 9,
