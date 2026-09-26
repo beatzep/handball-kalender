@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-26T16:05:56+00:00",
+  "aktualisiert": "2026-09-26T16:46:26+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -11797,7 +11797,7 @@
       "liga": "Bezirksoberliga WEIBLICH",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 4,
+        "runde": 5,
         "phase_id": 12594,
         "gespielt": true,
         "mannschaften": 9,
@@ -11868,6 +11868,19 @@
           },
           {
             "platz": 5,
+            "team": "JSG Kaiserslautern/Dansenberg",
+            "team_id": 87386,
+            "spiele": 3,
+            "punkte": 4,
+            "siege": 2,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 59,
+            "gegentore": 49,
+            "differenz": 10
+          },
+          {
+            "platz": 6,
             "team": "TV 03 Wörth",
             "team_id": 81242,
             "spiele": 3,
@@ -11880,7 +11893,7 @@
             "differenz": 6
           },
           {
-            "platz": 6,
+            "platz": 7,
             "team": "SV Bornheim",
             "team_id": 81237,
             "spiele": 2,
@@ -11891,19 +11904,6 @@
             "tore": 42,
             "gegentore": 32,
             "differenz": 10
-          },
-          {
-            "platz": 7,
-            "team": "JSG Kaiserslautern/Dansenberg",
-            "team_id": 87386,
-            "spiele": 2,
-            "punkte": 2,
-            "siege": 1,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 37,
-            "gegentore": 35,
-            "differenz": 2
           },
           {
             "platz": 8,
@@ -11922,14 +11922,14 @@
             "platz": 9,
             "team": "TSG MZ-Bretzenheim",
             "team_id": 81243,
-            "spiele": 4,
+            "spiele": 5,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 4,
-            "tore": 50,
-            "gegentore": 99,
-            "differenz": -49
+            "niederlagen": 5,
+            "tore": 64,
+            "gegentore": 121,
+            "differenz": -57
           }
         ]
       },
