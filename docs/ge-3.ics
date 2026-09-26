@@ -28,7 +28,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:2627RPBKRKEJGD0103@handball.net
-DTSTAMP:20260923T083222Z
+DTSTAMP:20260926T122435Z
 DTSTART;TZID=Europe/Berlin:20260830T161500
 DTEND;TZID=Europe/Berlin:20260830T181500
 SUMMARY:🚗 TV Offenbach 4 12:15 MuRu gE III
@@ -55,7 +55,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RPBKRKEJGD0204@handball.net
-DTSTAMP:20260923T083222Z
+DTSTAMP:20260926T122435Z
 DTSTART;TZID=Europe/Berlin:20260906T100000
 DTEND;TZID=Europe/Berlin:20260906T120000
 SUMMARY:🏠 MuRu gE III 2:29 TUS Heiligenstein
@@ -78,201 +78,6 @@ BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-PT3H
 DESCRIPTION:Gleich Spiel: 🏠 MuRu gE III 2:29 TUS Heiligenstein
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:2627RPBKRKEJGD0304@handball.net
-DTSTAMP:20260923T083222Z
-DTSTART;TZID=Europe/Berlin:20260912T110000
-DTEND;TZID=Europe/Berlin:20260912T130000
-SUMMARY:🚗 JSG Mundenheim/Rheingönheim 3 - MuRu gE III
-DESCRIPTION:Auswärtsspiel gegen JSG Mundenheim/Rheingönheim 3\nAnwurf: 11
- :00 Uhr\nLiga: Bezirksklasse GEMISCHT\nSpieltag: 3\nSpielnummer: 2627RPBKR
- KEJGD0304\nhttps://www.handball.net/match/385464
-URL:https://www.handball.net/match/385464
-SEQUENCE:0
-STATUS:CONFIRMED
-TRANSP:OPAQUE
-CATEGORIES:Handball,Auswärtsspiel
-LOCATION:Heinrich-Ries-Halle Ludwigshafen\, Pettenkoferstraße\, 67063 Ludw
- igshafen-Friesenheim
-GEO:49.486096;8.422384
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Morgen Spiel: 🚗 JSG Mundenheim/Rheingönheim 3 - MuRu gE III
-END:VALARM
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-PT3H
-DESCRIPTION:Gleich Spiel: 🚗 JSG Mundenheim/Rheingönheim 3 - MuRu gE III
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:2627RPBKRKEJGD0401@handball.net
-DTSTAMP:20260923T083222Z
-DTSTART;TZID=Europe/Berlin:20260919T120000
-DTEND;TZID=Europe/Berlin:20260919T140000
-SUMMARY:🏠 MuRu gE III - HSG Dudenhofen/Schifferstadt 4
-DESCRIPTION:Heimspiel gegen HSG Dudenhofen/Schifferstadt 4\nAnwurf: 12:00 U
- hr\nLiga: Bezirksklasse GEMISCHT\nSpieltag: 4\nSpielnummer: 2627RPBKRKEJGD
- 0401\nhttps://www.handball.net/match/385466
-URL:https://www.handball.net/match/385466
-SEQUENCE:0
-STATUS:CONFIRMED
-TRANSP:OPAQUE
-CATEGORIES:Handball,Heimspiel
-LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
-GEO:49.444531;8.359517
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Morgen Spiel: 🏠 MuRu gE III - HSG Dudenhofen/Schifferstadt 4
-END:VALARM
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-PT3H
-DESCRIPTION:Gleich Spiel: 🏠 MuRu gE III - HSG Dudenhofen/Schifferstadt 4
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:2627RPBKRKEJGD0501@handball.net
-DTSTAMP:20260923T083222Z
-DTSTART;TZID=Europe/Berlin:20260927T123000
-DTEND;TZID=Europe/Berlin:20260927T143000
-SUMMARY:🚗 TG Waldsee II - MuRu gE III
-DESCRIPTION:Auswärtsspiel gegen TG Waldsee II\nAnwurf: 12:30 Uhr\nLiga: Be
- zirksklasse GEMISCHT\nSpieltag: 5\nSpielnummer: 2627RPBKRKEJGD0501\nhttps:
- //www.handball.net/match/385471
-URL:https://www.handball.net/match/385471
-SEQUENCE:0
-STATUS:CONFIRMED
-TRANSP:OPAQUE
-CATEGORIES:Handball,Auswärtsspiel
-LOCATION:Rheinauenhalle 1 Waldsee\, Wörthstraße 1\, 67165 Waldsee
-GEO:49.395580;8.448379
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Morgen Spiel: 🚗 TG Waldsee II - MuRu gE III
-END:VALARM
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-PT3H
-DESCRIPTION:Gleich Spiel: 🚗 TG Waldsee II - MuRu gE III
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:2627RPBKRKEJGD0605@handball.net
-DTSTAMP:20260923T083222Z
-DTSTART;TZID=Europe/Berlin:20261025T100000
-DTEND;TZID=Europe/Berlin:20261025T120000
-SUMMARY:🏠 MuRu gE III - TSV Speyer II
-DESCRIPTION:Heimspiel gegen TSV Speyer II\nAnwurf: 10:00 Uhr\nLiga: Bezirks
- klasse GEMISCHT\nSpieltag: 6\nSpielnummer: 2627RPBKRKEJGD0605\nhttps://www
- .handball.net/match/385480
-URL:https://www.handball.net/match/385480
-SEQUENCE:0
-STATUS:CONFIRMED
-TRANSP:OPAQUE
-CATEGORIES:Handball,Heimspiel
-LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
-  67071 Ludwigshafen
-GEO:49.487079;8.364587
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Morgen Spiel: 🏠 MuRu gE III - TSV Speyer II
-END:VALARM
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-PT3H
-DESCRIPTION:Gleich Spiel: 🏠 MuRu gE III - TSV Speyer II
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:2627RPBKRKEJGD0702@handball.net
-DTSTAMP:20260923T083222Z
-DTSTART;TZID=Europe/Berlin:20261108T140000
-DTEND;TZID=Europe/Berlin:20261108T160000
-SUMMARY:🚗 JSG Kaiserslautern/Dansenberg III - MuRu gE III
-DESCRIPTION:Auswärtsspiel gegen JSG Kaiserslautern/Dansenberg III\nAnwurf:
-  14:00 Uhr\nLiga: Bezirksklasse GEMISCHT\nSpieltag: 7\nSpielnummer: 2627RP
- BKRKEJGD0702\nhttps://www.handball.net/match/385482
-URL:https://www.handball.net/match/385482
-SEQUENCE:0
-STATUS:CONFIRMED
-TRANSP:OPAQUE
-CATEGORIES:Handball,Auswärtsspiel
-LOCATION:Schillerschule Kaiserslautern\, Julius-Küchler-Str. 1\, 67659 Kai
- serslautern
-GEO:49.445240;7.743207
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Morgen Spiel: 🚗 JSG Kaiserslautern/Dansenberg III - MuRu gE 
- III
-END:VALARM
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-PT3H
-DESCRIPTION:Gleich Spiel: 🚗 JSG Kaiserslautern/Dansenberg III - MuRu gE 
- III
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:2627RPBKRKEJGD0803@handball.net
-DTSTAMP:20260923T083222Z
-DTSTART;TZID=Europe/Berlin:20261114T123000
-DTEND;TZID=Europe/Berlin:20261114T143000
-SUMMARY:🏠 MuRu gE III - Hlz Friesenheim/Hochdorf 3
-DESCRIPTION:Heimspiel gegen Hlz Friesenheim/Hochdorf 3\nAnwurf: 12:30 Uhr\n
- Liga: Bezirksklasse GEMISCHT\nSpieltag: 8\nSpielnummer: 2627RPBKRKEJGD0803
- \nhttps://www.handball.net/match/385488
-URL:https://www.handball.net/match/385488
-SEQUENCE:0
-STATUS:CONFIRMED
-TRANSP:OPAQUE
-CATEGORIES:Handball,Heimspiel
-LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
-  67071 Ludwigshafen
-GEO:49.487079;8.364587
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Morgen Spiel: 🏠 MuRu gE III - Hlz Friesenheim/Hochdorf 3
-END:VALARM
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-PT3H
-DESCRIPTION:Gleich Spiel: 🏠 MuRu gE III - Hlz Friesenheim/Hochdorf 3
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:2627RPBKRKEJGD0904@handball.net
-DTSTAMP:20260923T083222Z
-DTSTART;TZID=Europe/Berlin:20261129T130000
-DTEND;TZID=Europe/Berlin:20261129T150000
-SUMMARY:🚗 HSG Grethen/Maxdorf II - MuRu gE III
-DESCRIPTION:Auswärtsspiel gegen HSG Grethen/Maxdorf II\nAnwurf: 13:00 Uhr\
- nLiga: Bezirksklasse GEMISCHT\nSpieltag: 9\nSpielnummer: 2627RPBKRKEJGD090
- 4\nhttps://www.handball.net/match/385494
-URL:https://www.handball.net/match/385494
-SEQUENCE:0
-STATUS:CONFIRMED
-TRANSP:OPAQUE
-CATEGORIES:Handball,Auswärtsspiel
-LOCATION:Waldsporthalle Maxdorf\, Longvic-Platz\, 67133 Maxdorf
-GEO:49.480981;8.283853
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Morgen Spiel: 🚗 HSG Grethen/Maxdorf II - MuRu gE III
-END:VALARM
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-PT3H
-DESCRIPTION:Gleich Spiel: 🚗 HSG Grethen/Maxdorf II - MuRu gE III
 END:VALARM
 END:VEVENT
 END:VCALENDAR

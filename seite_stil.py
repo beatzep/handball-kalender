@@ -190,6 +190,7 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
               letter-spacing: .04em; color: var(--gold-tief); }
 .hinweis ul { margin: 0 0 14px; padding-left: 18px; font-size: .95rem; }
 .hinweis li { margin: 5px 0; }
+.hinweis p { margin: 0 0 8px; font-size: .95rem; }
 .hinweis button { font: inherit; font-size: .88rem; font-weight: 600;
                   background: none; border: 1px solid var(--linie);
                   color: var(--tinte); padding: 9px 16px; cursor: pointer; }

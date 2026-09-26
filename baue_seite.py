@@ -1081,6 +1081,34 @@ def aenderungsblock(team: dict) -> str:
 </div>"""
 
 
+def abgesetztblock(team: dict) -> str:
+    """Abgesetzte Spiele verschwinden aus dem Kalender. Ohne diesen Hinweis
+    saehe die gE-Jugend III (Sept. 2026) aus, als haette sie nach zwei
+    Spielen einfach aufgehoert, und keiner wuesste, ob das ein Fehler ist."""
+    abgesetzt = team.get("abgesetzt") or []
+    if not abgesetzt:
+        return ""
+    punkte = []
+    for a in abgesetzt:
+        if a.get("datum"):
+            wann = datetime.fromisoformat(a["datum"])
+            tag = f"{WOCHENTAGE[wann.weekday()][:2]} {wann:%d.%m.}"
+        else:
+            tag = f"Spieltag {a.get('spieltag') or '?'}"
+        ort = "daheim" if a.get("heim") else "auswärts"
+        punkte.append(f"<li>{tag} gegen {sicher(a['gegner'])}, {ort}</li>")
+    satz = ("Bei handball.net steht dieses Spiel als abgesetzt, einen neuen "
+            "Termin gibt es nicht. Aus dem Kalender ist es deshalb raus."
+            if len(abgesetzt) == 1 else
+            "Bei handball.net stehen diese Spiele als abgesetzt, einen neuen "
+            "Termin gibt es nicht. Aus dem Kalender sind sie deshalb raus.")
+    return f"""<div class="hinweis">
+<h3>Abgesetzt</h3>
+<p>{satz}</p>
+<ul>{"".join(punkte)}</ul>
+</div>"""
+
+
 def abo_block(team: dict, basis: str) -> str:
     ics_url = f"{basis.rstrip('/')}/{team['datei']}"
     webcal = ics_url.replace("https://", "webcal://").replace("http://", "webcal://")
@@ -1169,12 +1197,14 @@ def mannschaftsblock(schluessel: str, team: dict, basis: str, heute: datetime,
     return f"""<section data-team="{sicher(schluessel)}" hidden>
   <p class="liga">{kopf}</p>
   {hero(kommend[0], team['kurzname'], heute) if kommend else
+   '<p class="marker">Keine Spiele mehr angesetzt</p>' if team.get('abgesetzt') else
    '<p class="marker">Saison beendet</p>'}
   {hinspiel_und_gegner(kommend[0], spiele, team.get('tabelle') or {},
                        team.get('gegnervorschau') or {}) if kommend else ''}
   {mitmachblock(naechster_code, vorheriger_code, worker,
                 *paarung_namen(kommend[0], team), schluessel) if kommend else ''}
   {aenderungsblock(team)}
+  {abgesetztblock(team)}
 
   <nav class="reiter" role="tablist" aria-label="Bereiche">
     <button type="button" role="tab" data-ziel="spiele" aria-selected="true">Spiele</button>

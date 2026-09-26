@@ -372,6 +372,17 @@ def ergebnis(spiel: dict) -> tuple[int, int] | None:
     return lokal, gast
 
 
+def ist_abgesetzt(spiel: dict) -> bool:
+    """Vom Verband abgesetzte Spiele (Status 3, 'Retirado').
+
+    Am 25.09.2026 standen alle sieben restlichen Spiele der gE-Jugend III
+    so drin: Datum auf den Platzhalter 01.06.2027 00:00 gesetzt, dazu
+    is_finished. Ungeprueft waeren das sieben Termine gleichzeitig an einem
+    Dienstag in sieben Hallen, und die Spiele vom 12. und 19.09. saehen aus
+    wie gelaufen, nur ohne Ergebnis."""
+    return (spiel.get("status") or {}).get("id") == 3
+
+
 def hauptphase(spiele: list[dict]) -> dict:
     """Die Phase, in der die meisten Spiele stattfinden.
 
@@ -427,7 +438,8 @@ def lade_stand(pfad: Path) -> dict:
         return {}
 
 
-def vergleiche(spiele: list[dict], team_id: int, alt: dict) -> tuple[dict, list[dict]]:
+def vergleiche(spiele: list[dict], team_id: int, alt: dict,
+               abgesetzt: set[str] = frozenset()) -> tuple[dict, list[dict]]:
     """Vergleicht den frischen Spielplan mit dem letzten Lauf.
 
     Rueckgabe: neuer Zustand und die Liste der Aenderungen. SEQUENCE wird pro
@@ -506,7 +518,8 @@ def vergleiche(spiele: list[dict], team_id: int, alt: dict) -> tuple[dict, list[
                 "art": "entfallen", "code": code, "spieltag": vorher.get("spieltag"),
                 "text": f"Spiel gegen {vorher.get('gegner','?')} am "
                         f"{kurzdatum(datetime.fromisoformat(vorher['datum']))} "
-                        f"steht nicht mehr im Spielplan",
+                        + ("hat der Verband abgesetzt" if code in abgesetzt
+                           else "steht nicht mehr im Spielplan"),
             })
 
     return neu, aenderungen
@@ -675,11 +688,14 @@ def baue_kalender(spiele: list[dict], team_id: int, cfg: argparse.Namespace,
 def verarbeite_team(team: dict, cfg: argparse.Namespace, alt: dict) -> tuple[dict, list]:
     """Holt einen Spielplan, schreibt die .ics und liefert Zustand + Aenderungen."""
     team_id = team["team_id"]
-    spiele = hole_spiele(team_id)
-    if not spiele:
+    alle = hole_spiele(team_id)
+    if not alle:
         raise SystemExit(f"Keine Spiele fuer Team {team_id} ({team['name']}).")
+    spiele = [s for s in alle if not ist_abgesetzt(s)]
+    abgesetzt = abgesetzte_spiele(alle, team_id, alt)
 
-    neuer_stand, aenderungen = vergleiche(spiele, team_id, alt.get("spiele") or {})
+    neuer_stand, aenderungen = vergleiche(spiele, team_id, alt.get("spiele") or {},
+                                          {a["code"] for a in abgesetzt})
 
     ziele = {(s["lat"], s["lon"]) for s in neuer_stand.values()
              if s["lat"] is not None and s["lon"] is not None}
@@ -703,7 +719,8 @@ def verarbeite_team(team: dict, cfg: argparse.Namespace, alt: dict) -> tuple[dic
     for alt_name in team.get("alias") or []:
         (Path(cfg.out_dir) / alt_name).write_bytes(inhalt)
 
-    phase = hauptphase(spiele)
+    # Liga und Tabelle auch dann, wenn nichts mehr angesetzt ist
+    phase = hauptphase(alle)
     saison_id = str(phase.get("season_id") or "")
     heim = sum(1 for x in spiele if ist_heimspiel(x, team_id))
     print(f"  {team['name']:<12} {len(spiele):2} Spiele "
@@ -742,7 +759,28 @@ def verarbeite_team(team: dict, cfg: argparse.Namespace, alt: dict) -> tuple[dic
             and spielberichte.naechster_gegner(neuer_stand) else {}),
         "letzte_aenderungen": aenderungen,
         "spiele": neuer_stand,
+        "abgesetzt": abgesetzt,
     }, aenderungen
+
+
+def abgesetzte_spiele(alle: list[dict], team_id: int, alt: dict) -> list[dict]:
+    """Was der Verband abgesetzt hat, fuer den Hinweis auf der Seite.
+
+    Das eigentliche Datum steht bei der Quelle nicht mehr (nur noch der
+    Platzhalter), es kommt aus dem letzten Lauf. Wurde es dort schon als
+    abgesetzt gefuehrt, von da."""
+    frueher = {**{a["code"]: a.get("datum") for a in alt.get("abgesetzt") or []},
+               **{c: s.get("datum") for c, s in (alt.get("spiele") or {}).items()}}
+    ergebnis = []
+    for spiel in alle:
+        if not ist_abgesetzt(spiel):
+            continue
+        code = spiel.get("code") or str(spiel["id"])
+        ergebnis.append({"code": code, "spieltag": spiel.get("round"),
+                         "gegner": gegner(spiel, team_id),
+                         "heim": ist_heimspiel(spiel, team_id),
+                         "datum": frueher.get(code)})
+    return sorted(ergebnis, key=lambda a: a["spieltag"] or 0)
 
 
 def tabelle_mit_hinweis(tabelle: dict, spiele: dict, team_id: int | None) -> dict:
