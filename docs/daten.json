@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-26T15:01:08+00:00",
+  "aktualisiert": "2026-09-26T15:30:49+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -9722,7 +9722,7 @@
           },
           {
             "runde": 4,
-            "platz": 7,
+            "platz": 8,
             "punkte": 2
           }
         ],
@@ -9783,14 +9783,14 @@
             "platz": 5,
             "team": "Vsk Niederfeld",
             "team_id": 81116,
-            "spiele": 3,
+            "spiele": 4,
             "punkte": 2,
             "siege": 1,
             "remis": 0,
-            "niederlagen": 2,
-            "tore": 100,
-            "gegentore": 91,
-            "differenz": 9
+            "niederlagen": 3,
+            "tore": 135,
+            "gegentore": 130,
+            "differenz": 5
           },
           {
             "platz": 6,
@@ -9807,6 +9807,19 @@
           },
           {
             "platz": 7,
+            "team": "HSG Trifels",
+            "team_id": 81122,
+            "spiele": 4,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 3,
+            "tore": 131,
+            "gegentore": 153,
+            "differenz": -22
+          },
+          {
+            "platz": 8,
             "team": "HSG Mutterstadt/Ruchheim II",
             "team_id": 81130,
             "spiele": 4,
@@ -9817,19 +9830,6 @@
             "tore": 106,
             "gegentore": 152,
             "differenz": -46
-          },
-          {
-            "platz": 8,
-            "team": "HSG Trifels",
-            "team_id": 81122,
-            "spiele": 3,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 3,
-            "tore": 92,
-            "gegentore": 118,
-            "differenz": -26
           },
           {
             "platz": 9,
