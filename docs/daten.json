@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-26T13:00:52+00:00",
+  "aktualisiert": "2026-09-26T13:30:57+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -9680,7 +9680,7 @@
       "liga": "Bezirksoberliga GEMISCHT",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 4,
+        "runde": 5,
         "phase_id": 12625,
         "gespielt": true,
         "mannschaften": 9,
@@ -9711,27 +9711,27 @@
             "platz": 1,
             "team": "TUS Heiligenstein II",
             "team_id": 81127,
-            "spiele": 4,
-            "punkte": 8,
-            "siege": 4,
+            "spiele": 5,
+            "punkte": 10,
+            "siege": 5,
             "remis": 0,
             "niederlagen": 0,
-            "tore": 168,
-            "gegentore": 102,
-            "differenz": 66
+            "tore": 214,
+            "gegentore": 138,
+            "differenz": 76
           },
           {
             "platz": 2,
             "team": "HSG Dudenhofen/Schifferstadt",
             "team_id": 81126,
-            "spiele": 4,
+            "spiele": 5,
             "punkte": 7,
             "siege": 3,
             "remis": 1,
-            "niederlagen": 0,
-            "tore": 162,
-            "gegentore": 111,
-            "differenz": 51
+            "niederlagen": 1,
+            "tore": 198,
+            "gegentore": 157,
+            "differenz": 41
           },
           {
             "platz": 3,
@@ -12369,7 +12369,7 @@
       "liga": "Bezirksliga WEIBLICH",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 4,
+        "runde": 5,
         "phase_id": 12597,
         "gespielt": true,
         "mannschaften": 9,
@@ -12395,14 +12395,14 @@
             "platz": 1,
             "team": "JSG Mundenheim/Rheingönheim",
             "team_id": 81266,
-            "spiele": 4,
-            "punkte": 7,
-            "siege": 3,
+            "spiele": 5,
+            "punkte": 9,
+            "siege": 4,
             "remis": 1,
             "niederlagen": 0,
-            "tore": 102,
-            "gegentore": 56,
-            "differenz": 46
+            "tore": 128,
+            "gegentore": 68,
+            "differenz": 60
           },
           {
             "platz": 2,
@@ -12447,14 +12447,14 @@
             "platz": 5,
             "team": "WSG Rheinauen",
             "team_id": 81270,
-            "spiele": 3,
+            "spiele": 4,
             "punkte": 2,
             "siege": 1,
             "remis": 0,
-            "niederlagen": 2,
-            "tore": 54,
-            "gegentore": 45,
-            "differenz": 9
+            "niederlagen": 3,
+            "tore": 66,
+            "gegentore": 71,
+            "differenz": -5
           },
           {
             "platz": 6,
@@ -12943,7 +12943,7 @@
       "liga": "Bezirksoberliga GEMISCHT",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 4,
+        "runde": 5,
         "phase_id": 12645,
         "gespielt": true,
         "mannschaften": 8,
@@ -12967,6 +12967,11 @@
             "runde": 4,
             "platz": 8,
             "punkte": 0
+          },
+          {
+            "runde": 5,
+            "platz": 8,
+            "punkte": 0
           }
         ],
         "eintraege": [
@@ -12974,14 +12979,14 @@
             "platz": 1,
             "team": "Hlz Friesenheim/Hochdorf",
             "team_id": 81291,
-            "spiele": 4,
-            "punkte": 8,
-            "siege": 4,
+            "spiele": 5,
+            "punkte": 10,
+            "siege": 5,
             "remis": 0,
             "niederlagen": 0,
-            "tore": 119,
-            "gegentore": 89,
-            "differenz": 30
+            "tore": 152,
+            "gegentore": 101,
+            "differenz": 51
           },
           {
             "platz": 2,
@@ -12998,6 +13003,19 @@
           },
           {
             "platz": 3,
+            "team": "TV Edigheim",
+            "team_id": 81290,
+            "spiele": 3,
+            "punkte": 4,
+            "siege": 2,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 73,
+            "gegentore": 75,
+            "differenz": -2
+          },
+          {
+            "platz": 4,
             "team": "TUS Neuhofen",
             "team_id": 81294,
             "spiele": 3,
@@ -13010,7 +13028,7 @@
             "differenz": 14
           },
           {
-            "platz": 4,
+            "platz": 5,
             "team": "HSG Eckbachtal",
             "team_id": 81289,
             "spiele": 4,
@@ -13021,19 +13039,6 @@
             "tore": 96,
             "gegentore": 91,
             "differenz": 5
-          },
-          {
-            "platz": 5,
-            "team": "TV Edigheim",
-            "team_id": 81290,
-            "spiele": 3,
-            "punkte": 4,
-            "siege": 2,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 73,
-            "gegentore": 75,
-            "differenz": -2
           },
           {
             "platz": 6,
@@ -13065,27 +13070,14 @@
             "platz": 8,
             "team": "HSG Mutterstadt/Ruchheim E1",
             "team_id": 81293,
-            "spiele": 4,
+            "spiele": 5,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 4,
-            "tore": 84,
-            "gegentore": 127,
-            "differenz": -43
-          }
-        ],
-        "fehlend": [
-          {
-            "datum": "2026-09-26T13:45:00",
-            "gegner": "Hlz Friesenheim/Hochdorf",
-            "ergebnis": {
-              "heim": 33,
-              "gast": 12,
-              "eigene": 12,
-              "fremde": 33,
-              "ausgang": "N"
-            }
+            "niederlagen": 5,
+            "tore": 96,
+            "gegentore": 160,
+            "differenz": -64
           }
         ]
       },
