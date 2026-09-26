@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-26T17:45:49+00:00",
+  "aktualisiert": "2026-09-26T18:15:51+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -2655,7 +2655,7 @@
       "liga": "Männer Bezirksklasse",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 4,
+        "runde": 5,
         "phase_id": 12583,
         "gespielt": true,
         "mannschaften": 11,
@@ -2674,6 +2674,11 @@
             "runde": 3,
             "platz": 6,
             "punkte": 2
+          },
+          {
+            "runde": 4,
+            "platz": 6,
+            "punkte": 4
           }
         ],
         "eintraege": [
@@ -2733,27 +2738,27 @@
             "platz": 5,
             "team": "TSV Kandel 2",
             "team_id": 80975,
-            "spiele": 4,
+            "spiele": 5,
             "punkte": 5,
             "siege": 2,
             "remis": 1,
-            "niederlagen": 1,
-            "tore": 106,
-            "gegentore": 111,
-            "differenz": -5
+            "niederlagen": 2,
+            "tore": 128,
+            "gegentore": 154,
+            "differenz": -26
           },
           {
             "platz": 6,
             "team": "HSG Mutterstadt/Ruchheim 2",
             "team_id": 80980,
-            "spiele": 3,
-            "punkte": 2,
-            "siege": 1,
+            "spiele": 4,
+            "punkte": 4,
+            "siege": 2,
             "remis": 0,
             "niederlagen": 2,
-            "tore": 80,
-            "gegentore": 67,
-            "differenz": 13
+            "tore": 123,
+            "gegentore": 89,
+            "differenz": 34
           },
           {
             "platz": 7,
@@ -2819,19 +2824,6 @@
             "tore": 83,
             "gegentore": 94,
             "differenz": -11
-          }
-        ],
-        "fehlend": [
-          {
-            "datum": "2026-09-26T18:00:00",
-            "gegner": "TSV Kandel 2",
-            "ergebnis": {
-              "heim": 43,
-              "gast": 22,
-              "eigene": 43,
-              "fremde": 22,
-              "ausgang": "S"
-            }
           }
         ]
       },
@@ -2920,11 +2912,35 @@
       "spieler": {
         "quelle": {
           "spiele_gelaufen": 4,
-          "mit_bericht": 3,
+          "mit_bericht": 4,
           "ohne_bericht": 0,
-          "offen": 1
+          "offen": 0
         },
         "schuetzen": [
+          {
+            "id": "1kxb1zc",
+            "name": "Casey Pyle",
+            "tore": 22,
+            "siebenmeter_tore": 8,
+            "siebenmeter_wuerfe": 8,
+            "zwei_minuten": 1,
+            "verwarnungen": 2,
+            "spiele": 3,
+            "tore_je_spiel": 7.3,
+            "siebenmeter_quote": 100
+          },
+          {
+            "id": "0cbvc0c",
+            "name": "Jannik Dörr",
+            "tore": 14,
+            "siebenmeter_tore": 0,
+            "siebenmeter_wuerfe": 0,
+            "zwei_minuten": 2,
+            "verwarnungen": 1,
+            "spiele": 3,
+            "tore_je_spiel": 4.7,
+            "siebenmeter_quote": null
+          },
           {
             "id": "1wpwq2o",
             "name": "Simon Leonhardt",
@@ -2938,28 +2954,40 @@
             "siebenmeter_quote": null
           },
           {
-            "id": "1kxb1zc",
-            "name": "Casey Pyle",
-            "tore": 9,
-            "siebenmeter_tore": 3,
-            "siebenmeter_wuerfe": 3,
-            "zwei_minuten": 0,
-            "verwarnungen": 1,
-            "spiele": 2,
-            "tore_je_spiel": 4.5,
-            "siebenmeter_quote": 100
-          },
-          {
             "id": "0ly5yiw",
             "name": "Matthias Johannes",
-            "tore": 8,
+            "tore": 12,
             "siebenmeter_tore": 1,
             "siebenmeter_wuerfe": 1,
             "zwei_minuten": 0,
             "verwarnungen": 1,
-            "spiele": 3,
-            "tore_je_spiel": 2.7,
+            "spiele": 4,
+            "tore_je_spiel": 3.0,
             "siebenmeter_quote": 100
+          },
+          {
+            "id": "0dfzqfv",
+            "name": "Fynn-Lennart Kelleter",
+            "tore": 10,
+            "siebenmeter_tore": 0,
+            "siebenmeter_wuerfe": 1,
+            "zwei_minuten": 0,
+            "verwarnungen": 0,
+            "spiele": 3,
+            "tore_je_spiel": 3.3,
+            "siebenmeter_quote": 0
+          },
+          {
+            "id": "14n947k",
+            "name": "Niko Benkler",
+            "tore": 8,
+            "siebenmeter_tore": 0,
+            "siebenmeter_wuerfe": 0,
+            "zwei_minuten": 1,
+            "verwarnungen": 1,
+            "spiele": 4,
+            "tore_je_spiel": 2.0,
+            "siebenmeter_quote": null
           },
           {
             "id": "0tojy90",
@@ -2974,27 +3002,27 @@
             "siebenmeter_quote": 67
           },
           {
-            "id": "0cbvc0c",
-            "name": "Jannik Dörr",
+            "id": "1fqk1hz",
+            "name": "Lukas Walter",
             "tore": 7,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 2,
-            "verwarnungen": 0,
-            "spiele": 2,
-            "tore_je_spiel": 3.5,
-            "siebenmeter_quote": null
+            "siebenmeter_tore": 1,
+            "siebenmeter_wuerfe": 1,
+            "zwei_minuten": 0,
+            "verwarnungen": 2,
+            "spiele": 3,
+            "tore_je_spiel": 2.3,
+            "siebenmeter_quote": 100
           },
           {
-            "id": "0dfzqfv",
-            "name": "Fynn-Lennart Kelleter",
+            "id": "0gaj1fm",
+            "name": "Moritz Bappert",
             "tore": 5,
             "siebenmeter_tore": 0,
             "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 0,
+            "zwei_minuten": 1,
             "verwarnungen": 0,
-            "spiele": 2,
-            "tore_je_spiel": 2.5,
+            "spiele": 1,
+            "tore_je_spiel": 5.0,
             "siebenmeter_quote": null
           },
           {
@@ -3034,18 +3062,6 @@
             "siebenmeter_quote": 50
           },
           {
-            "id": "14n947k",
-            "name": "Niko Benkler",
-            "tore": 4,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 0,
-            "verwarnungen": 1,
-            "spiele": 3,
-            "tore_je_spiel": 1.3,
-            "siebenmeter_quote": null
-          },
-          {
             "id": "10w8izo",
             "name": "Andreas Lambert Külper",
             "tore": 3,
@@ -3058,15 +3074,15 @@
             "siebenmeter_quote": null
           },
           {
-            "id": "1fqk1hz",
-            "name": "Lukas Walter",
-            "tore": 3,
+            "id": "0y41ez5",
+            "name": "Constantin Julius Burkhardt",
+            "tore": 2,
             "siebenmeter_tore": 1,
             "siebenmeter_wuerfe": 1,
             "zwei_minuten": 0,
             "verwarnungen": 1,
             "spiele": 2,
-            "tore_je_spiel": 1.5,
+            "tore_je_spiel": 1.0,
             "siebenmeter_quote": 100
           },
           {
@@ -3077,8 +3093,8 @@
             "siebenmeter_wuerfe": 0,
             "zwei_minuten": 1,
             "verwarnungen": 0,
-            "spiele": 3,
-            "tore_je_spiel": 0.7,
+            "spiele": 4,
+            "tore_je_spiel": 0.5,
             "siebenmeter_quote": null
           },
           {
@@ -3089,21 +3105,9 @@
             "siebenmeter_wuerfe": 1,
             "zwei_minuten": 0,
             "verwarnungen": 0,
-            "spiele": 3,
-            "tore_je_spiel": 0.7,
+            "spiele": 4,
+            "tore_je_spiel": 0.5,
             "siebenmeter_quote": 0
-          },
-          {
-            "id": "0y41ez5",
-            "name": "Constantin Julius Burkhardt",
-            "tore": 1,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 0,
-            "verwarnungen": 1,
-            "spiele": 1,
-            "tore_je_spiel": 1.0,
-            "siebenmeter_quote": null
           },
           {
             "id": "1piljsy",
@@ -3131,72 +3135,72 @@
           }
         ],
         "verteilung": {
-          "eigene_schuetzen": 17,
-          "fremde_schuetzen": 21,
-          "eigene_tore": 80,
-          "fremde_tore": 67,
-          "groesster_anteil": 15
+          "eigene_schuetzen": 18,
+          "fremde_schuetzen": 29,
+          "eigene_tore": 123,
+          "fremde_tore": 89,
+          "groesster_anteil": 18
         },
         "strafen": {
-          "gesamt": 10,
+          "gesamt": 13,
           "abschnitte": {
             "0-15": 1,
             "15-30": 1,
-            "30-45": 6,
-            "45-60": 2
+            "30-45": 7,
+            "45-60": 4
           }
         },
         "muster": {
           "genug": true,
-          "spiele": 3,
+          "spiele": 4,
           "bloecke": [
             {
               "von": 0,
               "bis": 10,
-              "schnitt": 2.3,
-              "spiele": 3,
+              "schnitt": 2.8,
+              "spiele": 4,
               "verloren": 0,
-              "gewonnen": 3
+              "gewonnen": 4
             },
             {
               "von": 10,
               "bis": 20,
-              "schnitt": 2.0,
-              "spiele": 3,
+              "schnitt": 2.8,
+              "spiele": 4,
               "verloren": 0,
-              "gewonnen": 2
+              "gewonnen": 3
             },
             {
               "von": 20,
               "bis": 30,
               "schnitt": 3.0,
-              "spiele": 3,
+              "spiele": 4,
               "verloren": 0,
-              "gewonnen": 2
+              "gewonnen": 3
             },
             {
               "von": 30,
               "bis": 40,
-              "schnitt": -1.3,
-              "spiele": 3,
+              "schnitt": -0.2,
+              "spiele": 4,
               "verloren": 2,
-              "gewonnen": 1
+              "gewonnen": 2
             },
             {
               "von": 40,
               "bis": 50,
-              "schnitt": -2.7,
-              "spiele": 3,
+              "schnitt": -0.8,
+              "spiele": 4,
               "verloren": 3,
-              "gewonnen": 0
+              "gewonnen": 1
             },
             {
               "von": 50,
               "bis": 60,
-              "schnitt": 1.0,
-              "spiele": 3,
+              "schnitt": 1.2,
+              "spiele": 4,
               "verloren": 0,
-              "gewonnen": 2
+              "gewonnen": 3
             }
           ],
           "antwort": {
@@ -4367,11 +4371,538 @@
               }
             ],
             "strafen": 2
+          },
+          {
+            "match_id": 352311,
+            "datum": "2026-09-26T18:00:00",
+            "gegner": "TSV Kandel 2",
+            "heim": true,
+            "verlauf": [
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                1
+              ],
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                1,
+                2,
+                1
+              ],
+              [
+                2,
+                2,
+                2
+              ],
+              [
+                4,
+                3,
+                2
+              ],
+              [
+                4,
+                4,
+                2
+              ],
+              [
+                5,
+                4,
+                3
+              ],
+              [
+                6,
+                4,
+                4
+              ],
+              [
+                6,
+                5,
+                4
+              ],
+              [
+                9,
+                6,
+                4
+              ],
+              [
+                10,
+                7,
+                4
+              ],
+              [
+                12,
+                8,
+                4
+              ],
+              [
+                13,
+                9,
+                4
+              ],
+              [
+                14,
+                10,
+                4
+              ],
+              [
+                14,
+                10,
+                5
+              ],
+              [
+                14,
+                11,
+                5
+              ],
+              [
+                15,
+                11,
+                6
+              ],
+              [
+                15,
+                12,
+                6
+              ],
+              [
+                16,
+                13,
+                6
+              ],
+              [
+                17,
+                13,
+                7
+              ],
+              [
+                18,
+                14,
+                7
+              ],
+              [
+                18,
+                15,
+                7
+              ],
+              [
+                21,
+                16,
+                7
+              ],
+              [
+                21,
+                16,
+                8
+              ],
+              [
+                22,
+                17,
+                8
+              ],
+              [
+                22,
+                18,
+                8
+              ],
+              [
+                23,
+                18,
+                9
+              ],
+              [
+                24,
+                19,
+                9
+              ],
+              [
+                24,
+                19,
+                10
+              ],
+              [
+                25,
+                20,
+                10
+              ],
+              [
+                26,
+                21,
+                10
+              ],
+              [
+                26,
+                21,
+                11
+              ],
+              [
+                29,
+                22,
+                11
+              ],
+              [
+                29,
+                22,
+                12
+              ],
+              [
+                29,
+                23,
+                12
+              ],
+              [
+                33,
+                24,
+                12
+              ],
+              [
+                34,
+                25,
+                12
+              ],
+              [
+                35,
+                26,
+                12
+              ],
+              [
+                35,
+                27,
+                12
+              ],
+              [
+                36,
+                27,
+                13
+              ],
+              [
+                37,
+                28,
+                13
+              ],
+              [
+                37,
+                28,
+                14
+              ],
+              [
+                38,
+                29,
+                14
+              ],
+              [
+                39,
+                30,
+                14
+              ],
+              [
+                39,
+                30,
+                15
+              ],
+              [
+                40,
+                30,
+                16
+              ],
+              [
+                41,
+                31,
+                16
+              ],
+              [
+                41,
+                32,
+                16
+              ],
+              [
+                42,
+                32,
+                17
+              ],
+              [
+                43,
+                33,
+                17
+              ],
+              [
+                44,
+                34,
+                17
+              ],
+              [
+                45,
+                34,
+                18
+              ],
+              [
+                48,
+                35,
+                18
+              ],
+              [
+                49,
+                36,
+                18
+              ],
+              [
+                50,
+                37,
+                18
+              ],
+              [
+                54,
+                38,
+                18
+              ],
+              [
+                54,
+                38,
+                19
+              ],
+              [
+                55,
+                38,
+                20
+              ],
+              [
+                55,
+                39,
+                20
+              ],
+              [
+                57,
+                40,
+                20
+              ],
+              [
+                57,
+                41,
+                20
+              ],
+              [
+                57,
+                42,
+                20
+              ],
+              [
+                58,
+                42,
+                21
+              ],
+              [
+                59,
+                43,
+                21
+              ],
+              [
+                59,
+                43,
+                22
+              ]
+            ],
+            "laeufe": {
+              "eigene": 6,
+              "fremde": 0,
+              "eigene_ab": 6,
+              "fremde_ab": null
+            },
+            "schuetzen": [
+              {
+                "id": "1kxb1zc",
+                "name": "Casey Pyle",
+                "tore": 13,
+                "siebenmeter_tore": 5,
+                "siebenmeter_wuerfe": 5,
+                "zwei_minuten": 1,
+                "verwarnungen": 1,
+                "spiele": 1,
+                "tore_je_spiel": 13.0,
+                "siebenmeter_quote": 100
+              },
+              {
+                "id": "0cbvc0c",
+                "name": "Jannik Dörr",
+                "tore": 7,
+                "siebenmeter_tore": 0,
+                "siebenmeter_wuerfe": 0,
+                "zwei_minuten": 0,
+                "verwarnungen": 1,
+                "spiele": 1,
+                "tore_je_spiel": 7.0,
+                "siebenmeter_quote": null
+              },
+              {
+                "id": "0dfzqfv",
+                "name": "Fynn-Lennart Kelleter",
+                "tore": 5,
+                "siebenmeter_tore": 0,
+                "siebenmeter_wuerfe": 1,
+                "zwei_minuten": 0,
+                "verwarnungen": 0,
+                "spiele": 1,
+                "tore_je_spiel": 5.0,
+                "siebenmeter_quote": 0
+              },
+              {
+                "id": "0gaj1fm",
+                "name": "Moritz Bappert",
+                "tore": 5,
+                "siebenmeter_tore": 0,
+                "siebenmeter_wuerfe": 0,
+                "zwei_minuten": 1,
+                "verwarnungen": 0,
+                "spiele": 1,
+                "tore_je_spiel": 5.0,
+                "siebenmeter_quote": null
+              },
+              {
+                "id": "1fqk1hz",
+                "name": "Lukas Walter",
+                "tore": 4,
+                "siebenmeter_tore": 0,
+                "siebenmeter_wuerfe": 0,
+                "zwei_minuten": 0,
+                "verwarnungen": 1,
+                "spiele": 1,
+                "tore_je_spiel": 4.0,
+                "siebenmeter_quote": null
+              },
+              {
+                "id": "0ly5yiw",
+                "name": "Matthias Johannes",
+                "tore": 4,
+                "siebenmeter_tore": 0,
+                "siebenmeter_wuerfe": 0,
+                "zwei_minuten": 0,
+                "verwarnungen": 0,
+                "spiele": 1,
+                "tore_je_spiel": 4.0,
+                "siebenmeter_quote": null
+              },
+              {
+                "id": "14n947k",
+                "name": "Niko Benkler",
+                "tore": 4,
+                "siebenmeter_tore": 0,
+                "siebenmeter_wuerfe": 0,
+                "zwei_minuten": 1,
+                "verwarnungen": 0,
+                "spiele": 1,
+                "tore_je_spiel": 4.0,
+                "siebenmeter_quote": null
+              },
+              {
+                "id": "0y41ez5",
+                "name": "Constantin Julius Burkhardt",
+                "tore": 1,
+                "siebenmeter_tore": 1,
+                "siebenmeter_wuerfe": 1,
+                "zwei_minuten": 0,
+                "verwarnungen": 0,
+                "spiele": 1,
+                "tore_je_spiel": 1.0,
+                "siebenmeter_quote": 100
+              }
+            ],
+            "strafen": 3
           }
         ]
       },
       "gegnervorschau": {
-        "spiele": 0
+        "spiele": 4,
+        "schuetzen": [
+          {
+            "id": "0jikotu",
+            "name": "Nico Fohs",
+            "tore": 21,
+            "siebenmeter_tore": 3,
+            "siebenmeter_wuerfe": 5,
+            "zwei_minuten": 0,
+            "verwarnungen": 0,
+            "spiele": 4,
+            "tore_je_spiel": 5.2,
+            "siebenmeter_quote": 60
+          },
+          {
+            "id": "06421is",
+            "name": "Sven Hoffmann",
+            "tore": 20,
+            "siebenmeter_tore": 1,
+            "siebenmeter_wuerfe": 3,
+            "zwei_minuten": 2,
+            "verwarnungen": 1,
+            "spiele": 3,
+            "tore_je_spiel": 6.7,
+            "siebenmeter_quote": 33
+          },
+          {
+            "id": "03yuron",
+            "name": "Lukas Wolf",
+            "tore": 8,
+            "siebenmeter_tore": 0,
+            "siebenmeter_wuerfe": 0,
+            "zwei_minuten": 0,
+            "verwarnungen": 0,
+            "spiele": 2,
+            "tore_je_spiel": 4.0,
+            "siebenmeter_quote": null
+          },
+          {
+            "id": "19q4nyy",
+            "name": "Björn Gerbes",
+            "tore": 5,
+            "siebenmeter_tore": 0,
+            "siebenmeter_wuerfe": 0,
+            "zwei_minuten": 1,
+            "verwarnungen": 0,
+            "spiele": 1,
+            "tore_je_spiel": 5.0,
+            "siebenmeter_quote": null
+          },
+          {
+            "id": "1gymo9h",
+            "name": "Robin Benisch",
+            "tore": 5,
+            "siebenmeter_tore": 0,
+            "siebenmeter_wuerfe": 0,
+            "zwei_minuten": 0,
+            "verwarnungen": 0,
+            "spiele": 2,
+            "tore_je_spiel": 2.5,
+            "siebenmeter_quote": null
+          }
+        ],
+        "weitere": 12,
+        "tore": 88,
+        "torschuetzen": 17,
+        "groesster_anteil": 24,
+        "strafen": 8,
+        "strafen_abschnitte": {
+          "0-15": 1,
+          "15-30": 3,
+          "30-45": 3,
+          "45-60": 1
+        },
+        "krimis": {
+          "anzahl": 3,
+          "gesamt": 4,
+          "gewonnen": 0,
+          "verloren": 1
+        },
+        "halbzeiten": {
+          "erste_halbzeit": 2.0,
+          "zweite_halbzeit": -1.0,
+          "spiele": 3
+        }
       },
       "letzte_aenderungen": [],
       "spiele": {
@@ -4728,7 +5259,7 @@
           },
           {
             "runde": 2,
-            "platz": 5,
+            "platz": 4,
             "punkte": 4
           }
         ],
@@ -4748,6 +5279,19 @@
           },
           {
             "platz": 2,
+            "team": "SV Bornheim",
+            "team_id": 81001,
+            "spiele": 4,
+            "punkte": 6,
+            "siege": 3,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 121,
+            "gegentore": 107,
+            "differenz": 14
+          },
+          {
+            "platz": 3,
             "team": "FSG Gonsenheim/Schott",
             "team_id": 80998,
             "spiele": 4,
@@ -4760,33 +5304,7 @@
             "differenz": -5
           },
           {
-            "platz": 3,
-            "team": "SV Bornheim",
-            "team_id": 81001,
-            "spiele": 3,
-            "punkte": 4,
-            "siege": 2,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 98,
-            "gegentore": 87,
-            "differenz": 11
-          },
-          {
             "platz": 4,
-            "team": "TV Kirrweiler",
-            "team_id": 81003,
-            "spiele": 3,
-            "punkte": 4,
-            "siege": 2,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 82,
-            "gegentore": 77,
-            "differenz": 5
-          },
-          {
-            "platz": 5,
             "team": "HSG Mutterstadt/Ruchheim Damen",
             "team_id": 80999,
             "spiele": 2,
@@ -4797,6 +5315,19 @@
             "tore": 71,
             "gegentore": 54,
             "differenz": 17
+          },
+          {
+            "platz": 5,
+            "team": "TV Kirrweiler",
+            "team_id": 81003,
+            "spiele": 4,
+            "punkte": 4,
+            "siege": 2,
+            "remis": 0,
+            "niederlagen": 2,
+            "tore": 102,
+            "gegentore": 100,
+            "differenz": 2
           },
           {
             "platz": 6,
@@ -7488,36 +8019,36 @@
           },
           {
             "runde": 4,
-            "platz": 6,
+            "platz": 7,
             "punkte": 4
           }
         ],
         "eintraege": [
           {
             "platz": 1,
-            "team": "Mjsg Sobernheim/Meisenheim",
-            "team_id": 80839,
-            "spiele": 4,
+            "team": "TV Kirrweiler",
+            "team_id": 80834,
+            "spiele": 5,
             "punkte": 8,
             "siege": 4,
             "remis": 0,
-            "niederlagen": 0,
-            "tore": 139,
-            "gegentore": 116,
-            "differenz": 23
+            "niederlagen": 1,
+            "tore": 209,
+            "gegentore": 169,
+            "differenz": 40
           },
           {
             "platz": 2,
-            "team": "TV Kirrweiler",
-            "team_id": 80834,
-            "spiele": 4,
-            "punkte": 6,
-            "siege": 3,
+            "team": "Mjsg Sobernheim/Meisenheim",
+            "team_id": 80839,
+            "spiele": 5,
+            "punkte": 8,
+            "siege": 4,
             "remis": 0,
             "niederlagen": 1,
-            "tore": 165,
-            "gegentore": 140,
-            "differenz": 25
+            "tore": 170,
+            "gegentore": 149,
+            "differenz": 21
           },
           {
             "platz": 3,
@@ -7536,17 +8067,30 @@
             "platz": 4,
             "team": "TUS Neuhofen",
             "team_id": 80833,
-            "spiele": 4,
+            "spiele": 5,
             "punkte": 5,
             "siege": 2,
             "remis": 1,
-            "niederlagen": 1,
-            "tore": 114,
-            "gegentore": 106,
-            "differenz": 8
+            "niederlagen": 2,
+            "tore": 143,
+            "gegentore": 150,
+            "differenz": -7
           },
           {
             "platz": 5,
+            "team": "TG Waldsee",
+            "team_id": 80831,
+            "spiele": 5,
+            "punkte": 5,
+            "siege": 2,
+            "remis": 1,
+            "niederlagen": 2,
+            "tore": 160,
+            "gegentore": 168,
+            "differenz": -8
+          },
+          {
+            "platz": 6,
             "team": "TV 03 Wörth",
             "team_id": 80835,
             "spiele": 5,
@@ -7559,7 +8103,7 @@
             "differenz": -2
           },
           {
-            "platz": 6,
+            "platz": 7,
             "team": "HSG Mutterstadt/Ruchheim",
             "team_id": 86762,
             "spiele": 4,
@@ -7570,19 +8114,6 @@
             "tore": 124,
             "gegentore": 131,
             "differenz": -7
-          },
-          {
-            "platz": 7,
-            "team": "TG Waldsee",
-            "team_id": 80831,
-            "spiele": 4,
-            "punkte": 3,
-            "siege": 1,
-            "remis": 1,
-            "niederlagen": 2,
-            "tore": 127,
-            "gegentore": 137,
-            "differenz": -10
           },
           {
             "platz": 8,
