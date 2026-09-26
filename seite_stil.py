@@ -196,6 +196,13 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
                   color: var(--tinte); padding: 9px 16px; cursor: pointer; }
 .hinweis button:hover { border-color: var(--gold); background: var(--gold-schwach); }
 
+/* ---------- Abgleich hängt (seite_stand.py) ---------- */
+.veraltet { border-left: 3px solid var(--niederlage); padding: 6px 0 6px 16px;
+            margin: 22px 0 6px; }
+.veraltet h2 { margin: 0 0 6px; font-size: .95rem; font-weight: 700;
+               color: var(--niederlage); }
+.veraltet p { margin: 0 0 6px; font-size: .95rem; }
+
 /* ---------- Spielplan ---------- */
 .monat { font-size: .82rem; font-weight: 600; letter-spacing: .06em;
          text-transform: uppercase; color: var(--leise); padding: 28px 0 10px; }

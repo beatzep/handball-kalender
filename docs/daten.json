@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-26T12:24:37+00:00",
+  "aktualisiert": "2026-09-26T12:34:28+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -6680,21 +6680,6 @@
       "gegnervorschau": {},
       "letzte_aenderungen": [],
       "spiele": {
-        "2627RPOLAJMA0101": {
-          "datum": "2026-08-29T00:00:00",
-          "ort": "",
-          "halle": "",
-          "gegner": "Platzhalter 1",
-          "gegner_id": 0,
-          "match_id": 382550,
-          "lat": null,
-          "lon": null,
-          "spieltag": 1,
-          "phase_id": 12614,
-          "heim": false,
-          "ohne_zeit": true,
-          "sequence": 0
-        },
         "2627RPOLAJMA0206": {
           "datum": "2026-09-05T17:45:00",
           "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
@@ -6849,21 +6834,6 @@
           "phase_id": 12614,
           "heim": true,
           "ohne_zeit": false,
-          "sequence": 0
-        },
-        "2627RPOLAJMA1201": {
-          "datum": "2026-12-05T00:00:00",
-          "ort": "",
-          "halle": "",
-          "gegner": "Platzhalter 1",
-          "gegner_id": 0,
-          "match_id": 382616,
-          "lat": null,
-          "lon": null,
-          "spieltag": 12,
-          "phase_id": 12614,
-          "heim": true,
-          "ohne_zeit": true,
           "sequence": 0
         },
         "2627RPOLAJMA1306": {
@@ -8544,21 +8514,6 @@
             "ausgang": "N"
           }
         },
-        "2627RPVLBJMC0303": {
-          "datum": "2026-09-12T00:00:00",
-          "ort": "",
-          "halle": "",
-          "gegner": "Platzhalter 10",
-          "gegner_id": 0,
-          "match_id": 557388,
-          "lat": null,
-          "lon": null,
-          "spieltag": 3,
-          "phase_id": 12619,
-          "heim": true,
-          "ohne_zeit": true,
-          "sequence": 0
-        },
         "2627RPVLBJMC0403": {
           "datum": "2026-09-22T19:00:00",
           "ort": "Bingen, Rundsporthalle, Nuits-St.Georges-Straße, 55411 Bingen",
@@ -8669,21 +8624,6 @@
           "phase_id": 12619,
           "heim": true,
           "ohne_zeit": false,
-          "sequence": 0
-        },
-        "2627RPVLBJMC1203": {
-          "datum": "2027-01-23T00:00:00",
-          "ort": "",
-          "halle": "",
-          "gegner": "Platzhalter 10",
-          "gegner_id": 0,
-          "match_id": 557433,
-          "lat": null,
-          "lon": null,
-          "spieltag": 12,
-          "phase_id": 12619,
-          "heim": false,
-          "ohne_zeit": true,
           "sequence": 0
         },
         "2627RPVLBJMC1303": {
@@ -10088,21 +10028,6 @@
             "ausgang": "N"
           }
         },
-        "2627RPBKROCJGC0505": {
-          "datum": "2026-09-26T00:00:00",
-          "ort": "",
-          "halle": "",
-          "gegner": "Platzhalter 3",
-          "gegner_id": 0,
-          "match_id": 381893,
-          "lat": null,
-          "lon": null,
-          "spieltag": 5,
-          "phase_id": 12625,
-          "heim": true,
-          "ohne_zeit": true,
-          "sequence": 0
-        },
         "2627RPBKROCJGC0603": {
           "datum": "2026-10-24T17:15:00",
           "ort": "Realschule Plus Annweiler, Am Herrenteich 2, 76855 Annweiler",
@@ -10221,21 +10146,6 @@
           "phase_id": 12625,
           "heim": true,
           "ohne_zeit": false,
-          "sequence": 0
-        },
-        "2627RPBKROCJGC1405": {
-          "datum": "2027-02-13T00:00:00",
-          "ort": "",
-          "halle": "",
-          "gegner": "Platzhalter 3",
-          "gegner_id": 0,
-          "match_id": 381938,
-          "lat": null,
-          "lon": null,
-          "spieltag": 14,
-          "phase_id": 12625,
-          "heim": false,
-          "ohne_zeit": true,
           "sequence": 0
         },
         "2627RPBKROCJGC1503": {
@@ -10956,14 +10866,7 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [
-        {
-          "art": "entfallen",
-          "code": "2627RPVLCJWC1105",
-          "spieltag": 11,
-          "text": "Spiel gegen Mjsg SG Saulheim/HSV Alzey 3 am Sa 12.12. 14:00 hat der Verband abgesetzt"
-        }
-      ],
+      "letzte_aenderungen": [],
       "spiele": {
         "2627RPVLCJWC0104": {
           "datum": "2026-08-30T10:30:00",
@@ -11712,21 +11615,6 @@
           "ohne_zeit": false,
           "sequence": 0
         },
-        "2627RPBKRDJGB0602": {
-          "datum": "2026-10-24T00:00:00",
-          "ort": "",
-          "halle": "",
-          "gegner": "Platzhalter 1",
-          "gegner_id": 0,
-          "match_id": 383416,
-          "lat": null,
-          "lon": null,
-          "spieltag": 6,
-          "phase_id": 12629,
-          "heim": true,
-          "ohne_zeit": true,
-          "sequence": 0
-        },
         "2627RPBKRDJGB0703": {
           "datum": "2026-11-07T16:15:00",
           "ort": "Wonnegauhalle Osthofen, Herrnsheimer Straße 24, 67574 Osthofen",
@@ -11845,21 +11733,6 @@
           "phase_id": 12629,
           "heim": true,
           "ohne_zeit": false,
-          "sequence": 0
-        },
-        "2627RPBKRDJGB1502": {
-          "datum": "2027-02-20T00:00:00",
-          "ort": "",
-          "halle": "",
-          "gegner": "Platzhalter 1",
-          "gegner_id": 0,
-          "match_id": 383461,
-          "lat": null,
-          "lon": null,
-          "spieltag": 15,
-          "phase_id": 12629,
-          "heim": false,
-          "ohne_zeit": true,
           "sequence": 0
         },
         "2627RPBKRDJGB1603": {
@@ -12171,21 +12044,6 @@
       "gegnervorschau": {},
       "letzte_aenderungen": [],
       "spiele": {
-        "2627RPBKRODJWA0104": {
-          "datum": "2026-08-29T00:00:00",
-          "ort": "",
-          "halle": "",
-          "gegner": "Platzhalter 7",
-          "gegner_id": 0,
-          "match_id": 385055,
-          "lat": null,
-          "lon": null,
-          "spieltag": 1,
-          "phase_id": 12594,
-          "heim": false,
-          "ohne_zeit": true,
-          "sequence": 0
-        },
         "2627RPBKRODJWA0202": {
           "datum": "2026-09-05T12:00:00",
           "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
@@ -12384,21 +12242,6 @@
           "phase_id": 12594,
           "heim": true,
           "ohne_zeit": false,
-          "sequence": 0
-        },
-        "2627RPBKRODJWA1004": {
-          "datum": "2026-12-05T00:00:00",
-          "ort": "",
-          "halle": "",
-          "gegner": "Platzhalter 7",
-          "gegner_id": 0,
-          "match_id": 385100,
-          "lat": null,
-          "lon": null,
-          "spieltag": 10,
-          "phase_id": 12594,
-          "heim": true,
-          "ohne_zeit": true,
           "sequence": 0
         },
         "2627RPBKRODJWA1102": {
@@ -13970,14 +13813,7 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [
-        {
-          "art": "verlegt",
-          "code": "2627RPBKRKEJGE0505",
-          "spieltag": 5,
-          "text": "Spieltag 5 gegen Vsk Niederfeld: Sa 26.09. 11:00 → Sa 31.10. 11:00"
-        }
-      ],
+      "letzte_aenderungen": [],
       "spiele": {
         "2627RPBKRKEJGE0102": {
           "datum": "2026-08-29T15:30:00",
@@ -14119,21 +13955,6 @@
           "heim": true,
           "ohne_zeit": false,
           "sequence": 0
-        },
-        "2627RPBKRKEJGE0905": {
-          "datum": "2026-11-28T00:00:00",
-          "ort": "",
-          "halle": "",
-          "gegner": "Platzhalter 8",
-          "gegner_id": 0,
-          "match_id": 385450,
-          "lat": null,
-          "lon": null,
-          "spieltag": 9,
-          "phase_id": 12641,
-          "heim": false,
-          "ohne_zeit": true,
-          "sequence": 0
         }
       },
       "abgesetzt": []
@@ -14148,7 +13969,7 @@
       "liga": "Bezirksklasse GEMISCHT",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 4,
+        "runde": 5,
         "phase_id": 12640,
         "gespielt": true,
         "mannschaften": 10,
@@ -14221,14 +14042,14 @@
             "platz": 5,
             "team": "JSG Mundenheim/Rheingönheim 3",
             "team_id": 81342,
-            "spiele": 2,
-            "punkte": 2,
-            "siege": 1,
+            "spiele": 3,
+            "punkte": 4,
+            "siege": 2,
             "remis": 0,
             "niederlagen": 1,
-            "tore": 25,
-            "gegentore": 34,
-            "differenz": -9
+            "tore": 40,
+            "gegentore": 46,
+            "differenz": -6
           },
           {
             "platz": 6,
@@ -14260,14 +14081,14 @@
             "platz": 8,
             "team": "TV Offenbach 4",
             "team_id": 81344,
-            "spiele": 4,
+            "spiele": 5,
             "punkte": 1,
             "siege": 0,
             "remis": 1,
-            "niederlagen": 2,
-            "tore": 36,
-            "gegentore": 65,
-            "differenz": -29
+            "niederlagen": 3,
+            "tore": 48,
+            "gegentore": 80,
+            "differenz": -32
           },
           {
             "platz": 9,
@@ -14407,50 +14228,7 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [
-        {
-          "art": "entfallen",
-          "code": "2627RPBKRKEJGD0304",
-          "spieltag": 3,
-          "text": "Spiel gegen JSG Mundenheim/Rheingönheim 3 am Sa 12.09. 11:00 hat der Verband abgesetzt"
-        },
-        {
-          "art": "entfallen",
-          "code": "2627RPBKRKEJGD0401",
-          "spieltag": 4,
-          "text": "Spiel gegen HSG Dudenhofen/Schifferstadt 4 am Sa 19.09. 12:00 hat der Verband abgesetzt"
-        },
-        {
-          "art": "entfallen",
-          "code": "2627RPBKRKEJGD0501",
-          "spieltag": 5,
-          "text": "Spiel gegen TG Waldsee II am So 27.09. 12:30 hat der Verband abgesetzt"
-        },
-        {
-          "art": "entfallen",
-          "code": "2627RPBKRKEJGD0605",
-          "spieltag": 6,
-          "text": "Spiel gegen TSV Speyer II am So 25.10. 10:00 hat der Verband abgesetzt"
-        },
-        {
-          "art": "entfallen",
-          "code": "2627RPBKRKEJGD0702",
-          "spieltag": 7,
-          "text": "Spiel gegen JSG Kaiserslautern/Dansenberg III am So 08.11. 14:00 hat der Verband abgesetzt"
-        },
-        {
-          "art": "entfallen",
-          "code": "2627RPBKRKEJGD0803",
-          "spieltag": 8,
-          "text": "Spiel gegen Hlz Friesenheim/Hochdorf 3 am Sa 14.11. 12:30 hat der Verband abgesetzt"
-        },
-        {
-          "art": "entfallen",
-          "code": "2627RPBKRKEJGD0904",
-          "spieltag": 9,
-          "text": "Spiel gegen HSG Grethen/Maxdorf II am So 29.11. 13:00 hat der Verband abgesetzt"
-        }
-      ],
+      "letzte_aenderungen": [],
       "spiele": {
         "2627RPBKRKEJGD0103": {
           "datum": "2026-08-30T16:15:00",
@@ -15238,21 +15016,6 @@
           "ohne_zeit": false,
           "sequence": 0
         },
-        "2627RPBKROFJGI0201": {
-          "datum": "2026-09-05T00:00:00",
-          "ort": "",
-          "halle": "",
-          "gegner": "Platzhalter 8",
-          "gegner_id": 0,
-          "match_id": 362406,
-          "lat": null,
-          "lon": null,
-          "spieltag": 2,
-          "phase_id": 12612,
-          "heim": false,
-          "ohne_zeit": true,
-          "sequence": 0
-        },
         "2627RPBKROFJGI0304": {
           "datum": "2026-09-20T11:00:00",
           "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
@@ -15341,21 +15104,6 @@
           "phase_id": 12612,
           "heim": false,
           "ohne_zeit": false,
-          "sequence": 0
-        },
-        "2627RPBKROFJGI0901": {
-          "datum": "2026-12-12T00:00:00",
-          "ort": "",
-          "halle": "",
-          "gegner": "Platzhalter 8",
-          "gegner_id": 0,
-          "match_id": 362434,
-          "lat": null,
-          "lon": null,
-          "spieltag": 9,
-          "phase_id": 12612,
-          "heim": true,
-          "ohne_zeit": true,
           "sequence": 0
         },
         "2627RPBKROFJGI1004": {

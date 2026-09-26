@@ -92,6 +92,7 @@ python3 pruefe_tabelle.py     # Rückstand der Verbandstabelle
 python3 pruefe_berichte.py    # Spielberichte gegen die Endstände
 python3 test_spielerstatistik.py  # Auswertung der Berichte
 python3 pruefe_streng.py      # RFC-Prüfung der .ics-Dateien
+python3 pruefe_stand.py       # Hinweis, wenn der Abgleich hängt
 for d in worker/test*.mjs; do node "$d"; done
 ```
 

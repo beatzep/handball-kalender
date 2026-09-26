@@ -78,6 +78,11 @@ def main() -> int:
                 pruefe(bool(s.get("halle")), f"{kennung}: Halle ohne Namen", hart=False)
             pruefe(s.get("gegner") not in (None, "", "Unbekannt"),
                    f"{kennung}: Gegner nicht benannt")
+            # Vom 11. bis 26.09.2026 standen 13 spielfreie Spieltage als
+            # Spiele gegen "Platzhalter 1" usw. im Kalender, unbemerkt.
+            pruefe(s.get("gegner_id") != 0
+                   and not (s.get("gegner") or "").upper().startswith("PLATZHALTER"),
+                   f"{kennung}: Spiel gegen {s.get('gegner')} - spielfrei, kein Spiel")
             pruefe(bool(s.get("match_id")),
                    f"{kennung}: keine Spielkennung - Verweis auf handball.net fehlt",
                    hart=False)

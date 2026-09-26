@@ -114,6 +114,12 @@ jobs:
         run: |
           for datei in worker/test*.mjs; do node "$datei"; done
 
+      # Der Hinweis oben auf den Seiten, wenn der Abgleich haengt. Er muss
+      # mit dem Stand dieses Laufs drinstehen, sonst faellt der naechste
+      # Ausfall wieder keinem auf (siehe 24.-26.09.2026).
+      - name: Hinweis auf alten Stand pruefen
+        run: python3 pruefe_stand.py
+
       # Gleicht die fertigen Kalender noch einmal gegen handball.net ab -
       # unabhaengig vom Generator, also ein echter Abgleich statt einer
       # Selbstbestaetigung. Schlaegt er an, wird nichts committet und die

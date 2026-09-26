@@ -16,6 +16,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 from seite_ansicht import ANSICHT
+from seite_stand import standhinweis
 from seite_stil import STIL
 
 TZ = ZoneInfo("Europe/Berlin")
@@ -170,6 +171,7 @@ Mutterstadt/Ruchheim in den nächsten zwei Wochen.">
 </header>
 
 <main class="huelle">
+  {standhinweis(daten.get('aktualisiert'))}
   <div class="filter" role="group" aria-label="Auswahl">
     <button type="button" data-filter="alle" aria-pressed="true">Alle Spiele</button>
     <button type="button" data-filter="heim" aria-pressed="false">Nur Heimspiele</button>

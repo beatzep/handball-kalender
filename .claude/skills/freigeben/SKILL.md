@@ -36,6 +36,7 @@ python3 pruefe_konflikte.py
 python3 pruefe_verweise.py
 python3 pruefe_tabelle.py
 python3 pruefe_streng.py
+python3 pruefe_stand.py
 for d in worker/test*.mjs; do node "$d"; done
 ```
 

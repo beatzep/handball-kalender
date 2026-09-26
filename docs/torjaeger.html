@@ -200,6 +200,13 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
                   color: var(--tinte); padding: 9px 16px; cursor: pointer; }
 .hinweis button:hover { border-color: var(--gold); background: var(--gold-schwach); }
 
+/* ---------- Abgleich hängt (seite_stand.py) ---------- */
+.veraltet { border-left: 3px solid var(--niederlage); padding: 6px 0 6px 16px;
+            margin: 22px 0 6px; }
+.veraltet h2 { margin: 0 0 6px; font-size: .95rem; font-weight: 700;
+               color: var(--niederlage); }
+.veraltet p { margin: 0 0 6px; font-size: .95rem; }
+
 /* ---------- Spielplan ---------- */
 .monat { font-size: .82rem; font-weight: 600; letter-spacing: .06em;
          text-transform: uppercase; color: var(--leise); padding: 28px 0 10px; }
@@ -680,6 +687,62 @@ table.tabelle tr.wir td.platz { box-shadow: inset 2px 0 0 var(--gold); }
 </header>
 
 <main class="huelle">
+  <div class="veraltet" id="veraltet" role="status"
+     data-stand="2026-09-26T12:34:28+00:00">
+  <h2>Spielplan womöglich nicht aktuell</h2>
+  <p data-stand-text>Stand der Daten: 26.09.2026 um 14:34 Uhr. Ob das noch aktuell ist, lässt sich gerade nicht prüfen.</p>
+  <p>Im Zweifel bei <a href="https://www.handball.net" target="_blank"
+     rel="noopener">handball.net</a> nachschauen.</p>
+</div>
+<script>
+function muruVeraltet(standIso, jetzt) {
+  var stand = Date.parse(standIso);
+  if (!isFinite(stand)) return { grund: 'unbekannt' };
+  var stunden = (jetzt - stand) / 3600000;
+  // Ein Stand aus der Zukunft heisst: die Uhr des Geraets geht falsch.
+  // Dann laesst sich nichts sagen, also auch nicht Entwarnung geben.
+  if (stunden < -0.25) return { grund: 'uhr', stand: stand };
+  var d = new Date(jetzt);
+  var wochenende = d.getUTCDay() === 6 || d.getUTCDay() === 0;
+  var grenze = (wochenende && d.getUTCHours() >= 14) ? 3 : 25.5;
+  if (stunden <= grenze) return null;
+  return { grund: 'alt', stand: stand, stunden: stunden };
+}
+
+function muruStandText(befund) {
+  if (befund.grund === 'unbekannt') {
+    return 'Wann der Spielplan zuletzt mit handball.net abgeglichen wurde, '
+         + 'lässt sich gerade nicht sagen.';
+  }
+  var d = new Date(befund.stand);
+  var wann = d.toLocaleDateString('de-DE', { timeZone: 'Europe/Berlin',
+      weekday: 'long', day: '2-digit', month: '2-digit' })
+    + ', um ' + d.toLocaleTimeString('de-DE', { timeZone: 'Europe/Berlin',
+      hour: '2-digit', minute: '2-digit' });
+  if (befund.grund === 'uhr') {
+    return 'Der letzte Abgleich mit handball.net war am ' + wann + ' Uhr. '
+         + 'Ob das aktuell ist, lässt sich nicht sagen, die Uhr dieses Geräts '
+         + 'scheint falsch zu gehen.';
+  }
+  var h = Math.floor(befund.stunden);
+  var vor = h < 48 ? 'vor ' + h + ' Stunden' : 'vor ' + Math.floor(h / 24) + ' Tagen';
+  return 'Der letzte Abgleich mit handball.net war am ' + wann + ' Uhr, '
+       + 'also ' + vor + '. Normalerweise passiert das jeden Tag, an '
+       + 'Spieltagen jede Stunde. Verlegungen und Ergebnisse seitdem stehen '
+       + 'hier und in den abonnierten Kalendern womöglich noch nicht drin.';
+}
+
+(function () {
+  var el = document.getElementById('veraltet');
+  try {
+    var befund = muruVeraltet(el.getAttribute('data-stand'), Date.now());
+    if (befund === null) { el.hidden = true; return; }
+    el.querySelector('[data-stand-text]').textContent = muruStandText(befund);
+  } catch (e) {
+    el.hidden = false;
+  }
+})();
+</script>
   <div class="filter" role="group" aria-label="Sortierung">
     <button type="button" data-sortier="tore" aria-pressed="true">Nach Toren</button>
     <button type="button" data-sortier="schnitt" aria-pressed="false">Pro Spiel</button>
@@ -691,7 +754,7 @@ table.tabelle tr.wir td.platz { box-shadow: inset 2px 0 0 var(--gold); }
   <p class="statfuss">41 Schützen aus 9 Spielen von 3 Mannschaften.</p>
 
   <p class="fuss">
-    Stand: 26.09.2026, 14:24 Uhr. Aus den Spielberichten von
+    Stand: 26.09.2026, 14:35 Uhr. Aus den Spielberichten von
     <a href="https://www.handball.net" target="_blank" rel="noopener">handball.net</a>.
     <a href="wochenende.html">Wer spielt wann</a>
   </p>

@@ -383,6 +383,20 @@ def ist_abgesetzt(spiel: dict) -> bool:
     return (spiel.get("status") or {}).get("id") == 3
 
 
+def ist_spielfrei(spiel: dict, team_id: int) -> bool:
+    """'Spiele' gegen einen Platzhalter sind spielfreie Spieltage.
+
+    Seit dem 10.09.2026 fuehrt der Verband sie mit: Gegner 'PLATZHALTER 1'
+    mit der ID 0, ohne Halle, ohne Uhrzeit. Die Liga der mA hat zehn
+    Mannschaften, ist aber mit elf Plaetzen angelegt; wer gegen den leeren
+    Platz gelost ist, hat frei. Ab dem 11.09. standen so 13 Termine bei
+    sieben Mannschaften im Kalender, etwa 'MuRu mA - Platzhalter 1'."""
+    seite = "visitor" if ist_heimspiel(spiel, team_id) else "local"
+    gegenueber = spiel.get(seite) or {}
+    return (gegenueber.get("id") == 0
+            or (gegenueber.get("name") or "").upper().startswith("PLATZHALTER"))
+
+
 def hauptphase(spiele: list[dict]) -> dict:
     """Die Phase, in der die meisten Spiele stattfinden.
 
@@ -513,6 +527,10 @@ def vergleiche(spiele: list[dict], team_id: int, alt: dict,
         neu[code] = eintrag
 
     for code, vorher in alt.items():
+        # Ein Platzhalter war nie ein Spiel, sein Wegfall ist keine Aenderung
+        # (sonst stuenden beim Aufraeumen 13 "entfallene" Spiele auf der Seite)
+        if vorher.get("gegner_id") == 0:
+            continue
         if code not in neu:
             aenderungen.append({
                 "art": "entfallen", "code": code, "spieltag": vorher.get("spieltag"),
@@ -691,7 +709,8 @@ def verarbeite_team(team: dict, cfg: argparse.Namespace, alt: dict) -> tuple[dic
     alle = hole_spiele(team_id)
     if not alle:
         raise SystemExit(f"Keine Spiele fuer Team {team_id} ({team['name']}).")
-    spiele = [s for s in alle if not ist_abgesetzt(s)]
+    spiele = [s for s in alle
+              if not ist_abgesetzt(s) and not ist_spielfrei(s, team_id)]
     abgesetzt = abgesetzte_spiele(alle, team_id, alt)
 
     neuer_stand, aenderungen = vergleiche(spiele, team_id, alt.get("spiele") or {},

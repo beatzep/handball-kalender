@@ -23,6 +23,7 @@ from seite_grafik import GRAFIK
 from seite_skript import SKRIPT
 from seite_tipp import TIPP
 from seite_zaehlung import ZAEHLUNG
+from seite_stand import standhinweis
 from seite_stil import STIL
 
 TZ = ZoneInfo("Europe/Berlin")
@@ -1327,6 +1328,7 @@ automatisch im Handykalender, Verlegungen inklusive.">
 </header>
 
 <main class="huelle">
+  {standhinweis(daten.get('aktualisiert'))}
   <section data-team="meine" hidden>
     <p class="liga" id="meine-kopf">Angeheftete Mannschaften</p>
     <div id="meine-inhalt"></div>

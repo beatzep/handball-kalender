@@ -86,8 +86,13 @@ def main() -> int:
 
         # Abgesetzte Spiele (Status 3) stehen mit Platzhalterdatum drin und
         # gehoeren nicht in den Kalender, siehe gE-Jugend III im Sept. 2026.
+        # Ebenso wenig die spielfreien Spieltage gegen "PLATZHALTER n" (ID 0).
         api_spiele = [s for s in hole(f"matches?team_id={tid}")["data"]
-                      if (s.get("status") or {}).get("id") != 3]
+                      if (s.get("status") or {}).get("id") != 3
+                      and not any((s.get(x) or {}).get("id") == 0
+                                  or (s.get(x) or {}).get("name", "").upper()
+                                  .startswith("PLATZHALTER")
+                                  for x in ("local", "visitor"))]
         ics = lies_ics(datei)
         gesamt_spiele += len(api_spiele)
 
