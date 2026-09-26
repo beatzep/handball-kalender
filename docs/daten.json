@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-26T14:31:03+00:00",
+  "aktualisiert": "2026-09-26T15:01:08+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -8813,14 +8813,27 @@
             "gegentore": 154,
             "differenz": -36
           }
+        ],
+        "fehlend": [
+          {
+            "datum": "2026-09-26T15:30:00",
+            "gegner": "Hf Untere Saar",
+            "ergebnis": {
+              "heim": 32,
+              "gast": 29,
+              "eigene": 32,
+              "fremde": 29,
+              "ausgang": "S"
+            }
+          }
         ]
       },
       "form": [
-        "S",
         "N",
         "N",
         "N",
-        "N"
+        "N",
+        "S"
       ],
       "statistik": {
         "fahrten": {
@@ -8843,16 +8856,16 @@
         },
         "bilanz": {
           "gesamt": {
-            "s": 1,
+            "s": 2,
             "u": 0,
             "n": 4,
-            "spiele": 5
+            "spiele": 6
           },
           "heim": {
-            "s": 0,
+            "s": 1,
             "u": 0,
             "n": 2,
-            "spiele": 2
+            "spiele": 3
           },
           "auswaerts": {
             "s": 1,
@@ -8863,18 +8876,18 @@
         },
         "serien": {
           "ohne_niederlage": 1,
-          "aktuell": 4,
-          "aktuell_art": "N"
+          "aktuell": 1,
+          "aktuell_art": "S"
         },
         "krimis": {
           "anzahl": 1,
-          "gesamt": 5,
-          "anteil": 20
+          "gesamt": 6,
+          "anteil": 17
         },
         "tore": {
-          "erzielt": 138,
-          "kassiert": 162,
-          "schnitt": 27.6,
+          "erzielt": 170,
+          "kassiert": 191,
+          "schnitt": 28.3,
           "torreichstes": {
             "gegner": "JSG Osthofen/Worms",
             "stand": "27:37",
@@ -8888,9 +8901,9 @@
             "schnitt": 0
           },
           "frueh": {
-            "spiele": 5,
-            "punkte": 2,
-            "schnitt": 0.4
+            "spiele": 6,
+            "punkte": 4,
+            "schnitt": 0.67
           }
         },
         "gegner": {
@@ -8901,20 +8914,20 @@
             "differenz": -14
           },
           "liebster": {
-            "gegner": "JSG Osthofen/Worms",
+            "gegner": "Hf Untere Saar",
             "spiele": 2,
             "punkte": 2,
-            "differenz": -6
+            "differenz": -1
           }
         },
         "alltag": {}
       },
       "spieler": {
         "quelle": {
-          "spiele_gelaufen": 5,
+          "spiele_gelaufen": 6,
           "mit_bericht": 0,
           "ohne_bericht": 0,
-          "offen": 5
+          "offen": 6
         },
         "schuetzen": [],
         "verteilung": {
@@ -9066,7 +9079,14 @@
           "phase_id": 13258,
           "heim": true,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 0,
+          "ergebnis": {
+            "heim": 32,
+            "gast": 29,
+            "eigene": 32,
+            "fremde": 29,
+            "ausgang": "S"
+          }
         }
       },
       "abgesetzt": []
