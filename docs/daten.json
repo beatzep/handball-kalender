@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-26T14:00:56+00:00",
+  "aktualisiert": "2026-09-26T14:31:03+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -13005,14 +13005,14 @@
             "platz": 3,
             "team": "TV Edigheim",
             "team_id": 81290,
-            "spiele": 3,
-            "punkte": 4,
-            "siege": 2,
+            "spiele": 4,
+            "punkte": 6,
+            "siege": 3,
             "remis": 0,
             "niederlagen": 1,
-            "tore": 73,
-            "gegentore": 75,
-            "differenz": -2
+            "tore": 104,
+            "gegentore": 93,
+            "differenz": 11
           },
           {
             "platz": 4,
@@ -13057,14 +13057,14 @@
             "platz": 7,
             "team": "TG Waldsee",
             "team_id": 81295,
-            "spiele": 4,
+            "spiele": 5,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 4,
-            "tore": 79,
-            "gegentore": 105,
-            "differenz": -26
+            "niederlagen": 5,
+            "tore": 97,
+            "gegentore": 136,
+            "differenz": -39
           },
           {
             "platz": 8,
