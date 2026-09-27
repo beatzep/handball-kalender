@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-27T18:15:42+00:00",
+  "aktualisiert": "2026-09-27T18:45:50+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -61,14 +61,14 @@
             "platz": 2,
             "team": "SG Saulheim 2",
             "team_id": 80921,
-            "spiele": 3,
+            "spiele": 4,
             "punkte": 6,
             "siege": 3,
             "remis": 0,
-            "niederlagen": 0,
-            "tore": 71,
-            "gegentore": 59,
-            "differenz": 12
+            "niederlagen": 1,
+            "tore": 103,
+            "gegentore": 95,
+            "differenz": 8
           },
           {
             "platz": 3,
@@ -87,14 +87,14 @@
             "platz": 4,
             "team": "HSG Worms",
             "team_id": 80913,
-            "spiele": 4,
-            "punkte": 4,
-            "siege": 2,
+            "spiele": 5,
+            "punkte": 6,
+            "siege": 3,
             "remis": 0,
             "niederlagen": 2,
-            "tore": 114,
-            "gegentore": 125,
-            "differenz": -11
+            "tore": 150,
+            "gegentore": 157,
+            "differenz": -7
           },
           {
             "platz": 5,
