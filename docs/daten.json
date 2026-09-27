@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-27T17:15:52+00:00",
+  "aktualisiert": "2026-09-27T17:45:58+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -10109,7 +10109,7 @@
           },
           {
             "runde": 5,
-            "platz": 4,
+            "platz": 3,
             "punkte": 4
           }
         ],
@@ -10131,30 +10131,17 @@
             "platz": 2,
             "team": "Mjsg Bodenheim/Budenheim II",
             "team_id": 81087,
-            "spiele": 4,
-            "punkte": 5,
-            "siege": 2,
+            "spiele": 5,
+            "punkte": 7,
+            "siege": 3,
             "remis": 1,
             "niederlagen": 1,
-            "tore": 136,
-            "gegentore": 114,
-            "differenz": 22
+            "tore": 169,
+            "gegentore": 134,
+            "differenz": 35
           },
           {
             "platz": 3,
-            "team": "DJK GW Büdesheim",
-            "team_id": 81085,
-            "spiele": 2,
-            "punkte": 4,
-            "siege": 2,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 67,
-            "gegentore": 53,
-            "differenz": 14
-          },
-          {
-            "platz": 4,
             "team": "HSG Mutterstadt/Ruchheim Mc",
             "team_id": 81091,
             "spiele": 5,
@@ -10165,6 +10152,19 @@
             "tore": 172,
             "gegentore": 160,
             "differenz": 12
+          },
+          {
+            "platz": 4,
+            "team": "DJK GW Büdesheim",
+            "team_id": 81085,
+            "spiele": 3,
+            "punkte": 4,
+            "siege": 2,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 87,
+            "gegentore": 86,
+            "differenz": 1
           },
           {
             "platz": 5,
