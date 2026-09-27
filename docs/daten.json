@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-27T13:31:02+00:00",
+  "aktualisiert": "2026-09-27T14:01:05+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -11219,13 +11219,26 @@
           },
           {
             "runde": 6,
-            "platz": 1,
+            "platz": 2,
             "punkte": 9
           }
         ],
         "eintraege": [
           {
             "platz": 1,
+            "team": "JSG  Mundenheim/Rheingönheim",
+            "team_id": 86950,
+            "spiele": 6,
+            "punkte": 10,
+            "siege": 5,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 171,
+            "gegentore": 130,
+            "differenz": 41
+          },
+          {
+            "platz": 2,
             "team": "HSG Mutterstadt/Ruchheim",
             "team_id": 86951,
             "spiele": 6,
@@ -11236,19 +11249,6 @@
             "tore": 174,
             "gegentore": 155,
             "differenz": 19
-          },
-          {
-            "platz": 2,
-            "team": "JSG  Mundenheim/Rheingönheim",
-            "team_id": 86950,
-            "spiele": 5,
-            "punkte": 8,
-            "siege": 4,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 137,
-            "gegentore": 110,
-            "differenz": 27
           },
           {
             "platz": 3,
@@ -11267,14 +11267,14 @@
             "platz": 4,
             "team": "SG Zweibrücken",
             "team_id": 86947,
-            "spiele": 5,
+            "spiele": 6,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 5,
-            "tore": 112,
-            "gegentore": 156,
-            "differenz": -44
+            "niederlagen": 6,
+            "tore": 132,
+            "gegentore": 190,
+            "differenz": -58
           }
         ]
       },
@@ -14564,7 +14564,7 @@
       "liga": "Bezirksklasse GEMISCHT",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 4,
+        "runde": 5,
         "phase_id": 12641,
         "gespielt": true,
         "mannschaften": 9,
@@ -14608,14 +14608,14 @@
             "platz": 2,
             "team": "JSG Kaiserslautern/Dansenberg II",
             "team_id": 87382,
-            "spiele": 4,
-            "punkte": 6,
-            "siege": 3,
+            "spiele": 5,
+            "punkte": 8,
+            "siege": 4,
             "remis": 0,
             "niederlagen": 1,
-            "tore": 115,
-            "gegentore": 53,
-            "differenz": 62
+            "tore": 140,
+            "gegentore": 68,
+            "differenz": 72
           },
           {
             "platz": 3,
@@ -14632,19 +14632,6 @@
           },
           {
             "platz": 4,
-            "team": "TUS Neuhofen II",
-            "team_id": 81341,
-            "spiele": 3,
-            "punkte": 4,
-            "siege": 2,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 61,
-            "gegentore": 77,
-            "differenz": -16
-          },
-          {
-            "platz": 5,
             "team": "HSG Dudenhofen/Schifferstadt 2",
             "team_id": 81339,
             "spiele": 2,
@@ -14655,6 +14642,19 @@
             "tore": 37,
             "gegentore": 29,
             "differenz": 8
+          },
+          {
+            "platz": 5,
+            "team": "TUS Neuhofen II",
+            "team_id": 81341,
+            "spiele": 4,
+            "punkte": 4,
+            "siege": 2,
+            "remis": 0,
+            "niederlagen": 2,
+            "tore": 76,
+            "gegentore": 102,
+            "differenz": -26
           },
           {
             "platz": 6,
