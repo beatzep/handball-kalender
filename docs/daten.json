@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-27T19:45:49+00:00",
+  "aktualisiert": "2026-09-27T19:59:17+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -5289,19 +5289,19 @@
         ]
       },
       "gegnervorschau": {
-        "spiele": 4,
+        "spiele": 5,
         "schuetzen": [
           {
             "id": "0jikotu",
             "name": "Nico Fohs",
-            "tore": 21,
-            "siebenmeter_tore": 3,
-            "siebenmeter_wuerfe": 5,
+            "tore": 30,
+            "siebenmeter_tore": 7,
+            "siebenmeter_wuerfe": 10,
             "zwei_minuten": 0,
             "verwarnungen": 0,
-            "spiele": 4,
-            "tore_je_spiel": 5.2,
-            "siebenmeter_quote": 60
+            "spiele": 5,
+            "tore_je_spiel": 6.0,
+            "siebenmeter_quote": 70
           },
           {
             "id": "06421is",
@@ -5318,24 +5318,24 @@
           {
             "id": "03yuron",
             "name": "Lukas Wolf",
-            "tore": 8,
+            "tore": 15,
             "siebenmeter_tore": 0,
             "siebenmeter_wuerfe": 0,
             "zwei_minuten": 0,
             "verwarnungen": 0,
-            "spiele": 2,
-            "tore_je_spiel": 4.0,
+            "spiele": 3,
+            "tore_je_spiel": 5.0,
             "siebenmeter_quote": null
           },
           {
             "id": "19q4nyy",
             "name": "Björn Gerbes",
-            "tore": 5,
+            "tore": 10,
             "siebenmeter_tore": 0,
             "siebenmeter_wuerfe": 0,
             "zwei_minuten": 1,
-            "verwarnungen": 0,
-            "spiele": 1,
+            "verwarnungen": 1,
+            "spiele": 2,
             "tore_je_spiel": 5.0,
             "siebenmeter_quote": null
           },
@@ -5353,9 +5353,9 @@
           }
         ],
         "weitere": 12,
-        "tore": 88,
+        "tore": 113,
         "torschuetzen": 17,
-        "groesster_anteil": 24,
+        "groesster_anteil": 27,
         "strafen": 8,
         "strafen_abschnitte": {
           "0-15": 1,
@@ -5365,14 +5365,14 @@
         },
         "krimis": {
           "anzahl": 3,
-          "gesamt": 4,
+          "gesamt": 5,
           "gewonnen": 0,
           "verloren": 1
         },
         "halbzeiten": {
-          "erste_halbzeit": 2.0,
+          "erste_halbzeit": 1.0,
           "zweite_halbzeit": -1.0,
-          "spiele": 3
+          "spiele": 4
         }
       },
       "letzte_aenderungen": [],
