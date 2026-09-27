@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-27T14:30:53+00:00",
+  "aktualisiert": "2026-09-27T15:01:04+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -7958,14 +7958,14 @@
             "platz": 2,
             "team": "Vsk Niederfeld",
             "team_id": 81069,
-            "spiele": 3,
-            "punkte": 6,
-            "siege": 3,
+            "spiele": 4,
+            "punkte": 8,
+            "siege": 4,
             "remis": 0,
             "niederlagen": 0,
-            "tore": 108,
-            "gegentore": 89,
-            "differenz": 19
+            "tore": 150,
+            "gegentore": 123,
+            "differenz": 27
           },
           {
             "platz": 3,
@@ -7984,40 +7984,40 @@
             "platz": 4,
             "team": "TSV Speyer",
             "team_id": 81071,
-            "spiele": 1,
-            "punkte": 2,
-            "siege": 1,
+            "spiele": 2,
+            "punkte": 4,
+            "siege": 2,
             "remis": 0,
             "niederlagen": 0,
-            "tore": 31,
-            "gegentore": 14,
-            "differenz": 17
+            "tore": 66,
+            "gegentore": 45,
+            "differenz": 21
           },
           {
             "platz": 5,
             "team": "HSG Landau/Land",
             "team_id": 81073,
-            "spiele": 2,
+            "spiele": 3,
             "punkte": 2,
             "siege": 1,
             "remis": 0,
-            "niederlagen": 1,
-            "tore": 53,
-            "gegentore": 66,
-            "differenz": -13
+            "niederlagen": 2,
+            "tore": 87,
+            "gegentore": 108,
+            "differenz": -21
           },
           {
             "platz": 6,
             "team": "HSG TSG/1.FC-Kaiserslautern",
             "team_id": 81068,
-            "spiele": 3,
+            "spiele": 4,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 3,
-            "tore": 59,
-            "gegentore": 96,
-            "differenz": -37
+            "niederlagen": 4,
+            "tore": 90,
+            "gegentore": 131,
+            "differenz": -41
           },
           {
             "platz": 7,
@@ -8616,14 +8616,27 @@
             "gegentore": 176,
             "differenz": -24
           }
+        ],
+        "fehlend": [
+          {
+            "datum": "2026-09-27T15:15:00",
+            "gegner": "Mjsg SG Saulheim/HSV Alzey",
+            "ergebnis": {
+              "heim": 27,
+              "gast": 33,
+              "eigene": 27,
+              "fremde": 33,
+              "ausgang": "N"
+            }
+          }
         ]
       },
       "form": [
-        "S",
         "N",
         "S",
         "N",
-        "S"
+        "S",
+        "N"
       ],
       "statistik": {
         "fahrten": {
@@ -8650,14 +8663,14 @@
           "gesamt": {
             "s": 4,
             "u": 0,
-            "n": 2,
-            "spiele": 6
+            "n": 3,
+            "spiele": 7
           },
           "heim": {
             "s": 2,
             "u": 0,
-            "n": 1,
-            "spiele": 3
+            "n": 2,
+            "spiele": 4
           },
           "auswaerts": {
             "s": 2,
@@ -8669,16 +8682,16 @@
         "serien": {
           "ohne_niederlage": 2,
           "aktuell": 1,
-          "aktuell_art": "S"
+          "aktuell_art": "N"
         },
         "krimis": {
           "anzahl": 2,
-          "gesamt": 6,
-          "anteil": 33
+          "gesamt": 7,
+          "anteil": 29
         },
         "tore": {
-          "erzielt": 162,
-          "kassiert": 157,
+          "erzielt": 189,
+          "kassiert": 190,
           "schnitt": 27.0,
           "torreichstes": {
             "gegner": "TV Kirrweiler",
@@ -8693,9 +8706,9 @@
             "schnitt": 0
           },
           "frueh": {
-            "spiele": 6,
+            "spiele": 7,
             "punkte": 8,
-            "schnitt": 1.33
+            "schnitt": 1.14
           }
         },
         "gegner": {
@@ -8716,10 +8729,10 @@
       },
       "spieler": {
         "quelle": {
-          "spiele_gelaufen": 6,
+          "spiele_gelaufen": 7,
           "mit_bericht": 0,
           "ohne_bericht": 0,
-          "offen": 6
+          "offen": 7
         },
         "schuetzen": [],
         "verteilung": {
@@ -8893,7 +8906,14 @@
           "phase_id": 12616,
           "heim": true,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 0,
+          "ergebnis": {
+            "heim": 27,
+            "gast": 33,
+            "eigene": 27,
+            "fremde": 33,
+            "ausgang": "N"
+          }
         },
         "2627RPOLBJMA0703": {
           "datum": "2026-11-08T13:15:00",
@@ -14595,14 +14615,14 @@
             "platz": 1,
             "team": "Hlz Friesenheim/Hochdorf 2",
             "team_id": 81336,
-            "spiele": 4,
-            "punkte": 8,
-            "siege": 4,
+            "spiele": 5,
+            "punkte": 10,
+            "siege": 5,
             "remis": 0,
             "niederlagen": 0,
-            "tore": 140,
-            "gegentore": 39,
-            "differenz": 101
+            "tore": 176,
+            "gegentore": 50,
+            "differenz": 126
           },
           {
             "platz": 2,
@@ -14634,14 +14654,14 @@
             "platz": 4,
             "team": "HSG Dudenhofen/Schifferstadt 2",
             "team_id": 81339,
-            "spiele": 2,
+            "spiele": 3,
             "punkte": 4,
             "siege": 2,
             "remis": 0,
-            "niederlagen": 0,
-            "tore": 37,
-            "gegentore": 29,
-            "differenz": 8
+            "niederlagen": 1,
+            "tore": 48,
+            "gegentore": 65,
+            "differenz": -17
           },
           {
             "platz": 5,
