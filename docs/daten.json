@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-27T16:31:05+00:00",
+  "aktualisiert": "2026-09-27T16:42:17+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -2660,7 +2660,7 @@
         ]
       },
       "gegnervorschau": {
-        "spiele": 2,
+        "spiele": 3,
         "schuetzen": [
           {
             "id": "019k5xp",
@@ -2677,14 +2677,38 @@
           {
             "id": "0yu259z",
             "name": "Gabriel Bertasius",
-            "tore": 9,
-            "siebenmeter_tore": 1,
-            "siebenmeter_wuerfe": 1,
+            "tore": 16,
+            "siebenmeter_tore": 4,
+            "siebenmeter_wuerfe": 6,
+            "zwei_minuten": 1,
+            "verwarnungen": 1,
+            "spiele": 3,
+            "tore_je_spiel": 5.3,
+            "siebenmeter_quote": 67
+          },
+          {
+            "id": "10fq45d",
+            "name": "Florian Hahn",
+            "tore": 8,
+            "siebenmeter_tore": 0,
+            "siebenmeter_wuerfe": 0,
             "zwei_minuten": 0,
-            "verwarnungen": 0,
+            "verwarnungen": 1,
             "spiele": 2,
-            "tore_je_spiel": 4.5,
-            "siebenmeter_quote": 100
+            "tore_je_spiel": 4.0,
+            "siebenmeter_quote": null
+          },
+          {
+            "id": "0vh2cr5",
+            "name": "Patrick Rösch",
+            "tore": 7,
+            "siebenmeter_tore": 0,
+            "siebenmeter_wuerfe": 0,
+            "zwei_minuten": 0,
+            "verwarnungen": 2,
+            "spiele": 3,
+            "tore_je_spiel": 2.3,
+            "siebenmeter_quote": null
           },
           {
             "id": "1mj02k7",
@@ -2697,45 +2721,30 @@
             "spiele": 2,
             "tore_je_spiel": 3.0,
             "siebenmeter_quote": null
-          },
-          {
-            "id": "0ol7hgq",
-            "name": "Jonas Medler",
-            "tore": 5,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 0,
-            "verwarnungen": 0,
-            "spiele": 1,
-            "tore_je_spiel": 5.0,
-            "siebenmeter_quote": null
-          },
-          {
-            "id": "05s4w1g",
-            "name": "Simon Schlepütz",
-            "tore": 4,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 1,
-            "verwarnungen": 0,
-            "spiele": 1,
-            "tore_je_spiel": 4.0,
-            "siebenmeter_quote": null
           }
         ],
-        "weitere": 6,
-        "tore": 54,
-        "torschuetzen": 11,
-        "groesster_anteil": 31,
-        "strafen": 3,
+        "weitere": 11,
+        "tore": 85,
+        "torschuetzen": 16,
+        "groesster_anteil": 20,
+        "strafen": 4,
         "strafen_abschnitte": {
           "0-15": 1,
           "15-30": 1,
           "30-45": 0,
-          "45-60": 1
+          "45-60": 2
         },
-        "krimis": null,
-        "halbzeiten": null
+        "krimis": {
+          "anzahl": 2,
+          "gesamt": 3,
+          "gewonnen": 0,
+          "verloren": 1
+        },
+        "halbzeiten": {
+          "erste_halbzeit": -2.3,
+          "zweite_halbzeit": 1.3,
+          "spiele": 3
+        }
       },
       "letzte_aenderungen": [],
       "spiele": {
