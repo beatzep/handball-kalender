@@ -16,10 +16,15 @@ ist hier besser als einer zu wenig.
 from __future__ import annotations
 
 import html
+import urllib.parse
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
 TZ = ZoneInfo("Europe/Berlin")
+
+# Am 10.09.2026 hatte das Audit angeschlagen, aber keiner hat es gesehen.
+# Wer den Hinweis liest, soll Bescheid geben koennen.
+ADRESSE = "edis.herrmann@gmail.com"
 
 # Die Grenzen sind an den Laeufen vom 22.08. bis 23.09.2026 gemessen.
 # Unter der Woche lagen zwischen zwei Laeufen hoechstens 25,0 Stunden
@@ -81,12 +86,30 @@ AUSFUEHREN = """
   } catch (e) {
     el.hidden = false;
   }
+  // Die Mannschaft erst beim Tippen eintragen: die Auswahl steht beim
+  // Laden noch nicht fest und kann sich danach aendern.
+  try {
+    var link = el.querySelector('[data-melden]');
+    link.addEventListener('click', function () {
+      var wahl = document.getElementById('teamwahl');
+      var team = (wahl && wahl.value !== 'meine' && wahl.selectedIndex >= 0)
+        ? wahl.options[wahl.selectedIndex].text : '';
+      var text = el.querySelector('[data-stand-text]').textContent;
+      link.href = 'mailto:' + link.getAttribute('data-melden')
+        + '?subject=' + encodeURIComponent('Fehler im Spielplan' + (team ? ': ' + team : ''))
+        + '&body=' + encodeURIComponent((team ? 'Mannschaft: ' + team + '\\n' : '')
+          + 'Seite: ' + location.href + '\\n' + text + '\\n\\n');
+    });
+  } catch (e) {
+    el.hidden = false;
+  }
 })();
 """
 
 
 def standhinweis(aktualisiert: str | None) -> str:
     """Der Block oben auf jeder Seite, die Spielplandaten zeigt."""
+    betreff = urllib.parse.quote("Fehler im Spielplan")
     if aktualisiert:
         w = datetime.fromisoformat(aktualisiert).astimezone(TZ)
         text = (f"Stand der Daten: {w:%d.%m.%Y} um {w:%H:%M} Uhr. Ob das noch "
@@ -99,7 +122,10 @@ def standhinweis(aktualisiert: str | None) -> str:
   <h2>Spielplan womöglich nicht aktuell</h2>
   <p data-stand-text>{html.escape(text)}</p>
   <p>Im Zweifel bei <a href="https://www.handball.net" target="_blank"
-     rel="noopener">handball.net</a> nachschauen.</p>
+     rel="noopener">handball.net</a> nachschauen. Falls hier etwas nicht
+     stimmt, bitte kurz eine Mail an <a href="mailto:{ADRESSE}?subject={betreff}"
+     data-melden="{ADRESSE}">{ADRESSE}</a> schreiben, gerne mit Angabe der
+     Mannschaft. Wir kümmern uns schnellstmöglich darum.</p>
 </div>
 <script>{PRUEFUNG}{AUSFUEHREN}</script>"""
 

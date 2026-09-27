@@ -692,7 +692,10 @@ table.tabelle tr.wir td.platz { box-shadow: inset 2px 0 0 var(--gold); }
   <h2>Spielplan womöglich nicht aktuell</h2>
   <p data-stand-text>Stand der Daten: 27.09.2026 um 00:33 Uhr. Ob das noch aktuell ist, lässt sich gerade nicht prüfen.</p>
   <p>Im Zweifel bei <a href="https://www.handball.net" target="_blank"
-     rel="noopener">handball.net</a> nachschauen.</p>
+     rel="noopener">handball.net</a> nachschauen. Falls hier etwas nicht
+     stimmt, bitte kurz eine Mail an <a href="mailto:edis.herrmann@gmail.com?subject=Fehler%20im%20Spielplan"
+     data-melden="edis.herrmann@gmail.com">edis.herrmann@gmail.com</a> schreiben, gerne mit Angabe der
+     Mannschaft. Wir kümmern uns schnellstmöglich darum.</p>
 </div>
 <script>
 function muruVeraltet(standIso, jetzt) {
@@ -741,6 +744,23 @@ function muruStandText(befund) {
   } catch (e) {
     el.hidden = false;
   }
+  // Die Mannschaft erst beim Tippen eintragen: die Auswahl steht beim
+  // Laden noch nicht fest und kann sich danach aendern.
+  try {
+    var link = el.querySelector('[data-melden]');
+    link.addEventListener('click', function () {
+      var wahl = document.getElementById('teamwahl');
+      var team = (wahl && wahl.value !== 'meine' && wahl.selectedIndex >= 0)
+        ? wahl.options[wahl.selectedIndex].text : '';
+      var text = el.querySelector('[data-stand-text]').textContent;
+      link.href = 'mailto:' + link.getAttribute('data-melden')
+        + '?subject=' + encodeURIComponent('Fehler im Spielplan' + (team ? ': ' + team : ''))
+        + '&body=' + encodeURIComponent((team ? 'Mannschaft: ' + team + '\n' : '')
+          + 'Seite: ' + location.href + '\n' + text + '\n\n');
+    });
+  } catch (e) {
+    el.hidden = false;
+  }
 })();
 </script>
   <div class="filter" role="group" aria-label="Sortierung">
@@ -754,7 +774,7 @@ function muruStandText(befund) {
   <p class="statfuss">42 Schützen aus 11 Spielen von 3 Mannschaften.</p>
 
   <p class="fuss">
-    Stand: 27.09.2026, 00:33 Uhr. Aus den Spielberichten von
+    Stand: 27.09.2026, 04:03 Uhr. Aus den Spielberichten von
     <a href="https://www.handball.net" target="_blank" rel="noopener">handball.net</a>.
     <a href="wochenende.html">Wer spielt wann</a>
   </p>

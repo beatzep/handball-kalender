@@ -15,7 +15,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-from seite_stand import AUSFUEHREN, PRUEFUNG
+from seite_stand import ADRESSE, AUSFUEHREN, PRUEFUNG
 
 DOCS = Path("docs")
 SEITEN = ["index.html", "wochenende.html", "torjaeger.html"]
@@ -84,6 +84,9 @@ def seiten() -> list[str]:
             fehler.append(f"{name}: Pruefskript fuer den Stand fehlt")
         elif seite.index('id="veraltet"') > seite.index(AUSFUEHREN.strip()):
             fehler.append(f"{name}: Pruefskript steht vor dem Hinweis")
+        hinweis = seite[seite.find('id="veraltet"'):seite.find("<script>", seite.find('id="veraltet"'))]
+        if f'href="mailto:{ADRESSE}' not in hinweis:
+            fehler.append(f"{name}: Mailadresse fuer Fehlermeldungen fehlt im Hinweis")
         # Von Haus aus sichtbar, sonst bleibt er bei einem Skriptfehler weg
         kopf = seite[seite.find('<div class="veraltet"'):][:200]
         if "hidden" in kopf.split(">")[0]:
@@ -91,8 +94,17 @@ def seiten() -> list[str]:
     return fehler
 
 
+def lesbar() -> list[str]:
+    """Das Skript hinter dem Hinweis muss sich uebersetzen lassen. Ein
+    '\\n' in Python wird sonst schnell ein echter Zeilenumbruch mitten im
+    JS-String, und der Hinweis bleibt dann auch bei frischen Daten stehen."""
+    lauf = subprocess.run(["node", "-e", "new Function(process.argv[1])",
+                           PRUEFUNG + AUSFUEHREN], capture_output=True, text=True)
+    return [f"Skript hinter dem Hinweis: {lauf.stderr.strip()[:200]}"] if lauf.returncode else []
+
+
 def main() -> int:
-    fehler = rechne() + seiten()
+    fehler = lesbar() + rechne() + seiten()
     for f in fehler:
         print(f"  FEHLER   {f}")
     if not fehler:

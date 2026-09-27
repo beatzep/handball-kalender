@@ -173,8 +173,9 @@ def main() -> int:
         pruefe(datei in html, f"Seite: Verweis auf {datei} fehlt", hart=False)
         pruefe((DOCS / datei).exists(), f"Datei {datei} fehlt")
 
-    # Verweise in der Seite muessen auch existieren
-    for verweis in set(re.findall(r'(?:href|src)="(?!http|webcal|#)([^"]+)"', html)):
+    # Verweise in der Seite muessen auch existieren. mailto: ist keine Datei
+    # (die Adresse im Hinweis bei haengendem Abgleich, seite_stand.py).
+    for verweis in set(re.findall(r'(?:href|src)="(?!http|webcal|#|mailto:)([^"]+)"', html)):
         ziel = verweis.split("?")[0]
         pruefe((DOCS / ziel).exists(), f"Seite verweist auf fehlende Datei: {ziel}")
 
