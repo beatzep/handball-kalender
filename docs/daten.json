@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-27T15:01:04+00:00",
+  "aktualisiert": "2026-09-27T15:30:58+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -8032,12 +8032,26 @@
             "gegentore": 134,
             "differenz": -53
           }
+        ],
+        "fehlend": [
+          {
+            "datum": "2026-09-27T16:00:00",
+            "gegner": "WSG Rheinauen",
+            "ergebnis": {
+              "heim": 21,
+              "gast": 27,
+              "eigene": 27,
+              "fremde": 21,
+              "ausgang": "S"
+            }
+          }
         ]
       },
       "form": [
         "S",
         "S",
         "N",
+        "S",
         "S"
       ],
       "statistik": {
@@ -8061,10 +8075,10 @@
         },
         "bilanz": {
           "gesamt": {
-            "s": 3,
+            "s": 4,
             "u": 0,
             "n": 1,
-            "spiele": 4
+            "spiele": 5
           },
           "heim": {
             "s": 2,
@@ -8073,26 +8087,26 @@
             "spiele": 2
           },
           "auswaerts": {
-            "s": 1,
+            "s": 2,
             "u": 0,
             "n": 1,
-            "spiele": 2
+            "spiele": 3
           }
         },
         "serien": {
           "ohne_niederlage": 2,
-          "aktuell": 1,
+          "aktuell": 2,
           "aktuell_art": "S"
         },
         "krimis": {
           "anzahl": 0,
-          "gesamt": 4,
+          "gesamt": 5,
           "anteil": 0
         },
         "tore": {
-          "erzielt": 140,
-          "kassiert": 96,
-          "schnitt": 35.0,
+          "erzielt": 167,
+          "kassiert": 117,
+          "schnitt": 33.4,
           "torreichstes": {
             "gegner": "HSG Landau/Land",
             "stand": "41:25",
@@ -8106,9 +8120,9 @@
             "schnitt": 0
           },
           "frueh": {
-            "spiele": 4,
-            "punkte": 6,
-            "schnitt": 1.5
+            "spiele": 5,
+            "punkte": 8,
+            "schnitt": 1.6
           }
         },
         "gegner": {},
@@ -8116,10 +8130,10 @@
       },
       "spieler": {
         "quelle": {
-          "spiele_gelaufen": 4,
+          "spiele_gelaufen": 5,
           "mit_bericht": 0,
           "ohne_bericht": 0,
-          "offen": 4
+          "offen": 5
         },
         "schuetzen": [],
         "verteilung": {
@@ -8249,7 +8263,14 @@
           "phase_id": 12587,
           "heim": false,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 0,
+          "ergebnis": {
+            "heim": 21,
+            "gast": 27,
+            "eigene": 27,
+            "fremde": 21,
+            "ausgang": "S"
+          }
         },
         "2627RPVLAJWB0803": {
           "datum": "2026-11-08T16:45:00",
@@ -8481,7 +8502,12 @@
           },
           {
             "runde": 4,
-            "platz": 7,
+            "platz": 5,
+            "punkte": 4
+          },
+          {
+            "runde": 5,
+            "platz": 8,
             "punkte": 4
           }
         ],
@@ -8566,19 +8592,32 @@
           },
           {
             "platz": 7,
-            "team": "HSG Mutterstadt/Ruchheim",
-            "team_id": 86762,
-            "spiele": 4,
+            "team": "Mjsg SG Saulheim/HSV Alzey",
+            "team_id": 86763,
+            "spiele": 5,
             "punkte": 4,
             "siege": 2,
             "remis": 0,
-            "niederlagen": 2,
-            "tore": 124,
-            "gegentore": 131,
-            "differenz": -7
+            "niederlagen": 3,
+            "tore": 137,
+            "gegentore": 147,
+            "differenz": -10
           },
           {
             "platz": 8,
+            "team": "HSG Mutterstadt/Ruchheim",
+            "team_id": 86762,
+            "spiele": 5,
+            "punkte": 4,
+            "siege": 2,
+            "remis": 0,
+            "niederlagen": 3,
+            "tore": 151,
+            "gegentore": 164,
+            "differenz": -13
+          },
+          {
+            "platz": 9,
             "team": "TV Nieder-Olm Mb2",
             "team_id": 80837,
             "spiele": 4,
@@ -8589,19 +8628,6 @@
             "tore": 106,
             "gegentore": 118,
             "differenz": -12
-          },
-          {
-            "platz": 9,
-            "team": "Mjsg SG Saulheim/HSV Alzey",
-            "team_id": 86763,
-            "spiele": 4,
-            "punkte": 2,
-            "siege": 1,
-            "remis": 0,
-            "niederlagen": 3,
-            "tore": 104,
-            "gegentore": 120,
-            "differenz": -16
           },
           {
             "platz": 10,
@@ -8615,19 +8641,6 @@
             "tore": 152,
             "gegentore": 176,
             "differenz": -24
-          }
-        ],
-        "fehlend": [
-          {
-            "datum": "2026-09-27T15:15:00",
-            "gegner": "Mjsg SG Saulheim/HSV Alzey",
-            "ergebnis": {
-              "heim": 27,
-              "gast": 33,
-              "eigene": 27,
-              "fremde": 33,
-              "ausgang": "N"
-            }
           }
         ]
       },
