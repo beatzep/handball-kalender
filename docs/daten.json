@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-27T17:45:58+00:00",
+  "aktualisiert": "2026-09-27T18:15:42+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -5789,6 +5789,19 @@
           },
           {
             "platz": 5,
+            "team": "TV Hauenstein",
+            "team_id": 80995,
+            "spiele": 3,
+            "punkte": 4,
+            "siege": 2,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 105,
+            "gegentore": 99,
+            "differenz": 6
+          },
+          {
+            "platz": 6,
             "team": "TV Kirrweiler",
             "team_id": 81003,
             "spiele": 4,
@@ -5799,19 +5812,6 @@
             "tore": 102,
             "gegentore": 100,
             "differenz": 2
-          },
-          {
-            "platz": 6,
-            "team": "TV Hauenstein",
-            "team_id": 80995,
-            "spiele": 2,
-            "punkte": 2,
-            "siege": 1,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 68,
-            "gegentore": 68,
-            "differenz": 0
           },
           {
             "platz": 7,
@@ -5830,14 +5830,14 @@
             "platz": 8,
             "team": "HSV Alzey",
             "team_id": 80996,
-            "spiele": 2,
+            "spiele": 3,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 2,
-            "tore": 46,
-            "gegentore": 60,
-            "differenz": -14
+            "niederlagen": 3,
+            "tore": 77,
+            "gegentore": 97,
+            "differenz": -20
           },
           {
             "platz": 9,
@@ -7433,14 +7433,14 @@
             "platz": 5,
             "team": "Südpfalz Tiger",
             "team_id": 81050,
-            "spiele": 2,
-            "punkte": 2,
-            "siege": 1,
+            "spiele": 3,
+            "punkte": 4,
+            "siege": 2,
             "remis": 0,
             "niederlagen": 1,
-            "tore": 64,
-            "gegentore": 69,
-            "differenz": -5
+            "tore": 97,
+            "gegentore": 100,
+            "differenz": -3
           },
           {
             "platz": 6,
@@ -7498,14 +7498,14 @@
             "platz": 10,
             "team": "TSV Speyer",
             "team_id": 81046,
-            "spiele": 3,
+            "spiele": 4,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 3,
-            "tore": 92,
-            "gegentore": 134,
-            "differenz": -42
+            "niederlagen": 4,
+            "tore": 123,
+            "gegentore": 167,
+            "differenz": -44
           }
         ]
       },
@@ -9759,14 +9759,14 @@
             "platz": 1,
             "team": "HSG Wittlich",
             "team_id": 86911,
-            "spiele": 5,
-            "punkte": 8,
-            "siege": 4,
+            "spiele": 6,
+            "punkte": 10,
+            "siege": 5,
             "remis": 0,
             "niederlagen": 1,
-            "tore": 164,
-            "gegentore": 127,
-            "differenz": 37
+            "tore": 203,
+            "gegentore": 157,
+            "differenz": 46
           },
           {
             "platz": 2,
@@ -9799,13 +9799,13 @@
             "team": "JSG Osthofen/Worms",
             "team_id": 86920,
             "spiele": 6,
-            "punkte": 3,
+            "punkte": 2,
             "siege": 1,
-            "remis": 1,
-            "niederlagen": 4,
-            "tore": 124,
-            "gegentore": 160,
-            "differenz": -36
+            "remis": 0,
+            "niederlagen": 5,
+            "tore": 148,
+            "gegentore": 193,
+            "differenz": -45
           }
         ]
       },
@@ -12860,6 +12860,19 @@
           },
           {
             "platz": 2,
+            "team": "Wjsg Mainz05/TV Nieder-Olm Wd1",
+            "team_id": 89474,
+            "spiele": 4,
+            "punkte": 6,
+            "siege": 3,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 96,
+            "gegentore": 82,
+            "differenz": 14
+          },
+          {
+            "platz": 3,
             "team": "SV Bornheim",
             "team_id": 81237,
             "spiele": 3,
@@ -12872,7 +12885,7 @@
             "differenz": 32
           },
           {
-            "platz": 3,
+            "platz": 4,
             "team": "TV Kirrweiler",
             "team_id": 81240,
             "spiele": 4,
@@ -12885,33 +12898,7 @@
             "differenz": 17
           },
           {
-            "platz": 4,
-            "team": "Vorderpfälzer Luchse",
-            "team_id": 81239,
-            "spiele": 2,
-            "punkte": 4,
-            "siege": 2,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 44,
-            "gegentore": 31,
-            "differenz": 13
-          },
-          {
             "platz": 5,
-            "team": "Wjsg Mainz05/TV Nieder-Olm Wd1",
-            "team_id": 89474,
-            "spiele": 3,
-            "punkte": 4,
-            "siege": 2,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 74,
-            "gegentore": 64,
-            "differenz": 10
-          },
-          {
-            "platz": 6,
             "team": "JSG Kaiserslautern/Dansenberg",
             "team_id": 87386,
             "spiele": 3,
@@ -12922,6 +12909,19 @@
             "tore": 59,
             "gegentore": 49,
             "differenz": 10
+          },
+          {
+            "platz": 6,
+            "team": "Vorderpfälzer Luchse",
+            "team_id": 81239,
+            "spiele": 3,
+            "punkte": 4,
+            "siege": 2,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 62,
+            "gegentore": 53,
+            "differenz": 9
           },
           {
             "platz": 7,
