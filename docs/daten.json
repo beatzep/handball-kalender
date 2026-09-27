@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-27T15:30:58+00:00",
+  "aktualisiert": "2026-09-27T16:01:06+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -3148,14 +3148,14 @@
             "platz": 1,
             "team": "SG LaFt - Herren",
             "team_id": 80970,
-            "spiele": 4,
-            "punkte": 8,
-            "siege": 4,
+            "spiele": 5,
+            "punkte": 10,
+            "siege": 5,
             "remis": 0,
             "niederlagen": 0,
-            "tore": 142,
-            "gegentore": 112,
-            "differenz": 30
+            "tore": 164,
+            "gegentore": 131,
+            "differenz": 33
           },
           {
             "platz": 2,
@@ -3265,14 +3265,14 @@
             "platz": 10,
             "team": "MSG Kaiserslautern/Dansenberg 2",
             "team_id": 80974,
-            "spiele": 3,
+            "spiele": 4,
             "punkte": 1,
             "siege": 0,
             "remis": 1,
-            "niederlagen": 2,
-            "tore": 74,
-            "gegentore": 91,
-            "differenz": -17
+            "niederlagen": 3,
+            "tore": 93,
+            "gegentore": 113,
+            "differenz": -20
           },
           {
             "platz": 11,
@@ -7358,7 +7358,7 @@
           },
           {
             "runde": 3,
-            "platz": 3,
+            "platz": 2,
             "punkte": 6
           }
         ],
@@ -7378,19 +7378,6 @@
           },
           {
             "platz": 2,
-            "team": "TUS Neuhofen",
-            "team_id": 81044,
-            "spiele": 4,
-            "punkte": 6,
-            "siege": 3,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 142,
-            "gegentore": 108,
-            "differenz": 34
-          },
-          {
-            "platz": 3,
             "team": "HSG MUTTERSTADT/RUCHHEIM mA",
             "team_id": 81043,
             "spiele": 3,
@@ -7403,7 +7390,33 @@
             "differenz": 15
           },
           {
+            "platz": 3,
+            "team": "TUS Neuhofen",
+            "team_id": 81044,
+            "spiele": 4,
+            "punkte": 6,
+            "siege": 3,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 142,
+            "gegentore": 108,
+            "differenz": 34
+          },
+          {
             "platz": 4,
+            "team": "MSG Wörth/Kandel",
+            "team_id": 81047,
+            "spiele": 4,
+            "punkte": 5,
+            "siege": 2,
+            "remis": 1,
+            "niederlagen": 1,
+            "tore": 144,
+            "gegentore": 135,
+            "differenz": 9
+          },
+          {
+            "platz": 5,
             "team": "Mjsg Heiligenstein/Mundenheim/Rheingönheim 2",
             "team_id": 81048,
             "spiele": 3,
@@ -7416,30 +7429,17 @@
             "differenz": 4
           },
           {
-            "platz": 5,
-            "team": "MSG Wörth/Kandel",
-            "team_id": 81047,
-            "spiele": 3,
-            "punkte": 3,
-            "siege": 1,
-            "remis": 1,
-            "niederlagen": 1,
-            "tore": 106,
-            "gegentore": 104,
-            "differenz": 2
-          },
-          {
             "platz": 6,
             "team": "HSG Landau/Land",
             "team_id": 81042,
-            "spiele": 3,
+            "spiele": 4,
             "punkte": 2,
             "siege": 1,
             "remis": 0,
-            "niederlagen": 2,
-            "tore": 111,
-            "gegentore": 102,
-            "differenz": 9
+            "niederlagen": 3,
+            "tore": 142,
+            "gegentore": 140,
+            "differenz": 2
           },
           {
             "platz": 7,
@@ -12203,7 +12203,7 @@
           },
           {
             "runde": 5,
-            "platz": 6,
+            "platz": 7,
             "punkte": 4
           }
         ],
@@ -12249,6 +12249,19 @@
           },
           {
             "platz": 4,
+            "team": "JSG Osthofen/Worms",
+            "team_id": 81183,
+            "spiele": 3,
+            "punkte": 4,
+            "siege": 2,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 55,
+            "gegentore": 57,
+            "differenz": -2
+          },
+          {
+            "platz": 5,
             "team": "Hr Göllheim/Eisenberg/Asselheim/Kindenheim",
             "team_id": 81186,
             "spiele": 4,
@@ -12261,7 +12274,7 @@
             "differenz": -4
           },
           {
-            "platz": 5,
+            "platz": 6,
             "team": "TUS Neuhofen",
             "team_id": 81190,
             "spiele": 4,
@@ -12274,7 +12287,7 @@
             "differenz": -8
           },
           {
-            "platz": 6,
+            "platz": 7,
             "team": "HSG Mutterstadt/Ruchheim Gd Ol",
             "team_id": 81189,
             "spiele": 5,
@@ -12285,19 +12298,6 @@
             "tore": 136,
             "gegentore": 147,
             "differenz": -11
-          },
-          {
-            "platz": 7,
-            "team": "JSG Osthofen/Worms",
-            "team_id": 81183,
-            "spiele": 2,
-            "punkte": 2,
-            "siege": 1,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 38,
-            "gegentore": 41,
-            "differenz": -3
           },
           {
             "platz": 8,
@@ -12316,14 +12316,14 @@
             "platz": 9,
             "team": "Mjsg SG Saulheim/HSV Alzey",
             "team_id": 81184,
-            "spiele": 3,
+            "spiele": 4,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 3,
-            "tore": 55,
-            "gegentore": 74,
-            "differenz": -19
+            "niederlagen": 4,
+            "tore": 71,
+            "gegentore": 91,
+            "differenz": -20
           }
         ]
       },
