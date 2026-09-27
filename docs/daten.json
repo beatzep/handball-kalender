@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-27T16:01:06+00:00",
+  "aktualisiert": "2026-09-27T16:31:05+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -85,58 +85,6 @@
           },
           {
             "platz": 4,
-            "team": "HSG Rhein-Nahe Bingen 2",
-            "team_id": 80915,
-            "spiele": 4,
-            "punkte": 4,
-            "siege": 2,
-            "remis": 0,
-            "niederlagen": 2,
-            "tore": 121,
-            "gegentore": 119,
-            "differenz": 2
-          },
-          {
-            "platz": 5,
-            "team": "HSG Zotzenheim/St.Johann/Sprendlingen",
-            "team_id": 80922,
-            "spiele": 3,
-            "punkte": 4,
-            "siege": 2,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 89,
-            "gegentore": 87,
-            "differenz": 2
-          },
-          {
-            "platz": 6,
-            "team": "HSV Sobernheim H1",
-            "team_id": 80912,
-            "spiele": 3,
-            "punkte": 4,
-            "siege": 2,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 82,
-            "gegentore": 82,
-            "differenz": 0
-          },
-          {
-            "platz": 7,
-            "team": "GW Bingen-Büdesheim",
-            "team_id": 80916,
-            "spiele": 5,
-            "punkte": 4,
-            "siege": 2,
-            "remis": 0,
-            "niederlagen": 3,
-            "tore": 138,
-            "gegentore": 142,
-            "differenz": -4
-          },
-          {
-            "platz": 8,
             "team": "HSG Worms",
             "team_id": 80913,
             "spiele": 4,
@@ -149,30 +97,82 @@
             "differenz": -11
           },
           {
-            "platz": 9,
-            "team": "TSG MZ-Bretzenheim 2",
-            "team_id": 80919,
-            "spiele": 3,
-            "punkte": 2,
-            "siege": 1,
+            "platz": 5,
+            "team": "HSG Rhein-Nahe Bingen 2",
+            "team_id": 80915,
+            "spiele": 4,
+            "punkte": 4,
+            "siege": 2,
             "remis": 0,
             "niederlagen": 2,
-            "tore": 97,
-            "gegentore": 99,
-            "differenz": -2
+            "tore": 121,
+            "gegentore": 119,
+            "differenz": 2
+          },
+          {
+            "platz": 6,
+            "team": "HSG Zotzenheim/St.Johann/Sprendlingen",
+            "team_id": 80922,
+            "spiele": 3,
+            "punkte": 4,
+            "siege": 2,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 89,
+            "gegentore": 87,
+            "differenz": 2
+          },
+          {
+            "platz": 7,
+            "team": "HSV Sobernheim H1",
+            "team_id": 80912,
+            "spiele": 3,
+            "punkte": 4,
+            "siege": 2,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 82,
+            "gegentore": 82,
+            "differenz": 0
+          },
+          {
+            "platz": 8,
+            "team": "TSG MZ-Bretzenheim 2",
+            "team_id": 80919,
+            "spiele": 4,
+            "punkte": 4,
+            "siege": 2,
+            "remis": 0,
+            "niederlagen": 2,
+            "tore": 129,
+            "gegentore": 130,
+            "differenz": -1
+          },
+          {
+            "platz": 9,
+            "team": "GW Bingen-Büdesheim",
+            "team_id": 80916,
+            "spiele": 5,
+            "punkte": 4,
+            "siege": 2,
+            "remis": 0,
+            "niederlagen": 3,
+            "tore": 138,
+            "gegentore": 142,
+            "differenz": -4
           },
           {
             "platz": 10,
             "team": "TV Nieder-Olm 2",
             "team_id": 80917,
-            "spiele": 3,
+            "spiele": 4,
             "punkte": 1,
             "siege": 0,
             "remis": 1,
-            "niederlagen": 2,
-            "tore": 54,
-            "gegentore": 60,
-            "differenz": -6
+            "niederlagen": 3,
+            "tore": 85,
+            "gegentore": 92,
+            "differenz": -7
           },
           {
             "platz": 11,
@@ -7493,9 +7493,23 @@
             "gegentore": 134,
             "differenz": -42
           }
+        ],
+        "fehlend": [
+          {
+            "datum": "2026-09-27T17:00:00",
+            "gegner": "Mjsg Heiligenstein/Mundenheim/Rheingönheim 2",
+            "ergebnis": {
+              "heim": 40,
+              "gast": 30,
+              "eigene": 40,
+              "fremde": 30,
+              "ausgang": "S"
+            }
+          }
         ]
       },
       "form": [
+        "S",
         "S",
         "S",
         "S"
@@ -7523,16 +7537,16 @@
         },
         "bilanz": {
           "gesamt": {
+            "s": 4,
+            "u": 0,
+            "n": 0,
+            "spiele": 4
+          },
+          "heim": {
             "s": 3,
             "u": 0,
             "n": 0,
             "spiele": 3
-          },
-          "heim": {
-            "s": 2,
-            "u": 0,
-            "n": 0,
-            "spiele": 2
           },
           "auswaerts": {
             "s": 1,
@@ -7542,19 +7556,19 @@
           }
         },
         "serien": {
-          "ohne_niederlage": 3,
-          "aktuell": 3,
+          "ohne_niederlage": 4,
+          "aktuell": 4,
           "aktuell_art": "S"
         },
         "krimis": {
           "anzahl": 1,
-          "gesamt": 3,
-          "anteil": 33
+          "gesamt": 4,
+          "anteil": 25
         },
         "tore": {
-          "erzielt": 107,
-          "kassiert": 92,
-          "schnitt": 35.7,
+          "erzielt": 147,
+          "kassiert": 122,
+          "schnitt": 36.8,
           "torreichstes": {
             "gegner": "TS RODALBEN mA",
             "stand": "39:38",
@@ -7568,8 +7582,8 @@
             "schnitt": 0
           },
           "frueh": {
-            "spiele": 3,
-            "punkte": 6,
+            "spiele": 4,
+            "punkte": 8,
             "schnitt": 2.0
           }
         },
@@ -7578,10 +7592,10 @@
       },
       "spieler": {
         "quelle": {
-          "spiele_gelaufen": 3,
+          "spiele_gelaufen": 4,
           "mit_bericht": 0,
           "ohne_bericht": 0,
-          "offen": 3
+          "offen": 4
         },
         "schuetzen": [],
         "verteilung": {
@@ -7689,7 +7703,14 @@
           "phase_id": 12614,
           "heim": true,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 0,
+          "ergebnis": {
+            "heim": 40,
+            "gast": 30,
+            "eigene": 40,
+            "fremde": 30,
+            "ausgang": "S"
+          }
         },
         "2627RPOLAJMA0604": {
           "datum": "2026-10-31T17:00:00",
@@ -7914,7 +7935,7 @@
       "liga": "Verbandsliga WEIBLICH",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 4,
+        "runde": 5,
         "phase_id": 12587,
         "gespielt": true,
         "mannschaften": 7,
@@ -7938,6 +7959,11 @@
             "runde": 4,
             "platz": 1,
             "punkte": 6
+          },
+          {
+            "runde": 5,
+            "platz": 1,
+            "punkte": 8
           }
         ],
         "eintraege": [
@@ -7945,14 +7971,14 @@
             "platz": 1,
             "team": "HSG Mutterstadt/Ruchheim Wa",
             "team_id": 81066,
-            "spiele": 4,
-            "punkte": 6,
-            "siege": 3,
+            "spiele": 5,
+            "punkte": 8,
+            "siege": 4,
             "remis": 0,
             "niederlagen": 1,
-            "tore": 140,
-            "gegentore": 96,
-            "differenz": 44
+            "tore": 167,
+            "gegentore": 117,
+            "differenz": 50
           },
           {
             "platz": 2,
@@ -7969,19 +7995,6 @@
           },
           {
             "platz": 3,
-            "team": "WSG Rheinauen",
-            "team_id": 81072,
-            "spiele": 3,
-            "punkte": 4,
-            "siege": 2,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 92,
-            "gegentore": 69,
-            "differenz": 23
-          },
-          {
-            "platz": 4,
             "team": "TSV Speyer",
             "team_id": 81071,
             "spiele": 2,
@@ -7992,6 +8005,19 @@
             "tore": 66,
             "gegentore": 45,
             "differenz": 21
+          },
+          {
+            "platz": 4,
+            "team": "WSG Rheinauen",
+            "team_id": 81072,
+            "spiele": 4,
+            "punkte": 4,
+            "siege": 2,
+            "remis": 0,
+            "niederlagen": 2,
+            "tore": 113,
+            "gegentore": 96,
+            "differenz": 17
           },
           {
             "platz": 5,
@@ -8031,19 +8057,6 @@
             "tore": 81,
             "gegentore": 134,
             "differenz": -53
-          }
-        ],
-        "fehlend": [
-          {
-            "datum": "2026-09-27T16:00:00",
-            "gegner": "WSG Rheinauen",
-            "ergebnis": {
-              "heim": 21,
-              "gast": 27,
-              "eigene": 27,
-              "fremde": 21,
-              "ausgang": "S"
-            }
           }
         ]
       },
