@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-27T13:00:55+00:00",
+  "aktualisiert": "2026-09-27T13:31:02+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -9103,7 +9103,7 @@
       "liga": "Verbandsliga MÄNNLICH",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 4,
+        "runde": 5,
         "phase_id": 12619,
         "gespielt": true,
         "mannschaften": 8,
@@ -9116,6 +9116,11 @@
           {
             "runde": 2,
             "platz": 7,
+            "punkte": 0
+          },
+          {
+            "runde": 3,
+            "platz": 8,
             "punkte": 0
           }
         ],
@@ -9200,42 +9205,29 @@
           },
           {
             "platz": 7,
-            "team": "HSG Mutterstadt/Ruchheim II",
-            "team_id": 80857,
-            "spiele": 2,
-            "punkte": 0,
-            "siege": 0,
+            "team": "Mjsg SG Saulheim/HSV Alzey 3",
+            "team_id": 80851,
+            "spiele": 5,
+            "punkte": 2,
+            "siege": 1,
             "remis": 0,
-            "niederlagen": 2,
-            "tore": 60,
-            "gegentore": 87,
-            "differenz": -27
+            "niederlagen": 4,
+            "tore": 101,
+            "gegentore": 208,
+            "differenz": -107
           },
           {
             "platz": 8,
-            "team": "Mjsg SG Saulheim/HSV Alzey 3",
-            "team_id": 80851,
-            "spiele": 4,
+            "team": "HSG Mutterstadt/Ruchheim II",
+            "team_id": 80857,
+            "spiele": 3,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 4,
-            "tore": 66,
-            "gegentore": 174,
-            "differenz": -108
-          }
-        ],
-        "fehlend": [
-          {
-            "datum": "2026-09-27T13:30:00",
-            "gegner": "Mjsg SG Saulheim/HSV Alzey 3",
-            "ergebnis": {
-              "heim": 34,
-              "gast": 35,
-              "eigene": 34,
-              "fremde": 35,
-              "ausgang": "N"
-            }
+            "niederlagen": 3,
+            "tore": 94,
+            "gegentore": 122,
+            "differenz": -28
           }
         ]
       },
@@ -10079,14 +10071,14 @@
             "platz": 1,
             "team": "Hlz Friesenheim/Hochdorf 3",
             "team_id": 81092,
-            "spiele": 3,
-            "punkte": 6,
-            "siege": 3,
+            "spiele": 4,
+            "punkte": 8,
+            "siege": 4,
             "remis": 0,
             "niederlagen": 0,
-            "tore": 122,
-            "gegentore": 84,
-            "differenz": 38
+            "tore": 158,
+            "gegentore": 115,
+            "differenz": 43
           },
           {
             "platz": 2,
@@ -10144,14 +10136,14 @@
             "platz": 6,
             "team": "JSG Osthofen/Worms",
             "team_id": 81088,
-            "spiele": 3,
+            "spiele": 4,
             "punkte": 3,
             "siege": 1,
             "remis": 1,
-            "niederlagen": 1,
-            "tore": 94,
-            "gegentore": 91,
-            "differenz": 3
+            "niederlagen": 2,
+            "tore": 125,
+            "gegentore": 127,
+            "differenz": -2
           },
           {
             "platz": 7,
@@ -10676,7 +10668,7 @@
           },
           {
             "runde": 4,
-            "platz": 8,
+            "platz": 9,
             "punkte": 2
           }
         ],
@@ -10709,29 +10701,29 @@
           },
           {
             "platz": 3,
-            "team": "Mwsg Kandel/Hagenbach II",
-            "team_id": 81124,
-            "spiele": 3,
-            "punkte": 6,
+            "team": "HSG Landau/Land II",
+            "team_id": 81125,
+            "spiele": 5,
+            "punkte": 7,
             "siege": 3,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 97,
-            "gegentore": 81,
-            "differenz": 16
+            "remis": 1,
+            "niederlagen": 1,
+            "tore": 179,
+            "gegentore": 159,
+            "differenz": 20
           },
           {
             "platz": 4,
-            "team": "HSG Landau/Land II",
-            "team_id": 81125,
+            "team": "Mwsg Kandel/Hagenbach II",
+            "team_id": 81124,
             "spiele": 4,
-            "punkte": 5,
-            "siege": 2,
-            "remis": 1,
+            "punkte": 6,
+            "siege": 3,
+            "remis": 0,
             "niederlagen": 1,
-            "tore": 133,
-            "gegentore": 131,
-            "differenz": 2
+            "tore": 125,
+            "gegentore": 127,
+            "differenz": -2
           },
           {
             "platz": 5,
@@ -10748,19 +10740,6 @@
           },
           {
             "platz": 6,
-            "team": "JSG Rodalben/Thaleischweiler II",
-            "team_id": 81123,
-            "spiele": 3,
-            "punkte": 2,
-            "siege": 1,
-            "remis": 0,
-            "niederlagen": 2,
-            "tore": 89,
-            "gegentore": 103,
-            "differenz": -14
-          },
-          {
-            "platz": 7,
             "team": "HSG Trifels",
             "team_id": 81122,
             "spiele": 4,
@@ -10773,7 +10752,33 @@
             "differenz": -22
           },
           {
+            "platz": 7,
+            "team": "JSG Rodalben/Thaleischweiler II",
+            "team_id": 81123,
+            "spiele": 4,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 3,
+            "tore": 99,
+            "gegentore": 134,
+            "differenz": -35
+          },
+          {
             "platz": 8,
+            "team": "TSV Speyer II",
+            "team_id": 81129,
+            "spiele": 5,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 4,
+            "tore": 124,
+            "gegentore": 161,
+            "differenz": -37
+          },
+          {
+            "platz": 9,
             "team": "HSG Mutterstadt/Ruchheim II",
             "team_id": 81130,
             "spiele": 4,
@@ -10784,19 +10789,6 @@
             "tore": 106,
             "gegentore": 152,
             "differenz": -46
-          },
-          {
-            "platz": 9,
-            "team": "TSV Speyer II",
-            "team_id": 81129,
-            "spiele": 4,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 4,
-            "tore": 93,
-            "gegentore": 151,
-            "differenz": -58
           }
         ]
       },
@@ -11583,6 +11575,11 @@
             "runde": 4,
             "platz": 1,
             "punkte": 6
+          },
+          {
+            "runde": 5,
+            "platz": 1,
+            "punkte": 8
           }
         ],
         "eintraege": [
@@ -11590,14 +11587,14 @@
             "platz": 1,
             "team": "HSG Mutterstadt/Ruchheim II",
             "team_id": 81146,
-            "spiele": 4,
-            "punkte": 6,
-            "siege": 3,
+            "spiele": 5,
+            "punkte": 8,
+            "siege": 4,
             "remis": 0,
             "niederlagen": 0,
-            "tore": 96,
-            "gegentore": 38,
-            "differenz": 58
+            "tore": 118,
+            "gegentore": 56,
+            "differenz": 62
           },
           {
             "platz": 2,
@@ -11668,14 +11665,14 @@
             "platz": 7,
             "team": "JSG Mundenheim/Rheingönheim 2",
             "team_id": 81150,
-            "spiele": 3,
+            "spiele": 4,
             "punkte": 2,
             "siege": 1,
             "remis": 0,
-            "niederlagen": 2,
-            "tore": 75,
-            "gegentore": 66,
-            "differenz": 9
+            "niederlagen": 3,
+            "tore": 93,
+            "gegentore": 88,
+            "differenz": 5
           },
           {
             "platz": 8,
@@ -11715,19 +11712,6 @@
             "tore": 0,
             "gegentore": 0,
             "differenz": 0
-          }
-        ],
-        "fehlend": [
-          {
-            "datum": "2026-09-27T13:15:00",
-            "gegner": "JSG Mundenheim/Rheingönheim 2",
-            "ergebnis": {
-              "heim": 22,
-              "gast": 18,
-              "eigene": 22,
-              "fremde": 18,
-              "ausgang": "S"
-            }
           }
         ]
       },
