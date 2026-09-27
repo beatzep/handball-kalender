@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-27T12:01:00+00:00",
+  "aktualisiert": "2026-09-27T12:30:58+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -11696,9 +11696,23 @@
             "gegentore": 0,
             "differenz": 0
           }
+        ],
+        "fehlend": [
+          {
+            "datum": "2026-09-27T13:15:00",
+            "gegner": "JSG Mundenheim/Rheingönheim 2",
+            "ergebnis": {
+              "heim": 22,
+              "gast": 18,
+              "eigene": 22,
+              "fremde": 18,
+              "ausgang": "S"
+            }
+          }
         ]
       },
       "form": [
+        "S",
         "S",
         "S",
         "S",
@@ -11727,16 +11741,16 @@
         },
         "bilanz": {
           "gesamt": {
-            "s": 4,
+            "s": 5,
             "u": 0,
             "n": 0,
-            "spiele": 4
+            "spiele": 5
           },
           "heim": {
-            "s": 2,
+            "s": 3,
             "u": 0,
             "n": 0,
-            "spiele": 2
+            "spiele": 3
           },
           "auswaerts": {
             "s": 2,
@@ -11746,19 +11760,19 @@
           }
         },
         "serien": {
-          "ohne_niederlage": 4,
-          "aktuell": 4,
+          "ohne_niederlage": 5,
+          "aktuell": 5,
           "aktuell_art": "S"
         },
         "krimis": {
           "anzahl": 0,
-          "gesamt": 4,
+          "gesamt": 5,
           "anteil": 0
         },
         "tore": {
-          "erzielt": 135,
-          "kassiert": 56,
-          "schnitt": 33.8,
+          "erzielt": 157,
+          "kassiert": 74,
+          "schnitt": 31.4,
           "torreichstes": {
             "gegner": "Mjsg SG Saulheim/HSV Alzey 3",
             "stand": "39:18",
@@ -11772,8 +11786,8 @@
             "schnitt": 0
           },
           "frueh": {
-            "spiele": 4,
-            "punkte": 8,
+            "spiele": 5,
+            "punkte": 10,
             "schnitt": 2.0
           }
         },
@@ -11782,10 +11796,10 @@
       },
       "spieler": {
         "quelle": {
-          "spiele_gelaufen": 4,
+          "spiele_gelaufen": 5,
           "mit_bericht": 0,
           "ohne_bericht": 0,
-          "offen": 4
+          "offen": 5
         },
         "schuetzen": [],
         "verteilung": {
@@ -11915,7 +11929,14 @@
           "phase_id": 12593,
           "heim": true,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 0,
+          "ergebnis": {
+            "heim": 22,
+            "gast": 18,
+            "eigene": 22,
+            "fremde": 18,
+            "ausgang": "S"
+          }
         },
         "2627RPVLCJWC0603": {
           "datum": "2026-10-25T10:00:00",
