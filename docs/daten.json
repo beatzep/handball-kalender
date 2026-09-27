@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-27T19:59:17+00:00",
+  "aktualisiert": "2026-09-27T20:30:54+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -3170,14 +3170,14 @@
             "platz": 2,
             "team": "TV THALEISCHWEILER Herren",
             "team_id": 80973,
-            "spiele": 3,
-            "punkte": 6,
-            "siege": 3,
+            "spiele": 4,
+            "punkte": 8,
+            "siege": 4,
             "remis": 0,
             "niederlagen": 0,
-            "tore": 89,
-            "gegentore": 64,
-            "differenz": 25
+            "tore": 117,
+            "gegentore": 89,
+            "differenz": 28
           },
           {
             "platz": 3,
@@ -3196,14 +3196,14 @@
             "platz": 4,
             "team": "TUS Heiligenstein 2",
             "team_id": 80983,
-            "spiele": 4,
+            "spiele": 5,
             "punkte": 5,
             "siege": 2,
             "remis": 1,
-            "niederlagen": 1,
-            "tore": 118,
-            "gegentore": 107,
-            "differenz": 11
+            "niederlagen": 2,
+            "tore": 143,
+            "gegentore": 135,
+            "differenz": 8
           },
           {
             "platz": 5,
@@ -3233,19 +3233,32 @@
           },
           {
             "platz": 7,
-            "team": "MSG Iggelheim/Meckenheim 3",
-            "team_id": 80978,
-            "spiele": 3,
-            "punkte": 2,
+            "team": "TUS Neuhofen 2",
+            "team_id": 80976,
+            "spiele": 4,
+            "punkte": 3,
             "siege": 1,
-            "remis": 0,
+            "remis": 1,
             "niederlagen": 2,
-            "tore": 84,
-            "gegentore": 95,
-            "differenz": -11
+            "tore": 91,
+            "gegentore": 103,
+            "differenz": -12
           },
           {
             "platz": 8,
+            "team": "MSG Iggelheim/Meckenheim 3",
+            "team_id": 80978,
+            "spiele": 4,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 3,
+            "tore": 102,
+            "gegentore": 115,
+            "differenz": -13
+          },
+          {
+            "platz": 9,
             "team": "TV Kirrweiler 2",
             "team_id": 80979,
             "spiele": 4,
@@ -3256,19 +3269,6 @@
             "tore": 107,
             "gegentore": 131,
             "differenz": -24
-          },
-          {
-            "platz": 9,
-            "team": "TUS Neuhofen 2",
-            "team_id": 80976,
-            "spiele": 3,
-            "punkte": 1,
-            "siege": 0,
-            "remis": 1,
-            "niederlagen": 2,
-            "tore": 71,
-            "gegentore": 85,
-            "differenz": -14
           },
           {
             "platz": 10,
