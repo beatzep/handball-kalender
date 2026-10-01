@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-09-30T09:39:39+00:00",
+  "aktualisiert": "2026-10-01T10:05:15+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -14666,29 +14666,29 @@
           },
           {
             "platz": 3,
-            "team": "HSG Grethen/Maxdorf",
-            "team_id": 81338,
+            "team": "HSG Dudenhofen/Schifferstadt 2",
+            "team_id": 81339,
             "spiele": 4,
             "punkte": 6,
             "siege": 3,
             "remis": 0,
             "niederlagen": 1,
-            "tore": 86,
-            "gegentore": 65,
-            "differenz": 21
+            "tore": 67,
+            "gegentore": 82,
+            "differenz": -15
           },
           {
             "platz": 4,
-            "team": "HSG Dudenhofen/Schifferstadt 2",
-            "team_id": 81339,
-            "spiele": 3,
-            "punkte": 4,
-            "siege": 2,
+            "team": "HSG Grethen/Maxdorf",
+            "team_id": 81338,
+            "spiele": 5,
+            "punkte": 6,
+            "siege": 3,
             "remis": 0,
-            "niederlagen": 1,
-            "tore": 48,
-            "gegentore": 65,
-            "differenz": -17
+            "niederlagen": 2,
+            "tore": 103,
+            "gegentore": 84,
+            "differenz": 19
           },
           {
             "platz": 5,
