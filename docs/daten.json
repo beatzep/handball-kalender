@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-01T10:05:15+00:00",
+  "aktualisiert": "2026-10-02T09:43:10+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -8683,6 +8683,7 @@
             "heim": true
           },
           "ohne_koordinaten": [
+            "Sporthalle Freinsheim",
             "Waldsporthalle Budenheim"
           ]
         },
@@ -8786,7 +8787,26 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [],
+      "letzte_aenderungen": [
+        {
+          "art": "neu",
+          "code": "2627RP4BKRBJMG0102",
+          "spieltag": 1,
+          "text": "Neues Spiel gegen TUS Kl-Dansenberg: Sa 24.10. 11:45 in Sporthalle Freinsheim"
+        },
+        {
+          "art": "neu",
+          "code": "2627RP4BKRBJMG0103",
+          "spieltag": 1,
+          "text": "Neues Spiel gegen Mjsg Heiligenstein/Lingenfeld/Schwegenheim: Sa 24.10. 12:30 in Sporthalle Freinsheim"
+        },
+        {
+          "art": "neu",
+          "code": "2627RP4BKRBJMG0106",
+          "spieltag": 1,
+          "text": "Neues Spiel gegen HSG Eckbachtal: Sa 24.10. 14:45 in Sporthalle Freinsheim"
+        }
+      ],
       "spiele": {
         "2627RP4BKRBJMC0101": {
           "datum": "2026-08-22T00:00:00",
@@ -8941,6 +8961,51 @@
             "fremde": 33,
             "ausgang": "N"
           }
+        },
+        "2627RP4BKRBJMG0102": {
+          "datum": "2026-10-24T11:45:00",
+          "ort": "Sporthalle Freinsheim, Reiboldstr. 12E, 67251 Freinsheim",
+          "halle": "Sporthalle Freinsheim",
+          "gegner": "TUS Kl-Dansenberg",
+          "gegner_id": 86898,
+          "match_id": 689371,
+          "lat": null,
+          "lon": null,
+          "spieltag": 1,
+          "phase_id": 12696,
+          "heim": true,
+          "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RP4BKRBJMG0103": {
+          "datum": "2026-10-24T12:30:00",
+          "ort": "Sporthalle Freinsheim, Reiboldstr. 12E, 67251 Freinsheim",
+          "halle": "Sporthalle Freinsheim",
+          "gegner": "Mjsg Heiligenstein/Lingenfeld/Schwegenheim",
+          "gegner_id": 89490,
+          "match_id": 689372,
+          "lat": null,
+          "lon": null,
+          "spieltag": 1,
+          "phase_id": 12696,
+          "heim": false,
+          "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RP4BKRBJMG0106": {
+          "datum": "2026-10-24T14:45:00",
+          "ort": "Sporthalle Freinsheim, Reiboldstr. 12E, 67251 Freinsheim",
+          "halle": "Sporthalle Freinsheim",
+          "gegner": "HSG Eckbachtal",
+          "gegner_id": 86897,
+          "match_id": 689375,
+          "lat": null,
+          "lon": null,
+          "spieltag": 1,
+          "phase_id": 12696,
+          "heim": true,
+          "ohne_zeit": false,
+          "sequence": 0
         },
         "2627RPOLBJMA0703": {
           "datum": "2026-11-08T13:15:00",
@@ -11334,9 +11399,9 @@
       ],
       "statistik": {
         "fahrten": {
-          "gesamt_km": 579,
-          "fahrten": 4,
-          "stunden": 8.3,
+          "gesamt_km": 799,
+          "fahrten": 7,
+          "stunden": 11.4,
           "weiteste": {
             "km": 313.6,
             "gegner": "TV Engers",
@@ -11451,7 +11516,26 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [],
+      "letzte_aenderungen": [
+        {
+          "art": "neu",
+          "code": "2627RP4BKRCJWF0102",
+          "spieltag": 1,
+          "text": "Neues Spiel gegen TSV Speyer: So 25.10. 10:45 in Sporthalle Bornheim"
+        },
+        {
+          "art": "neu",
+          "code": "2627RP4BKRCJWF0104",
+          "spieltag": 1,
+          "text": "Neues Spiel gegen SV Bornheim: So 25.10. 12:15 in Sporthalle Bornheim"
+        },
+        {
+          "art": "neu",
+          "code": "2627RP4BKRCJWF0105",
+          "spieltag": 1,
+          "text": "Neues Spiel gegen HSG Trifels: So 25.10. 13:00 in Sporthalle Bornheim"
+        }
+      ],
       "spiele": {
         "2627RSWRLCJWA0101": {
           "datum": "2026-08-23T14:00:00",
@@ -11584,6 +11668,51 @@
             "fremde": 26,
             "ausgang": "U"
           }
+        },
+        "2627RP4BKRCJWF0102": {
+          "datum": "2026-10-25T10:45:00",
+          "ort": "Sporthalle Bornheim, Dammgasse 1, 76879 Bornheim",
+          "halle": "Sporthalle Bornheim",
+          "gegner": "TSV Speyer",
+          "gegner_id": 81133,
+          "match_id": 689439,
+          "lat": 49.2157159,
+          "lon": 8.1706403,
+          "spieltag": 1,
+          "phase_id": 17478,
+          "heim": false,
+          "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RP4BKRCJWF0104": {
+          "datum": "2026-10-25T12:15:00",
+          "ort": "Sporthalle Bornheim, Dammgasse 1, 76879 Bornheim",
+          "halle": "Sporthalle Bornheim",
+          "gegner": "SV Bornheim",
+          "gegner_id": 86948,
+          "match_id": 689441,
+          "lat": 49.2157159,
+          "lon": 8.1706403,
+          "spieltag": 1,
+          "phase_id": 17478,
+          "heim": false,
+          "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RP4BKRCJWF0105": {
+          "datum": "2026-10-25T13:00:00",
+          "ort": "Sporthalle Bornheim, Dammgasse 1, 76879 Bornheim",
+          "halle": "Sporthalle Bornheim",
+          "gegner": "HSG Trifels",
+          "gegner_id": 81158,
+          "match_id": 689442,
+          "lat": 49.2157159,
+          "lon": 8.1706403,
+          "spieltag": 1,
+          "phase_id": 17478,
+          "heim": true,
+          "ohne_zeit": false,
+          "sequence": 0
         }
       },
       "abgesetzt": []
@@ -12973,9 +13102,9 @@
       ],
       "statistik": {
         "fahrten": {
-          "gesamt_km": 774,
-          "fahrten": 13,
-          "stunden": 11.1,
+          "gesamt_km": 958,
+          "fahrten": 16,
+          "stunden": 13.7,
           "weiteste": {
             "km": 152.0,
             "gegner": "TSG MZ-Bretzenheim",
@@ -13077,7 +13206,26 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [],
+      "letzte_aenderungen": [
+        {
+          "art": "neu",
+          "code": "2627RP4BKRDJWI0101",
+          "spieltag": 1,
+          "text": "Neues Spiel gegen TV Kirrweiler: Sa 31.10. 11:00 in Reblandhalle Kirrweiler"
+        },
+        {
+          "art": "neu",
+          "code": "2627RP4BKRDJWI0103",
+          "spieltag": 1,
+          "text": "Neues Spiel gegen TV Bodenheim: Sa 31.10. 12:30 in Reblandhalle Kirrweiler"
+        },
+        {
+          "art": "neu",
+          "code": "2627RP4BKRDJWI0105",
+          "spieltag": 1,
+          "text": "Neues Spiel gegen Wjsg Mainz05/TV Nieder-Olm Wd1: Sa 31.10. 14:00 in Reblandhalle Kirrweiler"
+        }
+      ],
       "spiele": {
         "2627RPBKRODJWA0202": {
           "datum": "2026-09-05T12:00:00",
@@ -13222,6 +13370,51 @@
           "lon": 8.1726313657868,
           "spieltag": 6,
           "phase_id": 12594,
+          "heim": false,
+          "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RP4BKRDJWI0101": {
+          "datum": "2026-10-31T11:00:00",
+          "ort": "Reblandhalle Kirrweiler, Unterried 6, 67489 Kirrweiler",
+          "halle": "Reblandhalle Kirrweiler",
+          "gegner": "TV Kirrweiler",
+          "gegner_id": 81240,
+          "match_id": 689282,
+          "lat": 49.2957629,
+          "lon": 8.1726313657868,
+          "spieltag": 1,
+          "phase_id": 13692,
+          "heim": true,
+          "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RP4BKRDJWI0103": {
+          "datum": "2026-10-31T12:30:00",
+          "ort": "Reblandhalle Kirrweiler, Unterried 6, 67489 Kirrweiler",
+          "halle": "Reblandhalle Kirrweiler",
+          "gegner": "TV Bodenheim",
+          "gegner_id": 81244,
+          "match_id": 689284,
+          "lat": 49.2957629,
+          "lon": 8.1726313657868,
+          "spieltag": 1,
+          "phase_id": 13692,
+          "heim": true,
+          "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RP4BKRDJWI0105": {
+          "datum": "2026-10-31T14:00:00",
+          "ort": "Reblandhalle Kirrweiler, Unterried 6, 67489 Kirrweiler",
+          "halle": "Reblandhalle Kirrweiler",
+          "gegner": "Wjsg Mainz05/TV Nieder-Olm Wd1",
+          "gegner_id": 89474,
+          "match_id": 689286,
+          "lat": 49.2957629,
+          "lon": 8.1726313657868,
+          "spieltag": 1,
+          "phase_id": 13692,
           "heim": false,
           "ohne_zeit": false,
           "sequence": 0
