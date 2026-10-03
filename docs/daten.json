@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-03T09:06:49+00:00",
+  "aktualisiert": "2026-10-03T12:01:05+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -12921,23 +12921,36 @@
         "verlauf": [
           {
             "runde": 1,
-            "platz": 4,
+            "platz": 5,
             "punkte": 2
           },
           {
             "runde": 2,
-            "platz": 1,
+            "platz": 2,
             "punkte": 4
           },
           {
             "runde": 3,
-            "platz": 1,
+            "platz": 2,
             "punkte": 6
           }
         ],
         "eintraege": [
           {
             "platz": 1,
+            "team": "Wjsg Mainz05/TV Nieder-Olm Wd1",
+            "team_id": 89474,
+            "spiele": 5,
+            "punkte": 8,
+            "siege": 4,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 120,
+            "gegentore": 94,
+            "differenz": 26
+          },
+          {
+            "platz": 2,
             "team": "HSG Mutterstadt/Ruchheim",
             "team_id": 81241,
             "spiele": 3,
@@ -12948,19 +12961,6 @@
             "tore": 63,
             "gegentore": 41,
             "differenz": 22
-          },
-          {
-            "platz": 2,
-            "team": "Wjsg Mainz05/TV Nieder-Olm Wd1",
-            "team_id": 89474,
-            "spiele": 4,
-            "punkte": 6,
-            "siege": 3,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 96,
-            "gegentore": 82,
-            "differenz": 14
           },
           {
             "platz": 3,
@@ -12977,32 +12977,6 @@
           },
           {
             "platz": 4,
-            "team": "TV Kirrweiler",
-            "team_id": 81240,
-            "spiele": 4,
-            "punkte": 4,
-            "siege": 2,
-            "remis": 0,
-            "niederlagen": 2,
-            "tore": 95,
-            "gegentore": 78,
-            "differenz": 17
-          },
-          {
-            "platz": 5,
-            "team": "JSG Kaiserslautern/Dansenberg",
-            "team_id": 87386,
-            "spiele": 3,
-            "punkte": 4,
-            "siege": 2,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 59,
-            "gegentore": 49,
-            "differenz": 10
-          },
-          {
-            "platz": 6,
             "team": "Vorderpfälzer Luchse",
             "team_id": 81239,
             "spiele": 3,
@@ -13015,7 +12989,20 @@
             "differenz": 9
           },
           {
-            "platz": 7,
+            "platz": 5,
+            "team": "TV Kirrweiler",
+            "team_id": 81240,
+            "spiele": 4,
+            "punkte": 4,
+            "siege": 2,
+            "remis": 0,
+            "niederlagen": 2,
+            "tore": 95,
+            "gegentore": 78,
+            "differenz": 17
+          },
+          {
+            "platz": 6,
             "team": "TV 03 Wörth",
             "team_id": 81242,
             "spiele": 4,
@@ -13026,6 +13013,19 @@
             "tore": 87,
             "gegentore": 84,
             "differenz": 3
+          },
+          {
+            "platz": 7,
+            "team": "JSG Kaiserslautern/Dansenberg",
+            "team_id": 87386,
+            "spiele": 4,
+            "punkte": 4,
+            "siege": 2,
+            "remis": 0,
+            "niederlagen": 2,
+            "tore": 71,
+            "gegentore": 73,
+            "differenz": -2
           },
           {
             "platz": 8,
