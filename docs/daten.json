@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-03T12:30:55+00:00",
+  "aktualisiert": "2026-10-03T13:01:07+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -12,7 +12,7 @@
       "liga": "Männer Bezirksoberliga",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 5,
+        "runde": 6,
         "phase_id": 12482,
         "gespielt": true,
         "mannschaften": 12,
@@ -85,29 +85,29 @@
           },
           {
             "platz": 4,
-            "team": "HSG Worms",
-            "team_id": 80913,
-            "spiele": 5,
+            "team": "GW Bingen-Büdesheim",
+            "team_id": 80916,
+            "spiele": 6,
             "punkte": 6,
             "siege": 3,
             "remis": 0,
-            "niederlagen": 2,
-            "tore": 150,
-            "gegentore": 157,
-            "differenz": -7
+            "niederlagen": 3,
+            "tore": 167,
+            "gegentore": 168,
+            "differenz": -1
           },
           {
             "platz": 5,
-            "team": "HSG Rhein-Nahe Bingen 2",
-            "team_id": 80915,
-            "spiele": 4,
-            "punkte": 4,
-            "siege": 2,
+            "team": "HSG Worms",
+            "team_id": 80913,
+            "spiele": 6,
+            "punkte": 6,
+            "siege": 3,
             "remis": 0,
-            "niederlagen": 2,
-            "tore": 121,
-            "gegentore": 119,
-            "differenz": 2
+            "niederlagen": 3,
+            "tore": 176,
+            "gegentore": 186,
+            "differenz": -10
           },
           {
             "platz": 6,
@@ -137,6 +137,19 @@
           },
           {
             "platz": 8,
+            "team": "HSG Rhein-Nahe Bingen 2",
+            "team_id": 80915,
+            "spiele": 4,
+            "punkte": 4,
+            "siege": 2,
+            "remis": 0,
+            "niederlagen": 2,
+            "tore": 121,
+            "gegentore": 119,
+            "differenz": 2
+          },
+          {
+            "platz": 9,
             "team": "TSG MZ-Bretzenheim 2",
             "team_id": 80919,
             "spiele": 4,
@@ -147,19 +160,6 @@
             "tore": 129,
             "gegentore": 130,
             "differenz": -1
-          },
-          {
-            "platz": 9,
-            "team": "GW Bingen-Büdesheim",
-            "team_id": 80916,
-            "spiele": 5,
-            "punkte": 4,
-            "siege": 2,
-            "remis": 0,
-            "niederlagen": 3,
-            "tore": 138,
-            "gegentore": 142,
-            "differenz": -4
           },
           {
             "platz": 10,
@@ -14265,6 +14265,19 @@
             "gegentore": 160,
             "differenz": -64
           }
+        ],
+        "fehlend": [
+          {
+            "datum": "2026-10-03T14:00:00",
+            "gegner": "TUS Neuhofen",
+            "ergebnis": {
+              "heim": 36,
+              "gast": 15,
+              "eigene": 15,
+              "fremde": 36,
+              "ausgang": "N"
+            }
+          }
         ]
       },
       "form": [
@@ -14299,8 +14312,8 @@
           "gesamt": {
             "s": 0,
             "u": 0,
-            "n": 5,
-            "spiele": 5
+            "n": 6,
+            "spiele": 6
           },
           "heim": {
             "s": 0,
@@ -14311,24 +14324,24 @@
           "auswaerts": {
             "s": 0,
             "u": 0,
-            "n": 3,
-            "spiele": 3
+            "n": 4,
+            "spiele": 4
           }
         },
         "serien": {
           "ohne_niederlage": 0,
-          "aktuell": 5,
+          "aktuell": 6,
           "aktuell_art": "N"
         },
         "krimis": {
           "anzahl": 0,
-          "gesamt": 5,
+          "gesamt": 6,
           "anteil": 0
         },
         "tore": {
-          "erzielt": 96,
-          "kassiert": 160,
-          "schnitt": 19.2,
+          "erzielt": 111,
+          "kassiert": 196,
+          "schnitt": 18.5,
           "torreichstes": {
             "gegner": "JSG Mundenheim/Rheingönheim",
             "stand": "24:34",
@@ -14342,7 +14355,7 @@
             "schnitt": 0
           },
           "frueh": {
-            "spiele": 5,
+            "spiele": 6,
             "punkte": 0,
             "schnitt": 0.0
           }
@@ -14352,10 +14365,10 @@
       },
       "spieler": {
         "quelle": {
-          "spiele_gelaufen": 5,
+          "spiele_gelaufen": 6,
           "mit_bericht": 0,
           "ohne_bericht": 0,
-          "offen": 5
+          "offen": 6
         },
         "schuetzen": [],
         "verteilung": {
@@ -14507,7 +14520,14 @@
           "phase_id": 12645,
           "heim": false,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 0,
+          "ergebnis": {
+            "heim": 36,
+            "gast": 15,
+            "eigene": 15,
+            "fremde": 36,
+            "ausgang": "N"
+          }
         },
         "2627RPBKROEJGC0701": {
           "datum": "2026-10-25T13:15:00",
