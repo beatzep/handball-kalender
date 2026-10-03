@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-03T16:30:48+00:00",
+  "aktualisiert": "2026-10-03T17:01:34+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -7407,14 +7407,14 @@
             "platz": 3,
             "team": "MSG Wörth/Kandel",
             "team_id": 81047,
-            "spiele": 4,
-            "punkte": 5,
-            "siege": 2,
+            "spiele": 5,
+            "punkte": 7,
+            "siege": 3,
             "remis": 1,
             "niederlagen": 1,
-            "tore": 144,
-            "gegentore": 135,
-            "differenz": 9
+            "tore": 175,
+            "gegentore": 163,
+            "differenz": 12
           },
           {
             "platz": 4,
@@ -7498,14 +7498,14 @@
             "platz": 10,
             "team": "TSV Speyer",
             "team_id": 81046,
-            "spiele": 4,
+            "spiele": 5,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 4,
-            "tore": 123,
-            "gegentore": 167,
-            "differenz": -44
+            "niederlagen": 5,
+            "tore": 151,
+            "gegentore": 198,
+            "differenz": -47
           }
         ]
       },
