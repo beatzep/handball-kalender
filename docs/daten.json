@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-03T17:30:55+00:00",
+  "aktualisiert": "2026-10-03T18:00:58+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -6974,79 +6974,79 @@
         ]
       },
       "gegnervorschau": {
-        "spiele": 1,
+        "spiele": 2,
         "schuetzen": [
           {
             "id": "00ndlu9",
             "name": "Jana Rohr",
-            "tore": 10,
+            "tore": 18,
             "siebenmeter_tore": 1,
             "siebenmeter_wuerfe": 1,
             "zwei_minuten": 0,
             "verwarnungen": 0,
-            "spiele": 1,
-            "tore_je_spiel": 10.0,
+            "spiele": 2,
+            "tore_je_spiel": 9.0,
             "siebenmeter_quote": 100
           },
           {
             "id": "0oyqorw",
             "name": "Luca-Sophie Winkelhoff",
-            "tore": 8,
+            "tore": 15,
             "siebenmeter_tore": 0,
             "siebenmeter_wuerfe": 0,
             "zwei_minuten": 0,
             "verwarnungen": 0,
-            "spiele": 1,
-            "tore_je_spiel": 8.0,
-            "siebenmeter_quote": null
-          },
-          {
-            "id": "11ja0gk",
-            "name": "Franziska Gries",
-            "tore": 5,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 2,
-            "verwarnungen": 0,
-            "spiele": 1,
-            "tore_je_spiel": 5.0,
+            "spiele": 2,
+            "tore_je_spiel": 7.5,
             "siebenmeter_quote": null
           },
           {
             "id": "0ykgxwz",
             "name": "Lara-Marie Hasenstab",
-            "tore": 4,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 0,
+            "tore": 13,
+            "siebenmeter_tore": 5,
+            "siebenmeter_wuerfe": 6,
             "zwei_minuten": 0,
             "verwarnungen": 0,
-            "spiele": 1,
-            "tore_je_spiel": 4.0,
+            "spiele": 2,
+            "tore_je_spiel": 6.5,
+            "siebenmeter_quote": 83
+          },
+          {
+            "id": "11ja0gk",
+            "name": "Franziska Gries",
+            "tore": 6,
+            "siebenmeter_tore": 0,
+            "siebenmeter_wuerfe": 0,
+            "zwei_minuten": 2,
+            "verwarnungen": 0,
+            "spiele": 2,
+            "tore_je_spiel": 3.0,
             "siebenmeter_quote": null
           },
           {
             "id": "08yygd8",
             "name": "Natascha Haber",
-            "tore": 2,
+            "tore": 4,
             "siebenmeter_tore": 0,
             "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 0,
-            "verwarnungen": 1,
-            "spiele": 1,
+            "zwei_minuten": 1,
+            "verwarnungen": 2,
+            "spiele": 2,
             "tore_je_spiel": 2.0,
             "siebenmeter_quote": null
           }
         ],
-        "weitere": 3,
-        "tore": 32,
-        "torschuetzen": 8,
-        "groesster_anteil": 31,
-        "strafen": 2,
+        "weitere": 4,
+        "tore": 64,
+        "torschuetzen": 9,
+        "groesster_anteil": 28,
+        "strafen": 4,
         "strafen_abschnitte": {
           "0-15": 0,
           "15-30": 0,
-          "30-45": 0,
-          "45-60": 2
+          "30-45": 1,
+          "45-60": 3
         },
         "krimis": null,
         "halbzeiten": null
@@ -7433,14 +7433,14 @@
             "platz": 5,
             "team": "Südpfalz Tiger",
             "team_id": 81050,
-            "spiele": 3,
-            "punkte": 4,
-            "siege": 2,
+            "spiele": 4,
+            "punkte": 6,
+            "siege": 3,
             "remis": 0,
             "niederlagen": 1,
-            "tore": 97,
-            "gegentore": 100,
-            "differenz": -3
+            "tore": 139,
+            "gegentore": 132,
+            "differenz": 7
           },
           {
             "platz": 6,
@@ -7470,19 +7470,6 @@
           },
           {
             "platz": 8,
-            "team": "TS RODALBEN mA",
-            "team_id": 81045,
-            "spiele": 3,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 3,
-            "tore": 98,
-            "gegentore": 127,
-            "differenz": -29
-          },
-          {
-            "platz": 9,
             "team": "Mjsg SG Saulheim/HSV Alzey",
             "team_id": 81049,
             "spiele": 3,
@@ -7493,6 +7480,19 @@
             "tore": 72,
             "gegentore": 99,
             "differenz": -27
+          },
+          {
+            "platz": 9,
+            "team": "TS RODALBEN mA",
+            "team_id": 81045,
+            "spiele": 4,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 4,
+            "tore": 130,
+            "gegentore": 169,
+            "differenz": -39
           },
           {
             "platz": 10,
