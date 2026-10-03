@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-03T18:00:58+00:00",
+  "aktualisiert": "2026-10-03T18:30:47+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -163,6 +163,19 @@
           },
           {
             "platz": 10,
+            "team": "HSV Alzey",
+            "team_id": 80914,
+            "spiele": 3,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 2,
+            "tore": 89,
+            "gegentore": 93,
+            "differenz": -4
+          },
+          {
+            "platz": 11,
             "team": "TV Nieder-Olm 2",
             "team_id": 80917,
             "spiele": 4,
@@ -175,30 +188,17 @@
             "differenz": -7
           },
           {
-            "platz": 11,
+            "platz": 12,
             "team": "HSC Ingelheim",
             "team_id": 80918,
-            "spiele": 4,
+            "spiele": 5,
             "punkte": 1,
             "siege": 0,
             "remis": 1,
-            "niederlagen": 3,
-            "tore": 107,
-            "gegentore": 116,
-            "differenz": -9
-          },
-          {
-            "platz": 12,
-            "team": "HSV Alzey",
-            "team_id": 80914,
-            "spiele": 2,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 2,
-            "tore": 55,
-            "gegentore": 66,
-            "differenz": -11
+            "niederlagen": 4,
+            "tore": 134,
+            "gegentore": 150,
+            "differenz": -16
           }
         ]
       },
@@ -5718,7 +5718,7 @@
       "liga": "Frauen Verbandsliga",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 5,
+        "runde": 6,
         "phase_id": 12481,
         "gespielt": true,
         "mannschaften": 10,
@@ -5739,14 +5739,14 @@
             "platz": 1,
             "team": "FSG Gonsenheim/Schott",
             "team_id": 80998,
-            "spiele": 5,
-            "punkte": 8,
-            "siege": 4,
+            "spiele": 6,
+            "punkte": 10,
+            "siege": 5,
             "remis": 0,
             "niederlagen": 1,
-            "tore": 155,
-            "gegentore": 148,
-            "differenz": 7
+            "tore": 190,
+            "gegentore": 180,
+            "differenz": 10
           },
           {
             "platz": 2,
@@ -5817,14 +5817,14 @@
             "platz": 7,
             "team": "TV Thaleischweiler",
             "team_id": 81004,
-            "spiele": 1,
+            "spiele": 2,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 1,
-            "tore": 32,
-            "gegentore": 35,
-            "differenz": -3
+            "niederlagen": 2,
+            "tore": 64,
+            "gegentore": 70,
+            "differenz": -6
           },
           {
             "platz": 8,
