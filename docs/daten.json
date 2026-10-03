@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-03T20:15:49+00:00",
+  "aktualisiert": "2026-10-03T20:45:49+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -41,6 +41,11 @@
             "runde": 5,
             "platz": 1,
             "punkte": 8
+          },
+          {
+            "runde": 6,
+            "platz": 1,
+            "punkte": 8
           }
         ],
         "eintraege": [
@@ -48,14 +53,14 @@
             "platz": 1,
             "team": "HSG Mutterstadt/Ruchheim",
             "team_id": 80924,
-            "spiele": 5,
+            "spiele": 6,
             "punkte": 8,
             "siege": 4,
             "remis": 0,
-            "niederlagen": 1,
-            "tore": 162,
-            "gegentore": 134,
-            "differenz": 28
+            "niederlagen": 2,
+            "tore": 193,
+            "gegentore": 169,
+            "differenz": 24
           },
           {
             "platz": 2,
@@ -163,6 +168,19 @@
           },
           {
             "platz": 10,
+            "team": "TV Nieder-Olm 2",
+            "team_id": 80917,
+            "spiele": 5,
+            "punkte": 3,
+            "siege": 1,
+            "remis": 1,
+            "niederlagen": 3,
+            "tore": 120,
+            "gegentore": 123,
+            "differenz": -3
+          },
+          {
+            "platz": 11,
             "team": "HSV Alzey",
             "team_id": 80914,
             "spiele": 3,
@@ -173,19 +191,6 @@
             "tore": 89,
             "gegentore": 93,
             "differenz": -4
-          },
-          {
-            "platz": 11,
-            "team": "TV Nieder-Olm 2",
-            "team_id": 80917,
-            "spiele": 4,
-            "punkte": 1,
-            "siege": 0,
-            "remis": 1,
-            "niederlagen": 3,
-            "tore": 85,
-            "gegentore": 92,
-            "differenz": -7
           },
           {
             "platz": 12,
@@ -199,19 +204,6 @@
             "tore": 134,
             "gegentore": 150,
             "differenz": -16
-          }
-        ],
-        "fehlend": [
-          {
-            "datum": "2026-10-03T20:00:00",
-            "gegner": "TV Nieder-Olm 2",
-            "ergebnis": {
-              "heim": 35,
-              "gast": 31,
-              "eigene": 31,
-              "fremde": 35,
-              "ausgang": "N"
-            }
           }
         ]
       },
