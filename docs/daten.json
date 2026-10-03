@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-03T13:01:07+00:00",
+  "aktualisiert": "2026-10-03T13:30:54+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -14129,7 +14129,7 @@
       "liga": "Bezirksoberliga GEMISCHT",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 5,
+        "runde": 6,
         "phase_id": 12645,
         "gespielt": true,
         "mannschaften": 8,
@@ -14158,6 +14158,11 @@
             "runde": 5,
             "platz": 8,
             "punkte": 0
+          },
+          {
+            "runde": 6,
+            "platz": 8,
+            "punkte": 0
           }
         ],
         "eintraege": [
@@ -14178,30 +14183,17 @@
             "platz": 2,
             "team": "TUS Neuhofen",
             "team_id": 81294,
-            "spiele": 4,
-            "punkte": 6,
-            "siege": 3,
+            "spiele": 5,
+            "punkte": 8,
+            "siege": 4,
             "remis": 0,
             "niederlagen": 1,
-            "tore": 121,
-            "gegentore": 96,
-            "differenz": 25
+            "tore": 157,
+            "gegentore": 111,
+            "differenz": 46
           },
           {
             "platz": 3,
-            "team": "JSG Kaiserslautern/Dansenberg",
-            "team_id": 87381,
-            "spiele": 5,
-            "punkte": 6,
-            "siege": 3,
-            "remis": 0,
-            "niederlagen": 2,
-            "tore": 152,
-            "gegentore": 136,
-            "differenz": 16
-          },
-          {
-            "platz": 4,
             "team": "TV Edigheim",
             "team_id": 81290,
             "spiele": 4,
@@ -14212,6 +14204,19 @@
             "tore": 104,
             "gegentore": 93,
             "differenz": 11
+          },
+          {
+            "platz": 4,
+            "team": "JSG Kaiserslautern/Dansenberg",
+            "team_id": 87381,
+            "spiele": 5,
+            "punkte": 6,
+            "siege": 3,
+            "remis": 0,
+            "niederlagen": 2,
+            "tore": 152,
+            "gegentore": 136,
+            "differenz": 16
           },
           {
             "platz": 5,
@@ -14256,27 +14261,14 @@
             "platz": 8,
             "team": "HSG Mutterstadt/Ruchheim E1",
             "team_id": 81293,
-            "spiele": 5,
+            "spiele": 6,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 5,
-            "tore": 96,
-            "gegentore": 160,
-            "differenz": -64
-          }
-        ],
-        "fehlend": [
-          {
-            "datum": "2026-10-03T14:00:00",
-            "gegner": "TUS Neuhofen",
-            "ergebnis": {
-              "heim": 36,
-              "gast": 15,
-              "eigene": 15,
-              "fremde": 36,
-              "ausgang": "N"
-            }
+            "niederlagen": 6,
+            "tore": 111,
+            "gegentore": 196,
+            "differenz": -85
           }
         ]
       },
