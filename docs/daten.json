@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-03T15:30:55+00:00",
+  "aktualisiert": "2026-10-03T15:59:29+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -7350,7 +7350,7 @@
       "liga": "Oberliga MÄNNLICH",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 4,
+        "runde": 5,
         "phase_id": 12614,
         "gespielt": true,
         "mannschaften": 10,
@@ -7405,19 +7405,6 @@
           },
           {
             "platz": 3,
-            "team": "TUS Neuhofen",
-            "team_id": 81044,
-            "spiele": 4,
-            "punkte": 6,
-            "siege": 3,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 142,
-            "gegentore": 108,
-            "differenz": 34
-          },
-          {
-            "platz": 4,
             "team": "MSG Wörth/Kandel",
             "team_id": 81047,
             "spiele": 4,
@@ -7428,6 +7415,19 @@
             "tore": 144,
             "gegentore": 135,
             "differenz": 9
+          },
+          {
+            "platz": 4,
+            "team": "TUS Neuhofen",
+            "team_id": 81044,
+            "spiele": 4,
+            "punkte": 6,
+            "siege": 3,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 142,
+            "gegentore": 108,
+            "differenz": 34
           },
           {
             "platz": 5,
@@ -7446,14 +7446,14 @@
             "platz": 6,
             "team": "Mjsg Heiligenstein/Mundenheim/Rheingönheim 2",
             "team_id": 81048,
-            "spiele": 4,
-            "punkte": 3,
-            "siege": 1,
+            "spiele": 5,
+            "punkte": 5,
+            "siege": 2,
             "remis": 1,
             "niederlagen": 2,
-            "tore": 128,
-            "gegentore": 134,
-            "differenz": -6
+            "tore": 162,
+            "gegentore": 160,
+            "differenz": 2
           },
           {
             "platz": 7,
@@ -7470,19 +7470,6 @@
           },
           {
             "platz": 8,
-            "team": "Mjsg SG Saulheim/HSV Alzey",
-            "team_id": 81049,
-            "spiele": 2,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 2,
-            "tore": 46,
-            "gegentore": 65,
-            "differenz": -19
-          },
-          {
-            "platz": 9,
             "team": "TS RODALBEN mA",
             "team_id": 81045,
             "spiele": 3,
@@ -7493,6 +7480,19 @@
             "tore": 98,
             "gegentore": 127,
             "differenz": -29
+          },
+          {
+            "platz": 9,
+            "team": "Mjsg SG Saulheim/HSV Alzey",
+            "team_id": 81049,
+            "spiele": 3,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 3,
+            "tore": 72,
+            "gegentore": 99,
+            "differenz": -27
           },
           {
             "platz": 10,
