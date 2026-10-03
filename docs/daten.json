@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-03T19:06:32+00:00",
+  "aktualisiert": "2026-10-03T19:45:45+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -200,14 +200,27 @@
             "gegentore": 150,
             "differenz": -16
           }
+        ],
+        "fehlend": [
+          {
+            "datum": "2026-10-03T20:00:00",
+            "gegner": "TV Nieder-Olm 2",
+            "ergebnis": {
+              "heim": 35,
+              "gast": 31,
+              "eigene": 31,
+              "fremde": 35,
+              "ausgang": "N"
+            }
+          }
         ]
       },
       "form": [
         "S",
         "S",
-        "S",
         "N",
-        "S"
+        "S",
+        "N"
       ],
       "statistik": {
         "fahrten": {
@@ -232,8 +245,8 @@
           "gesamt": {
             "s": 4,
             "u": 0,
-            "n": 1,
-            "spiele": 5
+            "n": 2,
+            "spiele": 6
           },
           "heim": {
             "s": 3,
@@ -244,24 +257,24 @@
           "auswaerts": {
             "s": 1,
             "u": 0,
-            "n": 1,
-            "spiele": 2
+            "n": 2,
+            "spiele": 3
           }
         },
         "serien": {
           "ohne_niederlage": 3,
           "aktuell": 1,
-          "aktuell_art": "S"
+          "aktuell_art": "N"
         },
         "krimis": {
           "anzahl": 1,
-          "gesamt": 5,
-          "anteil": 20
+          "gesamt": 6,
+          "anteil": 17
         },
         "tore": {
-          "erzielt": 162,
-          "kassiert": 134,
-          "schnitt": 32.4,
+          "erzielt": 193,
+          "kassiert": 169,
+          "schnitt": 32.2,
           "torreichstes": {
             "gegner": "TG Osthofen 2",
             "stand": "36:32",
@@ -270,9 +283,9 @@
         },
         "anwurf": {
           "spaet": {
-            "spiele": 3,
+            "spiele": 4,
             "punkte": 6,
-            "schnitt": 2.0
+            "schnitt": 1.5
           },
           "frueh": {
             "spiele": 2,
@@ -294,10 +307,10 @@
       },
       "spieler": {
         "quelle": {
-          "spiele_gelaufen": 5,
+          "spiele_gelaufen": 6,
           "mit_bericht": 5,
           "ohne_bericht": 0,
-          "offen": 0
+          "offen": 1
         },
         "schuetzen": [
           {
@@ -2660,91 +2673,7 @@
         ]
       },
       "gegnervorschau": {
-        "spiele": 3,
-        "schuetzen": [
-          {
-            "id": "019k5xp",
-            "name": "René Schunath",
-            "tore": 17,
-            "siebenmeter_tore": 4,
-            "siebenmeter_wuerfe": 6,
-            "zwei_minuten": 0,
-            "verwarnungen": 0,
-            "spiele": 2,
-            "tore_je_spiel": 8.5,
-            "siebenmeter_quote": 67
-          },
-          {
-            "id": "0yu259z",
-            "name": "Gabriel Bertasius",
-            "tore": 16,
-            "siebenmeter_tore": 4,
-            "siebenmeter_wuerfe": 6,
-            "zwei_minuten": 1,
-            "verwarnungen": 1,
-            "spiele": 3,
-            "tore_je_spiel": 5.3,
-            "siebenmeter_quote": 67
-          },
-          {
-            "id": "10fq45d",
-            "name": "Florian Hahn",
-            "tore": 8,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 0,
-            "verwarnungen": 1,
-            "spiele": 2,
-            "tore_je_spiel": 4.0,
-            "siebenmeter_quote": null
-          },
-          {
-            "id": "0vh2cr5",
-            "name": "Patrick Rösch",
-            "tore": 7,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 0,
-            "verwarnungen": 2,
-            "spiele": 3,
-            "tore_je_spiel": 2.3,
-            "siebenmeter_quote": null
-          },
-          {
-            "id": "1mj02k7",
-            "name": "Niklas Weisenborn",
-            "tore": 6,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 0,
-            "verwarnungen": 0,
-            "spiele": 2,
-            "tore_je_spiel": 3.0,
-            "siebenmeter_quote": null
-          }
-        ],
-        "weitere": 11,
-        "tore": 85,
-        "torschuetzen": 16,
-        "groesster_anteil": 20,
-        "strafen": 4,
-        "strafen_abschnitte": {
-          "0-15": 1,
-          "15-30": 1,
-          "30-45": 0,
-          "45-60": 2
-        },
-        "krimis": {
-          "anzahl": 2,
-          "gesamt": 3,
-          "gewonnen": 0,
-          "verloren": 1
-        },
-        "halbzeiten": {
-          "erste_halbzeit": -2.3,
-          "zweite_halbzeit": 1.3,
-          "spiele": 3
-        }
+        "spiele": 0
       },
       "letzte_aenderungen": [],
       "spiele": {
@@ -2871,7 +2800,14 @@
           "phase_id": 12482,
           "heim": false,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 0,
+          "ergebnis": {
+            "heim": 35,
+            "gast": 31,
+            "eigene": 31,
+            "fremde": 35,
+            "ausgang": "N"
+          }
         },
         "2627RPBKROERMA0703": {
           "datum": "2026-10-24T19:30:00",
@@ -3296,13 +3232,27 @@
             "gegentore": 122,
             "differenz": -14
           }
+        ],
+        "fehlend": [
+          {
+            "datum": "2026-10-03T20:00:00",
+            "gegner": "TUS Heiligenstein 2",
+            "ergebnis": {
+              "heim": 30,
+              "gast": 25,
+              "eigene": 25,
+              "fremde": 30,
+              "ausgang": "N"
+            }
+          }
         ]
       },
       "form": [
         "N",
         "N",
         "S",
-        "S"
+        "S",
+        "N"
       ],
       "statistik": {
         "fahrten": {
@@ -3329,8 +3279,8 @@
           "gesamt": {
             "s": 2,
             "u": 0,
-            "n": 2,
-            "spiele": 4
+            "n": 3,
+            "spiele": 5
           },
           "heim": {
             "s": 2,
@@ -3341,24 +3291,24 @@
           "auswaerts": {
             "s": 0,
             "u": 0,
-            "n": 1,
-            "spiele": 1
+            "n": 2,
+            "spiele": 2
           }
         },
         "serien": {
           "ohne_niederlage": 2,
-          "aktuell": 2,
-          "aktuell_art": "S"
+          "aktuell": 1,
+          "aktuell_art": "N"
         },
         "krimis": {
           "anzahl": 2,
-          "gesamt": 4,
-          "anteil": 50
+          "gesamt": 5,
+          "anteil": 40
         },
         "tore": {
-          "erzielt": 123,
-          "kassiert": 89,
-          "schnitt": 30.8,
+          "erzielt": 148,
+          "kassiert": 119,
+          "schnitt": 29.6,
           "torreichstes": {
             "gegner": "TSV Kandel 2",
             "stand": "43:22",
@@ -3367,7 +3317,7 @@
         },
         "anwurf": {
           "spaet": {
-            "spiele": 2,
+            "spiele": 3,
             "punkte": 0,
             "schnitt": 0.0
           },
@@ -3382,10 +3332,10 @@
       },
       "spieler": {
         "quelle": {
-          "spiele_gelaufen": 4,
+          "spiele_gelaufen": 5,
           "mit_bericht": 4,
           "ohne_bericht": 0,
-          "offen": 0
+          "offen": 1
         },
         "schuetzen": [
           {
@@ -5289,91 +5239,82 @@
         ]
       },
       "gegnervorschau": {
-        "spiele": 5,
+        "spiele": 1,
         "schuetzen": [
           {
-            "id": "0jikotu",
-            "name": "Nico Fohs",
-            "tore": 30,
-            "siebenmeter_tore": 7,
-            "siebenmeter_wuerfe": 10,
+            "id": "16crk9h",
+            "name": "Stefan Hauck",
+            "tore": 8,
+            "siebenmeter_tore": 3,
+            "siebenmeter_wuerfe": 3,
             "zwei_minuten": 0,
             "verwarnungen": 0,
-            "spiele": 5,
-            "tore_je_spiel": 6.0,
-            "siebenmeter_quote": 70
+            "spiele": 1,
+            "tore_je_spiel": 8.0,
+            "siebenmeter_quote": 100
           },
           {
-            "id": "06421is",
-            "name": "Sven Hoffmann",
-            "tore": 20,
-            "siebenmeter_tore": 1,
-            "siebenmeter_wuerfe": 3,
+            "id": "02bkvif",
+            "name": "Timo Bleh",
+            "tore": 4,
+            "siebenmeter_tore": 0,
+            "siebenmeter_wuerfe": 0,
+            "zwei_minuten": 0,
+            "verwarnungen": 0,
+            "spiele": 1,
+            "tore_je_spiel": 4.0,
+            "siebenmeter_quote": null
+          },
+          {
+            "id": "151s2fh",
+            "name": "Lars Peter Petzholz",
+            "tore": 3,
+            "siebenmeter_tore": 0,
+            "siebenmeter_wuerfe": 0,
+            "zwei_minuten": 0,
+            "verwarnungen": 0,
+            "spiele": 1,
+            "tore_je_spiel": 3.0,
+            "siebenmeter_quote": null
+          },
+          {
+            "id": "0kjrigy",
+            "name": "Michael Endris",
+            "tore": 3,
+            "siebenmeter_tore": 0,
+            "siebenmeter_wuerfe": 0,
             "zwei_minuten": 2,
             "verwarnungen": 1,
-            "spiele": 3,
-            "tore_je_spiel": 6.7,
-            "siebenmeter_quote": 33
+            "spiele": 1,
+            "tore_je_spiel": 3.0,
+            "siebenmeter_quote": null
           },
           {
-            "id": "03yuron",
-            "name": "Lukas Wolf",
-            "tore": 15,
+            "id": "1detden",
+            "name": "Fabian Marschke",
+            "tore": 2,
             "siebenmeter_tore": 0,
             "siebenmeter_wuerfe": 0,
             "zwei_minuten": 0,
             "verwarnungen": 0,
-            "spiele": 3,
-            "tore_je_spiel": 5.0,
-            "siebenmeter_quote": null
-          },
-          {
-            "id": "19q4nyy",
-            "name": "Björn Gerbes",
-            "tore": 10,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 1,
-            "verwarnungen": 1,
-            "spiele": 2,
-            "tore_je_spiel": 5.0,
-            "siebenmeter_quote": null
-          },
-          {
-            "id": "1gymo9h",
-            "name": "Robin Benisch",
-            "tore": 5,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 0,
-            "verwarnungen": 0,
-            "spiele": 2,
-            "tore_je_spiel": 2.5,
+            "spiele": 1,
+            "tore_je_spiel": 2.0,
             "siebenmeter_quote": null
           }
         ],
-        "weitere": 12,
-        "tore": 113,
-        "torschuetzen": 17,
-        "groesster_anteil": 27,
-        "strafen": 8,
+        "weitere": 5,
+        "tore": 25,
+        "torschuetzen": 10,
+        "groesster_anteil": 32,
+        "strafen": 4,
         "strafen_abschnitte": {
           "0-15": 1,
-          "15-30": 3,
-          "30-45": 3,
-          "45-60": 1
+          "15-30": 2,
+          "30-45": 1,
+          "45-60": 0
         },
-        "krimis": {
-          "anzahl": 3,
-          "gesamt": 5,
-          "gewonnen": 0,
-          "verloren": 1
-        },
-        "halbzeiten": {
-          "erste_halbzeit": 1.0,
-          "zweite_halbzeit": -1.0,
-          "spiele": 4
-        }
+        "krimis": null,
+        "halbzeiten": null
       },
       "letzte_aenderungen": [],
       "spiele": {
@@ -5478,7 +5419,14 @@
           "phase_id": 12583,
           "heim": false,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 0,
+          "ergebnis": {
+            "heim": 30,
+            "gast": 25,
+            "eigene": 25,
+            "fremde": 30,
+            "ausgang": "N"
+          }
         },
         "2627RPBKRKERMB0703": {
           "datum": "2026-10-24T17:30:00",
@@ -5815,6 +5763,19 @@
           },
           {
             "platz": 7,
+            "team": "HSV Alzey",
+            "team_id": 80996,
+            "spiele": 4,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 3,
+            "tore": 112,
+            "gegentore": 127,
+            "differenz": -15
+          },
+          {
+            "platz": 8,
             "team": "TV Thaleischweiler",
             "team_id": 81004,
             "spiele": 2,
@@ -5827,33 +5788,7 @@
             "differenz": -6
           },
           {
-            "platz": 8,
-            "team": "HSV Alzey",
-            "team_id": 80996,
-            "spiele": 3,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 3,
-            "tore": 77,
-            "gegentore": 97,
-            "differenz": -20
-          },
-          {
             "platz": 9,
-            "team": "HSG Eckbachtal",
-            "team_id": 81000,
-            "spiele": 3,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 3,
-            "tore": 67,
-            "gegentore": 96,
-            "differenz": -29
-          },
-          {
-            "platz": 10,
             "team": "FSG Selz-Wiesbach",
             "team_id": 81002,
             "spiele": 4,
@@ -5864,6 +5799,19 @@
             "tore": 107,
             "gegentore": 138,
             "differenz": -31
+          },
+          {
+            "platz": 10,
+            "team": "HSG Eckbachtal",
+            "team_id": 81000,
+            "spiele": 4,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 4,
+            "tore": 97,
+            "gegentore": 131,
+            "differenz": -34
           }
         ]
       },
