@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-02T09:43:10+00:00",
+  "aktualisiert": "2026-10-03T09:06:49+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -8787,26 +8787,7 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [
-        {
-          "art": "neu",
-          "code": "2627RP4BKRBJMG0102",
-          "spieltag": 1,
-          "text": "Neues Spiel gegen TUS Kl-Dansenberg: Sa 24.10. 11:45 in Sporthalle Freinsheim"
-        },
-        {
-          "art": "neu",
-          "code": "2627RP4BKRBJMG0103",
-          "spieltag": 1,
-          "text": "Neues Spiel gegen Mjsg Heiligenstein/Lingenfeld/Schwegenheim: Sa 24.10. 12:30 in Sporthalle Freinsheim"
-        },
-        {
-          "art": "neu",
-          "code": "2627RP4BKRBJMG0106",
-          "spieltag": 1,
-          "text": "Neues Spiel gegen HSG Eckbachtal: Sa 24.10. 14:45 in Sporthalle Freinsheim"
-        }
-      ],
+      "letzte_aenderungen": [],
       "spiele": {
         "2627RP4BKRBJMC0101": {
           "datum": "2026-08-22T00:00:00",
@@ -11516,26 +11497,7 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [
-        {
-          "art": "neu",
-          "code": "2627RP4BKRCJWF0102",
-          "spieltag": 1,
-          "text": "Neues Spiel gegen TSV Speyer: So 25.10. 10:45 in Sporthalle Bornheim"
-        },
-        {
-          "art": "neu",
-          "code": "2627RP4BKRCJWF0104",
-          "spieltag": 1,
-          "text": "Neues Spiel gegen SV Bornheim: So 25.10. 12:15 in Sporthalle Bornheim"
-        },
-        {
-          "art": "neu",
-          "code": "2627RP4BKRCJWF0105",
-          "spieltag": 1,
-          "text": "Neues Spiel gegen HSG Trifels: So 25.10. 13:00 in Sporthalle Bornheim"
-        }
-      ],
+      "letzte_aenderungen": [],
       "spiele": {
         "2627RSWRLCJWA0101": {
           "datum": "2026-08-23T14:00:00",
@@ -13206,26 +13168,7 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [
-        {
-          "art": "neu",
-          "code": "2627RP4BKRDJWI0101",
-          "spieltag": 1,
-          "text": "Neues Spiel gegen TV Kirrweiler: Sa 31.10. 11:00 in Reblandhalle Kirrweiler"
-        },
-        {
-          "art": "neu",
-          "code": "2627RP4BKRDJWI0103",
-          "spieltag": 1,
-          "text": "Neues Spiel gegen TV Bodenheim: Sa 31.10. 12:30 in Reblandhalle Kirrweiler"
-        },
-        {
-          "art": "neu",
-          "code": "2627RP4BKRDJWI0105",
-          "spieltag": 1,
-          "text": "Neues Spiel gegen Wjsg Mainz05/TV Nieder-Olm Wd1: Sa 31.10. 14:00 in Reblandhalle Kirrweiler"
-        }
-      ],
+      "letzte_aenderungen": [],
       "spiele": {
         "2627RPBKRODJWA0202": {
           "datum": "2026-09-05T12:00:00",
