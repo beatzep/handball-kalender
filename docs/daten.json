@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-03T15:00:55+00:00",
+  "aktualisiert": "2026-10-03T15:30:55+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -8494,7 +8494,7 @@
       "liga": "Oberliga MÄNNLICH",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 5,
+        "runde": 6,
         "phase_id": 12616,
         "gespielt": true,
         "mannschaften": 10,
@@ -8606,16 +8606,16 @@
           },
           {
             "platz": 7,
-            "team": "Mjsg SG Saulheim/HSV Alzey",
-            "team_id": 86763,
+            "team": "TV Nieder-Olm Mb2",
+            "team_id": 80837,
             "spiele": 5,
             "punkte": 4,
             "siege": 2,
             "remis": 0,
             "niederlagen": 3,
             "tore": 137,
-            "gegentore": 147,
-            "differenz": -10
+            "gegentore": 148,
+            "differenz": -11
           },
           {
             "platz": 8,
@@ -8632,16 +8632,16 @@
           },
           {
             "platz": 9,
-            "team": "TV Nieder-Olm Mb2",
-            "team_id": 80837,
-            "spiele": 4,
-            "punkte": 2,
-            "siege": 1,
+            "team": "Mjsg SG Saulheim/HSV Alzey",
+            "team_id": 86763,
+            "spiele": 6,
+            "punkte": 4,
+            "siege": 2,
             "remis": 0,
-            "niederlagen": 3,
-            "tore": 106,
-            "gegentore": 118,
-            "differenz": -12
+            "niederlagen": 4,
+            "tore": 167,
+            "gegentore": 178,
+            "differenz": -11
           },
           {
             "platz": 10,
