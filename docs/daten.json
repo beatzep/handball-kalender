@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-03T13:30:54+00:00",
+  "aktualisiert": "2026-10-03T14:01:31+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -7963,13 +7963,26 @@
           },
           {
             "runde": 5,
-            "platz": 1,
+            "platz": 2,
             "punkte": 8
           }
         ],
         "eintraege": [
           {
             "platz": 1,
+            "team": "Vsk Niederfeld",
+            "team_id": 81069,
+            "spiele": 5,
+            "punkte": 10,
+            "siege": 5,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 189,
+            "gegentore": 144,
+            "differenz": 45
+          },
+          {
+            "platz": 2,
             "team": "HSG Mutterstadt/Ruchheim Wa",
             "team_id": 81066,
             "spiele": 5,
@@ -7980,19 +7993,6 @@
             "tore": 167,
             "gegentore": 117,
             "differenz": 50
-          },
-          {
-            "platz": 2,
-            "team": "Vsk Niederfeld",
-            "team_id": 81069,
-            "spiele": 4,
-            "punkte": 8,
-            "siege": 4,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 150,
-            "gegentore": 123,
-            "differenz": 27
           },
           {
             "platz": 3,
@@ -8035,19 +8035,6 @@
           },
           {
             "platz": 6,
-            "team": "HSG TSG/1.FC-Kaiserslautern",
-            "team_id": 81068,
-            "spiele": 4,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 4,
-            "tore": 90,
-            "gegentore": 131,
-            "differenz": -41
-          },
-          {
-            "platz": 7,
             "team": "Vorderpfälzer Luchse",
             "team_id": 81067,
             "spiele": 4,
@@ -8058,6 +8045,19 @@
             "tore": 81,
             "gegentore": 134,
             "differenz": -53
+          },
+          {
+            "platz": 7,
+            "team": "HSG TSG/1.FC-Kaiserslautern",
+            "team_id": 81068,
+            "spiele": 5,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 5,
+            "tore": 111,
+            "gegentore": 170,
+            "differenz": -59
           }
         ]
       },
@@ -13567,7 +13567,7 @@
           },
           {
             "runde": 2,
-            "platz": 3,
+            "platz": 4,
             "punkte": 3
           },
           {
@@ -13633,27 +13633,27 @@
             "platz": 5,
             "team": "WSG Rheinauen",
             "team_id": 81270,
-            "spiele": 4,
-            "punkte": 2,
-            "siege": 1,
+            "spiele": 5,
+            "punkte": 4,
+            "siege": 2,
             "remis": 0,
             "niederlagen": 3,
-            "tore": 66,
-            "gegentore": 71,
-            "differenz": -5
+            "tore": 94,
+            "gegentore": 85,
+            "differenz": 9
           },
           {
             "platz": 6,
-            "team": "Mwsg Kandel/Hagenbach",
-            "team_id": 81261,
+            "team": "HSG Eckbachtal II",
+            "team_id": 81263,
             "spiele": 3,
             "punkte": 2,
             "siege": 1,
             "remis": 0,
             "niederlagen": 2,
-            "tore": 58,
-            "gegentore": 77,
-            "differenz": -19
+            "tore": 45,
+            "gegentore": 75,
+            "differenz": -30
           },
           {
             "platz": 7,
@@ -13670,16 +13670,16 @@
           },
           {
             "platz": 8,
-            "team": "HSG Eckbachtal II",
-            "team_id": 81263,
-            "spiele": 3,
+            "team": "Mwsg Kandel/Hagenbach",
+            "team_id": 81261,
+            "spiele": 4,
             "punkte": 2,
             "siege": 1,
             "remis": 0,
-            "niederlagen": 2,
-            "tore": 45,
-            "gegentore": 75,
-            "differenz": -30
+            "niederlagen": 3,
+            "tore": 72,
+            "gegentore": 105,
+            "differenz": -33
           },
           {
             "platz": 9,
