@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-03T15:59:29+00:00",
+  "aktualisiert": "2026-10-03T16:30:48+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -3246,6 +3246,19 @@
           },
           {
             "platz": 8,
+            "team": "MSG Kaiserslautern/Dansenberg 2",
+            "team_id": 80974,
+            "spiele": 5,
+            "punkte": 3,
+            "siege": 1,
+            "remis": 1,
+            "niederlagen": 3,
+            "tore": 121,
+            "gegentore": 138,
+            "differenz": -17
+          },
+          {
+            "platz": 9,
             "team": "MSG Iggelheim/Meckenheim 3",
             "team_id": 80978,
             "spiele": 4,
@@ -3258,7 +3271,7 @@
             "differenz": -13
           },
           {
-            "platz": 9,
+            "platz": 10,
             "team": "TV Kirrweiler 2",
             "team_id": 80979,
             "spiele": 4,
@@ -3271,30 +3284,17 @@
             "differenz": -24
           },
           {
-            "platz": 10,
-            "team": "MSG Kaiserslautern/Dansenberg 2",
-            "team_id": 80974,
-            "spiele": 4,
-            "punkte": 1,
-            "siege": 0,
-            "remis": 1,
-            "niederlagen": 3,
-            "tore": 93,
-            "gegentore": 113,
-            "differenz": -20
-          },
-          {
             "platz": 11,
             "team": "HSV Lingenfeld/Schwegenheim 2",
             "team_id": 80982,
-            "spiele": 3,
+            "spiele": 4,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 3,
-            "tore": 83,
-            "gegentore": 94,
-            "differenz": -11
+            "niederlagen": 4,
+            "tore": 108,
+            "gegentore": 122,
+            "differenz": -14
           }
         ]
       },
@@ -5752,14 +5752,14 @@
             "platz": 2,
             "team": "FSG Kaiserslautern/Dansenberg",
             "team_id": 80997,
-            "spiele": 3,
-            "punkte": 6,
-            "siege": 3,
+            "spiele": 4,
+            "punkte": 8,
+            "siege": 4,
             "remis": 0,
             "niederlagen": 0,
-            "tore": 106,
-            "gegentore": 69,
-            "differenz": 37
+            "tore": 129,
+            "gegentore": 90,
+            "differenz": 39
           },
           {
             "platz": 3,
@@ -5791,14 +5791,14 @@
             "platz": 5,
             "team": "TV Hauenstein",
             "team_id": 80995,
-            "spiele": 3,
+            "spiele": 4,
             "punkte": 4,
             "siege": 2,
             "remis": 0,
-            "niederlagen": 1,
-            "tore": 105,
-            "gegentore": 99,
-            "differenz": 6
+            "niederlagen": 2,
+            "tore": 126,
+            "gegentore": 122,
+            "differenz": 4
           },
           {
             "platz": 6,
