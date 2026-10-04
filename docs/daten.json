@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-04T09:44:37+00:00",
+  "aktualisiert": "2026-10-04T16:40:37+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -64,32 +64,58 @@
           },
           {
             "platz": 2,
-            "team": "SG Saulheim 2",
-            "team_id": 80921,
+            "team": "HSG Zotzenheim/St.Johann/Sprendlingen",
+            "team_id": 80922,
             "spiele": 4,
             "punkte": 6,
             "siege": 3,
             "remis": 0,
             "niederlagen": 1,
-            "tore": 103,
-            "gegentore": 95,
-            "differenz": 8
+            "tore": 122,
+            "gegentore": 115,
+            "differenz": 7
           },
           {
             "platz": 3,
-            "team": "TG Osthofen 2",
-            "team_id": 80920,
+            "team": "HSV Sobernheim H1",
+            "team_id": 80912,
+            "spiele": 4,
+            "punkte": 6,
+            "siege": 3,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 121,
+            "gegentore": 120,
+            "differenz": 1
+          },
+          {
+            "platz": 4,
+            "team": "HSG Rhein-Nahe Bingen 2",
+            "team_id": 80915,
             "spiele": 5,
             "punkte": 6,
             "siege": 3,
             "remis": 0,
             "niederlagen": 2,
-            "tore": 170,
-            "gegentore": 171,
-            "differenz": -1
+            "tore": 154,
+            "gegentore": 145,
+            "differenz": 9
           },
           {
-            "platz": 4,
+            "platz": 5,
+            "team": "SG Saulheim 2",
+            "team_id": 80921,
+            "spiele": 5,
+            "punkte": 6,
+            "siege": 3,
+            "remis": 0,
+            "niederlagen": 2,
+            "tore": 129,
+            "gegentore": 128,
+            "differenz": 1
+          },
+          {
+            "platz": 6,
             "team": "GW Bingen-Büdesheim",
             "team_id": 80916,
             "spiele": 6,
@@ -102,7 +128,20 @@
             "differenz": -1
           },
           {
-            "platz": 5,
+            "platz": 7,
+            "team": "TG Osthofen 2",
+            "team_id": 80920,
+            "spiele": 6,
+            "punkte": 6,
+            "siege": 3,
+            "remis": 0,
+            "niederlagen": 3,
+            "tore": 208,
+            "gegentore": 210,
+            "differenz": -2
+          },
+          {
+            "platz": 8,
             "team": "HSG Worms",
             "team_id": 80913,
             "spiele": 6,
@@ -115,56 +154,17 @@
             "differenz": -10
           },
           {
-            "platz": 6,
-            "team": "HSG Zotzenheim/St.Johann/Sprendlingen",
-            "team_id": 80922,
-            "spiele": 3,
-            "punkte": 4,
-            "siege": 2,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 89,
-            "gegentore": 87,
-            "differenz": 2
-          },
-          {
-            "platz": 7,
-            "team": "HSV Sobernheim H1",
-            "team_id": 80912,
-            "spiele": 3,
-            "punkte": 4,
-            "siege": 2,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 82,
-            "gegentore": 82,
-            "differenz": 0
-          },
-          {
-            "platz": 8,
-            "team": "HSG Rhein-Nahe Bingen 2",
-            "team_id": 80915,
-            "spiele": 4,
-            "punkte": 4,
-            "siege": 2,
-            "remis": 0,
-            "niederlagen": 2,
-            "tore": 121,
-            "gegentore": 119,
-            "differenz": 2
-          },
-          {
             "platz": 9,
             "team": "TSG MZ-Bretzenheim 2",
             "team_id": 80919,
-            "spiele": 4,
+            "spiele": 5,
             "punkte": 4,
             "siege": 2,
             "remis": 0,
-            "niederlagen": 2,
-            "tore": 129,
-            "gegentore": 130,
-            "differenz": -1
+            "niederlagen": 3,
+            "tore": 157,
+            "gegentore": 163,
+            "differenz": -6
           },
           {
             "platz": 10,
@@ -3670,14 +3670,14 @@
             "platz": 1,
             "team": "SG LaFt - Herren",
             "team_id": 80970,
-            "spiele": 5,
-            "punkte": 10,
-            "siege": 5,
+            "spiele": 6,
+            "punkte": 12,
+            "siege": 6,
             "remis": 0,
             "niederlagen": 0,
-            "tore": 164,
-            "gegentore": 131,
-            "differenz": 33
+            "tore": 203,
+            "gegentore": 148,
+            "differenz": 55
           },
           {
             "platz": 2,
@@ -3746,19 +3746,6 @@
           },
           {
             "platz": 7,
-            "team": "TUS Neuhofen 2",
-            "team_id": 80976,
-            "spiele": 4,
-            "punkte": 3,
-            "siege": 1,
-            "remis": 1,
-            "niederlagen": 2,
-            "tore": 91,
-            "gegentore": 103,
-            "differenz": -12
-          },
-          {
-            "platz": 8,
             "team": "MSG Kaiserslautern/Dansenberg 2",
             "team_id": 80974,
             "spiele": 5,
@@ -3769,6 +3756,19 @@
             "tore": 121,
             "gegentore": 138,
             "differenz": -17
+          },
+          {
+            "platz": 8,
+            "team": "TUS Neuhofen 2",
+            "team_id": 80976,
+            "spiele": 5,
+            "punkte": 3,
+            "siege": 1,
+            "remis": 1,
+            "niederlagen": 3,
+            "tore": 108,
+            "gegentore": 142,
+            "differenz": -34
           },
           {
             "platz": 9,
@@ -8295,6 +8295,19 @@
           },
           {
             "platz": 3,
+            "team": "TUS Neuhofen",
+            "team_id": 81044,
+            "spiele": 5,
+            "punkte": 8,
+            "siege": 4,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 171,
+            "gegentore": 134,
+            "differenz": 37
+          },
+          {
+            "platz": 4,
             "team": "MSG Wörth/Kandel",
             "team_id": 81047,
             "spiele": 5,
@@ -8305,19 +8318,6 @@
             "tore": 175,
             "gegentore": 163,
             "differenz": 12
-          },
-          {
-            "platz": 4,
-            "team": "TUS Neuhofen",
-            "team_id": 81044,
-            "spiele": 4,
-            "punkte": 6,
-            "siege": 3,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 142,
-            "gegentore": 108,
-            "differenz": 34
           },
           {
             "platz": 5,
@@ -8349,14 +8349,14 @@
             "platz": 7,
             "team": "HSG Landau/Land",
             "team_id": 81042,
-            "spiele": 4,
+            "spiele": 5,
             "punkte": 2,
             "siege": 1,
             "remis": 0,
-            "niederlagen": 3,
-            "tore": 142,
-            "gegentore": 140,
-            "differenz": 2
+            "niederlagen": 4,
+            "tore": 168,
+            "gegentore": 169,
+            "differenz": -1
           },
           {
             "platz": 8,
@@ -8848,7 +8848,7 @@
           },
           {
             "runde": 4,
-            "platz": 1,
+            "platz": 2,
             "punkte": 6
           },
           {
@@ -15060,14 +15060,14 @@
             "platz": 1,
             "team": "Hlz Friesenheim/Hochdorf",
             "team_id": 81291,
-            "spiele": 5,
-            "punkte": 10,
-            "siege": 5,
+            "spiele": 6,
+            "punkte": 12,
+            "siege": 6,
             "remis": 0,
             "niederlagen": 0,
-            "tore": 152,
-            "gegentore": 101,
-            "differenz": 51
+            "tore": 196,
+            "gegentore": 107,
+            "differenz": 89
           },
           {
             "platz": 2,
@@ -15086,14 +15086,14 @@
             "platz": 3,
             "team": "TV Edigheim",
             "team_id": 81290,
-            "spiele": 4,
-            "punkte": 6,
-            "siege": 3,
+            "spiele": 5,
+            "punkte": 8,
+            "siege": 4,
             "remis": 0,
             "niederlagen": 1,
-            "tore": 104,
-            "gegentore": 93,
-            "differenz": 11
+            "tore": 132,
+            "gegentore": 116,
+            "differenz": 16
           },
           {
             "platz": 4,
@@ -15125,27 +15125,27 @@
             "platz": 6,
             "team": "JSG Mundenheim/Rheingönheim",
             "team_id": 81292,
-            "spiele": 5,
+            "spiele": 6,
             "punkte": 4,
             "siege": 2,
             "remis": 0,
-            "niederlagen": 3,
-            "tore": 145,
-            "gegentore": 151,
-            "differenz": -6
+            "niederlagen": 4,
+            "tore": 168,
+            "gegentore": 179,
+            "differenz": -11
           },
           {
             "platz": 7,
             "team": "TG Waldsee",
             "team_id": 81295,
-            "spiele": 5,
+            "spiele": 6,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 5,
-            "tore": 97,
-            "gegentore": 136,
-            "differenz": -39
+            "niederlagen": 6,
+            "tore": 103,
+            "gegentore": 180,
+            "differenz": -77
           },
           {
             "platz": 8,
