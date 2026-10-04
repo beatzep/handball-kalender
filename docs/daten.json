@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-04T16:40:37+00:00",
+  "aktualisiert": "2026-10-04T19:57:41+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -3161,30 +3161,42 @@
         ]
       },
       "gegnervorschau": {
-        "spiele": 3,
+        "spiele": 4,
         "schuetzen": [
           {
             "id": "0whowce",
             "name": "Tim Unkelbach",
-            "tore": 23,
+            "tore": 28,
             "siebenmeter_tore": 6,
             "siebenmeter_wuerfe": 6,
             "zwei_minuten": 0,
             "verwarnungen": 1,
-            "spiele": 3,
-            "tore_je_spiel": 7.7,
+            "spiele": 4,
+            "tore_je_spiel": 7.0,
             "siebenmeter_quote": 100
           },
           {
             "id": "0m8w6xk",
             "name": "Marc Wolf",
-            "tore": 18,
+            "tore": 22,
             "siebenmeter_tore": 0,
             "siebenmeter_wuerfe": 0,
             "zwei_minuten": 1,
             "verwarnungen": 0,
-            "spiele": 3,
-            "tore_je_spiel": 6.0,
+            "spiele": 4,
+            "tore_je_spiel": 5.5,
+            "siebenmeter_quote": null
+          },
+          {
+            "id": "1atelb3",
+            "name": "Nils Hottum",
+            "tore": 14,
+            "siebenmeter_tore": 0,
+            "siebenmeter_wuerfe": 0,
+            "zwei_minuten": 4,
+            "verwarnungen": 0,
+            "spiele": 4,
+            "tore_je_spiel": 3.5,
             "siebenmeter_quote": null
           },
           {
@@ -3207,44 +3219,32 @@
             "siebenmeter_wuerfe": 5,
             "zwei_minuten": 2,
             "verwarnungen": 0,
-            "spiele": 1,
-            "tore_je_spiel": 11.0,
+            "spiele": 2,
+            "tore_je_spiel": 5.5,
             "siebenmeter_quote": 100
-          },
-          {
-            "id": "0qzciy4",
-            "name": "Justus Hildebrandt",
-            "tore": 8,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 1,
-            "verwarnungen": 0,
-            "spiele": 3,
-            "tore_je_spiel": 2.7,
-            "siebenmeter_quote": null
           }
         ],
-        "weitere": 4,
-        "tore": 89,
-        "torschuetzen": 9,
-        "groesster_anteil": 26,
-        "strafen": 14,
+        "weitere": 6,
+        "tore": 122,
+        "torschuetzen": 11,
+        "groesster_anteil": 23,
+        "strafen": 16,
         "strafen_abschnitte": {
-          "0-15": 2,
-          "15-30": 3,
+          "0-15": 3,
+          "15-30": 4,
           "30-45": 5,
           "45-60": 4
         },
         "krimis": {
           "anzahl": 1,
-          "gesamt": 3,
+          "gesamt": 4,
           "gewonnen": 1,
           "verloren": 0
         },
         "halbzeiten": {
-          "erste_halbzeit": -1.3,
-          "zweite_halbzeit": 1.7,
-          "spiele": 3
+          "erste_halbzeit": -0.5,
+          "zweite_halbzeit": 2.0,
+          "spiele": 4
         }
       },
       "letzte_aenderungen": [],
@@ -3722,14 +3722,14 @@
             "platz": 5,
             "team": "TSV Kandel 2",
             "team_id": 80975,
-            "spiele": 5,
+            "spiele": 6,
             "punkte": 5,
             "siege": 2,
             "remis": 1,
-            "niederlagen": 2,
-            "tore": 128,
-            "gegentore": 154,
-            "differenz": -26
+            "niederlagen": 3,
+            "tore": 159,
+            "gegentore": 187,
+            "differenz": -28
           },
           {
             "platz": 6,
@@ -3746,6 +3746,19 @@
           },
           {
             "platz": 7,
+            "team": "TV Kirrweiler 2",
+            "team_id": 80979,
+            "spiele": 5,
+            "punkte": 4,
+            "siege": 2,
+            "remis": 0,
+            "niederlagen": 3,
+            "tore": 140,
+            "gegentore": 162,
+            "differenz": -22
+          },
+          {
+            "platz": 8,
             "team": "MSG Kaiserslautern/Dansenberg 2",
             "team_id": 80974,
             "spiele": 5,
@@ -3758,7 +3771,7 @@
             "differenz": -17
           },
           {
-            "platz": 8,
+            "platz": 9,
             "team": "TUS Neuhofen 2",
             "team_id": 80976,
             "spiele": 5,
@@ -3771,7 +3784,7 @@
             "differenz": -34
           },
           {
-            "platz": 9,
+            "platz": 10,
             "team": "MSG Iggelheim/Meckenheim 3",
             "team_id": 80978,
             "spiele": 4,
@@ -3782,19 +3795,6 @@
             "tore": 102,
             "gegentore": 115,
             "differenz": -13
-          },
-          {
-            "platz": 10,
-            "team": "TV Kirrweiler 2",
-            "team_id": 80979,
-            "spiele": 4,
-            "punkte": 2,
-            "siege": 1,
-            "remis": 0,
-            "niederlagen": 3,
-            "tore": 107,
-            "gegentore": 131,
-            "differenz": -24
           },
           {
             "platz": 11,
