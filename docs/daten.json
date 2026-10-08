@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-07T10:13:05+00:00",
+  "aktualisiert": "2026-10-08T10:31:51+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -216,9 +216,9 @@
       ],
       "statistik": {
         "fahrten": {
-          "gesamt_km": 1535,
+          "gesamt_km": 1526,
           "fahrten": 18,
-          "stunden": 21.9,
+          "stunden": 21.8,
           "weiteste": {
             "km": 196.4,
             "gegner": "HSV Sobernheim H1",
@@ -292,7 +292,7 @@
           "spiele": 22,
           "biere": 880,
           "liter": 440,
-          "verbrauch": 28.7,
+          "verbrauch": 28.8,
           "stunden": 247,
           "tage": 10.3
         }
@@ -3613,8 +3613,8 @@
           "gegner": "HSC Ingelheim",
           "gegner_id": 80918,
           "match_id": 351756,
-          "lat": 49.9721176,
-          "lon": 8.0531121,
+          "lat": 49.9721592,
+          "lon": 8.0535466,
           "spieltag": 22,
           "phase_id": 12482,
           "heim": false,
@@ -11295,14 +11295,7 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [
-        {
-          "art": "halle",
-          "code": "2627RPVLCJGA0205",
-          "spieltag": 2,
-          "text": "Spieltag 2 gegen Mjsg Bodenheim/Budenheim II: Budenheim, Waldsporthalle (Hv Rheinhessen) → Waldsporthalle Budenheim"
-        }
-      ],
+      "letzte_aenderungen": [],
       "spiele": {
         "2627RP4BKRCJGD0102": {
           "datum": "2026-08-23T00:00:00",
