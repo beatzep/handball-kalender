@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-08T10:31:51+00:00",
+  "aktualisiert": "2026-10-09T10:30:05+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -222,7 +222,7 @@
           "weiteste": {
             "km": 196.4,
             "gegner": "HSV Sobernheim H1",
-            "halle": "Bad Sobernheim, Dr. W.Dümmler Halle",
+            "halle": "Dr.Werner-Dümmler-Halle",
             "heim": false
           },
           "naechste": {
@@ -3247,7 +3247,14 @@
           "spiele": 4
         }
       },
-      "letzte_aenderungen": [],
+      "letzte_aenderungen": [
+        {
+          "art": "halle",
+          "code": "2627RPBKROERMA1401",
+          "spieltag": 14,
+          "text": "Spieltag 14 gegen HSV Sobernheim H1: Bad Sobernheim, Dr. W.Dümmler Halle → Dr.Werner-Dümmler-Halle"
+        }
+      ],
       "spiele": {
         "2627RPBKROERMA0101": {
           "datum": "2026-08-29T20:00:00",
@@ -3488,8 +3495,8 @@
         },
         "2627RPBKROERMA1401": {
           "datum": "2027-01-24T16:00:00",
-          "ort": "Bad Sobernheim, Dr. W.Dümmler Halle, Staudernheimer Straße, 55566 Bad Sobernheim",
-          "halle": "Bad Sobernheim, Dr. W.Dümmler Halle",
+          "ort": "Dr.Werner-Dümmler-Halle, Staudernheimer Straße, 55566 Bad Sobernheim",
+          "halle": "Dr.Werner-Dümmler-Halle",
           "gegner": "HSV Sobernheim H1",
           "gegner_id": 80912,
           "match_id": 351704,
@@ -3499,7 +3506,7 @@
           "phase_id": 12482,
           "heim": false,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 1
         },
         "2627RPBKROERMA1505": {
           "datum": "2027-01-30T16:00:00",
@@ -9563,7 +9570,7 @@
           "weiteste": {
             "km": 196.4,
             "gegner": "Mjsg Sobernheim/Meisenheim",
-            "halle": "Bad Sobernheim, Dr. W.Dümmler Halle",
+            "halle": "Dr.Werner-Dümmler-Halle",
             "heim": false
           },
           "naechste": {
@@ -9677,7 +9684,14 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [],
+      "letzte_aenderungen": [
+        {
+          "art": "halle",
+          "code": "2627RPOLBJMA0101",
+          "spieltag": 1,
+          "text": "Spieltag 1 gegen Mjsg Sobernheim/Meisenheim: Bad Sobernheim, Dr. W.Dümmler Halle → Dr.Werner-Dümmler-Halle"
+        }
+      ],
       "spiele": {
         "2627RP4BKRBJMC0101": {
           "datum": "2026-08-22T00:00:00",
@@ -9725,8 +9739,8 @@
         },
         "2627RPOLBJMA0101": {
           "datum": "2026-08-29T18:00:00",
-          "ort": "Bad Sobernheim, Dr. W.Dümmler Halle, Staudernheimer Straße, 55566 Bad Sobernheim",
-          "halle": "Bad Sobernheim, Dr. W.Dümmler Halle",
+          "ort": "Dr.Werner-Dümmler-Halle, Staudernheimer Straße, 55566 Bad Sobernheim",
+          "halle": "Dr.Werner-Dümmler-Halle",
           "gegner": "Mjsg Sobernheim/Meisenheim",
           "gegner_id": 80839,
           "match_id": 382682,
@@ -9736,7 +9750,7 @@
           "phase_id": 12616,
           "heim": false,
           "ohne_zeit": false,
-          "sequence": 0,
+          "sequence": 1,
           "ergebnis": {
             "heim": 35,
             "gast": 25,
@@ -10223,9 +10237,9 @@
       ],
       "statistik": {
         "fahrten": {
-          "gesamt_km": 551,
-          "fahrten": 10,
-          "stunden": 7.9,
+          "gesamt_km": 532,
+          "fahrten": 9,
+          "stunden": 7.6,
           "weiteste": {
             "km": 154.4,
             "gegner": "Mjsg Büdesheim/Zotzenheim/St.Johann/Sprendlingen",
@@ -10239,6 +10253,7 @@
             "heim": false
           },
           "ohne_koordinaten": [
+            "Halle Schulzentrum (Mt) Mundenheim",
             "Sporthalle Freinsheim"
           ]
         },
@@ -10513,8 +10528,8 @@
           "gegner": "JSG Mundenheim/Rheingönheim",
           "gegner_id": 80855,
           "match_id": 557412,
-          "lat": 49.4636638,
-          "lon": 8.4368368,
+          "lat": null,
+          "lon": null,
           "spieltag": 8,
           "phase_id": 12619,
           "heim": false,
@@ -10754,9 +10769,9 @@
       ],
       "statistik": {
         "fahrten": {
-          "gesamt_km": 800,
-          "fahrten": 5,
-          "stunden": 11.4,
+          "gesamt_km": 995,
+          "fahrten": 8,
+          "stunden": 14.2,
           "weiteste": {
             "km": 376.4,
             "gegner": "HSG Wittlich",
@@ -10871,7 +10886,26 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [],
+      "letzte_aenderungen": [
+        {
+          "art": "neu",
+          "code": "2627RP4BKRBJWH0102",
+          "spieltag": 1,
+          "text": "Neues Spiel gegen Hr Göllheim/Eisenberg/Asselheim/Kindenheim: Sa 24.10. 14:15 in Nikolaus-Dörr-Halle Worms"
+        },
+        {
+          "art": "neu",
+          "code": "2627RP4BKRBJWH0103",
+          "spieltag": 1,
+          "text": "Neues Spiel gegen Mjsg SG Saulheim/HSV Alzey: Sa 24.10. 15:00 in Nikolaus-Dörr-Halle Worms"
+        },
+        {
+          "art": "neu",
+          "code": "2627RP4BKRBJWH0106",
+          "spieltag": 1,
+          "text": "Neues Spiel gegen JSG Osthofen/Worms: Sa 24.10. 17:15 in Nikolaus-Dörr-Halle Worms"
+        }
+      ],
       "spiele": {
         "2627RSWRLBJWC0102": {
           "datum": "2026-08-23T17:30:00",
@@ -11004,6 +11038,51 @@
             "fremde": 29,
             "ausgang": "S"
           }
+        },
+        "2627RP4BKRBJWH0102": {
+          "datum": "2026-10-24T14:15:00",
+          "ort": "Nikolaus-Dörr-Halle Worms, Mainzer Straße 51, 67547 Worms",
+          "halle": "Nikolaus-Dörr-Halle Worms",
+          "gegner": "Hr Göllheim/Eisenberg/Asselheim/Kindenheim",
+          "gegner_id": 80866,
+          "match_id": 689811,
+          "lat": 49.6422044,
+          "lon": 8.3630492,
+          "spieltag": 1,
+          "phase_id": 13593,
+          "heim": true,
+          "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RP4BKRBJWH0103": {
+          "datum": "2026-10-24T15:00:00",
+          "ort": "Nikolaus-Dörr-Halle Worms, Mainzer Straße 51, 67547 Worms",
+          "halle": "Nikolaus-Dörr-Halle Worms",
+          "gegner": "Mjsg SG Saulheim/HSV Alzey",
+          "gegner_id": 80873,
+          "match_id": 689812,
+          "lat": 49.6422044,
+          "lon": 8.3630492,
+          "spieltag": 1,
+          "phase_id": 13593,
+          "heim": false,
+          "ohne_zeit": false,
+          "sequence": 0
+        },
+        "2627RP4BKRBJWH0106": {
+          "datum": "2026-10-24T17:15:00",
+          "ort": "Nikolaus-Dörr-Halle Worms, Mainzer Straße 51, 67547 Worms",
+          "halle": "Nikolaus-Dörr-Halle Worms",
+          "gegner": "JSG Osthofen/Worms",
+          "gegner_id": 86920,
+          "match_id": 689815,
+          "lat": 49.6422044,
+          "lon": 8.3630492,
+          "spieltag": 1,
+          "phase_id": 13593,
+          "heim": true,
+          "ohne_zeit": false,
+          "sequence": 0
         }
       },
       "abgesetzt": []
@@ -11178,13 +11257,13 @@
       ],
       "statistik": {
         "fahrten": {
-          "gesamt_km": 679,
-          "fahrten": 12,
-          "stunden": 9.7,
+          "gesamt_km": 503,
+          "fahrten": 11,
+          "stunden": 7.2,
           "weiteste": {
-            "km": 175.8,
-            "gegner": "Mjsg Bodenheim/Budenheim II",
-            "halle": "Waldsporthalle Budenheim",
+            "km": 154.4,
+            "gegner": "DJK GW Büdesheim",
+            "halle": "Bingen, Rundsporthalle",
             "heim": false
           },
           "naechste": {
@@ -11193,7 +11272,9 @@
             "halle": "TVR-Sporthalle Ludwigshafen",
             "heim": true
           },
-          "ohne_koordinaten": []
+          "ohne_koordinaten": [
+            "Waldsporthalle Budenheim"
+          ]
         },
         "bilanz": {
           "gesamt": {
@@ -11370,8 +11451,8 @@
           "gegner": "Mjsg Bodenheim/Budenheim II",
           "gegner_id": 81087,
           "match_id": 359700,
-          "lat": 50.0186951,
-          "lon": 8.1629572,
+          "lat": null,
+          "lon": null,
           "spieltag": 2,
           "phase_id": 12621,
           "heim": false,
@@ -12270,9 +12351,9 @@
       ],
       "statistik": {
         "fahrten": {
-          "gesamt_km": 799,
-          "fahrten": 7,
-          "stunden": 11.4,
+          "gesamt_km": 780,
+          "fahrten": 6,
+          "stunden": 11.1,
           "weiteste": {
             "km": 313.6,
             "gegner": "TV Engers",
@@ -12285,7 +12366,9 @@
             "halle": "TVR-Sporthalle Ludwigshafen",
             "heim": true
           },
-          "ohne_koordinaten": []
+          "ohne_koordinaten": [
+            "Halle Schulzentrum (Mt) Mundenheim"
+          ]
         },
         "bilanz": {
           "gesamt": {
@@ -12462,8 +12545,8 @@
           "gegner": "JSG  Mundenheim/Rheingönheim",
           "gegner_id": 86950,
           "match_id": 425707,
-          "lat": 49.4636638,
-          "lon": 8.4368368,
+          "lat": null,
+          "lon": null,
           "spieltag": 4,
           "phase_id": 13264,
           "heim": false,
@@ -15179,9 +15262,9 @@
       ],
       "statistik": {
         "fahrten": {
-          "gesamt_km": 409,
-          "fahrten": 15,
-          "stunden": 5.8,
+          "gesamt_km": 389,
+          "fahrten": 14,
+          "stunden": 5.6,
           "weiteste": {
             "km": 136.6,
             "gegner": "JSG Kaiserslautern/Dansenberg",
@@ -15195,6 +15278,7 @@
             "heim": true
           },
           "ohne_koordinaten": [
+            "Halle Schulzentrum (Mt) Mundenheim",
             "Sporthalle Freinsheim"
           ]
         },
@@ -15294,8 +15378,8 @@
           "gegner": "JSG Mundenheim/Rheingönheim",
           "gegner_id": 81292,
           "match_id": 385324,
-          "lat": 49.4636638,
-          "lon": 8.4368368,
+          "lat": null,
+          "lon": null,
           "spieltag": 1,
           "phase_id": 12645,
           "heim": false,
