@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-09T10:30:05+00:00",
+  "aktualisiert": "2026-10-10T09:47:38+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -3247,14 +3247,7 @@
           "spiele": 4
         }
       },
-      "letzte_aenderungen": [
-        {
-          "art": "halle",
-          "code": "2627RPBKROERMA1401",
-          "spieltag": 14,
-          "text": "Spieltag 14 gegen HSV Sobernheim H1: Bad Sobernheim, Dr. W.Dümmler Halle → Dr.Werner-Dümmler-Halle"
-        }
-      ],
+      "letzte_aenderungen": [],
       "spiele": {
         "2627RPBKROERMA0101": {
           "datum": "2026-08-29T20:00:00",
@@ -9684,14 +9677,7 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [
-        {
-          "art": "halle",
-          "code": "2627RPOLBJMA0101",
-          "spieltag": 1,
-          "text": "Spieltag 1 gegen Mjsg Sobernheim/Meisenheim: Bad Sobernheim, Dr. W.Dümmler Halle → Dr.Werner-Dümmler-Halle"
-        }
-      ],
+      "letzte_aenderungen": [],
       "spiele": {
         "2627RP4BKRBJMC0101": {
           "datum": "2026-08-22T00:00:00",
@@ -10888,22 +10874,10 @@
       "gegnervorschau": {},
       "letzte_aenderungen": [
         {
-          "art": "neu",
-          "code": "2627RP4BKRBJWH0102",
-          "spieltag": 1,
-          "text": "Neues Spiel gegen Hr Göllheim/Eisenberg/Asselheim/Kindenheim: Sa 24.10. 14:15 in Nikolaus-Dörr-Halle Worms"
-        },
-        {
-          "art": "neu",
-          "code": "2627RP4BKRBJWH0103",
-          "spieltag": 1,
-          "text": "Neues Spiel gegen Mjsg SG Saulheim/HSV Alzey: Sa 24.10. 15:00 in Nikolaus-Dörr-Halle Worms"
-        },
-        {
-          "art": "neu",
-          "code": "2627RP4BKRBJWH0106",
-          "spieltag": 1,
-          "text": "Neues Spiel gegen JSG Osthofen/Worms: Sa 24.10. 17:15 in Nikolaus-Dörr-Halle Worms"
+          "art": "halle",
+          "code": "2627RSWRLBJWC0502",
+          "spieltag": 5,
+          "text": "Spieltag 5 gegen HSG Wittlich: Wittlich, Bbs-Halle → Wittlich, Bbs-Halle"
         }
       ],
       "spiele": {
@@ -10997,7 +10971,7 @@
         },
         "2627RSWRLBJWC0502": {
           "datum": "2026-09-19T14:00:00",
-          "ort": "Wittlich, Bbs-Halle, Max-Planck-Straße, 54516 Wittlich",
+          "ort": "Wittlich, Bbs-Halle, Max-Planck-Straße 5, 54516 Wittlich",
           "halle": "Wittlich, Bbs-Halle",
           "gegner": "HSG Wittlich",
           "gegner_id": 86911,
@@ -11008,7 +10982,7 @@
           "phase_id": 13258,
           "heim": false,
           "ohne_zeit": false,
-          "sequence": 0,
+          "sequence": 1,
           "ergebnis": {
             "heim": 37,
             "gast": 25,
