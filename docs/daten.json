@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-10T09:47:38+00:00",
+  "aktualisiert": "2026-10-10T17:10:07+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -3651,7 +3651,7 @@
           },
           {
             "runde": 3,
-            "platz": 6,
+            "platz": 7,
             "punkte": 2
           },
           {
@@ -3759,6 +3759,19 @@
           },
           {
             "platz": 8,
+            "team": "MSG Iggelheim/Meckenheim 3",
+            "team_id": 80978,
+            "spiele": 5,
+            "punkte": 3,
+            "siege": 1,
+            "remis": 1,
+            "niederlagen": 3,
+            "tore": 130,
+            "gegentore": 143,
+            "differenz": -13
+          },
+          {
+            "platz": 9,
             "team": "MSG Kaiserslautern/Dansenberg 2",
             "team_id": 80974,
             "spiele": 5,
@@ -3771,7 +3784,7 @@
             "differenz": -17
           },
           {
-            "platz": 9,
+            "platz": 10,
             "team": "TUS Neuhofen 2",
             "team_id": 80976,
             "spiele": 5,
@@ -3784,29 +3797,16 @@
             "differenz": -34
           },
           {
-            "platz": 10,
-            "team": "MSG Iggelheim/Meckenheim 3",
-            "team_id": 80978,
-            "spiele": 4,
-            "punkte": 2,
-            "siege": 1,
-            "remis": 0,
-            "niederlagen": 3,
-            "tore": 102,
-            "gegentore": 115,
-            "differenz": -13
-          },
-          {
             "platz": 11,
             "team": "HSV Lingenfeld/Schwegenheim 2",
             "team_id": 80982,
-            "spiele": 4,
-            "punkte": 0,
+            "spiele": 5,
+            "punkte": 1,
             "siege": 0,
-            "remis": 0,
+            "remis": 1,
             "niederlagen": 4,
-            "tore": 108,
-            "gegentore": 122,
+            "tore": 136,
+            "gegentore": 150,
             "differenz": -14
           }
         ]
@@ -10872,14 +10872,7 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [
-        {
-          "art": "halle",
-          "code": "2627RSWRLBJWC0502",
-          "spieltag": 5,
-          "text": "Spieltag 5 gegen HSG Wittlich: Wittlich, Bbs-Halle → Wittlich, Bbs-Halle"
-        }
-      ],
+      "letzte_aenderungen": [],
       "spiele": {
         "2627RSWRLBJWC0102": {
           "datum": "2026-08-23T17:30:00",

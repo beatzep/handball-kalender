@@ -56545,6 +56545,1485 @@
    }
   ]
  },
+ "352302": {
+  "ereignisse": [
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Startseite Teil",
+    "art_id": 10000,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": false,
+    "minute": "00:00",
+    "spielminute": 0,
+    "stand": [
+     0,
+     0
+    ],
+    "team_id": null
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Siebenmeter Tor",
+    "art_id": 39,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "00:56",
+    "spieler": {
+     "id": "0todccb",
+     "nachname": "Bechtel",
+     "vorname": "Christian"
+    },
+    "spielminute": 0,
+    "stand": [
+     1,
+     0
+    ],
+    "team_id": 80982
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Zwei Minuten",
+    "art_id": 13,
+    "heim": true,
+    "ist_strafe": true,
+    "ist_tor": false,
+    "minute": "01:56",
+    "spieler": {
+     "id": "1gjquxy",
+     "nachname": "Langner",
+     "vorname": "Michael"
+    },
+    "spielminute": 1,
+    "stand": [
+     1,
+     0
+    ],
+    "team_id": 80982
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Siebenmeter Tor",
+    "art_id": 39,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "02:49",
+    "spieler": {
+     "id": "0todccb",
+     "nachname": "Bechtel",
+     "vorname": "Christian"
+    },
+    "spielminute": 2,
+    "stand": [
+     2,
+     0
+    ],
+    "team_id": 80982
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "03:17",
+    "spieler": {
+     "id": "0kjrigy",
+     "nachname": "Endris",
+     "vorname": "Michael"
+    },
+    "spielminute": 3,
+    "stand": [
+     2,
+     1
+    ],
+    "team_id": 80978
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "04:08",
+    "spieler": {
+     "id": "1vxcidz",
+     "nachname": "Trauth",
+     "vorname": "Marius"
+    },
+    "spielminute": 4,
+    "stand": [
+     3,
+     1
+    ],
+    "team_id": 80982
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "05:19",
+    "spieler": {
+     "id": "1rkzyvr",
+     "nachname": "Orth",
+     "vorname": "Connor"
+    },
+    "spielminute": 5,
+    "stand": [
+     3,
+     2
+    ],
+    "team_id": 80978
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Siebenmeter Tor",
+    "art_id": 39,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "06:03",
+    "spieler": {
+     "id": "0todccb",
+     "nachname": "Bechtel",
+     "vorname": "Christian"
+    },
+    "spielminute": 6,
+    "stand": [
+     4,
+     2
+    ],
+    "team_id": 80982
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "06:34",
+    "spieler": {
+     "id": "1vxcidz",
+     "nachname": "Trauth",
+     "vorname": "Marius"
+    },
+    "spielminute": 6,
+    "stand": [
+     5,
+     2
+    ],
+    "team_id": 80982
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "07:37",
+    "spieler": {
+     "id": "1gjquxy",
+     "nachname": "Langner",
+     "vorname": "Michael"
+    },
+    "spielminute": 7,
+    "stand": [
+     6,
+     2
+    ],
+    "team_id": 80982
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "07:50",
+    "spieler": {
+     "id": "0kjrigy",
+     "nachname": "Endris",
+     "vorname": "Michael"
+    },
+    "spielminute": 7,
+    "stand": [
+     6,
+     3
+    ],
+    "team_id": 80978
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Siebenmeter Fehlwurf",
+    "art_id": 1004,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": false,
+    "minute": "08:34",
+    "spieler": {
+     "id": "0todccb",
+     "nachname": "Bechtel",
+     "vorname": "Christian"
+    },
+    "spielminute": 8,
+    "stand": [
+     6,
+     3
+    ],
+    "team_id": 80982
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "10:15",
+    "spieler": {
+     "id": "16crk9h",
+     "nachname": "Hauck",
+     "vorname": "Stefan"
+    },
+    "spielminute": 10,
+    "stand": [
+     6,
+     4
+    ],
+    "team_id": 80978
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Verwarnung",
+    "art_id": 2,
+    "heim": false,
+    "ist_strafe": true,
+    "ist_tor": false,
+    "minute": "10:47",
+    "spieler": {
+     "id": "1nfjcq4",
+     "nachname": "Melzer",
+     "vorname": "Julian"
+    },
+    "spielminute": 10,
+    "stand": [
+     6,
+     4
+    ],
+    "team_id": 80978
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "13:18",
+    "spieler": {
+     "id": "0kjrigy",
+     "nachname": "Endris",
+     "vorname": "Michael"
+    },
+    "spielminute": 13,
+    "stand": [
+     6,
+     5
+    ],
+    "team_id": 80978
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "13:49",
+    "spieler": {
+     "id": "1gjquxy",
+     "nachname": "Langner",
+     "vorname": "Michael"
+    },
+    "spielminute": 13,
+    "stand": [
+     7,
+     5
+    ],
+    "team_id": 80982
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "15:05",
+    "spieler": {
+     "id": "1r0d4jv",
+     "nachname": "Hoffmann",
+     "vorname": "Johannes"
+    },
+    "spielminute": 15,
+    "stand": [
+     7,
+     6
+    ],
+    "team_id": 80978
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "16:07",
+    "spieler": {
+     "id": "16crk9h",
+     "nachname": "Hauck",
+     "vorname": "Stefan"
+    },
+    "spielminute": 16,
+    "stand": [
+     7,
+     7
+    ],
+    "team_id": 80978
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "16:42",
+    "spieler": {
+     "id": "0kjrigy",
+     "nachname": "Endris",
+     "vorname": "Michael"
+    },
+    "spielminute": 16,
+    "stand": [
+     7,
+     8
+    ],
+    "team_id": 80978
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Verwarnung",
+    "art_id": 2,
+    "heim": false,
+    "ist_strafe": true,
+    "ist_tor": false,
+    "minute": "16:54",
+    "spieler": {
+     "id": "151s2fh",
+     "nachname": "Petzholz",
+     "vorname": "Lars Peter"
+    },
+    "spielminute": 16,
+    "stand": [
+     7,
+     8
+    ],
+    "team_id": 80978
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "17:20",
+    "spieler": {
+     "id": "02bkvif",
+     "nachname": "Bleh",
+     "vorname": "Timo"
+    },
+    "spielminute": 17,
+    "stand": [
+     7,
+     9
+    ],
+    "team_id": 80978
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Auszeit",
+    "art_id": 30,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": false,
+    "minute": "17:28",
+    "spielminute": 17,
+    "stand": [
+     7,
+     9
+    ],
+    "team_id": 80982
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Verwarnung",
+    "art_id": 2,
+    "heim": false,
+    "ist_strafe": true,
+    "ist_tor": false,
+    "minute": "17:46",
+    "spieler": {
+     "id": "0jn99ti",
+     "nachname": "Hammer",
+     "vorname": "Jochen"
+    },
+    "spielminute": 17,
+    "stand": [
+     7,
+     9
+    ],
+    "team_id": 80978
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Zwei Minuten",
+    "art_id": 13,
+    "heim": false,
+    "ist_strafe": true,
+    "ist_tor": false,
+    "minute": "18:47",
+    "spieler": {
+     "id": "02bkvif",
+     "nachname": "Bleh",
+     "vorname": "Timo"
+    },
+    "spielminute": 18,
+    "stand": [
+     7,
+     9
+    ],
+    "team_id": 80978
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Zwei Minuten",
+    "art_id": 13,
+    "heim": false,
+    "ist_strafe": true,
+    "ist_tor": false,
+    "minute": "19:02",
+    "spieler": {
+     "id": "1r0d4jv",
+     "nachname": "Hoffmann",
+     "vorname": "Johannes"
+    },
+    "spielminute": 19,
+    "stand": [
+     7,
+     9
+    ],
+    "team_id": 80978
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Siebenmeter Tor",
+    "art_id": 39,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "19:05",
+    "spieler": {
+     "id": "0todccb",
+     "nachname": "Bechtel",
+     "vorname": "Christian"
+    },
+    "spielminute": 19,
+    "stand": [
+     8,
+     9
+    ],
+    "team_id": 80982
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "19:38",
+    "spieler": {
+     "id": "1yg5fzo",
+     "nachname": "Behr",
+     "vorname": "Noah"
+    },
+    "spielminute": 19,
+    "stand": [
+     9,
+     9
+    ],
+    "team_id": 80982
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "20:14",
+    "spieler": {
+     "id": "0pfoznv",
+     "nachname": "Claus",
+     "vorname": "Felix"
+    },
+    "spielminute": 20,
+    "stand": [
+     10,
+     9
+    ],
+    "team_id": 80982
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "20:47",
+    "spieler": {
+     "id": "0kjrigy",
+     "nachname": "Endris",
+     "vorname": "Michael"
+    },
+    "spielminute": 20,
+    "stand": [
+     10,
+     10
+    ],
+    "team_id": 80978
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Siebenmeter Tor",
+    "art_id": 39,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "21:25",
+    "spieler": {
+     "id": "0todccb",
+     "nachname": "Bechtel",
+     "vorname": "Christian"
+    },
+    "spielminute": 21,
+    "stand": [
+     11,
+     10
+    ],
+    "team_id": 80982
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "22:06",
+    "spieler": {
+     "id": "0jn99ti",
+     "nachname": "Hammer",
+     "vorname": "Jochen"
+    },
+    "spielminute": 22,
+    "stand": [
+     11,
+     11
+    ],
+    "team_id": 80978
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "22:49",
+    "spieler": {
+     "id": "151s2fh",
+     "nachname": "Petzholz",
+     "vorname": "Lars Peter"
+    },
+    "spielminute": 22,
+    "stand": [
+     11,
+     12
+    ],
+    "team_id": 80978
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "23:15",
+    "spieler": {
+     "id": "13pz718",
+     "nachname": "Henninger",
+     "vorname": "Daniel"
+    },
+    "spielminute": 23,
+    "stand": [
+     12,
+     12
+    ],
+    "team_id": 80982
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "23:47",
+    "spieler": {
+     "id": "151s2fh",
+     "nachname": "Petzholz",
+     "vorname": "Lars Peter"
+    },
+    "spielminute": 23,
+    "stand": [
+     12,
+     13
+    ],
+    "team_id": 80978
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "24:18",
+    "spieler": {
+     "id": "151s2fh",
+     "nachname": "Petzholz",
+     "vorname": "Lars Peter"
+    },
+    "spielminute": 24,
+    "stand": [
+     12,
+     14
+    ],
+    "team_id": 80978
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "25:31",
+    "spieler": {
+     "id": "13c21ii",
+     "nachname": "Leibeck",
+     "vorname": "Mathis"
+    },
+    "spielminute": 25,
+    "stand": [
+     13,
+     14
+    ],
+    "team_id": 80982
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Auszeit",
+    "art_id": 30,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": false,
+    "minute": "26:14",
+    "spielminute": 26,
+    "stand": [
+     13,
+     14
+    ],
+    "team_id": 80978
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "28:38",
+    "spieler": {
+     "id": "0a7z025",
+     "nachname": "Harder",
+     "vorname": "Moritz"
+    },
+    "spielminute": 28,
+    "stand": [
+     13,
+     15
+    ],
+    "team_id": 80978
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "28:59",
+    "spieler": {
+     "id": "13pz718",
+     "nachname": "Henninger",
+     "vorname": "Daniel"
+    },
+    "spielminute": 28,
+    "stand": [
+     14,
+     15
+    ],
+    "team_id": 80982
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "29:57",
+    "spieler": {
+     "id": "1yg5fzo",
+     "nachname": "Behr",
+     "vorname": "Noah"
+    },
+    "spielminute": 29,
+    "stand": [
+     15,
+     15
+    ],
+    "team_id": 80982
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Teilende",
+    "art_id": 10002,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": false,
+    "minute": "30:00",
+    "spielminute": 30,
+    "stand": [
+     15,
+     15
+    ],
+    "team_id": null
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Startseite Teil",
+    "art_id": 10000,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": false,
+    "minute": "00:00",
+    "spielminute": 30,
+    "stand": [
+     15,
+     15
+    ],
+    "team_id": null
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "00:31",
+    "spieler": {
+     "id": "10ev8gb",
+     "nachname": "Möller",
+     "vorname": "Timo"
+    },
+    "spielminute": 30,
+    "stand": [
+     16,
+     15
+    ],
+    "team_id": 80982
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Siebenmeter Fehlwurf",
+    "art_id": 1004,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": false,
+    "minute": "02:11",
+    "spieler": {
+     "id": "0todccb",
+     "nachname": "Bechtel",
+     "vorname": "Christian"
+    },
+    "spielminute": 32,
+    "stand": [
+     16,
+     15
+    ],
+    "team_id": 80982
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Siebenmeter Tor",
+    "art_id": 39,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "04:13",
+    "spieler": {
+     "id": "151s2fh",
+     "nachname": "Petzholz",
+     "vorname": "Lars Peter"
+    },
+    "spielminute": 34,
+    "stand": [
+     16,
+     16
+    ],
+    "team_id": 80978
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "04:53",
+    "spieler": {
+     "id": "13c21ii",
+     "nachname": "Leibeck",
+     "vorname": "Mathis"
+    },
+    "spielminute": 34,
+    "stand": [
+     17,
+     16
+    ],
+    "team_id": 80982
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Siebenmeter Tor",
+    "art_id": 39,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "05:39",
+    "spieler": {
+     "id": "151s2fh",
+     "nachname": "Petzholz",
+     "vorname": "Lars Peter"
+    },
+    "spielminute": 35,
+    "stand": [
+     17,
+     17
+    ],
+    "team_id": 80978
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "05:59",
+    "spieler": {
+     "id": "10ev8gb",
+     "nachname": "Möller",
+     "vorname": "Timo"
+    },
+    "spielminute": 35,
+    "stand": [
+     18,
+     17
+    ],
+    "team_id": 80982
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "06:58",
+    "spieler": {
+     "id": "10ev8gb",
+     "nachname": "Möller",
+     "vorname": "Timo"
+    },
+    "spielminute": 36,
+    "stand": [
+     19,
+     17
+    ],
+    "team_id": 80982
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "07:07",
+    "spieler": {
+     "id": "0a7z025",
+     "nachname": "Harder",
+     "vorname": "Moritz"
+    },
+    "spielminute": 37,
+    "stand": [
+     19,
+     18
+    ],
+    "team_id": 80978
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "08:00",
+    "spieler": {
+     "id": "1e8bly2",
+     "nachname": "Borger",
+     "vorname": "Timo"
+    },
+    "spielminute": 38,
+    "stand": [
+     19,
+     19
+    ],
+    "team_id": 80978
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Zwei Minuten",
+    "art_id": 13,
+    "heim": false,
+    "ist_strafe": true,
+    "ist_tor": false,
+    "minute": "08:28",
+    "spieler": {
+     "id": "0kjrigy",
+     "nachname": "Endris",
+     "vorname": "Michael"
+    },
+    "spielminute": 38,
+    "stand": [
+     19,
+     19
+    ],
+    "team_id": 80978
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "08:44",
+    "spieler": {
+     "id": "1yg5fzo",
+     "nachname": "Behr",
+     "vorname": "Noah"
+    },
+    "spielminute": 38,
+    "stand": [
+     20,
+     19
+    ],
+    "team_id": 80982
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Siebenmeter Tor",
+    "art_id": 39,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "09:41",
+    "spieler": {
+     "id": "13c21ii",
+     "nachname": "Leibeck",
+     "vorname": "Mathis"
+    },
+    "spielminute": 39,
+    "stand": [
+     21,
+     19
+    ],
+    "team_id": 80982
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "10:29",
+    "spieler": {
+     "id": "13c21ii",
+     "nachname": "Leibeck",
+     "vorname": "Mathis"
+    },
+    "spielminute": 40,
+    "stand": [
+     22,
+     19
+    ],
+    "team_id": 80982
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Auszeit",
+    "art_id": 30,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": false,
+    "minute": "10:34",
+    "spielminute": 40,
+    "stand": [
+     22,
+     19
+    ],
+    "team_id": 80978
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Siebenmeter Tor",
+    "art_id": 39,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "13:55",
+    "spieler": {
+     "id": "151s2fh",
+     "nachname": "Petzholz",
+     "vorname": "Lars Peter"
+    },
+    "spielminute": 43,
+    "stand": [
+     22,
+     20
+    ],
+    "team_id": 80978
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "14:14",
+    "spieler": {
+     "id": "1d07ycr",
+     "nachname": "Kornberger",
+     "vorname": "David"
+    },
+    "spielminute": 44,
+    "stand": [
+     23,
+     20
+    ],
+    "team_id": 80982
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "14:59",
+    "spieler": {
+     "id": "02bkvif",
+     "nachname": "Bleh",
+     "vorname": "Timo"
+    },
+    "spielminute": 44,
+    "stand": [
+     23,
+     21
+    ],
+    "team_id": 80978
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "16:28",
+    "spieler": {
+     "id": "0todccb",
+     "nachname": "Bechtel",
+     "vorname": "Christian"
+    },
+    "spielminute": 46,
+    "stand": [
+     24,
+     21
+    ],
+    "team_id": 80982
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "16:58",
+    "spieler": {
+     "id": "1nfjcq4",
+     "nachname": "Melzer",
+     "vorname": "Julian"
+    },
+    "spielminute": 46,
+    "stand": [
+     24,
+     22
+    ],
+    "team_id": 80978
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Auszeit",
+    "art_id": 30,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": false,
+    "minute": "17:06",
+    "spielminute": 47,
+    "stand": [
+     24,
+     22
+    ],
+    "team_id": 80982
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Siebenmeter Tor",
+    "art_id": 39,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "18:39",
+    "spieler": {
+     "id": "151s2fh",
+     "nachname": "Petzholz",
+     "vorname": "Lars Peter"
+    },
+    "spielminute": 48,
+    "stand": [
+     24,
+     23
+    ],
+    "team_id": 80978
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "19:44",
+    "spieler": {
+     "id": "13pz718",
+     "nachname": "Henninger",
+     "vorname": "Daniel"
+    },
+    "spielminute": 49,
+    "stand": [
+     25,
+     23
+    ],
+    "team_id": 80982
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Zwei Minuten",
+    "art_id": 13,
+    "heim": false,
+    "ist_strafe": true,
+    "ist_tor": false,
+    "minute": "19:53",
+    "spieler": {
+     "id": "02bkvif",
+     "nachname": "Bleh",
+     "vorname": "Timo"
+    },
+    "spielminute": 49,
+    "stand": [
+     25,
+     23
+    ],
+    "team_id": 80978
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "20:31",
+    "spieler": {
+     "id": "1yg5fzo",
+     "nachname": "Behr",
+     "vorname": "Noah"
+    },
+    "spielminute": 50,
+    "stand": [
+     26,
+     23
+    ],
+    "team_id": 80982
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "23:46",
+    "spieler": {
+     "id": "02bkvif",
+     "nachname": "Bleh",
+     "vorname": "Timo"
+    },
+    "spielminute": 53,
+    "stand": [
+     26,
+     24
+    ],
+    "team_id": 80978
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "24:33",
+    "spieler": {
+     "id": "02bkvif",
+     "nachname": "Bleh",
+     "vorname": "Timo"
+    },
+    "spielminute": 54,
+    "stand": [
+     26,
+     25
+    ],
+    "team_id": 80978
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "25:27",
+    "spieler": {
+     "id": "1yg5fzo",
+     "nachname": "Behr",
+     "vorname": "Noah"
+    },
+    "spielminute": 55,
+    "stand": [
+     27,
+     25
+    ],
+    "team_id": 80982
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "25:35",
+    "spieler": {
+     "id": "0kjrigy",
+     "nachname": "Endris",
+     "vorname": "Michael"
+    },
+    "spielminute": 55,
+    "stand": [
+     27,
+     26
+    ],
+    "team_id": 80978
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "25:57",
+    "spieler": {
+     "id": "1gjquxy",
+     "nachname": "Langner",
+     "vorname": "Michael"
+    },
+    "spielminute": 55,
+    "stand": [
+     28,
+     26
+    ],
+    "team_id": 80982
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Siebenmeter Tor",
+    "art_id": 39,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "28:36",
+    "spieler": {
+     "id": "1e8bly2",
+     "nachname": "Borger",
+     "vorname": "Timo"
+    },
+    "spielminute": 58,
+    "stand": [
+     28,
+     27
+    ],
+    "team_id": 80978
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Zwei Minuten",
+    "art_id": 13,
+    "heim": true,
+    "ist_strafe": true,
+    "ist_tor": false,
+    "minute": "28:55",
+    "spieler": {
+     "id": "1vxcidz",
+     "nachname": "Trauth",
+     "vorname": "Marius"
+    },
+    "spielminute": 58,
+    "stand": [
+     28,
+     27
+    ],
+    "team_id": 80982
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "29:21",
+    "spieler": {
+     "id": "16crk9h",
+     "nachname": "Hauck",
+     "vorname": "Stefan"
+    },
+    "spielminute": 59,
+    "stand": [
+     28,
+     28
+    ],
+    "team_id": 80978
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Teilende",
+    "art_id": 10002,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": false,
+    "minute": "30:00",
+    "spielminute": 60,
+    "stand": [
+     28,
+     28
+    ],
+    "team_id": null
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Spielende",
+    "art_id": 10001,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": false,
+    "minute": "30:00",
+    "spielminute": 60,
+    "stand": [
+     28,
+     28
+    ],
+    "team_id": null
+   }
+  ]
+ },
  "352305": {
   "ereignisse": [
    {
