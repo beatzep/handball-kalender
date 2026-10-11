@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-11T17:32:55+00:00",
+  "aktualisiert": "2026-10-11T21:41:04+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -34,7 +34,7 @@
           },
           {
             "runde": 4,
-            "platz": 1,
+            "platz": 2,
             "punkte": 6
           },
           {
@@ -155,6 +155,19 @@
           },
           {
             "platz": 9,
+            "team": "TV Nieder-Olm 2",
+            "team_id": 80917,
+            "spiele": 6,
+            "punkte": 5,
+            "siege": 2,
+            "remis": 1,
+            "niederlagen": 3,
+            "tore": 152,
+            "gegentore": 152,
+            "differenz": 0
+          },
+          {
+            "platz": 10,
             "team": "TSG MZ-Bretzenheim 2",
             "team_id": 80919,
             "spiele": 5,
@@ -167,30 +180,17 @@
             "differenz": -6
           },
           {
-            "platz": 10,
-            "team": "TV Nieder-Olm 2",
-            "team_id": 80917,
-            "spiele": 5,
-            "punkte": 3,
-            "siege": 1,
-            "remis": 1,
-            "niederlagen": 3,
-            "tore": 120,
-            "gegentore": 123,
-            "differenz": -3
-          },
-          {
             "platz": 11,
             "team": "HSV Alzey",
             "team_id": 80914,
-            "spiele": 3,
+            "spiele": 4,
             "punkte": 2,
             "siege": 1,
             "remis": 0,
-            "niederlagen": 2,
-            "tore": 89,
-            "gegentore": 93,
-            "differenz": -4
+            "niederlagen": 3,
+            "tore": 118,
+            "gegentore": 125,
+            "differenz": -7
           },
           {
             "platz": 12,
