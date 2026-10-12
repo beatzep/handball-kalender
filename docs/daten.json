@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-12T01:05:44+00:00",
+  "aktualisiert": "2026-10-12T10:45:04+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -9677,7 +9677,14 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [],
+      "letzte_aenderungen": [
+        {
+          "art": "halle",
+          "code": "2627RPOLBJMA0403",
+          "spieltag": 4,
+          "text": "Spieltag 4 gegen TV 03 Wörth: WöRTH Bienwaldhalle → Bienwaldhalle"
+        }
+      ],
       "spiele": {
         "2627RP4BKRBJMC0101": {
           "datum": "2026-08-22T00:00:00",
@@ -9791,8 +9798,8 @@
         },
         "2627RPOLBJMA0403": {
           "datum": "2026-09-20T11:00:00",
-          "ort": "WöRTH Bienwaldhalle, Am Bienwald 3, 76744 Wörth",
-          "halle": "WöRTH Bienwaldhalle",
+          "ort": "Bienwaldhalle, Am Bienwald 3, 76744 Wörth",
+          "halle": "Bienwaldhalle",
           "gegner": "TV 03 Wörth",
           "gegner_id": 80835,
           "match_id": 382699,
@@ -9802,7 +9809,7 @@
           "phase_id": 12616,
           "heim": false,
           "ohne_zeit": false,
-          "sequence": 1,
+          "sequence": 2,
           "ergebnis": {
             "heim": 33,
             "gast": 36,
@@ -13506,7 +13513,14 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [],
+      "letzte_aenderungen": [
+        {
+          "art": "halle",
+          "code": "2627RPBKRDJGB0302",
+          "spieltag": 3,
+          "text": "Spieltag 3 gegen HSG Eckbachtal: Xx Sporthalle → Sporthalle"
+        }
+      ],
       "spiele": {
         "2627RP4BKRDJGC0102": {
           "datum": "2026-08-16T00:00:00",
@@ -13620,8 +13634,8 @@
         },
         "2627RPBKRDJGB0302": {
           "datum": "2026-09-13T11:45:00",
-          "ort": "Xx Sporthalle, Bahnhofstraße 7, 67246 Dirmstein",
-          "halle": "Xx Sporthalle",
+          "ort": "Sporthalle, Bahnhofstraße 7, 67246 Dirmstein",
+          "halle": "Sporthalle",
           "gegner": "HSG Eckbachtal",
           "gegner_id": 81185,
           "match_id": 383401,
@@ -13631,7 +13645,7 @@
           "phase_id": 12629,
           "heim": false,
           "ohne_zeit": false,
-          "sequence": 0,
+          "sequence": 1,
           "ergebnis": {
             "heim": 30,
             "gast": 27,
@@ -14116,7 +14130,14 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [],
+      "letzte_aenderungen": [
+        {
+          "art": "halle",
+          "code": "2627RPBKRODJWA0502",
+          "spieltag": 5,
+          "text": "Spieltag 5 gegen TV 03 Wörth: WöRTH Bienwaldhalle → Bienwaldhalle"
+        }
+      ],
       "spiele": {
         "2627RPBKRODJWA0202": {
           "datum": "2026-09-05T12:00:00",
@@ -14230,8 +14251,8 @@
         },
         "2627RPBKRODJWA0502": {
           "datum": "2026-09-27T10:00:00",
-          "ort": "WöRTH Bienwaldhalle, Am Bienwald 3, 76744 Wörth",
-          "halle": "WöRTH Bienwaldhalle",
+          "ort": "Bienwaldhalle, Am Bienwald 3, 76744 Wörth",
+          "halle": "Bienwaldhalle",
           "gegner": "TV 03 Wörth",
           "gegner_id": 81242,
           "match_id": 385073,
@@ -14241,7 +14262,7 @@
           "phase_id": 12594,
           "heim": false,
           "ohne_zeit": false,
-          "sequence": 1,
+          "sequence": 2,
           "ergebnis": {
             "heim": 15,
             "gast": 18,
@@ -14757,7 +14778,14 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [],
+      "letzte_aenderungen": [
+        {
+          "art": "halle",
+          "code": "2627RPBKRDJWC1101",
+          "spieltag": 11,
+          "text": "Spieltag 11 gegen HSG Eckbachtal II: Xx Sporthalle → Sporthalle"
+        }
+      ],
       "spiele": {
         "2627RP4BKRDJWL0101": {
           "datum": "2026-08-15T00:00:00",
@@ -14961,8 +14989,8 @@
         },
         "2627RPBKRDJWC1101": {
           "datum": "2026-12-13T15:15:00",
-          "ort": "Xx Sporthalle, Bahnhofstraße 7, 67246 Dirmstein",
-          "halle": "Xx Sporthalle",
+          "ort": "Sporthalle, Bahnhofstraße 7, 67246 Dirmstein",
+          "halle": "Sporthalle",
           "gegner": "HSG Eckbachtal II",
           "gegner_id": 81263,
           "match_id": 361141,
@@ -14972,7 +15000,7 @@
           "phase_id": 12597,
           "heim": false,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 1
         },
         "2627RPBKRDJWC1203": {
           "datum": "2027-01-24T13:00:00",
@@ -15336,7 +15364,14 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [],
+      "letzte_aenderungen": [
+        {
+          "art": "halle",
+          "code": "2627RPBKROEJGC0302",
+          "spieltag": 3,
+          "text": "Spieltag 3 gegen HSG Eckbachtal: Xx Sporthalle → Sporthalle"
+        }
+      ],
       "spiele": {
         "2627RPBKROEJGC0103": {
           "datum": "2026-08-29T12:30:00",
@@ -15384,8 +15419,8 @@
         },
         "2627RPBKROEJGC0302": {
           "datum": "2026-09-13T13:15:00",
-          "ort": "Xx Sporthalle, Bahnhofstraße 7, 67246 Dirmstein",
-          "halle": "Xx Sporthalle",
+          "ort": "Sporthalle, Bahnhofstraße 7, 67246 Dirmstein",
+          "halle": "Sporthalle",
           "gegner": "HSG Eckbachtal",
           "gegner_id": 81289,
           "match_id": 385331,
@@ -15395,7 +15430,7 @@
           "phase_id": 12645,
           "heim": false,
           "ohne_zeit": false,
-          "sequence": 0,
+          "sequence": 1,
           "ergebnis": {
             "heim": 34,
             "gast": 19,
@@ -17386,7 +17421,7 @@
           "weiteste": {
             "km": 111.6,
             "gegner": "TV 03 Wörth 2",
-            "halle": "WöRTH Bienwaldhalle",
+            "halle": "Bienwaldhalle",
             "heim": false
           },
           "naechste": {
@@ -17475,7 +17510,14 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [],
+      "letzte_aenderungen": [
+        {
+          "art": "halle",
+          "code": "2627RPBKROMIGA0331",
+          "spieltag": 3,
+          "text": "Spieltag 3 gegen TV 03 Wörth 2: WöRTH Bienwaldhalle → Bienwaldhalle"
+        }
+      ],
       "spiele": {
         "2627RPBKROMIGA0118": {
           "datum": "2026-08-30T10:00:00",
@@ -17509,8 +17551,8 @@
         },
         "2627RPBKROMIGA0331": {
           "datum": "2026-11-14T11:00:00",
-          "ort": "WöRTH Bienwaldhalle, Am Bienwald 3, 76744 Wörth",
-          "halle": "WöRTH Bienwaldhalle",
+          "ort": "Bienwaldhalle, Am Bienwald 3, 76744 Wörth",
+          "halle": "Bienwaldhalle",
           "gegner": "TV 03 Wörth 2",
           "gegner_id": 81439,
           "match_id": 479248,
@@ -17520,7 +17562,7 @@
           "phase_id": 12661,
           "heim": false,
           "ohne_zeit": false,
-          "sequence": 1
+          "sequence": 2
         },
         "2627RPBKROMIGA0413": {
           "datum": "2027-01-17T10:00:00",
