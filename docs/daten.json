@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-12T10:45:04+00:00",
+  "aktualisiert": "2026-10-13T10:31:57+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -9677,14 +9677,7 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [
-        {
-          "art": "halle",
-          "code": "2627RPOLBJMA0403",
-          "spieltag": 4,
-          "text": "Spieltag 4 gegen TV 03 Wörth: WöRTH Bienwaldhalle → Bienwaldhalle"
-        }
-      ],
+      "letzte_aenderungen": [],
       "spiele": {
         "2627RP4BKRBJMC0101": {
           "datum": "2026-08-22T00:00:00",
@@ -10879,7 +10872,14 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [],
+      "letzte_aenderungen": [
+        {
+          "art": "halle",
+          "code": "2627RSWRLBJWC0301",
+          "spieltag": 3,
+          "text": "Spieltag 3 gegen Hf Untere Saar: Brotdorf SEFFERSBACHHALLE → Seffersbachhalle"
+        }
+      ],
       "spiele": {
         "2627RSWRLBJWC0102": {
           "datum": "2026-08-23T17:30:00",
@@ -10927,8 +10927,8 @@
         },
         "2627RSWRLBJWC0301": {
           "datum": "2026-09-06T16:30:00",
-          "ort": "Brotdorf SEFFERSBACHHALLE, Ringstraße 5, 66663 Merzig",
-          "halle": "Brotdorf SEFFERSBACHHALLE",
+          "ort": "Seffersbachhalle, Ringstraße 5, 66663 Merzig",
+          "halle": "Seffersbachhalle",
           "gegner": "Hf Untere Saar",
           "gegner_id": 86921,
           "match_id": 425127,
@@ -10938,7 +10938,7 @@
           "phase_id": 13258,
           "heim": false,
           "ohne_zeit": false,
-          "sequence": 1,
+          "sequence": 2,
           "ergebnis": {
             "heim": 31,
             "gast": 27,
@@ -13513,14 +13513,7 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [
-        {
-          "art": "halle",
-          "code": "2627RPBKRDJGB0302",
-          "spieltag": 3,
-          "text": "Spieltag 3 gegen HSG Eckbachtal: Xx Sporthalle → Sporthalle"
-        }
-      ],
+      "letzte_aenderungen": [],
       "spiele": {
         "2627RP4BKRDJGC0102": {
           "datum": "2026-08-16T00:00:00",
@@ -14130,14 +14123,7 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [
-        {
-          "art": "halle",
-          "code": "2627RPBKRODJWA0502",
-          "spieltag": 5,
-          "text": "Spieltag 5 gegen TV 03 Wörth: WöRTH Bienwaldhalle → Bienwaldhalle"
-        }
-      ],
+      "letzte_aenderungen": [],
       "spiele": {
         "2627RPBKRODJWA0202": {
           "datum": "2026-09-05T12:00:00",
@@ -14778,14 +14764,7 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [
-        {
-          "art": "halle",
-          "code": "2627RPBKRDJWC1101",
-          "spieltag": 11,
-          "text": "Spieltag 11 gegen HSG Eckbachtal II: Xx Sporthalle → Sporthalle"
-        }
-      ],
+      "letzte_aenderungen": [],
       "spiele": {
         "2627RP4BKRDJWL0101": {
           "datum": "2026-08-15T00:00:00",
@@ -15364,14 +15343,7 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [
-        {
-          "art": "halle",
-          "code": "2627RPBKROEJGC0302",
-          "spieltag": 3,
-          "text": "Spieltag 3 gegen HSG Eckbachtal: Xx Sporthalle → Sporthalle"
-        }
-      ],
+      "letzte_aenderungen": [],
       "spiele": {
         "2627RPBKROEJGC0103": {
           "datum": "2026-08-29T12:30:00",
@@ -16001,7 +15973,14 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [],
+      "letzte_aenderungen": [
+        {
+          "art": "verlegt",
+          "code": "2627RPBKRKEJGE0805",
+          "spieltag": 8,
+          "text": "Spieltag 8 gegen JSG Mundenheim/Rheingönheim 2: Sa 14.11. 14:00 → Sa 14.11. 12:30"
+        }
+      ],
       "spiele": {
         "2627RPBKRKEJGE0102": {
           "datum": "2026-08-29T15:30:00",
@@ -16137,7 +16116,7 @@
           "sequence": 0
         },
         "2627RPBKRKEJGE0805": {
-          "datum": "2026-11-14T14:00:00",
+          "datum": "2026-11-14T12:30:00",
           "ort": "TVR-Sporthalle Ludwigshafen, Fußgönheimer Str. 127 (Ortsende), 67071 Ludwigshafen",
           "halle": "TVR-Sporthalle Ludwigshafen",
           "gegner": "JSG Mundenheim/Rheingönheim 2",
@@ -16149,7 +16128,7 @@
           "phase_id": 12641,
           "heim": true,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 1
         }
       },
       "abgesetzt": []
@@ -17510,14 +17489,7 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [
-        {
-          "art": "halle",
-          "code": "2627RPBKROMIGA0331",
-          "spieltag": 3,
-          "text": "Spieltag 3 gegen TV 03 Wörth 2: WöRTH Bienwaldhalle → Bienwaldhalle"
-        }
-      ],
+      "letzte_aenderungen": [],
       "spiele": {
         "2627RPBKROMIGA0118": {
           "datum": "2026-08-30T10:00:00",
