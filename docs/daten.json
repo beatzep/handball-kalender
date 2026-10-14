@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-13T10:31:57+00:00",
+  "aktualisiert": "2026-10-14T08:40:17+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -10872,14 +10872,7 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [
-        {
-          "art": "halle",
-          "code": "2627RSWRLBJWC0301",
-          "spieltag": 3,
-          "text": "Spieltag 3 gegen Hf Untere Saar: Brotdorf SEFFERSBACHHALLE → Seffersbachhalle"
-        }
-      ],
+      "letzte_aenderungen": [],
       "spiele": {
         "2627RSWRLBJWC0102": {
           "datum": "2026-08-23T17:30:00",
@@ -15973,14 +15966,7 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [
-        {
-          "art": "verlegt",
-          "code": "2627RPBKRKEJGE0805",
-          "spieltag": 8,
-          "text": "Spieltag 8 gegen JSG Mundenheim/Rheingönheim 2: Sa 14.11. 14:00 → Sa 14.11. 12:30"
-        }
-      ],
+      "letzte_aenderungen": [],
       "spiele": {
         "2627RPBKRKEJGE0102": {
           "datum": "2026-08-29T15:30:00",
