@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-17T18:45:45+00:00",
+  "aktualisiert": "2026-10-17T19:15:50+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -6615,11 +6615,16 @@
         "verlauf": [
           {
             "runde": 1,
-            "platz": 2,
-            "punkte": 2
+            "platz": 7,
+            "punkte": 0
           },
           {
             "runde": 2,
+            "platz": 5,
+            "punkte": 2
+          },
+          {
+            "runde": 3,
             "platz": 4,
             "punkte": 4
           }
@@ -6668,14 +6673,14 @@
             "platz": 4,
             "team": "HSG Mutterstadt/Ruchheim Damen",
             "team_id": 80999,
-            "spiele": 2,
+            "spiele": 3,
             "punkte": 4,
             "siege": 2,
             "remis": 0,
-            "niederlagen": 0,
-            "tore": 71,
-            "gegentore": 54,
-            "differenz": 17
+            "niederlagen": 1,
+            "tore": 100,
+            "gegentore": 85,
+            "differenz": 15
           },
           {
             "platz": 5,
@@ -6705,6 +6710,19 @@
           },
           {
             "platz": 7,
+            "team": "TV Thaleischweiler",
+            "team_id": 81004,
+            "spiele": 3,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 2,
+            "tore": 95,
+            "gegentore": 99,
+            "differenz": -4
+          },
+          {
+            "platz": 8,
             "team": "HSV Alzey",
             "team_id": 80996,
             "spiele": 4,
@@ -6715,19 +6733,6 @@
             "tore": 112,
             "gegentore": 127,
             "differenz": -15
-          },
-          {
-            "platz": 8,
-            "team": "TV Thaleischweiler",
-            "team_id": 81004,
-            "spiele": 2,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 2,
-            "tore": 64,
-            "gegentore": 70,
-            "differenz": -6
           },
           {
             "platz": 9,
@@ -6759,7 +6764,8 @@
       },
       "form": [
         "S",
-        "S"
+        "S",
+        "N"
       ],
       "statistik": {
         "fahrten": {
@@ -6786,8 +6792,8 @@
           "gesamt": {
             "s": 2,
             "u": 0,
-            "n": 0,
-            "spiele": 2
+            "n": 1,
+            "spiele": 3
           },
           "heim": {
             "s": 2,
@@ -6798,24 +6804,24 @@
           "auswaerts": {
             "s": 0,
             "u": 0,
-            "n": 0,
-            "spiele": 0
+            "n": 1,
+            "spiele": 1
           }
         },
         "serien": {
           "ohne_niederlage": 2,
-          "aktuell": 2,
-          "aktuell_art": "S"
+          "aktuell": 1,
+          "aktuell_art": "N"
         },
         "krimis": {
-          "anzahl": 0,
-          "gesamt": 2,
-          "anteil": 0
+          "anzahl": 1,
+          "gesamt": 3,
+          "anteil": 33
         },
         "tore": {
-          "erzielt": 71,
-          "kassiert": 54,
-          "schnitt": 35.5,
+          "erzielt": 100,
+          "kassiert": 85,
+          "schnitt": 33.3,
           "torreichstes": {
             "gegner": "FSG Selz-Wiesbach",
             "stand": "42:28",
@@ -6824,9 +6830,9 @@
         },
         "anwurf": {
           "spaet": {
-            "spiele": 1,
+            "spiele": 2,
             "punkte": 2,
-            "schnitt": 2.0
+            "schnitt": 1.0
           },
           "frueh": {
             "spiele": 1,
@@ -6839,10 +6845,10 @@
       },
       "spieler": {
         "quelle": {
-          "spiele_gelaufen": 2,
+          "spiele_gelaufen": 3,
           "mit_bericht": 2,
           "ohne_bericht": 0,
-          "offen": 0
+          "offen": 1
         },
         "schuetzen": [
           {
@@ -7867,76 +7873,76 @@
         "spiele": 2,
         "schuetzen": [
           {
-            "id": "00ndlu9",
-            "name": "Jana Rohr",
-            "tore": 18,
-            "siebenmeter_tore": 1,
-            "siebenmeter_wuerfe": 1,
-            "zwei_minuten": 0,
-            "verwarnungen": 0,
-            "spiele": 2,
-            "tore_je_spiel": 9.0,
-            "siebenmeter_quote": 100
-          },
-          {
-            "id": "0oyqorw",
-            "name": "Luca-Sophie Winkelhoff",
-            "tore": 15,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 0,
-            "verwarnungen": 0,
-            "spiele": 2,
-            "tore_je_spiel": 7.5,
-            "siebenmeter_quote": null
-          },
-          {
-            "id": "0ykgxwz",
-            "name": "Lara-Marie Hasenstab",
-            "tore": 13,
+            "id": "1nzyovg",
+            "name": "Jette-Marie Ring",
+            "tore": 19,
             "siebenmeter_tore": 5,
-            "siebenmeter_wuerfe": 6,
-            "zwei_minuten": 0,
-            "verwarnungen": 0,
-            "spiele": 2,
-            "tore_je_spiel": 6.5,
-            "siebenmeter_quote": 83
-          },
-          {
-            "id": "11ja0gk",
-            "name": "Franziska Gries",
-            "tore": 6,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 0,
+            "siebenmeter_wuerfe": 5,
             "zwei_minuten": 2,
             "verwarnungen": 0,
             "spiele": 2,
-            "tore_je_spiel": 3.0,
+            "tore_je_spiel": 9.5,
+            "siebenmeter_quote": 100
+          },
+          {
+            "id": "1r8d9bf",
+            "name": "Lara Hacker",
+            "tore": 14,
+            "siebenmeter_tore": 0,
+            "siebenmeter_wuerfe": 0,
+            "zwei_minuten": 0,
+            "verwarnungen": 0,
+            "spiele": 2,
+            "tore_je_spiel": 7.0,
             "siebenmeter_quote": null
           },
           {
-            "id": "08yygd8",
-            "name": "Natascha Haber",
+            "id": "1r6m8m3",
+            "name": "Charlotte Hanna Marie Schlosser",
+            "tore": 13,
+            "siebenmeter_tore": 1,
+            "siebenmeter_wuerfe": 2,
+            "zwei_minuten": 1,
+            "verwarnungen": 0,
+            "spiele": 2,
+            "tore_je_spiel": 6.5,
+            "siebenmeter_quote": 50
+          },
+          {
+            "id": "1cmzdgs",
+            "name": "Finia Paloma Ferrando Stenner",
+            "tore": 8,
+            "siebenmeter_tore": 1,
+            "siebenmeter_wuerfe": 3,
+            "zwei_minuten": 0,
+            "verwarnungen": 0,
+            "spiele": 2,
+            "tore_je_spiel": 4.0,
+            "siebenmeter_quote": 33
+          },
+          {
+            "id": "1u05kha",
+            "name": "Lea Birgit Wenning",
             "tore": 4,
             "siebenmeter_tore": 0,
             "siebenmeter_wuerfe": 0,
             "zwei_minuten": 1,
-            "verwarnungen": 2,
+            "verwarnungen": 1,
             "spiele": 2,
             "tore_je_spiel": 2.0,
             "siebenmeter_quote": null
           }
         ],
-        "weitere": 4,
-        "tore": 64,
-        "torschuetzen": 9,
+        "weitere": 6,
+        "tore": 67,
+        "torschuetzen": 11,
         "groesster_anteil": 28,
-        "strafen": 4,
+        "strafen": 5,
         "strafen_abschnitte": {
           "0-15": 0,
-          "15-30": 0,
+          "15-30": 3,
           "30-45": 1,
-          "45-60": 3
+          "45-60": 1
         },
         "krimis": null,
         "halbzeiten": null
@@ -8000,7 +8006,14 @@
           "phase_id": 12481,
           "heim": false,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 0,
+          "ergebnis": {
+            "heim": 31,
+            "gast": 29,
+            "eigene": 29,
+            "fremde": 31,
+            "ausgang": "N"
+          }
         },
         "2627RPVLERWA0701": {
           "datum": "2026-10-25T16:45:00",
