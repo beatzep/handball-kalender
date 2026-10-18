@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-18T18:31:11+00:00",
+  "aktualisiert": "2026-10-18T21:20:30+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -3161,54 +3161,54 @@
         ]
       },
       "gegnervorschau": {
-        "spiele": 4,
+        "spiele": 5,
         "schuetzen": [
           {
             "id": "0whowce",
             "name": "Tim Unkelbach",
-            "tore": 28,
-            "siebenmeter_tore": 6,
-            "siebenmeter_wuerfe": 6,
+            "tore": 39,
+            "siebenmeter_tore": 9,
+            "siebenmeter_wuerfe": 9,
             "zwei_minuten": 0,
-            "verwarnungen": 1,
-            "spiele": 4,
-            "tore_je_spiel": 7.0,
+            "verwarnungen": 2,
+            "spiele": 5,
+            "tore_je_spiel": 7.8,
             "siebenmeter_quote": 100
           },
           {
             "id": "0m8w6xk",
             "name": "Marc Wolf",
-            "tore": 22,
+            "tore": 31,
             "siebenmeter_tore": 0,
             "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 1,
+            "zwei_minuten": 2,
             "verwarnungen": 0,
-            "spiele": 4,
-            "tore_je_spiel": 5.5,
-            "siebenmeter_quote": null
-          },
-          {
-            "id": "1atelb3",
-            "name": "Nils Hottum",
-            "tore": 14,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 4,
-            "verwarnungen": 0,
-            "spiele": 4,
-            "tore_je_spiel": 3.5,
+            "spiele": 5,
+            "tore_je_spiel": 6.2,
             "siebenmeter_quote": null
           },
           {
             "id": "1e52142",
             "name": "Jonas Wrede",
-            "tore": 12,
+            "tore": 16,
             "siebenmeter_tore": 0,
             "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 3,
+            "zwei_minuten": 5,
             "verwarnungen": 1,
-            "spiele": 3,
+            "spiele": 4,
             "tore_je_spiel": 4.0,
+            "siebenmeter_quote": null
+          },
+          {
+            "id": "1atelb3",
+            "name": "Nils Hottum",
+            "tore": 15,
+            "siebenmeter_tore": 0,
+            "siebenmeter_wuerfe": 0,
+            "zwei_minuten": 5,
+            "verwarnungen": 1,
+            "spiele": 5,
+            "tore_je_spiel": 3.0,
             "siebenmeter_quote": null
           },
           {
@@ -3225,26 +3225,26 @@
           }
         ],
         "weitere": 6,
-        "tore": 122,
+        "tore": 155,
         "torschuetzen": 11,
-        "groesster_anteil": 23,
-        "strafen": 16,
+        "groesster_anteil": 25,
+        "strafen": 21,
         "strafen_abschnitte": {
-          "0-15": 3,
+          "0-15": 5,
           "15-30": 4,
-          "30-45": 5,
+          "30-45": 8,
           "45-60": 4
         },
         "krimis": {
           "anzahl": 1,
-          "gesamt": 4,
+          "gesamt": 5,
           "gewonnen": 1,
           "verloren": 0
         },
         "halbzeiten": {
-          "erste_halbzeit": -0.5,
-          "zweite_halbzeit": 2.0,
-          "spiele": 4
+          "erste_halbzeit": -0.2,
+          "zweite_halbzeit": 2.2,
+          "spiele": 5
         }
       },
       "letzte_aenderungen": [],
