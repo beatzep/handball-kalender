@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-18T15:37:59+00:00",
+  "aktualisiert": "2026-10-18T18:31:11+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -44,13 +44,26 @@
           },
           {
             "runde": 6,
-            "platz": 2,
+            "platz": 3,
             "punkte": 8
           }
         ],
         "eintraege": [
           {
             "platz": 1,
+            "team": "HSG Zotzenheim/St.Johann/Sprendlingen",
+            "team_id": 80922,
+            "spiele": 5,
+            "punkte": 8,
+            "siege": 4,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 155,
+            "gegentore": 144,
+            "differenz": 11
+          },
+          {
+            "platz": 2,
             "team": "HSV Sobernheim H1",
             "team_id": 80912,
             "spiele": 5,
@@ -63,7 +76,7 @@
             "differenz": 9
           },
           {
-            "platz": 2,
+            "platz": 3,
             "team": "HSG Mutterstadt/Ruchheim",
             "team_id": 80924,
             "spiele": 6,
@@ -76,7 +89,7 @@
             "differenz": 24
           },
           {
-            "platz": 3,
+            "platz": 4,
             "team": "TG Osthofen 2",
             "team_id": 80920,
             "spiele": 7,
@@ -87,19 +100,6 @@
             "tore": 243,
             "gegentore": 242,
             "differenz": 1
-          },
-          {
-            "platz": 4,
-            "team": "HSG Zotzenheim/St.Johann/Sprendlingen",
-            "team_id": 80922,
-            "spiele": 4,
-            "punkte": 6,
-            "siege": 3,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 122,
-            "gegentore": 115,
-            "differenz": 7
           },
           {
             "platz": 5,
@@ -183,14 +183,14 @@
             "platz": 11,
             "team": "HSV Alzey",
             "team_id": 80914,
-            "spiele": 4,
+            "spiele": 5,
             "punkte": 2,
             "siege": 1,
             "remis": 0,
-            "niederlagen": 3,
-            "tore": 118,
-            "gegentore": 125,
-            "differenz": -7
+            "niederlagen": 4,
+            "tore": 147,
+            "gegentore": 158,
+            "differenz": -11
           },
           {
             "platz": 12,
@@ -6172,31 +6172,55 @@
         ]
       },
       "gegnervorschau": {
-        "spiele": 5,
+        "spiele": 6,
         "schuetzen": [
           {
             "id": "16crk9h",
             "name": "Stefan Hauck",
-            "tore": 26,
-            "siebenmeter_tore": 5,
-            "siebenmeter_wuerfe": 6,
+            "tore": 31,
+            "siebenmeter_tore": 7,
+            "siebenmeter_wuerfe": 8,
             "zwei_minuten": 0,
             "verwarnungen": 1,
-            "spiele": 4,
-            "tore_je_spiel": 6.5,
-            "siebenmeter_quote": 83
+            "spiele": 5,
+            "tore_je_spiel": 6.2,
+            "siebenmeter_quote": 88
           },
           {
             "id": "151s2fh",
             "name": "Lars Peter Petzholz",
-            "tore": 16,
+            "tore": 19,
             "siebenmeter_tore": 4,
-            "siebenmeter_wuerfe": 4,
+            "siebenmeter_wuerfe": 5,
             "zwei_minuten": 0,
             "verwarnungen": 1,
-            "spiele": 4,
-            "tore_je_spiel": 4.0,
-            "siebenmeter_quote": 100
+            "spiele": 5,
+            "tore_je_spiel": 3.8,
+            "siebenmeter_quote": 80
+          },
+          {
+            "id": "1r0d4jv",
+            "name": "Johannes Hoffmann",
+            "tore": 14,
+            "siebenmeter_tore": 0,
+            "siebenmeter_wuerfe": 0,
+            "zwei_minuten": 2,
+            "verwarnungen": 1,
+            "spiele": 5,
+            "tore_je_spiel": 2.8,
+            "siebenmeter_quote": null
+          },
+          {
+            "id": "0kjrigy",
+            "name": "Michael Endris",
+            "tore": 14,
+            "siebenmeter_tore": 0,
+            "siebenmeter_wuerfe": 0,
+            "zwei_minuten": 5,
+            "verwarnungen": 3,
+            "spiele": 5,
+            "tore_je_spiel": 2.8,
+            "siebenmeter_quote": null
           },
           {
             "id": "02bkvif",
@@ -6205,57 +6229,33 @@
             "siebenmeter_tore": 0,
             "siebenmeter_wuerfe": 0,
             "zwei_minuten": 2,
-            "verwarnungen": 1,
-            "spiele": 4,
-            "tore_je_spiel": 3.5,
-            "siebenmeter_quote": null
-          },
-          {
-            "id": "0kjrigy",
-            "name": "Michael Endris",
-            "tore": 12,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 4,
             "verwarnungen": 2,
-            "spiele": 4,
-            "tore_je_spiel": 3.0,
-            "siebenmeter_quote": null
-          },
-          {
-            "id": "1r0d4jv",
-            "name": "Johannes Hoffmann",
-            "tore": 11,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 2,
-            "verwarnungen": 0,
-            "spiele": 4,
+            "spiele": 5,
             "tore_je_spiel": 2.8,
             "siebenmeter_quote": null
           }
         ],
-        "weitere": 11,
-        "tore": 130,
-        "torschuetzen": 16,
+        "weitere": 12,
+        "tore": 156,
+        "torschuetzen": 17,
         "groesster_anteil": 20,
-        "strafen": 11,
+        "strafen": 12,
         "strafen_abschnitte": {
           "0-15": 3,
-          "15-30": 5,
+          "15-30": 6,
           "30-45": 2,
           "45-60": 1
         },
         "krimis": {
           "anzahl": 2,
-          "gesamt": 5,
+          "gesamt": 6,
           "gewonnen": 0,
           "verloren": 1
         },
         "halbzeiten": {
-          "erste_halbzeit": -2.2,
+          "erste_halbzeit": -2.7,
           "zweite_halbzeit": 0.0,
-          "spiele": 5
+          "spiele": 6
         }
       },
       "letzte_aenderungen": [],
@@ -9908,12 +9908,12 @@
         "verlauf": [
           {
             "runde": 1,
-            "platz": 9,
+            "platz": 8,
             "punkte": 0
           },
           {
             "runde": 2,
-            "platz": 7,
+            "platz": 8,
             "punkte": 2
           },
           {
@@ -9928,7 +9928,7 @@
           },
           {
             "runde": 5,
-            "platz": 8,
+            "platz": 6,
             "punkte": 4
           }
         ],
@@ -9937,17 +9937,30 @@
             "platz": 1,
             "team": "TV Kirrweiler",
             "team_id": 80834,
+            "spiele": 6,
+            "punkte": 10,
+            "siege": 5,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 250,
+            "gegentore": 205,
+            "differenz": 45
+          },
+          {
+            "platz": 2,
+            "team": "SF Budenheim 2",
+            "team_id": 80836,
             "spiele": 5,
             "punkte": 8,
             "siege": 4,
             "remis": 0,
             "niederlagen": 1,
-            "tore": 209,
-            "gegentore": 169,
-            "differenz": 40
+            "tore": 163,
+            "gegentore": 137,
+            "differenz": 26
           },
           {
-            "platz": 2,
+            "platz": 3,
             "team": "Mjsg Sobernheim/Meisenheim",
             "team_id": 80839,
             "spiele": 5,
@@ -9958,19 +9971,6 @@
             "tore": 170,
             "gegentore": 149,
             "differenz": 21
-          },
-          {
-            "platz": 3,
-            "team": "SF Budenheim 2",
-            "team_id": 80836,
-            "spiele": 4,
-            "punkte": 6,
-            "siege": 3,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 126,
-            "gegentore": 111,
-            "differenz": 15
           },
           {
             "platz": 4,
@@ -10000,32 +10000,6 @@
           },
           {
             "platz": 6,
-            "team": "TV 03 Wörth",
-            "team_id": 80835,
-            "spiele": 5,
-            "punkte": 4,
-            "siege": 2,
-            "remis": 0,
-            "niederlagen": 3,
-            "tore": 144,
-            "gegentore": 146,
-            "differenz": -2
-          },
-          {
-            "platz": 7,
-            "team": "TV Nieder-Olm Mb2",
-            "team_id": 80837,
-            "spiele": 5,
-            "punkte": 4,
-            "siege": 2,
-            "remis": 0,
-            "niederlagen": 3,
-            "tore": 137,
-            "gegentore": 148,
-            "differenz": -11
-          },
-          {
-            "platz": 8,
             "team": "HSG Mutterstadt/Ruchheim",
             "team_id": 86762,
             "spiele": 5,
@@ -10038,7 +10012,20 @@
             "differenz": -13
           },
           {
-            "platz": 9,
+            "platz": 7,
+            "team": "TV 03 Wörth",
+            "team_id": 80835,
+            "spiele": 6,
+            "punkte": 4,
+            "siege": 2,
+            "remis": 0,
+            "niederlagen": 4,
+            "tore": 180,
+            "gegentore": 187,
+            "differenz": -7
+          },
+          {
+            "platz": 8,
             "team": "Mjsg SG Saulheim/HSV Alzey",
             "team_id": 86763,
             "spiele": 6,
@@ -10049,6 +10036,19 @@
             "tore": 167,
             "gegentore": 178,
             "differenz": -11
+          },
+          {
+            "platz": 9,
+            "team": "TV Nieder-Olm Mb2",
+            "team_id": 80837,
+            "spiele": 6,
+            "punkte": 4,
+            "siege": 2,
+            "remis": 0,
+            "niederlagen": 4,
+            "tore": 163,
+            "gegentore": 185,
+            "differenz": -22
           },
           {
             "platz": 10,
