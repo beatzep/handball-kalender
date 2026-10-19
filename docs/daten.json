@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-19T00:00:36+00:00",
+  "aktualisiert": "2026-10-19T08:48:50+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -12452,7 +12452,14 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [],
+      "letzte_aenderungen": [
+        {
+          "art": "verlegt",
+          "code": "2627RPBKROCJGC1102",
+          "spieltag": 11,
+          "text": "Spieltag 11 gegen TUS Heiligenstein II: Sa 12.12. 15:45 → Sa 12.12. 14:00"
+        }
+      ],
       "spiele": {
         "2627RPBKROCJGC0105": {
           "datum": "2026-08-30T13:45:00",
@@ -12618,7 +12625,7 @@
           "sequence": 0
         },
         "2627RPBKROCJGC1102": {
-          "datum": "2026-12-12T15:45:00",
+          "datum": "2026-12-12T14:00:00",
           "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
           "halle": "TSG-Sporthalle Mutterstadt",
           "gegner": "TUS Heiligenstein II",
@@ -12630,7 +12637,7 @@
           "phase_id": 12625,
           "heim": true,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 1
         },
         "2627RPBKROCJGC1205": {
           "datum": "2027-01-24T14:30:00",
@@ -13433,7 +13440,14 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [],
+      "letzte_aenderungen": [
+        {
+          "art": "verlegt",
+          "code": "2627RPVLCJWC0603",
+          "spieltag": 6,
+          "text": "Spieltag 6 gegen WSG Rheinauen: So 25.10. 10:00 → So 25.10. 15:00"
+        }
+      ],
       "spiele": {
         "2627RPVLCJWC0104": {
           "datum": "2026-08-30T10:30:00",
@@ -13546,7 +13560,7 @@
           }
         },
         "2627RPVLCJWC0603": {
-          "datum": "2026-10-25T10:00:00",
+          "datum": "2026-10-25T15:00:00",
           "ort": "TSG-Sporthalle Mutterstadt, Bohligstr. 1, 67112 Mutterstadt",
           "halle": "TSG-Sporthalle Mutterstadt",
           "gegner": "WSG Rheinauen",
@@ -13558,7 +13572,7 @@
           "phase_id": 12593,
           "heim": true,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 1
         },
         "2627RPVLCJWC0701": {
           "datum": "2026-11-08T11:30:00",
