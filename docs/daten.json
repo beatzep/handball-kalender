@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-19T08:48:50+00:00",
+  "aktualisiert": "2026-10-20T08:28:53+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -12216,7 +12216,7 @@
           },
           {
             "runde": 4,
-            "platz": 9,
+            "platz": 8,
             "punkte": 2
           }
         ],
@@ -12314,19 +12314,6 @@
           },
           {
             "platz": 8,
-            "team": "TSV Speyer II",
-            "team_id": 81129,
-            "spiele": 5,
-            "punkte": 2,
-            "siege": 1,
-            "remis": 0,
-            "niederlagen": 4,
-            "tore": 124,
-            "gegentore": 161,
-            "differenz": -37
-          },
-          {
-            "platz": 9,
             "team": "HSG Mutterstadt/Ruchheim II",
             "team_id": 81130,
             "spiele": 4,
@@ -12337,6 +12324,19 @@
             "tore": 106,
             "gegentore": 152,
             "differenz": -46
+          },
+          {
+            "platz": 9,
+            "team": "TSV Speyer II",
+            "team_id": 81129,
+            "spiele": 5,
+            "punkte": 2,
+            "siege": 1,
+            "remis": 0,
+            "niederlagen": 4,
+            "tore": 124,
+            "gegentore": 161,
+            "differenz": -37
           }
         ]
       },
@@ -12452,14 +12452,7 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [
-        {
-          "art": "verlegt",
-          "code": "2627RPBKROCJGC1102",
-          "spieltag": 11,
-          "text": "Spieltag 11 gegen TUS Heiligenstein II: Sa 12.12. 15:45 → Sa 12.12. 14:00"
-        }
-      ],
+      "letzte_aenderungen": [],
       "spiele": {
         "2627RPBKROCJGC0105": {
           "datum": "2026-08-30T13:45:00",
@@ -13440,14 +13433,7 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [
-        {
-          "art": "verlegt",
-          "code": "2627RPVLCJWC0603",
-          "spieltag": 6,
-          "text": "Spieltag 6 gegen WSG Rheinauen: So 25.10. 10:00 → So 25.10. 15:00"
-        }
-      ],
+      "letzte_aenderungen": [],
       "spiele": {
         "2627RPVLCJWC0104": {
           "datum": "2026-08-30T10:30:00",
