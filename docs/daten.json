@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-20T08:28:53+00:00",
+  "aktualisiert": "2026-10-21T08:31:35+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -10074,9 +10074,9 @@
       ],
       "statistik": {
         "fahrten": {
-          "gesamt_km": 758,
-          "fahrten": 13,
-          "stunden": 10.8,
+          "gesamt_km": 899,
+          "fahrten": 16,
+          "stunden": 12.8,
           "weiteste": {
             "km": 196.4,
             "gegner": "Mjsg Sobernheim/Meisenheim",
@@ -10090,7 +10090,6 @@
             "heim": true
           },
           "ohne_koordinaten": [
-            "Sporthalle Freinsheim",
             "Waldsporthalle Budenheim"
           ]
         },
@@ -10194,7 +10193,26 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [],
+      "letzte_aenderungen": [
+        {
+          "art": "halle",
+          "code": "2627RP4BKRBJMG0102",
+          "spieltag": 1,
+          "text": "Spieltag 1 gegen TUS Kl-Dansenberg: Sporthalle Freinsheim → Sporthalle"
+        },
+        {
+          "art": "halle",
+          "code": "2627RP4BKRBJMG0103",
+          "spieltag": 1,
+          "text": "Spieltag 1 gegen Mjsg Heiligenstein/Lingenfeld/Schwegenheim: Sporthalle Freinsheim → Sporthalle"
+        },
+        {
+          "art": "halle",
+          "code": "2627RP4BKRBJMG0106",
+          "spieltag": 1,
+          "text": "Spieltag 1 gegen HSG Eckbachtal: Sporthalle Freinsheim → Sporthalle"
+        }
+      ],
       "spiele": {
         "2627RP4BKRBJMC0101": {
           "datum": "2026-08-22T00:00:00",
@@ -10352,48 +10370,48 @@
         },
         "2627RP4BKRBJMG0102": {
           "datum": "2026-10-24T11:45:00",
-          "ort": "Sporthalle Freinsheim, Reiboldstr. 12E, 67251 Freinsheim",
-          "halle": "Sporthalle Freinsheim",
+          "ort": "Sporthalle, Bahnhofstraße 7, 67246 Dirmstein",
+          "halle": "Sporthalle",
           "gegner": "TUS Kl-Dansenberg",
           "gegner_id": 86898,
           "match_id": 689371,
-          "lat": null,
-          "lon": null,
+          "lat": 49.5655772,
+          "lon": 8.2491729,
           "spieltag": 1,
           "phase_id": 12696,
           "heim": true,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 1
         },
         "2627RP4BKRBJMG0103": {
           "datum": "2026-10-24T12:30:00",
-          "ort": "Sporthalle Freinsheim, Reiboldstr. 12E, 67251 Freinsheim",
-          "halle": "Sporthalle Freinsheim",
+          "ort": "Sporthalle, Bahnhofstraße 7, 67246 Dirmstein",
+          "halle": "Sporthalle",
           "gegner": "Mjsg Heiligenstein/Lingenfeld/Schwegenheim",
           "gegner_id": 89490,
           "match_id": 689372,
-          "lat": null,
-          "lon": null,
+          "lat": 49.5655772,
+          "lon": 8.2491729,
           "spieltag": 1,
           "phase_id": 12696,
           "heim": false,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 1
         },
         "2627RP4BKRBJMG0106": {
           "datum": "2026-10-24T14:45:00",
-          "ort": "Sporthalle Freinsheim, Reiboldstr. 12E, 67251 Freinsheim",
-          "halle": "Sporthalle Freinsheim",
+          "ort": "Sporthalle, Bahnhofstraße 7, 67246 Dirmstein",
+          "halle": "Sporthalle",
           "gegner": "HSG Eckbachtal",
           "gegner_id": 86897,
           "match_id": 689375,
-          "lat": null,
-          "lon": null,
+          "lat": 49.5655772,
+          "lon": 8.2491729,
           "spieltag": 1,
           "phase_id": 12696,
           "heim": true,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 1
         },
         "2627RPOLBJMA0703": {
           "datum": "2026-11-08T13:15:00",
