@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-21T08:31:35+00:00",
+  "aktualisiert": "2026-10-22T08:33:57+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -6620,7 +6620,7 @@
           },
           {
             "runde": 2,
-            "platz": 5,
+            "platz": 4,
             "punkte": 2
           },
           {
@@ -6684,6 +6684,19 @@
           },
           {
             "platz": 5,
+            "team": "TV Thaleischweiler",
+            "team_id": 81004,
+            "spiele": 4,
+            "punkte": 4,
+            "siege": 2,
+            "remis": 0,
+            "niederlagen": 2,
+            "tore": 129,
+            "gegentore": 124,
+            "differenz": 5
+          },
+          {
+            "platz": 6,
             "team": "TV Hauenstein",
             "team_id": 80995,
             "spiele": 4,
@@ -6696,20 +6709,20 @@
             "differenz": 4
           },
           {
-            "platz": 6,
+            "platz": 7,
             "team": "TV Kirrweiler",
             "team_id": 81003,
-            "spiele": 4,
+            "spiele": 5,
             "punkte": 4,
             "siege": 2,
             "remis": 0,
-            "niederlagen": 2,
-            "tore": 102,
-            "gegentore": 100,
-            "differenz": 2
+            "niederlagen": 3,
+            "tore": 127,
+            "gegentore": 134,
+            "differenz": -7
           },
           {
-            "platz": 7,
+            "platz": 8,
             "team": "HSV Alzey",
             "team_id": 80996,
             "spiele": 5,
@@ -6720,19 +6733,6 @@
             "tore": 146,
             "gegentore": 160,
             "differenz": -14
-          },
-          {
-            "platz": 8,
-            "team": "TV Thaleischweiler",
-            "team_id": 81004,
-            "spiele": 3,
-            "punkte": 2,
-            "siege": 1,
-            "remis": 0,
-            "niederlagen": 2,
-            "tore": 95,
-            "gegentore": 99,
-            "differenz": -4
           },
           {
             "platz": 9,
@@ -10193,26 +10193,7 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [
-        {
-          "art": "halle",
-          "code": "2627RP4BKRBJMG0102",
-          "spieltag": 1,
-          "text": "Spieltag 1 gegen TUS Kl-Dansenberg: Sporthalle Freinsheim → Sporthalle"
-        },
-        {
-          "art": "halle",
-          "code": "2627RP4BKRBJMG0103",
-          "spieltag": 1,
-          "text": "Spieltag 1 gegen Mjsg Heiligenstein/Lingenfeld/Schwegenheim: Sporthalle Freinsheim → Sporthalle"
-        },
-        {
-          "art": "halle",
-          "code": "2627RP4BKRBJMG0106",
-          "spieltag": 1,
-          "text": "Spieltag 1 gegen HSG Eckbachtal: Sporthalle Freinsheim → Sporthalle"
-        }
-      ],
+      "letzte_aenderungen": [],
       "spiele": {
         "2627RP4BKRBJMC0101": {
           "datum": "2026-08-22T00:00:00",
@@ -10878,7 +10859,14 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [],
+      "letzte_aenderungen": [
+        {
+          "art": "verlegt",
+          "code": "2627RPVLBJMC0605",
+          "spieltag": 6,
+          "text": "Spieltag 6 gegen TUS KL-Dansenberg II: Sa 24.10. 13:15 → Sa 31.10. 16:00"
+        }
+      ],
       "spiele": {
         "2627RP4BKRBJML0102": {
           "datum": "2026-08-22T00:00:00",
@@ -11013,7 +11001,7 @@
           }
         },
         "2627RPVLBJMC0605": {
-          "datum": "2026-10-24T13:15:00",
+          "datum": "2026-10-31T16:00:00",
           "ort": "Sporthalle Dansenberg, Am Handballplatz 1, 67661 Kaiserslautern-Dansenberg",
           "halle": "Sporthalle Dansenberg",
           "gegner": "TUS KL-Dansenberg II",
@@ -11025,7 +11013,7 @@
           "phase_id": 12619,
           "heim": false,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 1
         },
         "2627RPVLBJMC0703": {
           "datum": "2026-11-08T15:00:00",
