@@ -25,7 +25,14 @@ jobs:
   aktualisieren:
     runs-on: ubuntu-latest
     steps:
+      # Ohne ref nimmt checkout den Commit, der beim Ausloesen aktuell war,
+      # nicht den beim Start. Am 24.10. kamen Handstart und Worker in
+      # derselben Minute; der zweite Lauf wartete brav in der concurrency-
+      # Gruppe, fing dann aber auf dem alten Stand an und sein Push wurde
+      # abgewiesen. Mit ref holt er main so, wie der erste es hinterlassen hat.
       - uses: actions/checkout@v4
+        with:
+          ref: main
 
       - uses: actions/setup-python@v5
         with:
