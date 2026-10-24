@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-24T13:01:18+00:00",
+  "aktualisiert": "2026-10-24T13:31:15+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -11310,9 +11310,9 @@
       },
       "form": [
         "N",
-        "N",
         "S",
         "N",
+        "S",
         "S"
       ],
       "statistik": {
@@ -11336,16 +11336,16 @@
         },
         "bilanz": {
           "gesamt": {
-            "s": 3,
+            "s": 4,
             "u": 0,
             "n": 5,
-            "spiele": 8
+            "spiele": 9
           },
           "heim": {
-            "s": 1,
+            "s": 2,
             "u": 0,
             "n": 3,
-            "spiele": 4
+            "spiele": 5
           },
           "auswaerts": {
             "s": 2,
@@ -11355,19 +11355,19 @@
           }
         },
         "serien": {
-          "ohne_niederlage": 1,
-          "aktuell": 1,
+          "ohne_niederlage": 2,
+          "aktuell": 2,
           "aktuell_art": "S"
         },
         "krimis": {
           "anzahl": 2,
-          "gesamt": 8,
-          "anteil": 25
+          "gesamt": 9,
+          "anteil": 22
         },
         "tore": {
-          "erzielt": 226,
-          "kassiert": 256,
-          "schnitt": 28.2,
+          "erzielt": 249,
+          "kassiert": 266,
+          "schnitt": 27.7,
           "torreichstes": {
             "gegner": "JSG Osthofen/Worms",
             "stand": "27:37",
@@ -11381,9 +11381,9 @@
             "schnitt": 0
           },
           "frueh": {
-            "spiele": 8,
-            "punkte": 6,
-            "schnitt": 0.75
+            "spiele": 9,
+            "punkte": 8,
+            "schnitt": 0.89
           }
         },
         "gegner": {
@@ -11404,10 +11404,10 @@
       },
       "spieler": {
         "quelle": {
-          "spiele_gelaufen": 8,
+          "spiele_gelaufen": 9,
           "mit_bericht": 0,
           "ohne_bericht": 0,
-          "offen": 8
+          "offen": 9
         },
         "schuetzen": [],
         "verteilung": {
@@ -11625,7 +11625,14 @@
           "phase_id": 13593,
           "heim": true,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 0,
+          "ergebnis": {
+            "heim": 23,
+            "gast": 10,
+            "eigene": 23,
+            "fremde": 10,
+            "ausgang": "S"
+          }
         },
         "2627RP4BKRBJWH0103": {
           "datum": "2026-10-24T15:00:00",
@@ -16172,6 +16179,19 @@
           },
           {
             "platz": 2,
+            "team": "TV Edigheim",
+            "team_id": 81290,
+            "spiele": 6,
+            "punkte": 10,
+            "siege": 5,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 162,
+            "gegentore": 143,
+            "differenz": 19
+          },
+          {
+            "platz": 3,
             "team": "TUS Neuhofen",
             "team_id": 81294,
             "spiele": 5,
@@ -16184,33 +16204,7 @@
             "differenz": 46
           },
           {
-            "platz": 3,
-            "team": "TV Edigheim",
-            "team_id": 81290,
-            "spiele": 5,
-            "punkte": 8,
-            "siege": 4,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 132,
-            "gegentore": 116,
-            "differenz": 16
-          },
-          {
             "platz": 4,
-            "team": "JSG Kaiserslautern/Dansenberg",
-            "team_id": 87381,
-            "spiele": 5,
-            "punkte": 6,
-            "siege": 3,
-            "remis": 0,
-            "niederlagen": 2,
-            "tore": 152,
-            "gegentore": 136,
-            "differenz": 16
-          },
-          {
-            "platz": 5,
             "team": "HSG Eckbachtal",
             "team_id": 81289,
             "spiele": 5,
@@ -16221,6 +16215,19 @@
             "tore": 125,
             "gegentore": 119,
             "differenz": 6
+          },
+          {
+            "platz": 5,
+            "team": "JSG Kaiserslautern/Dansenberg",
+            "team_id": 87381,
+            "spiele": 6,
+            "punkte": 6,
+            "siege": 3,
+            "remis": 0,
+            "niederlagen": 3,
+            "tore": 179,
+            "gegentore": 166,
+            "differenz": 13
           },
           {
             "platz": 6,
@@ -17172,7 +17179,7 @@
       "liga": "Bezirksklasse GEMISCHT",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 5,
+        "runde": 6,
         "phase_id": 12640,
         "gespielt": true,
         "mannschaften": 10,
@@ -17180,6 +17187,19 @@
         "eintraege": [
           {
             "platz": 1,
+            "team": "Hlz Friesenheim/Hochdorf 3",
+            "team_id": 81350,
+            "spiele": 6,
+            "punkte": 10,
+            "siege": 4,
+            "remis": 2,
+            "niederlagen": 0,
+            "tore": 118,
+            "gegentore": 59,
+            "differenz": 59
+          },
+          {
+            "platz": 2,
             "team": "TSV Speyer II",
             "team_id": 81348,
             "spiele": 5,
@@ -17192,19 +17212,6 @@
             "differenz": 68
           },
           {
-            "platz": 2,
-            "team": "Hlz Friesenheim/Hochdorf 3",
-            "team_id": 81350,
-            "spiele": 5,
-            "punkte": 9,
-            "siege": 4,
-            "remis": 1,
-            "niederlagen": 0,
-            "tore": 109,
-            "gegentore": 50,
-            "differenz": 59
-          },
-          {
             "platz": 3,
             "team": "TUS Heiligenstein",
             "team_id": 81347,
@@ -17213,9 +17220,9 @@
             "siege": 4,
             "remis": 0,
             "niederlagen": 0,
-            "tore": 116,
+            "tore": 126,
             "gegentore": 39,
-            "differenz": 77
+            "differenz": 87
           },
           {
             "platz": 4,
@@ -17245,6 +17252,19 @@
           },
           {
             "platz": 6,
+            "team": "TV Offenbach 4",
+            "team_id": 81344,
+            "spiele": 5,
+            "punkte": 2,
+            "siege": 0,
+            "remis": 2,
+            "niederlagen": 3,
+            "tore": 57,
+            "gegentore": 89,
+            "differenz": -32
+          },
+          {
+            "platz": 7,
             "team": "HSG Grethen/Maxdorf II",
             "team_id": 81345,
             "spiele": 5,
@@ -17257,7 +17277,7 @@
             "differenz": -35
           },
           {
-            "platz": 7,
+            "platz": 8,
             "team": "TG Waldsee II",
             "team_id": 81349,
             "spiele": 5,
@@ -17266,21 +17286,8 @@
             "remis": 0,
             "niederlagen": 4,
             "tore": 50,
-            "gegentore": 115,
-            "differenz": -65
-          },
-          {
-            "platz": 8,
-            "team": "TV Offenbach 4",
-            "team_id": 81344,
-            "spiele": 4,
-            "punkte": 1,
-            "siege": 0,
-            "remis": 1,
-            "niederlagen": 3,
-            "tore": 48,
-            "gegentore": 80,
-            "differenz": -32
+            "gegentore": 125,
+            "differenz": -75
           },
           {
             "platz": 9,
