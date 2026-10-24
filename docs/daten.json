@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-24T14:31:10+00:00",
+  "aktualisiert": "2026-10-24T15:01:11+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -12020,14 +12020,27 @@
             "gegentore": 182,
             "differenz": -58
           }
+        ],
+        "fehlend": [
+          {
+            "datum": "2026-10-24T15:45:00",
+            "gegner": "Hlz Friesenheim/Hochdorf 3",
+            "ergebnis": {
+              "heim": 38,
+              "gast": 42,
+              "eigene": 38,
+              "fremde": 42,
+              "ausgang": "N"
+            }
+          }
         ]
       },
       "form": [
+        "N",
+        "N",
+        "N",
         "S",
-        "N",
-        "N",
-        "N",
-        "S"
+        "N"
       ],
       "statistik": {
         "fahrten": {
@@ -12054,14 +12067,14 @@
           "gesamt": {
             "s": 2,
             "u": 0,
-            "n": 5,
-            "spiele": 7
+            "n": 6,
+            "spiele": 8
           },
           "heim": {
             "s": 2,
             "u": 0,
-            "n": 2,
-            "spiele": 4
+            "n": 3,
+            "spiele": 5
           },
           "auswaerts": {
             "s": 0,
@@ -12073,21 +12086,21 @@
         "serien": {
           "ohne_niederlage": 1,
           "aktuell": 1,
-          "aktuell_art": "S"
+          "aktuell_art": "N"
         },
         "krimis": {
           "anzahl": 1,
-          "gesamt": 7,
-          "anteil": 14
+          "gesamt": 8,
+          "anteil": 12
         },
         "tore": {
-          "erzielt": 211,
-          "kassiert": 204,
-          "schnitt": 30.1,
+          "erzielt": 249,
+          "kassiert": 246,
+          "schnitt": 31.1,
           "torreichstes": {
-            "gegner": "JSG Osthofen/Worms",
-            "stand": "32:36",
-            "summe": 68
+            "gegner": "Hlz Friesenheim/Hochdorf 3",
+            "stand": "38:42",
+            "summe": 80
           }
         },
         "anwurf": {
@@ -12097,9 +12110,9 @@
             "schnitt": 0
           },
           "frueh": {
-            "spiele": 7,
+            "spiele": 8,
             "punkte": 4,
-            "schnitt": 0.57
+            "schnitt": 0.5
           }
         },
         "gegner": {
@@ -12120,10 +12133,10 @@
       },
       "spieler": {
         "quelle": {
-          "spiele_gelaufen": 7,
+          "spiele_gelaufen": 8,
           "mit_bericht": 0,
           "ohne_bericht": 0,
-          "offen": 7
+          "offen": 8
         },
         "schuetzen": [],
         "verteilung": {
@@ -12319,7 +12332,14 @@
           "phase_id": 12621,
           "heim": true,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 0,
+          "ergebnis": {
+            "heim": 38,
+            "gast": 42,
+            "eigene": 38,
+            "fremde": 42,
+            "ausgang": "N"
+          }
         },
         "2627RPVLCJGA0701": {
           "datum": "2026-11-08T13:00:00",
