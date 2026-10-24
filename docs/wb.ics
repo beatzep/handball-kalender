@@ -28,7 +28,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:2627RSWRLBJWC0102@handball.net
-DTSTAMP:20261024T080510Z
+DTSTAMP:20261024T120108Z
 DTSTART;TZID=Europe/Berlin:20260823T173000
 DTEND;TZID=Europe/Berlin:20260823T193000
 SUMMARY:🚗 JSG Osthofen/Worms 25:29 MuRu wB
@@ -55,7 +55,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RSWRLBJWC0202@handball.net
-DTSTAMP:20261024T080510Z
+DTSTAMP:20261024T120108Z
 DTSTART;TZID=Europe/Berlin:20260830T174500
 DTEND;TZID=Europe/Berlin:20260830T194500
 SUMMARY:🏠 MuRu wB 30:32 HSG Wittlich
@@ -82,7 +82,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RSWRLBJWC0301@handball.net
-DTSTAMP:20261024T080510Z
+DTSTAMP:20261024T120108Z
 DTSTART;TZID=Europe/Berlin:20260906T163000
 DTEND;TZID=Europe/Berlin:20260906T183000
 SUMMARY:🚗 Hf Untere Saar 31:27 MuRu wB
@@ -109,7 +109,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RSWRLBJWC0402@handball.net
-DTSTAMP:20261024T080510Z
+DTSTAMP:20261024T120108Z
 DTSTART;TZID=Europe/Berlin:20260912T173000
 DTEND;TZID=Europe/Berlin:20260912T193000
 SUMMARY:🏠 MuRu wB 27:37 JSG Osthofen/Worms
@@ -137,7 +137,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RSWRLBJWC0502@handball.net
-DTSTAMP:20261024T080510Z
+DTSTAMP:20261024T120108Z
 DTSTART;TZID=Europe/Berlin:20260919T140000
 DTEND;TZID=Europe/Berlin:20260919T160000
 SUMMARY:🚗 HSG Wittlich 37:25 MuRu wB
@@ -164,7 +164,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RSWRLBJWC0601@handball.net
-DTSTAMP:20261024T080510Z
+DTSTAMP:20261024T120108Z
 DTSTART;TZID=Europe/Berlin:20260926T153000
 DTEND;TZID=Europe/Berlin:20260926T173000
 SUMMARY:🏠 MuRu wB 32:29 Hf Untere Saar
@@ -192,13 +192,14 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RSWRL2BJWB0103@handball.net
-DTSTAMP:20261024T080510Z
+DTSTAMP:20261024T120108Z
 DTSTART;VALUE=DATE:20261017
 DTEND;VALUE=DATE:20261018
 SUMMARY:🏠 MuRu wB 27:37 JSG Osthofen/Worms
 DESCRIPTION:Endstand: 27:37 (Niederlage)\nHeimspiel gegen JSG Osthofen/Worm
- s\nAnwurf: noch nicht angesetzt\nLiga: RLSW B-weib Endrunde\nSpieltag: 1\n
- Spielnummer: 2627RSWRL2BJWB0103\nhttps://www.handball.net/match/689205
+ s\nAnwurf: noch nicht angesetzt\nLiga: Regionalliga SW  Endrunden wBJ\nSpi
+ eltag: 1\nSpielnummer: 2627RSWRL2BJWB0103\nhttps://www.handball.net/match/
+ 689205
 URL:https://www.handball.net/match/689205
 SEQUENCE:0
 STATUS:CONFIRMED
@@ -207,13 +208,14 @@ CATEGORIES:Handball,Heimspiel
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RSWRL2BJWB0803@handball.net
-DTSTAMP:20261024T080510Z
+DTSTAMP:20261024T120108Z
 DTSTART;VALUE=DATE:20261024
 DTEND;VALUE=DATE:20261025
 SUMMARY:🚗 JSG Osthofen/Worms 28:29 MuRu wB
 DESCRIPTION:Endstand: 28:29 (Sieg)\nAuswärtsspiel gegen JSG Osthofen/Worms
- \nAnwurf: noch nicht angesetzt\nLiga: RLSW B-weib Endrunde\nSpieltag: 8\nS
- pielnummer: 2627RSWRL2BJWB0803\nhttps://www.handball.net/match/689233
+ \nAnwurf: noch nicht angesetzt\nLiga: Regionalliga SW  Endrunden wBJ\nSpie
+ ltag: 8\nSpielnummer: 2627RSWRL2BJWB0803\nhttps://www.handball.net/match/6
+ 89233
 URL:https://www.handball.net/match/689233
 SEQUENCE:0
 STATUS:CONFIRMED
@@ -222,7 +224,7 @@ CATEGORIES:Handball,Auswärtsspiel
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RP4BKRBJWH0102@handball.net
-DTSTAMP:20261024T080510Z
+DTSTAMP:20261024T120108Z
 DTSTART;TZID=Europe/Berlin:20261024T141500
 DTEND;TZID=Europe/Berlin:20261024T161500
 SUMMARY:🏠 MuRu wB - Hr Göllheim/Eisenberg/Asselheim/Kindenheim
@@ -251,7 +253,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RP4BKRBJWH0103@handball.net
-DTSTAMP:20261024T080510Z
+DTSTAMP:20261024T120108Z
 DTSTART;TZID=Europe/Berlin:20261024T150000
 DTEND;TZID=Europe/Berlin:20261024T170000
 SUMMARY:🚗 Mjsg SG Saulheim/HSV Alzey - MuRu wB
@@ -278,7 +280,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RP4BKRBJWH0106@handball.net
-DTSTAMP:20261024T080510Z
+DTSTAMP:20261024T120108Z
 DTSTART;TZID=Europe/Berlin:20261024T171500
 DTEND;TZID=Europe/Berlin:20261024T191500
 SUMMARY:🏠 MuRu wB - JSG Osthofen/Worms
@@ -305,13 +307,13 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RSWRL2BJWB0602@handball.net
-DTSTAMP:20261024T080510Z
+DTSTAMP:20261024T120108Z
 DTSTART;TZID=Europe/Berlin:20261101T170000
 DTEND;TZID=Europe/Berlin:20261101T190000
 SUMMARY:🏠 MuRu wB - Wjsg Kandel/Wörth/Hagenbach
 DESCRIPTION:Heimspiel gegen Wjsg Kandel/Wörth/Hagenbach\nAnwurf: 17:00 Uhr
- \nLiga: RLSW B-weib Endrunde\nSpieltag: 6\nSpielnummer: 2627RSWRL2BJWB0602
- \nhttps://www.handball.net/match/689224
+ \nLiga: Regionalliga SW  Endrunden wBJ\nSpieltag: 6\nSpielnummer: 2627RSWR
+ L2BJWB0602\nhttps://www.handball.net/match/689224
 URL:https://www.handball.net/match/689224
 SEQUENCE:0
 STATUS:CONFIRMED
@@ -333,13 +335,13 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RSWRL2BJWB0201@handball.net
-DTSTAMP:20261024T080510Z
+DTSTAMP:20261024T120108Z
 DTSTART;TZID=Europe/Berlin:20261108T133000
 DTEND;TZID=Europe/Berlin:20261108T153000
 SUMMARY:🚗 Hb Museldall - MuRu wB
-DESCRIPTION:Auswärtsspiel gegen Hb Museldall\nAnwurf: 13:30 Uhr\nLiga: RLS
- W B-weib Endrunde\nSpieltag: 2\nSpielnummer: 2627RSWRL2BJWB0201\nhttps://w
- ww.handball.net/match/689207
+DESCRIPTION:Auswärtsspiel gegen Hb Museldall\nAnwurf: 13:30 Uhr\nLiga: Reg
+ ionalliga SW  Endrunden wBJ\nSpieltag: 2\nSpielnummer: 2627RSWRL2BJWB0201\
+ nhttps://www.handball.net/match/689207
 URL:https://www.handball.net/match/689207
 SEQUENCE:0
 STATUS:CONFIRMED
@@ -361,13 +363,13 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RSWRL2BJWB0304@handball.net
-DTSTAMP:20261024T080510Z
+DTSTAMP:20261024T120108Z
 DTSTART;TZID=Europe/Berlin:20261114T163000
 DTEND;TZID=Europe/Berlin:20261114T183000
 SUMMARY:🏠 MuRu wB - HSG Dudenhofen/Schifferstadt
 DESCRIPTION:Heimspiel gegen HSG Dudenhofen/Schifferstadt\nAnwurf: 16:30 Uhr
- \nLiga: RLSW B-weib Endrunde\nSpieltag: 3\nSpielnummer: 2627RSWRL2BJWB0304
- \nhttps://www.handball.net/match/689214
+ \nLiga: Regionalliga SW  Endrunden wBJ\nSpieltag: 3\nSpielnummer: 2627RSWR
+ L2BJWB0304\nhttps://www.handball.net/match/689214
 URL:https://www.handball.net/match/689214
 SEQUENCE:0
 STATUS:CONFIRMED
@@ -388,13 +390,13 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RSWRL2BJWB0401@handball.net
-DTSTAMP:20261024T080510Z
+DTSTAMP:20261024T120108Z
 DTSTART;TZID=Europe/Berlin:20261128T160000
 DTEND;TZID=Europe/Berlin:20261128T180000
 SUMMARY:🏠 MuRu wB - TSG MZ-Bretzenheim
-DESCRIPTION:Heimspiel gegen TSG MZ-Bretzenheim\nAnwurf: 16:00 Uhr\nLiga: RL
- SW B-weib Endrunde\nSpieltag: 4\nSpielnummer: 2627RSWRL2BJWB0401\nhttps://
- www.handball.net/match/689215
+DESCRIPTION:Heimspiel gegen TSG MZ-Bretzenheim\nAnwurf: 16:00 Uhr\nLiga: Re
+ gionalliga SW  Endrunden wBJ\nSpieltag: 4\nSpielnummer: 2627RSWRL2BJWB0401
+ \nhttps://www.handball.net/match/689215
 URL:https://www.handball.net/match/689215
 SEQUENCE:0
 STATUS:CONFIRMED
@@ -416,13 +418,13 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RSWRL2BJWB0503@handball.net
-DTSTAMP:20261024T080510Z
+DTSTAMP:20261024T120108Z
 DTSTART;TZID=Europe/Berlin:20261205T150000
 DTEND;TZID=Europe/Berlin:20261205T170000
 SUMMARY:🚗 JSG Weibern/Rhein-Nette - MuRu wB
 DESCRIPTION:Auswärtsspiel gegen JSG Weibern/Rhein-Nette\nAnwurf: 15:00 Uhr
- \nLiga: RLSW B-weib Endrunde\nSpieltag: 5\nSpielnummer: 2627RSWRL2BJWB0503
- \nhttps://www.handball.net/match/689221
+ \nLiga: Regionalliga SW  Endrunden wBJ\nSpieltag: 5\nSpielnummer: 2627RSWR
+ L2BJWB0503\nhttps://www.handball.net/match/689221
 URL:https://www.handball.net/match/689221
 SEQUENCE:0
 STATUS:CONFIRMED
@@ -443,13 +445,13 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RSWRL2BJWB0702@handball.net
-DTSTAMP:20261024T080510Z
+DTSTAMP:20261024T120108Z
 DTSTART;TZID=Europe/Berlin:20270123T160000
 DTEND;TZID=Europe/Berlin:20270123T180000
 SUMMARY:🚗 HSG DJK Marpingen-SC Alsweiler - MuRu wB
 DESCRIPTION:Auswärtsspiel gegen HSG DJK Marpingen-SC Alsweiler\nAnwurf: 16
- :00 Uhr\nLiga: RLSW B-weib Endrunde\nSpieltag: 7\nSpielnummer: 2627RSWRL2B
- JWB0702\nhttps://www.handball.net/match/689228
+ :00 Uhr\nLiga: Regionalliga SW  Endrunden wBJ\nSpieltag: 7\nSpielnummer: 2
+ 627RSWRL2BJWB0702\nhttps://www.handball.net/match/689228
 URL:https://www.handball.net/match/689228
 SEQUENCE:0
 STATUS:CONFIRMED
@@ -470,13 +472,13 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RSWRL2BJWB0901@handball.net
-DTSTAMP:20261024T080510Z
+DTSTAMP:20261024T120108Z
 DTSTART;TZID=Europe/Berlin:20270131T113000
 DTEND;TZID=Europe/Berlin:20270131T133000
 SUMMARY:🏠 MuRu wB - Hb Museldall
-DESCRIPTION:Heimspiel gegen Hb Museldall\nAnwurf: 11:30 Uhr\nLiga: RLSW B-w
- eib Endrunde\nSpieltag: 9\nSpielnummer: 2627RSWRL2BJWB0901\nhttps://www.ha
- ndball.net/match/689235
+DESCRIPTION:Heimspiel gegen Hb Museldall\nAnwurf: 11:30 Uhr\nLiga: Regional
+ liga SW  Endrunden wBJ\nSpieltag: 9\nSpielnummer: 2627RSWRL2BJWB0901\nhttp
+ s://www.handball.net/match/689235
 URL:https://www.handball.net/match/689235
 SEQUENCE:0
 STATUS:CONFIRMED
@@ -498,13 +500,13 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RSWRL2BJWB1004@handball.net
-DTSTAMP:20261024T080510Z
+DTSTAMP:20261024T120108Z
 DTSTART;TZID=Europe/Berlin:20270214T143000
 DTEND;TZID=Europe/Berlin:20270214T163000
 SUMMARY:🚗 HSG Dudenhofen/Schifferstadt - MuRu wB
 DESCRIPTION:Auswärtsspiel gegen HSG Dudenhofen/Schifferstadt\nAnwurf: 14:3
- 0 Uhr\nLiga: RLSW B-weib Endrunde\nSpieltag: 10\nSpielnummer: 2627RSWRL2BJ
- WB1004\nhttps://www.handball.net/match/689242
+ 0 Uhr\nLiga: Regionalliga SW  Endrunden wBJ\nSpieltag: 10\nSpielnummer: 26
+ 27RSWRL2BJWB1004\nhttps://www.handball.net/match/689242
 URL:https://www.handball.net/match/689242
 SEQUENCE:0
 STATUS:CONFIRMED
@@ -525,13 +527,13 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RSWRL2BJWB1101@handball.net
-DTSTAMP:20261024T080510Z
+DTSTAMP:20261024T120108Z
 DTSTART;TZID=Europe/Berlin:20270220T163000
 DTEND;TZID=Europe/Berlin:20270220T183000
 SUMMARY:🚗 TSG MZ-Bretzenheim - MuRu wB
 DESCRIPTION:Auswärtsspiel gegen TSG MZ-Bretzenheim\nAnwurf: 16:30 Uhr\nLig
- a: RLSW B-weib Endrunde\nSpieltag: 11\nSpielnummer: 2627RSWRL2BJWB1101\nht
- tps://www.handball.net/match/689243
+ a: Regionalliga SW  Endrunden wBJ\nSpieltag: 11\nSpielnummer: 2627RSWRL2BJ
+ WB1101\nhttps://www.handball.net/match/689243
 URL:https://www.handball.net/match/689243
 SEQUENCE:0
 STATUS:CONFIRMED
@@ -552,13 +554,13 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RSWRL2BJWB1203@handball.net
-DTSTAMP:20261024T080510Z
+DTSTAMP:20261024T120108Z
 DTSTART;TZID=Europe/Berlin:20270228T150000
 DTEND;TZID=Europe/Berlin:20270228T170000
 SUMMARY:🏠 MuRu wB - JSG Weibern/Rhein-Nette
 DESCRIPTION:Heimspiel gegen JSG Weibern/Rhein-Nette\nAnwurf: 15:00 Uhr\nLig
- a: RLSW B-weib Endrunde\nSpieltag: 12\nSpielnummer: 2627RSWRL2BJWB1203\nht
- tps://www.handball.net/match/689249
+ a: Regionalliga SW  Endrunden wBJ\nSpieltag: 12\nSpielnummer: 2627RSWRL2BJ
+ WB1203\nhttps://www.handball.net/match/689249
 URL:https://www.handball.net/match/689249
 SEQUENCE:0
 STATUS:CONFIRMED
@@ -580,13 +582,13 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RSWRL2BJWB1302@handball.net
-DTSTAMP:20261024T080510Z
+DTSTAMP:20261024T120108Z
 DTSTART;TZID=Europe/Berlin:20270307T160000
 DTEND;TZID=Europe/Berlin:20270307T180000
 SUMMARY:🚗 Wjsg Kandel/Wörth/Hagenbach - MuRu wB
 DESCRIPTION:Auswärtsspiel gegen Wjsg Kandel/Wörth/Hagenbach\nAnwurf: 16:0
- 0 Uhr\nLiga: RLSW B-weib Endrunde\nSpieltag: 13\nSpielnummer: 2627RSWRL2BJ
- WB1302\nhttps://www.handball.net/match/689252
+ 0 Uhr\nLiga: Regionalliga SW  Endrunden wBJ\nSpieltag: 13\nSpielnummer: 26
+ 27RSWRL2BJWB1302\nhttps://www.handball.net/match/689252
 URL:https://www.handball.net/match/689252
 SEQUENCE:0
 STATUS:CONFIRMED
@@ -607,13 +609,13 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RSWRL2BJWB1402@handball.net
-DTSTAMP:20261024T080510Z
+DTSTAMP:20261024T120108Z
 DTSTART;TZID=Europe/Berlin:20270320T150000
 DTEND;TZID=Europe/Berlin:20270320T170000
 SUMMARY:🏠 MuRu wB - HSG DJK Marpingen-SC Alsweiler
 DESCRIPTION:Heimspiel gegen HSG DJK Marpingen-SC Alsweiler\nAnwurf: 15:00 U
- hr\nLiga: RLSW B-weib Endrunde\nSpieltag: 14\nSpielnummer: 2627RSWRL2BJWB1
- 402\nhttps://www.handball.net/match/689256
+ hr\nLiga: Regionalliga SW  Endrunden wBJ\nSpieltag: 14\nSpielnummer: 2627R
+ SWRL2BJWB1402\nhttps://www.handball.net/match/689256
 URL:https://www.handball.net/match/689256
 SEQUENCE:0
 STATUS:CONFIRMED

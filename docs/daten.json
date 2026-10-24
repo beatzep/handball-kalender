@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-24T08:05:18+00:00",
+  "aktualisiert": "2026-10-24T12:01:15+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -9581,20 +9581,7 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [
-        {
-          "art": "verlegt",
-          "code": "2627RPVLAJWB0803",
-          "spieltag": 8,
-          "text": "Spieltag 8 gegen HSG Landau/Land: So 08.11. 16:45 → Sa 16.01. 15:00"
-        },
-        {
-          "art": "verlegt",
-          "code": "2627RPVLAJWB1002",
-          "spieltag": 10,
-          "text": "Spieltag 10 gegen Vsk Niederfeld: Sa 28.11. 18:00 → So 17.01. 15:00"
-        }
-      ],
+      "letzte_aenderungen": [],
       "spiele": {
         "2627RPVLAJWB0103": {
           "datum": "2026-08-29T16:00:00",
@@ -10082,7 +10069,7 @@
         "N",
         "S",
         "N",
-        "S",
+        "N",
         "N"
       ],
       "statistik": {
@@ -10110,36 +10097,36 @@
           "gesamt": {
             "s": 4,
             "u": 0,
-            "n": 3,
-            "spiele": 7
+            "n": 5,
+            "spiele": 9
           },
           "heim": {
             "s": 2,
             "u": 0,
-            "n": 2,
-            "spiele": 4
+            "n": 3,
+            "spiele": 5
           },
           "auswaerts": {
             "s": 2,
             "u": 0,
-            "n": 1,
-            "spiele": 3
+            "n": 2,
+            "spiele": 4
           }
         },
         "serien": {
           "ohne_niederlage": 2,
-          "aktuell": 1,
+          "aktuell": 3,
           "aktuell_art": "N"
         },
         "krimis": {
-          "anzahl": 2,
-          "gesamt": 7,
-          "anteil": 29
+          "anzahl": 3,
+          "gesamt": 9,
+          "anteil": 33
         },
         "tore": {
-          "erzielt": 189,
-          "kassiert": 190,
-          "schnitt": 27.0,
+          "erzielt": 225,
+          "kassiert": 231,
+          "schnitt": 25.0,
           "torreichstes": {
             "gegner": "TV Kirrweiler",
             "stand": "38:36",
@@ -10153,9 +10140,9 @@
             "schnitt": 0
           },
           "frueh": {
-            "spiele": 7,
+            "spiele": 9,
             "punkte": 8,
-            "schnitt": 1.14
+            "schnitt": 0.89
           }
         },
         "gegner": {
@@ -10176,10 +10163,10 @@
       },
       "spieler": {
         "quelle": {
-          "spiele_gelaufen": 7,
+          "spiele_gelaufen": 9,
           "mit_bericht": 0,
           "ohne_bericht": 0,
-          "offen": 7
+          "offen": 9
         },
         "schuetzen": [],
         "verteilung": {
@@ -10375,7 +10362,14 @@
           "phase_id": 12696,
           "heim": true,
           "ohne_zeit": false,
-          "sequence": 1
+          "sequence": 1,
+          "ergebnis": {
+            "heim": 12,
+            "gast": 16,
+            "eigene": 12,
+            "fremde": 16,
+            "ausgang": "N"
+          }
         },
         "2627RP4BKRBJMG0103": {
           "datum": "2026-10-24T12:30:00",
@@ -10390,7 +10384,14 @@
           "phase_id": 12696,
           "heim": false,
           "ohne_zeit": false,
-          "sequence": 1
+          "sequence": 1,
+          "ergebnis": {
+            "heim": 25,
+            "gast": 24,
+            "eigene": 24,
+            "fremde": 25,
+            "ausgang": "N"
+          }
         },
         "2627RP4BKRBJMG0106": {
           "datum": "2026-10-24T14:45:00",
@@ -11181,7 +11182,7 @@
       "gruppe": "Jugend",
       "datei": "wb.ics",
       "kalender": "HSG Mutterstadt/Ruchheim – wB-Jugend",
-      "liga": "RLSW B-weib Endrunde",
+      "liga": "Regionalliga SW  Endrunden wBJ",
       "saison": "2026/27",
       "tabelle": {
         "runde": 2,
@@ -11433,92 +11434,7 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [
-        {
-          "art": "neu",
-          "code": "2627RSWRL2BJWB0103",
-          "spieltag": 1,
-          "text": "Neues Spiel gegen JSG Osthofen/Worms: Sa 17.10. 00:00 in unbekannt"
-        },
-        {
-          "art": "neu",
-          "code": "2627RSWRL2BJWB0803",
-          "spieltag": 8,
-          "text": "Neues Spiel gegen JSG Osthofen/Worms: Sa 24.10. 00:00 in unbekannt"
-        },
-        {
-          "art": "neu",
-          "code": "2627RSWRL2BJWB0602",
-          "spieltag": 6,
-          "text": "Neues Spiel gegen Wjsg Kandel/Wörth/Hagenbach: So 01.11. 17:00 in TVR-Sporthalle Ludwigshafen"
-        },
-        {
-          "art": "neu",
-          "code": "2627RSWRL2BJWB0201",
-          "spieltag": 2,
-          "text": "Neues Spiel gegen Hb Museldall: So 08.11. 13:30 in Grevenmacher CENTRE SPORTIF OP FLOHR"
-        },
-        {
-          "art": "neu",
-          "code": "2627RSWRL2BJWB0304",
-          "spieltag": 3,
-          "text": "Neues Spiel gegen HSG Dudenhofen/Schifferstadt: Sa 14.11. 16:30 in TSG-Sporthalle Mutterstadt"
-        },
-        {
-          "art": "neu",
-          "code": "2627RSWRL2BJWB0401",
-          "spieltag": 4,
-          "text": "Neues Spiel gegen TSG MZ-Bretzenheim: Sa 28.11. 16:00 in TVR-Sporthalle Ludwigshafen"
-        },
-        {
-          "art": "neu",
-          "code": "2627RSWRL2BJWB0503",
-          "spieltag": 5,
-          "text": "Neues Spiel gegen JSG Weibern/Rhein-Nette: Sa 05.12. 15:00 in Robert-Wolff-Halle"
-        },
-        {
-          "art": "neu",
-          "code": "2627RSWRL2BJWB0702",
-          "spieltag": 7,
-          "text": "Neues Spiel gegen HSG DJK Marpingen-SC Alsweiler: Sa 23.01. 16:00 in Marpingen SPORTHALLE"
-        },
-        {
-          "art": "neu",
-          "code": "2627RSWRL2BJWB0901",
-          "spieltag": 9,
-          "text": "Neues Spiel gegen Hb Museldall: So 31.01. 11:30 in TVR-Sporthalle Ludwigshafen"
-        },
-        {
-          "art": "neu",
-          "code": "2627RSWRL2BJWB1004",
-          "spieltag": 10,
-          "text": "Neues Spiel gegen HSG Dudenhofen/Schifferstadt: So 14.02. 14:30 in Sportzentrum TV Hochdorf"
-        },
-        {
-          "art": "neu",
-          "code": "2627RSWRL2BJWB1101",
-          "spieltag": 11,
-          "text": "Neues Spiel gegen TSG MZ-Bretzenheim: Sa 20.02. 16:30 in IGS 1 Mainz-Bretzenheim"
-        },
-        {
-          "art": "neu",
-          "code": "2627RSWRL2BJWB1203",
-          "spieltag": 12,
-          "text": "Neues Spiel gegen JSG Weibern/Rhein-Nette: So 28.02. 15:00 in TVR-Sporthalle Ludwigshafen"
-        },
-        {
-          "art": "neu",
-          "code": "2627RSWRL2BJWB1302",
-          "spieltag": 13,
-          "text": "Neues Spiel gegen Wjsg Kandel/Wörth/Hagenbach: So 07.03. 16:00 in KANDEL Bienwaldhalle"
-        },
-        {
-          "art": "neu",
-          "code": "2627RSWRL2BJWB1402",
-          "spieltag": 14,
-          "text": "Neues Spiel gegen HSG DJK Marpingen-SC Alsweiler: Sa 20.03. 15:00 in TVR-Sporthalle Ludwigshafen"
-        }
-      ],
+      "letzte_aenderungen": [],
       "spiele": {
         "2627RSWRLBJWC0102": {
           "datum": "2026-08-23T17:30:00",
@@ -13085,7 +13001,7 @@
       "gruppe": "Jugend",
       "datei": "wc.ics",
       "kalender": "HSG Mutterstadt/Ruchheim – wC-Jugend",
-      "liga": "RLSW C weiblich Endrunde",
+      "liga": "Regionalliga SW  Endrunden wCJ",
       "saison": "2026/27",
       "tabelle": {
         "runde": 2,
@@ -13340,92 +13256,7 @@
         "spiele": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [
-        {
-          "art": "neu",
-          "code": "2627RSWRL2CJWA0101",
-          "spieltag": 1,
-          "text": "Neues Spiel gegen JSG  Mundenheim/Rheingönheim: Sa 17.10. 00:00 in unbekannt"
-        },
-        {
-          "art": "neu",
-          "code": "2627RSWRL2CJWA0801",
-          "spieltag": 8,
-          "text": "Neues Spiel gegen JSG  Mundenheim/Rheingönheim: Sa 24.10. 00:00 in unbekannt"
-        },
-        {
-          "art": "neu",
-          "code": "2627RSWRL2CJWA0204",
-          "spieltag": 2,
-          "text": "Neues Spiel gegen Wjsg Kandel/Wörth/Hagenbach: So 01.11. 15:00 in TVR-Sporthalle Ludwigshafen"
-        },
-        {
-          "art": "neu",
-          "code": "2627RSWRL2CJWA0301",
-          "spieltag": 3,
-          "text": "Neues Spiel gegen JSG Mainz05/TV Nieder-Olm: Sa 07.11. 17:30 in TVR-Sporthalle Ludwigshafen"
-        },
-        {
-          "art": "neu",
-          "code": "2627RSWRL2CJWA1103",
-          "spieltag": 11,
-          "text": "Neues Spiel gegen Mjsg Ober-Hilbersheim/Ingelheim/Budenheim: Sa 14.11. 14:30 in TSG-Sporthalle Mutterstadt"
-        },
-        {
-          "art": "neu",
-          "code": "2627RSWRL2CJWA0502",
-          "spieltag": 5,
-          "text": "Neues Spiel gegen TV Kirrweiler: Sa 28.11. 14:00 in TVR-Sporthalle Ludwigshafen"
-        },
-        {
-          "art": "neu",
-          "code": "2627RSWRL2CJWA0602",
-          "spieltag": 6,
-          "text": "Neues Spiel gegen HSG Kastellaun/Simmern: Sa 05.12. 15:15 in IGS-Halle"
-        },
-        {
-          "art": "neu",
-          "code": "2627RSWRL2CJWA0703",
-          "spieltag": 7,
-          "text": "Neues Spiel gegen SV Bornheim: Sa 12.12. 16:00 in TSG-Sporthalle Mutterstadt"
-        },
-        {
-          "art": "neu",
-          "code": "2627RSWRL2CJWA0904",
-          "spieltag": 9,
-          "text": "Neues Spiel gegen Wjsg Kandel/Wörth/Hagenbach: Do 14.01. 18:30 in KANDEL Bienwaldhalle"
-        },
-        {
-          "art": "neu",
-          "code": "2627RSWRL2CJWA1001",
-          "spieltag": 10,
-          "text": "Neues Spiel gegen JSG Mainz05/TV Nieder-Olm: Sa 30.01. 17:00 in Sporthalle der IGS Nieder-Olm"
-        },
-        {
-          "art": "neu",
-          "code": "2627RSWRL2CJWA1202",
-          "spieltag": 12,
-          "text": "Neues Spiel gegen TV Kirrweiler: Sa 27.02. 15:00 in Reblandhalle Kirrweiler"
-        },
-        {
-          "art": "neu",
-          "code": "2627RSWRL2CJWA0403",
-          "spieltag": 4,
-          "text": "Neues Spiel gegen Mjsg Ober-Hilbersheim/Ingelheim/Budenheim: So 07.03. 10:00 in Waldsporthalle Budenheim"
-        },
-        {
-          "art": "neu",
-          "code": "2627RSWRL2CJWA1302",
-          "spieltag": 13,
-          "text": "Neues Spiel gegen HSG Kastellaun/Simmern: So 14.03. 15:30 in TVR-Sporthalle Ludwigshafen"
-        },
-        {
-          "art": "neu",
-          "code": "2627RSWRL2CJWA1403",
-          "spieltag": 14,
-          "text": "Neues Spiel gegen SV Bornheim: So 21.03. 15:00 in Sporthalle Bornheim"
-        }
-      ],
+      "letzte_aenderungen": [],
       "spiele": {
         "2627RSWRLCJWA0101": {
           "datum": "2026-08-23T14:00:00",
@@ -13841,7 +13672,7 @@
       "liga": "Verbandsliga WEIBLICH",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 5,
+        "runde": 6,
         "phase_id": 12593,
         "gespielt": true,
         "mannschaften": 10,
@@ -13911,10 +13742,10 @@
             "platz": 4,
             "team": "HSG Dudenhofen/Schifferstadt",
             "team_id": 81154,
-            "spiele": 5,
-            "punkte": 4,
+            "spiele": 6,
+            "punkte": 5,
             "siege": 2,
-            "remis": 0,
+            "remis": 1,
             "niederlagen": 3,
             "tore": 110,
             "gegentore": 117,
@@ -13948,6 +13779,19 @@
           },
           {
             "platz": 7,
+            "team": "JSG Mundenheim/Rheingönheim 2",
+            "team_id": 81150,
+            "spiele": 5,
+            "punkte": 3,
+            "siege": 1,
+            "remis": 1,
+            "niederlagen": 3,
+            "tore": 93,
+            "gegentore": 88,
+            "differenz": 5
+          },
+          {
+            "platz": 8,
             "team": "WSG Rheinauen",
             "team_id": 81151,
             "spiele": 3,
@@ -13958,19 +13802,6 @@
             "tore": 68,
             "gegentore": 81,
             "differenz": -13
-          },
-          {
-            "platz": 8,
-            "team": "JSG Mundenheim/Rheingönheim 2",
-            "team_id": 81150,
-            "spiele": 4,
-            "punkte": 2,
-            "siege": 1,
-            "remis": 0,
-            "niederlagen": 3,
-            "tore": 93,
-            "gegentore": 88,
-            "differenz": 5
           },
           {
             "platz": 9,
@@ -17377,10 +17208,10 @@
             "platz": 3,
             "team": "TUS Heiligenstein",
             "team_id": 81347,
-            "spiele": 3,
-            "punkte": 6,
+            "spiele": 4,
+            "punkte": 7,
             "siege": 3,
-            "remis": 0,
+            "remis": 1,
             "niederlagen": 0,
             "tore": 82,
             "gegentore": 33,
@@ -17388,6 +17219,19 @@
           },
           {
             "platz": 4,
+            "team": "JSG Mundenheim/Rheingönheim 3",
+            "team_id": 81342,
+            "spiele": 4,
+            "punkte": 6,
+            "siege": 3,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 50,
+            "gegentore": 52,
+            "differenz": -2
+          },
+          {
+            "platz": 5,
             "team": "JSG Kaiserslautern/Dansenberg III",
             "team_id": 87383,
             "spiele": 5,
@@ -17400,26 +17244,13 @@
             "differenz": -8
           },
           {
-            "platz": 5,
-            "team": "JSG Mundenheim/Rheingönheim 3",
-            "team_id": 81342,
-            "spiele": 3,
-            "punkte": 4,
-            "siege": 2,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 40,
-            "gegentore": 46,
-            "differenz": -6
-          },
-          {
             "platz": 6,
             "team": "TG Waldsee II",
             "team_id": 81349,
-            "spiele": 4,
-            "punkte": 2,
+            "spiele": 5,
+            "punkte": 3,
             "siege": 1,
-            "remis": 0,
+            "remis": 1,
             "niederlagen": 3,
             "tore": 44,
             "gegentore": 81,
@@ -17455,14 +17286,14 @@
             "platz": 9,
             "team": "HSG Dudenhofen/Schifferstadt 4",
             "team_id": 81346,
-            "spiele": 4,
+            "spiele": 5,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 4,
-            "tore": 42,
-            "gegentore": 100,
-            "differenz": -58
+            "niederlagen": 5,
+            "tore": 48,
+            "gegentore": 110,
+            "differenz": -62
           },
           {
             "platz": 10,
@@ -17722,7 +17553,7 @@
       "liga": "F-Jugend GEMISCHT",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 4,
+        "runde": 5,
         "phase_id": 12610,
         "gespielt": true,
         "mannschaften": 8,
@@ -17744,13 +17575,39 @@
           },
           {
             "runde": 4,
-            "platz": 4,
+            "platz": 5,
             "punkte": 4
           }
         ],
         "eintraege": [
           {
             "platz": 1,
+            "team": "JSG Mundenheim/Rheingönheim 2",
+            "team_id": 81501,
+            "spiele": 5,
+            "punkte": 5,
+            "siege": 0,
+            "remis": 5,
+            "niederlagen": 0,
+            "tore": 0,
+            "gegentore": 0,
+            "differenz": 0
+          },
+          {
+            "platz": 2,
+            "team": "JSG Kaiserslauern/Dansenberg 2",
+            "team_id": 87389,
+            "spiele": 5,
+            "punkte": 5,
+            "siege": 0,
+            "remis": 5,
+            "niederlagen": 0,
+            "tore": 0,
+            "gegentore": 0,
+            "differenz": 0
+          },
+          {
+            "platz": 3,
             "team": "TUS Neuhofen",
             "team_id": 81499,
             "spiele": 4,
@@ -17763,20 +17620,7 @@
             "differenz": 0
           },
           {
-            "platz": 2,
-            "team": "JSG Mundenheim/Rheingönheim 2",
-            "team_id": 81501,
-            "spiele": 4,
-            "punkte": 4,
-            "siege": 0,
-            "remis": 4,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 3,
+            "platz": 4,
             "team": "HSG Grethen/Maxdorf 2",
             "team_id": 81503,
             "spiele": 4,
@@ -17789,22 +17633,9 @@
             "differenz": 0
           },
           {
-            "platz": 4,
+            "platz": 5,
             "team": "HSG Mutterstadt/Ruchheim",
             "team_id": 81504,
-            "spiele": 4,
-            "punkte": 4,
-            "siege": 0,
-            "remis": 4,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 5,
-            "team": "JSG Kaiserslauern/Dansenberg 2",
-            "team_id": 87389,
             "spiele": 4,
             "punkte": 4,
             "siege": 0,
