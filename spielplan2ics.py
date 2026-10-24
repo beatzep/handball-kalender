@@ -394,6 +394,21 @@ def zwischenstand(spiel: dict, jetzt: datetime) -> tuple[int, int] | None:
     return lokal, gast
 
 
+# Ein Spiel dauert mit Pause rund zwei Stunden. Ist es einen Tag nach dem
+# Anwurf beim Verband noch offen, haengt der Bericht - ob in der Halle oder
+# bei handball.net. Gesagt wird das dann auf der Seite und im Audit;
+# uebernommen wird der Stand trotzdem nicht, solange niemand ihn bestaetigt.
+OFFEN_FRIST = timedelta(hours=24)
+
+
+def haengt_offen(eintrag: dict, jetzt: datetime) -> bool:
+    """Fuer einen Eintrag aus daten.json, nicht fuer die Rohdaten der API."""
+    if eintrag.get("ergebnis") or not eintrag.get("zwischenstand"):
+        return False
+    beginn = datetime.fromisoformat(eintrag["datum"]).replace(tzinfo=TZ)
+    return jetzt - beginn > OFFEN_FRIST
+
+
 def ist_abgesetzt(spiel: dict) -> bool:
     """Vom Verband abgesetzte Spiele (Status 3, 'Retirado').
 

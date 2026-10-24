@@ -25,6 +25,7 @@ from seite_tipp import TIPP
 from seite_zaehlung import ZAEHLUNG
 from seite_stand import standhinweis
 from seite_stil import STIL
+from spielplan2ics import haengt_offen
 
 TZ = ZoneInfo("Europe/Berlin")
 WOCHENTAGE = ["Montag", "Dienstag", "Mittwoch", "Donnerstag",
@@ -290,9 +291,16 @@ def spieldetails(bericht: dict | None) -> str:
             + hinweis + '</div>')
 
 
-def offen_hinweis(spiel: dict) -> str:
+def offen_hinweis(spiel: dict, heute: datetime) -> str:
     if spiel.get("ergebnis") or not spiel.get("zwischenstand"):
         return ""
+    if haengt_offen(spiel, heute):
+        # Mit Datum statt "seit gestern": unter der Woche wird nur nachts
+        # gebaut, ein relativer Text waere tagsueber schon falsch.
+        wann = zeit(spiel)
+        return ('<div class="offenhinweis">Stand von handball.net. Dort ist '
+                f'das Spiel seit {KURZTAGE[wann.weekday()]} {wann:%d.%m.} nicht '
+                'abgeschlossen, das sollte eigentlich längst passiert sein.</div>')
     return ('<div class="offenhinweis">Stand von handball.net, das Spiel ist '
             'dort noch nicht abgeschlossen.</div>')
 
@@ -332,7 +340,7 @@ def spielzeile(spiel: dict, heute: datetime, naechster: bool,
     zeile = (f'<div class="datum">{KURZTAGE[wann.weekday()]} {wann:%d.%m.}'
              f'<span>{wann:%H:%M}</span></div>'
              f'<div><div class="gegner">{sicher(spiel.get("gegner"))}</div>'
-             f'<div class="halle">{ort}</div>{offen_hinweis(spiel)}</div>'
+             f'<div class="halle">{ort}</div>{offen_hinweis(spiel, heute)}</div>'
              f'<div class="rechts">{rechts}</div>')
 
     details = spieldetails(bericht)

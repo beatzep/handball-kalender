@@ -487,6 +487,24 @@ sb.aktualisiere(c, [{"match_id": 9, "ergebnis": {"eigene": 1, "fremde": 0}}])
 pruefe("Nach Spielende wird der Bericht endgueltig",
        "vorlaeufig" not in c["9"] and c["9"]["ereignisse"], str(c["9"]))
 
+# --- Offen nach mehr als einem Tag ------------------------------------
+from datetime import datetime as _dt
+from spielplan2ics import TZ, haengt_offen
+offen = {"datum": "2026-10-24T19:30:00", "gegner": "Z",
+         "zwischenstand": {"eigene": 32, "fremde": 28}}
+pruefe("Drei Stunden nach Anwurf haengt nichts",
+       not haengt_offen(offen, _dt(2026, 10, 24, 22, 30, tzinfo=TZ)))
+pruefe("Nach 25 Stunden haengt das Spiel",
+       haengt_offen(offen, _dt(2026, 10, 25, 20, 30, tzinfo=TZ)))
+pruefe("Mit Endstand haengt nichts, egal wie alt",
+       not haengt_offen(dict(offen, ergebnis={"eigene": 32, "fremde": 28}),
+                        _dt(2026, 11, 1, tzinfo=TZ)))
+text = bs.offen_hinweis(offen, _dt(2026, 10, 25, 20, 30, tzinfo=TZ))
+pruefe("Seite nennt den Tag, seit dem es offen ist", "seit Sa 24.10." in text, text)
+text = bs.offen_hinweis(offen, _dt(2026, 10, 24, 22, 30, tzinfo=TZ))
+pruefe("Vor der Frist der normale Hinweis",
+       "noch nicht abgeschlossen" in text and "seit" not in text, text)
+
 fehler = 0
 for name, ok, info in pruefungen:
     if not ok:

@@ -8,12 +8,15 @@ doppelte Termin-Kennungen, fehlende Adressen, tote Verweise.
 from __future__ import annotations
 
 import json
+import os
 import re
 import sys
 from collections import Counter
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
+
+from spielplan2ics import OFFEN_FRIST, haengt_offen
 
 TZ = ZoneInfo("Europe/Berlin")
 DOCS = Path("docs")
@@ -99,6 +102,22 @@ def main() -> int:
         pruefe(not ueberfaellig,
                f"{schluessel}: {len(ueberfaellig)} Spiele länger als 3 Tage vorbei, "
                f"aber ohne Ergebnis", hart=False)
+
+        # Seit dem 24.10.2026 steht der Zwischenstand offener Spiele auf der
+        # Seite. Haengt einer, soll das jemand merken, statt dass "vorlaeufig"
+        # unbemerkt wochenlang stehen bleibt.
+        for s in spiele:
+            if haengt_offen(s, heute):
+                z = s["zwischenstand"]
+                text = (f"{schluessel}: Spiel gegen {s.get('gegner')} vom "
+                        f"{s['datum'][8:10]}.{s['datum'][5:7]}. ist bei handball.net "
+                        f"seit über {OFFEN_FRIST.total_seconds() / 3600:.0f} Stunden "
+                        f"offen (vorläufig {z['eigene']}:{z['fremde']})")
+                pruefe(False, text, hart=False)
+                # Ein HINWEIS geht unter den anderen im Log eines gruenen Laufs
+                # unter; als Annotation steht er oben auf der Seite des Laufs.
+                if os.environ.get("GITHUB_ACTIONS"):
+                    print(f"::warning title=Spiel haengt offen::{text}")
 
         # Zwei Spiele zur selben Zeit sind bei Turnieren und Spielfesten normal
         # (mehrere Felder, kurze Spielzeiten). Verdaechtig wird es erst, wenn
