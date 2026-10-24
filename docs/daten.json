@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-24T13:31:15+00:00",
+  "aktualisiert": "2026-10-24T14:01:21+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -10066,8 +10066,8 @@
         ]
       },
       "form": [
-        "N",
         "S",
+        "N",
         "N",
         "N",
         "N"
@@ -10097,14 +10097,14 @@
           "gesamt": {
             "s": 4,
             "u": 0,
-            "n": 5,
-            "spiele": 9
+            "n": 6,
+            "spiele": 10
           },
           "heim": {
             "s": 2,
             "u": 0,
-            "n": 3,
-            "spiele": 5
+            "n": 4,
+            "spiele": 6
           },
           "auswaerts": {
             "s": 2,
@@ -10115,18 +10115,18 @@
         },
         "serien": {
           "ohne_niederlage": 2,
-          "aktuell": 3,
+          "aktuell": 4,
           "aktuell_art": "N"
         },
         "krimis": {
           "anzahl": 3,
-          "gesamt": 9,
-          "anteil": 33
+          "gesamt": 10,
+          "anteil": 30
         },
         "tore": {
-          "erzielt": 225,
-          "kassiert": 231,
-          "schnitt": 25.0,
+          "erzielt": 244,
+          "kassiert": 254,
+          "schnitt": 24.4,
           "torreichstes": {
             "gegner": "TV Kirrweiler",
             "stand": "38:36",
@@ -10140,9 +10140,9 @@
             "schnitt": 0
           },
           "frueh": {
-            "spiele": 9,
+            "spiele": 10,
             "punkte": 8,
-            "schnitt": 0.89
+            "schnitt": 0.8
           }
         },
         "gegner": {
@@ -10163,10 +10163,10 @@
       },
       "spieler": {
         "quelle": {
-          "spiele_gelaufen": 9,
+          "spiele_gelaufen": 10,
           "mit_bericht": 0,
           "ohne_bericht": 0,
-          "offen": 9
+          "offen": 10
         },
         "schuetzen": [],
         "verteilung": {
@@ -10406,7 +10406,14 @@
           "phase_id": 12696,
           "heim": true,
           "ohne_zeit": false,
-          "sequence": 1
+          "sequence": 1,
+          "ergebnis": {
+            "heim": 19,
+            "gast": 23,
+            "eigene": 19,
+            "fremde": 23,
+            "ausgang": "N"
+          }
         },
         "2627RPOLBJMA0703": {
           "datum": "2026-11-08T13:15:00",
@@ -11309,9 +11316,9 @@
         ]
       },
       "form": [
-        "N",
         "S",
         "N",
+        "S",
         "S",
         "S"
       ],
@@ -11336,10 +11343,10 @@
         },
         "bilanz": {
           "gesamt": {
-            "s": 4,
+            "s": 5,
             "u": 0,
             "n": 5,
-            "spiele": 9
+            "spiele": 10
           },
           "heim": {
             "s": 2,
@@ -11348,26 +11355,26 @@
             "spiele": 5
           },
           "auswaerts": {
-            "s": 2,
+            "s": 3,
             "u": 0,
             "n": 2,
-            "spiele": 4
+            "spiele": 5
           }
         },
         "serien": {
-          "ohne_niederlage": 2,
-          "aktuell": 2,
+          "ohne_niederlage": 3,
+          "aktuell": 3,
           "aktuell_art": "S"
         },
         "krimis": {
           "anzahl": 2,
-          "gesamt": 9,
-          "anteil": 22
+          "gesamt": 10,
+          "anteil": 20
         },
         "tore": {
-          "erzielt": 249,
-          "kassiert": 266,
-          "schnitt": 27.7,
+          "erzielt": 266,
+          "kassiert": 279,
+          "schnitt": 26.6,
           "torreichstes": {
             "gegner": "JSG Osthofen/Worms",
             "stand": "27:37",
@@ -11381,9 +11388,9 @@
             "schnitt": 0
           },
           "frueh": {
-            "spiele": 9,
-            "punkte": 8,
-            "schnitt": 0.89
+            "spiele": 10,
+            "punkte": 10,
+            "schnitt": 1.0
           }
         },
         "gegner": {
@@ -11404,10 +11411,10 @@
       },
       "spieler": {
         "quelle": {
-          "spiele_gelaufen": 9,
+          "spiele_gelaufen": 10,
           "mit_bericht": 0,
           "ohne_bericht": 0,
-          "offen": 9
+          "offen": 10
         },
         "schuetzen": [],
         "verteilung": {
@@ -11647,7 +11654,14 @@
           "phase_id": 13593,
           "heim": false,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 0,
+          "ergebnis": {
+            "heim": 13,
+            "gast": 17,
+            "eigene": 17,
+            "fremde": 13,
+            "ausgang": "S"
+          }
         },
         "2627RP4BKRBJWH0106": {
           "datum": "2026-10-24T17:15:00",
@@ -13754,9 +13768,9 @@
             "siege": 2,
             "remis": 0,
             "niederlagen": 3,
-            "tore": 116,
-            "gegentore": 99,
-            "differenz": 17
+            "tore": 121,
+            "gegentore": 101,
+            "differenz": 20
           },
           {
             "platz": 5,
@@ -13780,9 +13794,9 @@
             "siege": 2,
             "remis": 0,
             "niederlagen": 4,
-            "tore": 121,
-            "gegentore": 140,
-            "differenz": -19
+            "tore": 123,
+            "gegentore": 145,
+            "differenz": -22
           },
           {
             "platz": 7,
@@ -15570,7 +15584,7 @@
           },
           {
             "runde": 3,
-            "platz": 2,
+            "platz": 3,
             "punkte": 5
           }
         ],
@@ -15590,6 +15604,19 @@
           },
           {
             "platz": 2,
+            "team": "TSV Speyer",
+            "team_id": 81269,
+            "spiele": 3,
+            "punkte": 6,
+            "siege": 3,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 71,
+            "gegentore": 47,
+            "differenz": 24
+          },
+          {
+            "platz": 3,
             "team": "HSG Mutterstadt/Ruchheim II",
             "team_id": 81267,
             "spiele": 3,
@@ -15602,7 +15629,7 @@
             "differenz": 15
           },
           {
-            "platz": 3,
+            "platz": 4,
             "team": "Vorderpfälzer Luchse II",
             "team_id": 81264,
             "spiele": 2,
@@ -15613,19 +15640,6 @@
             "tore": 54,
             "gegentore": 24,
             "differenz": 30
-          },
-          {
-            "platz": 4,
-            "team": "TSV Speyer",
-            "team_id": 81269,
-            "spiele": 2,
-            "punkte": 4,
-            "siege": 2,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 43,
-            "gegentore": 29,
-            "differenz": 14
           },
           {
             "platz": 5,
@@ -15670,14 +15684,14 @@
             "platz": 8,
             "team": "Mwsg Kandel/Hagenbach",
             "team_id": 81261,
-            "spiele": 4,
+            "spiele": 5,
             "punkte": 2,
             "siege": 1,
             "remis": 0,
-            "niederlagen": 3,
-            "tore": 72,
-            "gegentore": 105,
-            "differenz": -33
+            "niederlagen": 4,
+            "tore": 90,
+            "gegentore": 133,
+            "differenz": -43
           },
           {
             "platz": 9,
