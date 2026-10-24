@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-24T18:39:41+00:00",
+  "aktualisiert": "2026-10-24T19:16:15+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -3699,19 +3699,6 @@
           },
           {
             "platz": 3,
-            "team": "HSG Grethen/Maxdorf",
-            "team_id": 80984,
-            "spiele": 4,
-            "punkte": 6,
-            "siege": 3,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 118,
-            "gegentore": 115,
-            "differenz": 3
-          },
-          {
-            "platz": 4,
             "team": "TUS Heiligenstein 2",
             "team_id": 80983,
             "spiele": 6,
@@ -3722,6 +3709,19 @@
             "tore": 173,
             "gegentore": 160,
             "differenz": 13
+          },
+          {
+            "platz": 4,
+            "team": "HSG Grethen/Maxdorf",
+            "team_id": 80984,
+            "spiele": 5,
+            "punkte": 6,
+            "siege": 3,
+            "remis": 0,
+            "niederlagen": 2,
+            "tore": 149,
+            "gegentore": 149,
+            "differenz": 0
           },
           {
             "platz": 5,
@@ -3738,6 +3738,19 @@
           },
           {
             "platz": 6,
+            "team": "MSG Kaiserslautern/Dansenberg 2",
+            "team_id": 80974,
+            "spiele": 6,
+            "punkte": 5,
+            "siege": 2,
+            "remis": 1,
+            "niederlagen": 3,
+            "tore": 155,
+            "gegentore": 169,
+            "differenz": -14
+          },
+          {
+            "platz": 7,
             "team": "TSV Kandel 2",
             "team_id": 80975,
             "spiele": 6,
@@ -3750,7 +3763,7 @@
             "differenz": -28
           },
           {
-            "platz": 7,
+            "platz": 8,
             "team": "TV Kirrweiler 2",
             "team_id": 80979,
             "spiele": 5,
@@ -3761,19 +3774,6 @@
             "tore": 140,
             "gegentore": 162,
             "differenz": -22
-          },
-          {
-            "platz": 8,
-            "team": "MSG Kaiserslautern/Dansenberg 2",
-            "team_id": 80974,
-            "spiele": 5,
-            "punkte": 3,
-            "siege": 1,
-            "remis": 1,
-            "niederlagen": 3,
-            "tore": 121,
-            "gegentore": 138,
-            "differenz": -17
           },
           {
             "platz": 9,
