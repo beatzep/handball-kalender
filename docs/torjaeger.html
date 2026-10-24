@@ -226,6 +226,9 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 .stand { font-size: .95rem; font-weight: 700; margin-top: 2px; white-space: nowrap; }
 .stand.S { color: var(--sieg); }
 .stand.N { color: var(--niederlage); }
+.stand.offen { color: var(--leise); }
+.vorlaeufig { display: block; font-size: .72rem; color: var(--leise); }
+.offenhinweis { font-size: .82rem; color: var(--leise); margin-top: 3px; }
 .spiel.vorbei { opacity: .55; }
 .spiel.vorbei .gegner { font-weight: 400; }
 .spiel.jetzt { border-top-color: var(--gold); box-shadow: inset 0 2px 0 var(--gold); }
@@ -688,9 +691,9 @@ table.tabelle tr.wir td.platz { box-shadow: inset 2px 0 0 var(--gold); }
 
 <main class="huelle">
   <div class="veraltet" id="veraltet" role="status"
-     data-stand="2026-10-24T19:31:00+00:00">
+     data-stand="2026-10-24T20:01:00+00:00">
   <h2>Spielplan womöglich nicht aktuell</h2>
-  <p data-stand-text>Stand der Daten: 24.10.2026 um 21:31 Uhr. Ob das noch aktuell ist, lässt sich gerade nicht prüfen.</p>
+  <p data-stand-text>Stand der Daten: 24.10.2026 um 22:01 Uhr. Ob das noch aktuell ist, lässt sich gerade nicht prüfen.</p>
   <p>Im Zweifel bei <a href="https://www.handball.net" target="_blank"
      rel="noopener">handball.net</a> nachschauen. Falls hier etwas nicht
      stimmt, bitte kurz eine Mail an <a href="mailto:edis.herrmann@gmail.com?subject=Fehler%20im%20Spielplan"
@@ -774,7 +777,7 @@ function muruStandText(befund) {
   <p class="statfuss">45 Schützen aus 15 Spielen von 3 Mannschaften.</p>
 
   <p class="fuss">
-    Stand: 24.10.2026, 21:31 Uhr. Aus den Spielberichten von
+    Stand: 24.10.2026, 22:01 Uhr. Aus den Spielberichten von
     <a href="https://www.handball.net" target="_blank" rel="noopener">handball.net</a>.
     <a href="wochenende.html">Wer spielt wann</a>
   </p>

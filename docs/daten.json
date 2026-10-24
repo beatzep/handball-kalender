@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-24T19:31:00+00:00",
+  "aktualisiert": "2026-10-24T20:01:00+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -12,7 +12,7 @@
       "liga": "Männer Bezirksoberliga",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 7,
+        "runde": 8,
         "phase_id": 12482,
         "gespielt": true,
         "mannschaften": 12,
@@ -46,63 +46,81 @@
             "runde": 6,
             "platz": 3,
             "punkte": 8
+          },
+          {
+            "runde": 7,
+            "platz": 2,
+            "punkte": 10
           }
         ],
         "eintraege": [
           {
             "platz": 1,
-            "team": "HSG Zotzenheim/St.Johann/Sprendlingen",
-            "team_id": 80922,
-            "spiele": 5,
-            "punkte": 8,
-            "siege": 4,
+            "team": "HSV Sobernheim H1",
+            "team_id": 80912,
+            "spiele": 6,
+            "punkte": 10,
+            "siege": 5,
             "remis": 0,
             "niederlagen": 1,
-            "tore": 155,
-            "gegentore": 144,
-            "differenz": 11
+            "tore": 181,
+            "gegentore": 168,
+            "differenz": 13
           },
           {
             "platz": 2,
-            "team": "HSV Sobernheim H1",
-            "team_id": 80912,
-            "spiele": 5,
-            "punkte": 8,
-            "siege": 4,
+            "team": "HSG Mutterstadt/Ruchheim",
+            "team_id": 80924,
+            "spiele": 7,
+            "punkte": 10,
+            "siege": 5,
             "remis": 0,
-            "niederlagen": 1,
-            "tore": 158,
-            "gegentore": 149,
-            "differenz": 9
+            "niederlagen": 2,
+            "tore": 225,
+            "gegentore": 197,
+            "differenz": 28
           },
           {
             "platz": 3,
-            "team": "HSG Mutterstadt/Ruchheim",
-            "team_id": 80924,
+            "team": "HSG Zotzenheim/St.Johann/Sprendlingen",
+            "team_id": 80922,
             "spiele": 6,
             "punkte": 8,
             "siege": 4,
             "remis": 0,
             "niederlagen": 2,
-            "tore": 193,
-            "gegentore": 169,
-            "differenz": 24
+            "tore": 183,
+            "gegentore": 176,
+            "differenz": 7
           },
           {
             "platz": 4,
-            "team": "TG Osthofen 2",
-            "team_id": 80920,
-            "spiele": 7,
+            "team": "GW Bingen-Büdesheim",
+            "team_id": 80916,
+            "spiele": 8,
             "punkte": 8,
             "siege": 4,
             "remis": 0,
-            "niederlagen": 3,
-            "tore": 243,
-            "gegentore": 242,
+            "niederlagen": 4,
+            "tore": 230,
+            "gegentore": 229,
             "differenz": 1
           },
           {
             "platz": 5,
+            "team": "TG Osthofen 2",
+            "team_id": 80920,
+            "spiele": 8,
+            "punkte": 8,
+            "siege": 4,
+            "remis": 0,
+            "niederlagen": 4,
+            "tore": 269,
+            "gegentore": 273,
+            "differenz": -4
+          },
+          {
+            "platz": 6,
             "team": "HSG Rhein-Nahe Bingen 2",
             "team_id": 80915,
             "spiele": 5,
@@ -115,7 +133,7 @@
             "differenz": 9
           },
           {
-            "platz": 6,
+            "platz": 7,
             "team": "SG Saulheim 2",
             "team_id": 80921,
             "spiele": 5,
@@ -128,7 +146,7 @@
             "differenz": 1
           },
           {
-            "platz": 7,
+            "platz": 8,
             "team": "TSG MZ-Bretzenheim 2",
             "team_id": 80919,
             "spiele": 6,
@@ -141,7 +159,7 @@
             "differenz": -3
           },
           {
-            "platz": 8,
+            "platz": 9,
             "team": "HSG Worms",
             "team_id": 80913,
             "spiele": 6,
@@ -154,30 +172,17 @@
             "differenz": -10
           },
           {
-            "platz": 9,
-            "team": "GW Bingen-Büdesheim",
-            "team_id": 80916,
-            "spiele": 7,
-            "punkte": 6,
-            "siege": 3,
-            "remis": 0,
-            "niederlagen": 4,
-            "tore": 199,
-            "gegentore": 203,
-            "differenz": -4
-          },
-          {
             "platz": 10,
             "team": "TV Nieder-Olm 2",
             "team_id": 80917,
-            "spiele": 6,
+            "spiele": 7,
             "punkte": 5,
             "siege": 2,
             "remis": 1,
-            "niederlagen": 3,
-            "tore": 152,
-            "gegentore": 152,
-            "differenz": 0
+            "niederlagen": 4,
+            "tore": 171,
+            "gegentore": 175,
+            "differenz": -4
           },
           {
             "platz": 11,
@@ -3161,82 +3166,89 @@
         ]
       },
       "gegnervorschau": {
-        "spiele": 1,
+        "spiele": 6,
         "schuetzen": [
           {
-            "id": "12gd57v",
-            "name": "Thorsten Witzler",
-            "tore": 7,
-            "siebenmeter_tore": 7,
-            "siebenmeter_wuerfe": 8,
-            "zwei_minuten": 0,
-            "verwarnungen": 0,
-            "spiele": 1,
-            "tore_je_spiel": 7.0,
-            "siebenmeter_quote": 88
+            "id": "15wgjr0",
+            "name": "Adrian Bruckmann",
+            "tore": 35,
+            "siebenmeter_tore": 10,
+            "siebenmeter_wuerfe": 12,
+            "zwei_minuten": 3,
+            "verwarnungen": 3,
+            "spiele": 6,
+            "tore_je_spiel": 5.8,
+            "siebenmeter_quote": 83
           },
           {
-            "id": "0jxqlb8",
-            "name": "Marc Stoll",
-            "tore": 5,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 1,
-            "zwei_minuten": 0,
-            "verwarnungen": 0,
-            "spiele": 1,
-            "tore_je_spiel": 5.0,
-            "siebenmeter_quote": 0
-          },
-          {
-            "id": "1bc2mfu",
-            "name": "Thomas Kern",
-            "tore": 4,
+            "id": "0tc0t4g",
+            "name": "Janosch Ahr",
+            "tore": 23,
             "siebenmeter_tore": 0,
             "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 0,
+            "zwei_minuten": 1,
             "verwarnungen": 0,
-            "spiele": 1,
-            "tore_je_spiel": 4.0,
+            "spiele": 6,
+            "tore_je_spiel": 3.8,
             "siebenmeter_quote": null
           },
           {
             "id": "01g5hku",
             "name": "David Korobitsyn",
-            "tore": 3,
+            "tore": 22,
             "siebenmeter_tore": 0,
             "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 0,
-            "verwarnungen": 0,
-            "spiele": 1,
-            "tore_je_spiel": 3.0,
+            "zwei_minuten": 2,
+            "verwarnungen": 1,
+            "spiele": 6,
+            "tore_je_spiel": 3.7,
             "siebenmeter_quote": null
           },
           {
-            "id": "0opwv71",
-            "name": "Maximilian Paul Schott",
-            "tore": 3,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 1,
-            "zwei_minuten": 1,
+            "id": "12gd57v",
+            "name": "Thorsten Witzler",
+            "tore": 18,
+            "siebenmeter_tore": 10,
+            "siebenmeter_wuerfe": 14,
+            "zwei_minuten": 0,
+            "verwarnungen": 1,
+            "spiele": 4,
+            "tore_je_spiel": 4.5,
+            "siebenmeter_quote": 71
+          },
+          {
+            "id": "0njc8rt",
+            "name": "Sebastian Ruch",
+            "tore": 16,
+            "siebenmeter_tore": 6,
+            "siebenmeter_wuerfe": 7,
+            "zwei_minuten": 0,
             "verwarnungen": 0,
-            "spiele": 1,
-            "tore_je_spiel": 3.0,
-            "siebenmeter_quote": 0
+            "spiele": 6,
+            "tore_je_spiel": 2.7,
+            "siebenmeter_quote": 86
           }
         ],
-        "weitere": 4,
-        "tore": 29,
-        "torschuetzen": 9,
-        "groesster_anteil": 24,
-        "strafen": 1,
+        "weitere": 9,
+        "tore": 178,
+        "torschuetzen": 14,
+        "groesster_anteil": 20,
+        "strafen": 15,
         "strafen_abschnitte": {
-          "0-15": 0,
-          "15-30": 0,
-          "30-45": 1,
-          "45-60": 0
+          "0-15": 1,
+          "15-30": 5,
+          "30-45": 7,
+          "45-60": 2
         },
-        "krimis": null,
-        "halbzeiten": null
+        "krimis": {
+          "anzahl": 0,
+          "gesamt": 6
+        },
+        "halbzeiten": {
+          "erste_halbzeit": -0.2,
+          "zweite_halbzeit": -2.0,
+          "spiele": 6
+        }
       },
       "letzte_aenderungen": [],
       "spiele": {
@@ -3385,7 +3397,13 @@
           "phase_id": 12482,
           "heim": true,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 0,
+          "zwischenstand": {
+            "heim": 32,
+            "gast": 28,
+            "eigene": 32,
+            "fremde": 28
+          }
         },
         "2627RPBKROERMA0803": {
           "datum": "2026-11-08T17:15:00",
