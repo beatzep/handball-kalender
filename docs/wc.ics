@@ -28,7 +28,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:2627RSWRLCJWA0101@handball.net
-DTSTAMP:20261023T082953Z
+DTSTAMP:20261024T080512Z
 DTSTART;TZID=Europe/Berlin:20260823T140000
 DTEND;TZID=Europe/Berlin:20260823T160000
 SUMMARY:🏠 MuRu wC 27:25 JSG  Mundenheim/Rheingönheim
@@ -57,7 +57,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RSWRLCJWA0202@handball.net
-DTSTAMP:20261023T082953Z
+DTSTAMP:20261024T080512Z
 DTSTART;TZID=Europe/Berlin:20260829T140000
 DTEND;TZID=Europe/Berlin:20260829T160000
 SUMMARY:🚗 SG Zweibrücken 27:41 MuRu wC
@@ -85,7 +85,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RSWRLCJWA0302@handball.net
-DTSTAMP:20261023T082953Z
+DTSTAMP:20261024T080512Z
 DTSTART;TZID=Europe/Berlin:20260905T153000
 DTEND;TZID=Europe/Berlin:20260905T173000
 SUMMARY:🏠 MuRu wC 33:28 TV Engers
@@ -112,7 +112,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RSWRLCJWA0401@handball.net
-DTSTAMP:20261023T082953Z
+DTSTAMP:20261024T080512Z
 DTSTART;TZID=Europe/Berlin:20260912T140000
 DTEND;TZID=Europe/Berlin:20260912T160000
 SUMMARY:🚗 JSG  Mundenheim/Rheingönheim 25:20 MuRu wC
@@ -140,7 +140,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RSWRLCJWA0502@handball.net
-DTSTAMP:20261023T082953Z
+DTSTAMP:20261024T080512Z
 DTSTART;TZID=Europe/Berlin:20260920T160000
 DTEND;TZID=Europe/Berlin:20260920T180000
 SUMMARY:🏠 MuRu wC 27:24 SG Zweibrücken
@@ -167,7 +167,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RSWRLCJWA0602@handball.net
-DTSTAMP:20261023T082953Z
+DTSTAMP:20261024T080512Z
 DTSTART;TZID=Europe/Berlin:20260926T123000
 DTEND;TZID=Europe/Berlin:20260926T143000
 SUMMARY:🚗 TV Engers 26:26 MuRu wC
@@ -193,8 +193,40 @@ DESCRIPTION:Gleich Spiel: 🚗 TV Engers 26:26 MuRu wC
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:2627RSWRL2CJWA0101@handball.net
+DTSTAMP:20261024T080512Z
+DTSTART;VALUE=DATE:20261017
+DTEND;VALUE=DATE:20261018
+SUMMARY:🚗 JSG  Mundenheim/Rheingönheim 25:20 MuRu wC
+DESCRIPTION:Endstand: 25:20 (Niederlage)\nAuswärtsspiel gegen JSG  Mundenh
+ eim/Rheingönheim\nAnwurf: noch nicht angesetzt\nLiga: RLSW C weiblich End
+ runde\nSpieltag: 1\nSpielnummer: 2627RSWRL2CJWA0101\nhttps://www.handball.
+ net/match/689459
+URL:https://www.handball.net/match/689459
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RSWRL2CJWA0801@handball.net
+DTSTAMP:20261024T080512Z
+DTSTART;VALUE=DATE:20261024
+DTEND;VALUE=DATE:20261025
+SUMMARY:🏠 MuRu wC 27:25 JSG  Mundenheim/Rheingönheim
+DESCRIPTION:Endstand: 27:25 (Sieg)\nHeimspiel gegen JSG  Mundenheim/Rheing
+ önheim\nAnwurf: noch nicht angesetzt\nLiga: RLSW C weiblich Endrunde\nSpi
+ eltag: 8\nSpielnummer: 2627RSWRL2CJWA0801\nhttps://www.handball.net/match/
+ 689487
+URL:https://www.handball.net/match/689487
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+END:VEVENT
+BEGIN:VEVENT
 UID:2627RP4BKRCJWF0102@handball.net
-DTSTAMP:20261023T082953Z
+DTSTAMP:20261024T080512Z
 DTSTART;TZID=Europe/Berlin:20261025T104500
 DTEND;TZID=Europe/Berlin:20261025T124500
 SUMMARY:🚗 TSV Speyer - MuRu wC
@@ -221,7 +253,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RP4BKRCJWF0104@handball.net
-DTSTAMP:20261023T082953Z
+DTSTAMP:20261024T080512Z
 DTSTART;TZID=Europe/Berlin:20261025T121500
 DTEND;TZID=Europe/Berlin:20261025T141500
 SUMMARY:🚗 SV Bornheim - MuRu wC
@@ -248,7 +280,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2627RP4BKRCJWF0105@handball.net
-DTSTAMP:20261023T082953Z
+DTSTAMP:20261024T080512Z
 DTSTART;TZID=Europe/Berlin:20261025T130000
 DTEND;TZID=Europe/Berlin:20261025T150000
 SUMMARY:🏠 MuRu wC - HSG Trifels
@@ -271,6 +303,338 @@ BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-PT3H
 DESCRIPTION:Gleich Spiel: 🏠 MuRu wC - HSG Trifels
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RSWRL2CJWA0204@handball.net
+DTSTAMP:20261024T080512Z
+DTSTART;TZID=Europe/Berlin:20261101T150000
+DTEND;TZID=Europe/Berlin:20261101T170000
+SUMMARY:🏠 MuRu wC - Wjsg Kandel/Wörth/Hagenbach
+DESCRIPTION:Heimspiel gegen Wjsg Kandel/Wörth/Hagenbach\nAnwurf: 15:00 Uhr
+ \nLiga: RLSW C weiblich Endrunde\nSpieltag: 2\nSpielnummer: 2627RSWRL2CJWA
+ 0204\nhttps://www.handball.net/match/689466
+URL:https://www.handball.net/match/689466
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu wC - Wjsg Kandel/Wörth/Hagenbach
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu wC - Wjsg Kandel/Wörth/Hagenbach
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RSWRL2CJWA0301@handball.net
+DTSTAMP:20261024T080512Z
+DTSTART;TZID=Europe/Berlin:20261107T173000
+DTEND;TZID=Europe/Berlin:20261107T193000
+SUMMARY:🏠 MuRu wC - JSG Mainz05/TV Nieder-Olm
+DESCRIPTION:Heimspiel gegen JSG Mainz05/TV Nieder-Olm\nAnwurf: 17:30 Uhr\nL
+ iga: RLSW C weiblich Endrunde\nSpieltag: 3\nSpielnummer: 2627RSWRL2CJWA030
+ 1\nhttps://www.handball.net/match/689467
+URL:https://www.handball.net/match/689467
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu wC - JSG Mainz05/TV Nieder-Olm
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu wC - JSG Mainz05/TV Nieder-Olm
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RSWRL2CJWA1103@handball.net
+DTSTAMP:20261024T080512Z
+DTSTART;TZID=Europe/Berlin:20261114T143000
+DTEND;TZID=Europe/Berlin:20261114T163000
+SUMMARY:🏠 MuRu wC - Mjsg Ober-Hilbersheim/Ingelheim/Budenheim
+DESCRIPTION:Heimspiel gegen Mjsg Ober-Hilbersheim/Ingelheim/Budenheim\nAnwu
+ rf: 14:30 Uhr\nLiga: RLSW C weiblich Endrunde\nSpieltag: 11\nSpielnummer: 
+ 2627RSWRL2CJWA1103\nhttps://www.handball.net/match/689501
+URL:https://www.handball.net/match/689501
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu wC - Mjsg Ober-Hilbersheim/Ingelheim/Bu
+ denheim
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu wC - Mjsg Ober-Hilbersheim/Ingelheim/Bu
+ denheim
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RSWRL2CJWA0502@handball.net
+DTSTAMP:20261024T080512Z
+DTSTART;TZID=Europe/Berlin:20261128T140000
+DTEND;TZID=Europe/Berlin:20261128T160000
+SUMMARY:🏠 MuRu wC - TV Kirrweiler
+DESCRIPTION:Heimspiel gegen TV Kirrweiler\nAnwurf: 14:00 Uhr\nLiga: RLSW C 
+ weiblich Endrunde\nSpieltag: 5\nSpielnummer: 2627RSWRL2CJWA0502\nhttps://w
+ ww.handball.net/match/689476
+URL:https://www.handball.net/match/689476
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu wC - TV Kirrweiler
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu wC - TV Kirrweiler
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RSWRL2CJWA0602@handball.net
+DTSTAMP:20261024T080512Z
+DTSTART;TZID=Europe/Berlin:20261205T151500
+DTEND;TZID=Europe/Berlin:20261205T171500
+SUMMARY:🚗 HSG Kastellaun/Simmern - MuRu wC
+DESCRIPTION:Auswärtsspiel gegen HSG Kastellaun/Simmern\nAnwurf: 15:15 Uhr\
+ nLiga: RLSW C weiblich Endrunde\nSpieltag: 6\nSpielnummer: 2627RSWRL2CJWA0
+ 602\nhttps://www.handball.net/match/689480
+URL:https://www.handball.net/match/689480
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:IGS-Halle\, Theodor-Heuss-Allee\, 56288 Kastellaun
+GEO:50.071404;7.442617
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 HSG Kastellaun/Simmern - MuRu wC
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 HSG Kastellaun/Simmern - MuRu wC
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RSWRL2CJWA0703@handball.net
+DTSTAMP:20261024T080512Z
+DTSTART;TZID=Europe/Berlin:20261212T160000
+DTEND;TZID=Europe/Berlin:20261212T180000
+SUMMARY:🏠 MuRu wC - SV Bornheim
+DESCRIPTION:Heimspiel gegen SV Bornheim\nAnwurf: 16:00 Uhr\nLiga: RLSW C we
+ iblich Endrunde\nSpieltag: 7\nSpielnummer: 2627RSWRL2CJWA0703\nhttps://www
+ .handball.net/match/689485
+URL:https://www.handball.net/match/689485
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TSG-Sporthalle Mutterstadt\, Bohligstr. 1\, 67112 Mutterstadt
+GEO:49.444531;8.359517
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu wC - SV Bornheim
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu wC - SV Bornheim
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RSWRL2CJWA0904@handball.net
+DTSTAMP:20261024T080512Z
+DTSTART;TZID=Europe/Berlin:20270114T183000
+DTEND;TZID=Europe/Berlin:20270114T203000
+SUMMARY:🚗 Wjsg Kandel/Wörth/Hagenbach - MuRu wC
+DESCRIPTION:Auswärtsspiel gegen Wjsg Kandel/Wörth/Hagenbach\nAnwurf: 18:3
+ 0 Uhr\nLiga: RLSW C weiblich Endrunde\nSpieltag: 9\nSpielnummer: 2627RSWRL
+ 2CJWA0904\nhttps://www.handball.net/match/689494
+URL:https://www.handball.net/match/689494
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:KANDEL Bienwaldhalle\, Schubertstraße 28\, 76870 Kandel
+GEO:49.076810;8.189989
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 Wjsg Kandel/Wörth/Hagenbach - MuRu wC
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 Wjsg Kandel/Wörth/Hagenbach - MuRu wC
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RSWRL2CJWA1001@handball.net
+DTSTAMP:20261024T080512Z
+DTSTART;TZID=Europe/Berlin:20270130T170000
+DTEND;TZID=Europe/Berlin:20270130T190000
+SUMMARY:🚗 JSG Mainz05/TV Nieder-Olm - MuRu wC
+DESCRIPTION:Auswärtsspiel gegen JSG Mainz05/TV Nieder-Olm\nAnwurf: 17:00 U
+ hr\nLiga: RLSW C weiblich Endrunde\nSpieltag: 10\nSpielnummer: 2627RSWRL2C
+ JWA1001\nhttps://www.handball.net/match/689495
+URL:https://www.handball.net/match/689495
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Sporthalle der IGS Nieder-Olm\, Karl-Sieben-Straße\, 55268 Nieder
+ -Olm
+GEO:49.903161;8.197635
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 JSG Mainz05/TV Nieder-Olm - MuRu wC
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 JSG Mainz05/TV Nieder-Olm - MuRu wC
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RSWRL2CJWA1202@handball.net
+DTSTAMP:20261024T080512Z
+DTSTART;TZID=Europe/Berlin:20270227T150000
+DTEND;TZID=Europe/Berlin:20270227T170000
+SUMMARY:🚗 TV Kirrweiler - MuRu wC
+DESCRIPTION:Auswärtsspiel gegen TV Kirrweiler\nAnwurf: 15:00 Uhr\nLiga: RL
+ SW C weiblich Endrunde\nSpieltag: 12\nSpielnummer: 2627RSWRL2CJWA1202\nhtt
+ ps://www.handball.net/match/689504
+URL:https://www.handball.net/match/689504
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Reblandhalle Kirrweiler\, Unterried 6\, 67489 Kirrweiler
+GEO:49.295763;8.172631
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 TV Kirrweiler - MuRu wC
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 TV Kirrweiler - MuRu wC
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RSWRL2CJWA0403@handball.net
+DTSTAMP:20261024T080512Z
+DTSTART;TZID=Europe/Berlin:20270307T100000
+DTEND;TZID=Europe/Berlin:20270307T120000
+SUMMARY:🚗 Mjsg Ober-Hilbersheim/Ingelheim/Budenheim - MuRu wC
+DESCRIPTION:Auswärtsspiel gegen Mjsg Ober-Hilbersheim/Ingelheim/Budenheim\
+ nAnwurf: 10:00 Uhr\nLiga: RLSW C weiblich Endrunde\nSpieltag: 4\nSpielnumm
+ er: 2627RSWRL2CJWA0403\nhttps://www.handball.net/match/689473
+URL:https://www.handball.net/match/689473
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Waldsporthalle Budenheim\, Römerstraße\, 55257 Budenheim
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 Mjsg Ober-Hilbersheim/Ingelheim/Budenheim - 
+ MuRu wC
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 Mjsg Ober-Hilbersheim/Ingelheim/Budenheim - 
+ MuRu wC
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RSWRL2CJWA1302@handball.net
+DTSTAMP:20261024T080512Z
+DTSTART;TZID=Europe/Berlin:20270314T153000
+DTEND;TZID=Europe/Berlin:20270314T173000
+SUMMARY:🏠 MuRu wC - HSG Kastellaun/Simmern
+DESCRIPTION:Heimspiel gegen HSG Kastellaun/Simmern\nAnwurf: 15:30 Uhr\nLiga
+ : RLSW C weiblich Endrunde\nSpieltag: 13\nSpielnummer: 2627RSWRL2CJWA1302\
+ nhttps://www.handball.net/match/689508
+URL:https://www.handball.net/match/689508
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Heimspiel
+LOCATION:TVR-Sporthalle Ludwigshafen\, Fußgönheimer Str. 127 (Ortsende)\,
+  67071 Ludwigshafen
+GEO:49.487079;8.364587
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🏠 MuRu wC - HSG Kastellaun/Simmern
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🏠 MuRu wC - HSG Kastellaun/Simmern
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2627RSWRL2CJWA1403@handball.net
+DTSTAMP:20261024T080512Z
+DTSTART;TZID=Europe/Berlin:20270321T150000
+DTEND;TZID=Europe/Berlin:20270321T170000
+SUMMARY:🚗 SV Bornheim - MuRu wC
+DESCRIPTION:Auswärtsspiel gegen SV Bornheim\nAnwurf: 15:00 Uhr\nLiga: RLSW
+  C weiblich Endrunde\nSpieltag: 14\nSpielnummer: 2627RSWRL2CJWA1403\nhttps
+ ://www.handball.net/match/689513
+URL:https://www.handball.net/match/689513
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+CATEGORIES:Handball,Auswärtsspiel
+LOCATION:Sporthalle Bornheim\, Dammgasse 1\, 76879 Bornheim
+GEO:49.215716;8.170640
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Morgen Spiel: 🚗 SV Bornheim - MuRu wC
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT3H
+DESCRIPTION:Gleich Spiel: 🚗 SV Bornheim - MuRu wC
 END:VALARM
 END:VEVENT
 END:VCALENDAR
