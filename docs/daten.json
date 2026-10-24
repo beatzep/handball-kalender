@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-24T15:01:11+00:00",
+  "aktualisiert": "2026-10-24T15:31:21+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -6625,13 +6625,26 @@
           },
           {
             "runde": 3,
-            "platz": 4,
+            "platz": 5,
             "punkte": 4
           }
         ],
         "eintraege": [
           {
             "platz": 1,
+            "team": "FSG Kaiserslautern/Dansenberg",
+            "team_id": 80997,
+            "spiele": 5,
+            "punkte": 10,
+            "siege": 5,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 154,
+            "gegentore": 101,
+            "differenz": 53
+          },
+          {
+            "platz": 2,
             "team": "FSG Gonsenheim/Schott",
             "team_id": 80998,
             "spiele": 6,
@@ -6642,19 +6655,6 @@
             "tore": 190,
             "gegentore": 180,
             "differenz": 10
-          },
-          {
-            "platz": 2,
-            "team": "FSG Kaiserslautern/Dansenberg",
-            "team_id": 80997,
-            "spiele": 4,
-            "punkte": 8,
-            "siege": 4,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 129,
-            "gegentore": 90,
-            "differenz": 39
           },
           {
             "platz": 3,
@@ -6671,6 +6671,19 @@
           },
           {
             "platz": 4,
+            "team": "TV Hauenstein",
+            "team_id": 80995,
+            "spiele": 4,
+            "punkte": 4,
+            "siege": 2,
+            "remis": 0,
+            "niederlagen": 2,
+            "tore": 126,
+            "gegentore": 122,
+            "differenz": 4
+          },
+          {
+            "platz": 5,
             "team": "HSG Mutterstadt/Ruchheim Damen",
             "team_id": 80999,
             "spiele": 3,
@@ -6683,7 +6696,7 @@
             "differenz": 15
           },
           {
-            "platz": 5,
+            "platz": 6,
             "team": "TV Thaleischweiler",
             "team_id": 81004,
             "spiele": 4,
@@ -6694,19 +6707,6 @@
             "tore": 129,
             "gegentore": 124,
             "differenz": 5
-          },
-          {
-            "platz": 6,
-            "team": "TV Hauenstein",
-            "team_id": 80995,
-            "spiele": 4,
-            "punkte": 4,
-            "siege": 2,
-            "remis": 0,
-            "niederlagen": 2,
-            "tore": 126,
-            "gegentore": 122,
-            "differenz": 4
           },
           {
             "platz": 7,
@@ -6736,19 +6736,6 @@
           },
           {
             "platz": 9,
-            "team": "HSG Eckbachtal",
-            "team_id": 81000,
-            "spiele": 4,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 4,
-            "tore": 97,
-            "gegentore": 131,
-            "differenz": -34
-          },
-          {
-            "platz": 10,
             "team": "FSG Selz-Wiesbach",
             "team_id": 81002,
             "spiele": 5,
@@ -6759,6 +6746,19 @@
             "tore": 140,
             "gegentore": 172,
             "differenz": -32
+          },
+          {
+            "platz": 10,
+            "team": "HSG Eckbachtal",
+            "team_id": 81000,
+            "spiele": 5,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 5,
+            "tore": 108,
+            "gegentore": 156,
+            "differenz": -48
           }
         ]
       },
@@ -11871,7 +11871,7 @@
       "liga": "Verbandsliga GEMISCHT",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 5,
+        "runde": 6,
         "phase_id": 12621,
         "gespielt": true,
         "mannschaften": 9,
@@ -11900,6 +11900,11 @@
             "runde": 5,
             "platz": 6,
             "punkte": 4
+          },
+          {
+            "runde": 6,
+            "platz": 7,
+            "punkte": 4
           }
         ],
         "eintraege": [
@@ -11907,14 +11912,14 @@
             "platz": 1,
             "team": "Hlz Friesenheim/Hochdorf 3",
             "team_id": 81092,
-            "spiele": 4,
-            "punkte": 8,
-            "siege": 4,
+            "spiele": 5,
+            "punkte": 10,
+            "siege": 5,
             "remis": 0,
             "niederlagen": 0,
-            "tore": 158,
-            "gegentore": 115,
-            "differenz": 43
+            "tore": 200,
+            "gegentore": 153,
+            "differenz": 47
           },
           {
             "platz": 2,
@@ -11970,32 +11975,6 @@
           },
           {
             "platz": 6,
-            "team": "HSG Mutterstadt/Ruchheim Mc",
-            "team_id": 81091,
-            "spiele": 5,
-            "punkte": 4,
-            "siege": 2,
-            "remis": 0,
-            "niederlagen": 3,
-            "tore": 172,
-            "gegentore": 160,
-            "differenz": 12
-          },
-          {
-            "platz": 7,
-            "team": "JSG Osthofen/Worms",
-            "team_id": 81088,
-            "spiele": 4,
-            "punkte": 3,
-            "siege": 1,
-            "remis": 1,
-            "niederlagen": 2,
-            "tore": 125,
-            "gegentore": 127,
-            "differenz": -2
-          },
-          {
-            "platz": 8,
             "team": "TV Nieder-Olm Mc2",
             "team_id": 81086,
             "spiele": 4,
@@ -12006,6 +11985,32 @@
             "tore": 117,
             "gegentore": 132,
             "differenz": -15
+          },
+          {
+            "platz": 7,
+            "team": "HSG Mutterstadt/Ruchheim Mc",
+            "team_id": 81091,
+            "spiele": 6,
+            "punkte": 4,
+            "siege": 2,
+            "remis": 0,
+            "niederlagen": 4,
+            "tore": 210,
+            "gegentore": 202,
+            "differenz": 8
+          },
+          {
+            "platz": 8,
+            "team": "JSG Osthofen/Worms",
+            "team_id": 81088,
+            "spiele": 4,
+            "punkte": 3,
+            "siege": 1,
+            "remis": 1,
+            "niederlagen": 2,
+            "tore": 125,
+            "gegentore": 127,
+            "differenz": -2
           },
           {
             "platz": 9,
@@ -12019,19 +12024,6 @@
             "tore": 124,
             "gegentore": 182,
             "differenz": -58
-          }
-        ],
-        "fehlend": [
-          {
-            "datum": "2026-10-24T15:45:00",
-            "gegner": "Hlz Friesenheim/Hochdorf 3",
-            "ergebnis": {
-              "heim": 38,
-              "gast": 42,
-              "eigene": 38,
-              "fremde": 42,
-              "ausgang": "N"
-            }
           }
         ]
       },
@@ -12504,7 +12496,7 @@
       "liga": "Bezirksoberliga GEMISCHT",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 5,
+        "runde": 6,
         "phase_id": 12625,
         "gespielt": true,
         "mannschaften": 9,
@@ -12546,6 +12538,19 @@
           },
           {
             "platz": 2,
+            "team": "Mwsg Kandel/Hagenbach II",
+            "team_id": 81124,
+            "spiele": 5,
+            "punkte": 8,
+            "siege": 4,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 174,
+            "gegentore": 149,
+            "differenz": 25
+          },
+          {
+            "platz": 3,
             "team": "HSG Dudenhofen/Schifferstadt",
             "team_id": 81126,
             "spiele": 5,
@@ -12558,7 +12563,7 @@
             "differenz": 41
           },
           {
-            "platz": 3,
+            "platz": 4,
             "team": "HSG Landau/Land II",
             "team_id": 81125,
             "spiele": 5,
@@ -12569,19 +12574,6 @@
             "tore": 179,
             "gegentore": 159,
             "differenz": 20
-          },
-          {
-            "platz": 4,
-            "team": "Mwsg Kandel/Hagenbach II",
-            "team_id": 81124,
-            "spiele": 4,
-            "punkte": 6,
-            "siege": 3,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 125,
-            "gegentore": 127,
-            "differenz": -2
           },
           {
             "platz": 5,
@@ -12639,14 +12631,14 @@
             "platz": 9,
             "team": "TSV Speyer II",
             "team_id": 81129,
-            "spiele": 5,
+            "spiele": 6,
             "punkte": 2,
             "siege": 1,
             "remis": 0,
-            "niederlagen": 4,
-            "tore": 124,
-            "gegentore": 161,
-            "differenz": -37
+            "niederlagen": 5,
+            "tore": 146,
+            "gegentore": 210,
+            "differenz": -64
           }
         ]
       },
