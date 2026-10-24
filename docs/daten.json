@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-24T12:31:15+00:00",
+  "aktualisiert": "2026-10-24T13:01:18+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -13740,16 +13740,16 @@
           },
           {
             "platz": 4,
-            "team": "HSG Dudenhofen/Schifferstadt",
-            "team_id": 81154,
-            "spiele": 6,
-            "punkte": 5,
+            "team": "JSG Mundenheim/Rheingönheim 2",
+            "team_id": 81150,
+            "spiele": 5,
+            "punkte": 4,
             "siege": 2,
-            "remis": 1,
+            "remis": 0,
             "niederlagen": 3,
-            "tore": 110,
-            "gegentore": 117,
-            "differenz": -7
+            "tore": 116,
+            "gegentore": 99,
+            "differenz": 17
           },
           {
             "platz": 5,
@@ -13766,6 +13766,19 @@
           },
           {
             "platz": 6,
+            "team": "HSG Dudenhofen/Schifferstadt",
+            "team_id": 81154,
+            "spiele": 6,
+            "punkte": 4,
+            "siege": 2,
+            "remis": 0,
+            "niederlagen": 4,
+            "tore": 121,
+            "gegentore": 140,
+            "differenz": -19
+          },
+          {
+            "platz": 7,
             "team": "TV Edigheim II",
             "team_id": 81153,
             "spiele": 3,
@@ -13775,19 +13788,6 @@
             "niederlagen": 1,
             "tore": 66,
             "gegentore": 61,
-            "differenz": 5
-          },
-          {
-            "platz": 7,
-            "team": "JSG Mundenheim/Rheingönheim 2",
-            "team_id": 81150,
-            "spiele": 5,
-            "punkte": 3,
-            "siege": 1,
-            "remis": 1,
-            "niederlagen": 3,
-            "tore": 93,
-            "gegentore": 88,
             "differenz": 5
           },
           {
