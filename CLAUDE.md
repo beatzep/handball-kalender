@@ -53,7 +53,10 @@ sind rund 23 Abfragen.
 (`/matches/<id>/events`) und legt ihn in `berichte_cache.json` ab. **Ein
 Bericht ändert sich nach dem Spiel nicht mehr**, wird also genau einmal
 geholt. Nicht jede Liga führt einen: bei mB und gD kommt eine leere Antwort,
-das wird vermerkt und nicht erneut versucht.
+das wird vermerkt und nicht erneut versucht. Ausnahme: Spiele, die der
+Verband noch offen führt (`zwischenstand`). Deren Bericht wird bei jedem
+Lauf neu geholt, liegt als `vorlaeufig` im Cache und erscheint nur beim
+Spiel selbst, nie in Saisonzahlen oder Gegnervorschau.
 
 Grundregel für alles, was daraus entsteht: **Fehlt etwas, liegt es an der
 Quelle, und das gehört auch so dagesagt.** Nie eine Lücke zeigen, die

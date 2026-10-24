@@ -387,8 +387,9 @@ def gegneruebersicht(cache: dict, gegner_id: int, hoechstens: int = 5) -> dict:
     Prozent ueber einen Mann" ist eine Beobachtung; "die sind schwach in der
     Abwehr" waere geraten.
     """
-    berichte = [b for b in cache.values()
-                if any(e.get("team_id") == gegner_id
+    # Vorlaeufige Berichte laufender Spiele zaehlen erst nach Abschluss
+    berichte = [b for b in cache.values() if not b.get("vorlaeufig")
+                and any(e.get("team_id") == gegner_id
                        for e in b.get("ereignisse") or [])]
     if not berichte:
         return {"spiele": 0}
@@ -410,6 +411,21 @@ def gegneruebersicht(cache: dict, gegner_id: int, hoechstens: int = 5) -> dict:
     }
 
 
+def einzelspiel(spiel: dict, eintrag: dict, team_id: int, jugend: bool) -> dict:
+    return {
+        "match_id": spiel.get("match_id"),
+        "datum": spiel["datum"],
+        "gegner": spiel.get("gegner"),
+        "heim": bool(spiel.get("heim")),
+        "verlauf": verlauf(eintrag),
+        "laeufe": laeufe(eintrag, team_id),
+        # Dieselbe Rechnung wie ueber die Saison, nur auf ein Spiel
+        # angewandt - fuer die Detailansicht in der Spieleliste.
+        "schuetzen": schuetzen([eintrag], team_id, jugend),
+        "strafen": strafen_nach_abschnitt([eintrag], team_id)["gesamt"],
+    }
+
+
 def alles(spiele: dict, cache: dict, team_id: int, jugend: bool) -> dict:
     """Sammelt die Auswertung einer Mannschaft.
 
@@ -422,25 +438,29 @@ def alles(spiele: dict, cache: dict, team_id: int, jugend: bool) -> dict:
     je_spiel = []
     for spiel in sorted(gelaufen, key=lambda s: s["datum"]):
         eintrag = cache.get(str(spiel.get("match_id")))
-        if eintrag is None:
+        # Ein vorlaeufiger Bericht zu einem inzwischen beendeten Spiel heisst:
+        # das Nachholen ist gescheitert. Mitgezaehlt wuerde sonst ein Stand,
+        # der vom Endstand abweichen kann.
+        if eintrag is None or eintrag.get("vorlaeufig"):
             offen += 1
             continue
         if eintrag.get("ohne_bericht") or not eintrag.get("ereignisse"):
             ohne_bericht += 1
             continue
         berichte.append(eintrag)
-        je_spiel.append({
-            "match_id": spiel.get("match_id"),
-            "datum": spiel["datum"],
-            "gegner": spiel.get("gegner"),
-            "heim": bool(spiel.get("heim")),
-            "verlauf": verlauf(eintrag),
-            "laeufe": laeufe(eintrag, team_id),
-            # Dieselbe Rechnung wie ueber die Saison, nur auf ein Spiel
-            # angewandt - fuer die Detailansicht in der Spieleliste.
-            "schuetzen": schuetzen([eintrag], team_id, jugend),
-            "strafen": strafen_nach_abschnitt([eintrag], team_id)["gesamt"],
-        })
+        je_spiel.append(einzelspiel(spiel, eintrag, team_id, jugend))
+
+    # Laufende Spiele nur zum Anschauen beim Spiel selbst, getrennt gefuehrt:
+    # in Saisonzahlen und Mustern haben sie nichts verloren, bis der Verband
+    # sie abschliesst. Siehe spielberichte.py.
+    laufend = []
+    for spiel in sorted(spiele.values(), key=lambda s: s["datum"]):
+        if spiel.get("ergebnis") or not spiel.get("zwischenstand"):
+            continue
+        eintrag = cache.get(str(spiel.get("match_id"))) or {}
+        if eintrag.get("vorlaeufig") and eintrag.get("ereignisse"):
+            laufend.append(dict(einzelspiel(spiel, eintrag, team_id, jugend),
+                                vorlaeufig=True))
 
     return {
         "quelle": {
@@ -454,4 +474,5 @@ def alles(spiele: dict, cache: dict, team_id: int, jugend: bool) -> dict:
         "strafen": strafen_nach_abschnitt(berichte, team_id),
         "muster": muster(je_spiel, berichte, team_id),
         "spiele": je_spiel,
+        "laufend": laufend,
     }

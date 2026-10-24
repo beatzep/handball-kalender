@@ -282,9 +282,12 @@ def spieldetails(bericht: dict | None) -> str:
         return ""
     # In einen Traeger mit der Klasse .spielfilm packen: daran haengen die
     # Farben der Kurve. Ohne ihn zeichnet der Browser schwarz auf schwarz.
+    hinweis = ('<p class="offenhinweis">Noch vorläufig. Der Bericht ist bei '
+               'handball.net nicht abgeschlossen, da kann sich noch was '
+               'ändern.</p>' if bericht.get("vorlaeufig") else "")
     return ('<div class="spielfilm">'
             + kurve[anfang + len('<div class="klappinhalt">'):ende]
-            + '</div>')
+            + hinweis + '</div>')
 
 
 def offen_hinweis(spiel: dict) -> str:
@@ -1231,7 +1234,8 @@ def mannschaftsblock(schluessel: str, team: dict, basis: str, heute: datetime,
 
   <div class="teil" data-ansicht="spiele">{spielliste(
       spiele, heute,
-      {v.get('match_id'): v for v in ((team.get('spieler') or {}).get('spiele') or [])})}</div>
+      {v.get('match_id'): v for v in (((team.get('spieler') or {}).get('spiele') or [])
+                                      + ((team.get('spieler') or {}).get('laufend') or []))})}</div>
   <div class="teil" data-ansicht="tabelle" hidden>
     {formblock(team.get('form') or [])}
     {verlaufsblock(team.get('tabelle') or {})}

@@ -26,7 +26,6 @@ from zoneinfo import ZoneInfo
 
 import statistik
 import spielberichte
-import spielerstatistik
 import strassenroute
 
 API = "https://www.handball.net/api/new"
@@ -793,19 +792,8 @@ def verarbeite_team(team: dict, cfg: argparse.Namespace, alt: dict) -> tuple[dic
         "statistik": statistik.alles(list(neuer_stand.values()),
                                      cfg.heimat, team.get("alltag"),
                                      strassen_cache=cfg.strassen_cache),
-        # Einzelzahlen aus den Spielberichten. Nur wo Berichte vorliegen -
-        # was fehlt, steht unter "quelle" und wird auf der Seite benannt.
-        "spieler": spielerstatistik.alles(
-            neuer_stand, cfg.berichte_cache, team_id,
-            jugend=(team.get("gruppe") != "Aktive")),
-        # Zahlen zum naechsten Gegner, sofern von ihm Berichte vorliegen.
-        # Nur bei den Aktiven: fuer die Jugend werden keine geholt.
-        "gegnervorschau": (
-            spielerstatistik.gegneruebersicht(
-                cfg.berichte_cache,
-                spielberichte.naechster_gegner(neuer_stand))
-            if team.get("gruppe") == "Aktive"
-            and spielberichte.naechster_gegner(neuer_stand) else {}),
+        **spielberichte.auswertung(neuer_stand, cfg.berichte_cache, team_id,
+                                   team.get("gruppe") == "Aktive"),
         "letzte_aenderungen": aenderungen,
         "spiele": neuer_stand,
         "abgesetzt": abgesetzt,

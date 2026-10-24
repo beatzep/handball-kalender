@@ -425,6 +425,68 @@ wenig = st.gegneruebersicht({"a": {"ereignisse": spiel_a}}, SIE)
 pruefe("Zu wenige Spiele: kein Krimi-Urteil", wenig["krimis"] is None)
 pruefe("Zu wenige Spiele: kein Halbzeit-Trend", wenig["halbzeiten"] is None)
 
+# --- Laufende Spiele: vorlaeufige Berichte ------------------------------
+# Herren I gegen Zotzenheim, 24.10.2026: eine Stunde nach Abpfiff noch LIVE
+# ("bericht" ist weiter oben neu belegt, das Original steht im cache)
+bericht = cache["1"]
+laufend_spiele = {
+    "A": dict(spiele["A"]),
+    "L": {"datum": "2026-10-24T19:30:00", "match_id": 9, "gegner": "Z",
+          "heim": True, "zwischenstand": {"eigene": 5, "fremde": 2}},
+}
+vorl = dict(bericht, vorlaeufig=True)
+mit_laufend = st.alles(laufend_spiele, {"1": bericht, "9": vorl}, WIR, jugend=False)
+pruefe("Laufendes Spiel steht unter laufend",
+       [x["match_id"] for x in mit_laufend["laufend"]] == [9], str(mit_laufend["laufend"]))
+pruefe("Laufendes Spiel ist als vorlaeufig markiert",
+       mit_laufend["laufend"][0].get("vorlaeufig") is True)
+pruefe("Laufendes Spiel zaehlt nicht in die Saison",
+       mit_laufend["quelle"]["mit_bericht"] == 1
+       and sum(x["tore"] for x in mit_laufend["schuetzen"]) == 5,
+       str(mit_laufend["quelle"]))
+pruefe("Laufendes Spiel nicht in den Verlaeufen",
+       [x["match_id"] for x in mit_laufend["spiele"]] == [1])
+
+# Beendet, aber das Nachholen ist gescheitert: der alte Stand darf nicht zaehlen
+haengt = st.alles({"A": spiele["A"]}, {"1": vorl}, WIR, jugend=False)
+pruefe("Vorlaeufiger Bericht eines beendeten Spiels gilt als offen",
+       haengt["quelle"]["offen"] == 1 and haengt["quelle"]["mit_bericht"] == 0,
+       str(haengt["quelle"]))
+
+pruefe("Gegnervorschau ohne vorlaeufige Berichte",
+       st.gegneruebersicht({"a": {"ereignisse": spiel_a, "vorlaeufig": True}},
+                           SIE) == {"spiele": 0})
+
+# --- Holen: was wird erneut abgefragt? ---------------------------------
+import spielberichte as sb
+
+abgefragt = []
+antworten = {}
+def falsch_holen(mid):
+    abgefragt.append(int(mid))
+    return antworten.get(int(mid), [])
+sb.hole_bericht, sb.PAUSE_SEKUNDEN = falsch_holen, 0
+roh = [{"minute": 2, "score": {"local": 1, "visitor": 0}}]
+
+c = {"1": bericht, "9": vorl}
+antworten = {9: roh}
+sb.aktualisiere(c, [{"match_id": 1, "ergebnis": {"eigene": 1, "fremde": 0}},
+                    {"match_id": 9, "zwischenstand": {"eigene": 1, "fremde": 0}}])
+pruefe("Abgeschlossener Bericht wird nicht erneut geholt", 1 not in abgefragt, str(abgefragt))
+pruefe("Laufendes Spiel wird bei jedem Lauf neu geholt", 9 in abgefragt, str(abgefragt))
+pruefe("Neu geholter Bericht bleibt vorlaeufig", c["9"].get("vorlaeufig") is True, str(c["9"]))
+
+abgefragt.clear(); antworten = {}
+c = {}
+sb.aktualisiere(c, [{"match_id": 7, "zwischenstand": {"eigene": 1, "fremde": 0}}])
+pruefe("Leere Antwort im laufenden Spiel ist kein 'ohne Bericht'", "7" not in c, str(c))
+
+antworten = {9: roh}
+c = {"9": vorl}
+sb.aktualisiere(c, [{"match_id": 9, "ergebnis": {"eigene": 1, "fremde": 0}}])
+pruefe("Nach Spielende wird der Bericht endgueltig",
+       "vorlaeufig" not in c["9"] and c["9"]["ereignisse"], str(c["9"]))
+
 fehler = 0
 for name, ok, info in pruefungen:
     if not ok:

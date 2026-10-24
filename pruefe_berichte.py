@@ -40,6 +40,10 @@ def main() -> int:
             if mid not in cache or not spiel.get("ergebnis"):
                 continue
             bericht = cache[mid]
+            # Nachholen nach Spielende gescheitert, kommt beim naechsten Lauf;
+            # die Auswertung laesst ihn bis dahin ebenfalls weg.
+            if bericht.get("vorlaeufig"):
+                continue
             if bericht.get("ohne_bericht"):
                 ohne_bericht += 1
                 continue

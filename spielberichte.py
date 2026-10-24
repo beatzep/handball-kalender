@@ -15,6 +15,13 @@ Nicht jede Liga fuehrt einen elektronischen Spielbericht: bei der mB- und
 der gD-Jugend kommt eine leere Antwort zurueck. Das wird als "liegt nicht
 vor" vermerkt, damit es nicht bei jedem Lauf erneut versucht wird - und
 damit die Seite es sauber benennen kann, statt eine Luecke zu zeigen.
+
+Ausnahme: Spiele, die angepfiffen, beim Verband aber noch offen sind. Am
+24.10.2026 stand Herren I gegen Zotzenheim noch eine Stunde nach Abpfiff
+auf LIVE, handball.net zeigte Schuetzen und Strafen laengst, bei uns gab
+es nichts. Solche Berichte werden bei jedem Lauf neu geholt und als
+"vorlaeufig" abgelegt, bis das Spiel abgeschlossen ist. Eine leere Antwort
+heisst dort nur "noch nichts", nicht "Liga ohne Bericht".
 """
 
 from __future__ import annotations
@@ -124,8 +131,9 @@ def aktualisiere(cache: dict, spiele: list[dict], pfad: Path | None = None,
         if not mid:
             continue
         key = str(mid)
-        if key in cache:
+        if key in cache and not cache[key].get("vorlaeufig"):
             continue
+        laufend = bool(spiel.get("zwischenstand")) and not spiel.get("ergebnis")
         if geholt + leer >= hoechstens:
             print(f"Grenze von {hoechstens} Berichten erreicht - der Rest "
                   f"folgt beim naechsten Lauf.", file=sys.stderr)
@@ -133,7 +141,12 @@ def aktualisiere(cache: dict, spiele: list[dict], pfad: Path | None = None,
         ereignisse = hole_bericht(mid)
         if ereignisse is None:
             continue                      # Fehlschlag: beim naechsten Mal erneut
-        if ereignisse:
+        if laufend:
+            if ereignisse:
+                cache[key] = {"ereignisse": [knapp(e) for e in ereignisse],
+                              "vorlaeufig": True}
+            geholt += 1
+        elif ereignisse:
             cache[key] = {"ereignisse": [knapp(e) for e in ereignisse]}
             geholt += 1
         else:
@@ -150,6 +163,25 @@ def aktualisiere(cache: dict, spiele: list[dict], pfad: Path | None = None,
     if geholt or leer:
         print(f"Spielberichte: {geholt} geholt, {leer} ohne Bericht bei der Quelle")
     return cache
+
+
+def auswertung(stand: dict, cache: dict, team_id: int, aktive: bool) -> dict:
+    """Was in daten.json aus den Berichten entsteht.
+
+    Gebraucht von spielplan2ics.py und nach dem Holen hier noch einmal;
+    an einer Stelle, damit beide dasselbe rechnen."""
+    import spielerstatistik
+    gegner = naechster_gegner(stand)
+    return {
+        # Einzelzahlen aus den Spielberichten. Nur wo Berichte vorliegen -
+        # was fehlt, steht unter "quelle" und wird auf der Seite benannt.
+        "spieler": spielerstatistik.alles(stand, cache, team_id,
+                                          jugend=not aktive),
+        # Zahlen zum naechsten Gegner, sofern von ihm Berichte vorliegen.
+        # Nur bei den Aktiven: fuer die Jugend werden keine geholt.
+        "gegnervorschau": (spielerstatistik.gegneruebersicht(cache, gegner)
+                           if aktive and gegner else {}),
+    }
 
 
 def naechster_gegner(spiele: dict, jetzt=None) -> int | None:
@@ -213,7 +245,7 @@ def main() -> int:
         if gewuenscht and schluessel not in gewuenscht:
             continue
         for spiel in (team.get("spiele") or {}).values():
-            if spiel.get("ergebnis"):
+            if spiel.get("ergebnis") or spiel.get("zwischenstand"):
                 spiele.append(spiel)
 
     # Fuer die Vorschau: die bisherigen Spiele des naechsten Gegners. Das
@@ -244,6 +276,21 @@ def main() -> int:
     aktualisiere(cache, spiele, pfad, cfg.hoechstens)
     print(f"{len(cache)} Berichte im Bestand ({len(cache) - vorher} neu), "
           f"{len(spiele)} gelaufene Spiele betrachtet")
+
+    # spielplan2ics.py rechnet die Auswertung vor diesem Schritt, also mit
+    # den Berichten vom letzten Lauf. Ein frisch geholter Bericht stand so
+    # erst eine halbe Stunde spaeter auf der Seite.
+    geaendert = False
+    for team in (daten.get("teams") or {}).values():
+        neu = auswertung(team.get("spiele") or {}, cache, team.get("team_id"),
+                         team.get("gruppe") == "Aktive")
+        if any(team.get(k) != v for k, v in neu.items()):
+            team.update(neu)
+            geaendert = True
+    if geaendert:
+        Path(cfg.daten).write_text(json.dumps(daten, ensure_ascii=False, indent=2),
+                                   encoding="utf-8")
+        print("Auswertung mit den neuen Berichten nachgerechnet")
     return 0
 
 
