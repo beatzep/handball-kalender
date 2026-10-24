@@ -222,6 +222,9 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 .stand { font-size: .95rem; font-weight: 700; margin-top: 2px; white-space: nowrap; }
 .stand.S { color: var(--sieg); }
 .stand.N { color: var(--niederlage); }
+.stand.offen { color: var(--leise); }
+.vorlaeufig { display: block; font-size: .72rem; color: var(--leise); }
+.offenhinweis { font-size: .82rem; color: var(--leise); margin-top: 3px; }
 .spiel.vorbei { opacity: .55; }
 .spiel.vorbei .gegner { font-weight: 400; }
 .spiel.jetzt { border-top-color: var(--gold); box-shadow: inset 0 2px 0 var(--gold); }

@@ -287,6 +287,13 @@ def spieldetails(bericht: dict | None) -> str:
             + '</div>')
 
 
+def offen_hinweis(spiel: dict) -> str:
+    if spiel.get("ergebnis") or not spiel.get("zwischenstand"):
+        return ""
+    return ('<div class="offenhinweis">Stand von handball.net, das Spiel ist '
+            'dort noch nicht abgeschlossen.</div>')
+
+
 def spielzeile(spiel: dict, heute: datetime, naechster: bool,
                bericht: dict | None = None) -> str:
     wann = zeit(spiel)
@@ -294,7 +301,9 @@ def spielzeile(spiel: dict, heute: datetime, naechster: bool,
     erg = spiel.get("ergebnis")
 
     klassen = "spiel"
-    if erg or wann < heute:
+    # Ein angepfiffenes, beim Verband offenes Spiel ist nicht vorbei; blass
+    # gedimmt ginge der Hinweis darauf unter.
+    if erg or (wann < heute and not spiel.get("zwischenstand")):
         klassen += " vorbei"
     if naechster:
         klassen += " jetzt"
@@ -310,11 +319,17 @@ def spielzeile(spiel: dict, heute: datetime, naechster: bool,
         # sich sonst, als haetten wir 30 geworfen.
         rechts += (f'<div class="stand {erg["ausgang"]}">'
                    f'{erg["eigene"]}:{erg["fremde"]}</div>')
+    elif spiel.get("zwischenstand"):
+        # Ohne Sieg- oder Niederlagenfarbe: entschieden ist erst, was der
+        # Verband als beendet meldet. Siehe spielplan2ics.zwischenstand().
+        zs = spiel["zwischenstand"]
+        rechts += (f'<div class="stand offen">{zs["eigene"]}:{zs["fremde"]}</div>'
+                   f'<div class="vorlaeufig">vorläufig</div>')
 
     zeile = (f'<div class="datum">{KURZTAGE[wann.weekday()]} {wann:%d.%m.}'
              f'<span>{wann:%H:%M}</span></div>'
              f'<div><div class="gegner">{sicher(spiel.get("gegner"))}</div>'
-             f'<div class="halle">{ort}</div></div>'
+             f'<div class="halle">{ort}</div>{offen_hinweis(spiel)}</div>'
              f'<div class="rechts">{rechts}</div>')
 
     details = spieldetails(bericht)

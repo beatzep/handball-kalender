@@ -372,6 +372,29 @@ def ergebnis(spiel: dict) -> tuple[int, int] | None:
     return lokal, gast
 
 
+def zwischenstand(spiel: dict, jetzt: datetime) -> tuple[int, int] | None:
+    """Stand eines angepfiffenen, beim Verband noch offenen Spiels.
+
+    Am 24.10.2026 stand Herren I gegen Zotzenheim um 21:54, fast zweieinhalb
+    Stunden nach dem Anwurf, bei handball.net noch auf LIVE mit 32:28. Die
+    Halle hatte den Bericht nicht abgeschlossen, bei uns stand nur ein
+    vergangenes Spiel ohne alles. Der Stand wird darum gezeigt, aber getrennt
+    vom Endstand gefuehrt: Tipprunde, Tabelle, Form und Kalender rechnen
+    weiter nur mit dem, was der Verband als beendet meldet."""
+    if (spiel.get("status") or {}).get("is_finished") or ist_abgesetzt(spiel):
+        return None
+    if anwurf(spiel["date"]) > jetzt:
+        return None
+    r = spiel.get("result") or {}
+    if r.get("local") is None or r.get("visitor") is None:
+        return None
+    lokal, gast = int(r["local"]), int(r["visitor"])
+    # 0:0 ist auch hier kein Stand, siehe ergebnis()
+    if lokal == 0 and gast == 0:
+        return None
+    return lokal, gast
+
+
 def ist_abgesetzt(spiel: dict) -> bool:
     """Vom Verband abgesetzte Spiele (Status 3, 'Retirado').
 
@@ -463,6 +486,7 @@ def vergleiche(spiele: list[dict], team_id: int, alt: dict,
     neu: dict = {}
     aenderungen: list[dict] = []
     erstlauf = not alt
+    jetzt = datetime.now(TZ)
 
     for spiel in spiele:
         code = spiel.get("code") or str(spiel["id"])
@@ -496,6 +520,12 @@ def vergleiche(spiele: list[dict], team_id: int, alt: dict,
                                    "eigene": eigene, "fremde": fremde,
                                    "ausgang": "S" if eigene > fremde
                                               else "N" if eigene < fremde else "U"}
+        else:
+            stand = zwischenstand(spiel, jetzt)
+            if stand:
+                eigene, fremde = (stand if eintrag["heim"] else stand[::-1])
+                eintrag["zwischenstand"] = {"heim": stand[0], "gast": stand[1],
+                                            "eigene": eigene, "fremde": fremde}
 
         if vorher is None:
             if not erstlauf:

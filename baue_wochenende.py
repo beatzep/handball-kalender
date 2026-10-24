@@ -83,6 +83,12 @@ def zeile(spiel: dict) -> str:
         e = spiel["ergebnis"]
         # aus Sicht der jeweiligen Mannschaft, siehe baue_seite.py
         ergebnis = (f'<span class="stand {e["ausgang"]}">{e["eigene"]}:{e["fremde"]}</span>')
+    elif spiel.get("zwischenstand"):
+        # vorlaeufig, siehe spielplan2ics.zwischenstand()
+        z = spiel["zwischenstand"]
+        ergebnis = (f'<span class="stand offen" title="Stand von handball.net, '
+                    f'dort noch nicht abgeschlossen">{z["eigene"]}:{z["fremde"]}</span>'
+                    f'<span class="vorlaeufig">vorläufig</span>')
     return f"""<div class="partie{' heimspiel' if heim else ''}" data-heim="{'ja' if heim else 'nein'}"
  data-tag="{spiel['wann']:%Y-%m-%d}">
 <div class="uhr">{uhr}</div>
