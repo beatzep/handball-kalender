@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-24T14:01:21+00:00",
+  "aktualisiert": "2026-10-24T14:31:10+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -8757,7 +8757,7 @@
       "liga": "Oberliga MÄNNLICH",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 5,
+        "runde": 6,
         "phase_id": 12614,
         "gespielt": true,
         "mannschaften": 10,
@@ -8779,13 +8779,26 @@
           },
           {
             "runde": 4,
-            "platz": 2,
+            "platz": 3,
             "punkte": 8
           }
         ],
         "eintraege": [
           {
             "platz": 1,
+            "team": "MSG Wörth/Kandel",
+            "team_id": 81047,
+            "spiele": 6,
+            "punkte": 9,
+            "siege": 4,
+            "remis": 1,
+            "niederlagen": 1,
+            "tore": 211,
+            "gegentore": 197,
+            "differenz": 14
+          },
+          {
+            "platz": 2,
             "team": "TV Kirrweiler",
             "team_id": 86753,
             "spiele": 4,
@@ -8798,7 +8811,7 @@
             "differenz": 31
           },
           {
-            "platz": 2,
+            "platz": 3,
             "team": "HSG MUTTERSTADT/RUCHHEIM mA",
             "team_id": 81043,
             "spiele": 4,
@@ -8811,7 +8824,7 @@
             "differenz": 25
           },
           {
-            "platz": 3,
+            "platz": 4,
             "team": "TUS Neuhofen",
             "team_id": 81044,
             "spiele": 5,
@@ -8824,30 +8837,17 @@
             "differenz": 37
           },
           {
-            "platz": 4,
-            "team": "MSG Wörth/Kandel",
-            "team_id": 81047,
-            "spiele": 5,
-            "punkte": 7,
-            "siege": 3,
-            "remis": 1,
-            "niederlagen": 1,
-            "tore": 175,
-            "gegentore": 163,
-            "differenz": 12
-          },
-          {
             "platz": 5,
             "team": "Südpfalz Tiger",
             "team_id": 81050,
-            "spiele": 4,
+            "spiele": 5,
             "punkte": 6,
             "siege": 3,
             "remis": 0,
-            "niederlagen": 1,
-            "tore": 139,
-            "gegentore": 132,
-            "differenz": 7
+            "niederlagen": 2,
+            "tore": 173,
+            "gegentore": 168,
+            "differenz": 5
           },
           {
             "platz": 6,
@@ -8877,19 +8877,6 @@
           },
           {
             "platz": 8,
-            "team": "Mjsg SG Saulheim/HSV Alzey",
-            "team_id": 81049,
-            "spiele": 3,
-            "punkte": 0,
-            "siege": 0,
-            "remis": 0,
-            "niederlagen": 3,
-            "tore": 72,
-            "gegentore": 99,
-            "differenz": -27
-          },
-          {
-            "platz": 9,
             "team": "TS RODALBEN mA",
             "team_id": 81045,
             "spiele": 4,
@@ -8900,6 +8887,19 @@
             "tore": 130,
             "gegentore": 169,
             "differenz": -39
+          },
+          {
+            "platz": 9,
+            "team": "Mjsg SG Saulheim/HSV Alzey",
+            "team_id": 81049,
+            "spiele": 3,
+            "punkte": 0,
+            "siege": 0,
+            "remis": 0,
+            "niederlagen": 3,
+            "tore": 72,
+            "gegentore": 99,
+            "differenz": -27
           },
           {
             "platz": 10,
@@ -14926,7 +14926,7 @@
       "liga": "Bezirksoberliga WEIBLICH",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 5,
+        "runde": 6,
         "phase_id": 12594,
         "gespielt": true,
         "mannschaften": 9,
@@ -15043,27 +15043,27 @@
             "platz": 8,
             "team": "TV Edigheim",
             "team_id": 81238,
-            "spiele": 3,
-            "punkte": 0,
-            "siege": 0,
+            "spiele": 4,
+            "punkte": 2,
+            "siege": 1,
             "remis": 0,
             "niederlagen": 3,
-            "tore": 41,
-            "gegentore": 91,
-            "differenz": -50
+            "tore": 68,
+            "gegentore": 112,
+            "differenz": -44
           },
           {
             "platz": 9,
             "team": "TSG MZ-Bretzenheim",
             "team_id": 81243,
-            "spiele": 5,
+            "spiele": 6,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 5,
-            "tore": 64,
-            "gegentore": 121,
-            "differenz": -57
+            "niederlagen": 6,
+            "tore": 85,
+            "gegentore": 148,
+            "differenz": -63
           }
         ]
       },
@@ -16855,14 +16855,14 @@
             "platz": 5,
             "team": "TUS Neuhofen II",
             "team_id": 81341,
-            "spiele": 4,
-            "punkte": 4,
-            "siege": 2,
+            "spiele": 5,
+            "punkte": 6,
+            "siege": 3,
             "remis": 0,
             "niederlagen": 2,
-            "tore": 76,
-            "gegentore": 102,
-            "differenz": -26
+            "tore": 105,
+            "gegentore": 111,
+            "differenz": -6
           },
           {
             "platz": 6,
@@ -16894,14 +16894,14 @@
             "platz": 8,
             "team": "Vsk Niederfeld",
             "team_id": 81337,
-            "spiele": 3,
+            "spiele": 4,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 3,
-            "tore": 27,
-            "gegentore": 65,
-            "differenz": -38
+            "niederlagen": 4,
+            "tore": 36,
+            "gegentore": 94,
+            "differenz": -58
           },
           {
             "platz": 9,
@@ -17208,8 +17208,8 @@
             "siege": 4,
             "remis": 2,
             "niederlagen": 0,
-            "tore": 118,
-            "gegentore": 59,
+            "tore": 122,
+            "gegentore": 63,
             "differenz": 59
           },
           {
@@ -17273,8 +17273,8 @@
             "siege": 0,
             "remis": 2,
             "niederlagen": 3,
-            "tore": 57,
-            "gegentore": 89,
+            "tore": 61,
+            "gegentore": 93,
             "differenz": -32
           },
           {
