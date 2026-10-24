@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-24T19:16:15+00:00",
+  "aktualisiert": "2026-10-24T19:31:00+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -3161,91 +3161,82 @@
         ]
       },
       "gegnervorschau": {
-        "spiele": 5,
+        "spiele": 1,
         "schuetzen": [
           {
-            "id": "0whowce",
-            "name": "Tim Unkelbach",
-            "tore": 39,
-            "siebenmeter_tore": 9,
-            "siebenmeter_wuerfe": 9,
+            "id": "12gd57v",
+            "name": "Thorsten Witzler",
+            "tore": 7,
+            "siebenmeter_tore": 7,
+            "siebenmeter_wuerfe": 8,
             "zwei_minuten": 0,
-            "verwarnungen": 2,
-            "spiele": 5,
-            "tore_je_spiel": 7.8,
-            "siebenmeter_quote": 100
-          },
-          {
-            "id": "0m8w6xk",
-            "name": "Marc Wolf",
-            "tore": 31,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 2,
             "verwarnungen": 0,
-            "spiele": 5,
-            "tore_je_spiel": 6.2,
-            "siebenmeter_quote": null
+            "spiele": 1,
+            "tore_je_spiel": 7.0,
+            "siebenmeter_quote": 88
           },
           {
-            "id": "1e52142",
-            "name": "Jonas Wrede",
-            "tore": 16,
+            "id": "0jxqlb8",
+            "name": "Marc Stoll",
+            "tore": 5,
+            "siebenmeter_tore": 0,
+            "siebenmeter_wuerfe": 1,
+            "zwei_minuten": 0,
+            "verwarnungen": 0,
+            "spiele": 1,
+            "tore_je_spiel": 5.0,
+            "siebenmeter_quote": 0
+          },
+          {
+            "id": "1bc2mfu",
+            "name": "Thomas Kern",
+            "tore": 4,
             "siebenmeter_tore": 0,
             "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 5,
-            "verwarnungen": 1,
-            "spiele": 4,
+            "zwei_minuten": 0,
+            "verwarnungen": 0,
+            "spiele": 1,
             "tore_je_spiel": 4.0,
             "siebenmeter_quote": null
           },
           {
-            "id": "1atelb3",
-            "name": "Nils Hottum",
-            "tore": 15,
+            "id": "01g5hku",
+            "name": "David Korobitsyn",
+            "tore": 3,
             "siebenmeter_tore": 0,
             "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 5,
-            "verwarnungen": 1,
-            "spiele": 5,
+            "zwei_minuten": 0,
+            "verwarnungen": 0,
+            "spiele": 1,
             "tore_je_spiel": 3.0,
             "siebenmeter_quote": null
           },
           {
-            "id": "1g657t6",
-            "name": "Finn Steitz",
-            "tore": 11,
-            "siebenmeter_tore": 5,
-            "siebenmeter_wuerfe": 5,
-            "zwei_minuten": 2,
+            "id": "0opwv71",
+            "name": "Maximilian Paul Schott",
+            "tore": 3,
+            "siebenmeter_tore": 0,
+            "siebenmeter_wuerfe": 1,
+            "zwei_minuten": 1,
             "verwarnungen": 0,
-            "spiele": 2,
-            "tore_je_spiel": 5.5,
-            "siebenmeter_quote": 100
+            "spiele": 1,
+            "tore_je_spiel": 3.0,
+            "siebenmeter_quote": 0
           }
         ],
-        "weitere": 6,
-        "tore": 155,
-        "torschuetzen": 11,
-        "groesster_anteil": 25,
-        "strafen": 21,
+        "weitere": 4,
+        "tore": 29,
+        "torschuetzen": 9,
+        "groesster_anteil": 24,
+        "strafen": 1,
         "strafen_abschnitte": {
-          "0-15": 5,
-          "15-30": 4,
-          "30-45": 8,
-          "45-60": 4
+          "0-15": 0,
+          "15-30": 0,
+          "30-45": 1,
+          "45-60": 0
         },
-        "krimis": {
-          "anzahl": 1,
-          "gesamt": 5,
-          "gewonnen": 1,
-          "verloren": 0
-        },
-        "halbzeiten": {
-          "erste_halbzeit": -0.2,
-          "zweite_halbzeit": 2.2,
-          "spiele": 5
-        }
+        "krimis": null,
+        "halbzeiten": null
       },
       "letzte_aenderungen": [],
       "spiele": {
