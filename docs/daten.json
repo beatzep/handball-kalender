@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-24T15:31:21+00:00",
+  "aktualisiert": "2026-10-24T15:39:23+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -129,6 +129,19 @@
           },
           {
             "platz": 7,
+            "team": "TSG MZ-Bretzenheim 2",
+            "team_id": 80919,
+            "spiele": 6,
+            "punkte": 6,
+            "siege": 3,
+            "remis": 0,
+            "niederlagen": 3,
+            "tore": 191,
+            "gegentore": 194,
+            "differenz": -3
+          },
+          {
+            "platz": 8,
             "team": "HSG Worms",
             "team_id": 80913,
             "spiele": 6,
@@ -141,7 +154,7 @@
             "differenz": -10
           },
           {
-            "platz": 8,
+            "platz": 9,
             "team": "GW Bingen-Büdesheim",
             "team_id": 80916,
             "spiele": 7,
@@ -154,7 +167,7 @@
             "differenz": -4
           },
           {
-            "platz": 9,
+            "platz": 10,
             "team": "TV Nieder-Olm 2",
             "team_id": 80917,
             "spiele": 6,
@@ -167,30 +180,17 @@
             "differenz": 0
           },
           {
-            "platz": 10,
-            "team": "TSG MZ-Bretzenheim 2",
-            "team_id": 80919,
-            "spiele": 5,
-            "punkte": 4,
-            "siege": 2,
-            "remis": 0,
-            "niederlagen": 3,
-            "tore": 157,
-            "gegentore": 163,
-            "differenz": -6
-          },
-          {
             "platz": 11,
             "team": "HSV Alzey",
             "team_id": 80914,
-            "spiele": 5,
+            "spiele": 6,
             "punkte": 2,
             "siege": 1,
             "remis": 0,
-            "niederlagen": 4,
-            "tore": 147,
-            "gegentore": 158,
-            "differenz": -11
+            "niederlagen": 5,
+            "tore": 178,
+            "gegentore": 192,
+            "differenz": -14
           },
           {
             "platz": 12,
