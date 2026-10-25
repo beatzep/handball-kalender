@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-25T18:16:12+00:00",
+  "aktualisiert": "2026-10-25T18:46:17+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -7613,6 +7613,19 @@
           },
           {
             "platz": 5,
+            "team": "TV Thaleischweiler",
+            "team_id": 81004,
+            "spiele": 5,
+            "punkte": 6,
+            "siege": 3,
+            "remis": 0,
+            "niederlagen": 2,
+            "tore": 176,
+            "gegentore": 156,
+            "differenz": 20
+          },
+          {
+            "platz": 6,
             "team": "TV Hauenstein",
             "team_id": 80995,
             "spiele": 5,
@@ -7623,19 +7636,6 @@
             "tore": 162,
             "gegentore": 151,
             "differenz": 11
-          },
-          {
-            "platz": 6,
-            "team": "TV Thaleischweiler",
-            "team_id": 81004,
-            "spiele": 4,
-            "punkte": 4,
-            "siege": 2,
-            "remis": 0,
-            "niederlagen": 2,
-            "tore": 129,
-            "gegentore": 124,
-            "differenz": 5
           },
           {
             "platz": 7,
@@ -7654,14 +7654,14 @@
             "platz": 8,
             "team": "HSV Alzey",
             "team_id": 80996,
-            "spiele": 5,
+            "spiele": 6,
             "punkte": 4,
             "siege": 2,
             "remis": 0,
-            "niederlagen": 3,
-            "tore": 146,
-            "gegentore": 160,
-            "differenz": -14
+            "niederlagen": 4,
+            "tore": 178,
+            "gegentore": 207,
+            "differenz": -29
           },
           {
             "platz": 9,
@@ -9799,90 +9799,90 @@
         "laufend": []
       },
       "gegnervorschau": {
-        "spiele": 5,
+        "spiele": 6,
         "schuetzen": [
+          {
+            "id": "0m43al7",
+            "name": "Ute Paeseler",
+            "tore": 34,
+            "siebenmeter_tore": 12,
+            "siebenmeter_wuerfe": 15,
+            "zwei_minuten": 0,
+            "verwarnungen": 2,
+            "spiele": 5,
+            "tore_je_spiel": 6.8,
+            "siebenmeter_quote": 80
+          },
           {
             "id": "0s19bn9",
             "name": "Luisa Strubel",
-            "tore": 29,
+            "tore": 33,
             "siebenmeter_tore": 6,
             "siebenmeter_wuerfe": 8,
-            "zwei_minuten": 0,
-            "verwarnungen": 1,
-            "spiele": 5,
-            "tore_je_spiel": 5.8,
+            "zwei_minuten": 1,
+            "verwarnungen": 2,
+            "spiele": 6,
+            "tore_je_spiel": 5.5,
             "siebenmeter_quote": 75
           },
           {
             "id": "1p08wb6",
             "name": "Elisabeth Schmitt",
-            "tore": 28,
+            "tore": 32,
             "siebenmeter_tore": 14,
             "siebenmeter_wuerfe": 17,
             "zwei_minuten": 4,
             "verwarnungen": 2,
-            "spiele": 5,
-            "tore_je_spiel": 5.6,
+            "spiele": 6,
+            "tore_je_spiel": 5.3,
             "siebenmeter_quote": 82
-          },
-          {
-            "id": "0m43al7",
-            "name": "Ute Paeseler",
-            "tore": 25,
-            "siebenmeter_tore": 9,
-            "siebenmeter_wuerfe": 12,
-            "zwei_minuten": 0,
-            "verwarnungen": 1,
-            "spiele": 4,
-            "tore_je_spiel": 6.2,
-            "siebenmeter_quote": 75
-          },
-          {
-            "id": "0e41tr1",
-            "name": "Julia Werner",
-            "tore": 14,
-            "siebenmeter_tore": 1,
-            "siebenmeter_wuerfe": 1,
-            "zwei_minuten": 0,
-            "verwarnungen": 2,
-            "spiele": 3,
-            "tore_je_spiel": 4.7,
-            "siebenmeter_quote": 100
           },
           {
             "id": "1xzjjmb",
             "name": "Annika Funk",
-            "tore": 14,
+            "tore": 20,
             "siebenmeter_tore": 0,
             "siebenmeter_wuerfe": 0,
             "zwei_minuten": 0,
             "verwarnungen": 1,
-            "spiele": 5,
+            "spiele": 6,
+            "tore_je_spiel": 3.3,
+            "siebenmeter_quote": null
+          },
+          {
+            "id": "0t3blsd",
+            "name": "Ronja Ollig",
+            "tore": 17,
+            "siebenmeter_tore": 0,
+            "siebenmeter_wuerfe": 0,
+            "zwei_minuten": 1,
+            "verwarnungen": 0,
+            "spiele": 6,
             "tore_je_spiel": 2.8,
             "siebenmeter_quote": null
           }
         ],
         "weitere": 6,
-        "tore": 146,
+        "tore": 178,
         "torschuetzen": 11,
-        "groesster_anteil": 20,
-        "strafen": 8,
+        "groesster_anteil": 19,
+        "strafen": 9,
         "strafen_abschnitte": {
           "0-15": 1,
           "15-30": 1,
-          "30-45": 1,
+          "30-45": 2,
           "45-60": 5
         },
         "krimis": {
           "anzahl": 1,
-          "gesamt": 5,
+          "gesamt": 6,
           "gewonnen": 1,
           "verloren": 0
         },
         "halbzeiten": {
-          "erste_halbzeit": -0.8,
-          "zweite_halbzeit": -1.8,
-          "spiele": 5
+          "erste_halbzeit": -1.8,
+          "zweite_halbzeit": -2.8,
+          "spiele": 6
         }
       },
       "letzte_aenderungen": [],
@@ -10227,6 +10227,19 @@
         "eintraege": [
           {
             "platz": 1,
+            "team": "TV Kirrweiler",
+            "team_id": 86753,
+            "spiele": 5,
+            "punkte": 10,
+            "siege": 5,
+            "remis": 0,
+            "niederlagen": 0,
+            "tore": 220,
+            "gegentore": 167,
+            "differenz": 53
+          },
+          {
+            "platz": 2,
             "team": "TUS Neuhofen",
             "team_id": 81044,
             "spiele": 6,
@@ -10237,19 +10250,6 @@
             "tore": 198,
             "gegentore": 156,
             "differenz": 42
-          },
-          {
-            "platz": 2,
-            "team": "TV Kirrweiler",
-            "team_id": 86753,
-            "spiele": 4,
-            "punkte": 8,
-            "siege": 4,
-            "remis": 0,
-            "niederlagen": 0,
-            "tore": 159,
-            "gegentore": 128,
-            "differenz": 31
           },
           {
             "platz": 3,
@@ -10320,14 +10320,14 @@
             "platz": 8,
             "team": "Mjsg SG Saulheim/HSV Alzey",
             "team_id": 81049,
-            "spiele": 3,
+            "spiele": 4,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 3,
-            "tore": 72,
-            "gegentore": 99,
-            "differenz": -27
+            "niederlagen": 4,
+            "tore": 111,
+            "gegentore": 160,
+            "differenz": -49
           },
           {
             "platz": 9,
