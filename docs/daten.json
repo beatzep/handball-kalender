@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-25T13:01:15+00:00",
+  "aktualisiert": "2026-10-25T13:31:22+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -14113,8 +14113,8 @@
         ]
       },
       "form": [
-        "U",
         "N",
+        "S",
         "S",
         "N",
         "S"
@@ -14143,10 +14143,10 @@
         },
         "bilanz": {
           "gesamt": {
-            "s": 6,
+            "s": 7,
             "u": 1,
             "n": 3,
-            "spiele": 10
+            "spiele": 11
           },
           "heim": {
             "s": 5,
@@ -14155,10 +14155,10 @@
             "spiele": 5
           },
           "auswaerts": {
-            "s": 1,
+            "s": 2,
             "u": 1,
             "n": 3,
-            "spiele": 5
+            "spiele": 6
           }
         },
         "serien": {
@@ -14168,13 +14168,13 @@
         },
         "krimis": {
           "anzahl": 3,
-          "gesamt": 10,
-          "anteil": 30
+          "gesamt": 11,
+          "anteil": 27
         },
         "tore": {
-          "erzielt": 253,
-          "kassiert": 237,
-          "schnitt": 25.3,
+          "erzielt": 273,
+          "kassiert": 254,
+          "schnitt": 24.8,
           "torreichstes": {
             "gegner": "SG Zweibrücken",
             "stand": "41:27",
@@ -14188,9 +14188,9 @@
             "schnitt": 0
           },
           "frueh": {
-            "spiele": 10,
-            "punkte": 13,
-            "schnitt": 1.3
+            "spiele": 11,
+            "punkte": 15,
+            "schnitt": 1.36
           }
         },
         "gegner": {
@@ -14211,10 +14211,10 @@
       },
       "spieler": {
         "quelle": {
-          "spiele_gelaufen": 10,
+          "spiele_gelaufen": 11,
           "mit_bericht": 0,
           "ohne_bericht": 0,
-          "offen": 10
+          "offen": 11
         },
         "schuetzen": [],
         "verteilung": {
@@ -14434,11 +14434,12 @@
           "heim": false,
           "ohne_zeit": false,
           "sequence": 0,
-          "zwischenstand": {
+          "ergebnis": {
             "heim": 17,
             "gast": 20,
             "eigene": 20,
-            "fremde": 17
+            "fremde": 17,
+            "ausgang": "S"
           }
         },
         "2627RP4BKRCJWF0104": {
@@ -15968,6 +15969,19 @@
           },
           {
             "platz": 3,
+            "team": "Vorderpfälzer Luchse",
+            "team_id": 81239,
+            "spiele": 4,
+            "punkte": 6,
+            "siege": 3,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 87,
+            "gegentore": 69,
+            "differenz": 18
+          },
+          {
+            "platz": 4,
             "team": "JSG Kaiserslautern/Dansenberg",
             "team_id": 87386,
             "spiele": 5,
@@ -15980,30 +15994,17 @@
             "differenz": 4
           },
           {
-            "platz": 4,
+            "platz": 5,
             "team": "SV Bornheim",
             "team_id": 81237,
-            "spiele": 3,
+            "spiele": 4,
             "punkte": 4,
             "siege": 2,
             "remis": 0,
-            "niederlagen": 1,
-            "tore": 76,
-            "gegentore": 44,
-            "differenz": 32
-          },
-          {
-            "platz": 5,
-            "team": "Vorderpfälzer Luchse",
-            "team_id": 81239,
-            "spiele": 3,
-            "punkte": 4,
-            "siege": 2,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 62,
-            "gegentore": 53,
-            "differenz": 9
+            "niederlagen": 2,
+            "tore": 92,
+            "gegentore": 69,
+            "differenz": 23
           },
           {
             "platz": 6,
@@ -17188,6 +17189,11 @@
             "runde": 6,
             "platz": 8,
             "punkte": 0
+          },
+          {
+            "runde": 7,
+            "platz": 8,
+            "punkte": 0
           }
         ],
         "eintraege": [
@@ -17273,27 +17279,27 @@
             "platz": 7,
             "team": "TG Waldsee",
             "team_id": 81295,
-            "spiele": 6,
-            "punkte": 0,
-            "siege": 0,
+            "spiele": 7,
+            "punkte": 2,
+            "siege": 1,
             "remis": 0,
             "niederlagen": 6,
-            "tore": 103,
-            "gegentore": 180,
-            "differenz": -77
+            "tore": 132,
+            "gegentore": 202,
+            "differenz": -70
           },
           {
             "platz": 8,
             "team": "HSG Mutterstadt/Ruchheim E1",
             "team_id": 81293,
-            "spiele": 6,
+            "spiele": 7,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 6,
-            "tore": 111,
-            "gegentore": 196,
-            "differenz": -85
+            "niederlagen": 7,
+            "tore": 133,
+            "gegentore": 225,
+            "differenz": -92
           }
         ]
       },
@@ -17330,14 +17336,14 @@
           "gesamt": {
             "s": 0,
             "u": 0,
-            "n": 6,
-            "spiele": 6
+            "n": 7,
+            "spiele": 7
           },
           "heim": {
             "s": 0,
             "u": 0,
-            "n": 2,
-            "spiele": 2
+            "n": 3,
+            "spiele": 3
           },
           "auswaerts": {
             "s": 0,
@@ -17348,18 +17354,18 @@
         },
         "serien": {
           "ohne_niederlage": 0,
-          "aktuell": 6,
+          "aktuell": 7,
           "aktuell_art": "N"
         },
         "krimis": {
           "anzahl": 0,
-          "gesamt": 6,
+          "gesamt": 7,
           "anteil": 0
         },
         "tore": {
-          "erzielt": 111,
-          "kassiert": 196,
-          "schnitt": 18.5,
+          "erzielt": 133,
+          "kassiert": 225,
+          "schnitt": 19.0,
           "torreichstes": {
             "gegner": "JSG Mundenheim/Rheingönheim",
             "stand": "24:34",
@@ -17373,7 +17379,7 @@
             "schnitt": 0
           },
           "frueh": {
-            "spiele": 6,
+            "spiele": 7,
             "punkte": 0,
             "schnitt": 0.0
           }
@@ -17383,10 +17389,10 @@
       },
       "spieler": {
         "quelle": {
-          "spiele_gelaufen": 6,
+          "spiele_gelaufen": 7,
           "mit_bericht": 0,
           "ohne_bericht": 0,
-          "offen": 6
+          "offen": 7
         },
         "schuetzen": [],
         "verteilung": {
@@ -17562,11 +17568,12 @@
           "heim": true,
           "ohne_zeit": false,
           "sequence": 0,
-          "zwischenstand": {
-            "heim": 19,
-            "gast": 23,
-            "eigene": 19,
-            "fremde": 23
+          "ergebnis": {
+            "heim": 22,
+            "gast": 29,
+            "eigene": 22,
+            "fremde": 29,
+            "ausgang": "N"
           }
         },
         "2627RPBKROEJGC0803": {
