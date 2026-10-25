@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-25T20:16:16+00:00",
+  "aktualisiert": "2026-10-25T20:46:12+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -4206,19 +4206,6 @@
           },
           {
             "platz": 8,
-            "team": "TUS Neuhofen 2",
-            "team_id": 80976,
-            "spiele": 5,
-            "punkte": 3,
-            "siege": 1,
-            "remis": 1,
-            "niederlagen": 3,
-            "tore": 108,
-            "gegentore": 142,
-            "differenz": -34
-          },
-          {
-            "platz": 9,
             "team": "TV Kirrweiler 2",
             "team_id": 80979,
             "spiele": 6,
@@ -4229,6 +4216,19 @@
             "tore": 167,
             "gegentore": 192,
             "differenz": -25
+          },
+          {
+            "platz": 9,
+            "team": "TUS Neuhofen 2",
+            "team_id": 80976,
+            "spiele": 6,
+            "punkte": 4,
+            "siege": 1,
+            "remis": 2,
+            "niederlagen": 3,
+            "tore": 140,
+            "gegentore": 174,
+            "differenz": -34
           },
           {
             "platz": 10,
@@ -4247,13 +4247,13 @@
             "platz": 11,
             "team": "HSV Lingenfeld/Schwegenheim 2",
             "team_id": 80982,
-            "spiele": 5,
-            "punkte": 1,
+            "spiele": 6,
+            "punkte": 2,
             "siege": 0,
-            "remis": 1,
+            "remis": 2,
             "niederlagen": 4,
-            "tore": 136,
-            "gegentore": 150,
+            "tore": 168,
+            "gegentore": 182,
             "differenz": -14
           }
         ]
