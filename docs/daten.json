@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-25T15:49:58+00:00",
+  "aktualisiert": "2026-10-25T16:16:12+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -9315,42 +9315,230 @@
                 2,
                 3,
                 0
+              ],
+              [
+                2,
+                4,
+                0
+              ],
+              [
+                3,
+                4,
+                1
+              ],
+              [
+                4,
+                5,
+                1
+              ],
+              [
+                4,
+                5,
+                2
+              ],
+              [
+                5,
+                5,
+                3
+              ],
+              [
+                5,
+                6,
+                3
+              ],
+              [
+                7,
+                7,
+                3
+              ],
+              [
+                8,
+                7,
+                4
+              ],
+              [
+                8,
+                8,
+                4
+              ],
+              [
+                9,
+                9,
+                4
+              ],
+              [
+                10,
+                9,
+                5
+              ],
+              [
+                11,
+                10,
+                5
+              ],
+              [
+                11,
+                10,
+                6
+              ],
+              [
+                12,
+                11,
+                6
+              ],
+              [
+                12,
+                11,
+                7
+              ],
+              [
+                12,
+                12,
+                7
+              ],
+              [
+                14,
+                12,
+                8
+              ],
+              [
+                15,
+                13,
+                8
+              ],
+              [
+                17,
+                14,
+                8
+              ],
+              [
+                17,
+                14,
+                9
+              ],
+              [
+                18,
+                15,
+                9
+              ],
+              [
+                19,
+                16,
+                9
+              ],
+              [
+                20,
+                17,
+                9
+              ],
+              [
+                21,
+                18,
+                9
+              ],
+              [
+                22,
+                18,
+                10
+              ],
+              [
+                23,
+                19,
+                10
+              ],
+              [
+                23,
+                19,
+                11
+              ],
+              [
+                23,
+                19,
+                12
               ]
             ],
             "laeufe": {
-              "eigene": 3,
+              "eigene": 4,
               "fremde": 0,
               "eigene_ab": 0,
               "fremde_ab": null
             },
             "schuetzen": [
               {
-                "id": "0ngqg51",
-                "name": "Nathalie Jakob",
-                "tore": 1,
+                "id": "1wj3bpj",
+                "name": "Sila Demir",
+                "tore": 5,
                 "siebenmeter_tore": 0,
                 "siebenmeter_wuerfe": 0,
                 "zwei_minuten": 0,
                 "verwarnungen": 0,
                 "spiele": 1,
-                "tore_je_spiel": 1.0,
+                "tore_je_spiel": 5.0,
                 "siebenmeter_quote": null
+              },
+              {
+                "id": "1cskeap",
+                "name": "Sarah Weiß",
+                "tore": 4,
+                "siebenmeter_tore": 1,
+                "siebenmeter_wuerfe": 2,
+                "zwei_minuten": 0,
+                "verwarnungen": 0,
+                "spiele": 1,
+                "tore_je_spiel": 4.0,
+                "siebenmeter_quote": 50
               },
               {
                 "id": "1xxa5mk",
                 "name": "Selina Sagolla",
-                "tore": 1,
+                "tore": 4,
                 "siebenmeter_tore": 0,
                 "siebenmeter_wuerfe": 0,
                 "zwei_minuten": 0,
                 "verwarnungen": 0,
                 "spiele": 1,
+                "tore_je_spiel": 4.0,
+                "siebenmeter_quote": null
+              },
+              {
+                "id": "09jxcvc",
+                "name": "Carina Milicic",
+                "tore": 3,
+                "siebenmeter_tore": 0,
+                "siebenmeter_wuerfe": 0,
+                "zwei_minuten": 0,
+                "verwarnungen": 0,
+                "spiele": 1,
+                "tore_je_spiel": 3.0,
+                "siebenmeter_quote": null
+              },
+              {
+                "id": "0uecq55",
+                "name": "Jana Brenner",
+                "tore": 1,
+                "siebenmeter_tore": 0,
+                "siebenmeter_wuerfe": 0,
+                "zwei_minuten": 0,
+                "verwarnungen": 1,
+                "spiele": 1,
                 "tore_je_spiel": 1.0,
                 "siebenmeter_quote": null
               },
               {
-                "id": "1wj3bpj",
-                "name": "Sila Demir",
+                "id": "1bv6o8f",
+                "name": "Jennifer Gräf",
+                "tore": 1,
+                "siebenmeter_tore": 0,
+                "siebenmeter_wuerfe": 0,
+                "zwei_minuten": 0,
+                "verwarnungen": 1,
+                "spiele": 1,
+                "tore_je_spiel": 1.0,
+                "siebenmeter_quote": null
+              },
+              {
+                "id": "0ngqg51",
+                "name": "Nathalie Jakob",
                 "tore": 1,
                 "siebenmeter_tore": 0,
                 "siebenmeter_wuerfe": 0,
@@ -9534,10 +9722,10 @@
           "ohne_zeit": false,
           "sequence": 0,
           "zwischenstand": {
-            "heim": 3,
-            "gast": 0,
-            "eigene": 3,
-            "fremde": 0
+            "heim": 19,
+            "gast": 12,
+            "eigene": 19,
+            "fremde": 12
           }
         },
         "2627RPVLERWA0803": {
@@ -14801,9 +14989,9 @@
             "siege": 5,
             "remis": 0,
             "niederlagen": 0,
-            "tore": 136,
-            "gegentore": 63,
-            "differenz": 73
+            "tore": 153,
+            "gegentore": 70,
+            "differenz": 83
           },
           {
             "platz": 2,
@@ -14905,9 +15093,9 @@
             "siege": 1,
             "remis": 0,
             "niederlagen": 3,
-            "tore": 75,
-            "gegentore": 99,
-            "differenz": -24
+            "tore": 82,
+            "gegentore": 116,
+            "differenz": -34
           },
           {
             "platz": 10,
