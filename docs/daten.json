@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-25T12:01:17+00:00",
+  "aktualisiert": "2026-10-25T12:31:20+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -13481,6 +13481,19 @@
           },
           {
             "platz": 2,
+            "team": "HSG Dudenhofen/Schifferstadt",
+            "team_id": 81126,
+            "spiele": 6,
+            "punkte": 9,
+            "siege": 4,
+            "remis": 1,
+            "niederlagen": 1,
+            "tore": 242,
+            "gegentore": 185,
+            "differenz": 57
+          },
+          {
+            "platz": 3,
             "team": "Mwsg Kandel/Hagenbach II",
             "team_id": 81124,
             "spiele": 5,
@@ -13491,19 +13504,6 @@
             "tore": 174,
             "gegentore": 149,
             "differenz": 25
-          },
-          {
-            "platz": 3,
-            "team": "HSG Dudenhofen/Schifferstadt",
-            "team_id": 81126,
-            "spiele": 5,
-            "punkte": 7,
-            "siege": 3,
-            "remis": 1,
-            "niederlagen": 1,
-            "tore": 198,
-            "gegentore": 157,
-            "differenz": 41
           },
           {
             "platz": 4,
@@ -13548,14 +13548,14 @@
             "platz": 7,
             "team": "JSG Rodalben/Thaleischweiler II",
             "team_id": 81123,
-            "spiele": 4,
+            "spiele": 5,
             "punkte": 2,
             "siege": 1,
             "remis": 0,
-            "niederlagen": 3,
-            "tore": 99,
-            "gegentore": 134,
-            "differenz": -35
+            "niederlagen": 4,
+            "tore": 127,
+            "gegentore": 178,
+            "differenz": -51
           },
           {
             "platz": 8,
@@ -14476,7 +14476,13 @@
           "phase_id": 17478,
           "heim": true,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 0,
+          "zwischenstand": {
+            "heim": 17,
+            "gast": 8,
+            "eigene": 17,
+            "fremde": 8
+          }
         },
         "2627RSWRL2CJWA0204": {
           "datum": "2026-11-01T15:00:00",
@@ -17147,7 +17153,7 @@
       "liga": "Bezirksoberliga GEMISCHT",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 6,
+        "runde": 7,
         "phase_id": 12645,
         "gespielt": true,
         "mannschaften": 8,
@@ -17188,14 +17194,14 @@
             "platz": 1,
             "team": "Hlz Friesenheim/Hochdorf",
             "team_id": 81291,
-            "spiele": 6,
-            "punkte": 12,
-            "siege": 6,
+            "spiele": 7,
+            "punkte": 14,
+            "siege": 7,
             "remis": 0,
             "niederlagen": 0,
-            "tore": 196,
-            "gegentore": 107,
-            "differenz": 89
+            "tore": 224,
+            "gegentore": 123,
+            "differenz": 101
           },
           {
             "platz": 2,
@@ -17253,14 +17259,14 @@
             "platz": 6,
             "team": "JSG Mundenheim/Rheingönheim",
             "team_id": 81292,
-            "spiele": 6,
+            "spiele": 7,
             "punkte": 4,
             "siege": 2,
             "remis": 0,
-            "niederlagen": 4,
-            "tore": 168,
-            "gegentore": 179,
-            "differenz": -11
+            "niederlagen": 5,
+            "tore": 184,
+            "gegentore": 207,
+            "differenz": -23
           },
           {
             "platz": 7,
@@ -17554,7 +17560,13 @@
           "phase_id": 12645,
           "heim": true,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 0,
+          "zwischenstand": {
+            "heim": 9,
+            "gast": 9,
+            "eigene": 9,
+            "fremde": 9
+          }
         },
         "2627RPBKROEJGC0803": {
           "datum": "2026-11-08T10:00:00",
@@ -17803,6 +17815,11 @@
             "runde": 4,
             "platz": 9,
             "punkte": 0
+          },
+          {
+            "runde": 5,
+            "platz": 9,
+            "punkte": 0
           }
         ],
         "eintraege": [
@@ -17836,14 +17853,14 @@
             "platz": 3,
             "team": "HSG Dudenhofen/Schifferstadt 2",
             "team_id": 81339,
-            "spiele": 4,
-            "punkte": 6,
-            "siege": 3,
+            "spiele": 5,
+            "punkte": 8,
+            "siege": 4,
             "remis": 0,
             "niederlagen": 1,
-            "tore": 67,
-            "gegentore": 82,
-            "differenz": -15
+            "tore": 91,
+            "gegentore": 90,
+            "differenz": 1
           },
           {
             "platz": 4,
@@ -17914,27 +17931,14 @@
             "platz": 9,
             "team": "HSG Mutterstadt/Ruchheim II",
             "team_id": 81335,
-            "spiele": 4,
+            "spiele": 5,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 4,
-            "tore": 35,
-            "gegentore": 127,
-            "differenz": -92
-          }
-        ],
-        "fehlend": [
-          {
-            "datum": "2026-10-25T11:30:00",
-            "gegner": "HSG Dudenhofen/Schifferstadt 2",
-            "ergebnis": {
-              "heim": 8,
-              "gast": 24,
-              "eigene": 8,
-              "fremde": 24,
-              "ausgang": "N"
-            }
+            "niederlagen": 5,
+            "tore": 43,
+            "gegentore": 151,
+            "differenz": -108
           }
         ]
       },
@@ -18626,8 +18630,13 @@
           },
           {
             "runde": 4,
-            "platz": 8,
+            "platz": 4,
             "punkte": 4
+          },
+          {
+            "runde": 5,
+            "platz": 4,
+            "punkte": 5
           }
         ],
         "eintraege": [
@@ -18659,6 +18668,32 @@
           },
           {
             "platz": 3,
+            "team": "HSG Grethen/Maxdorf 2",
+            "team_id": 81503,
+            "spiele": 5,
+            "punkte": 5,
+            "siege": 0,
+            "remis": 5,
+            "niederlagen": 0,
+            "tore": 0,
+            "gegentore": 0,
+            "differenz": 0
+          },
+          {
+            "platz": 4,
+            "team": "HSG Mutterstadt/Ruchheim",
+            "team_id": 81504,
+            "spiele": 5,
+            "punkte": 5,
+            "siege": 0,
+            "remis": 5,
+            "niederlagen": 0,
+            "tore": 0,
+            "gegentore": 0,
+            "differenz": 0
+          },
+          {
+            "platz": 5,
             "team": "JSG Kaiserslauern/Dansenberg 2",
             "team_id": 87389,
             "spiele": 5,
@@ -18671,7 +18706,7 @@
             "differenz": 0
           },
           {
-            "platz": 4,
+            "platz": 6,
             "team": "JSG Osthofen/Worms 2",
             "team_id": 87390,
             "spiele": 5,
@@ -18684,7 +18719,7 @@
             "differenz": 0
           },
           {
-            "platz": 5,
+            "platz": 7,
             "team": "Vsk Niederfeld",
             "team_id": 81500,
             "spiele": 4,
@@ -18697,35 +18732,9 @@
             "differenz": 0
           },
           {
-            "platz": 6,
+            "platz": 8,
             "team": "TSG Friesenheim 2",
             "team_id": 81502,
-            "spiele": 4,
-            "punkte": 4,
-            "siege": 0,
-            "remis": 4,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 7,
-            "team": "HSG Grethen/Maxdorf 2",
-            "team_id": 81503,
-            "spiele": 4,
-            "punkte": 4,
-            "siege": 0,
-            "remis": 4,
-            "niederlagen": 0,
-            "tore": 0,
-            "gegentore": 0,
-            "differenz": 0
-          },
-          {
-            "platz": 8,
-            "team": "HSG Mutterstadt/Ruchheim",
-            "team_id": 81504,
             "spiele": 4,
             "punkte": 4,
             "siege": 0,
