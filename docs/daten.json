@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-25T17:16:18+00:00",
+  "aktualisiert": "2026-10-25T17:46:14+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -4115,29 +4115,29 @@
         "eintraege": [
           {
             "platz": 1,
-            "team": "SG LaFt - Herren",
-            "team_id": 80970,
+            "team": "TV THALEISCHWEILER Herren",
+            "team_id": 80973,
             "spiele": 6,
             "punkte": 12,
             "siege": 6,
             "remis": 0,
             "niederlagen": 0,
-            "tore": 203,
-            "gegentore": 148,
-            "differenz": 55
+            "tore": 179,
+            "gegentore": 145,
+            "differenz": 34
           },
           {
             "platz": 2,
-            "team": "TV THALEISCHWEILER Herren",
-            "team_id": 80973,
-            "spiele": 5,
-            "punkte": 10,
-            "siege": 5,
+            "team": "SG LaFt - Herren",
+            "team_id": 80970,
+            "spiele": 7,
+            "punkte": 12,
+            "siege": 6,
             "remis": 0,
-            "niederlagen": 0,
-            "tore": 148,
-            "gegentore": 115,
-            "differenz": 33
+            "niederlagen": 1,
+            "tore": 233,
+            "gegentore": 179,
+            "differenz": 54
           },
           {
             "platz": 3,
@@ -7532,7 +7532,7 @@
       "liga": "Frauen Verbandsliga",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 6,
+        "runde": 7,
         "phase_id": 12481,
         "gespielt": true,
         "mannschaften": 10,
@@ -7549,8 +7549,13 @@
           },
           {
             "runde": 3,
-            "platz": 5,
+            "platz": 4,
             "punkte": 4
+          },
+          {
+            "runde": 4,
+            "platz": 3,
+            "punkte": 6
           }
         ],
         "eintraege": [
@@ -7571,17 +7576,30 @@
             "platz": 2,
             "team": "FSG Gonsenheim/Schott",
             "team_id": 80998,
-            "spiele": 6,
+            "spiele": 7,
             "punkte": 10,
             "siege": 5,
             "remis": 0,
-            "niederlagen": 1,
-            "tore": 190,
-            "gegentore": 180,
-            "differenz": 10
+            "niederlagen": 2,
+            "tore": 228,
+            "gegentore": 221,
+            "differenz": 7
           },
           {
             "platz": 3,
+            "team": "HSG Mutterstadt/Ruchheim Damen",
+            "team_id": 80999,
+            "spiele": 4,
+            "punkte": 6,
+            "siege": 3,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 141,
+            "gegentore": 123,
+            "differenz": 18
+          },
+          {
+            "platz": 4,
             "team": "SV Bornheim",
             "team_id": 81001,
             "spiele": 4,
@@ -7594,7 +7612,7 @@
             "differenz": 14
           },
           {
-            "platz": 4,
+            "platz": 5,
             "team": "TV Hauenstein",
             "team_id": 80995,
             "spiele": 5,
@@ -7605,19 +7623,6 @@
             "tore": 162,
             "gegentore": 151,
             "differenz": 11
-          },
-          {
-            "platz": 5,
-            "team": "HSG Mutterstadt/Ruchheim Damen",
-            "team_id": 80999,
-            "spiele": 3,
-            "punkte": 4,
-            "siege": 2,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 100,
-            "gegentore": 85,
-            "differenz": 15
           },
           {
             "platz": 6,
@@ -7689,7 +7694,8 @@
       "form": [
         "S",
         "S",
-        "N"
+        "N",
+        "S"
       ],
       "statistik": {
         "fahrten": {
@@ -7714,16 +7720,16 @@
         },
         "bilanz": {
           "gesamt": {
-            "s": 2,
+            "s": 3,
             "u": 0,
             "n": 1,
-            "spiele": 3
+            "spiele": 4
           },
           "heim": {
-            "s": 2,
+            "s": 3,
             "u": 0,
             "n": 0,
-            "spiele": 2
+            "spiele": 3
           },
           "auswaerts": {
             "s": 0,
@@ -7735,21 +7741,21 @@
         "serien": {
           "ohne_niederlage": 2,
           "aktuell": 1,
-          "aktuell_art": "N"
+          "aktuell_art": "S"
         },
         "krimis": {
           "anzahl": 1,
-          "gesamt": 3,
-          "anteil": 33
+          "gesamt": 4,
+          "anteil": 25
         },
         "tore": {
-          "erzielt": 100,
-          "kassiert": 85,
-          "schnitt": 33.3,
+          "erzielt": 141,
+          "kassiert": 123,
+          "schnitt": 35.2,
           "torreichstes": {
-            "gegner": "FSG Selz-Wiesbach",
-            "stand": "42:28",
-            "summe": 70
+            "gegner": "FSG Gonsenheim/Schott",
+            "stand": "41:38",
+            "summe": 79
           }
         },
         "anwurf": {
@@ -7759,8 +7765,8 @@
             "schnitt": 1.0
           },
           "frueh": {
-            "spiele": 1,
-            "punkte": 2,
+            "spiele": 2,
+            "punkte": 4,
             "schnitt": 2.0
           }
         },
@@ -7769,8 +7775,8 @@
       },
       "spieler": {
         "quelle": {
-          "spiele_gelaufen": 3,
-          "mit_bericht": 3,
+          "spiele_gelaufen": 4,
+          "mit_bericht": 4,
           "ohne_bericht": 0,
           "offen": 0
         },
@@ -7778,38 +7784,62 @@
           {
             "id": "1cskeap",
             "name": "Sarah Weiß",
-            "tore": 25,
-            "siebenmeter_tore": 10,
-            "siebenmeter_wuerfe": 11,
-            "zwei_minuten": 3,
+            "tore": 35,
+            "siebenmeter_tore": 15,
+            "siebenmeter_wuerfe": 17,
+            "zwei_minuten": 4,
             "verwarnungen": 1,
-            "spiele": 3,
-            "tore_je_spiel": 8.3,
-            "siebenmeter_quote": 91
-          },
-          {
-            "id": "0ngqg51",
-            "name": "Nathalie Jakob",
-            "tore": 18,
-            "siebenmeter_tore": 2,
-            "siebenmeter_wuerfe": 2,
-            "zwei_minuten": 1,
-            "verwarnungen": 0,
-            "spiele": 3,
-            "tore_je_spiel": 6.0,
-            "siebenmeter_quote": 100
+            "spiele": 4,
+            "tore_je_spiel": 8.8,
+            "siebenmeter_quote": 88
           },
           {
             "id": "1xxa5mk",
             "name": "Selina Sagolla",
-            "tore": 18,
+            "tore": 28,
+            "siebenmeter_tore": 0,
+            "siebenmeter_wuerfe": 0,
+            "zwei_minuten": 0,
+            "verwarnungen": 0,
+            "spiele": 4,
+            "tore_je_spiel": 7.0,
+            "siebenmeter_quote": null
+          },
+          {
+            "id": "0ngqg51",
+            "name": "Nathalie Jakob",
+            "tore": 21,
+            "siebenmeter_tore": 2,
+            "siebenmeter_wuerfe": 2,
+            "zwei_minuten": 1,
+            "verwarnungen": 0,
+            "spiele": 4,
+            "tore_je_spiel": 5.2,
+            "siebenmeter_quote": 100
+          },
+          {
+            "id": "09jxcvc",
+            "name": "Carina Milicic",
+            "tore": 16,
             "siebenmeter_tore": 0,
             "siebenmeter_wuerfe": 0,
             "zwei_minuten": 0,
             "verwarnungen": 0,
             "spiele": 3,
-            "tore_je_spiel": 6.0,
+            "tore_je_spiel": 5.3,
             "siebenmeter_quote": null
+          },
+          {
+            "id": "1wj3bpj",
+            "name": "Sila Demir",
+            "tore": 11,
+            "siebenmeter_tore": 0,
+            "siebenmeter_wuerfe": 1,
+            "zwei_minuten": 2,
+            "verwarnungen": 1,
+            "spiele": 3,
+            "tore_je_spiel": 3.7,
+            "siebenmeter_quote": 0
           },
           {
             "id": "0g9lwm6",
@@ -7819,20 +7849,8 @@
             "siebenmeter_wuerfe": 0,
             "zwei_minuten": 3,
             "verwarnungen": 1,
-            "spiele": 3,
-            "tore_je_spiel": 3.0,
-            "siebenmeter_quote": null
-          },
-          {
-            "id": "09jxcvc",
-            "name": "Carina Milicic",
-            "tore": 8,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 0,
-            "verwarnungen": 0,
-            "spiele": 2,
-            "tore_je_spiel": 4.0,
+            "spiele": 4,
+            "tore_je_spiel": 2.2,
             "siebenmeter_quote": null
           },
           {
@@ -7860,16 +7878,28 @@
             "siebenmeter_quote": null
           },
           {
-            "id": "1wj3bpj",
-            "name": "Sila Demir",
+            "id": "1bv6o8f",
+            "name": "Jennifer Gräf",
             "tore": 4,
             "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 1,
+            "siebenmeter_wuerfe": 0,
             "zwei_minuten": 1,
             "verwarnungen": 1,
+            "spiele": 4,
+            "tore_je_spiel": 1.0,
+            "siebenmeter_quote": null
+          },
+          {
+            "id": "0uecq55",
+            "name": "Jana Brenner",
+            "tore": 3,
+            "siebenmeter_tore": 0,
+            "siebenmeter_wuerfe": 0,
+            "zwei_minuten": 0,
+            "verwarnungen": 1,
             "spiele": 2,
-            "tore_je_spiel": 2.0,
-            "siebenmeter_quote": 0
+            "tore_je_spiel": 1.5,
+            "siebenmeter_quote": null
           },
           {
             "id": "1j0jpcn",
@@ -7884,18 +7914,6 @@
             "siebenmeter_quote": null
           },
           {
-            "id": "0uecq55",
-            "name": "Jana Brenner",
-            "tore": 2,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 0,
-            "verwarnungen": 0,
-            "spiele": 1,
-            "tore_je_spiel": 2.0,
-            "siebenmeter_quote": null
-          },
-          {
             "id": "0t3x2mu",
             "name": "Lena Volz",
             "tore": 2,
@@ -7906,92 +7924,80 @@
             "spiele": 2,
             "tore_je_spiel": 1.0,
             "siebenmeter_quote": null
-          },
-          {
-            "id": "1bv6o8f",
-            "name": "Jennifer Gräf",
-            "tore": 2,
-            "siebenmeter_tore": 0,
-            "siebenmeter_wuerfe": 0,
-            "zwei_minuten": 1,
-            "verwarnungen": 0,
-            "spiele": 3,
-            "tore_je_spiel": 0.7,
-            "siebenmeter_quote": null
           }
         ],
         "verteilung": {
           "eigene_schuetzen": 12,
-          "fremde_schuetzen": 24,
-          "eigene_tore": 100,
-          "fremde_tore": 85,
+          "fremde_schuetzen": 32,
+          "eigene_tore": 141,
+          "fremde_tore": 123,
           "groesster_anteil": 25
         },
         "strafen": {
-          "gesamt": 10,
+          "gesamt": 12,
           "abschnitte": {
             "0-15": 2,
             "15-30": 2,
             "30-45": 4,
-            "45-60": 2
+            "45-60": 4
           }
         },
         "muster": {
           "genug": true,
-          "spiele": 3,
+          "spiele": 4,
           "bloecke": [
             {
               "von": 0,
               "bis": 10,
-              "schnitt": 0.7,
-              "spiele": 3,
+              "schnitt": 1.2,
+              "spiele": 4,
               "verloren": 1,
-              "gewonnen": 2
+              "gewonnen": 3
             },
             {
               "von": 10,
               "bis": 20,
-              "schnitt": 0.3,
-              "spiele": 3,
+              "schnitt": 1.2,
+              "spiele": 4,
               "verloren": 2,
-              "gewonnen": 1
+              "gewonnen": 2
             },
             {
               "von": 20,
               "bis": 30,
-              "schnitt": 3.3,
-              "spiele": 3,
+              "schnitt": 3.2,
+              "spiele": 4,
               "verloren": 0,
-              "gewonnen": 3
+              "gewonnen": 4
             },
             {
               "von": 30,
               "bis": 40,
-              "schnitt": 0.3,
-              "spiele": 3,
+              "schnitt": 0.2,
+              "spiele": 4,
               "verloren": 1,
               "gewonnen": 1
             },
             {
               "von": 40,
               "bis": 50,
-              "schnitt": -0.3,
-              "spiele": 3,
-              "verloren": 1,
+              "schnitt": -0.8,
+              "spiele": 4,
+              "verloren": 2,
               "gewonnen": 1
             },
             {
               "von": 50,
               "bis": 60,
-              "schnitt": 0.7,
-              "spiele": 3,
-              "verloren": 1,
+              "schnitt": -1.0,
+              "spiele": 4,
+              "verloren": 2,
               "gewonnen": 2
             }
           ],
           "antwort": {
-            "faelle": 6,
-            "schnitt": 2.0,
+            "faelle": 7,
+            "schnitt": 1.3,
             "gedreht": 4
           },
           "eng": null
@@ -9287,9 +9293,7 @@
               }
             ],
             "strafen": 8
-          }
-        ],
-        "laufend": [
+          },
           {
             "match_id": 365832,
             "datum": "2026-10-25T16:45:00",
@@ -9789,10 +9793,10 @@
                 "siebenmeter_quote": null
               }
             ],
-            "strafen": 2,
-            "vorlaeufig": true
+            "strafen": 2
           }
-        ]
+        ],
+        "laufend": []
       },
       "gegnervorschau": {
         "spiele": 5,
@@ -9963,11 +9967,12 @@
           "heim": true,
           "ohne_zeit": false,
           "sequence": 0,
-          "zwischenstand": {
+          "ergebnis": {
             "heim": 41,
             "gast": 38,
             "eigene": 41,
-            "fremde": 38
+            "fremde": 38,
+            "ausgang": "S"
           }
         },
         "2627RPVLERWA0803": {
@@ -10215,23 +10220,23 @@
           },
           {
             "runde": 4,
-            "platz": 3,
+            "platz": 4,
             "punkte": 8
           }
         ],
         "eintraege": [
           {
             "platz": 1,
-            "team": "MSG Wörth/Kandel",
-            "team_id": 81047,
+            "team": "TUS Neuhofen",
+            "team_id": 81044,
             "spiele": 6,
-            "punkte": 9,
-            "siege": 4,
-            "remis": 1,
+            "punkte": 10,
+            "siege": 5,
+            "remis": 0,
             "niederlagen": 1,
-            "tore": 211,
-            "gegentore": 197,
-            "differenz": 14
+            "tore": 198,
+            "gegentore": 156,
+            "differenz": 42
           },
           {
             "platz": 2,
@@ -10248,6 +10253,19 @@
           },
           {
             "platz": 3,
+            "team": "MSG Wörth/Kandel",
+            "team_id": 81047,
+            "spiele": 6,
+            "punkte": 9,
+            "siege": 4,
+            "remis": 1,
+            "niederlagen": 1,
+            "tore": 211,
+            "gegentore": 197,
+            "differenz": 14
+          },
+          {
+            "platz": 4,
             "team": "HSG MUTTERSTADT/RUCHHEIM mA",
             "team_id": 81043,
             "spiele": 4,
@@ -10258,19 +10276,6 @@
             "tore": 147,
             "gegentore": 122,
             "differenz": 25
-          },
-          {
-            "platz": 4,
-            "team": "TUS Neuhofen",
-            "team_id": 81044,
-            "spiele": 5,
-            "punkte": 8,
-            "siege": 4,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 171,
-            "gegentore": 134,
-            "differenz": 37
           },
           {
             "platz": 5,
@@ -10341,14 +10346,14 @@
             "platz": 10,
             "team": "TSV Speyer",
             "team_id": 81046,
-            "spiele": 5,
+            "spiele": 6,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 5,
-            "tore": 151,
-            "gegentore": 198,
-            "differenz": -47
+            "niederlagen": 6,
+            "tore": 173,
+            "gegentore": 225,
+            "differenz": -52
           }
         ]
       },

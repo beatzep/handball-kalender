@@ -123693,8 +123693,22 @@
      38
     ],
     "team_id": null
+   },
+   {
+    "abschnitt": "2. Halbzeit",
+    "art": "Abpfiff",
+    "art_id": 10001,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": false,
+    "minute": "30:00",
+    "spielminute": 60,
+    "stand": [
+     41,
+     38
+    ],
+    "team_id": null
    }
-  ],
-  "vorlaeufig": true
+  ]
  }
 }
