@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-25T15:31:23+00:00",
+  "aktualisiert": "2026-10-25T15:49:58+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -9289,7 +9289,82 @@
             "strafen": 8
           }
         ],
-        "laufend": []
+        "laufend": [
+          {
+            "match_id": 365832,
+            "datum": "2026-10-25T16:45:00",
+            "gegner": "FSG Gonsenheim/Schott",
+            "heim": true,
+            "verlauf": [
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                1,
+                2,
+                0
+              ],
+              [
+                2,
+                3,
+                0
+              ]
+            ],
+            "laeufe": {
+              "eigene": 3,
+              "fremde": 0,
+              "eigene_ab": 0,
+              "fremde_ab": null
+            },
+            "schuetzen": [
+              {
+                "id": "0ngqg51",
+                "name": "Nathalie Jakob",
+                "tore": 1,
+                "siebenmeter_tore": 0,
+                "siebenmeter_wuerfe": 0,
+                "zwei_minuten": 0,
+                "verwarnungen": 0,
+                "spiele": 1,
+                "tore_je_spiel": 1.0,
+                "siebenmeter_quote": null
+              },
+              {
+                "id": "1xxa5mk",
+                "name": "Selina Sagolla",
+                "tore": 1,
+                "siebenmeter_tore": 0,
+                "siebenmeter_wuerfe": 0,
+                "zwei_minuten": 0,
+                "verwarnungen": 0,
+                "spiele": 1,
+                "tore_je_spiel": 1.0,
+                "siebenmeter_quote": null
+              },
+              {
+                "id": "1wj3bpj",
+                "name": "Sila Demir",
+                "tore": 1,
+                "siebenmeter_tore": 0,
+                "siebenmeter_wuerfe": 0,
+                "zwei_minuten": 0,
+                "verwarnungen": 0,
+                "spiele": 1,
+                "tore_je_spiel": 1.0,
+                "siebenmeter_quote": null
+              }
+            ],
+            "strafen": 0,
+            "vorlaeufig": true
+          }
+        ]
       },
       "gegnervorschau": {
         "spiele": 6,
@@ -9457,7 +9532,13 @@
           "phase_id": 12481,
           "heim": true,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 0,
+          "zwischenstand": {
+            "heim": 3,
+            "gast": 0,
+            "eigene": 3,
+            "fremde": 0
+          }
         },
         "2627RPVLERWA0803": {
           "datum": "2026-11-08T12:00:00",
@@ -13470,14 +13551,14 @@
             "platz": 1,
             "team": "TUS Heiligenstein II",
             "team_id": 81127,
-            "spiele": 5,
-            "punkte": 10,
-            "siege": 5,
+            "spiele": 6,
+            "punkte": 12,
+            "siege": 6,
             "remis": 0,
             "niederlagen": 0,
-            "tore": 214,
-            "gegentore": 138,
-            "differenz": 76
+            "tore": 250,
+            "gegentore": 171,
+            "differenz": 79
           },
           {
             "platz": 2,
@@ -13535,14 +13616,14 @@
             "platz": 6,
             "team": "Vsk Niederfeld",
             "team_id": 81116,
-            "spiele": 4,
+            "spiele": 5,
             "punkte": 2,
             "siege": 1,
             "remis": 0,
-            "niederlagen": 3,
-            "tore": 135,
-            "gegentore": 130,
-            "differenz": 5
+            "niederlagen": 4,
+            "tore": 168,
+            "gegentore": 166,
+            "differenz": 2
           },
           {
             "platz": 7,
@@ -17224,6 +17305,19 @@
           },
           {
             "platz": 2,
+            "team": "TUS Neuhofen",
+            "team_id": 81294,
+            "spiele": 6,
+            "punkte": 10,
+            "siege": 5,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 186,
+            "gegentore": 136,
+            "differenz": 50
+          },
+          {
+            "platz": 3,
             "team": "TV Edigheim",
             "team_id": 81290,
             "spiele": 6,
@@ -17236,33 +17330,7 @@
             "differenz": 19
           },
           {
-            "platz": 3,
-            "team": "TUS Neuhofen",
-            "team_id": 81294,
-            "spiele": 5,
-            "punkte": 8,
-            "siege": 4,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 157,
-            "gegentore": 111,
-            "differenz": 46
-          },
-          {
             "platz": 4,
-            "team": "HSG Eckbachtal",
-            "team_id": 81289,
-            "spiele": 5,
-            "punkte": 6,
-            "siege": 3,
-            "remis": 0,
-            "niederlagen": 2,
-            "tore": 125,
-            "gegentore": 119,
-            "differenz": 6
-          },
-          {
-            "platz": 5,
             "team": "JSG Kaiserslautern/Dansenberg",
             "team_id": 87381,
             "spiele": 6,
@@ -17273,6 +17341,19 @@
             "tore": 179,
             "gegentore": 166,
             "differenz": 13
+          },
+          {
+            "platz": 5,
+            "team": "HSG Eckbachtal",
+            "team_id": 81289,
+            "spiele": 6,
+            "punkte": 6,
+            "siege": 3,
+            "remis": 0,
+            "niederlagen": 3,
+            "tore": 150,
+            "gegentore": 148,
+            "differenz": 2
           },
           {
             "platz": 6,

@@ -112826,5 +112826,145 @@
     "team_id": null
    }
   ]
+ },
+ "365832": {
+  "ereignisse": [
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Spieler aufgestellt",
+    "art_id": 40,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": false,
+    "minute": "00:00",
+    "spieler": {
+     "id": "0g9lwm6",
+     "nachname": "Hemmers",
+     "vorname": "Celine-Sofie"
+    },
+    "spielminute": 0,
+    "stand": [
+     0,
+     0
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Schnelle Anmeldung",
+    "art_id": 38,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": false,
+    "minute": "00:00",
+    "spieler": {
+     "id": "0g9lwm6",
+     "nachname": "Hemmers",
+     "vorname": "Celine-Sofie"
+    },
+    "spielminute": 0,
+    "stand": [
+     0,
+     0
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Anpfiff",
+    "art_id": 10000,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": false,
+    "minute": "00:00",
+    "spielminute": 0,
+    "stand": [
+     0,
+     0
+    ],
+    "team_id": null
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "00:18",
+    "spieler": {
+     "id": "1xxa5mk",
+     "nachname": "Sagolla",
+     "vorname": "Selina"
+    },
+    "spielminute": 0,
+    "stand": [
+     1,
+     0
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Siebenmeter Fehlwurf",
+    "art_id": 1004,
+    "heim": false,
+    "ist_strafe": false,
+    "ist_tor": false,
+    "minute": "01:16",
+    "spieler": {
+     "id": "1nzyovg",
+     "nachname": "Ring",
+     "vorname": "Jette-Marie"
+    },
+    "spielminute": 1,
+    "stand": [
+     1,
+     0
+    ],
+    "team_id": 80998
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "01:47",
+    "spieler": {
+     "id": "1wj3bpj",
+     "nachname": "Demir",
+     "vorname": "Sila"
+    },
+    "spielminute": 1,
+    "stand": [
+     2,
+     0
+    ],
+    "team_id": 80999
+   },
+   {
+    "abschnitt": "1. Halbzeit",
+    "art": "Tor",
+    "art_id": 15,
+    "heim": true,
+    "ist_strafe": false,
+    "ist_tor": true,
+    "minute": "02:04",
+    "spieler": {
+     "id": "0ngqg51",
+     "nachname": "Jakob",
+     "vorname": "Nathalie"
+    },
+    "spielminute": 2,
+    "stand": [
+     3,
+     0
+    ],
+    "team_id": 80999
+   }
+  ],
+  "vorlaeufig": true
  }
 }
