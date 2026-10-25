@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-25T19:16:18+00:00",
+  "aktualisiert": "2026-10-25T19:46:12+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -4143,14 +4143,14 @@
             "platz": 3,
             "team": "TUS Heiligenstein 2",
             "team_id": 80983,
-            "spiele": 6,
-            "punkte": 7,
-            "siege": 3,
+            "spiele": 7,
+            "punkte": 9,
+            "siege": 4,
             "remis": 1,
             "niederlagen": 2,
-            "tore": 173,
-            "gegentore": 160,
-            "differenz": 13
+            "tore": 203,
+            "gegentore": 187,
+            "differenz": 16
           },
           {
             "platz": 4,
@@ -4206,19 +4206,6 @@
           },
           {
             "platz": 8,
-            "team": "TV Kirrweiler 2",
-            "team_id": 80979,
-            "spiele": 5,
-            "punkte": 4,
-            "siege": 2,
-            "remis": 0,
-            "niederlagen": 3,
-            "tore": 140,
-            "gegentore": 162,
-            "differenz": -22
-          },
-          {
-            "platz": 9,
             "team": "TUS Neuhofen 2",
             "team_id": 80976,
             "spiele": 5,
@@ -4229,6 +4216,19 @@
             "tore": 108,
             "gegentore": 142,
             "differenz": -34
+          },
+          {
+            "platz": 9,
+            "team": "TV Kirrweiler 2",
+            "team_id": 80979,
+            "spiele": 6,
+            "punkte": 4,
+            "siege": 2,
+            "remis": 0,
+            "niederlagen": 4,
+            "tore": 167,
+            "gegentore": 192,
+            "differenz": -25
           },
           {
             "platz": 10,
