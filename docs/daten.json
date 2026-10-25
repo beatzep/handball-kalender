@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-25T21:16:17+00:00",
+  "aktualisiert": "2026-10-25T21:33:10+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -82,6 +82,19 @@
           },
           {
             "platz": 3,
+            "team": "HSG Rhein-Nahe Bingen 2",
+            "team_id": 80915,
+            "spiele": 6,
+            "punkte": 8,
+            "siege": 4,
+            "remis": 0,
+            "niederlagen": 2,
+            "tore": 189,
+            "gegentore": 178,
+            "differenz": 11
+          },
+          {
+            "platz": 4,
             "team": "HSG Zotzenheim/St.Johann/Sprendlingen",
             "team_id": 80922,
             "spiele": 6,
@@ -94,7 +107,7 @@
             "differenz": 7
           },
           {
-            "platz": 4,
+            "platz": 5,
             "team": "GW Bingen-Büdesheim",
             "team_id": 80916,
             "spiele": 8,
@@ -107,7 +120,7 @@
             "differenz": 1
           },
           {
-            "platz": 5,
+            "platz": 6,
             "team": "TG Osthofen 2",
             "team_id": 80920,
             "spiele": 8,
@@ -118,19 +131,6 @@
             "tore": 269,
             "gegentore": 273,
             "differenz": -4
-          },
-          {
-            "platz": 6,
-            "team": "HSG Rhein-Nahe Bingen 2",
-            "team_id": 80915,
-            "spiele": 5,
-            "punkte": 6,
-            "siege": 3,
-            "remis": 0,
-            "niederlagen": 2,
-            "tore": 154,
-            "gegentore": 145,
-            "differenz": 9
           },
           {
             "platz": 7,
@@ -162,14 +162,14 @@
             "platz": 9,
             "team": "HSG Worms",
             "team_id": 80913,
-            "spiele": 6,
+            "spiele": 7,
             "punkte": 6,
             "siege": 3,
             "remis": 0,
-            "niederlagen": 3,
-            "tore": 176,
-            "gegentore": 186,
-            "differenz": -10
+            "niederlagen": 4,
+            "tore": 209,
+            "gegentore": 221,
+            "differenz": -12
           },
           {
             "platz": 10,
