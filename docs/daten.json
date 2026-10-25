@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-25T16:46:19+00:00",
+  "aktualisiert": "2026-10-25T17:16:18+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -134,19 +134,6 @@
           },
           {
             "platz": 7,
-            "team": "SG Saulheim 2",
-            "team_id": 80921,
-            "spiele": 5,
-            "punkte": 6,
-            "siege": 3,
-            "remis": 0,
-            "niederlagen": 2,
-            "tore": 129,
-            "gegentore": 128,
-            "differenz": 1
-          },
-          {
-            "platz": 8,
             "team": "TSG MZ-Bretzenheim 2",
             "team_id": 80919,
             "spiele": 6,
@@ -157,6 +144,19 @@
             "tore": 191,
             "gegentore": 194,
             "differenz": -3
+          },
+          {
+            "platz": 8,
+            "team": "SG Saulheim 2",
+            "team_id": 80921,
+            "spiele": 6,
+            "punkte": 6,
+            "siege": 3,
+            "remis": 0,
+            "niederlagen": 3,
+            "tore": 156,
+            "gegentore": 162,
+            "differenz": -6
           },
           {
             "platz": 9,
@@ -186,6 +186,19 @@
           },
           {
             "platz": 11,
+            "team": "HSC Ingelheim",
+            "team_id": 80918,
+            "spiele": 7,
+            "punkte": 3,
+            "siege": 1,
+            "remis": 1,
+            "niederlagen": 5,
+            "tore": 197,
+            "gegentore": 214,
+            "differenz": -17
+          },
+          {
+            "platz": 12,
             "team": "HSV Alzey",
             "team_id": 80914,
             "spiele": 6,
@@ -196,19 +209,6 @@
             "tore": 178,
             "gegentore": 192,
             "differenz": -14
-          },
-          {
-            "platz": 12,
-            "team": "HSC Ingelheim",
-            "team_id": 80918,
-            "spiele": 6,
-            "punkte": 1,
-            "siege": 0,
-            "remis": 1,
-            "niederlagen": 5,
-            "tore": 163,
-            "gegentore": 187,
-            "differenz": -24
           }
         ]
       },
@@ -9482,9 +9482,9 @@
                 13
               ],
               [
-                31,
-                23,
-                14
+                30,
+                24,
+                13
               ],
               [
                 31,
@@ -9492,34 +9492,34 @@
                 14
               ],
               [
-                32,
-                24,
-                15
+                31,
+                25,
+                14
               ],
               [
                 32,
                 25,
+                15
+              ],
+              [
+                32,
+                26,
                 15
               ],
               [
                 33,
-                25,
+                26,
                 16
               ],
               [
                 34,
-                25,
+                26,
                 17
               ],
               [
                 34,
-                26,
+                27,
                 17
-              ],
-              [
-                35,
-                26,
-                18
               ],
               [
                 35,
@@ -9527,94 +9527,241 @@
                 18
               ],
               [
-                36,
+                35,
                 28,
                 18
               ],
               [
-                37,
+                36,
                 29,
                 18
               ],
               [
+                37,
+                30,
+                18
+              ],
+              [
                 38,
-                29,
+                30,
                 19
               ],
               [
                 39,
-                30,
+                31,
                 19
               ],
               [
                 40,
-                30,
+                31,
                 20
-              ],
-              [
-                41,
-                30,
-                21
               ],
               [
                 41,
                 31,
                 21
+              ],
+              [
+                41,
+                32,
+                21
+              ],
+              [
+                42,
+                32,
+                22
+              ],
+              [
+                43,
+                32,
+                23
+              ],
+              [
+                43,
+                33,
+                23
+              ],
+              [
+                44,
+                33,
+                24
+              ],
+              [
+                46,
+                34,
+                24
+              ],
+              [
+                46,
+                34,
+                25
+              ],
+              [
+                47,
+                35,
+                25
+              ],
+              [
+                47,
+                35,
+                26
+              ],
+              [
+                47,
+                35,
+                27
+              ],
+              [
+                48,
+                35,
+                28
+              ],
+              [
+                49,
+                36,
+                28
+              ],
+              [
+                49,
+                37,
+                28
+              ],
+              [
+                50,
+                37,
+                29
+              ],
+              [
+                50,
+                38,
+                29
+              ],
+              [
+                51,
+                38,
+                30
+              ],
+              [
+                52,
+                39,
+                30
+              ],
+              [
+                52,
+                40,
+                30
+              ],
+              [
+                53,
+                40,
+                31
+              ],
+              [
+                54,
+                41,
+                31
+              ],
+              [
+                54,
+                41,
+                32
+              ],
+              [
+                55,
+                41,
+                33
+              ],
+              [
+                56,
+                41,
+                34
+              ],
+              [
+                56,
+                41,
+                35
+              ],
+              [
+                57,
+                41,
+                36
+              ],
+              [
+                58,
+                41,
+                37
+              ],
+              [
+                59,
+                41,
+                38
               ]
             ],
             "laeufe": {
               "eigene": 4,
-              "fremde": 0,
+              "fremde": 7,
               "eigene_ab": 0,
-              "fremde_ab": null
+              "fremde_ab": 54
             },
             "schuetzen": [
               {
                 "id": "1cskeap",
                 "name": "Sarah Weiß",
-                "tore": 9,
+                "tore": 10,
                 "siebenmeter_tore": 5,
                 "siebenmeter_wuerfe": 6,
+                "zwei_minuten": 1,
+                "verwarnungen": 0,
+                "spiele": 1,
+                "tore_je_spiel": 10.0,
+                "siebenmeter_quote": 83
+              },
+              {
+                "id": "1xxa5mk",
+                "name": "Selina Sagolla",
+                "tore": 10,
+                "siebenmeter_tore": 0,
+                "siebenmeter_wuerfe": 0,
                 "zwei_minuten": 0,
                 "verwarnungen": 0,
                 "spiele": 1,
-                "tore_je_spiel": 9.0,
-                "siebenmeter_quote": 83
+                "tore_je_spiel": 10.0,
+                "siebenmeter_quote": null
               },
               {
                 "id": "09jxcvc",
                 "name": "Carina Milicic",
-                "tore": 7,
+                "tore": 8,
                 "siebenmeter_tore": 0,
                 "siebenmeter_wuerfe": 0,
                 "zwei_minuten": 0,
+                "verwarnungen": 0,
+                "spiele": 1,
+                "tore_je_spiel": 8.0,
+                "siebenmeter_quote": null
+              },
+              {
+                "id": "1wj3bpj",
+                "name": "Sila Demir",
+                "tore": 7,
+                "siebenmeter_tore": 0,
+                "siebenmeter_wuerfe": 0,
+                "zwei_minuten": 1,
                 "verwarnungen": 0,
                 "spiele": 1,
                 "tore_je_spiel": 7.0,
                 "siebenmeter_quote": null
               },
               {
-                "id": "1xxa5mk",
-                "name": "Selina Sagolla",
-                "tore": 6,
+                "id": "0ngqg51",
+                "name": "Nathalie Jakob",
+                "tore": 3,
                 "siebenmeter_tore": 0,
                 "siebenmeter_wuerfe": 0,
                 "zwei_minuten": 0,
                 "verwarnungen": 0,
                 "spiele": 1,
-                "tore_je_spiel": 6.0,
-                "siebenmeter_quote": null
-              },
-              {
-                "id": "1wj3bpj",
-                "name": "Sila Demir",
-                "tore": 5,
-                "siebenmeter_tore": 0,
-                "siebenmeter_wuerfe": 0,
-                "zwei_minuten": 0,
-                "verwarnungen": 0,
-                "spiele": 1,
-                "tore_je_spiel": 5.0,
+                "tore_je_spiel": 3.0,
                 "siebenmeter_quote": null
               },
               {
@@ -9640,21 +9787,9 @@
                 "spiele": 1,
                 "tore_je_spiel": 1.0,
                 "siebenmeter_quote": null
-              },
-              {
-                "id": "0ngqg51",
-                "name": "Nathalie Jakob",
-                "tore": 1,
-                "siebenmeter_tore": 0,
-                "siebenmeter_wuerfe": 0,
-                "zwei_minuten": 0,
-                "verwarnungen": 0,
-                "spiele": 1,
-                "tore_je_spiel": 1.0,
-                "siebenmeter_quote": null
               }
             ],
-            "strafen": 0,
+            "strafen": 2,
             "vorlaeufig": true
           }
         ]
@@ -9829,10 +9964,10 @@
           "ohne_zeit": false,
           "sequence": 0,
           "zwischenstand": {
-            "heim": 30,
-            "gast": 21,
-            "eigene": 30,
-            "fremde": 21
+            "heim": 41,
+            "gast": 38,
+            "eigene": 41,
+            "fremde": 38
           }
         },
         "2627RPVLERWA0803": {
@@ -10645,7 +10780,7 @@
       "liga": "Verbandsliga WEIBLICH",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 5,
+        "runde": 6,
         "phase_id": 12587,
         "gespielt": true,
         "mannschaften": 7,
@@ -10746,27 +10881,27 @@
             "platz": 6,
             "team": "Vorderpfälzer Luchse",
             "team_id": 81067,
-            "spiele": 4,
-            "punkte": 0,
-            "siege": 0,
+            "spiele": 5,
+            "punkte": 2,
+            "siege": 1,
             "remis": 0,
             "niederlagen": 4,
-            "tore": 81,
-            "gegentore": 134,
-            "differenz": -53
+            "tore": 118,
+            "gegentore": 159,
+            "differenz": -41
           },
           {
             "platz": 7,
             "team": "HSG TSG/1.FC-Kaiserslautern",
             "team_id": 81068,
-            "spiele": 5,
+            "spiele": 6,
             "punkte": 0,
             "siege": 0,
             "remis": 0,
-            "niederlagen": 5,
-            "tore": 111,
-            "gegentore": 170,
-            "differenz": -59
+            "niederlagen": 6,
+            "tore": 136,
+            "gegentore": 207,
+            "differenz": -71
           }
         ]
       },
@@ -11251,6 +11386,19 @@
           },
           {
             "platz": 2,
+            "team": "Mjsg Sobernheim/Meisenheim",
+            "team_id": 80839,
+            "spiele": 6,
+            "punkte": 10,
+            "siege": 5,
+            "remis": 0,
+            "niederlagen": 1,
+            "tore": 209,
+            "gegentore": 179,
+            "differenz": 30
+          },
+          {
+            "platz": 3,
             "team": "SF Budenheim 2",
             "team_id": 80836,
             "spiele": 6,
@@ -11261,19 +11409,6 @@
             "tore": 190,
             "gegentore": 160,
             "differenz": 30
-          },
-          {
-            "platz": 3,
-            "team": "Mjsg Sobernheim/Meisenheim",
-            "team_id": 80839,
-            "spiele": 5,
-            "punkte": 8,
-            "siege": 4,
-            "remis": 0,
-            "niederlagen": 1,
-            "tore": 170,
-            "gegentore": 149,
-            "differenz": 21
           },
           {
             "platz": 4,
@@ -11357,14 +11492,14 @@
             "platz": 10,
             "team": "JSG Osthofen/Worms",
             "team_id": 80838,
-            "spiele": 5,
+            "spiele": 6,
             "punkte": 2,
             "siege": 1,
             "remis": 0,
-            "niederlagen": 4,
-            "tore": 152,
-            "gegentore": 176,
-            "differenz": -24
+            "niederlagen": 5,
+            "tore": 182,
+            "gegentore": 215,
+            "differenz": -33
           }
         ]
       },
