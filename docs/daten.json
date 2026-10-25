@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-25T15:01:16+00:00",
+  "aktualisiert": "2026-10-25T15:31:23+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -14841,6 +14841,19 @@
             "gegentore": 0,
             "differenz": 0
           }
+        ],
+        "fehlend": [
+          {
+            "datum": "2026-10-25T15:00:00",
+            "gegner": "WSG Rheinauen",
+            "ergebnis": {
+              "heim": 35,
+              "gast": 14,
+              "eigene": 35,
+              "fremde": 14,
+              "ausgang": "S"
+            }
+          }
         ]
       },
       "form": [
@@ -14873,16 +14886,16 @@
         },
         "bilanz": {
           "gesamt": {
-            "s": 5,
+            "s": 6,
             "u": 0,
             "n": 0,
-            "spiele": 5
+            "spiele": 6
           },
           "heim": {
-            "s": 3,
+            "s": 4,
             "u": 0,
             "n": 0,
-            "spiele": 3
+            "spiele": 4
           },
           "auswaerts": {
             "s": 2,
@@ -14892,19 +14905,19 @@
           }
         },
         "serien": {
-          "ohne_niederlage": 5,
-          "aktuell": 5,
+          "ohne_niederlage": 6,
+          "aktuell": 6,
           "aktuell_art": "S"
         },
         "krimis": {
           "anzahl": 0,
-          "gesamt": 5,
+          "gesamt": 6,
           "anteil": 0
         },
         "tore": {
-          "erzielt": 157,
-          "kassiert": 74,
-          "schnitt": 31.4,
+          "erzielt": 192,
+          "kassiert": 88,
+          "schnitt": 32.0,
           "torreichstes": {
             "gegner": "Mjsg SG Saulheim/HSV Alzey 3",
             "stand": "39:18",
@@ -14918,8 +14931,8 @@
             "schnitt": 0
           },
           "frueh": {
-            "spiele": 5,
-            "punkte": 10,
+            "spiele": 6,
+            "punkte": 12,
             "schnitt": 2.0
           }
         },
@@ -14928,10 +14941,10 @@
       },
       "spieler": {
         "quelle": {
-          "spiele_gelaufen": 5,
+          "spiele_gelaufen": 6,
           "mit_bericht": 0,
           "ohne_bericht": 0,
-          "offen": 5
+          "offen": 6
         },
         "schuetzen": [],
         "verteilung": {
@@ -15085,11 +15098,12 @@
           "heim": true,
           "ohne_zeit": false,
           "sequence": 1,
-          "zwischenstand": {
-            "heim": 30,
-            "gast": 13,
-            "eigene": 30,
-            "fremde": 13
+          "ergebnis": {
+            "heim": 35,
+            "gast": 14,
+            "eigene": 35,
+            "fremde": 14,
+            "ausgang": "S"
           }
         },
         "2627RPVLCJWC0701": {
