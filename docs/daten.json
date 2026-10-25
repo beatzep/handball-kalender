@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-25T14:01:17+00:00",
+  "aktualisiert": "2026-10-25T14:31:14+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -15086,10 +15086,10 @@
           "ohne_zeit": false,
           "sequence": 1,
           "zwischenstand": {
-            "heim": 2,
-            "gast": 0,
-            "eigene": 2,
-            "fremde": 0
+            "heim": 11,
+            "gast": 5,
+            "eigene": 11,
+            "fremde": 5
           }
         },
         "2627RPVLCJWC0701": {
@@ -15278,7 +15278,7 @@
       "liga": "Bezirksliga GEMISCHT",
       "saison": "2026/27",
       "tabelle": {
-        "runde": 5,
+        "runde": 6,
         "phase_id": 12629,
         "gespielt": true,
         "mannschaften": 9,
@@ -15305,7 +15305,7 @@
           },
           {
             "runde": 5,
-            "platz": 7,
+            "platz": 6,
             "punkte": 4
           }
         ],
@@ -15314,17 +15314,30 @@
             "platz": 1,
             "team": "JSG Kaiserslauern/Dansenberg II",
             "team_id": 86767,
-            "spiele": 5,
-            "punkte": 10,
-            "siege": 5,
+            "spiele": 6,
+            "punkte": 12,
+            "siege": 6,
             "remis": 0,
             "niederlagen": 0,
-            "tore": 123,
-            "gegentore": 86,
-            "differenz": 37
+            "tore": 150,
+            "gegentore": 107,
+            "differenz": 43
           },
           {
             "platz": 2,
+            "team": "HSG Eckbachtal",
+            "team_id": 81185,
+            "spiele": 6,
+            "punkte": 8,
+            "siege": 4,
+            "remis": 0,
+            "niederlagen": 2,
+            "tore": 182,
+            "gegentore": 167,
+            "differenz": 15
+          },
+          {
+            "platz": 3,
             "team": "JSG Osthofen/Worms",
             "team_id": 81183,
             "spiele": 4,
@@ -15337,46 +15350,20 @@
             "differenz": 0
           },
           {
-            "platz": 3,
+            "platz": 4,
             "team": "Hlz Friesenheim/Hochdorf 2",
             "team_id": 81187,
-            "spiele": 5,
+            "spiele": 6,
             "punkte": 6,
             "siege": 3,
             "remis": 0,
-            "niederlagen": 2,
-            "tore": 146,
-            "gegentore": 134,
-            "differenz": 12
-          },
-          {
-            "platz": 4,
-            "team": "HSG Eckbachtal",
-            "team_id": 81185,
-            "spiele": 5,
-            "punkte": 6,
-            "siege": 3,
-            "remis": 0,
-            "niederlagen": 2,
-            "tore": 150,
-            "gegentore": 139,
-            "differenz": 11
+            "niederlagen": 3,
+            "tore": 167,
+            "gegentore": 161,
+            "differenz": 6
           },
           {
             "platz": 5,
-            "team": "TUS Neuhofen",
-            "team_id": 81190,
-            "spiele": 4,
-            "punkte": 4,
-            "siege": 2,
-            "remis": 0,
-            "niederlagen": 2,
-            "tore": 83,
-            "gegentore": 91,
-            "differenz": -8
-          },
-          {
-            "platz": 6,
             "team": "Hr Göllheim/Eisenberg/Asselheim/Kindenheim",
             "team_id": 81186,
             "spiele": 5,
@@ -15389,7 +15376,7 @@
             "differenz": -6
           },
           {
-            "platz": 7,
+            "platz": 6,
             "team": "HSG Mutterstadt/Ruchheim Gd Ol",
             "team_id": 81189,
             "spiele": 5,
@@ -15400,6 +15387,19 @@
             "tore": 136,
             "gegentore": 147,
             "differenz": -11
+          },
+          {
+            "platz": 7,
+            "team": "TUS Neuhofen",
+            "team_id": 81190,
+            "spiele": 5,
+            "punkte": 4,
+            "siege": 2,
+            "remis": 0,
+            "niederlagen": 3,
+            "tore": 111,
+            "gegentore": 123,
+            "differenz": -12
           },
           {
             "platz": 8,
