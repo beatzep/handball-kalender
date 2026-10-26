@@ -1,5 +1,5 @@
 {
-  "aktualisiert": "2026-10-25T23:58:07+00:00",
+  "aktualisiert": "2026-10-26T08:51:14+00:00",
   "verein": "HSG Mutterstadt/Ruchheim",
   "teams": {
     "herren1": {
@@ -12887,7 +12887,14 @@
         "laufend": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [],
+      "letzte_aenderungen": [
+        {
+          "art": "verlegt",
+          "code": "2627RSWRL2BJWB1101",
+          "spieltag": 11,
+          "text": "Spieltag 11 gegen TSG MZ-Bretzenheim: Sa 20.02. 16:30 → Sa 20.02. 15:00"
+        }
+      ],
       "spiele": {
         "2627RSWRLBJWC0102": {
           "datum": "2026-08-23T17:30:00",
@@ -13252,7 +13259,7 @@
           "sequence": 0
         },
         "2627RSWRL2BJWB1101": {
-          "datum": "2027-02-20T16:30:00",
+          "datum": "2027-02-20T15:00:00",
           "ort": "IGS 1 Mainz-Bretzenheim, Hans-Böckler-Straße 2, 55128 Mainz",
           "halle": "IGS 1 Mainz-Bretzenheim",
           "gegner": "TSG MZ-Bretzenheim",
@@ -13264,7 +13271,7 @@
           "phase_id": 17471,
           "heim": false,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 1
         },
         "2627RSWRL2BJWB1203": {
           "datum": "2027-02-28T15:00:00",
@@ -14215,7 +14222,14 @@
         "laufend": []
       },
       "gegnervorschau": {},
-      "letzte_aenderungen": [],
+      "letzte_aenderungen": [
+        {
+          "art": "verlegt",
+          "code": "2627RPBKROCJGC0903",
+          "spieltag": 9,
+          "text": "Spieltag 9 gegen TSV Speyer II: So 29.11. 13:45 → Sa 28.11. 11:00"
+        }
+      ],
       "spiele": {
         "2627RPBKROCJGC0105": {
           "datum": "2026-08-30T13:45:00",
@@ -14358,7 +14372,7 @@
           "sequence": 0
         },
         "2627RPBKROCJGC0903": {
-          "datum": "2026-11-29T13:45:00",
+          "datum": "2026-11-28T11:00:00",
           "ort": "Sporthalle-Ost Speyer, Fritz-Ober-Str. 3, 67346 Speyer",
           "halle": "Sporthalle-Ost Speyer",
           "gegner": "TSV Speyer II",
@@ -14370,7 +14384,7 @@
           "phase_id": 12625,
           "heim": false,
           "ohne_zeit": false,
-          "sequence": 0
+          "sequence": 1
         },
         "2627RPBKROCJGC1005": {
           "datum": "2026-12-05T15:15:00",
