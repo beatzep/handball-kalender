@@ -43,7 +43,11 @@ jobs:
           # Fuer echte Strassenkilometer statt Luftlinien-Schaetzung, siehe
           # strassenroute.py. Ohne den Secret laeuft alles wie bisher.
           ORS_API_KEY: ${{ secrets.ORS_API_KEY }}
+        # pipefail: ohne das zaehlt nur der Exit-Code von tee. Ab dem 27.10.
+        # brach spielplan2ics.py jedes Mal ab, weil handball.net mit 403
+        # antwortete; rot wurde aber erst "Spielberichte holen".
         run: |
+          set -o pipefail
           python3 spielplan2ics.py \
             --teams teams.json \
             --out-dir docs \
